@@ -9,26 +9,27 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Check, MessageCircle, PenTool } from 'lucide-react'
 
-// Section divider component with visual rhythm
-function SectionDivider({ variant = 'navy' }: { variant?: 'navy' | 'sepia' }) {
-  if (variant === 'sepia') {
-    return (
-      <div className="relative h-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#002147]/5 to-transparent" />
-        <div 
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: 'url(/hero.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            filter: 'sepia(100%) contrast(0.8)',
-          }}
-        />
-      </div>
-    )
-  }
+// Section title with Keio blue decorative lines
+function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
-    <div className="h-16 bg-gradient-to-r from-transparent via-[#002147]/10 to-transparent" />
+    <div className="text-center mb-16">
+      <div className="flex items-center justify-center gap-6 mb-6">
+        <div className="h-px w-16 bg-[#002147]" />
+        <div className="w-2 h-2 bg-[#002147] rotate-45" />
+        <div className="h-px w-16 bg-[#002147]" />
+      </div>
+      <h3 className="text-3xl md:text-4xl font-bold text-primary font-serif tracking-[0.08em]">
+        {children}
+      </h3>
+      {subtitle && (
+        <p className="text-muted-foreground mt-4 text-lg">{subtitle}</p>
+      )}
+      <div className="flex items-center justify-center gap-6 mt-6">
+        <div className="h-px w-16 bg-[#002147]" />
+        <div className="w-2 h-2 bg-[#002147] rotate-45" />
+        <div className="h-px w-16 bg-[#002147]" />
+      </div>
+    </div>
   )
 }
 
@@ -38,15 +39,15 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-bold text-primary font-serif tracking-wide">佐藤塾</h1>
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium">無料相談</Button>
+          <h1 className="text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</h1>
+          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談</Button>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero Section - White */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
         <div className="absolute inset-0">
           <Image
             src="/hero.jpg"
@@ -56,56 +57,51 @@ export default function Page() {
             style={{ filter: 'sepia(30%) contrast(0.95) brightness(0.95)' }}
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/70"></div>
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-5xl md:text-7xl font-bold text-primary mb-8 font-serif tracking-tight text-balance">
+          <h2 className="text-5xl md:text-7xl font-bold text-primary mb-8 font-serif tracking-[0.05em] text-balance">
             慶應SFC合格への<br />最短距離
           </h2>
           <p className="text-xl md:text-2xl text-foreground mb-10 font-medium">
             3人に2人が合格する、<span className="text-secondary font-bold font-serif">独自のAI伴走ロジック</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-base font-semibold px-8 py-6">
+            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white text-base font-semibold px-8 py-6">
               無料相談に申し込む
             </Button>
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base px-8 py-6">
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white text-base px-8 py-6">
               詳しく見る
             </Button>
           </div>
           
-          <div className="grid grid-cols-3 gap-6 text-center bg-card/90 backdrop-blur-sm rounded-lg p-8 border border-border shadow-lg">
+          <div className="grid grid-cols-3 gap-6 text-center bg-white rounded-lg p-8 border border-border shadow-xl">
             <div>
-              <p className="text-5xl md:text-6xl font-bold text-primary font-serif tracking-tight">66<span className="text-4xl">%</span></p>
+              <p className="text-5xl md:text-6xl font-bold text-primary font-serif tracking-tight">66<span className="text-3xl">%</span></p>
               <p className="text-sm text-muted-foreground mt-2 font-medium">2026年合格率</p>
             </div>
             <div className="border-l border-r border-border px-4">
-              <p className="text-5xl md:text-6xl font-bold text-primary font-serif tracking-tight">9<span className="text-4xl">名</span></p>
+              <p className="text-5xl md:text-6xl font-bold text-primary font-serif tracking-tight">9<span className="text-3xl">名</span></p>
               <p className="text-sm text-muted-foreground mt-2 font-medium">2026年合格者</p>
             </div>
             <div>
-              <p className="text-5xl md:text-6xl font-bold text-primary font-serif tracking-tight">49<span className="text-4xl">名</span></p>
+              <p className="text-5xl md:text-6xl font-bold text-primary font-serif tracking-tight">49<span className="text-3xl">名</span></p>
               <p className="text-sm text-muted-foreground mt-2 font-medium">7年累計合格者</p>
             </div>
           </div>
         </div>
       </section>
 
-      <SectionDivider variant="sepia" />
-
-      {/* Problem Section */}
-      <section className="py-24 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/[0.02] via-transparent to-[#002147]/[0.02]" />
-        <div className="max-w-4xl mx-auto relative">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-20 text-primary font-serif tracking-tight">
-            SFC合格を阻む「壁」
-          </h3>
+      {/* Problem Section - Gray */}
+      <section className="py-24 px-4 bg-[#F3F4F6]">
+        <div className="max-w-4xl mx-auto">
+          <SectionTitle>SFC合格を阻む「壁」</SectionTitle>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-2 border-secondary/30 bg-card shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="bg-white shadow-md border-t-2 border-t-primary border-x-0 border-b-0 rounded-lg">
               <CardHeader>
-                <CardTitle className="text-secondary flex items-center gap-3 font-serif text-xl">
+                <CardTitle className="text-secondary flex items-center gap-3 font-serif text-xl tracking-wide">
                   <span className="text-2xl">&#10005;</span>
                   学校の先生でも指導困難
                 </CardTitle>
@@ -117,9 +113,9 @@ export default function Page() {
               </CardContent>
             </Card>
             
-            <Card className="border-2 border-secondary/30 bg-card shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="bg-white shadow-md border-t-2 border-t-primary border-x-0 border-b-0 rounded-lg">
               <CardHeader>
-                <CardTitle className="text-secondary flex items-center gap-3 font-serif text-xl">
+                <CardTitle className="text-secondary flex items-center gap-3 font-serif text-xl tracking-wide">
                   <span className="text-2xl">&#10005;</span>
                   答えがない出題
                 </CardTitle>
@@ -134,23 +130,18 @@ export default function Page() {
         </div>
       </section>
 
-      <SectionDivider variant="navy" />
-
-      {/* Solution Section: Two AIs */}
-      <section className="py-24 px-4">
+      {/* Solution Section: Two AIs - White */}
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-4 text-primary font-serif tracking-tight">
+          <SectionTitle subtitle="添削AIと相談AIが、あなたの合格を全方位からサポート">
             佐藤塾の解答：2つの知能
-          </h3>
-          <p className="text-center text-muted-foreground mb-20 text-lg">
-            添削AIと相談AIが、あなたの合格を全方位からサポート
-          </p>
+          </SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-10">
             {/* AI 1: Essay Editing */}
-            <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/[0.03] to-transparent overflow-hidden shadow-lg">
+            <Card className="bg-white shadow-md border-t-2 border-t-primary border-x border-b border-border rounded-lg overflow-hidden">
               <CardHeader className="pb-4">
-                <CardTitle className="flex items-center gap-3 text-primary font-serif text-xl">
+                <CardTitle className="flex items-center gap-3 text-primary font-serif text-xl tracking-wide">
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <PenTool className="w-5 h-5 text-primary" />
                   </div>
@@ -158,7 +149,7 @@ export default function Page() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="bg-card border-2 border-primary/20 rounded-lg p-4 mb-6">
+                <div className="bg-[#F9F9F9] border border-border rounded-lg p-4 mb-6">
                   <p className="text-xs text-muted-foreground mb-2 font-medium">原稿用紙イメージ</p>
                   <div className="bg-[#FFFEF0] p-3 rounded text-sm font-mono border border-[#D4AF37]/20">
                     <div className="line-through text-secondary/80">問題な部分がここにあります</div>
@@ -183,9 +174,9 @@ export default function Page() {
             </Card>
 
             {/* AI 2: Consultation */}
-            <Card className="border-2 border-secondary/30 bg-gradient-to-br from-secondary/[0.03] to-transparent overflow-hidden shadow-lg">
+            <Card className="bg-white shadow-md border-t-2 border-t-secondary border-x border-b border-border rounded-lg overflow-hidden">
               <CardHeader className="pb-4">
-                <CardTitle className="flex items-center gap-3 text-secondary font-serif text-xl">
+                <CardTitle className="flex items-center gap-3 text-secondary font-serif text-xl tracking-wide">
                   <div className="p-2 bg-secondary/10 rounded-lg">
                     <MessageCircle className="w-5 h-5 text-secondary" />
                   </div>
@@ -193,13 +184,13 @@ export default function Page() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="bg-card border-2 border-secondary/20 rounded-lg p-4 mb-6">
+                <div className="bg-[#F9F9F9] border border-border rounded-lg p-4 mb-6">
                   <p className="text-xs text-muted-foreground mb-2 font-medium">対話チャット</p>
                   <div className="space-y-2 text-xs">
                     <div className="bg-primary/5 p-2 rounded border border-primary/10">
                       <strong className="text-primary">あなた:</strong> 小論文の選題で悩んでいます
                     </div>
-                    <div className="bg-muted p-2 rounded border border-border">
+                    <div className="bg-white p-2 rounded border border-border">
                       <strong className="text-foreground">AI:</strong> その選題の背景を深掘りすることで...
                     </div>
                   </div>
@@ -224,23 +215,18 @@ export default function Page() {
         </div>
       </section>
 
-      <SectionDivider variant="sepia" />
+      {/* Comparison Section - Gray */}
+      <section className="py-24 px-4 bg-[#F3F4F6]">
+        <div className="max-w-5xl mx-auto">
+          <SectionTitle>なぜ佐藤塾が選ばれるのか</SectionTitle>
 
-      {/* Comparison Section */}
-      <section className="py-24 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/[0.02] via-transparent to-[#002147]/[0.02]" />
-        <div className="max-w-5xl mx-auto relative">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-20 text-primary font-serif tracking-tight">
-            なぜ佐藤塾が選ばれるのか
-          </h3>
-
-          <div className="overflow-x-auto rounded-lg shadow-lg border border-border">
-            <table className="w-full text-sm border-collapse bg-card">
+          <div className="overflow-x-auto rounded-lg shadow-md bg-white">
+            <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-primary text-primary-foreground">
-                  <th className="p-5 text-left font-bold font-serif text-base">項目</th>
-                  <th className="p-5 text-center font-bold font-serif text-base bg-secondary">佐藤塾</th>
-                  <th className="p-5 text-center font-bold font-serif text-base">一般的な予備校</th>
+                <tr className="bg-primary text-white">
+                  <th className="p-5 text-left font-bold font-serif text-base tracking-wide">項目</th>
+                  <th className="p-5 text-center font-bold font-serif text-base tracking-wide bg-secondary">佐藤塾</th>
+                  <th className="p-5 text-center font-bold font-serif text-base tracking-wide">一般的な予備校</th>
                 </tr>
               </thead>
               <tbody>
@@ -278,34 +264,27 @@ export default function Page() {
         </div>
       </section>
 
-      <SectionDivider variant="navy" />
-
-      {/* Ecosystem Section */}
-      <section className="py-24 px-4">
+      {/* Ecosystem Section - White */}
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-20 text-primary font-serif tracking-tight">
-            二刀流相乗効果とエコシステム
-          </h3>
+          <SectionTitle>二刀流相乗効果とエコシステム</SectionTitle>
 
-          <div className="bg-card border-2 border-primary/20 rounded-xl p-10 shadow-lg">
-            <div className="space-y-10">
+          <div className="bg-white border border-border rounded-xl p-10 shadow-md">
+            <div className="space-y-8">
               {[
                 { num: '1', title: '計画', desc: 'AO・一般の受験戦略を統合的に立案' },
                 { num: '2', title: 'AI支援', desc: '添削AI・相談AIで日々の施策をサポート' },
                 { num: '3', title: 'レポート', desc: '進捗と課題を可視化したレポート提供' },
                 { num: '4', title: '塾長1on1', desc: '月1回の個別面談で戦略を調整' },
-              ].map((item, index) => (
+              ].map((item) => (
                 <div key={item.num} className="flex items-center gap-6">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary/80 text-primary-foreground flex items-center justify-center font-bold text-2xl font-serif shadow-md">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center font-bold text-2xl font-serif shadow-md">
                     {item.num}
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-bold text-xl font-serif text-foreground">{item.title}</h4>
+                    <h4 className="font-bold text-xl font-serif text-foreground tracking-wide">{item.title}</h4>
                     <p className="text-muted-foreground mt-1">{item.desc}</p>
                   </div>
-                  {index < 3 && (
-                    <div className="hidden md:block w-px h-16 bg-gradient-to-b from-accent/50 to-transparent absolute left-7 mt-20" />
-                  )}
                 </div>
               ))}
             </div>
@@ -313,17 +292,12 @@ export default function Page() {
         </div>
       </section>
 
-      <SectionDivider variant="sepia" />
+      {/* Six Reasons Section - Gray */}
+      <section className="py-24 px-4 bg-[#F3F4F6]">
+        <div className="max-w-5xl mx-auto">
+          <SectionTitle>佐藤塾が選ばれる6つの理由</SectionTitle>
 
-      {/* Six Reasons Section */}
-      <section className="py-24 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/[0.02] via-transparent to-[#002147]/[0.02]" />
-        <div className="max-w-5xl mx-auto relative">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-20 text-primary font-serif tracking-tight">
-            佐藤塾が選ばれる6つの理由
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               { num: '01', title: 'AO・一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
               { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限なし' },
@@ -332,14 +306,14 @@ export default function Page() {
               { num: '05', title: 'メンタルサポート充実', desc: '相談AIと塾長が受験のあらゆる不安に対応' },
               { num: '06', title: '返金保証制度', desc: 'AO合格で受講料の50%を返金。安心の仕組み' },
             ].map((item) => (
-              <Card key={item.num} className="border border-border hover:border-primary/40 transition-all hover:shadow-lg bg-card">
+              <Card key={item.num} className="bg-white shadow-md border-t-2 border-t-primary border-x-0 border-b-0 rounded-lg hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-start gap-5">
                     <div className="text-5xl font-bold text-accent font-serif tracking-tighter">
                       {item.num}
                     </div>
                     <div className="pt-2">
-                      <CardTitle className="text-lg font-serif">{item.title}</CardTitle>
+                      <CardTitle className="text-lg font-serif tracking-wide">{item.title}</CardTitle>
                     </div>
                   </div>
                 </CardHeader>
@@ -352,27 +326,19 @@ export default function Page() {
         </div>
       </section>
 
-      <SectionDivider variant="navy" />
-
-      {/* Pricing Section */}
-      <section className="py-24 px-4">
+      {/* Pricing Section - White */}
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-4 text-primary font-serif tracking-tight">
-            料金プラン
-          </h3>
-          <p className="text-center text-muted-foreground mb-20 text-lg font-serif">
-            衝撃の合格支援制度
-          </p>
+          <SectionTitle subtitle="衝撃の合格支援制度">料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-10">
             {/* Main Plan */}
-            <Card className="border-4 border-secondary shadow-2xl transform md:scale-105 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <div className="bg-gradient-to-r from-secondary to-secondary/90 text-secondary-foreground px-8 py-6">
+            <Card className="bg-white shadow-xl border-2 border-secondary transform md:scale-105 relative overflow-hidden rounded-lg">
+              <div className="bg-secondary text-white px-8 py-6">
                 <Badge className="bg-accent text-accent-foreground mb-4 inline-block font-semibold">推奨プラン</Badge>
-                <h4 className="text-2xl font-bold font-serif">AO・一般 完全攻略<br />二刀流プラン</h4>
+                <h4 className="text-2xl font-bold font-serif tracking-wide">AO・一般 完全攻略<br />二刀流プラン</h4>
               </div>
-              <CardContent className="pt-10 relative">
+              <CardContent className="pt-10">
                 <div className="mb-8">
                   <p className="text-muted-foreground text-sm mb-2 font-medium">受講料</p>
                   <p className="text-6xl font-bold text-primary font-serif tracking-tight">
@@ -411,16 +377,16 @@ export default function Page() {
                   </li>
                 </ul>
 
-                <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground h-14 text-base font-semibold shadow-lg">
+                <Button className="w-full bg-secondary hover:bg-secondary/90 text-white h-14 text-base font-semibold shadow-lg">
                   このプランに申し込む
                 </Button>
               </CardContent>
             </Card>
 
             {/* Secondary Plan */}
-            <Card className="border-2 border-primary/20 bg-card">
-              <CardHeader className="bg-primary/5 border-b border-border">
-                <h4 className="text-xl font-bold text-primary font-serif">小論文特化プラン</h4>
+            <Card className="bg-white shadow-md border border-border rounded-lg">
+              <CardHeader className="bg-[#F9F9F9] border-b border-border">
+                <h4 className="text-xl font-bold text-primary font-serif tracking-wide">小論文特化プラン</h4>
               </CardHeader>
               <CardContent className="pt-10">
                 <div className="mb-8">
@@ -450,7 +416,7 @@ export default function Page() {
                   </li>
                 </ul>
 
-                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground h-14 text-base font-medium">
+                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white h-14 text-base font-medium">
                   詳しく見る
                 </Button>
               </CardContent>
@@ -459,15 +425,11 @@ export default function Page() {
         </div>
       </section>
 
-      <SectionDivider variant="sepia" />
-
-      {/* Instructor Message Section */}
-      <section className="py-24 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] via-transparent to-secondary/[0.02]" />
-        <div className="max-w-4xl mx-auto relative">
+      {/* Instructor Message Section - Gray */}
+      <section className="py-24 px-4 bg-[#F3F4F6]">
+        <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10" />
               <Image
                 src="/jukucho.jpg"
                 alt="塾長"
@@ -487,7 +449,11 @@ export default function Page() {
             </div>
 
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 font-serif tracking-tight">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="h-px w-12 bg-[#002147]" />
+                <span className="text-sm font-medium text-primary tracking-widest">MESSAGE</span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 font-serif tracking-[0.08em]">
                 塾長からのメッセージ
               </h3>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
@@ -500,7 +466,7 @@ export default function Page() {
                 <strong className="text-primary">私が直接、あなたと並走することを約束します。</strong>
               </p>
               <div className="border-l-4 border-accent pl-6">
-                <p className="text-xl font-bold text-secondary font-serif">
+                <p className="text-xl font-bold text-secondary font-serif tracking-wide">
                   佐藤 〇〇
                 </p>
                 <p className="text-base text-muted-foreground mt-1">佐藤塾 塾長</p>
@@ -510,21 +476,14 @@ export default function Page() {
         </div>
       </section>
 
-      <SectionDivider variant="navy" />
-
-      {/* Contact Form Section */}
-      <section className="py-24 px-4">
+      {/* Contact Form Section - White */}
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-14">
-            <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif tracking-tight">
-              まずは1分で無料相談
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              合格への第一歩をここから始めましょう
-            </p>
-          </div>
+          <SectionTitle subtitle="合格への第一歩をここから始めましょう">
+            まずは1分で無料相談
+          </SectionTitle>
 
-          <Card className="border-2 border-primary/30 shadow-xl">
+          <Card className="bg-white shadow-md border-t-2 border-t-primary border-x border-b border-border rounded-lg">
             <CardContent className="pt-10">
               <form className="space-y-8">
                 <div>
@@ -564,7 +523,7 @@ export default function Page() {
                   />
                 </div>
 
-                <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground h-14 text-base font-semibold shadow-lg">
+                <Button className="w-full bg-secondary hover:bg-secondary/90 text-white h-14 text-base font-semibold shadow-lg">
                   無料相談に申し込む
                 </Button>
 
@@ -578,14 +537,14 @@ export default function Page() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-16 px-4">
+      <footer className="bg-primary text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl font-bold mb-3 font-serif">佐藤塾</h3>
-          <p className="text-primary-foreground/80 mb-8 text-lg">
+          <h3 className="text-3xl font-bold mb-3 font-serif tracking-[0.1em]">佐藤塾</h3>
+          <p className="text-white/80 mb-8 text-lg">
             慶應義塾大学 SFC（総合政策学部・環境情報学部）受験対策専門塾
           </p>
-          <div className="border-t border-primary-foreground/20 pt-8">
-            <p className="text-sm text-primary-foreground/60">
+          <div className="border-t border-white/20 pt-8">
+            <p className="text-sm text-white/60">
               &copy; 2026 佐藤塾. All rights reserved.
             </p>
           </div>
