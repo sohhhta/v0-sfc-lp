@@ -155,15 +155,15 @@ export default function Page() {
           </div>
           
           {/* Walls - Editorial Layout */}
-          <div className="space-y-16 md:space-y-20">
+          <div className="space-y-20 md:space-y-28">
             {/* Cause 01 */}
-            <div className="flex gap-6 md:gap-10">
-              <div className="flex-shrink-0">
-                <span className="text-6xl md:text-8xl font-bold text-[#800000]/15 font-serif leading-none">01</span>
+            <div className="flex gap-8 md:gap-14">
+              <div className="flex-shrink-0 w-24 md:w-32">
+                <span className="text-3xl md:text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
+                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">01</span>
               </div>
-              <div className="border-l-4 border-[#002147] pl-6 md:pl-8 py-2">
-                <div className="text-sm font-bold text-[#C5A059] tracking-[0.15em] mb-2 uppercase">原因 01</div>
-                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
+              <div className="border-l-4 border-[#002147] pl-8 md:pl-10 py-2 flex-1">
+                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
                   SFC専用の対策になっていない
                 </h3>
                 <p className="text-[#333333] leading-loose text-base md:text-lg">
@@ -173,13 +173,13 @@ export default function Page() {
             </div>
 
             {/* Cause 02 */}
-            <div className="flex gap-6 md:gap-10">
-              <div className="flex-shrink-0">
-                <span className="text-6xl md:text-8xl font-bold text-[#800000]/15 font-serif leading-none">02</span>
+            <div className="flex gap-8 md:gap-14">
+              <div className="flex-shrink-0 w-24 md:w-32">
+                <span className="text-3xl md:text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
+                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">02</span>
               </div>
-              <div className="border-l-4 border-[#002147] pl-6 md:pl-8 py-2">
-                <div className="text-sm font-bold text-[#C5A059] tracking-[0.15em] mb-2 uppercase">原因 02</div>
-                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
+              <div className="border-l-4 border-[#002147] pl-8 md:pl-10 py-2 flex-1">
+                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
                   添削の回数が少なすぎる
                 </h3>
                 <p className="text-[#333333] leading-loose text-base md:text-lg">
@@ -189,13 +189,13 @@ export default function Page() {
             </div>
 
             {/* Cause 03 */}
-            <div className="flex gap-6 md:gap-10">
-              <div className="flex-shrink-0">
-                <span className="text-6xl md:text-8xl font-bold text-[#800000]/15 font-serif leading-none">03</span>
+            <div className="flex gap-8 md:gap-14">
+              <div className="flex-shrink-0 w-24 md:w-32">
+                <span className="text-3xl md:text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
+                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">03</span>
               </div>
-              <div className="border-l-4 border-[#002147] pl-6 md:pl-8 py-2">
-                <div className="text-sm font-bold text-[#C5A059] tracking-[0.15em] mb-2 uppercase">原因 03</div>
-                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
+              <div className="border-l-4 border-[#002147] pl-8 md:pl-10 py-2 flex-1">
+                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
                   AO入試と一般入試の「共倒れ」
                 </h3>
                 <p className="text-[#333333] leading-loose text-base md:text-lg">
@@ -206,14 +206,14 @@ export default function Page() {
           </div>
 
           {/* Closing Statement - Three Walls Resolution */}
-          <div className="mt-24 md:mt-32 space-y-8 text-center">
+          <div className="mt-28 md:mt-36 space-y-8 text-center">
             <div className="w-16 h-px bg-[#002147] mx-auto" />
             <p className="text-lg md:text-xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed">
               佐藤塾は、この「独自性の壁」「時間の壁」「回数の壁」を<br className="hidden md:block" />
               すべて解消します。
             </p>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              AIが、お子様の答案をその場ですぐに分析。24時間、何度でも高品質なフィードバックを受けられる環境で、合格力を一気に引き上げます。
+              佐藤塾が独自に開発したSFC専用AIが、あなたの答案をその場ですぐに分析。24時間、何度でも高品質なフィードバックを受けられる環境で、合格ラインを確実に突破する力を引き上げます。
             </p>
           </div>
         </div>
