@@ -62,7 +62,7 @@ export default function Page() {
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-16">
           {/* Main Copy */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-tight text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-snug text-balance">
             3人に2人が慶應SFCへ。<br className="hidden sm:block" />
             <span className="text-[#C5A059]">合格率66.7%</span>を叩き出す、<br className="hidden md:block" />
             独自のAI伴走指導。
@@ -78,31 +78,50 @@ export default function Page() {
           <div className="mb-16">
             <Button 
               size="lg" 
-              className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#C5A059]/30 border-2 border-transparent hover:border-[#C5A059]"
+              className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#C5A059]/30 border-2 border-transparent hover:border-[#C5A059]"
             >
               まずは塾長に無料相談する
             </Button>
           </div>
           
           {/* Stats Section - Medal-like design */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 max-w-4xl mx-auto w-full">
-            {/* Left stat */}
-            <div className="order-2 md:order-1 flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
-              <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">2026年度 合格者</p>
-              <p className="text-5xl md:text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>9<span className="text-2xl ml-1">名</span></p>
+          {/* Mobile: center card full-width on top, two side cards in a row below */}
+          {/* Desktop: all three in one row, center slightly elevated */}
+          <div className="max-w-4xl mx-auto w-full">
+            {/* Center card — full-width on mobile, hidden on md+ (rendered in the 3-col grid) */}
+            <div className="md:hidden flex flex-col items-center justify-center p-6 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg mb-4">
+              <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
+              <p className="text-6xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>66.7<span className="text-2xl">%</span></p>
+              <p className="text-sm text-[#C5A059] mt-2 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生13名中9名が合格)</p>
             </div>
 
-            {/* Center stat - Main highlight */}
-            <div className="order-1 md:order-2 flex flex-col items-center justify-center p-8 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg md:scale-110 md:-my-2">
-              <p className="text-xs text-[#C5A059] mb-2 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
-              <p className="text-6xl md:text-7xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>66.7<span className="text-3xl">%</span></p>
-              <p className="text-xs text-[#C5A059] mt-3 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生13名中9名が合格)</p>
+            {/* Side cards row on mobile */}
+            <div className="grid grid-cols-2 gap-4 md:hidden">
+              <div className="flex flex-col items-center justify-center p-4 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+                <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium">2026年度 合格者</p>
+                <p className="text-4xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>9<span className="text-lg ml-0.5">名</span></p>
+              </div>
+              <div className="flex flex-col items-center justify-center p-4 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+                <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium">7年間累計</p>
+                <p className="text-4xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>49<span className="text-lg ml-0.5">名</span></p>
+              </div>
             </div>
 
-            {/* Right stat */}
-            <div className="order-3 flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
-              <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">7年間累計</p>
-              <p className="text-5xl md:text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>49<span className="text-2xl ml-1">名</span></p>
+            {/* Desktop: all three in one row */}
+            <div className="hidden md:grid md:grid-cols-3 gap-4">
+              <div className="flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+                <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">2026年度 合格者</p>
+                <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>9<span className="text-2xl ml-1">名</span></p>
+              </div>
+              <div className="flex flex-col items-center justify-center p-8 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg scale-110 -my-2">
+                <p className="text-xs text-[#C5A059] mb-2 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
+                <p className="text-7xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>66.7<span className="text-3xl">%</span></p>
+                <p className="text-sm text-[#C5A059] mt-3 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生13名中9名が合格)</p>
+              </div>
+              <div className="flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+                <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">7年間累計</p>
+                <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>49<span className="text-2xl ml-1">名</span></p>
+              </div>
             </div>
           </div>
         </div>
@@ -293,7 +312,7 @@ export default function Page() {
           <div className="bg-white border border-border rounded-xl p-10 shadow-md">
             <div className="space-y-8">
               {[
-                { num: '1', title: '計画', desc: 'AO・一般の受験戦略を統合的に立案' },
+                { num: '1', title: '計画', desc: 'AO・一般の受験戦略を統合的に立���' },
                 { num: '2', title: 'AI支援', desc: '添削AI・相談AIで日々の施策をサポート' },
                 { num: '3', title: 'レポート', desc: '進捗と課題を可視化したレポート提供' },
                 { num: '4', title: '塾長1on1', desc: '月1回の個別面談で戦略を調整' },
