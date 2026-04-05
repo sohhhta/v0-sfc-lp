@@ -78,7 +78,7 @@ export default function Page() {
           <div className="mb-16">
             <Button 
               size="lg" 
-              className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#C5A059]/30 border-2 border-transparent hover:border-[#C5A059]"
+              className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]"
             >
               まずは塾長に無料相談する
             </Button>
@@ -92,7 +92,7 @@ export default function Page() {
             <div className="md:hidden flex flex-col items-center justify-center p-6 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg mb-4">
               <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
               <p className="text-6xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>66.7<span className="text-2xl">%</span></p>
-              <p className="text-sm text-[#C5A059] mt-2 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生13名中9名が合格)</p>
+              <p className="text-sm text-[#D4AF37] mt-2 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生13名中9名が合格)</p>
             </div>
 
             {/* Side cards row on mobile */}
@@ -116,7 +116,7 @@ export default function Page() {
               <div className="flex flex-col items-center justify-center p-8 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg scale-110 -my-2">
                 <p className="text-xs text-[#C5A059] mb-2 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
                 <p className="text-7xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>66.7<span className="text-3xl">%</span></p>
-                <p className="text-sm text-[#C5A059] mt-3 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生13名中9名が合格)</p>
+                <p className="text-sm text-[#D4AF37] mt-3 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生13名中9名が合格)</p>
               </div>
               <div className="flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
                 <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">7年間累計</p>
@@ -127,9 +127,9 @@ export default function Page() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="relative z-10 pb-8 flex flex-col items-center animate-pulse">
+        <div className="relative z-10 mt-16 pb-8 flex flex-col items-center animate-pulse">
           <span className="text-white/60 text-xs tracking-[0.3em] mb-3 font-medium">SCROLL</span>
-          <div className="w-px h-12 bg-gradient-to-b from-white/60 to-transparent"></div>
+          <div className="w-px h-14 bg-gradient-to-b from-white/70 via-white/30 to-transparent"></div>
         </div>
       </section>
 
