@@ -57,14 +57,14 @@ export default function Page() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/85 via-[#002147]/75 to-[#002147]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/92 via-[#002147]/88 to-[#002147]/95"></div>
         </div>
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-16">
           {/* Main Copy */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-tight text-balance">
             3人に2人が慶應SFCへ。<br className="hidden sm:block" />
-            <span className="text-[#D4AF37]">合格率66.7%</span>を叩き出す、<br className="hidden md:block" />
+            <span className="text-[#C5A059]">合格率66.7%</span>を叩き出す、<br className="hidden md:block" />
             独自のAI伴走指導。
           </h1>
           
@@ -80,27 +80,27 @@ export default function Page() {
               size="lg" 
               className="bg-[#800000] hover:bg-[#800000]/90 text-white text-lg font-bold px-12 py-7 h-auto shadow-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] border-2 border-transparent hover:border-[#D4AF37]/50"
             >
-              無料相談を予約する
+              まずは塾長に無料相談する
             </Button>
           </div>
           
           {/* Stats Section - Medal-like design */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 max-w-4xl mx-auto w-full">
             {/* Left stat */}
-            <div className="order-2 md:order-1 flex flex-col items-center justify-center p-6 border-2 border-[#D4AF37]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+            <div className="order-2 md:order-1 flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
               <p className="text-xs text-white/70 mb-2 tracking-wider font-medium">2026年度 合格者</p>
               <p className="text-5xl md:text-6xl font-bold text-white font-serif">9<span className="text-2xl ml-1">名</span></p>
             </div>
 
             {/* Center stat - Main highlight */}
-            <div className="order-1 md:order-2 flex flex-col items-center justify-center p-8 border-2 border-[#D4AF37] rounded-lg bg-[#D4AF37]/10 backdrop-blur-sm shadow-lg md:scale-110 md:-my-2">
-              <p className="text-xs text-[#D4AF37] mb-2 tracking-wider font-bold">2026年度 合格率</p>
-              <p className="text-6xl md:text-7xl font-bold text-[#D4AF37] font-serif tracking-tight">66.7<span className="text-3xl">%</span></p>
-              <p className="text-xs text-white/80 mt-3">(全受験生13名中9名が合格)</p>
+            <div className="order-1 md:order-2 flex flex-col items-center justify-center p-8 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg md:scale-110 md:-my-2">
+              <p className="text-xs text-[#C5A059] mb-2 tracking-wider font-bold">2026年度 合格率</p>
+              <p className="text-6xl md:text-7xl font-bold text-[#C5A059] font-serif tracking-tight">66.7<span className="text-3xl">%</span></p>
+              <p className="text-xs text-[#C5A059]/80 mt-3 drop-shadow-[0_1px_2px_rgba(0,33,71,0.8)]">(全受験生13名中9名が合格)</p>
             </div>
 
             {/* Right stat */}
-            <div className="order-3 flex flex-col items-center justify-center p-6 border-2 border-[#D4AF37]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+            <div className="order-3 flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
               <p className="text-xs text-white/70 mb-2 tracking-wider font-medium">7年間累計</p>
               <p className="text-5xl md:text-6xl font-bold text-white font-serif">49<span className="text-2xl ml-1">名</span></p>
             </div>
