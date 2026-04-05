@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Noto_Serif_JP, Noto_Sans_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const serifJP = Noto_Serif_JP({ subsets: ["latin", "japanese"], weight: ["400", "700"] });
+const sansJP = Noto_Sans_JP({ subsets: ["latin", "japanese"], weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: '慶應SFC合格への最短距離 - 佐藤塾',
+  description: '3人に2人が合格する、AI伴走ロジック。圧倒的な合格実績と充実の返金保証。',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -35,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
+    <html lang="ja">
+      <body style={{ fontFamily: `${sansJP.style.fontFamily}, ${serifJP.style.fontFamily}` }} className="antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
