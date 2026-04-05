@@ -46,50 +46,71 @@ export default function Page() {
         </div>
       </nav>
 
-      {/* Hero Section - White */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        {/* Background with navy gradient overlay */}
         <div className="absolute inset-0">
           <Image
             src="/hero.jpg"
             alt="Keio SFC Campus"
             fill
             className="object-cover"
-            style={{ filter: 'sepia(30%) contrast(0.95) brightness(0.95)' }}
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/85 via-[#002147]/75 to-[#002147]/90"></div>
         </div>
         
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-5xl md:text-7xl font-bold text-primary mb-8 font-serif tracking-[0.05em] text-balance">
-            慶應SFC合格への<br />最短距離
-          </h2>
-          <p className="text-xl md:text-2xl text-foreground mb-10 font-medium">
-            3人に2人が合格する、<span className="text-secondary font-bold font-serif">独自のAI伴走ロジック</span>
+        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-16">
+          {/* Main Copy */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-tight text-balance">
+            3人に2人が慶應SFCへ。<br className="hidden sm:block" />
+            <span className="text-[#D4AF37]">合格率66.7%</span>を叩き出す、<br className="hidden md:block" />
+            独自のAI伴走指導。
+          </h1>
+          
+          {/* Sub Copy */}
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide">
+            学校では教えられないSFCの正解を、AIと塾長が24時間フルサポート。<br className="hidden md:block" />
+            最短距離で、合格する思考を鍛え上げる。
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white text-base font-semibold px-8 py-6">
-              無料相談に申し込む
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white text-base px-8 py-6">
-              詳しく見る
+
+          {/* CTA Button */}
+          <div className="mb-16">
+            <Button 
+              size="lg" 
+              className="bg-[#800000] hover:bg-[#800000]/90 text-white text-lg font-bold px-12 py-7 h-auto shadow-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] border-2 border-transparent hover:border-[#D4AF37]/50"
+            >
+              無料相談を予約する
             </Button>
           </div>
           
-          <div className="grid grid-cols-3 gap-6 text-center bg-white rounded-lg p-8 border border-border shadow-xl">
-            <div>
-              <p className="text-5xl md:text-6xl font-bold text-primary font-serif tracking-tight">66<span className="text-3xl">%</span></p>
-              <p className="text-sm text-muted-foreground mt-2 font-medium">2026年合格率</p>
+          {/* Stats Section - Medal-like design */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 max-w-4xl mx-auto w-full">
+            {/* Left stat */}
+            <div className="order-2 md:order-1 flex flex-col items-center justify-center p-6 border-2 border-[#D4AF37]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+              <p className="text-xs text-white/70 mb-2 tracking-wider font-medium">2026年度 合格者</p>
+              <p className="text-5xl md:text-6xl font-bold text-white font-serif">9<span className="text-2xl ml-1">名</span></p>
             </div>
-            <div className="border-l border-r border-border px-4">
-              <p className="text-5xl md:text-6xl font-bold text-primary font-serif tracking-tight">9<span className="text-3xl">名</span></p>
-              <p className="text-sm text-muted-foreground mt-2 font-medium">2026年合格者</p>
+
+            {/* Center stat - Main highlight */}
+            <div className="order-1 md:order-2 flex flex-col items-center justify-center p-8 border-2 border-[#D4AF37] rounded-lg bg-[#D4AF37]/10 backdrop-blur-sm shadow-lg md:scale-110 md:-my-2">
+              <p className="text-xs text-[#D4AF37] mb-2 tracking-wider font-bold">2026年度 合格率</p>
+              <p className="text-6xl md:text-7xl font-bold text-[#D4AF37] font-serif tracking-tight">66.7<span className="text-3xl">%</span></p>
+              <p className="text-xs text-white/80 mt-3">(全受験生13名中9名が合格)</p>
             </div>
-            <div>
-              <p className="text-5xl md:text-6xl font-bold text-primary font-serif tracking-tight">49<span className="text-3xl">名</span></p>
-              <p className="text-sm text-muted-foreground mt-2 font-medium">7年累計合格者</p>
+
+            {/* Right stat */}
+            <div className="order-3 flex flex-col items-center justify-center p-6 border-2 border-[#D4AF37]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+              <p className="text-xs text-white/70 mb-2 tracking-wider font-medium">7年間累計</p>
+              <p className="text-5xl md:text-6xl font-bold text-white font-serif">49<span className="text-2xl ml-1">名</span></p>
             </div>
           </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="relative z-10 pb-8 flex flex-col items-center animate-pulse">
+          <span className="text-white/60 text-xs tracking-[0.3em] mb-3 font-medium">SCROLL</span>
+          <div className="w-px h-12 bg-gradient-to-b from-white/60 to-transparent"></div>
         </div>
       </section>
 
