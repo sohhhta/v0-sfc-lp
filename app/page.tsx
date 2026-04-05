@@ -148,65 +148,72 @@ export default function Page() {
           <div className="text-center mb-20">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed text-balance">
-              なぜ、一般的な対策では、<br className="hidden sm:block" />
-              慶應SFCに届かないのか？
+              なぜ、一般的な塾の対策では、<br className="hidden sm:block" />
+              慶應SFCの合格ラインに届かないのか？
             </h2>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
           
           {/* Walls - Editorial Layout */}
           <div className="space-y-16 md:space-y-20">
-            {/* Wall 01 */}
+            {/* Cause 01 */}
             <div className="flex gap-6 md:gap-10">
               <div className="flex-shrink-0">
-                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none">01</span>
+                <span className="text-6xl md:text-8xl font-bold text-[#800000]/15 font-serif leading-none">01</span>
               </div>
-              <div className="border-l-4 border-[#800000] pl-6 md:pl-8 py-2">
+              <div className="border-l-4 border-[#002147] pl-6 md:pl-8 py-2">
+                <div className="text-sm font-bold text-[#C5A059] tracking-[0.15em] mb-2 uppercase">原因 01</div>
                 <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                  一般論に終始する指導
+                  SFC専用の対策になっていない
                 </h3>
-                <p className="text-foreground leading-loose text-base md:text-lg">
-                  学校や一般の塾では、SFC特有の多角的な視点ではなく、どこにでもある「一般的な回答」の指導に留まってしまう。それでは、SFCが求める独自の思考力は証明できない。
+                <p className="text-[#333333] leading-loose text-base md:text-lg">
+                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」。しかし、SFCは独自の視点を求める特殊な入試。ありきたりな回答では、合格点には届きません。
                 </p>
               </div>
             </div>
 
-            {/* Wall 02 */}
+            {/* Cause 02 */}
             <div className="flex gap-6 md:gap-10">
               <div className="flex-shrink-0">
-                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none">02</span>
+                <span className="text-6xl md:text-8xl font-bold text-[#800000]/15 font-serif leading-none">02</span>
               </div>
-              <div className="border-l-4 border-[#800000] pl-6 md:pl-8 py-2">
+              <div className="border-l-4 border-[#002147] pl-6 md:pl-8 py-2">
+                <div className="text-sm font-bold text-[#C5A059] tracking-[0.15em] mb-2 uppercase">原因 02</div>
                 <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                  速度と回数の限界
+                  添削の回数が少なすぎる
                 </h3>
-                <p className="text-foreground leading-loose text-base md:text-lg">
-                  大手塾では1回の添削に1週間を要し、添削回数にも上限（月4回等）がある。思考の熱量は冷め、試行錯誤の数は圧倒的に不足。この「停滞」が合格を遠ざける。
+                <p className="text-[#333333] leading-loose text-base md:text-lg">
+                  大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」が受験生の成長を止めてしまいます。
                 </p>
               </div>
             </div>
 
-            {/* Wall 03 */}
+            {/* Cause 03 */}
             <div className="flex gap-6 md:gap-10">
               <div className="flex-shrink-0">
-                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none">03</span>
+                <span className="text-6xl md:text-8xl font-bold text-[#800000]/15 font-serif leading-none">03</span>
               </div>
-              <div className="border-l-4 border-[#800000] pl-6 md:pl-8 py-2">
+              <div className="border-l-4 border-[#002147] pl-6 md:pl-8 py-2">
+                <div className="text-sm font-bold text-[#C5A059] tracking-[0.15em] mb-2 uppercase">原因 03</div>
                 <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                  戦略の二死満塁
+                  AO入試と一般入試の「共倒れ」
                 </h3>
-                <p className="text-foreground leading-loose text-base md:text-lg">
-                  AO入試に全力を注げば一般入試が疎かになり、一般に絞れば貴重なチャンスを捨てることになる。両立の正解が見えないまま、時間だけが過ぎていく。
+                <p className="text-[#333333] leading-loose text-base md:text-lg">
+                  AO入試の準備で一般入試の対策がおろそかになり、一般入試に絞れば、AO入試というSFCへの挑戦機会が少なくなってしまう。一人では抱えきれない学習計画が、合格を遠ざけます。
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Closing Statement */}
-          <div className="mt-24 md:mt-32 text-center">
-            <div className="w-16 h-px bg-[#C5A059] mx-auto mb-10" />
-            <p className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-[0.1em] leading-relaxed">
-              この停滞を、AIが打ち破る。
+          {/* Closing Statement - Three Walls Resolution */}
+          <div className="mt-24 md:mt-32 space-y-8 text-center">
+            <div className="w-16 h-px bg-[#002147] mx-auto" />
+            <p className="text-lg md:text-xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed">
+              佐藤塾は、この「独自性の壁」「時間の壁」「回数の壁」を<br className="hidden md:block" />
+              すべて解消します。
+            </p>
+            <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
+              AIが、お子様の答案をその場ですぐに分析。24時間、何度でも高品質なフィードバックを受けられる環境で、合格力を一気に引き上げます。
             </p>
           </div>
         </div>
