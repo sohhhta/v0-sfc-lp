@@ -155,50 +155,95 @@ export default function Page() {
           </div>
           
           {/* Walls - Editorial Layout */}
-          <div className="space-y-20 md:space-y-28">
+          <div className="space-y-12 md:space-y-28">
             {/* Cause 01 */}
-            <div className="flex gap-8 md:gap-14">
-              <div className="flex-shrink-0 w-24 md:w-32">
-                <span className="text-3xl md:text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
-                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">01</span>
+            <div className="relative">
+              {/* Mobile: Large text as background watermark */}
+              <div className="md:hidden absolute -top-2 -left-2 opacity-[0.08] pointer-events-none">
+                <span className="text-7xl font-bold text-[#800000] font-serif leading-none">01</span>
               </div>
-              <div className="border-l-4 border-[#002147] pl-8 md:pl-10 py-2 flex-1">
-                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
+              {/* Desktop: Side column layout */}
+              <div className="hidden md:flex gap-14">
+                <div className="flex-shrink-0 w-32">
+                  <span className="text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
+                  <span className="text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">01</span>
+                </div>
+                <div className="border-l-4 border-[#002147] pl-10 py-2 flex-1">
+                  <h3 className="text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
+                    SFC専用の対策になっていない
+                  </h3>
+                  <p className="text-[#333333] leading-loose text-lg">
+                    学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」。しかし、SFCは独自の視点を求める特殊な入試。ありきたりな回答では、合格点には届きません。
+                  </p>
+                </div>
+              </div>
+              {/* Mobile: Stacked layout */}
+              <div className="md:hidden relative border-l-4 border-[#002147] pl-5">
+                <div className="text-xs font-bold text-[#C5A059] tracking-[0.2em] mb-1">原因 01</div>
+                <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
                   SFC専用の対策になっていない
                 </h3>
-                <p className="text-[#333333] leading-loose text-base md:text-lg">
+                <p className="text-[#333333] leading-relaxed text-base">
                   学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」。しかし、SFCは独自の視点を求める特殊な入試。ありきたりな回答では、合格点には届きません。
                 </p>
               </div>
             </div>
 
             {/* Cause 02 */}
-            <div className="flex gap-8 md:gap-14">
-              <div className="flex-shrink-0 w-24 md:w-32">
-                <span className="text-3xl md:text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
-                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">02</span>
+            <div className="relative">
+              <div className="md:hidden absolute -top-2 -left-2 opacity-[0.08] pointer-events-none">
+                <span className="text-7xl font-bold text-[#800000] font-serif leading-none">02</span>
               </div>
-              <div className="border-l-4 border-[#002147] pl-8 md:pl-10 py-2 flex-1">
-                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
+              <div className="hidden md:flex gap-14">
+                <div className="flex-shrink-0 w-32">
+                  <span className="text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
+                  <span className="text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">02</span>
+                </div>
+                <div className="border-l-4 border-[#002147] pl-10 py-2 flex-1">
+                  <h3 className="text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
+                    添削の回数が少なすぎる
+                  </h3>
+                  <p className="text-[#333333] leading-loose text-lg">
+                    大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」が受験生の成長を止めてしまいます。
+                  </p>
+                </div>
+              </div>
+              <div className="md:hidden relative border-l-4 border-[#002147] pl-5">
+                <div className="text-xs font-bold text-[#C5A059] tracking-[0.2em] mb-1">原因 02</div>
+                <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
                   添削の回数が少なすぎる
                 </h3>
-                <p className="text-[#333333] leading-loose text-base md:text-lg">
+                <p className="text-[#333333] leading-relaxed text-base">
                   大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」が受験生の成長を止めてしまいます。
                 </p>
               </div>
             </div>
 
             {/* Cause 03 */}
-            <div className="flex gap-8 md:gap-14">
-              <div className="flex-shrink-0 w-24 md:w-32">
-                <span className="text-3xl md:text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
-                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">03</span>
+            <div className="relative">
+              <div className="md:hidden absolute -top-2 -left-2 opacity-[0.08] pointer-events-none">
+                <span className="text-7xl font-bold text-[#800000] font-serif leading-none">03</span>
               </div>
-              <div className="border-l-4 border-[#002147] pl-8 md:pl-10 py-2 flex-1">
-                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
+              <div className="hidden md:flex gap-14">
+                <div className="flex-shrink-0 w-32">
+                  <span className="text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
+                  <span className="text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">03</span>
+                </div>
+                <div className="border-l-4 border-[#002147] pl-10 py-2 flex-1">
+                  <h3 className="text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
+                    AO入試と一般入試の「共倒れ」
+                  </h3>
+                  <p className="text-[#333333] leading-loose text-lg">
+                    AO入試の準備で一般入試の対策がおろそかになり、一般入試に絞れば、AO入試というSFCへの挑戦機会が少なくなってしまう。一人では抱えきれない学習計画が、合格を遠ざけます。
+                  </p>
+                </div>
+              </div>
+              <div className="md:hidden relative border-l-4 border-[#002147] pl-5">
+                <div className="text-xs font-bold text-[#C5A059] tracking-[0.2em] mb-1">原因 03</div>
+                <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
                   AO入試と一般入試の「共倒れ」
                 </h3>
-                <p className="text-[#333333] leading-loose text-base md:text-lg">
+                <p className="text-[#333333] leading-relaxed text-base">
                   AO入試の準備で一般入試の対策がおろそかになり、一般入試に絞れば、AO入試というSFCへの挑戦機会が少なくなってしまう。一人では抱えきれない学習計画が、合格を遠ざけます。
                 </p>
               </div>
@@ -206,13 +251,17 @@ export default function Page() {
           </div>
 
           {/* Closing Statement - Three Walls Resolution */}
-          <div className="mt-28 md:mt-36 space-y-8 text-center">
+          <div className="mt-20 md:mt-36 space-y-8 text-center">
             <div className="w-16 h-px bg-[#002147] mx-auto" />
             <p className="text-lg md:text-xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed">
-              佐藤塾は、この「独自性の壁」「時間の壁」「回数の壁」を<br className="hidden md:block" />
+              佐藤塾は、この
+              <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「独自性の壁」</span>
+              <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「時間の壁」</span>
+              <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「回数の壁」</span>を<br className="hidden md:block" />
               すべて解消します。
             </p>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
+              <span className="text-[#C5A059] mr-1">◆</span>
               佐藤塾が独自に開発したSFC専用AIが、あなたの答案をその場ですぐに分析。24時間、何度でも高品質なフィードバックを受けられる環境で、合格ラインを確実に突破する力を引き上げます。
             </p>
           </div>
