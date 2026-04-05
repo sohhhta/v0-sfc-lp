@@ -133,39 +133,81 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Problem Section - Gray */}
-      <section className="py-24 px-4 bg-[#F3F4F6]">
-        <div className="max-w-4xl mx-auto">
-          <SectionTitle>SFC合格を阻む「壁」</SectionTitle>
+      {/* Problem Section - Editorial Magazine Style */}
+      <section className="relative py-28 px-4 bg-[#F3F4F6] overflow-hidden">
+        {/* Pinstripe background pattern */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]" 
+          style={{ 
+            backgroundImage: 'repeating-linear-gradient(90deg, #002147 0px, #002147 1px, transparent 1px, transparent 8px)',
+          }}
+        />
+        
+        <div className="relative max-w-4xl mx-auto">
+          {/* Section Title - Editorial Style */}
+          <div className="text-center mb-20">
+            <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed text-balance">
+              なぜ、一般的な対策では、<br className="hidden sm:block" />
+              慶應SFCに届かないのか？
+            </h2>
+            <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
+          </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-white shadow-md border-t-2 border-t-primary border-x-0 border-b-0 rounded-lg">
-              <CardHeader>
-                <CardTitle className="text-secondary flex items-center gap-3 font-serif text-xl tracking-wide">
-                  <span className="text-2xl">&#10005;</span>
-                  学校の先生でも指導困難
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground leading-relaxed">
-                  SFCの小論文は独特な評価基準。学校の一般的な指導方法では対応できない複雑さがあります。
+          {/* Walls - Editorial Layout */}
+          <div className="space-y-16 md:space-y-20">
+            {/* Wall 01 */}
+            <div className="flex gap-6 md:gap-10">
+              <div className="flex-shrink-0">
+                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none">01</span>
+              </div>
+              <div className="border-l-4 border-[#800000] pl-6 md:pl-8 py-2">
+                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
+                  一般論に終始する指導
+                </h3>
+                <p className="text-foreground leading-loose text-base md:text-lg">
+                  学校や一般の塾では、SFC特有の多角的な視点ではなく、どこにでもある「一般的な回答」の指導に留まってしまう。それでは、SFCが求める独自の思考力は証明できない。
                 </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white shadow-md border-t-2 border-t-primary border-x-0 border-b-0 rounded-lg">
-              <CardHeader>
-                <CardTitle className="text-secondary flex items-center gap-3 font-serif text-xl tracking-wide">
-                  <span className="text-2xl">&#10005;</span>
-                  答えがない出題
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground leading-relaxed">
-                  「���解」が存在しない論述問題。どう対策すればいいのか、多くの受験生が絶望感を感じています。
+              </div>
+            </div>
+
+            {/* Wall 02 */}
+            <div className="flex gap-6 md:gap-10">
+              <div className="flex-shrink-0">
+                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none">02</span>
+              </div>
+              <div className="border-l-4 border-[#800000] pl-6 md:pl-8 py-2">
+                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
+                  速度と回数の限界
+                </h3>
+                <p className="text-foreground leading-loose text-base md:text-lg">
+                  大手塾では1回の添削に1週間を要し、添削回数にも上限（月4回等）がある。思考の熱量は冷め、試行錯誤の数は圧倒的に不足。この「停滞」が合格を遠ざける。
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+
+            {/* Wall 03 */}
+            <div className="flex gap-6 md:gap-10">
+              <div className="flex-shrink-0">
+                <span className="text-6xl md:text-8xl font-bold text-[#800000]/20 font-serif leading-none">03</span>
+              </div>
+              <div className="border-l-4 border-[#800000] pl-6 md:pl-8 py-2">
+                <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
+                  戦略の二死満塁
+                </h3>
+                <p className="text-foreground leading-loose text-base md:text-lg">
+                  AO入試に全力を注げば一般入試が疎かになり、一般に絞れば貴重なチャンスを捨てることになる。両立の正解が見えないまま、時間だけが過ぎていく。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Closing Statement */}
+          <div className="mt-24 md:mt-32 text-center">
+            <div className="w-16 h-px bg-[#C5A059] mx-auto mb-10" />
+            <p className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-[0.1em] leading-relaxed">
+              この停滞を、AIが打ち破る。
+            </p>
           </div>
         </div>
       </section>
