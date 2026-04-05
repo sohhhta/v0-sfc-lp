@@ -57,7 +57,7 @@ export default function Page() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/92 via-[#002147]/88 to-[#002147]/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/97 via-[#002147]/93 to-[#002147]/98"></div>
         </div>
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-16">
@@ -78,7 +78,7 @@ export default function Page() {
           <div className="mb-16">
             <Button 
               size="lg" 
-              className="bg-[#800000] hover:bg-[#800000]/90 text-white text-lg font-bold px-12 py-7 h-auto shadow-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] border-2 border-transparent hover:border-[#D4AF37]/50"
+              className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#C5A059]/30 border-2 border-transparent hover:border-[#C5A059]"
             >
               まずは塾長に無料相談する
             </Button>
@@ -88,21 +88,21 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 max-w-4xl mx-auto w-full">
             {/* Left stat */}
             <div className="order-2 md:order-1 flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
-              <p className="text-xs text-white/70 mb-2 tracking-wider font-medium">2026年度 合格者</p>
-              <p className="text-5xl md:text-6xl font-bold text-white font-serif">9<span className="text-2xl ml-1">名</span></p>
+              <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">2026年度 合格者</p>
+              <p className="text-5xl md:text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>9<span className="text-2xl ml-1">名</span></p>
             </div>
 
             {/* Center stat - Main highlight */}
             <div className="order-1 md:order-2 flex flex-col items-center justify-center p-8 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg md:scale-110 md:-my-2">
-              <p className="text-xs text-[#C5A059] mb-2 tracking-wider font-bold">2026年度 合格率</p>
-              <p className="text-6xl md:text-7xl font-bold text-[#C5A059] font-serif tracking-tight">66.7<span className="text-3xl">%</span></p>
-              <p className="text-xs text-[#C5A059]/80 mt-3 drop-shadow-[0_1px_2px_rgba(0,33,71,0.8)]">(全受験生13名中9名が合格)</p>
+              <p className="text-xs text-[#C5A059] mb-2 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
+              <p className="text-6xl md:text-7xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>66.7<span className="text-3xl">%</span></p>
+              <p className="text-xs text-[#C5A059] mt-3 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生13名中9名が合格)</p>
             </div>
 
             {/* Right stat */}
             <div className="order-3 flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
-              <p className="text-xs text-white/70 mb-2 tracking-wider font-medium">7年間累計</p>
-              <p className="text-5xl md:text-6xl font-bold text-white font-serif">49<span className="text-2xl ml-1">名</span></p>
+              <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">7年間累計</p>
+              <p className="text-5xl md:text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>49<span className="text-2xl ml-1">名</span></p>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ export default function Page() {
               </CardHeader>
               <CardContent>
                 <p className="text-foreground leading-relaxed">
-                  「正解」が存在しない論述問題。どう対策すればいいのか、多くの受験生が絶望感を感じています。
+                  「���解」が存在しない論述問題。どう対策すればいいのか、多くの受験生が絶望感を感じています。
                 </p>
               </CardContent>
             </Card>
