@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Check, MessageCircle, PenTool } from 'lucide-react'
+import { Check } from 'lucide-react'
 
 // Section title with Keio blue decorative lines
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
@@ -268,87 +268,105 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Solution Section: Two AIs - White */}
-      <section className="py-24 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="添削AIと相談AIが、あなたの合格を全方位からサポート">
-            佐藤塾の解答：2つの知能
-          </SectionTitle>
+      {/* Solution Section: Two AIs - White with intellectual pattern */}
+      <section className="relative py-28 px-4 bg-white overflow-hidden">
+        {/* Subtle intellectual pattern background */}
+        <div 
+          className="absolute inset-0 opacity-[0.02]" 
+          style={{ 
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002147' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
+        
+        <div className="relative max-w-5xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
+              合格率66.7%を支える、<br className="sm:hidden" />
+              2つの「合格思考AI」
+            </h2>
+            <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
+              ただの汎用AIではありません。7年間にわたる合格者の全指導データと、塾長の全知見を学習させた、佐藤塾にしか作れない専用の指導システムです。
+            </p>
+            <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-10">
-            {/* AI 1: Essay Editing */}
-            <Card className="bg-white shadow-md border-t-2 border-t-primary border-x border-b border-border rounded-lg overflow-hidden">
-              <CardHeader className="pb-4">
-                <CardTitle className="flex items-center gap-3 text-primary font-serif text-xl tracking-wide">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <PenTool className="w-5 h-5 text-primary" />
-                  </div>
+          <div className="space-y-16 md:space-y-20">
+            {/* AI 1: 添削AI */}
+            <div className="bg-white border-l-4 border-[#002147] shadow-lg rounded-r-lg overflow-hidden">
+              <div className="p-6 md:p-10">
+                {/* Title */}
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">AI 01</span>
+                  <div className="h-px flex-1 bg-[#002147]/10" />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
                   添削AI「論理の研磨」
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-[#F9F9F9] border border-border rounded-lg p-4 mb-6">
-                  <p className="text-xs text-muted-foreground mb-2 font-medium">原稿用紙イメージ</p>
-                  <div className="bg-[#FFFEF0] p-3 rounded text-sm font-mono border border-[#D4AF37]/20">
-                    <div className="line-through text-secondary/80">問題な部分がここにあります</div>
-                    <div className="text-secondary text-xs mt-1 font-sans">→ より論理的に構成してください</div>
-                  </div>
-                </div>
-                <ul className="space-y-3 text-sm">
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 mt-0.5 text-accent flex-shrink-0" />
-                    <span>小論文の論理構成を瞬時に添削</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 mt-0.5 text-accent flex-shrink-0" />
-                    <span>24時間無制限に利用可能</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 mt-0.5 text-accent flex-shrink-0" />
-                    <span>SFC特化の指導ロジック</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+                </h3>
+                
+                {/* Development Background */}
+                <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
+                  7年間の合格者が書いた全答案と、その成長過程（ビフォー・アフター）をすべて学習。SFC特有の評価基準を完全に再現し、合格ラインを超えるための「思考の癖」を矯正します。
+                </p>
 
-            {/* AI 2: Consultation */}
-            <Card className="bg-white shadow-md border-t-2 border-t-secondary border-x border-b border-border rounded-lg overflow-hidden">
-              <CardHeader className="pb-4">
-                <CardTitle className="flex items-center gap-3 text-secondary font-serif text-xl tracking-wide">
-                  <div className="p-2 bg-secondary/10 rounded-lg">
-                    <MessageCircle className="w-5 h-5 text-secondary" />
+                {/* Chat Mockup */}
+                <div className="bg-[#F8F9FA] rounded-lg p-5 md:p-6 border border-[#E5E7EB]">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-2 h-2 rounded-full bg-[#002147]" />
+                    <span className="text-xs font-bold text-[#002147] tracking-wider">添削AIからのフィードバック</span>
                   </div>
+                  <div className="bg-white rounded-lg p-4 md:p-5 border border-[#002147]/10 shadow-sm">
+                    <p className="text-sm md:text-base text-[#333333] leading-relaxed">
+                      あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>しています。設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* AI 2: 相談AI */}
+            <div className="bg-white border-l-4 border-[#800000] shadow-lg rounded-r-lg overflow-hidden">
+              <div className="p-6 md:p-10">
+                {/* Title */}
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">AI 02</span>
+                  <div className="h-px flex-1 bg-[#800000]/10" />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
                   相談AI「戦略の並走」
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-[#F9F9F9] border border-border rounded-lg p-4 mb-6">
-                  <p className="text-xs text-muted-foreground mb-2 font-medium">対話チャット</p>
-                  <div className="space-y-2 text-xs">
-                    <div className="bg-primary/5 p-2 rounded border border-primary/10">
-                      <strong className="text-primary">あなた:</strong> 小論文の選題で悩んでいます
+                </h3>
+                
+                {/* Development Background */}
+                <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
+                  過去の合格者が塾長にぶつけた悩み、それに対する塾長の全回答、そして独自分析した過去問データを集約。24時間、塾長があなたの隣で戦略を練り続ける体験を実現しました。
+                </p>
+
+                {/* Chat Mockup - Dialogue Style */}
+                <div className="bg-[#F8F9FA] rounded-lg p-5 md:p-6 border border-[#E5E7EB]">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-2 h-2 rounded-full bg-[#800000]" />
+                    <span className="text-xs font-bold text-[#002147] tracking-wider">相談AIとの対話</span>
+                  </div>
+                  <div className="space-y-3">
+                    {/* User message */}
+                    <div className="flex justify-end">
+                      <div className="bg-[#002147] text-white rounded-lg rounded-br-none px-4 py-3 max-w-[85%] shadow-sm">
+                        <p className="text-sm md:text-base">AOの準備で小論文が書けなくなって焦っています…</p>
+                      </div>
                     </div>
-                    <div className="bg-white p-2 rounded border border-border">
-                      <strong className="text-foreground">AI:</strong> その選題の背景を深掘りすることで...
+                    {/* AI response */}
+                    <div className="flex justify-start">
+                      <div className="bg-white rounded-lg rounded-bl-none px-4 py-3 max-w-[85%] border border-[#800000]/20 shadow-sm">
+                        <p className="text-sm md:text-base text-[#333333] leading-relaxed">
+                          大丈夫です。<span className="text-[#800000] font-bold">過去の合格者も今の時期に同じ壁に直面</span>していました。今は資料集めを一旦止め、<span className="text-[#800000] font-bold">構成案を3パターン作ること</span>に集中しましょう。それが最短ルートです。
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <ul className="space-y-3 text-sm">
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 mt-0.5 text-accent flex-shrink-0" />
-                    <span>受験全般の疑問に即答</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 mt-0.5 text-accent flex-shrink-0" />
-                    <span>メンタルサポート充実</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 mt-0.5 text-accent flex-shrink-0" />
-                    <span>24時間対応</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
