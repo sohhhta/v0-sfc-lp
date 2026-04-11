@@ -33,6 +33,97 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
   )
 }
 
+// Consultation AI Card with tabbed conversations
+function ConsultationAICard() {
+  const [activeTab, setActiveTab] = useState(0)
+  
+  const conversations = [
+    {
+      label: 'AO入試',
+      question: 'AO入試に興味はありますが、全国大会優勝のようなすごい実績がありません。やっぱり諦めるべきでしょうか？',
+      answer: 'いいえ、諦めるべきではありません。SFCが求めているのは<highlight>「実績の凄さ」ではなく「問題発見の鋭さ」</highlight>です。過去の合格者も最初は「ただの趣味」と認識していたことを深掘りし、独自の実績にできました。<highlight>まずはあなたが日頃頑張らなくてもできていること</highlight>を書き出してみましょう。'
+    },
+    {
+      label: '小論文',
+      question: '資料が多すぎて、1行目も書けません…',
+      answer: 'SFCの資料は<highlight>あえて迷わせるように作られています</highlight>。まずは知識を詰め込むより、資料の共通点を探す「探しっこ」から始めましょう。<highlight>過去の合格者もここから始めました</highlight>。焦らず、一緒に整理していきましょう。'
+    },
+    {
+      label: '併願の不安',
+      question: 'SFC対策に絞ると、他大学が疎かになりそうで不安です',
+      answer: '実は逆です。<highlight>SFCの小論文で養う論理力は、早稲田や他の慶應学部でも最大の武器</highlight>になります。SFC対策を軸にしながら、<highlight>負けない併願戦略</highlight>を一緒に立てましょう。両立は可能です。'
+    }
+  ]
+
+  const renderAnswer = (text: string) => {
+    const parts = text.split(/<highlight>|<\/highlight>/)
+    return parts.map((part, i) => 
+      i % 2 === 1 ? <span key={i} className="text-[#800000] font-bold">{part}</span> : part
+    )
+  }
+
+  return (
+    <div className="bg-white border-l-4 border-[#800000] shadow-lg rounded-r-lg overflow-hidden">
+      <div className="p-6 md:p-10">
+        {/* Title */}
+        <div className="flex items-center gap-4 mb-6">
+          <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">AI 02</span>
+          <div className="h-px flex-1 bg-[#800000]/10" />
+        </div>
+        <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
+          相談用AI
+        </h3>
+
+        {/* Development Background */}
+        <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
+          過去の合格者と塾長の会話データや、質問に対する塾長の全回答、そして独自分析した過去問データを集約。24時間、塾長があなたの隣で戦略を練り続ける体験を実現しました。
+        </p>
+
+        {/* Tabs */}
+        <div className="flex gap-2 mb-4">
+          {conversations.map((conv, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveTab(index)}
+              className={`px-4 py-2.5 text-sm font-bold rounded-lg transition-all duration-200 min-w-[80px] ${
+                activeTab === index
+                  ? 'bg-[#002147] text-white shadow-md'
+                  : 'bg-[#F3F4F6] text-[#333333] hover:bg-[#E5E7EB]'
+              }`}
+            >
+              {conv.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Chat Mockup - Dialogue Style */}
+        <div className="bg-[#F8F9FA] rounded-lg p-4 md:p-6 border border-[#E5E7EB]">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-2 h-2 rounded-full bg-[#800000]" />
+            <span className="text-xs font-bold text-[#002147] tracking-wider">相談AIとの対話</span>
+          </div>
+          <div className="space-y-3">
+            {/* User message */}
+            <div className="flex justify-end">
+              <div className="bg-[#002147] text-white rounded-lg rounded-br-none px-4 py-3 max-w-[90%] md:max-w-[85%] shadow-sm">
+                <p className="text-sm md:text-base leading-[1.7]">{conversations[activeTab].question}</p>
+              </div>
+            </div>
+            {/* AI response */}
+            <div className="flex justify-start">
+              <div className="bg-white rounded-lg rounded-bl-none px-4 py-3 max-w-[90%] md:max-w-[85%] border border-[#800000]/20 shadow-sm">
+                <p className="text-sm md:text-base text-[#333333] leading-[1.7]">
+                  {renderAnswer(conversations[activeTab].answer)}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function Page() {
   const [email, setEmail] = useState('')
 
@@ -59,7 +150,7 @@ export default function Page() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/97 via-[#002147]/93 to-[#002147]/98"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-16">
           {/* Main Copy */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-snug text-balance">
@@ -67,7 +158,7 @@ export default function Page() {
             <span className="text-[#C5A059]">合格率66.7%</span>を叩き出す、<br className="hidden md:block" />
             独自のAI伴走指導。
           </h1>
-          
+
           {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide">
             学校では教えられないSFCの正解を、AIと塾長が24時間フルサポート。<br className="hidden md:block" />
@@ -76,14 +167,14 @@ export default function Page() {
 
           {/* CTA Button */}
           <div className="mb-16">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]"
             >
               まずは塾長に無料相談する
             </Button>
           </div>
-          
+
           {/* Stats Section - Medal-like design */}
           {/* Mobile: center card full-width on top, two side cards in a row below */}
           {/* Desktop: all three in one row, center slightly elevated */}
@@ -136,13 +227,13 @@ export default function Page() {
       {/* Problem Section - Editorial Magazine Style */}
       <section className="relative py-28 px-4 bg-[#F3F4F6] overflow-hidden">
         {/* Pinstripe background pattern */}
-        <div 
-          className="absolute inset-0 opacity-[0.03]" 
-          style={{ 
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
             backgroundImage: 'repeating-linear-gradient(90deg, #002147 0px, #002147 1px, transparent 1px, transparent 8px)',
           }}
         />
-        
+
         <div className="relative max-w-4xl mx-auto">
           {/* Section Title - Editorial Style */}
           <div className="text-center mb-20">
@@ -153,7 +244,7 @@ export default function Page() {
             </h2>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
-          
+
           {/* Walls - Editorial Layout */}
           <div className="space-y-12 md:space-y-28">
             {/* Cause 01 */}
@@ -271,23 +362,23 @@ export default function Page() {
       {/* Solution Section: Two AIs - White with intellectual pattern */}
       <section className="relative py-28 px-4 bg-white overflow-hidden">
         {/* Subtle intellectual pattern background */}
-        <div 
-          className="absolute inset-0 opacity-[0.02]" 
-          style={{ 
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002147' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
-        
+
         <div className="relative max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
-              合格率66.7%を支える、<br className="sm:hidden" />
-              2つの「合格思考AI」
+              過去合格者の頭脳を学習した、<br className="sm:hidden" />
+              2つのAIを独自開発
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              ただの汎用AIではありません。7年間にわたる合格者の全指導データと、塾長の全知見を学習させた、佐藤塾にしか作れない専用の指導システムです。
+              この2つのAIはただの汎用AIではなく、7年間にわたる合格者の全指導データと、塾長の全知見を学習させた、佐藤塾にしか作れない専用の指導システムです。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -302,12 +393,12 @@ export default function Page() {
                   <div className="h-px flex-1 bg-[#002147]/10" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                  添削AI「論理の研磨」
+                  添削用AI
                 </h3>
-                
+
                 {/* Development Background */}
                 <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
-                  7年間の合格者が書いた全答案と、その成長過程（ビフォー・アフター）をすべて学習。SFC特有の評価基準を完全に再現し、合格ラインを超えるための「思考の癖」を矯正します。
+                  7年間の合格者が書いた全答案と、その成長過程（ビフォー・アフター）をすべて学習。SFC特有の評価基準を佐藤塾なりに基準化し、合格ラインを超えるための「添削」と「情報提供」を実現します。
                 </p>
 
                 {/* Chat Mockup */}
@@ -318,7 +409,7 @@ export default function Page() {
                   </div>
                   <div className="bg-white rounded-lg p-4 md:p-5 border border-[#002147]/10 shadow-sm">
                     <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>しています。設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。
+                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>していることです。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専門的な知識を培うために「〇〇」というサイトの記事を読んでおいてください。
                     </p>
                   </div>
                 </div>
@@ -326,47 +417,7 @@ export default function Page() {
             </div>
 
             {/* AI 2: 相談AI */}
-            <div className="bg-white border-l-4 border-[#800000] shadow-lg rounded-r-lg overflow-hidden">
-              <div className="p-6 md:p-10">
-                {/* Title */}
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">AI 02</span>
-                  <div className="h-px flex-1 bg-[#800000]/10" />
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                  相談AI「戦略の並走」
-                </h3>
-                
-                {/* Development Background */}
-                <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
-                  過去の合格者が塾長にぶつけた悩み、それに対する塾長の全回答、そして独自分析した過去問データを集約。24時間、塾長があなたの隣で戦略を練り続ける体験を実現しました。
-                </p>
-
-                {/* Chat Mockup - Dialogue Style */}
-                <div className="bg-[#F8F9FA] rounded-lg p-5 md:p-6 border border-[#E5E7EB]">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-2 h-2 rounded-full bg-[#800000]" />
-                    <span className="text-xs font-bold text-[#002147] tracking-wider">相談AIとの対話</span>
-                  </div>
-                  <div className="space-y-3">
-                    {/* User message */}
-                    <div className="flex justify-end">
-                      <div className="bg-[#002147] text-white rounded-lg rounded-br-none px-4 py-3 max-w-[85%] shadow-sm">
-                        <p className="text-sm md:text-base">AOの準備で小論文が書けなくなって焦っています…</p>
-                      </div>
-                    </div>
-                    {/* AI response */}
-                    <div className="flex justify-start">
-                      <div className="bg-white rounded-lg rounded-bl-none px-4 py-3 max-w-[85%] border border-[#800000]/20 shadow-sm">
-                        <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                          大丈夫です。<span className="text-[#800000] font-bold">過去の合格者も今の時期に同じ壁に直面</span>していました。今は資料集めを一旦止め、<span className="text-[#800000] font-bold">構成案を3パターン作ること</span>に集中しましょう。それが最短ルートです。
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ConsultationAICard />
           </div>
         </div>
       </section>
@@ -653,9 +704,9 @@ export default function Page() {
                   <label className="block text-sm font-semibold text-foreground mb-3">
                     メールアドレス <span className="text-secondary">*</span>
                   </label>
-                  <Input 
-                    type="email" 
-                    placeholder="example@email.com" 
+                  <Input
+                    type="email"
+                    placeholder="example@email.com"
                     className="border-border focus:border-primary h-12"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -673,8 +724,8 @@ export default function Page() {
                   <label className="block text-sm font-semibold text-foreground mb-3">
                     ご質問・ご相談
                   </label>
-                  <Textarea 
-                    placeholder="佐藤塾について気になることなどをお聞きします" 
+                  <Textarea
+                    placeholder="佐藤塾について気になることなどをお聞きします"
                     className="border-border focus:border-primary min-h-36"
                   />
                 </div>
