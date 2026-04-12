@@ -36,24 +36,33 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 // Consultation AI Card with tabbed conversations
 function ConsultationAICard() {
   const [activeTab, setActiveTab] = useState(0)
+  const [isTyping, setIsTyping] = useState(false)
 
   const conversations = [
     {
-      label: 'AO入試',
+      label: 'AO入試の悩み',
       question: 'AO入試に興味はありますが、全国大会優勝のようなすごい実績がありません。やっぱり諦めるべきでしょうか？',
       answer: 'いいえ、諦めるべきではありません。SFCが求めているのは<highlight>「実績の凄さ」ではなく「問題発見の鋭さ」</highlight>です。過去の合格者も最初は「ただの趣味」と認識していたことを深掘りし、独自の実績にできました。<highlight>まずはあなたが日頃頑張らなくてもできていること</highlight>を書き出してみましょう。'
     },
     {
-      label: '小論文',
+      label: '小論文の不安',
       question: '小論文を勉強したことがない私でもSFCを目指せるのでしょうか？',
       answer: '<highlight>もちろん、目指せます</highlight>。小論文は量をこなす勉強が最重要です。まずはめちゃくちゃな内容でも良いのでどんどん量をこなしていきましょう。添削内容を踏まえ書き直すことで自然と書けるようになっていきます。<highlight>過去の合格者もこのように学習し始めました</highlight>。焦らず、一緒に着実に進めていきましょう。'
     },
     {
-      label: '併願の不安',
+      label: '併願・戦略の疑問',
       question: 'SFC対策に絞ると、他大学が疎かになりそうで不安です',
-      answer: '大丈夫です。<highlight>幅広い大学の合格を目指すのではなく、SFC合格から逆算した、受験戦略</highlight>が重要になります。SFC対策を軸にしながら、<highlight>負けない併願戦略</highlight>を一緒に立てましょう。両立は可能です。'
+      answer: '大丈夫です。<highlight>幅広い大学の合格を目指すのではなく、SFC合格から逆算した受験戦略</highlight>が重要になります。SFCで鍛える論理力は早稲田や他の慶應学部でも最大の武器になります。<highlight>負けない併願戦略</highlight>を一緒に立てましょう。'
     }
   ]
+
+  const handleTabChange = (index: number) => {
+    if (index !== activeTab) {
+      setIsTyping(true)
+      setActiveTab(index)
+      setTimeout(() => setIsTyping(false), 600)
+    }
+  }
 
   const renderAnswer = (text: string) => {
     const parts = text.split(/<highlight>|<\/highlight>/)
@@ -79,20 +88,31 @@ function ConsultationAICard() {
           過去の合格者と塾長の会話データや、質問に対する塾長の全回答、そして独自分析した過去問データを集約。24時間、塾長があなたの隣で戦略を練り続ける体験を実現しました。
         </p>
 
-        {/* Tabs */}
-        <div className="flex gap-2 mb-4">
-          {conversations.map((conv, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveTab(index)}
-              className={`px-4 py-2.5 text-sm font-bold rounded-lg transition-all duration-200 min-w-[80px] ${activeTab === index
-                ? 'bg-[#002147] text-white shadow-md'
-                : 'bg-[#F3F4F6] text-[#333333] hover:bg-[#E5E7EB]'
-                }`}
-            >
-              {conv.label}
-            </button>
-          ))}
+        {/* Guide text */}
+        <p className="text-xs text-[#666666] mb-3 flex items-center gap-1">
+          <span className="text-[#002147]">?</span>
+          あてはまる悩みをタップしてください
+        </p>
+
+        {/* Tabs - Horizontal scroll on mobile */}
+        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 mb-5">
+          <div className="flex gap-2 md:gap-3 min-w-max md:min-w-0 md:flex-wrap">
+            {conversations.map((conv, index) => (
+              <button
+                key={index}
+                onClick={() => handleTabChange(index)}
+                className={`flex items-center gap-2 px-4 py-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${activeTab === index
+                  ? 'bg-[#002147] text-white shadow-md'
+                  : 'bg-white text-[#333333] border-2 border-[#E5E7EB] hover:border-[#002147]/30'
+                  }`}
+              >
+                <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+                {conv.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Chat Mockup - Dialogue Style */}
@@ -108,12 +128,20 @@ function ConsultationAICard() {
                 <p className="text-sm md:text-base leading-[1.7]">{conversations[activeTab].question}</p>
               </div>
             </div>
-            {/* AI response */}
+            {/* AI response with typing animation */}
             <div className="flex justify-start">
               <div className="bg-white rounded-lg rounded-bl-none px-4 py-3 max-w-[90%] md:max-w-[85%] border border-[#800000]/20 shadow-sm">
-                <p className="text-sm md:text-base text-[#333333] leading-[1.7]">
-                  {renderAnswer(conversations[activeTab].answer)}
-                </p>
+                {isTyping ? (
+                  <div className="flex items-center gap-1 py-2">
+                    <span className="w-2 h-2 bg-[#800000]/40 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                    <span className="w-2 h-2 bg-[#800000]/40 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                    <span className="w-2 h-2 bg-[#800000]/40 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                  </div>
+                ) : (
+                  <p className="text-sm md:text-base text-[#333333] leading-[1.7] animate-in fade-in duration-300">
+                    {renderAnswer(conversations[activeTab].answer)}
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -666,7 +694,7 @@ export default function Page() {
                 SFCの小論文は「正解を書く試験」ではなく、「あなたの思考を表現する試験」です。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                7年間で49名の合格者を輩出した経験と、最新のAI技術を組み合わせ、あなたの「本当の実力」を引き出します。
+                7年間で49名の合格者を輩出した経験と、最新のAI技術を組み合わせ、あなたの「本当の実力」を引き出します��
               </p>
               <p className="text-lg text-foreground mb-10 leading-relaxed">
                 <strong className="text-primary">私が直接、あなたと並走することを約束します。</strong>
