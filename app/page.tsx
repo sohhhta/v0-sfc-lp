@@ -189,7 +189,7 @@ export default function Page() {
           {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide">
             学校では教えられないSFCの正解を、AIと塾長が24時間フルサポート。<br className="hidden md:block" />
-            最短距離���、合格する思考を鍛え上げる。
+            最短距������、合格する思考を鍛え上げる。
           </p>
 
           {/* CTA Button */}
@@ -521,63 +521,72 @@ export default function Page() {
           </div>
 
           {/* Mobile: Horizontal scroll with sticky left column */}
-          <div className="md:hidden pt-4 pb-8">
-            <div className="overflow-x-auto overflow-y-visible rounded-lg shadow-lg bg-white">
-              <table className="w-full border-collapse" style={{ minWidth: '420px' }}>
-                <thead>
-                  <tr>
-                    <th className="sticky left-0 z-20 p-2.5 text-left font-bold text-[#333333] text-[11px] bg-[#F3F4F6] w-20 min-w-20 border-r border-[#E5E7EB]">項目</th>
-                    <th className="p-2.5 text-center font-bold text-white text-[11px] bg-[#800000]/95 border-2 border-[#C5A059] relative w-[45%]">
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#C5A059] text-[#002147] text-[9px] font-bold px-2.5 py-0.5 rounded-full whitespace-nowrap shadow-sm z-30">SFC特化</span>
-                      佐藤塾
-                    </th>
-                    <th className="p-2.5 text-center font-bold text-[#333333] text-[11px] bg-white border-l border-[#E5E7EB]">特化塾</th>
-                    <th className="p-2.5 text-center font-bold text-[#333333] text-[11px] bg-[#FAFAFA] border-l border-[#E5E7EB]">一般塾</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {/* Row 1 */}
-                  <tr className="border-b border-[#E5E7EB]">
-                    <td className="sticky left-0 z-20 p-2.5 font-bold text-[#002147] text-[11px] bg-[#F3F4F6] leading-snug border-r border-[#E5E7EB]">小論文<br />添削</td>
-                    <td className="p-2.5 bg-[#800000]/5 text-center">
-                      <p className="text-[12px] font-bold text-[#800000] leading-relaxed">24時間<br />無制限</p>
-                    </td>
-                    <td className="p-2.5 bg-white text-center text-[11px] text-[#666666] leading-relaxed border-l border-[#E5E7EB]">週1〜4回</td>
-                    <td className="p-2.5 bg-[#FAFAFA] text-center text-[11px] text-[#666666] leading-relaxed border-l border-[#E5E7EB]">週1回</td>
-                  </tr>
+          {/* pt-8 ensures the absolutely-positioned "SFC特化" badge above thead is never clipped */}
+          <div className="md:hidden pt-8 pb-8">
+            {/* overflow-x-auto is on a separate inner wrapper so the outer div can remain overflow-visible,
+                allowing the badge to render above the table border without being cut off */}
+            <div className="relative">
+              <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
+                <table className="w-full border-collapse" style={{ minWidth: '400px' }}>
+                  <thead>
+                    <tr>
+                      <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[11px] bg-white w-[22%] border-r border-[#E5E7EB]">項目</th>
+                      {/* 佐藤塾 column: badge sits above via margin-top on parent div, not absolute */}
+                      <th className="p-3 text-center font-bold text-white text-[12px] bg-[#800000] border-x-2 border-b-0 border-[#C5A059] w-[38%]">
+                        佐藤塾
+                      </th>
+                      <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F8F8F8] w-[20%] border-l border-[#E5E7EB]">特化塾</th>
+                      <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F3F3F3] w-[20%] border-l border-[#E5E7EB]">一般塾</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {/* Row 1 */}
+                    <tr className="border-b border-[#E5E7EB]">
+                      <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[11px] bg-white leading-snug border-r border-[#E5E7EB]">小論文<br />添削</td>
+                      <td className="p-3 bg-[#fff5f5] text-center border-x-2 border-[#C5A059]">
+                        <p className="text-[12px] font-bold text-[#800000] leading-snug">24時間<br />無制限</p>
+                      </td>
+                      <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">週1〜4回</td>
+                      <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">週1回</td>
+                    </tr>
 
-                  {/* Row 2 */}
-                  <tr className="border-b border-[#E5E7EB]">
-                    <td className="sticky left-0 z-20 p-2.5 font-bold text-[#002147] text-[11px] bg-[#F3F4F6] leading-snug border-r border-[#E5E7EB]">対策<br />範囲</td>
-                    <td className="p-2.5 bg-[#800000]/5 text-center">
-                      <p className="text-[12px] font-bold text-[#800000] leading-relaxed">AO・一般<br />二刀流</p>
-                    </td>
-                    <td className="p-2.5 bg-white text-center text-[11px] text-[#666666] leading-relaxed border-l border-[#E5E7EB]">AOのみ</td>
-                    <td className="p-2.5 bg-[#FAFAFA] text-center text-[11px] text-[#666666] leading-relaxed border-l border-[#E5E7EB]">一般のみ</td>
-                  </tr>
+                    {/* Row 2 */}
+                    <tr className="border-b border-[#E5E7EB]">
+                      <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[11px] bg-white leading-snug border-r border-[#E5E7EB]">対策<br />範囲</td>
+                      <td className="p-3 bg-[#fff5f5] text-center border-x-2 border-[#C5A059]">
+                        <p className="text-[12px] font-bold text-[#800000] leading-snug">AO・一般<br />二刀流</p>
+                      </td>
+                      <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">AOのみ</td>
+                      <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">一般のみ</td>
+                    </tr>
 
-                  {/* Row 3 */}
-                  <tr className="border-b border-[#E5E7EB]">
-                    <td className="sticky left-0 z-20 p-2.5 font-bold text-[#002147] text-[11px] bg-[#F3F4F6] leading-snug border-r border-[#E5E7EB]">月額<br />費用</td>
-                    <td className="p-2.5 bg-[#800000]/5 text-center">
-                      <p className="text-[13px] font-bold text-[#800000]">11.8万〜</p>
-                      <p className="text-[10px] text-[#800000] font-semibold">※講習費0円</p>
-                    </td>
-                    <td className="p-2.5 bg-white text-center text-[11px] text-[#666666] leading-relaxed border-l border-[#E5E7EB]">12万〜<br />+講習費</td>
-                    <td className="p-2.5 bg-[#FAFAFA] text-center text-[11px] text-[#666666] leading-relaxed border-l border-[#E5E7EB]">8万〜<br />+講習費</td>
-                  </tr>
+                    {/* Row 3 */}
+                    <tr className="border-b border-[#E5E7EB]">
+                      <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[11px] bg-white leading-snug border-r border-[#E5E7EB]">月額<br />費用</td>
+                      <td className="p-3 bg-[#fff5f5] text-center border-x-2 border-[#C5A059]">
+                        <p className="text-[13px] font-bold text-[#800000]">11.8万〜</p>
+                        <p className="text-[10px] text-[#800000] font-semibold mt-0.5">※講習費0円</p>
+                      </td>
+                      <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">12万〜<br />+講習費</td>
+                      <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">8万〜<br />+講習費</td>
+                    </tr>
 
-                  {/* Row 4 */}
-                  <tr>
-                    <td className="sticky left-0 z-20 p-2.5 pb-4 font-bold text-[#002147] text-[11px] bg-[#F3F4F6] leading-snug border-r border-[#E5E7EB]">相談<br />対応</td>
-                    <td className="p-2.5 pb-4 bg-[#800000]/5 text-center">
-                      <p className="text-[12px] font-bold text-[#800000] leading-relaxed">24時間<br />予約不要</p>
-                    </td>
-                    <td className="p-2.5 pb-4 bg-white text-center text-[11px] text-[#666666] leading-relaxed border-l border-[#E5E7EB]">予約制<br />開校時間</td>
-                    <td className="p-2.5 pb-4 bg-[#FAFAFA] text-center text-[11px] text-[#666666] leading-relaxed border-l border-[#E5E7EB]">予約制<br />開校時間</td>
-                  </tr>
-                </tbody>
-              </table>
+                    {/* Row 4 — extra pb to clear scrollbar */}
+                    <tr>
+                      <td className="sticky left-0 z-20 p-3 pb-8 font-bold text-[#002147] text-[11px] bg-white leading-snug border-r border-[#E5E7EB]">相談<br />対応</td>
+                      <td className="p-3 pb-8 bg-[#fff5f5] text-center border-x-2 border-[#C5A059]">
+                        <p className="text-[12px] font-bold text-[#800000] leading-snug">24時間<br />予約不要</p>
+                      </td>
+                      <td className="p-3 pb-8 bg-[#F8F8F8] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">予約制<br />開校時</td>
+                      <td className="p-3 pb-8 bg-[#F3F3F3] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">予約制<br />開校時</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              {/* Badge rendered outside the overflow-x-auto wrapper so it is never clipped */}
+              <div className="absolute top-0 left-[22%] w-[38%] flex justify-center pointer-events-none" style={{ transform: 'translateY(-50%)' }}>
+                <span className="bg-[#C5A059] text-[#002147] text-[10px] font-bold px-3 py-1 rounded-full shadow-md whitespace-nowrap">SFC特化</span>
+              </div>
             </div>
           </div>
 
@@ -737,7 +746,7 @@ export default function Page() {
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-5 shadow-md">
                   <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">進捗レポートの可視化</h4>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    AIと塾長があなたの学習データを踏まえ、現在の位置と合格までの課題を可視化し、客観的なデータに基づいた軌道修正を行います。
+                    AIと塾長があなたの学習データを踏まえ、現在の位置と合格までの課題を可視化し、客��的なデータに基づいた軌道修正を行います。
                   </p>
                 </div>
                 <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
