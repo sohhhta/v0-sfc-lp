@@ -450,50 +450,113 @@ export default function Page() {
       </section>
 
       {/* Comparison Section - Gray */}
-      <section className="py-24 px-4 bg-[#F3F4F6]">
-        <div className="max-w-5xl mx-auto">
-          <SectionTitle>なぜ佐藤塾が選ばれるのか</SectionTitle>
+      <section className="py-28 px-4 bg-[#F3F4F6]">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
+              SFC対策 徹底比較表
+            </h2>
+            <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
+              授業料の透明性と、圧倒的な指導密度。SFC合格に必要なすべてを、月額料金だけで提供します。
+            </p>
+            <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
+          </div>
 
-          <div className="overflow-x-auto rounded-lg shadow-md bg-white">
+          {/* Desktop: Full 3-column table */}
+          <div className="hidden md:block overflow-x-auto rounded-lg shadow-lg">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-primary text-white">
-                  <th className="p-5 text-left font-bold font-serif text-base tracking-wide">項目</th>
-                  <th className="p-5 text-center font-bold font-serif text-base tracking-wide bg-secondary">佐藤塾</th>
-                  <th className="p-5 text-center font-bold font-serif text-base tracking-wide">一般的な予備校</th>
+                <tr>
+                  <th className="p-6 text-left font-bold font-serif text-base tracking-wide bg-[#F3F4F6] text-[#333333]">項目</th>
+                  <th className="p-6 text-center font-bold font-serif text-base tracking-wide bg-[#800000] text-white border-4 border-[#C5A059]">佐藤塾</th>
+                  <th className="p-6 text-center font-bold font-serif text-base tracking-wide bg-white text-[#333333]">SFC特化塾</th>
+                  <th className="p-6 text-center font-bold font-serif text-base tracking-wide bg-[#FAFAFA] text-[#333333]">一般の予備校</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-border">
-                  <td className="p-5 font-semibold">小論文添削</td>
-                  <td className="p-5 text-center bg-secondary/5">
-                    <Badge className="bg-accent text-accent-foreground font-semibold">24時間無制限</Badge>
-                  </td>
-                  <td className="p-5 text-center text-muted-foreground">週1回程度</td>
+                {/* Row 1: 小論文の添削 */}
+                <tr className="border-b border-[#E5E7EB]">
+                  <td className="p-6 font-bold text-[#002147]">小論文の添削</td>
+                  <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold">24時間無制限<br /><span className="text-xs text-[#666666]">（AI×塾長）</span></td>
+                  <td className="p-6 text-center bg-white text-[#666666]">週1〜2回<br /><span className="text-xs">（対面メイン）</span></td>
+                  <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">週1回<br /><span className="text-xs">（学生バイト中心）</span></td>
                 </tr>
-                <tr className="border-b border-border">
-                  <td className="p-5 font-semibold">対策範囲</td>
-                  <td className="p-5 text-center bg-secondary/5">
-                    <Badge className="bg-accent text-accent-foreground font-semibold">AO・一般 二刀流</Badge>
-                  </td>
-                  <td className="p-5 text-center text-muted-foreground">別途高額オプション</td>
+
+                {/* Row 2: 対策範囲 */}
+                <tr className="border-b border-[#E5E7EB]">
+                  <td className="p-6 font-bold text-[#002147]">対策範囲</td>
+                  <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold"><span className="text-[#800000] font-bold">AO・一般 二刀流</span><br /><span className="text-xs text-[#666666]">（完全並走）</span></td>
+                  <td className="p-6 text-center bg-white text-[#666666]">AOのみ<br /><span className="text-xs">または別途料金</span></td>
+                  <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">一般入試のみ</td>
                 </tr>
-                <tr className="border-b border-border">
-                  <td className="p-5 font-semibold">費用</td>
-                  <td className="p-5 text-center bg-secondary/5">
-                    <Badge className="bg-accent text-accent-foreground font-semibold">13.8万円・追加なし</Badge>
+
+                {/* Row 3: 費用 */}
+                <tr className="border-b border-[#E5E7EB]">
+                  <td className="p-6 font-bold text-[#002147]">費用（年間）</td>
+                  <td className="p-6 text-center bg-[#800000]/5">
+                    <p className="text-lg font-bold text-[#800000]">月額 13.8万円</p>
+                    <p className="text-xs text-[#666666] mt-1">入塾金・講習費 0円</p>
                   </td>
-                  <td className="p-5 text-center text-muted-foreground">30万円〜（別途費用あり）</td>
+                  <td className="p-6 text-center bg-white text-[#666666]">年間 150万円〜<br /><span className="text-xs">（一括払い・追加あり）</span></td>
+                  <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">年間 100万円〜<br /><span className="text-xs">（講習は別料金）</span></td>
                 </tr>
+
+                {/* Row 4: 質問・相談 */}
                 <tr>
-                  <td className="p-5 font-semibold">指導体制</td>
-                  <td className="p-5 text-center bg-secondary/5">
-                    <Badge className="bg-accent text-accent-foreground font-semibold">塾長が直接伴走</Badge>
+                  <td className="p-6 font-bold text-[#002147]">質問・相談</td>
+                  <td className="p-6 text-center bg-[#800000]/5">
+                    <p className="text-[#800000] font-bold">即時回答</p>
+                    <p className="text-xs text-[#666666] mt-1">24時間365日</p>
                   </td>
-                  <td className="p-5 text-center text-muted-foreground">学生チューター中心</td>
+                  <td className="p-6 text-center bg-white text-[#666666]">校舎開校時間のみ</td>
+                  <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">予約制・後日回答</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile: Horizontal scroll or simplified 2-column */}
+          <div className="md:hidden">
+            <div className="overflow-x-auto rounded-lg shadow-lg">
+              <div className="min-w-max">
+                <div className="grid gap-4" style={{ gridTemplateColumns: '150px 1fr 1fr' }}>
+                  {/* Header */}
+                  <div className="p-4 bg-[#F3F4F6] font-bold text-[#333333] text-sm">項目</div>
+                  <div className="p-4 bg-[#800000] text-white font-bold text-sm text-center border-4 border-[#C5A059]">佐藤塾</div>
+                  <div className="p-4 bg-white font-bold text-[#333333] text-sm text-center">他の塾</div>
+
+                  {/* Row 1 */}
+                  <div className="p-4 font-bold text-[#002147] text-sm">小論文の添削</div>
+                  <div className="p-4 bg-[#800000]/5 text-center text-sm"><span className="font-bold text-[#800000]">24時間<br />無制限</span></div>
+                  <div className="p-4 bg-white text-center text-xs text-[#666666]">週1〜2回</div>
+
+                  {/* Row 2 */}
+                  <div className="p-4 font-bold text-[#002147] text-sm">対策範囲</div>
+                  <div className="p-4 bg-[#800000]/5 text-center text-sm"><span className="font-bold text-[#800000]">AO・一般<br />二刀流</span></div>
+                  <div className="p-4 bg-white text-center text-xs text-[#666666]">限定あり</div>
+
+                  {/* Row 3 */}
+                  <div className="p-4 font-bold text-[#002147] text-sm">月額費用</div>
+                  <div className="p-4 bg-[#800000]/5 text-center"><p className="text-base font-bold text-[#800000]">13.8万</p><p className="text-xs text-[#666666]">追加0円</p></div>
+                  <div className="p-4 bg-white text-center text-xs text-[#666666]">9万〜15万</div>
+
+                  {/* Row 4 */}
+                  <div className="p-4 font-bold text-[#002147] text-sm">相談対応</div>
+                  <div className="p-4 bg-[#800000]/5 text-center text-sm"><span className="font-bold text-[#800000]">24時間</span></div>
+                  <div className="p-4 bg-white text-center text-xs text-[#666666]">時間制限あり</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Cost Disclaimer */}
+          <div className="mt-10 bg-white rounded-lg border-l-4 border-[#800000] p-5 md:p-6 shadow-md">
+            <p className="text-sm md:text-base text-[#333333]">
+              <span className="text-[#800000] font-bold">※ 佐藤塾の費用は月額 13.8万円のみ。</span>
+              入塾金、講習費、教材費といった追加料金は<span className="font-bold">一切かかりません</span>。他塾のように「合格時には別途〇万円」といった費用も発生しません。
+            </p>
           </div>
         </div>
       </section>
@@ -517,7 +580,7 @@ export default function Page() {
               <div className="bg-white rounded-full w-48 h-48 flex items-center justify-center shadow-lg border-2 border-[#002147]/10">
                 <div>
                   <p className="text-sm text-[#C5A059] font-bold tracking-wider mb-1">SUCCESS CYCLE</p>
-                  <p className="text-lg font-bold text-[#002147] font-serif">合格率66.7%を<br />支えるサイクル</p>
+                  <p className="text-lg font-bold text-[#002147] font-serif">合格率66.7%を<br />支え��サイクル</p>
                 </div>
               </div>
             </div>
