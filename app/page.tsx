@@ -540,12 +540,12 @@ export default function Page() {
                   {/* Row 3 */}
                   <div className="p-4 font-bold text-[#002147] text-sm">月額費用</div>
                   <div className="p-4 bg-[#800000]/5 text-center"><p className="text-base font-bold text-[#800000]">11.8万円〜。</p><p className="text-xs text-[#666666]">追加0円</p></div>
-                  <div className="p-4 bg-white text-center text-xs text-[#666666]">9万〜15万</div>
+                  <div className="p-4 bg-white text-center text-xs text-[#666666]">10万円〜<br />（講習は別料金）</div>
 
                   {/* Row 4 */}
                   <div className="p-4 font-bold text-[#002147] text-sm">相談対応</div>
                   <div className="p-4 bg-[#800000]/5 text-center text-sm"><span className="font-bold text-[#800000]">24時間</span></div>
-                  <div className="p-4 bg-white text-center text-xs text-[#666666]">時間制限あり</div>
+                  <div className="p-4 bg-white text-center text-xs text-[#666666]">対面のみや<br />時間制限あり</div>
                 </div>
               </div>
             </div>
