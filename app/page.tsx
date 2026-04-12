@@ -611,12 +611,12 @@ export default function Page() {
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-5 shadow-md">
                   <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">学習計画（受験戦略の立案）</h4>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    志望校選定から、1週間単位の学習戦術まで。一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
+                    志望校選定から、1週間単位の学習戦術まで一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
                   </p>
                 </div>
                 {/* Curved arrow */}
                 <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 5v14M12 19l-4-4M12 19l4-4" stroke="#002147" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 5v14M12 19l-4-4M12 19l4-4" stroke="#002147" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
 
@@ -628,11 +628,11 @@ export default function Page() {
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-5 shadow-md">
                   <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">24時間無制限のAI支援</h4>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問をゼロにし、圧倒的な学習量を担保します。
+                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
                   </p>
                 </div>
                 <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 5v14M12 19l-4-4M12 19l4-4" stroke="#002147" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 5v14M12 19l-4-4M12 19l4-4" stroke="#002147" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
 
@@ -648,7 +648,7 @@ export default function Page() {
                   </p>
                 </div>
                 <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 5v14M12 19l-4-4M12 19l4-4" stroke="#002147" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 5v14M12 19l-4-4M12 19l4-4" stroke="#002147" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
 
@@ -669,11 +669,11 @@ export default function Page() {
               <div className="flex justify-center mt-6">
                 <div className="flex items-center gap-2 text-[#002147]">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                    <path d="M17 11H7M7 11l4-4M7 11l4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M17 11H7M7 11l4-4M7 11l4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   <span className="text-sm font-bold tracking-wider">01へ戻り、サイクルを繰り返す</span>
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                    <path d="M7 11h10M17 11l-4-4M17 11l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M7 11h10M17 11l-4-4M17 11l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
               </div>
