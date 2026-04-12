@@ -496,7 +496,7 @@ export default function Page() {
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">費用（年間）</td>
                   <td className="p-6 text-center bg-[#800000]/5">
-                    <p className="text-lg font-bold text-[#800000]">月額 13.8万円</p>
+                    <p className="text-lg font-bold text-[#800000]">月額 11.8万円〜。</p>
                     <p className="text-xs text-[#666666] mt-1">追加講習費 0円</p>
                   </td>
                   <td className="p-6 text-center bg-white text-[#666666]">年間 150万円〜<br /><span className="text-xs">（講習は別料金）</span></td>
