@@ -520,73 +520,64 @@ export default function Page() {
             </table>
           </div>
 
-          {/* Mobile: Horizontal scroll with sticky left column */}
-          {/* pt-8 ensures the absolutely-positioned "SFC特化" badge above thead is never clipped */}
-          <div className="md:hidden pt-8 pb-8">
-            {/* overflow-x-auto is on a separate inner wrapper so the outer div can remain overflow-visible,
-                allowing the badge to render above the table border without being cut off */}
-            <div className="relative">
-              <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
-                <table className="w-full border-collapse" style={{ minWidth: '400px' }}>
-                  <thead>
-                    <tr>
-                      <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[11px] bg-white w-[22%] border-r border-[#E5E7EB]">項目</th>
-                      {/* 佐藤塾 column: badge sits above via margin-top on parent div, not absolute */}
-                      <th className="p-3 text-center font-bold text-white text-[12px] bg-[#800000] border-x-2 border-b-0 border-[#C5A059] w-[38%]">
-                        佐藤塾
-                      </th>
-                      <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F8F8F8] w-[20%] border-l border-[#E5E7EB]">特化塾</th>
-                      <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F3F3F3] w-[20%] border-l border-[#E5E7EB]">一般塾</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {/* Row 1 */}
-                    <tr className="border-b border-[#E5E7EB]">
-                      <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[11px] bg-white leading-snug border-r border-[#E5E7EB]">小論文<br />添削</td>
-                      <td className="p-3 bg-[#fff5f5] text-center border-x-2 border-[#C5A059]">
-                        <p className="text-[12px] font-bold text-[#800000] leading-snug">24時間<br />無制限</p>
-                      </td>
-                      <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">週1〜4回</td>
-                      <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">週1回</td>
-                    </tr>
+          {/* Mobile: Horizontal scroll - simplified stable design */}
+          <div className="md:hidden mt-6 pb-4">
+            <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
+              <table className="w-full border-collapse" style={{ minWidth: '420px' }}>
+                <thead>
+                  <tr>
+                    <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[13px] bg-white border-r border-[#E5E7EB]" style={{ minWidth: '90px' }}>項目</th>
+                    <th className="p-3 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '140px' }}>
+                      <span className="absolute -top-2.5 left-1/2 bg-[#C5A059] text-[#002147] text-[9px] font-bold px-2.5 py-0.5 rounded-full shadow-sm whitespace-nowrap" style={{ transform: 'translateX(-50%)' }}>SFC特化</span>
+                      佐藤塾
+                    </th>
+                    <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F8F8F8] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>特化塾</th>
+                    <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F3F3F3] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>一般塾</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Row 1 */}
+                  <tr className="border-b border-[#E5E7EB]">
+                    <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">小論文添削</td>
+                    <td className="p-3 bg-[#fff5f5] text-center">
+                      <p className="text-[12px] font-bold text-[#800000] leading-snug">24時間無制限</p>
+                    </td>
+                    <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1〜4回</td>
+                    <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1回</td>
+                  </tr>
 
-                    {/* Row 2 */}
-                    <tr className="border-b border-[#E5E7EB]">
-                      <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[11px] bg-white leading-snug border-r border-[#E5E7EB]">対策<br />範囲</td>
-                      <td className="p-3 bg-[#fff5f5] text-center border-x-2 border-[#C5A059]">
-                        <p className="text-[12px] font-bold text-[#800000] leading-snug">AO・一般<br />二刀流</p>
-                      </td>
-                      <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">AOのみ</td>
-                      <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">一般のみ</td>
-                    </tr>
+                  {/* Row 2 */}
+                  <tr className="border-b border-[#E5E7EB]">
+                    <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">対策範囲</td>
+                    <td className="p-3 bg-[#fff5f5] text-center">
+                      <p className="text-[12px] font-bold text-[#800000] leading-snug">AO・一般二刀流</p>
+                    </td>
+                    <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">AOのみ</td>
+                    <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">一般のみ</td>
+                  </tr>
 
-                    {/* Row 3 */}
-                    <tr className="border-b border-[#E5E7EB]">
-                      <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[11px] bg-white leading-snug border-r border-[#E5E7EB]">月額<br />費用</td>
-                      <td className="p-3 bg-[#fff5f5] text-center border-x-2 border-[#C5A059]">
-                        <p className="text-[13px] font-bold text-[#800000]">11.8万〜</p>
-                        <p className="text-[10px] text-[#800000] font-semibold mt-0.5">※講習費0円</p>
-                      </td>
-                      <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">12万〜<br />+講習費</td>
-                      <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">8万〜<br />+講習費</td>
-                    </tr>
+                  {/* Row 3 */}
+                  <tr className="border-b border-[#E5E7EB]">
+                    <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">月額費用</td>
+                    <td className="p-3 bg-[#fff5f5] text-center">
+                      <p className="text-[13px] font-bold text-[#800000]">11.8万〜</p>
+                      <p className="text-[10px] text-[#800000] font-semibold">※講習費0円</p>
+                    </td>
+                    <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">12万〜+講習費</td>
+                    <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">8万〜+講習費</td>
+                  </tr>
 
-                    {/* Row 4 — extra pb to clear scrollbar */}
-                    <tr>
-                      <td className="sticky left-0 z-20 p-3 pb-8 font-bold text-[#002147] text-[11px] bg-white leading-snug border-r border-[#E5E7EB]">相談<br />対応</td>
-                      <td className="p-3 pb-8 bg-[#fff5f5] text-center border-x-2 border-[#C5A059]">
-                        <p className="text-[12px] font-bold text-[#800000] leading-snug">24時間<br />予約不要</p>
-                      </td>
-                      <td className="p-3 pb-8 bg-[#F8F8F8] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">予約制<br />開校時</td>
-                      <td className="p-3 pb-8 bg-[#F3F3F3] text-center text-[11px] text-[#666666] leading-snug border-l border-[#E5E7EB]">予約制<br />開校時</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              {/* Badge rendered outside the overflow-x-auto wrapper so it is never clipped */}
-              <div className="absolute top-0 left-[22%] w-[38%] flex justify-center pointer-events-none" style={{ transform: 'translateY(-50%)' }}>
-                <span className="bg-[#C5A059] text-[#002147] text-[10px] font-bold px-3 py-1 rounded-full shadow-md whitespace-nowrap">SFC特化</span>
-              </div>
+                  {/* Row 4 — extra pb to clear scrollbar */}
+                  <tr>
+                    <td className="sticky left-0 z-20 p-3 pb-6 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">相談対応</td>
+                    <td className="p-3 pb-6 bg-[#fff5f5] text-center">
+                      <p className="text-[12px] font-bold text-[#800000] leading-snug">24時間予約不要</p>
+                    </td>
+                    <td className="p-3 pb-6 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">予約制</td>
+                    <td className="p-3 pb-6 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">予約制</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
@@ -784,8 +775,178 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Roadmap Section - Timeline */}
+      <section className="py-28 px-4 bg-[#F3F4F6]">
+        <div className="max-w-5xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
+              SFC合格への最短ルート：<br className="sm:hidden" />二刀流ロードマップ
+            </h2>
+            <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
+              いつ、何のためにAIを使い、いつ塾長が登場するか。合格までの道筋を明確にします。
+            </p>
+            <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
+          </div>
+
+          {/* Desktop: Horizontal Steps */}
+          <div className="hidden lg:block">
+            <div className="relative">
+              {/* Connecting Line */}
+              <div className="absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-[#002147] via-[#800000] to-[#C5A059]" />
+              
+              <div className="grid grid-cols-3 gap-8">
+                {/* Step 01 */}
+                <div className="relative">
+                  <div className="flex flex-col items-center mb-6">
+                    <div className="w-14 h-14 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-lg z-10 border-4 border-white">
+                      01
+                    </div>
+                    <div className="mt-4 flex items-center gap-2">
+                      <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                      <span className="text-sm font-bold text-[#002147]">4月〜7月</span>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-6 shadow-lg border-t-4 border-[#002147]">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">AI中心</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-3">
+                      基礎構築期：<br />AIで論理の型をマスター
+                    </h3>
+                    <p className="text-sm text-[#333333] leading-relaxed">
+                      <span className="text-[#800000] font-bold">添削AI</span>を使い倒し、SFC特有の「論理的思考」を無意識レベルまで叩き込む。小論文の基礎はこの時期に完成。
+                    </p>
+                  </div>
+                </div>
+
+                {/* Step 02 */}
+                <div className="relative">
+                  <div className="flex flex-col items-center mb-6">
+                    <div className="w-14 h-14 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-lg font-serif shadow-lg z-10 border-4 border-white">
+                      02
+                    </div>
+                    <div className="mt-4 flex items-center gap-2">
+                      <svg className="w-5 h-5 text-[#800000]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                      </svg>
+                      <span className="text-sm font-bold text-[#800000]">8月〜10月</span>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-6 shadow-lg border-t-4 border-[#800000]">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">塾長中心</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-3">
+                      戦略深化期：<br />塾長との1on1で独自性を磨く
+                    </h3>
+                    <p className="text-sm text-[#333333] leading-relaxed">
+                      AO入試の出願に向け、<span className="text-[#800000] font-bold">塾長が直接対話</span>であなたの「強み」を言語化。唯一無二の志望理由書を作成。
+                    </p>
+                  </div>
+                </div>
+
+                {/* Step 03 */}
+                <div className="relative">
+                  <div className="flex flex-col items-center mb-6">
+                    <div className="w-14 h-14 rounded-full bg-[#C5A059] text-[#002147] flex items-center justify-center font-bold text-lg font-serif shadow-lg z-10 border-4 border-white">
+                      03
+                    </div>
+                    <div className="mt-4 flex items-center gap-2">
+                      <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                      </svg>
+                      <span className="text-sm font-bold text-[#C5A059]">11月〜入試</span>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-6 shadow-lg border-t-4 border-[#C5A059]">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold px-2 py-1 rounded">AI×塾長</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-3">
+                      総仕上げ期：<br />二刀流で合格率を最大化
+                    </h3>
+                    <p className="text-sm text-[#333333] leading-relaxed">
+                      <span className="text-[#800000] font-bold">相談AI</span>でメンタルを維持しつつ、AOと一般の両面から合格を狙う。小論文と学科試験の相乗効果で、合格を確実なものに。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile/Tablet: Vertical Timeline */}
+          <div className="lg:hidden">
+            <div className="relative max-w-md mx-auto">
+              {/* Vertical connecting line */}
+              <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#002147] via-[#800000] to-[#C5A059]" />
+
+              {/* Step 01 */}
+              <div className="relative pl-16 pb-10">
+                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
+                  01
+                </div>
+                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#002147]">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">AI中心</span>
+                    <span className="text-xs font-bold text-[#002147]">4月〜7月</span>
+                  </div>
+                  <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
+                    基礎構築期：AIで論理の型をマスター
+                  </h3>
+                  <p className="text-sm text-[#333333] leading-relaxed">
+                    <span className="text-[#800000] font-bold">添削AI</span>を使い倒し、SFC特有の「論理的思考」を無意識レベルまで叩き込む。小論文の基礎はこの時期に完成。
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 02 */}
+              <div className="relative pl-16 pb-10">
+                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
+                  02
+                </div>
+                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#800000]">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">塾長中心</span>
+                    <span className="text-xs font-bold text-[#800000]">8月〜10月</span>
+                  </div>
+                  <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
+                    戦略深化期：塾長との1on1で独自性を磨く
+                  </h3>
+                  <p className="text-sm text-[#333333] leading-relaxed">
+                    AO入試の出願に向け、<span className="text-[#800000] font-bold">塾長が直接対話</span>であなたの「強み」を言語化。唯一無二の志望理由書を作成。
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 03 */}
+              <div className="relative pl-16">
+                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#C5A059] text-[#002147] flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
+                  03
+                </div>
+                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#C5A059]">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold px-2 py-1 rounded">AI×塾長</span>
+                    <span className="text-xs font-bold text-[#C5A059]">11月〜入試</span>
+                  </div>
+                  <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
+                    総仕上げ期：二刀流で合格率を最大化
+                  </h3>
+                  <p className="text-sm text-[#333333] leading-relaxed">
+                    <span className="text-[#800000] font-bold">相談AI</span>でメンタルを維持しつつ、AOと一般の両面から合格を狙う。小論文と学科試験の相乗効果で、合格を確実なものに。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Six Reasons Section - Gray */}
-      <section className="py-24 px-4 bg-[#F3F4F6]">
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <SectionTitle>佐藤塾が選ばれる6つの理由</SectionTitle>
 
@@ -972,7 +1133,7 @@ export default function Page() {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <SectionTitle subtitle="合格への第一歩をここから始めましょう">
-            まずは1分で無料相談
+            まずは1分で無料相��
           </SectionTitle>
 
           <Card className="bg-white shadow-md border-t-2 border-t-primary border-x border-b border-border rounded-lg">
