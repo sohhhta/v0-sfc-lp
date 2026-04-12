@@ -867,7 +867,7 @@ export default function Page() {
                       <span className="bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold px-2 py-1 rounded">AI×塾長</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-3">
-                      一般入試期：<br />AO入試で培った学力や思考を活かす
+                      一般入試期：<br />AO入試を一般入試にも活かす
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
                       <span className="text-[#800000] font-bold">相談AI</span>で細かい課題を解決し続け、AOで取り組んだことを活かし一般入試の合格を狙う。長期間取り組んだ小論文を強みに、合格を確実なものに。
