@@ -530,7 +530,7 @@ export default function Page() {
                   {/* Row 1 */}
                   <div className="p-4 font-bold text-[#002147] text-sm">小論文の添削</div>
                   <div className="p-4 bg-[#800000]/5 text-center text-sm"><span className="font-bold text-[#800000]">24時間<br />無制限</span></div>
-                  <div className="p-4 bg-white text-center text-xs text-[#666666]">週1〜4回</div>
+                  <div className="p-4 bg-white text-center text-xs text-[#666666]">最大<br />週1〜4回</div>
 
                   {/* Row 2 */}
                   <div className="p-4 font-bold text-[#002147] text-sm">対策範囲</div>
