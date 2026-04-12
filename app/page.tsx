@@ -535,7 +535,7 @@ export default function Page() {
                   {/* Row 2 */}
                   <div className="p-4 font-bold text-[#002147] text-sm">対策範囲</div>
                   <div className="p-4 bg-[#800000]/5 text-center text-sm"><span className="font-bold text-[#800000]">AO・一般<br />二刀流</span></div>
-                  <div className="p-4 bg-white text-center text-xs text-[#666666]">限定あり</div>
+                  <div className="p-4 bg-white text-center text-xs text-[#666666]">AO入試のみ<br />一般入試のみ</div>
 
                   {/* Row 3 */}
                   <div className="p-4 font-bold text-[#002147] text-sm">月額費用</div>
