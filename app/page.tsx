@@ -539,7 +539,7 @@ export default function Page() {
 
                   {/* Row 3 */}
                   <div className="p-4 font-bold text-[#002147] text-sm">月額費用</div>
-                  <div className="p-4 bg-[#800000]/5 text-center"><p className="text-base font-bold text-[#800000]">13.8万</p><p className="text-xs text-[#666666]">追加0円</p></div>
+                  <div className="p-4 bg-[#800000]/5 text-center"><p className="text-base font-bold text-[#800000]">11.8万円〜。</p><p className="text-xs text-[#666666]">追加0円</p></div>
                   <div className="p-4 bg-white text-center text-xs text-[#666666]">9万〜15万</div>
 
                   {/* Row 4 */}
