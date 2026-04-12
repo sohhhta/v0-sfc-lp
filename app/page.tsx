@@ -870,7 +870,7 @@ export default function Page() {
                       一般入試期：<br />AO入試を一般入試にも活かす
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      <span className="text-[#800000] font-bold">相談AI</span>で細かい課題を解決し続け、AOで取り組んだことを活かし一般入試の合格を狙う。長期間取り組んだ小論文を強みに、合格を確実なものに。
+                      <span className="text-[#800000] font-bold">相談AI</span>で細かい課題を解決し続ける。AO入試と一般入試横断で長期間取り組んだ小論文を強みに、合格を確実なものに。
                     </p>
                   </div>
                 </div>
