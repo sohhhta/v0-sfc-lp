@@ -554,7 +554,7 @@ export default function Page() {
           {/* Cost Disclaimer */}
           <div className="mt-10 bg-white rounded-lg border-l-4 border-[#800000] p-5 md:p-6 shadow-md">
             <p className="text-sm md:text-base text-[#333333]">
-              <span className="text-[#800000] font-bold">※ 佐藤塾の費用は月額 13.8万円のみ。</span>
+              <span className="text-[#800000] font-bold">※ 佐藤塾の費用は月額 11.8万円〜。</span>
               講習費、教材費といった追加料金は<span className="font-bold">一切かかりません</span>。他塾のように「合格時には別途〇万円」といった費用も発生しません。
             </p>
           </div>
