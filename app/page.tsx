@@ -580,7 +580,7 @@ export default function Page() {
               <div className="bg-white rounded-full w-48 h-48 flex items-center justify-center shadow-lg border-2 border-[#002147]/10">
                 <div>
                   <p className="text-sm text-[#C5A059] font-bold tracking-wider mb-1">SUCCESS CYCLE</p>
-                  <p className="text-lg font-bold text-[#002147] font-serif">合格率66.7%を<br />支え��サイクル</p>
+                  <p className="text-lg font-bold text-[#002147] font-serif">合格率66.7%を<br />支えるサイクル</p>
                 </div>
               </div>
             </div>
@@ -609,7 +609,7 @@ export default function Page() {
                     <h4 className="text-lg font-bold text-[#002147] font-serif">学習計画</h4>
                   </div>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    志望校選定から、1週間単位の学習戦術まで。一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
+                    志望校選定から、1週間単位の学習戦術まで、一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
                   </p>
                 </div>
               </div>
@@ -622,7 +622,7 @@ export default function Page() {
                     <h4 className="text-lg font-bold text-[#002147] font-serif">AI支援</h4>
                   </div>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問をゼロにし、圧倒的な学習量を担保します。
+                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
                   </p>
                 </div>
               </div>
@@ -633,7 +633,7 @@ export default function Page() {
                     <h4 className="text-lg font-bold text-[#002147] font-serif">塾長1on1授業</h4>
                   </div>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    <span className="text-[#800000] font-bold">週1回</span>で総括を行い、AIでは解決できない深い悩みや高度な思考を<span className="text-[#800000] font-bold">「わかるまで」</span>直接指導。再び次の計画へと繋げます。
+                    <span className="text-[#800000] font-bold">週1回</span>で総括を行い、AIでは解決できない深い悩みや高度な思考を<span className="text-[#800000] font-bold">「わかるまで」</span>塾長が直接指導。再び次の計画へと繋げます。
                   </p>
                 </div>
               </div>
