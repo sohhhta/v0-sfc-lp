@@ -833,7 +833,7 @@ export default function Page() {
                       <svg className="w-5 h-5 text-[#800000]" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                       </svg>
-                      <span className="text-sm font-bold text-[#800000]">8月〜10月</span>
+                      <span className="text-sm font-bold text-[#800000]">7月〜9月</span>
                     </div>
                   </div>
                   <div className="bg-white rounded-lg p-6 shadow-lg border-t-4 border-[#800000]">
@@ -844,7 +844,7 @@ export default function Page() {
                       戦略深化期：<br />塾長との1on1で独自性を磨く
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      AO入試の出願に向け、<span className="text-[#800000] font-bold">塾長が直接対話</span>であなたの「強み」を言語化。唯一無二の志望理由書を作成。
+                      AO入試の出願に向け、<span className="text-[#800000] font-bold">塾長が直接対話</span>であなたの「強み」を言語化。唯一無二の志望理由書作成や徹底的な面接対策を行う。
                     </p>
                   </div>
                 </div>
@@ -859,7 +859,7 @@ export default function Page() {
                       <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
                       </svg>
-                      <span className="text-sm font-bold text-[#C5A059]">11月〜入試</span>
+                      <span className="text-sm font-bold text-[#C5A059]">10月〜入試</span>
                     </div>
                   </div>
                   <div className="bg-white rounded-lg p-6 shadow-lg border-t-4 border-[#C5A059]">
@@ -867,10 +867,10 @@ export default function Page() {
                       <span className="bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold px-2 py-1 rounded">AI×塾長</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-3">
-                      総仕上げ期：<br />二刀流で合格率を最大化
+                      一般入試期：<br />AO入試で培った学力や思考を活かす
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      <span className="text-[#800000] font-bold">相談AI</span>でメンタルを維持しつつ、AOと一般の両面から合格を狙う。小論文と学科試験の相乗効果で、合格を確実なものに。
+                      <span className="text-[#800000] font-bold">相談AI</span>で細かい課題を解決し続け、AOで取り組んだことを活かし一般入試の合格を狙う。長期間取り組んだ小論文を強みに、合格を確実なものに。
                     </p>
                   </div>
                 </div>
