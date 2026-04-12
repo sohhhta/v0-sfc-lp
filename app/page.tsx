@@ -528,7 +528,7 @@ export default function Page() {
                   <tr>
                     <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[13px] bg-white border-r border-[#E5E7EB]" style={{ minWidth: '90px' }}>項目</th>
                     <th className="p-3 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '140px' }}>
-                      <span className="absolute -top-2.5 left-1/2 bg-[#C5A059] text-[#002147] text-[9px] font-bold px-2.5 py-0.5 rounded-full shadow-sm whitespace-nowrap" style={{ transform: 'translateX(-50%)' }}>SFC特化</span>
+                      <span className="absolute -top-2.5 left-1/2 bg-[#C5A059] text-[#002147] text-[9px] font-bold px-2.5 py-0.5 rounded-full shadow-sm whitespace-nowrap" style={{ transform: 'translateX(-50%)' }}></span>
                       佐藤塾
                     </th>
                     <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F8F8F8] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>特化塾</th>
@@ -795,7 +795,7 @@ export default function Page() {
             <div className="relative">
               {/* Connecting Line */}
               <div className="absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-[#002147] via-[#800000] to-[#C5A059]" />
-              
+
               <div className="grid grid-cols-3 gap-8">
                 {/* Step 01 */}
                 <div className="relative">
@@ -805,7 +805,7 @@ export default function Page() {
                     </div>
                     <div className="mt-4 flex items-center gap-2">
                       <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                       </svg>
                       <span className="text-sm font-bold text-[#002147]">4月〜7月</span>
                     </div>
@@ -831,7 +831,7 @@ export default function Page() {
                     </div>
                     <div className="mt-4 flex items-center gap-2">
                       <svg className="w-5 h-5 text-[#800000]" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                       </svg>
                       <span className="text-sm font-bold text-[#800000]">8月〜10月</span>
                     </div>
@@ -857,7 +857,7 @@ export default function Page() {
                     </div>
                     <div className="mt-4 flex items-center gap-2">
                       <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
                       </svg>
                       <span className="text-sm font-bold text-[#C5A059]">11月〜入試</span>
                     </div>
