@@ -785,7 +785,7 @@ export default function Page() {
               SFC合格への最短ルート：<br className="sm:hidden" />二刀流ロードマップ
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              いつ、何のためにAIを使い、いつ塾長が登場するか。合格までの道筋を明確にします。
+              いつ、何のためにAIを使い、塾長も併走するか。合格までの道筋を明確にします。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
