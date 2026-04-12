@@ -91,7 +91,7 @@ function ConsultationAICard() {
         {/* Guide text */}
         <p className="text-xs text-[#666666] mb-3 flex items-center gap-1">
           <span className="text-[#002147]">?</span>
-          あてはまる悩みをタップしてください
+          あてはまる悩みを押してください
         </p>
 
         {/* Tabs - Horizontal scroll on mobile */}
