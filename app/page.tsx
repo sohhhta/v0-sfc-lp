@@ -36,7 +36,7 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 // Consultation AI Card with tabbed conversations
 function ConsultationAICard() {
   const [activeTab, setActiveTab] = useState(0)
-  
+
   const conversations = [
     {
       label: 'AO入試',
@@ -45,8 +45,8 @@ function ConsultationAICard() {
     },
     {
       label: '小論文',
-      question: '資料が多すぎて、1行目も書けません…',
-      answer: 'SFCの資料は<highlight>あえて迷わせるように作られています</highlight>。まずは知識を詰め込むより、資料の共通点を探す「探しっこ」から始めましょう。<highlight>過去の合格者もここから始めました</highlight>。焦らず、一緒に整理していきましょう。'
+      question: '小論文を勉強したことがない私でもSFCを目指せるのでしょうか？',
+      answer: '<highlight>もちろん、目指せます</highlight>。小論文は量をこなす勉強が最重要です。まずはめちゃくちゃな内容でも良いのでどんどん量をこなしていきましょう。添削内容を踏まえ書き直すことで自然と書けるようになっていきます。<highlight>過去の合格者もこのように学習し始めました</highlight>。焦らず、一緒に着実に進めていきましょう。'
     },
     {
       label: '併願の不安',
@@ -57,7 +57,7 @@ function ConsultationAICard() {
 
   const renderAnswer = (text: string) => {
     const parts = text.split(/<highlight>|<\/highlight>/)
-    return parts.map((part, i) => 
+    return parts.map((part, i) =>
       i % 2 === 1 ? <span key={i} className="text-[#800000] font-bold">{part}</span> : part
     )
   }
@@ -85,11 +85,10 @@ function ConsultationAICard() {
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`px-4 py-2.5 text-sm font-bold rounded-lg transition-all duration-200 min-w-[80px] ${
-                activeTab === index
+              className={`px-4 py-2.5 text-sm font-bold rounded-lg transition-all duration-200 min-w-[80px] ${activeTab === index
                   ? 'bg-[#002147] text-white shadow-md'
                   : 'bg-[#F3F4F6] text-[#333333] hover:bg-[#E5E7EB]'
-              }`}
+                }`}
             >
               {conv.label}
             </button>
