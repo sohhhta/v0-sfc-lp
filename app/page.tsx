@@ -807,7 +807,7 @@ export default function Page() {
                       <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                       </svg>
-                      <span className="text-sm font-bold text-[#002147]">4月〜7月</span>
+                      <span className="text-sm font-bold text-[#002147]">4月〜6月</span>
                     </div>
                   </div>
                   <div className="bg-white rounded-lg p-6 shadow-lg border-t-4 border-[#002147]">
@@ -818,7 +818,7 @@ export default function Page() {
                       基礎構築期：<br />AIで論理の型をマスター
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      <span className="text-[#800000] font-bold">添削AI</span>を使い倒し、SFC特有の「論理的思考」を無意識レベルまで叩き込む。小論文の基礎はこの時期に完成。
+                      <span className="text-[#800000] font-bold">添削AI</span>を使い倒し、SFC特有の「論理的思考」を無意識レベルまで叩き込む。小論文の基礎学習に取り組む。
                     </p>
                   </div>
                 </div>
