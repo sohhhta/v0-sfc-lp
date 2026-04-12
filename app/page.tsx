@@ -51,7 +51,7 @@ function ConsultationAICard() {
     {
       label: '併願の不安',
       question: 'SFC対策に絞ると、他大学が疎かになりそうで不安です',
-      answer: '大丈夫です、受験は戦略が最重要です。<highlight>幅広い大学の合格を目指すのではなく、SFC合格から逆算した、受験戦略</highlight>が重要になります。SFC対策を軸にしながら、<highlight>負けない併願戦略</highlight>を一緒に立てましょう。両立は可能です。'
+      answer: '大丈夫です。<highlight>幅広い大学の合格を目指すのではなく、SFC合格から逆算した、受験戦略</highlight>が重要になります。SFC対策を軸にしながら、<highlight>負けない併願戦略</highlight>を一緒に立てましょう。両立は可能です。'
     }
   ]
 
