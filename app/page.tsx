@@ -480,7 +480,7 @@ export default function Page() {
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">小論文の添削</td>
                   <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold">24時間無制限<br /><span className="text-xs text-[#666666]">（AI×塾長）</span></td>
-                  <td className="p-6 text-center bg-white text-[#666666]">週1〜2回<br /><span className="text-xs">（対面メイン）</span></td>
+                  <td className="p-6 text-center bg-white text-[#666666]">週1〜4回<br /><span className="text-xs">（対面メイン）</span></td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">週1回<br /><span className="text-xs">（学生バイト中心）</span></td>
                 </tr>
 
@@ -488,7 +488,7 @@ export default function Page() {
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">対策範囲</td>
                   <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold"><span className="text-[#800000] font-bold">AO・一般 二刀流</span><br /><span className="text-xs text-[#666666]">（完全並走）</span></td>
-                  <td className="p-6 text-center bg-white text-[#666666]">AOのみ<br /><span className="text-xs">または別途料金</span></td>
+                  <td className="p-6 text-center bg-white text-[#666666]">AOのみ<br /><span className="text-xs">または別途料金で一般入試も対象</span></td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">一般入試のみ</td>
                 </tr>
 
@@ -497,9 +497,9 @@ export default function Page() {
                   <td className="p-6 font-bold text-[#002147]">費用（年間）</td>
                   <td className="p-6 text-center bg-[#800000]/5">
                     <p className="text-lg font-bold text-[#800000]">月額 13.8万円</p>
-                    <p className="text-xs text-[#666666] mt-1">入塾金・講習費 0円</p>
+                    <p className="text-xs text-[#666666] mt-1">追加講習費 0円</p>
                   </td>
-                  <td className="p-6 text-center bg-white text-[#666666]">年間 150万円〜<br /><span className="text-xs">（一括払い・追加あり）</span></td>
+                  <td className="p-6 text-center bg-white text-[#666666]">年間 150万円〜<br /><span className="text-xs">（講習は別料金）</span></td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">年間 100万円〜<br /><span className="text-xs">（講習は別料金）</span></td>
                 </tr>
 
@@ -530,7 +530,7 @@ export default function Page() {
                   {/* Row 1 */}
                   <div className="p-4 font-bold text-[#002147] text-sm">小論文の添削</div>
                   <div className="p-4 bg-[#800000]/5 text-center text-sm"><span className="font-bold text-[#800000]">24時間<br />無制限</span></div>
-                  <div className="p-4 bg-white text-center text-xs text-[#666666]">週1〜2回</div>
+                  <div className="p-4 bg-white text-center text-xs text-[#666666]">週1〜4回</div>
 
                   {/* Row 2 */}
                   <div className="p-4 font-bold text-[#002147] text-sm">対策範囲</div>
@@ -555,7 +555,7 @@ export default function Page() {
           <div className="mt-10 bg-white rounded-lg border-l-4 border-[#800000] p-5 md:p-6 shadow-md">
             <p className="text-sm md:text-base text-[#333333]">
               <span className="text-[#800000] font-bold">※ 佐藤塾の費用は月額 13.8万円のみ。</span>
-              入塾金、講習費、教材費といった追加料金は<span className="font-bold">一切かかりません</span>。他塾のように「合格時には別途〇万円」といった費用も発生しません。
+              講習費、教材費といった追加料金は<span className="font-bold">一切かかりません</span>。他塾のように「合格時には別途〇万円」といった費用も発生しません。
             </p>
           </div>
         </div>
