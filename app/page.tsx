@@ -51,7 +51,7 @@ function ConsultationAICard() {
     {
       label: '併願の不安',
       question: 'SFC対策に絞ると、他大学が疎かになりそうで不安です',
-      answer: '実は逆です。<highlight>SFCの小論文で養う論理力は、早稲田や他の慶應学部でも最大の武器</highlight>になります。SFC対策を軸にしながら、<highlight>負けない併願戦略</highlight>を一緒に立てましょう。両立は可能です。'
+      answer: '大丈夫です、受験は戦略が最重要です。<highlight>幅広い大学の合格を目指すのではなく、SFC合格から逆算した、受験戦略</highlight>が重要になります。SFC対策を軸にしながら、<highlight>負けない併願戦略</highlight>を一緒に立てましょう。両立は可能です。'
     }
   ]
 
@@ -86,8 +86,8 @@ function ConsultationAICard() {
               key={index}
               onClick={() => setActiveTab(index)}
               className={`px-4 py-2.5 text-sm font-bold rounded-lg transition-all duration-200 min-w-[80px] ${activeTab === index
-                  ? 'bg-[#002147] text-white shadow-md'
-                  : 'bg-[#F3F4F6] text-[#333333] hover:bg-[#E5E7EB]'
+                ? 'bg-[#002147] text-white shadow-md'
+                : 'bg-[#F3F4F6] text-[#333333] hover:bg-[#E5E7EB]'
                 }`}
             >
               {conv.label}
