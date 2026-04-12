@@ -456,10 +456,10 @@ export default function Page() {
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
-              SFC対策 徹底比較表
+              佐藤塾と他塾の比較表
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              授業料の透明性と、圧倒的な指導密度。SFC合格に必要なすべてを、月額料金だけで提供します。
+              佐藤塾は授業料の透明性と、圧倒的な指導密度を担保しています。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
