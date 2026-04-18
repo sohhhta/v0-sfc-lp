@@ -952,12 +952,12 @@ export default function Page() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { num: '01', title: 'AO���一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
+              { num: '01', title: 'AOと一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
               { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限なし' },
-              { num: '03', title: '通塾ゼロ', desc: 'すべてオンライン。通塾時間を勉強に充てられる' },
-              { num: '04', title: 'SFC特化ロジック', desc: '7年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
-              { num: '05', title: 'メンタルサポート充実', desc: '相談AIと塾長が受験のあらゆる不安に対応' },
-              { num: '06', title: '返金保証制度', desc: 'AO合格で受講料の50%を返金。安心の仕組み' },
+              { num: '03', title: '学習の徹底管理', desc: '週次、月次で学習計画を策定し、管理する' },
+              { num: '04', title: '返金保証制度', desc: 'AO合格で受講料の50%を返金。安心の仕組み' },
+              { num: '05', title: 'SFC特化ロジック', desc: '7年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
+              { num: '06', title: '通塾ゼロ', desc: '指導も授業もすべてオンライン。通塾時間を勉強に充てられる' },
             ].map((item) => (
               <Card key={item.num} className="bg-white shadow-md border-t-2 border-t-primary border-x-0 border-b-0 rounded-lg hover:shadow-lg transition-shadow">
                 <CardHeader>
