@@ -1159,7 +1159,7 @@ export default function Page() {
       <section className="py-28 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <SectionTitle subtitle="プランの選び方や学習スケジュールの立て方など、塾長が直接お答えします">
-            SFC合格への第一歩：個別相談（無料）
+            30秒で申し込み！個別相談申し込み
           </SectionTitle>
 
           <Card className="bg-white shadow-lg border-t-4 border-t-[#800000] border-x border-b border-border rounded-xl">
