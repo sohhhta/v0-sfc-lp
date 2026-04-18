@@ -1133,17 +1133,20 @@ export default function Page() {
                 塾長からのメッセージ
               </h3>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                SFCの小論文は「正解を書く試験」ではなく、「あなたの思考を表現する試験」です。
+                慶應SFCはとても難易度が高いと思っているかもしれませんが、戦略次第では合格は現実的です。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                7年間で49名の合格者を輩出した経験と、最新のAI技術を組み合わせ、あなたの「本当の実力」を引き出します��
+                諦めるのはまだまだ早く、こんな私が？と思うあなたこそ一度話をしましょう！
+              </p>
+              <p className="text-lg text-foreground mb-6 leading-relaxed">
+                7年間で49名の合格者を輩出した経験と、最新のAI技術を組み合わせ、あなたの「本当の実力」を引き出します。
               </p>
               <p className="text-lg text-foreground mb-10 leading-relaxed">
                 <strong className="text-primary">私が直接、あなたと並走することを約束します。</strong>
               </p>
               <div className="border-l-4 border-accent pl-6">
                 <p className="text-xl font-bold text-secondary font-serif tracking-wide">
-                  佐藤 〇〇
+                  佐藤 颯太
                 </p>
                 <p className="text-base text-muted-foreground mt-1">佐藤塾 塾長</p>
               </div>
