@@ -528,7 +528,7 @@ export default function Page() {
                   <tr>
                     <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[13px] bg-white border-r border-[#E5E7EB]" style={{ minWidth: '90px' }}>項目</th>
                     <th className="p-3 pt-5 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '140px' }}>
-                      <span className="absolute top-[-10px] left-1/2 bg-[#C5A059] text-[#002147] text-[9px] font-bold px-2.5 py-0.5 rounded-full shadow-sm whitespace-nowrap z-30" style={{ transform: 'translateX(-50%)' }}>SFC特化</span>
+                      <span className="absolute top-[-10px] left-1/2 bg-[#C5A059] text-[#002147] text-[9px] font-bold px-2.5 py-0.5 rounded-full shadow-sm whitespace-nowrap z-30" style={{ transform: 'translateX(-50%)' }}></span>
                       佐藤塾
                     </th>
                     <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F8F8F8] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>特化塾</th>
@@ -991,11 +991,11 @@ export default function Page() {
               <div className="absolute top-4 right-4 bg-[#800000] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10 border-2 border-[#C5A059]">
                 人気No.1
               </div>
-              
+
               <div className="bg-gradient-to-br from-[#800000] to-[#600000] text-white px-6 py-6">
                 <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide">SFC二刀流<br />完全攻略プラン</h4>
               </div>
-              
+
               <div className="flex-1 flex flex-col p-6 md:p-8">
                 {/* Price */}
                 <div className="mb-6">
@@ -1010,7 +1010,7 @@ export default function Page() {
                 {/* Zero fees highlight */}
                 <div className="flex items-center gap-2 mb-6">
                   <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
                   <span className="text-sm font-bold text-[#002147]">追加講習費 0円</span>
                 </div>
@@ -1047,7 +1047,7 @@ export default function Page() {
               <div className="bg-[#F3F4F6] text-[#333333] px-6 py-6 border-b border-[#E5E7EB]">
                 <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">AI小論文<br />基礎特化プラン</h4>
               </div>
-              
+
               <div className="flex-1 flex flex-col p-6 md:p-8">
                 {/* Price */}
                 <div className="mb-6">
@@ -1062,7 +1062,7 @@ export default function Page() {
                 {/* Zero fees highlight */}
                 <div className="flex items-center gap-2 mb-6">
                   <svg className="w-5 h-5 text-[#666666]" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
                   <span className="text-sm text-[#666666]">追加講習費 0円</span>
                 </div>
@@ -1096,7 +1096,7 @@ export default function Page() {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C5A059] flex items-center justify-center">
                 <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
               </div>
               <div>
