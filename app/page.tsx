@@ -980,100 +980,146 @@ export default function Page() {
       </section>
 
       {/* Pricing Section - White */}
-      <section className="py-24 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <SectionTitle subtitle="衝撃の合格支援制度">2つの料金プラン</SectionTitle>
+      <section className="py-28 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <SectionTitle subtitle="明朗会計・追加費用なし">2つの料金プラン</SectionTitle>
 
-          <div className="grid md:grid-cols-2 gap-10">
-            {/* Main Plan */}
-            <Card className="bg-white shadow-xl border-2 border-secondary transform md:scale-105 relative overflow-hidden rounded-lg">
-              <div className="bg-secondary text-white px-8 py-6">
-                <Badge className="bg-accent text-accent-foreground mb-4 inline-block font-semibold">推奨プラン</Badge>
-                <h4 className="text-2xl font-bold font-serif tracking-wide">AO・一般 完全攻略<br />二刀流プラン</h4>
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {/* Main Plan - 受験生限定プラン */}
+            <div className="relative flex flex-col bg-white shadow-xl border-4 border-[#800000] rounded-xl overflow-hidden">
+              {/* 人気No.1 ラベル */}
+              <div className="absolute top-4 right-4 bg-[#C5A059] text-[#002147] text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
+                人気No.1
               </div>
-              <CardContent className="pt-10">
-                <div className="mb-8">
-                  <p className="text-muted-foreground text-sm mb-2 font-medium">受講料</p>
-                  <p className="text-6xl font-bold text-primary font-serif tracking-tight">
-                    138,000<span className="text-2xl ml-1">円</span>
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">（税込151,800円）</p>
+              
+              <div className="bg-[#800000] text-white px-6 py-6">
+                <p className="text-xs font-bold text-[#C5A059] tracking-wider mb-2">受験生限定</p>
+                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide">SFC二刀流<br />完全攻略プラン</h4>
+              </div>
+              
+              <div className="flex-1 flex flex-col p-6 md:p-8">
+                {/* Price */}
+                <div className="mb-6">
+                  <p className="text-[#666666] text-xs mb-1">月額料金</p>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">118,000</span>
+                    <span className="text-xl font-bold text-[#800000]">円</span>
+                  </div>
+                  <p className="text-sm text-[#333333] mt-1">/ 月（税込129,800円）</p>
                 </div>
 
-                <div className="bg-accent/10 border border-accent/30 rounded-lg p-5 mb-8">
-                  <p className="text-sm font-semibold text-accent mb-2 font-serif">返金特典</p>
-                  <p className="text-lg font-bold text-foreground font-serif">
-                    AO入試合格時、残金の50%を返金
-                  </p>
+                {/* Zero fees highlight */}
+                <div className="flex gap-4 mb-6">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span className="text-sm font-bold text-[#002147]">入会金 0円</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span className="text-sm font-bold text-[#002147]">追加講習費 0円</span>
+                  </div>
                 </div>
 
-                <p className="text-sm text-foreground mb-8 leading-relaxed">
-                  最短合格を目指す。早く受かれば、負担も半分に。
-                </p>
-
-                <ul className="space-y-4 mb-10 text-sm">
+                {/* Features */}
+                <ul className="space-y-3 mb-8 flex-1">
                   <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>AI添削 24時間無制限</span>
+                    <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#333333]">AI添削 <span className="font-bold text-[#800000]">24時間無制限</span></span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>相談AI 24時間対応</span>
+                    <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#333333]">塾長1on1授業 <span className="font-bold text-[#800000]">週1回</span></span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>塾長個別面談 月1回</span>
+                    <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#333333]">受験戦略立案（AO・一般 二刀流対応）</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>追加費用なし</span>
+                    <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#333333]">相談AI 24時間対応</span>
                   </li>
                 </ul>
 
-                <Button className="w-full bg-secondary hover:bg-secondary/90 text-white h-14 text-base font-semibold shadow-lg">
+                {/* CTA Button */}
+                <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg mt-auto">
                   このプランに申し込む
                 </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            {/* Secondary Plan */}
-            <Card className="bg-white shadow-md border border-border rounded-lg">
-              <CardHeader className="bg-[#F9F9F9] border-b border-border">
-                <h4 className="text-xl font-bold text-primary font-serif tracking-wide">小論文特化プラン</h4>
-              </CardHeader>
-              <CardContent className="pt-10">
-                <div className="mb-8">
-                  <p className="text-muted-foreground text-sm mb-2 font-medium">受講料</p>
-                  <p className="text-6xl font-bold text-primary font-serif tracking-tight">
-                    98,000<span className="text-2xl ml-1">円</span>
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">（税込129,800円）</p>
+            {/* Secondary Plan - 一般プラン */}
+            <div className="relative flex flex-col bg-white shadow-md border-2 border-[#E5E7EB] rounded-xl overflow-hidden">
+              <div className="bg-[#F3F4F6] text-[#333333] px-6 py-6 border-b border-[#E5E7EB]">
+                <p className="text-xs font-bold text-[#666666] tracking-wider mb-2">一般向け</p>
+                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">AI小論文<br />基礎特化プラン</h4>
+              </div>
+              
+              <div className="flex-1 flex flex-col p-6 md:p-8">
+                {/* Price */}
+                <div className="mb-6">
+                  <p className="text-[#666666] text-xs mb-1">月額料金</p>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-5xl md:text-6xl font-bold text-[#002147] font-serif">78,000</span>
+                    <span className="text-xl font-bold text-[#002147]">円</span>
+                  </div>
+                  <p className="text-sm text-[#333333] mt-1">/ 月（税込85,800円）</p>
                 </div>
 
-                <p className="text-sm text-foreground mb-8 leading-relaxed">
-                  小論文に特化した集中支援プラン
-                </p>
+                {/* Zero fees highlight */}
+                <div className="flex gap-4 mb-6">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-[#666666]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span className="text-sm text-[#666666]">入会金 0円</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-[#666666]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span className="text-sm text-[#666666]">追加講習費 0円</span>
+                  </div>
+                </div>
 
-                <ul className="space-y-4 mb-10 text-sm">
+                {/* Features */}
+                <ul className="space-y-3 mb-8 flex-1">
                   <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>AI添削 24時間無制限</span>
+                    <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#333333]">AI添削 24時間無制限</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>相談AI（限定利用）</span>
+                    <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#333333]">相談AI 24時間対応</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>塾長個別面談 月1回</span>
+                  <li className="flex items-start gap-3 opacity-50">
+                    <svg className="w-5 h-5 text-[#999999] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                    <span className="text-sm text-[#999999]">塾長1on1授業は含まれません</span>
                   </li>
                 </ul>
 
-                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white h-14 text-base font-medium">
+                {/* CTA Button */}
+                <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium mt-auto">
                   詳しく見る
                 </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+          </div>
+
+          {/* Contract Notes */}
+          <div className="mt-10 bg-[#F8F9FA] rounded-lg p-5 md:p-6 border border-[#E5E7EB]">
+            <p className="text-sm text-[#333333] leading-relaxed mb-3">
+              <span className="font-bold text-[#002147]">※ AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。</span>無駄な継続費用は一切かかりません。
+            </p>
+            <p className="text-xs text-[#666666]">
+              会費ペイによる安心の月額決済システムを導入しています。
+            </p>
           </div>
         </div>
       </section>
