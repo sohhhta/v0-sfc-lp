@@ -189,7 +189,7 @@ export default function Page() {
           {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide">
             学校では教えられないSFCの正解を、AIと塾長が24時間フルサポート。<br className="hidden md:block" />
-            最短距������、合格する思考を鍛え上げる。
+            最短距離で合格する思考を鍛え上げる。
           </p>
 
           {/* CTA Button */}
@@ -405,7 +405,7 @@ export default function Page() {
               2つのAIを佐藤塾が開発
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              この2つのAIはただの汎用AIではなく、7年間にわたる合格者の全指導データと、塾長の全知���を学習させた、佐藤塾にしか作れない専用の指導システムです。
+              この2つのAIはただの汎用AIではなく、7年間にわたる合格者の全指導データと、塾長の全知識を学習させた、佐藤塾にしか作れない専用の指導システムです。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -1159,7 +1159,7 @@ export default function Page() {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <SectionTitle subtitle="合格への第一歩をここから始めましょう">
-            まずは1分で無料相��
+            まずは1分で無料相談
           </SectionTitle>
 
           <Card className="bg-white shadow-md border-t-2 border-t-primary border-x border-b border-border rounded-lg">
@@ -1169,7 +1169,7 @@ export default function Page() {
                   <label className="block text-sm font-semibold text-foreground mb-3">
                     お名前 <span className="text-secondary">*</span>
                   </label>
-                  <Input placeholder="山田太郎" className="border-border focus:border-primary h-12" />
+                  <Input placeholder="佐藤塾太郎" className="border-border focus:border-primary h-12" />
                 </div>
 
                 <div>
