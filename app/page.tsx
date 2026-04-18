@@ -216,8 +216,8 @@ export default function Page() {
             {/* Side cards row on mobile */}
             <div className="grid grid-cols-2 gap-4 md:hidden">
               <div className="flex flex-col items-center justify-center p-4 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
-                <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium">2026年度 合格者</p>
-                <p className="text-4xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>7<span className="text-lg ml-0.5">名</span></p>
+                <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium">2026年度 受講継続率</p>
+                <p className="text-4xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>93<span className="text-lg ml-0.5">%</span></p>
               </div>
               <div className="flex flex-col items-center justify-center p-4 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
                 <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium">7年間累計</p>
@@ -228,8 +228,8 @@ export default function Page() {
             {/* Desktop: all three in one row */}
             <div className="hidden md:grid md:grid-cols-3 gap-4">
               <div className="flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
-                <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">2026年度 合格者</p>
-                <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>7<span className="text-2xl ml-1">名</span></p>
+                <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">2026年度 受講継続率</p>
+                <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>93<span className="text-2xl ml-1">%</span></p>
               </div>
               <div className="flex flex-col items-center justify-center p-8 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg scale-110 -my-2">
                 <p className="text-xs text-[#C5A059] mb-2 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
