@@ -405,7 +405,7 @@ export default function Page() {
               2つのAIを佐藤塾が開発
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              この2つのAIはただの汎用AIではなく、7年間にわたる合格者の全指導データと、塾長の全知見を学習させた、佐藤塾にしか作れない専用の指導システムです。
+              この2つのAIはただの汎用AIではなく、7年間にわたる合格者の全指導データと、塾長の全知���を学習させた、佐藤塾にしか作れない専用の指導システムです。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -1116,21 +1116,12 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <Image
-                src="/jukucho.jpg"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LP%E7%94%A8%E7%94%BB%E5%83%8F-AOR1a22XLXmxYxq6qMvKO1B5HygCnh.png"
                 alt="塾長"
                 width={400}
                 height={500}
                 className="rounded-xl shadow-xl"
               />
-              <div className="absolute -bottom-6 -right-6 w-44 h-44">
-                <Image
-                  src="/signature.png"
-                  alt="塾長サイン"
-                  width={150}
-                  height={100}
-                  className="w-full h-auto opacity-80"
-                />
-              </div>
             </div>
 
             <div>
