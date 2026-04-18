@@ -985,15 +985,14 @@ export default function Page() {
           <SectionTitle subtitle="明朗会計・追加費用なし">2つの料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            {/* Main Plan - 受験生限定プラン */}
+            {/* Main Plan - 完全攻略プラン */}
             <div className="relative flex flex-col bg-white shadow-xl border-4 border-[#800000] rounded-xl overflow-hidden">
               {/* 人気No.1 ラベル */}
-              <div className="absolute top-4 right-4 bg-[#C5A059] text-[#002147] text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
+              <div className="absolute top-4 right-4 bg-[#800000] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10 border-2 border-[#C5A059]">
                 人気No.1
               </div>
               
-              <div className="bg-[#800000] text-white px-6 py-6">
-                <p className="text-xs font-bold text-[#C5A059] tracking-wider mb-2">受験生限定</p>
+              <div className="bg-gradient-to-br from-[#800000] to-[#600000] text-white px-6 py-6">
                 <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide">SFC二刀流<br />完全攻略プラン</h4>
               </div>
               
@@ -1002,26 +1001,18 @@ export default function Page() {
                 <div className="mb-6">
                   <p className="text-[#666666] text-xs mb-1">月額料金</p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">118,000</span>
+                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">138,000</span>
                     <span className="text-xl font-bold text-[#800000]">円</span>
                   </div>
-                  <p className="text-sm text-[#333333] mt-1">/ 月（税込129,800円）</p>
+                  <p className="text-sm text-[#333333] mt-1">/ 月（税込 151,800円）</p>
                 </div>
 
                 {/* Zero fees highlight */}
-                <div className="flex gap-4 mb-6">
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                    <span className="text-sm font-bold text-[#002147]">入会金 0円</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                    <span className="text-sm font-bold text-[#002147]">追加講習費 0円</span>
-                  </div>
+                <div className="flex items-center gap-2 mb-6">
+                  <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                  <span className="text-sm font-bold text-[#002147]">追加講習費 0円</span>
                 </div>
 
                 {/* Features */}
@@ -1051,10 +1042,9 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Secondary Plan - 一般プラン */}
+            {/* Secondary Plan - 標準プラン */}
             <div className="relative flex flex-col bg-white shadow-md border-2 border-[#E5E7EB] rounded-xl overflow-hidden">
               <div className="bg-[#F3F4F6] text-[#333333] px-6 py-6 border-b border-[#E5E7EB]">
-                <p className="text-xs font-bold text-[#666666] tracking-wider mb-2">一般向け</p>
                 <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">AI小論文<br />基礎特化プラン</h4>
               </div>
               
@@ -1063,26 +1053,18 @@ export default function Page() {
                 <div className="mb-6">
                   <p className="text-[#666666] text-xs mb-1">月額料金</p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-[#002147] font-serif">78,000</span>
+                    <span className="text-5xl md:text-6xl font-bold text-[#002147] font-serif">118,000</span>
                     <span className="text-xl font-bold text-[#002147]">円</span>
                   </div>
-                  <p className="text-sm text-[#333333] mt-1">/ 月（税込85,800円）</p>
+                  <p className="text-sm text-[#333333] mt-1">/ 月（税込 129,800円）</p>
                 </div>
 
                 {/* Zero fees highlight */}
-                <div className="flex gap-4 mb-6">
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#666666]" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                    <span className="text-sm text-[#666666]">入会金 0円</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[#666666]" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                    <span className="text-sm text-[#666666]">追加講習費 0円</span>
-                  </div>
+                <div className="flex items-center gap-2 mb-6">
+                  <svg className="w-5 h-5 text-[#666666]" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                  <span className="text-sm text-[#666666]">追加講習費 0円</span>
                 </div>
 
                 {/* Features */}
@@ -1093,14 +1075,11 @@ export default function Page() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">相談AI 24時間対応</span>
+                    <span className="text-sm text-[#333333]">塾長1on1授業 <span className="font-bold text-[#002147]">月1回</span></span>
                   </li>
-                  <li className="flex items-start gap-3 opacity-50">
-                    <svg className="w-5 h-5 text-[#999999] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <line x1="18" y1="6" x2="6" y2="18" />
-                      <line x1="6" y1="6" x2="18" y2="18" />
-                    </svg>
-                    <span className="text-sm text-[#999999]">塾長1on1授業は含まれません</span>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#333333]">相談AI 24時間対応</span>
                   </li>
                 </ul>
 
@@ -1112,14 +1091,21 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Contract Notes */}
-          <div className="mt-10 bg-[#F8F9FA] rounded-lg p-5 md:p-6 border border-[#E5E7EB]">
-            <p className="text-sm text-[#333333] leading-relaxed mb-3">
-              <span className="font-bold text-[#002147]">※ AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。</span>無駄な継続費用は一切かかりません。
-            </p>
-            <p className="text-xs text-[#666666]">
-              会費ペイによる安心の月額決済システムを導入しています。
-            </p>
+          {/* Contract Notes - Enhanced visibility */}
+          <div className="mt-10 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5 rounded-xl p-6 md:p-8 border border-[#002147]/20">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C5A059] flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <div>
+                <p className="text-lg font-bold text-[#002147] mb-2">合格 ＝ 卒業。無駄な費用は一切かかりません。</p>
+                <p className="text-sm text-[#333333] leading-relaxed">
+                  AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。合格後の継続費用は一切発生しません。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
