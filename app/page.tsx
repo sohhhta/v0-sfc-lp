@@ -1224,7 +1224,6 @@ export default function Page() {
 
                 <p className="text-xs text-center text-muted-foreground pt-2">
                   送信いただいた情報は、お客様へのサービス提供のため、安全に管理されます。
-                  <a href="/privacy" className="text-[#002147] underline hover:text-[#800000] ml-1">プライバシーポリシー</a>
                 </p>
               </form>
             </CardContent>
