@@ -782,10 +782,10 @@ export default function Page() {
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
-              SFC合格への最短ルート：<br className="sm:hidden" />二刀流ロードマップ
+              合格までのロードマップ
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              いつ、何のためにAIを使い、塾長も併走するか。合格までの道筋を明確にします。
+              いつ、何をして合格を掴むか。SFC合格への道筋を可視化します。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -815,10 +815,10 @@ export default function Page() {
                       <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">AI中心</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-3">
-                      基礎構築期：<br />AIで論理の型をマスター
+                      論理の型を構築
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      <span className="text-[#800000] font-bold">添削AI</span>を使い倒し、SFC特有の「論理的思考」を無意識レベルまで叩き込む。小論文の基礎学習に取り組む。
+                      <span className="text-[#800000] font-bold">AIを使い倒し</span>、SFC特有の「問いを立てる力」を養う時期。小論文の基礎をこの時期に完成させる。
                     </p>
                   </div>
                 </div>
@@ -841,10 +841,10 @@ export default function Page() {
                       <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">塾長中心</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-3">
-                      戦略深化期：<br />塾長との1on1で独自性を磨く
+                      独自性の磨き上げ
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      AO入試の出願に向け、<span className="text-[#800000] font-bold">塾長が直接対話</span>であなたの「強み」を言語化。唯一無二の志望理由書作成や徹底的な面接対策を行う。
+                      <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える時期。唯一無二の志望理由書を作成。
                     </p>
                   </div>
                 </div>
@@ -867,10 +867,10 @@ export default function Page() {
                       <span className="bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold px-2 py-1 rounded">AI×塾長</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-3">
-                      一般入試期：<br />AO入試を一般入試にも活かす
+                      二刀流で合格
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      <span className="text-[#800000] font-bold">相談AI</span>で細かい課題を解決し続ける。AO入試と一般入試横断で長期間取り組んだ小論文を強みに、合格を確実なものに。
+                      一般入試の小論文も学科も、<span className="text-[#800000] font-bold">AIと塾長のサポート</span>で突破する時期。二刀流の力で合格を確実なものに。
                     </p>
                   </div>
                 </div>
@@ -895,10 +895,10 @@ export default function Page() {
                     <span className="text-xs font-bold text-[#002147]">4月〜7月</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
-                    基礎構築期：AIで論理の型をマスター
+                    論理の型を構築
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    <span className="text-[#800000] font-bold">添削AI</span>を使い倒し、SFC特有の「論理的思考」を無意識レベルまで叩き込む。小論文の基礎はこの時期に完成。
+                    <span className="text-[#800000] font-bold">AIを使い倒し</span>、SFC特有の「問いを立てる力」を養う時期。小論文の基礎をこの時期に完成させる。
                   </p>
                 </div>
               </div>
@@ -914,10 +914,10 @@ export default function Page() {
                     <span className="text-xs font-bold text-[#800000]">8月〜10月</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
-                    戦略深化期：塾長との1on1で独自性を磨く
+                    独自性の磨き上げ
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    AO入試の出願に向け、<span className="text-[#800000] font-bold">塾長が直接対話</span>であなたの「強み」を言語化。唯一無二の志望理由書を作成。
+                    <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える時期。唯一無二の志望理由書を作成。
                   </p>
                 </div>
               </div>
@@ -933,10 +933,10 @@ export default function Page() {
                     <span className="text-xs font-bold text-[#C5A059]">11月〜入試</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
-                    総仕上げ期：二刀流で合格率を最大化
+                    二刀流で合格
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    <span className="text-[#800000] font-bold">相談AI</span>でメンタルを維持しつつ、AOと一般の両面から合格を狙う。小論文と学科試験の相乗効果で、合格を確実なものに。
+                    一般入試の小論文も学科も、<span className="text-[#800000] font-bold">AIと塾長のサポート</span>で突破する時期。二刀流の力で合格を確実なものに。
                   </p>
                 </div>
               </div>
@@ -1156,30 +1156,30 @@ export default function Page() {
       </section>
 
       {/* Contact Form Section - White */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-28 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
-          <SectionTitle subtitle="合格への第一歩をここから始めましょう">
-            まずは1分で無料相談
+          <SectionTitle subtitle="プランの選び方や学習スケジュールの立て方など、塾長が直接お答えします">
+            SFC合格への第一歩：個別相談（無料）
           </SectionTitle>
 
-          <Card className="bg-white shadow-md border-t-2 border-t-primary border-x border-b border-border rounded-lg">
+          <Card className="bg-white shadow-lg border-t-4 border-t-[#800000] border-x border-b border-border rounded-xl">
             <CardContent className="pt-10">
-              <form className="space-y-8">
+              <form className="space-y-6">
                 <div>
                   <label className="block text-sm font-semibold text-foreground mb-3">
-                    お名前 <span className="text-secondary">*</span>
+                    お名前 <span className="text-[#800000]">*</span>
                   </label>
-                  <Input placeholder="佐藤塾太郎" className="border-border focus:border-primary h-12" />
+                  <Input placeholder="佐藤塾太郎" className="border-border focus:border-[#002147] h-12" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-foreground mb-3">
-                    メールアドレス <span className="text-secondary">*</span>
+                    メールアドレス <span className="text-[#800000]">*</span>
                   </label>
                   <Input
                     type="email"
                     placeholder="example@email.com"
-                    className="border-border focus:border-primary h-12"
+                    className="border-border focus:border-[#002147] h-12"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
@@ -1187,9 +1187,20 @@ export default function Page() {
 
                 <div>
                   <label className="block text-sm font-semibold text-foreground mb-3">
-                    電話番号 <span className="text-secondary">*</span>
+                    電話番号 <span className="text-[#800000]">*</span>
                   </label>
-                  <Input placeholder="09012345678" className="border-border focus:border-primary h-12" />
+                  <Input placeholder="09012345678" className="border-border focus:border-[#002147] h-12" />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-foreground mb-3">
+                    ご希望のプラン <span className="text-[#800000]">*</span>
+                  </label>
+                  <select className="w-full h-12 px-4 border border-border rounded-md bg-white text-foreground focus:border-[#002147] focus:outline-none focus:ring-1 focus:ring-[#002147]">
+                    <option value="">プランを選択してください</option>
+                    <option value="complete">AOと小論文：SFC二刀流完全攻略プラン（週1回指導）</option>
+                    <option value="basic">小論文のみ：AI小論文特化プラン（月1回指導）</option>
+                  </select>
                 </div>
 
                 <div>
@@ -1198,16 +1209,22 @@ export default function Page() {
                   </label>
                   <Textarea
                     placeholder="佐藤塾について気になることなどをお聞きします"
-                    className="border-border focus:border-primary min-h-36"
+                    className="border-border focus:border-[#002147] min-h-32"
                   />
                 </div>
 
-                <Button className="w-full bg-secondary hover:bg-secondary/90 text-white h-14 text-base font-semibold shadow-lg">
-                  無料相談に申し込む
-                </Button>
+                <div className="pt-2">
+                  <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
+                    相談予約を確定する
+                  </Button>
+                  <p className="text-xs text-center text-[#666666] mt-3">
+                    ※送信後、24時間以内に担当者よりご連絡いたします
+                  </p>
+                </div>
 
-                <p className="text-xs text-center text-muted-foreground">
+                <p className="text-xs text-center text-muted-foreground pt-2">
                   送信いただいた情報は、お客様へのサービス提供のため、安全に管理されます。
+                  <a href="/privacy" className="text-[#002147] underline hover:text-[#800000] ml-1">プライバシーポリシー</a>
                 </p>
               </form>
             </CardContent>
