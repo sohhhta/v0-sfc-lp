@@ -209,7 +209,7 @@ export default function Page() {
             {/* Center card — full-width on mobile, hidden on md+ (rendered in the 3-col grid) */}
             <div className="md:hidden flex flex-col items-center justify-center p-6 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg mb-4">
               <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
-              <p className="text-6xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>66.7<span className="text-2xl">%</span></p>
+              <p className="text-6xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>50<span className="text-2xl">%</span></p>
               <p className="text-sm text-[#D4AF37] mt-2 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生14名中7名が合格)</p>
             </div>
 
@@ -610,7 +610,7 @@ export default function Page() {
               <div className="bg-white rounded-full w-48 h-48 flex items-center justify-center shadow-lg border-2 border-[#002147]/10">
                 <div>
                   <p className="text-sm text-[#C5A059] font-bold tracking-wider mb-1">SUCCESS CYCLE</p>
-                  <p className="text-lg font-bold text-[#002147] font-serif">合格率66.7%を<br />支えるサイクル</p>
+                  <p className="text-lg font-bold text-[#002147] font-serif">合格率50%を<br />支えるサイクル</p>
                 </div>
               </div>
             </div>
@@ -688,7 +688,7 @@ export default function Page() {
             {/* Center label */}
             <div className="text-center mb-10">
               <div className="inline-block bg-[#002147] text-white px-6 py-3 rounded-full">
-                <p className="text-sm font-bold tracking-wider">合格率66.7%を支えるサイクル</p>
+                <p className="text-sm font-bold tracking-wider">合格率50%を支えるサイクル</p>
               </div>
             </div>
 
@@ -955,7 +955,7 @@ export default function Page() {
               { num: '01', title: 'AOと一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
               { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限なし' },
               { num: '03', title: '学習の徹底管理', desc: '週次、月次で学習計画を策定し、管理する' },
-              { num: '04', title: '返金保証制度', desc: 'AO合格で受講料の50%を返金。安心の仕組み' },
+              { num: '04', title: 'AO合格後卒業', desc: 'AO合格後は卒業となり自動退塾となります。追加料金は不要' },
               { num: '05', title: 'SFC特化ロジック', desc: '7年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
               { num: '06', title: '通塾ゼロ', desc: '指導も授業もすべてオンライン。通塾時間を勉強に充てられる' },
             ].map((item) => (
