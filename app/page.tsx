@@ -982,7 +982,7 @@ export default function Page() {
       {/* Pricing Section - White */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <SectionTitle subtitle="衝撃の合格支援制度">料金プラン</SectionTitle>
+          <SectionTitle subtitle="衝撃の合格支援制度">2つの料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-10">
             {/* Main Plan */}
@@ -997,7 +997,7 @@ export default function Page() {
                   <p className="text-6xl font-bold text-primary font-serif tracking-tight">
                     138,000<span className="text-2xl ml-1">円</span>
                   </p>
-                  <p className="text-sm text-muted-foreground mt-2">（税込）</p>
+                  <p className="text-sm text-muted-foreground mt-2">（税込151,800円）</p>
                 </div>
 
                 <div className="bg-accent/10 border border-accent/30 rounded-lg p-5 mb-8">
@@ -1047,7 +1047,7 @@ export default function Page() {
                   <p className="text-6xl font-bold text-primary font-serif tracking-tight">
                     98,000<span className="text-2xl ml-1">円</span>
                   </p>
-                  <p className="text-sm text-muted-foreground mt-2">（税込）</p>
+                  <p className="text-sm text-muted-foreground mt-2">（税込129,800円）</p>
                 </div>
 
                 <p className="text-sm text-foreground mb-8 leading-relaxed">
