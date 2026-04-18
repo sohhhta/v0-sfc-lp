@@ -1045,7 +1045,7 @@ export default function Page() {
             {/* Secondary Plan - 標準プラン */}
             <div className="relative flex flex-col bg-white shadow-md border-2 border-[#E5E7EB] rounded-xl overflow-hidden">
               <div className="bg-[#F3F4F6] text-[#333333] px-6 py-6 border-b border-[#E5E7EB]">
-                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">AI小論文<br />基礎特化プラン</h4>
+                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">AI小論文<br />特化プラン</h4>
               </div>
 
               <div className="flex-1 flex flex-col p-6 md:p-8">
