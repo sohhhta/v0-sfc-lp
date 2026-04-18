@@ -521,14 +521,14 @@ export default function Page() {
           </div>
 
           {/* Mobile: Horizontal scroll - simplified stable design */}
-          <div className="md:hidden mt-6 pb-4">
-            <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
+          <div className="md:hidden mt-8 pb-4">
+            <div className="overflow-x-auto overflow-y-visible rounded-lg shadow-lg bg-white">
               <table className="w-full border-collapse" style={{ minWidth: '420px' }}>
                 <thead>
                   <tr>
                     <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[13px] bg-white border-r border-[#E5E7EB]" style={{ minWidth: '90px' }}>項目</th>
-                    <th className="p-3 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '140px' }}>
-                      <span className="absolute -top-2.5 left-1/2 bg-[#C5A059] text-[#002147] text-[9px] font-bold px-2.5 py-0.5 rounded-full shadow-sm whitespace-nowrap" style={{ transform: 'translateX(-50%)' }}></span>
+                    <th className="p-3 pt-5 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '140px' }}>
+                      <span className="absolute top-[-10px] left-1/2 bg-[#C5A059] text-[#002147] text-[9px] font-bold px-2.5 py-0.5 rounded-full shadow-sm whitespace-nowrap z-30" style={{ transform: 'translateX(-50%)' }}>SFC特化</span>
                       佐藤塾
                     </th>
                     <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F8F8F8] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>特化塾</th>
@@ -629,9 +629,9 @@ export default function Page() {
               <path d="M 40 210 A 170 170 0 0 1 210 40" fill="none" stroke="#002147" strokeWidth="2" markerEnd="url(#arrowhead)" />
             </svg>
 
-            {/* 4 Cards positioned around the circle */}
+            {/* 4 Cards positioned around the circle: Top=01, Right=02, Bottom=03, Left=04 */}
             <div className="grid grid-cols-2 gap-x-96 gap-y-16 py-8">
-              {/* Top: Step 01 */}
+              {/* Top: Step 01 - 学習計画 */}
               <div className="col-span-2 flex justify-center">
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-6 w-80 shadow-md">
                   <div className="flex items-center gap-3 mb-3">
@@ -644,19 +644,8 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* Middle: Step 02 (left) and Step 04 (right) */}
+              {/* Middle: Step 04 (left) and Step 02 (right) - clockwise order */}
               <div className="flex justify-start">
-                <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-6 w-80 shadow-md">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-3xl font-bold text-[#002147]/20 font-serif">02</span>
-                    <h4 className="text-lg font-bold text-[#002147] font-serif">AI支援</h4>
-                  </div>
-                  <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
-                  </p>
-                </div>
-              </div>
-              <div className="flex justify-end">
                 <div className="bg-white border-4 border-[#800000] rounded-lg p-6 w-80 shadow-lg">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-3xl font-bold text-[#800000]/30 font-serif">04</span>
@@ -667,8 +656,19 @@ export default function Page() {
                   </p>
                 </div>
               </div>
+              <div className="flex justify-end">
+                <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-6 w-80 shadow-md">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-3xl font-bold text-[#002147]/20 font-serif">02</span>
+                    <h4 className="text-lg font-bold text-[#002147] font-serif">AI支援</h4>
+                  </div>
+                  <p className="text-sm text-[#333333] leading-relaxed">
+                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
+                  </p>
+                </div>
+              </div>
 
-              {/* Bottom: Step 03 */}
+              {/* Bottom: Step 03 - 進捗レポート */}
               <div className="col-span-2 flex justify-center">
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-6 w-80 shadow-md">
                   <div className="flex items-center gap-3 mb-3">
