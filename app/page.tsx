@@ -1249,8 +1249,8 @@ export default function Page() {
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
                 <div>
-                  <p className="font-bold text-[#002147] text-sm mb-1">入会金は入塾時のみ</p>
-                  <p className="text-xs text-[#666666]">その後は月額料金のみ。追加講習費もかかりません。</p>
+                  <p className="font-bold text-[#002147] text-sm mb-1">入会金＋授業料のみ</p>
+                  <p className="text-xs text-[#666666]">追加の追加講習費や合格祝福金などは一切かかりません。</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
