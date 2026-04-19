@@ -569,7 +569,7 @@ export default function Page() {
           <div className="mt-12 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5 rounded-xl p-8 border border-[#002147]/10 text-center">
             <p className="text-xl md:text-2xl font-bold text-[#002147] font-serif">
               AIで <span className="text-[#800000]">論理を</span> 。塾長で <span className="text-[#800000]">意志を</span> 。<br />
-              あなたの"合格"を『量』と『質』で実現する。
+              あなたの"合格"を『量』と『質』を両立して実現する。
             </p>
           </div>
         </div>
@@ -1080,7 +1080,7 @@ export default function Page() {
               { num: '01', title: 'AOと一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
               { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限なし' },
               { num: '03', title: '学習の徹底管理', desc: '週次、月次で学習計画を策定し、管理する' },
-              { num: '04', title: 'AO合格後卒業', desc: 'AO合格後は卒業となり自動退塾となります。追加料金は不要' },
+              { num: '04', title: 'AO合格後の追加費用0円', desc: 'AO合格後は卒業となり自動退塾となります。追加料金は不要' },
               { num: '05', title: 'SFC特化ロジック', desc: '7年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
               { num: '06', title: '通塾ゼロ', desc: '指導も授業もすべてオンライン。通塾時間を勉強に充てられる' },
             ].map((item) => (
