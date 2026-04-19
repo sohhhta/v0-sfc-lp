@@ -1093,7 +1093,7 @@ export default function Page() {
 
           {/* Contract Notes - Enhanced visibility */}
           <div className="mt-10 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5 rounded-xl p-6 md:p-8 border border-[#002147]/20">
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 mb-6">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C5A059] flex items-center justify-center">
                 <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
@@ -1104,6 +1104,27 @@ export default function Page() {
                 <p className="text-sm text-[#333333] leading-relaxed">
                   AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。合格後の継続費用は一切発生しません。
                 </p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 text-sm">
+              <div className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <div>
+                  <p className="font-semibold text-[#002147]">入会金は必要ありません</p>
+                  <p className="text-[#666666] text-xs mt-1">月額料金のみのご請求です</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <div>
+                  <p className="font-semibold text-[#002147]">月単位でプラン変更可能</p>
+                  <p className="text-[#666666] text-xs mt-1">学習進度に応じて柔軟に対応</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1228,6 +1249,211 @@ export default function Page() {
               </form>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Testimonials Section - 合格者・保護者の生の声 */}
+      <section className="py-28 px-4 bg-[#F8F9FA]">
+        <div className="max-w-5xl mx-auto">
+          <SectionTitle subtitle="AI と塾長の二刀流で、確実に合格を掴んだ3つの物語">
+            合格者・保護者の生の声
+          </SectionTitle>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Case 01: AO合格 */}
+            <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
+              <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
+                <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">AO入試合格</Badge>
+                <p className="text-white font-bold text-lg mt-2">総合政策学部 Aさん</p>
+              </div>
+              <CardContent className="pt-6">
+                <p className="text-sm text-[#333333] leading-relaxed">
+                  「24時間並走してくれるAI添削のおかげで、深夜に思いついたアイディアもすぐに形にできました。塾長との1on1では、自分でも気づかなかった『学びの軸』を言語化してもらい、自信を持って出願に臨めました。」
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Case 02: 一般合格 */}
+            <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
+              <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
+                <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">一般入試合格</Badge>
+                <p className="text-white font-bold text-lg mt-2">環境情報学部 Bさん</p>
+              </div>
+              <CardContent className="pt-6">
+                <p className="text-sm text-[#333333] leading-relaxed">
+                  「小論文の基礎をAIで徹底的に反復し、直前期は塾長からSFC特有の『視点の鋭さ』を叩き込まれました。AIによる圧倒的な演習量と、人間による戦略的指導の二刀流こそが、最短ルートだと確信しています。」
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Case 03: 保護者 */}
+            <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
+              <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
+                <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">保護者様</Badge>
+                <p className="text-white font-bold text-lg mt-2">C様</p>
+              </div>
+              <CardContent className="pt-6">
+                <p className="text-sm text-[#333333] leading-relaxed">
+                  「当初はAI指導に不安もありましたが、対話を通じて息子が自律的に机に向かう姿を見て驚きました。単なる受験テクニックではなく、自分の人生を切り拓く『オーナーシップ』を育ててくれる塾だと感じ、安心してお任せできました。」
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* AI x 塾長 Role Division Section */}
+      <section className="py-28 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <SectionTitle subtitle="『量』と『質』を極限まで両立させる">
+            AI × 塾長の役割分担
+          </SectionTitle>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* AI Section */}
+            <div className="bg-[#f0f4f8] rounded-xl p-8 border-l-4 border-[#002147]">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-[#002147] rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-[#002147] font-serif">AI の役割</h3>
+              </div>
+              <ul className="space-y-4">
+                <li className="flex gap-3">
+                  <span className="text-[#002147] font-bold text-lg">→</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">24時間無制限</span>の小論文添削</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#002147] font-bold text-lg">→</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">論理の型</span>を徹底的にマスター</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#002147] font-bold text-lg">→</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">圧倒的な演習量</span>を確保</span>
+                </li>
+              </ul>
+              <p className="text-xs text-[#666666] mt-6 pt-6 border-t border-[#002147]/20">
+                「学習の土台作り」に全力投下
+              </p>
+            </div>
+
+            {/* Instructor Section */}
+            <div className="bg-[#fff5f5] rounded-xl p-8 border-l-4 border-[#800000]">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-[#800000] rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-[#002147] font-serif">塾長 の役割</h3>
+              </div>
+              <ul className="space-y-4">
+                <li className="flex gap-3">
+                  <span className="text-[#800000] font-bold text-lg">→</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">志望理由書の深化</span>と言語化</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#800000] font-bold text-lg">→</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">オーナーシップ教育</span>で自律性育成</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#800000] font-bold text-lg">→</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">戦略的指導</span>で合格ルート確定</span>
+                </li>
+              </ul>
+              <p className="text-xs text-[#666666] mt-6 pt-6 border-t border-[#800000]/20">
+                「合格への意志」を引き出す
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5 rounded-xl p-8 border border-[#002147]/10 text-center">
+            <p className="text-xl md:text-2xl font-bold text-[#002147] font-serif">
+              AIで <span className="text-[#800000]">論理を</span> 。塾長で <span className="text-[#800000]">意志を</span> 。<br />
+              あなたの『受かる理由』を二刀流で完璧にする。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-28 px-4 bg-[#F8F9FA]">
+        <div className="max-w-3xl mx-auto">
+          <SectionTitle subtitle="合格への不安を、すべて解消します">
+            よくある質問（FAQ）
+          </SectionTitle>
+
+          <div className="space-y-4">
+            {/* FAQ 01 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
+                <span className="font-semibold text-[#002147]">
+                  パソコンを持っていない、または操作が苦手ですが大丈夫ですか？
+                </span>
+                <span className="transition-transform group-open:rotate-180">
+                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
+                はい、全く問題ありません。本塾のシステムはスマートフォン1台で全ての添削・指導が完結するように設計されています。PCの有無が合否に影響することはありませんのでご安心ください。
+              </div>
+            </details>
+
+            {/* FAQ 02 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
+                <span className="font-semibold text-[#002147]">
+                  なぜ66.7%という驚異的な合格率を実現できるのですか？
+                </span>
+                <span className="transition-transform group-open:rotate-180">
+                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
+                一般的な塾では不可能な「24時間・無制限の演習量」をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く『二刀流』の仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
+              </div>
+            </details>
+
+            {/* FAQ 03 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
+                <span className="font-semibold text-[#002147]">
+                  入会金はかかりますか？
+                </span>
+                <span className="transition-transform group-open:rotate-180">
+                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
+                入会金は必要ありません。月額料金のみのご請求となります。安心して始めていただけます。
+              </div>
+            </details>
+
+            {/* FAQ 04 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
+                <span className="font-semibold text-[#002147]">
+                  途中で他のプランに変更できますか？
+                </span>
+                <span className="transition-transform group-open:rotate-180">
+                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
+                はい、月単位でのプラン変更が可能です。学習進度や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
+              </div>
+            </details>
+          </div>
         </div>
       </section>
 
