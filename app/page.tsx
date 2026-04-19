@@ -188,8 +188,8 @@ export default function Page() {
 
           {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide">
-            学校では教えられないSFCの正解を、AIと塾長が24時間フルサポート。<br className="hidden md:block" />
-            最短���離で合格する思考を鍛え上げる。
+            学校や予備校では教えてくれないSFCの正解を、AIと塾長が24時間フルサポート。<br className="hidden md:block" />
+            最短距離で合格する思考を鍛え上げる。
           </p>
 
           {/* CTA Button */}
@@ -254,7 +254,7 @@ export default function Page() {
       {/* Testimonials Section - 合格者・保護者の生の声 */}
       <section className="py-28 px-4 bg-[#F8F9FA]">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="AI と塾長の二刀流で、確実に合格を掴んだ3つの物語">
+          <SectionTitle subtitle="AI と塾長の2軸指導により、確実に合格を掴んだ3人の声（合格者の中から抜粋）">
             合格者・保護者の生の声
           </SectionTitle>
 
