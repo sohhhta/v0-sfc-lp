@@ -649,14 +649,6 @@ export default function Page() {
           {/* Mobile: Horizontal scroll - simplified stable design */}
           <div className="md:hidden mt-8 pb-6 relative">
             {/* Swipe Guide Animation - Top Right */}
-            <div className="absolute -top-1 right-0 flex items-center gap-1.5 px-3 py-1.5 bg-[#002147]/90 text-white rounded-full text-[10px] font-bold shadow-md z-10" style={{ animation: 'fadeInOut 4s infinite' }}>
-              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M7 16l-4-4m0 0l4-4m-4 4h18" />
-              </svg>
-              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </div>
             <div className="overflow-x-auto overflow-y-visible rounded-lg shadow-lg bg-white mt-6">
               <table className="w-full border-collapse" style={{ minWidth: '420px' }}>
                 <thead>
