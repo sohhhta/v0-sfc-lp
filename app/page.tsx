@@ -267,7 +267,7 @@ export default function Page() {
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「24時間並走してくれるAI添削のおかげで、深夜に思いついたアイディアもすぐに形にできました。塾長との1on1では、自分でも気づかなかった『学びの軸』を言語化してもらい、自信を持って出願に臨めました。」
+                  「24時間並走してくれるAI添削のおかげで、深夜に思いついたアイディアもすぐに形にできました。塾長との1on1では、自分でも気づかなかった『学びの軸』を言語化しても���い、自信を持って出願に臨めました。」
                 </p>
               </CardContent>
             </Card>
@@ -1263,38 +1263,6 @@ export default function Page() {
                 <div>
                   <p className="font-bold text-[#002147] text-sm mb-1">月単位でプラン変更可能</p>
                   <p className="text-xs text-[#666666]">学習進度や状況に応じて、柔軟に対応できます。</p>
-                </div>
-              </div>
-            </div>
-          </div>
-              <div>
-                <p className="text-xl md:text-2xl font-bold mb-3">合格 ＝ 卒業。無駄な費用は一切かかりません。</p>
-                <p className="text-base md:text-lg leading-relaxed">
-                  AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。<span className="font-bold">合格後の継続費用は一切発生しません</span>。だからこそ、親御様も安心してお子さんの受験を応援できます。
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Additional Info */}
-          <div className="mt-8 bg-[#F8F9FA] rounded-xl p-6 md:p-8 border border-[#E5E7EB]">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="flex items-start gap-4">
-                <svg className="w-6 h-6 text-[#002147] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <div>
-                  <p className="font-bold text-[#002147] mb-1">入会金は必要ありません</p>
-                  <p className="text-sm text-[#666666]">月額料金のみのご請求です。その他の隠れた費用もありません。</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <svg className="w-6 h-6 text-[#002147] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <div>
-                  <p className="font-bold text-[#002147] mb-1">月単位でプラン変更可能</p>
-                  <p className="text-sm text-[#666666]">学習進度や状況に応じて、柔軟に対��できます。</p>
                 </div>
               </div>
             </div>
