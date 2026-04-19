@@ -1346,7 +1346,7 @@ export default function Page() {
               </p>
               <div className="border-l-4 border-accent pl-6">
                 <p className="text-xl font-bold text-secondary font-serif tracking-wide">
-                  佐藤 颯太
+                  総合政策学部卒業生　佐藤颯太
                 </p>
                 <p className="text-base text-muted-foreground mt-1">佐藤塾 塾長</p>
               </div>
