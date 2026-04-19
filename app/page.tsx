@@ -1407,7 +1407,7 @@ export default function Page() {
             <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
               <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
                 <span className="font-semibold text-[#002147]">
-                  なぜ66.7%という驚異的な合格率を実現できるのですか？
+                  なぜ50%という驚異的な合格率を実現できるのですか？
                 </span>
                 <span className="transition-transform group-open:rotate-180">
                   <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
