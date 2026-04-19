@@ -153,6 +153,8 @@ function ConsultationAICard() {
 
 export default function Page() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [formError, setFormError] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -161,10 +163,40 @@ export default function Page() {
     message: ''
   })
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
-    setIsSubmitted(true)
+    setIsLoading(true)
+    setFormError('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'メール送信に失敗しました')
+      }
+
+      setIsSubmitted(true)
+      // Reset form data after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        plan: '',
+        message: ''
+      })
+    } catch (error) {
+      setFormError(error instanceof Error ? error.message : 'エラーが発生しました')
+      console.error('Form submission error:', error)
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   // Smooth scroll handler for anchor links with header offset
@@ -868,7 +900,7 @@ export default function Page() {
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-5 shadow-md">
                   <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">学習計画（受験戦略の立案）</h4>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    志望校選定から、1週間単位の学習戦術まで一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
+                    志望校選定から、1週���単位の学習戦術まで一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
                   </p>
                 </div>
                 {/* Curved arrow */}
@@ -949,7 +981,7 @@ export default function Page() {
               合格までのロードマップ
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              いつ、何をして合格を掴むか。SFC合格への道筋を可視化します。
+              いつ、何をして合格を掴むか。SFC合格への道筋を可視化���ます。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -1119,7 +1151,7 @@ export default function Page() {
               { num: '01', title: 'AOと一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
               { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限なし' },
               { num: '03', title: '学習の徹底管理', desc: '週次、月次で学習計画を策定し、管理する' },
-              { num: '04', title: 'AO合格後の追加費用0円', desc: 'AO合格後は卒業となり自動退塾となります。追加料金は不要' },
+              { num: '04', title: 'AO合格後の追加費用0円', desc: 'AO合格後は卒業となり自動退塾となります。追加料金は��要' },
               { num: '05', title: 'SFC特化ロジック', desc: '7年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
               { num: '06', title: '通塾ゼロ', desc: '指導も授業もすべてオンライン。通塾時間を勉強に充てられる' },
             ].map((item) => (
@@ -1381,6 +1413,13 @@ export default function Page() {
                 </div>
               ) : (
                 <form className="space-y-6" onSubmit={handleFormSubmit}>
+                  {/* Error message display */}
+                  {formError && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                      <p className="text-sm text-red-700 font-medium">{formError}</p>
+                    </div>
+                  )}
+
                   <div>
                     <label className="block text-sm font-semibold text-foreground mb-3">
                       お名前 <span className="text-[#800000]">*</span>
@@ -1450,8 +1489,12 @@ export default function Page() {
                   </div>
 
                   <div className="pt-2">
-                    <Button type="submit" className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
-                      今すぐ無料で個別相談を予約する
+                    <Button 
+                      type="submit" 
+                      disabled={isLoading}
+                      className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isLoading ? '送信中...' : '今すぐ無料で個別相談を予約する'}
                     </Button>
                     <p className="text-xs text-center text-[#666666] mt-3">
                       ※送信後、24時間以内に担当者よりご連絡いたします
