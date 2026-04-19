@@ -1376,7 +1376,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
-                はい、月単位でのプラン変更が可能です。学���進度や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
+                はい、月単位でのプラン変更が可能です。学力進捗や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
               </div>
             </details>
           </div>
