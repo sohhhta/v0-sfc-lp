@@ -267,7 +267,7 @@ export default function Page() {
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「24時間並走してくれるAI添削のおかげで、深夜に思いついたアイディアもすぐに形にできました。塾長との1on1では、自分でも気づかなかった『学びの軸』を言語化しても���い、自信を持って出願に臨めました。」
+                  「24時間並走してくれるAI添削のおかげで、深夜に思いついたアイディアもすぐに形にできました。塾長との1on1では、自分でも気づかなかった『学びの軸』を言語化してもらい、自信を持って出願に臨めました。」
                 </p>
               </CardContent>
             </Card>
@@ -280,7 +280,7 @@ export default function Page() {
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「小論文の基礎をAIで徹底的に反復し、直前期は塾長からSFC特有の『視点の鋭さ』を叩き込まれました。AIによる圧倒的な演習量と、人間による戦略的指導の二刀流こそが、最短ルートだと確信しています。」
+                  「小論文の基礎をAIで徹底的に反復した上で塾長からSFC特有の『視点の鋭さ』を叩き込まれました。AIによる圧倒的な演習量と、塾長による戦略的指導の二軸こそが、最短ルートだったのだと振り返っています。」
                 </p>
               </CardContent>
             </Card>
