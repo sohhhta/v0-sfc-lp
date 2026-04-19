@@ -160,7 +160,7 @@ export default function Page() {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</h1>
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談</Button>
+          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
         </div>
       </nav>
 
@@ -194,12 +194,14 @@ export default function Page() {
 
           {/* CTA Button */}
           <div className="mb-16">
-            <Button
-              size="lg"
-              className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]"
-            >
-              無料で個別相談を予約する
-            </Button>
+            <a href="#contact-form">
+              <Button
+                size="lg"
+                className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]"
+              >
+                無料で個別相談を予約する
+              </Button>
+            </a>
           </div>
 
           {/* Stats Section - Medal-like design */}
@@ -486,7 +488,7 @@ export default function Page() {
                   </div>
                   <div className="bg-white rounded-lg p-4 md:p-5 border border-[#002147]/10 shadow-sm">
                     <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>しているこ���です。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専門的��知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
+                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>しているこ�����です。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専��的��知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
                     </p>
                   </div>
                 </div>
@@ -1144,7 +1146,7 @@ export default function Page() {
                 <ul className="space-y-3 mb-8 flex-1">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">AI添削 <span className="font-bold text-[#800000]">24時間無制限</span></span>
+                    <span className="text-sm text-[#333333]">AI添削 <span className="font-bold text-[#800000]">24��間無制限</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
@@ -1165,9 +1167,11 @@ export default function Page() {
                 </ul>
 
                 {/* CTA Button */}
-                <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg mt-auto">
-                  このプランで相談を予約する
-                </Button>
+                <a href="#contact-form" className="mt-auto">
+                  <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
+                    このプランで相談を予約する
+                  </Button>
+                </a>
               </div>
             </div>
 
@@ -1217,9 +1221,11 @@ export default function Page() {
                 </ul>
 
                 {/* CTA Button */}
-                <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium mt-auto">
-                  このプランで相談を予約する
-                </Button>
+                <a href="#contact-form" className="mt-auto">
+                  <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium">
+                    このプランで相談を予約する
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -1235,7 +1241,7 @@ export default function Page() {
               <div>
                 <p className="text-lg md:text-xl font-bold text-[#002147] mb-2">AO入試合格 ＝ 卒業。合格後の費用は一切かかりません。</p>
                 <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                  AO入試合格後は、合格発表日の月末をもって<span className="font-bold text-[#800000]">自動退塾（契約終了）となります。</span>。だからこそ、��御様も安心してお子さんの受験を応援できます。
+                  AO入試合格後は、合格発表日の月末をもって<span className="font-bold text-[#800000]">自動退塾（契約終了）となります。</span>。だからこそ、��御様��安心してお子さんの受験を応援できます。
                 </p>
               </div>
             </div>
@@ -1313,7 +1319,7 @@ export default function Page() {
       </section>
 
       {/* Contact Form Section - White */}
-      <section className="py-28 px-4 bg-white">
+      <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-8">
         <div className="max-w-2xl mx-auto">
           <SectionTitle subtitle="プランの選び方や学習スケジュールの立て方など、塾長が直接お答えします">
             30秒で申し込み！個別相談申し込み
