@@ -121,24 +121,24 @@ function ConsultationAICard() {
             <div className="w-2 h-2 rounded-full bg-[#800000]" />
             <span className="text-xs font-bold text-[#002147] tracking-wider">相談AIとの対話</span>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-4">
             {/* User message */}
             <div className="flex justify-end">
-              <div className="bg-[#002147] text-white rounded-lg rounded-br-none px-4 py-3 max-w-[90%] md:max-w-[85%] shadow-sm">
-                <p className="text-sm md:text-base leading-[1.7]">{conversations[activeTab].question}</p>
+              <div className="bg-[#002147] text-white rounded-2xl rounded-br-none px-5 py-4 max-w-[90%] md:max-w-[85%] shadow-md">
+                <p className="text-sm md:text-base leading-relaxed">{conversations[activeTab].question}</p>
               </div>
             </div>
             {/* AI response with typing animation */}
             <div className="flex justify-start">
-              <div className="bg-white rounded-lg rounded-bl-none px-4 py-3 max-w-[90%] md:max-w-[85%] border border-[#800000]/20 shadow-sm">
+              <div className="bg-[#F8F9FA] rounded-2xl rounded-bl-none px-5 py-4 max-w-[90%] md:max-w-[85%] border-2 border-[#800000]/30 shadow-md">
                 {isTyping ? (
-                  <div className="flex items-center gap-1 py-2">
-                    <span className="w-2 h-2 bg-[#800000]/40 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                    <span className="w-2 h-2 bg-[#800000]/40 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                    <span className="w-2 h-2 bg-[#800000]/40 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                  <div className="flex items-center gap-2 py-2">
+                    <span className="w-2 h-2 bg-[#800000]/60 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                    <span className="w-2 h-2 bg-[#800000]/60 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                    <span className="w-2 h-2 bg-[#800000]/60 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
                   </div>
                 ) : (
-                  <p className="text-sm md:text-base text-[#333333] leading-[1.7] animate-in fade-in duration-300">
+                  <p className="text-sm md:text-base text-[#333333] leading-relaxed animate-in fade-in duration-300">
                     {renderAnswer(conversations[activeTab].answer)}
                   </p>
                 )}
@@ -521,14 +521,18 @@ export default function Page() {
           </div>
 
           {/* Mobile: Horizontal scroll - simplified stable design */}
-          <div className="md:hidden mt-8 pb-4">
+          <div className="md:hidden mt-8 pb-6">
+            {/* Swipe Guide Animation */}
+            <div className="flex items-center justify-center gap-2 mb-3" style={{ animation: 'fadeInOut 3s infinite' }}>
+              <span className="text-xs font-bold text-[#002147]">← スワイプして比較 →</span>
+            </div>
             <div className="overflow-x-auto overflow-y-visible rounded-lg shadow-lg bg-white">
               <table className="w-full border-collapse" style={{ minWidth: '420px' }}>
                 <thead>
                   <tr>
                     <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[13px] bg-white border-r border-[#E5E7EB]" style={{ minWidth: '90px' }}>項目</th>
                     <th className="p-3 pt-5 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '140px' }}>
-                      <span className="absolute top-[-10px] left-1/2 bg-[#C5A059] text-[#002147] text-[9px] font-bold px-2.5 py-0.5 rounded-full shadow-sm whitespace-nowrap z-30" style={{ transform: 'translateX(-50%)' }}></span>
+                      <span className="absolute top-[-10px] left-1/2 bg-[#C5A059] text-[#002147] text-[9px] font-bold px-2.5 py-0.5 rounded-full shadow-sm whitespace-nowrap z-30" style={{ transform: 'translateX(-50%)' }}>SFC特化</span>
                       佐藤塾
                     </th>
                     <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F8F8F8] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>特化塾</th>
@@ -1091,39 +1095,40 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Contract Notes - Enhanced visibility */}
-          <div className="mt-10 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5 rounded-xl p-6 md:p-8 border border-[#002147]/20">
+          {/* Ethical Rule Emphasis - CRITICAL */}
+          <div className="mt-12 bg-gradient-to-r from-[#800000] to-[#600000] text-white rounded-xl p-8 md:p-10 shadow-lg border-l-4 border-[#C5A059]">
             <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C5A059] flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                </svg>
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#C5A059] flex items-center justify-center flex-shrink-0">
+                <span className="text-xl font-bold text-[#002147]">!</span>
               </div>
               <div>
-                <p className="text-lg font-bold text-[#002147] mb-2">合格 ＝ 卒業。無駄な費用は一切かかりません。</p>
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。合格後の継続費用は一切発生しません。
+                <p className="text-xl md:text-2xl font-bold mb-3">合格 ＝ 卒業。無駄な費用は一切かかりません。</p>
+                <p className="text-base md:text-lg leading-relaxed">
+                  AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。<span className="font-bold">合格後の継続費用は一切発生しません</span>。だからこそ、親御様も安心してお子さんの受験を応援できます。
                 </p>
               </div>
             </div>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-6 text-sm">
-              <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          {/* Additional Info */}
+          <div className="mt-8 bg-[#F8F9FA] rounded-xl p-6 md:p-8 border border-[#E5E7EB]">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="flex items-start gap-4">
+                <svg className="w-6 h-6 text-[#002147] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
                 <div>
-                  <p className="font-semibold text-[#002147]">入会金は必要になります</p>
-                  <p className="text-[#666666] text-xs mt-1">入塾後は月額料金のみのご請求</p>
+                  <p className="font-bold text-[#002147] mb-1">入会金は必要ありません</p>
+                  <p className="text-sm text-[#666666]">月額料金のみのご請求です。その他の隠れた費用もありません。</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="flex items-start gap-4">
+                <svg className="w-6 h-6 text-[#002147] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
                 <div>
-                  <p className="font-semibold text-[#002147]">月単位でプラン変更可能</p>
-                  <p className="text-[#666666] text-xs mt-1">学習進度に応じて柔軟に対応</p>
+                  <p className="font-bold text-[#002147] mb-1">月単位でプラン変更可能</p>
+                  <p className="text-sm text-[#666666]">学習進度や状況に応じて、柔軟に対応できます。</p>
                 </div>
               </div>
             </div>
