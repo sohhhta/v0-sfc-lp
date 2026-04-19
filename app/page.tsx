@@ -91,7 +91,7 @@ function ConsultationAICard() {
         {/* Guide text */}
         <p className="text-xs text-[#666666] mb-3 flex items-center gap-1">
           <span className="text-[#002147]"></span>
-          あてはまる悩みを押してください
+          あてはまる悩みを��してください
         </p>
 
         {/* Tabs - Horizontal scroll on mobile */}
@@ -1400,10 +1400,12 @@ export default function Page() {
                 /* Thank You Message */
                 <div className="text-center py-12">
                   <div className="w-20 h-20 bg-[#800000]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Check className="w-10 h-10 text-[#800000]" />
+                    <svg className="w-10 h-10 text-[#800000]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                    </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#002147] mb-4 font-serif">送信が完了しました</h3>
-                  <p className="text-[#333333] leading-relaxed mb-6">
+                  <h3 className="text-2xl font-bold text-[#002147] mb-4 font-serif">送信が完了しました！</h3>
+                  <p className="text-[#333333] leading-relaxed mb-6 text-lg">
                     お申し込みいただきありがとうございます。<br />
                     担当者より<strong>24時間以内</strong>にご連絡いたします。
                   </p>
@@ -1550,7 +1552,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
+                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限ま��両立させていることが、この数字の根拠です。
               </div>
             </details>
 

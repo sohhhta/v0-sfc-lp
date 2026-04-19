@@ -1,95 +1,67 @@
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 import { NextRequest, NextResponse } from 'next/server'
 
-// Configure nodemailer transporter
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: process.env.SMTP_SECURE === 'true',
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASSWORD,
-  },
-})
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, phone, plan, message } = await request.json()
+    const body = await request.json()
+    const { name, email, phone, plan, message } = body
 
     // Validate required fields
     if (!name || !email || !phone || !plan) {
       return NextResponse.json(
-        { error: '必須項目が入力されていません' },
+        { error: '必須項目を入力してください' },
         { status: 400 }
       )
     }
 
-    // Email content for admin
-    const adminEmailContent = `
-新しいお問い合わせが届きました。
-
-【お客様情報】
-お名前: ${name}
-メールアドレス: ${email}
-電話番号: ${phone}
-ご希望のプラン: ${plan}
-
-【ご質問・ご相談】
-${message || 'なし'}
-
----
-このメールは自動送信です。お客様からのご返信はご遠慮ください。
-    `
-
-    // Email content for customer
-    const customerEmailContent = `
-${name}様
-
-いつもお問い合わせいただきありがとうございます。
-
-本メールは、ご登録いただいたメールアドレスへの送信確認です。
-以下の内容でお問い合わせを受け付けました。
-
-【お客様情報】
-お名前: ${name}
-メールアドレス: ${email}
-電話番号: ${phone}
-ご希望のプラン: ${plan}
-
-【ご質問・ご相談】
-${message || 'なし'}
-
----
-近日中に、担当者よりご連絡させていただきます。
-何かご不明な点がございましたら、お気軽にお問い合わせください。
-
-佐藤塾 一同
-    `
-
-    // Send email to admin
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM,
+    // Send email using Resend to admin
+    const result = await resend.emails.send({
+      from: 'noreply@resend.dev',
       to: 'sohta0116@gmail.com',
-      subject: `【佐藤塾】新しいお問い合わせ - ${name}様`,
-      text: adminEmailContent,
+      subject: `【佐藤塾】新しい相談申し込みが届きました - ${name}様より`,
+      html: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+          <h2 style="color: #002147; border-bottom: 2px solid #800000; padding-bottom: 10px;">新しい相談申し込みがありました</h2>
+          
+          <div style="margin: 20px 0; background-color: #f9f9f9; padding: 15px; border-radius: 5px;">
+            <p><strong style="color: #002147;">お名前:</strong> ${name}</p>
+            <p><strong style="color: #002147;">メールアドレス:</strong> ${email}</p>
+            <p><strong style="color: #002147;">電話番号:</strong> ${phone}</p>
+            <p><strong style="color: #002147;">ご希望のプラン:</strong> ${plan}</p>
+          </div>
+          
+          <div style="margin: 20px 0;">
+            <h3 style="color: #800000;">ご質問・ご相談内容</h3>
+            <div style="white-space: pre-wrap; background-color: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 3px solid #800000;">
+              ${message || '（入力なし）'}
+            </div>
+          </div>
+          
+          <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;" />
+          <p style="font-size: 12px; color: #666;">このメールはお問い合わせフォームから自動送信されています。</p>
+        </div>
+      `,
+      replyTo: email,
     })
 
-    // Send confirmation email to customer
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM,
-      to: email,
-      subject: '【佐藤塾】お問い合わせを受け付けました',
-      text: customerEmailContent,
-    })
+    if (result.error) {
+      console.error('Resend error:', result.error)
+      return NextResponse.json(
+        { error: 'メール送信に失敗しました' },
+        { status: 500 }
+      )
+    }
 
     return NextResponse.json(
-      { message: '送信が完了しました。担当者より追ってご連絡いたします。' },
+      { success: true, message: '送信が完了しました！' },
       { status: 200 }
     )
   } catch (error) {
-    console.error('Email error:', error)
+    console.error('API error:', error)
     return NextResponse.json(
-      { error: 'メール送信に失敗しました。しばらく時間をおいてからお試しください。' },
+      { error: 'サーバーエラーが発生しました' },
       { status: 500 }
     )
   }
