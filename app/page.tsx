@@ -1315,7 +1315,7 @@ export default function Page() {
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-[#002147] rounded-lg flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-[#002147] font-serif">AI の役割</h3>
@@ -1344,7 +1344,7 @@ export default function Page() {
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-[#800000] rounded-lg flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-[#002147] font-serif">塾長 の役割</h3>
@@ -1372,7 +1372,7 @@ export default function Page() {
           <div className="mt-12 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5 rounded-xl p-8 border border-[#002147]/10 text-center">
             <p className="text-xl md:text-2xl font-bold text-[#002147] font-serif">
               AIで <span className="text-[#800000]">論理を</span> 。塾長で <span className="text-[#800000]">意志を</span> 。<br />
-              あなたの『受かる理由』を二刀流で完璧にする。
+              あなたの"合格"を『量』と『質』で実現する。
             </p>
           </div>
         </div>
