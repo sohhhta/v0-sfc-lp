@@ -91,7 +91,7 @@ function ConsultationAICard() {
         {/* Guide text */}
         <p className="text-xs text-[#666666] mb-3 flex items-center gap-1">
           <span className="text-[#002147]"></span>
-          あてはまる悩みを��してください
+          あてはまる悩みを押してください
         </p>
 
         {/* Tabs - Horizontal scroll on mobile */}
@@ -171,16 +171,16 @@ export default function Page() {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const href = (e.currentTarget as HTMLAnchorElement).href
     const targetId = href.substring(href.indexOf('#') + 1)
-    
+
     if (targetId) {
       e.preventDefault()
       const targetElement = document.getElementById(targetId)
-      
+
       if (targetElement) {
         // Header height offset (80px for sticky header)
         const headerHeight = 80
         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
-        
+
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
@@ -411,7 +411,7 @@ export default function Page() {
                     添削の回数が少なすぎる
                   </h3>
                   <p className="text-[#333333] leading-loose text-lg">
-                    大手塾��添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低���」が受験生の成長を止めてしまいます。
+                    大手塾や学校は添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低さ」が受験生の成長を止めてしまいます。
                   </p>
                 </div>
               </div>
@@ -441,7 +441,7 @@ export default function Page() {
                     AO入試と一般入試の「共倒れ」
                   </h3>
                   <p className="text-[#333333] leading-loose text-lg">
-                    AO入試の準備で一般入試の対策がおろそかになり、一般入試���絞れば、AO入試というSFCへの挑戦機会が少なくなってしまう。一人では抱えきれない学習計画が、合格を遠ざけます。
+                    AO入試の準備で一般入試の対策がおろそかになり、一般入試に絞れば、AO入試というSFCへの挑戦機会が少なくなってしまう。一人では抱えきれない学習計画が、合格を遠ざけます。
                   </p>
                 </div>
               </div>
@@ -525,7 +525,7 @@ export default function Page() {
                   </div>
                   <div className="bg-white rounded-lg p-4 md:p-5 border border-[#002147]/10 shadow-sm">
                     <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多��的視点」が不足</span>しているこ�����です。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容にお���る背景知識があまりないように見受けられたので、専��的��知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
+                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>していることです。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専門的知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
                     </p>
                   </div>
                 </div>
@@ -762,7 +762,7 @@ export default function Page() {
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed">
-              合格を生��4ステップ・サイクル
+              合格を生む4ステップ・サイクル
             </h2>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -827,7 +827,7 @@ export default function Page() {
                     <h4 className="text-lg font-bold text-[#002147] font-serif">AI支援</h4>
                   </div>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間��疑問を短縮し、圧倒的な学習量を担保します。
+                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を解消する時間を短縮し、圧倒的な学習量を担保します。
                   </p>
                 </div>
               </div>
@@ -885,7 +885,7 @@ export default function Page() {
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-5 shadow-md">
                   <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">24時間無制限のAI支援</h4>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独��開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
+                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
                   </p>
                 </div>
                 <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
@@ -1008,7 +1008,7 @@ export default function Page() {
                       独自性の磨き上げ
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える���期��唯一無二の志望理由書を作成。
+                      <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える時期。唯一無二の志望理由書を作成。
                     </p>
                   </div>
                 </div>
@@ -1183,7 +1183,7 @@ export default function Page() {
                 <ul className="space-y-3 mb-8 flex-1">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">AI添削 <span className="font-bold text-[#800000]">24��間無制限</span></span>
+                    <span className="text-sm text-[#333333]">AI添削 <span className="font-bold text-[#800000]">24時間無制限</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
@@ -1278,7 +1278,7 @@ export default function Page() {
               <div>
                 <p className="text-lg md:text-xl font-bold text-[#002147] mb-2">AO入試合格 ＝ 卒業。合格後の費用は一切かかりません。</p>
                 <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                  AO入試合格後は、合格発表日の月末をもって<span className="font-bold text-[#800000]">自動退塾（契約終了）となります。</span>。だからこそ、��御様��安心してお子さんの受験を応援できます。
+                  AO入試合格後は、合格発表日の月末をもって<span className="font-bold text-[#800000]">自動退塾（契約終了）となります。</span>。だからこそ、親御様も安心してお子さんの受験を応援できます。
                 </p>
               </div>
             </div>
@@ -1385,11 +1385,11 @@ export default function Page() {
                     <label className="block text-sm font-semibold text-foreground mb-3">
                       お名前 <span className="text-[#800000]">*</span>
                     </label>
-                    <Input 
-                      placeholder="佐藤塾太郎" 
+                    <Input
+                      placeholder="佐藤塾太郎"
                       className="border-border focus:border-[#002147] h-12"
                       value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
                     />
                   </div>
@@ -1403,7 +1403,7 @@ export default function Page() {
                       placeholder="example@email.com"
                       className="border-border focus:border-[#002147] h-12"
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
                     />
                   </div>
@@ -1412,11 +1412,11 @@ export default function Page() {
                     <label className="block text-sm font-semibold text-foreground mb-3">
                       電話番号 <span className="text-[#800000]">*</span>
                     </label>
-                    <Input 
-                      placeholder="09012345678" 
+                    <Input
+                      placeholder="09012345678"
                       className="border-border focus:border-[#002147] h-12"
                       value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
                     />
                   </div>
@@ -1425,10 +1425,10 @@ export default function Page() {
                     <label className="block text-sm font-semibold text-foreground mb-3">
                       ご希望のプラン <span className="text-[#800000]">*</span>
                     </label>
-                    <select 
+                    <select
                       className="w-full h-12 px-4 border border-border rounded-md bg-white text-foreground focus:border-[#002147] focus:outline-none focus:ring-1 focus:ring-[#002147]"
                       value={formData.plan}
-                      onChange={(e) => setFormData({...formData, plan: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, plan: e.target.value })}
                       required
                     >
                       <option value="">プランを選択してください</option>
@@ -1445,7 +1445,7 @@ export default function Page() {
                       placeholder="SFC合格に向けて不安なこと、知りたいことをご自由にお書きください。塾長が直接お答えします。"
                       className="border-border focus:border-[#002147] min-h-32"
                       value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
                   </div>
 
@@ -1532,7 +1532,7 @@ export default function Page() {
             <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
               <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
                 <span className="font-semibold text-[#002147]">
-                  途中で他のプランに��更できますか？
+                  途中で他のプランに変更できますか？
                 </span>
                 <span className="transition-transform group-open:rotate-180">
                   <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
