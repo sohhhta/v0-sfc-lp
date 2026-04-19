@@ -263,7 +263,7 @@ export default function Page() {
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
               <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
                 <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">AO入試合格</Badge>
-                <p className="text-white font-bold text-lg mt-2">総合政策学部 A���ん</p>
+                <p className="text-white font-bold text-lg mt-2">総合政策学部合格 Sさん</p>
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
@@ -276,7 +276,7 @@ export default function Page() {
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
               <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
                 <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">一般入試合格</Badge>
-                <p className="text-white font-bold text-lg mt-2">環境情報学部 Bさん</p>
+                <p className="text-white font-bold text-lg mt-2">環境情報学部合格 Iさん</p>
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
@@ -289,11 +289,11 @@ export default function Page() {
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
               <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
                 <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">保護者様</Badge>
-                <p className="text-white font-bold text-lg mt-2">C様</p>
+                <p className="text-white font-bold text-lg mt-2">保護者のTさん</p>
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「当初はAI指導に不安もありましたが、対話を通じて息子が自律的に机に向かう姿を見て驚きました。単なる受験テクニックではなく、自分の人生を切り拓く<span className="font-bold text-[#800000]">『オーナーシップ』を育ててくれる</span>塾だと感じ、安心してお任せできました。」
+                  「当初はAI指導に不安もありましたが、対話を通じてく<span className="font-bold text-[#800000]">息子が自律的に机に向かう姿を見て驚きました。</span>単なる受験テクニックではなく、自分の人生を切り拓く<span className="font-bold text-[#800000]">『オーナーシップ』を育ててくれる</span>塾だと感じ、安心してお任せできました。」
                 </p>
               </CardContent>
             </Card>
@@ -316,7 +316,7 @@ export default function Page() {
           <div className="text-center mb-20">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed text-balance">
-              なぜ、一般的な塾の対策では、<br className="hidden sm:block" />
+              なぜ、一般的な塾・学校の対策では、<br className="hidden sm:block" />
               慶應SFCの合格ラインに届かないのか？
             </h2>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
@@ -352,7 +352,7 @@ export default function Page() {
                   SFC専用の対策になっていない
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
-                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」。しかし、SFCは独自の視点を求める特殊な入試。ありきたりな回答では、合格点には届きません。
+                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
                 </p>
               </div>
             </div>
