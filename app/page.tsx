@@ -297,32 +297,6 @@ export default function Page() {
                 </p>
               </CardContent>
             </Card>
-
-            {/* Case 02: 一般合格 */}
-            <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
-              <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
-                <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">一般入試合格</Badge>
-                <p className="text-white font-bold text-lg mt-2">環境情報学部 Bさん</p>
-              </div>
-              <CardContent className="pt-6">
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  「小論文の基礎をAIで徹底的に反復した上で塾長からSFC特有の『視点の鋭さ』を叩き込まれました。AIによる圧倒的な演習量と、塾長による戦略的指導の二軸こそが、最短ルートだったのだと振り返っています。」
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Case 03: 保護者 */}
-            <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
-              <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
-                <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">保護者様</Badge>
-                <p className="text-white font-bold text-lg mt-2">C様</p>
-              </div>
-              <CardContent className="pt-6">
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  「当初はAI指導に不安もありましたが、対話を通じて息子が自律的に机に向かう姿を見て驚きました。単なる受験テクニックではなく、自分の人生を切り拓く『オーナーシップ』を育ててくれる塾だと感じ、安心してお任せできました。」
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
