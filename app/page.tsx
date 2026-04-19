@@ -1233,9 +1233,9 @@ export default function Page() {
                 </svg>
               </div>
               <div>
-                <p className="text-lg md:text-xl font-bold text-[#002147] mb-2">合格 ＝ 卒業。無駄な費用は一切かかりません。</p>
+                <p className="text-lg md:text-xl font-bold text-[#002147] mb-2">AO入試合格 ＝ 卒業。合格後の費用は一切かかりません。</p>
                 <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                  AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。<span className="font-bold text-[#800000]">合格後の継続費用は一切発生しません</span>。だからこそ、親御様も安心してお子さんの受験を応援できます。
+                  AO入試合格後は、合格発表日の月末をもって<span className="font-bold text-[#800000]">自動退塾（契約終了）となります。</span>。だからこそ、親御様も安心してお子さんの受験を応援できます。
                 </p>
               </div>
             </div>
