@@ -1416,7 +1416,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
-                一般的な塾では不可能な「24時間・無制限の演習量」をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く『二刀流』の仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
+                一般的な塾では不可能な「24時間・無制限の演習量」をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
               </div>
             </details>
 
@@ -1433,7 +1433,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
-                入会金は必要ありません。月額料金のみのご請求となります。安心して始めていただけます。
+                入会金は入塾時に必要になります。金額は税込10万円となりますが、その後は月額料金のみのご請求となり、追加の講習料などは全くないので安心して始めていただけます。
               </div>
             </details>
 
