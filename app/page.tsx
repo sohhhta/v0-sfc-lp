@@ -1434,8 +1434,8 @@ export default function Page() {
                   </label>
                   <select className="w-full h-12 px-4 border border-border rounded-md bg-white text-foreground focus:border-[#002147] focus:outline-none focus:ring-1 focus:ring-[#002147]">
                     <option value="">プランを選択してください</option>
-                    <option value="complete">AOと小論文：SFC二刀流完全攻略プラン</option>
-                    <option value="basic">小論文のみ：AI小論文特化プラン</option>
+                    <option value="complete">AO入試＋一般入試：SFC二刀流プラン</option>
+                    <option value="basic">小論文のみ：小論文特化プラン</option>
                   </select>
                 </div>
 
