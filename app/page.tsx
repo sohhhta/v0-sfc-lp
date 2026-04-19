@@ -198,7 +198,7 @@ export default function Page() {
               size="lg"
               className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]"
             >
-              合格への一歩を踏み出す（無料相談）
+              無料で個別相談を予約する
             </Button>
           </div>
 
@@ -486,7 +486,7 @@ export default function Page() {
                   </div>
                   <div className="bg-white rounded-lg p-4 md:p-5 border border-[#002147]/10 shadow-sm">
                     <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>していることです。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専門的な知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
+                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>しているこ���です。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専門的��知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
                     </p>
                   </div>
                 </div>
@@ -788,7 +788,7 @@ export default function Page() {
                     <h4 className="text-lg font-bold text-[#002147] font-serif">AI支援</h4>
                   </div>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
+                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間��疑問を短縮し、圧倒的な学習量を担保します。
                   </p>
                 </div>
               </div>
@@ -1166,7 +1166,7 @@ export default function Page() {
 
                 {/* CTA Button */}
                 <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg mt-auto">
-                  入塾相談・無料カウンセリングを予約
+                  このプランで相談を予約する
                 </Button>
               </div>
             </div>
@@ -1218,7 +1218,7 @@ export default function Page() {
 
                 {/* CTA Button */}
                 <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium mt-auto">
-                  入塾相談・無料カウンセリングを予約
+                  このプランで相談を予約する
                 </Button>
               </div>
             </div>
@@ -1235,7 +1235,7 @@ export default function Page() {
               <div>
                 <p className="text-lg md:text-xl font-bold text-[#002147] mb-2">AO入試合格 ＝ 卒業。合格後の費用は一切かかりません。</p>
                 <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                  AO入試合格後は、合格発表日の月末をもって<span className="font-bold text-[#800000]">自動退塾（契約終了）となります。</span>。だからこそ、親御様も安心してお子さんの受験を応援できます。
+                  AO入試合格後は、合格発表日の月末をもって<span className="font-bold text-[#800000]">自動退塾（契約終了）となります。</span>。だからこそ、��御様も安心してお子さんの受験を応援できます。
                 </p>
               </div>
             </div>
@@ -1267,17 +1267,17 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Instructor Message Section - Gray */}
-      <section className="py-24 px-4 bg-[#F3F4F6]">
+      {/* Instructor Message Section - Light Gray */}
+      <section className="py-24 px-4 bg-[#F9F9F9]">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative">
+            <div className="relative flex justify-center md:justify-start">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LP%E7%94%A8%E7%94%BB%E5%83%8F-AOR1a22XLXmxYxq6qMvKO1B5HygCnh.png"
                 alt="塾長"
                 width={400}
                 height={500}
-                className="rounded-xl shadow-xl"
+                className="rounded-xl shadow-xl mx-auto md:mx-0"
               />
             </div>
 
@@ -1308,85 +1308,6 @@ export default function Page() {
                 <p className="text-base text-muted-foreground mt-1">佐藤塾 塾長</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-28 px-4 bg-[#F9F9F9]">
-        <div className="max-w-3xl mx-auto">
-          <SectionTitle>
-            よくある質問（FAQ）
-          </SectionTitle>
-
-          <div className="space-y-4">
-            {/* FAQ 01 */}
-            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
-              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
-                <span className="font-semibold text-[#002147]">
-                  パソコンを持っていない、または操作が苦手ですが大丈夫ですか？
-                </span>
-                <span className="transition-transform group-open:rotate-180">
-                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              </summary>
-              <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
-                はい、全く問題ありません。本塾のシステムはスマートフォン1台で全ての添削・指導が完結するように設計されています。PCの有無が合否に影響することはありませんのでご安心ください。
-              </div>
-            </details>
-
-            {/* FAQ 02 */}
-            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
-              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
-                <span className="font-semibold text-[#002147]">
-                  なぜ50%という驚異的な合格率を実現できるのですか？
-                </span>
-                <span className="transition-transform group-open:rotate-180">
-                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              </summary>
-              <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
-                一般的な塾では不可能な「24時間・無制限の演習量」をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
-              </div>
-            </details>
-
-            {/* FAQ 03 */}
-            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
-              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
-                <span className="font-semibold text-[#002147]">
-                  入会金はかかりますか？
-                </span>
-                <span className="transition-transform group-open:rotate-180">
-                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              </summary>
-              <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
-                入会金は入塾時に必要になります。金額は税込10万円となりますが、その後は月額料金のみのご請求となり、追加の講習料などは全くありません。他塾のように後から追加で費用が発生するなどはありませんので安心して始めていただけます。
-              </div>
-            </details>
-
-            {/* FAQ 04 */}
-            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
-              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
-                <span className="font-semibold text-[#002147]">
-                  途中で他のプランに変更できますか？
-                </span>
-                <span className="transition-transform group-open:rotate-180">
-                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              </summary>
-              <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
-                はい、月単位でのプラン変更が可能です。学力進捗や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
-              </div>
-            </details>
           </div>
         </div>
       </section>
@@ -1451,7 +1372,7 @@ export default function Page() {
 
                 <div className="pt-2">
                   <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
-                    24時間受付中：今すぐ無料相談を予約
+                    今すぐ無料で個別相談を予約する
                   </Button>
                   <p className="text-xs text-center text-[#666666] mt-3">
                     ※送信後、24時間以内に担当者よりご連絡いたします
@@ -1464,6 +1385,86 @@ export default function Page() {
               </form>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* FAQ Section - After Contact Form */}
+      <section className="py-20 px-4 bg-[#F9F9F9]">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-sm text-[#800000] font-bold tracking-widest mb-2">まだ不安がある方へ</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif">よくある質問（FAQ）</h2>
+          </div>
+
+          <div className="space-y-4">
+            {/* FAQ 01 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
+                <span className="font-semibold text-[#002147]">
+                  パソコンを持っていない、または操作が苦手ですが大丈夫ですか？
+                </span>
+                <span className="transition-transform group-open:rotate-180">
+                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
+                はい、全く問題ありません。本塾のシステムは<strong>スマートフォン1台</strong>で全ての添削・指導が完結するように設計されています。PCの有無が合否に影響することはありませんのでご安心ください。
+              </div>
+            </details>
+
+            {/* FAQ 02 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
+                <span className="font-semibold text-[#002147]">
+                  なぜ50%という驚異的な合格率を実現できるのですか？
+                </span>
+                <span className="transition-transform group-open:rotate-180">
+                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
+                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
+              </div>
+            </details>
+
+            {/* FAQ 03 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
+                <span className="font-semibold text-[#002147]">
+                  入会金はかかりますか？
+                </span>
+                <span className="transition-transform group-open:rotate-180">
+                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
+                入会金は入塾時に必要になります。金額は<strong>税込10万円</strong>となりますが、その後は月額料金のみのご請求となり、追加の講習料などは全くありません。他塾のように後から追加で費用が発生するなどはありませんので安心して始めていただけます。
+              </div>
+            </details>
+
+            {/* FAQ 04 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
+                <span className="font-semibold text-[#002147]">
+                  途中で他のプランに変更できますか？
+                </span>
+                <span className="transition-transform group-open:rotate-180">
+                  <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
+                はい、<strong>月単位でのプラン変更が可能</strong>です。学力進捗や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
+              </div>
+            </details>
+          </div>
         </div>
       </section>
 
