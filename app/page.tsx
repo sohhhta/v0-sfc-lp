@@ -91,7 +91,7 @@ function ConsultationAICard() {
         {/* Guide text */}
         <p className="text-xs text-[#666666] mb-3 flex items-center gap-1">
           <span className="text-[#002147]"></span>
-          あてはまる悩みを押してください
+          あてはまる悩みを��してください
         </p>
 
         {/* Tabs - Horizontal scroll on mobile */}
@@ -167,13 +167,35 @@ export default function Page() {
     setIsSubmitted(true)
   }
 
+  // Smooth scroll handler for anchor links with header offset
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = (e.currentTarget as HTMLAnchorElement).href
+    const targetId = href.substring(href.indexOf('#') + 1)
+    
+    if (targetId) {
+      e.preventDefault()
+      const targetElement = document.getElementById(targetId)
+      
+      if (targetElement) {
+        // Header height offset (80px for sticky header)
+        const headerHeight = 80
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</h1>
-          <a href="#contact-form">
+          <a href="#contact-form" onClick={handleSmoothScroll}>
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
           </a>
         </div>
@@ -209,7 +231,7 @@ export default function Page() {
 
           {/* CTA Button */}
           <div className="mb-16">
-            <a href="#contact-form">
+            <a href="#contact-form" onClick={handleSmoothScroll}>
               <Button
                 size="lg"
                 className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]"
@@ -389,7 +411,7 @@ export default function Page() {
                     添削の回数が少なすぎる
                   </h3>
                   <p className="text-[#333333] leading-loose text-lg">
-                    大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低���」が受験生の成長を止めてしまいます。
+                    大手塾��添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低���」が受験生の成長を止めてしまいます。
                   </p>
                 </div>
               </div>
@@ -419,7 +441,7 @@ export default function Page() {
                     AO入試と一般入試の「共倒れ」
                   </h3>
                   <p className="text-[#333333] leading-loose text-lg">
-                    AO入試の準備で一般入試の対策がおろそかになり、一般入試に絞れば、AO入試というSFCへの挑戦機会が少なくなってしまう。一人では抱えきれない学習計画が、合格を遠ざけます。
+                    AO入試の準備で一般入試の対策がおろそかになり、一般入試���絞れば、AO入試というSFCへの挑戦機会が少なくなってしまう。一人では抱えきれない学習計画が、合格を遠ざけます。
                   </p>
                 </div>
               </div>
@@ -503,7 +525,7 @@ export default function Page() {
                   </div>
                   <div className="bg-white rounded-lg p-4 md:p-5 border border-[#002147]/10 shadow-sm">
                     <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>しているこ�����です。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容にお���る背景知識があまりないように見受けられたので、専��的��知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
+                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多��的視点」が不足</span>しているこ�����です。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容にお���る背景知識があまりないように見受けられたので、専��的��知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
                     </p>
                   </div>
                 </div>
@@ -986,7 +1008,7 @@ export default function Page() {
                       独自性の磨き上げ
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える���期。唯一無二の志望理由書を作成。
+                      <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える���期��唯一無二の志望理由書を作成。
                     </p>
                   </div>
                 </div>
@@ -1182,7 +1204,7 @@ export default function Page() {
                 </ul>
 
                 {/* CTA Button */}
-                <a href="#contact-form" className="mt-auto">
+                <a href="#contact-form" onClick={handleSmoothScroll} className="mt-auto">
                   <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
                     このプランで相談を予約する
                   </Button>
@@ -1236,7 +1258,7 @@ export default function Page() {
                 </ul>
 
                 {/* CTA Button */}
-                <a href="#contact-form" className="mt-auto">
+                <a href="#contact-form" onClick={handleSmoothScroll} className="mt-auto">
                   <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium">
                     このプランで相談を予約する
                   </Button>
@@ -1510,7 +1532,7 @@ export default function Page() {
             <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
               <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
                 <span className="font-semibold text-[#002147]">
-                  途中で他のプランに変更できますか？
+                  途中で他のプランに��更できますか？
                 </span>
                 <span className="transition-transform group-open:rotate-180">
                   <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
