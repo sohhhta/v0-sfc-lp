@@ -85,7 +85,7 @@ function ConsultationAICard() {
 
         {/* Development Background */}
         <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
-          過去の合格者と塾長の会話データや、質問に対する塾長の全回答、そして独自分析した過去問データを集約。24時間、塾長があなたの隣で戦略を練り続ける体験を実現しました。
+          過去の合格者と塾長の会話データや、質問に対する塾長の全回答、そして独自分析した過去問解析データを集約。24時間、あたかも塾長に気軽に質問し続けることのできる体験を実現しました。
         </p>
 
         {/* Guide text */}
@@ -430,7 +430,7 @@ export default function Page() {
             </p>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
               <span className="text-[#C5A059] mr-1">◆</span>
-              佐藤塾が独自に開発したSFC専用AIが、あなたの答案をその場ですぐに分析。24時間、何度でも高品質なフィードバックを受けられる環境で、合格ラインを確実に突破する力を引き上げます。
+              佐藤塾が独自に開発したSFC専用AIが、あなたの答案をその場ですぐに分析。24時間、何度でも高品質なフィードバックを受けられる環境に加え塾長が並走指導を行うことで、合格ラインを確実に突破する力を引き上げます。
             </p>
           </div>
         </div>
@@ -455,7 +455,7 @@ export default function Page() {
               2つのAIを佐藤塾が開発
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              この2つのAIはただの汎用AIではなく、<span className="font-bold text-[#800000]">過去10年分以上の合格者脳</span>と塾長の全知識を学習させた、<span className="font-bold text-[#800000]">24時間365日</span>いつでも<span className="font-bold text-[#800000]">即時添削</span>できる、佐藤塾にしか作れない専用の指導システムです。
+              この2つのAIはただの汎用AIではなく、<span className="font-bold text-[#800000]">過去7年分以上の合格者脳</span>と塾長の全知識を学習させた、<span className="font-bold text-[#800000]">24時間365日</span>いつでも<span className="font-bold text-[#800000]">即時添削</span>できる、佐藤塾にしか作れない専用の指導システムです。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -486,7 +486,7 @@ export default function Page() {
                   </div>
                   <div className="bg-white rounded-lg p-4 md:p-5 border border-[#002147]/10 shadow-sm">
                     <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>していることです。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における��景知識があまりないように見受けられたので、専門的な知識を培うために「〇〇」というサイトの記事を読んでおいてください。
+                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>していることです。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専門的な知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
                     </p>
                   </div>
                 </div>
