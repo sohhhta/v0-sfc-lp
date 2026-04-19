@@ -1113,8 +1113,8 @@ export default function Page() {
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
                 <div>
-                  <p className="font-semibold text-[#002147]">入会金は必要ありません</p>
-                  <p className="text-[#666666] text-xs mt-1">月額料金のみのご請求です</p>
+                  <p className="font-semibold text-[#002147]">入会金は必要になります</p>
+                  <p className="text-[#666666] text-xs mt-1">入塾後は月額料金のみのご請求</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
