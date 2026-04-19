@@ -1118,7 +1118,7 @@ export default function Page() {
               </div>
 
               <div className="bg-gradient-to-br from-[#800000] to-[#600000] text-white px-6 py-6">
-                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide">SFC二刀流<br />完全攻略プラン</h4>
+                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide">SFC二刀流<br />AO入試＋一般入試プラン</h4>
               </div>
 
               <div className="flex-1 flex flex-col p-6 md:p-8">
@@ -1156,6 +1156,10 @@ export default function Page() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#333333]">英語・数学・情報の学習支援 <span className="font-bold text-[#800000]">学習計画と徹底管理</span></span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-[#333333]">相談AI 24時間対応</span>
                   </li>
                 </ul>
@@ -1170,7 +1174,7 @@ export default function Page() {
             {/* Secondary Plan - 標準プラン */}
             <div className="relative flex flex-col bg-white shadow-md border-2 border-[#E5E7EB] rounded-xl overflow-hidden">
               <div className="bg-[#F3F4F6] text-[#333333] px-6 py-6 border-b border-[#E5E7EB]">
-                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">AI小論文<br />特化プラン</h4>
+                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">他塾併願者に推奨<br />小論文特化プラン</h4>
               </div>
 
               <div className="flex-1 flex flex-col p-6 md:p-8">
@@ -1204,13 +1208,17 @@ export default function Page() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#333333]">指導科目 <span className="font-bold text-[#002147]">小論文のみ</span></span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-[#333333]">相談AI 24時間対応</span>
                   </li>
                 </ul>
 
                 {/* CTA Button */}
                 <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium mt-auto">
-                  詳しく見る
+                  入塾相談・無料カウンセリングを予約
                 </Button>
               </div>
             </div>
