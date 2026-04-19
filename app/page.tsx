@@ -1107,7 +1107,7 @@ export default function Page() {
       {/* Pricing Section - White */}
       <section className="py-28 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="明朗会計・追加費用なし">2つの料金プラン</SectionTitle>
+          <SectionTitle subtitle="AO入試受験の有無で決められるシンプルなプラン">2つの料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {/* Main Plan - 完全攻略プラン */}
