@@ -1315,7 +1315,7 @@ export default function Page() {
       {/* FAQ Section */}
       <section className="py-28 px-4 bg-[#F9F9F9]">
         <div className="max-w-3xl mx-auto">
-          <SectionTitle subtitle="合格への不安を、すべて解消します">
+          <SectionTitle>
             よくある質問（FAQ）
           </SectionTitle>
 
@@ -1367,7 +1367,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
-                入会金は入塾時に必要になります。金額は税込10万円となりますが、その後は月額料金のみのご請求となり、追加の講習料などは全くないので安心して始めていただけます。
+                入会金は入塾時に必要になります。金額は税込10万円となりますが、その後は月額料金のみのご請求となり、追加の講習料などは全くありません。他塾のように後から追加で費用が発生するなどはありませんので安心して始めていただけます。
               </div>
             </details>
 
