@@ -198,7 +198,7 @@ export default function Page() {
               size="lg"
               className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]"
             >
-              まずは塾長に無料相談する
+              合格への一歩を踏み出す（無料相談）
             </Button>
           </div>
 
@@ -263,11 +263,37 @@ export default function Page() {
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
               <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
                 <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">AO入試合格</Badge>
-                <p className="text-white font-bold text-lg mt-2">総合政策学部 Aさん</p>
+                <p className="text-white font-bold text-lg mt-2">総合政策学部 A���ん</p>
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「24時間並走してくれるAI添削のおかげで、深夜に思いついたアイディアもすぐに形にできました。塾長との1on1では、自分でも気づかなかった『学びの軸』を言語化してもらい、自信を持って出願に臨めました。」
+                  「<span className="font-bold text-[#800000]">24時間並走</span>してくれるAI添削のおかげで、深夜に思いついたアイディアもすぐに形にできました。塾長との1on1では、自分でも気づかなかった<span className="font-bold text-[#800000]">『学びの軸』を言語化</span>してもらい、自信を持って出願に臨めました。」
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Case 02: 一般合格 */}
+            <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
+              <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
+                <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">一般入試合格</Badge>
+                <p className="text-white font-bold text-lg mt-2">環境情報学部 Bさん</p>
+              </div>
+              <CardContent className="pt-6">
+                <p className="text-sm text-[#333333] leading-relaxed">
+                  「小論文の基礎をAIで徹底的に反復した上で塾長からSFC特有の『視点の鋭さ』を叩き込まれました。AIによる<span className="font-bold text-[#800000]">圧倒的な演習量</span>と、塾長による<span className="font-bold text-[#800000]">戦略的指導</span>の二軸こそが、最短ルートだったのだと振り返っています。」
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Case 03: 保護者 */}
+            <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
+              <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
+                <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">保護者様</Badge>
+                <p className="text-white font-bold text-lg mt-2">C様</p>
+              </div>
+              <CardContent className="pt-6">
+                <p className="text-sm text-[#333333] leading-relaxed">
+                  「当初はAI指導に不安もありましたが、対話を通じて息子が自律的に机に向かう姿を見て驚きました。単なる受験テクニックではなく、自分の人生を切り拓く<span className="font-bold text-[#800000]">『オーナーシップ』を育ててくれる</span>塾だと感じ、安心してお任せできました。」
                 </p>
               </CardContent>
             </Card>
@@ -302,7 +328,7 @@ export default function Page() {
       </section>
 
       {/* Problem Section - Editorial Magazine Style */}
-      <section className="relative py-28 px-4 bg-[#F3F4F6] overflow-hidden">
+      <section className="relative py-28 px-4 bg-white overflow-hidden">
         {/* Pinstripe background pattern */}
         <div
           className="absolute inset-0 opacity-[0.03]"
@@ -436,8 +462,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Solution Section: Two AIs - White with intellectual pattern */}
-      <section className="relative py-28 px-4 bg-white overflow-hidden">
+      {/* Solution Section: Two AIs - Light Gray with intellectual pattern */}
+      <section className="relative py-28 px-4 bg-[#F9F9F9] overflow-hidden">
         {/* Subtle intellectual pattern background */}
         <div
           className="absolute inset-0 opacity-[0.02]"
@@ -455,7 +481,7 @@ export default function Page() {
               2つのAIを佐藤塾が開発
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              この2つのAIはただの汎用AIではなく、7年間にわたる合格者の全指導データと、塾長の全知識を学習させた、佐藤塾にしか作れない専用の指導システムです。
+              この2つのAIはただの汎用AIではなく、<span className="font-bold text-[#800000]">過去10年分以上の合格者脳</span>と塾長の全知識を学習させた、<span className="font-bold text-[#800000]">24時間365日</span>いつでも<span className="font-bold text-[#800000]">即時添削</span>できる、佐藤塾にしか作れない専用の指導システムです。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -500,7 +526,7 @@ export default function Page() {
       </section>
 
       {/* AI x 塾長 Role Division Section */}
-      <section className="py-28 px-4 bg-white">
+      <section className="py-28 px-4 bg-white border-t border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
           <SectionTitle subtitle="『量』と『質』を極限まで両立させる">
             AI × 塾長の役割分担
@@ -520,19 +546,19 @@ export default function Page() {
               <ul className="space-y-4">
                 <li className="flex gap-3">
                   <span className="text-[#002147] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">24時間無制限</span>の小論文添削</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">論理・反復</span>：24時間無制限の小論文添削</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#002147] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">論理の型</span>を徹底的にマスター</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">論理の型</span>を圧倒的な演習量で習得</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#002147] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">圧倒的な演習量</span>を確保</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">即時フィードバック</span>で成長を加速</span>
                 </li>
               </ul>
               <p className="text-xs text-[#666666] mt-6 pt-6 border-t border-[#002147]/20">
-                「学習の土台作り」に全力投下
+                「論理と反復」で学習の土台を構築
               </p>
             </div>
 
@@ -549,19 +575,19 @@ export default function Page() {
               <ul className="space-y-4">
                 <li className="flex gap-3">
                   <span className="text-[#800000] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">志望理由書の深化</span>と言語化</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">意志・探究心</span>：志望理由書の深化と言語化</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#800000] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">オーナーシップ教育</span>で自律性育成</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">オーナーシップ</span>教育で自律性を育成</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#800000] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">戦略的指導</span>で合格ルート確定</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">戦略的指導</span>で合格ルートを確定</span>
                 </li>
               </ul>
               <p className="text-xs text-[#666666] mt-6 pt-6 border-t border-[#800000]/20">
-                「合格への意志」を引き出す
+                「意志と探究心」で合格への道を開く
               </p>
             </div>
           </div>
@@ -575,8 +601,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Comparison Section - Gray */}
-      <section className="py-28 px-4 bg-[#F3F4F6]">
+      {/* Comparison Section - Light Gray */}
+      <section className="py-28 px-4 bg-[#F9F9F9]">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -901,7 +927,7 @@ export default function Page() {
       </section>
 
       {/* Roadmap Section - Timeline */}
-      <section className="py-28 px-4 bg-[#F3F4F6]">
+      <section className="py-28 px-4 bg-[#F9F9F9]">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -1070,7 +1096,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Six Reasons Section - Gray */}
+      {/* Six Reasons Section - White */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <SectionTitle>佐藤塾が選ばれる6つの理由</SectionTitle>
@@ -1162,7 +1188,7 @@ export default function Page() {
 
                 {/* CTA Button */}
                 <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg mt-auto">
-                  このプランに申し込む
+                  入塾相談・無料カウンセリングを予約
                 </Button>
               </div>
             </div>
@@ -1305,7 +1331,7 @@ export default function Page() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-28 px-4 bg-[#F8F9FA]">
+      <section className="py-28 px-4 bg-[#F9F9F9]">
         <div className="max-w-3xl mx-auto">
           <SectionTitle subtitle="合格への不安を、すべて解消します">
             よくある質問（FAQ）
@@ -1376,7 +1402,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-sm text-[#333333] leading-relaxed border-t border-border">
-                はい、月単位でのプラン変更が可能です。学習進度や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
+                はい、月単位でのプラン変更が可能です。学���進度や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
               </div>
             </details>
           </div>
@@ -1436,14 +1462,14 @@ export default function Page() {
                     ご質問・ご相談
                   </label>
                   <Textarea
-                    placeholder="佐藤塾について気になることなどをお聞きします"
+                    placeholder="SFC合格に向けて不安なこと、知りたいことをご自由にお書きください。塾長が直接お答えします。"
                     className="border-border focus:border-[#002147] min-h-32"
                   />
                 </div>
 
                 <div className="pt-2">
                   <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
-                    相談予約を確定する
+                    24時間受付中：今すぐ無料相談を予約
                   </Button>
                   <p className="text-xs text-center text-[#666666] mt-3">
                     ※送信後、24時間以内に担当者よりご連絡いたします
