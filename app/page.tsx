@@ -654,9 +654,8 @@ export default function Page() {
                 <thead>
                   <tr>
                     <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[13px] bg-white border-r border-[#E5E7EB]" style={{ minWidth: '90px' }}>項目</th>
-                    <th className="p-3 pt-5 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '140px' }}>
-                      佐藤塾
-                    </th>
+                    <th className="p-3 pt-5 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '80px' }}>
+                      佐藤塾</th>
                     <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F8F8F8] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>特化塾</th>
                     <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F3F3F3] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>一般塾</th>
                   </tr>
