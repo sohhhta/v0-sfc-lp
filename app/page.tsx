@@ -152,7 +152,20 @@ function ConsultationAICard() {
 }
 
 export default function Page() {
-  const [email, setEmail] = useState('')
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    plan: '',
+    message: ''
+  })
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Here you would typically send the form data to your backend
+    setIsSubmitted(true)
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -160,7 +173,9 @@ export default function Page() {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</h1>
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
+          <a href="#contact-form">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
+          </a>
         </div>
       </nav>
 
@@ -374,7 +389,7 @@ export default function Page() {
                     添削の回数が少なすぎる
                   </h3>
                   <p className="text-[#333333] leading-loose text-lg">
-                    大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低さ」が受験生の成長を止めてしまいます。
+                    大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低���」が受験生の成長を止めてしまいます。
                   </p>
                 </div>
               </div>
@@ -488,7 +503,7 @@ export default function Page() {
                   </div>
                   <div className="bg-white rounded-lg p-4 md:p-5 border border-[#002147]/10 shadow-sm">
                     <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>しているこ�����です。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専��的��知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
+                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>しているこ�����です。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容にお���る背景知識があまりないように見受けられたので、専��的��知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
                     </p>
                   </div>
                 </div>
@@ -725,7 +740,7 @@ export default function Page() {
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed">
-              合格を生む4ステップ・サイクル
+              合格を生��4ステップ・サイクル
             </h2>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -848,7 +863,7 @@ export default function Page() {
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-5 shadow-md">
                   <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">24時間無制限のAI支援</h4>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
+                    日々の演習は、独��開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
                   </p>
                 </div>
                 <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
@@ -971,7 +986,7 @@ export default function Page() {
                       独自性の磨き上げ
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える時期。唯一無二の志望理由書を作成。
+                      <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える���期。唯一無二の志望理由書を作成。
                     </p>
                   </div>
                 </div>
@@ -1319,7 +1334,7 @@ export default function Page() {
       </section>
 
       {/* Contact Form Section - White */}
-      <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-8">
+      <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-20">
         <div className="max-w-2xl mx-auto">
           <SectionTitle subtitle="プランの選び方や学習スケジュールの立て方など、塾長が直接お答えします">
             30秒で申し込み！個別相談申し込み
@@ -1327,68 +1342,105 @@ export default function Page() {
 
           <Card className="bg-white shadow-lg border-t-4 border-t-[#800000] border-x border-b border-border rounded-xl">
             <CardContent className="pt-10">
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-semibold text-foreground mb-3">
-                    お名前 <span className="text-[#800000]">*</span>
-                  </label>
-                  <Input placeholder="佐藤塾太郎" className="border-border focus:border-[#002147] h-12" />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-foreground mb-3">
-                    メールアドレス <span className="text-[#800000]">*</span>
-                  </label>
-                  <Input
-                    type="email"
-                    placeholder="example@email.com"
-                    className="border-border focus:border-[#002147] h-12"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-foreground mb-3">
-                    電話番号 <span className="text-[#800000]">*</span>
-                  </label>
-                  <Input placeholder="09012345678" className="border-border focus:border-[#002147] h-12" />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-foreground mb-3">
-                    ご希望のプラン <span className="text-[#800000]">*</span>
-                  </label>
-                  <select className="w-full h-12 px-4 border border-border rounded-md bg-white text-foreground focus:border-[#002147] focus:outline-none focus:ring-1 focus:ring-[#002147]">
-                    <option value="">プランを選択してください</option>
-                    <option value="complete">AO入試＋一般入試：SFC二刀流プラン</option>
-                    <option value="basic">小論文のみ：小論文特化プラン</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-foreground mb-3">
-                    ご質問・ご相談
-                  </label>
-                  <Textarea
-                    placeholder="SFC合格に向けて不安なこと、知りたいことをご自由にお書きください。塾長が直接お答えします。"
-                    className="border-border focus:border-[#002147] min-h-32"
-                  />
-                </div>
-
-                <div className="pt-2">
-                  <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
-                    今すぐ無料で個別相談を予約する
-                  </Button>
-                  <p className="text-xs text-center text-[#666666] mt-3">
-                    ※送信後、24時間以内に担当者よりご連絡いたします
+              {isSubmitted ? (
+                /* Thank You Message */
+                <div className="text-center py-12">
+                  <div className="w-20 h-20 bg-[#800000]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Check className="w-10 h-10 text-[#800000]" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#002147] mb-4 font-serif">送信が完了しました</h3>
+                  <p className="text-[#333333] leading-relaxed mb-6">
+                    お申し込みいただきありがとうございます。<br />
+                    担当者より<strong>24時間以内</strong>にご連絡いたします。
+                  </p>
+                  <p className="text-sm text-[#666666]">
+                    ※メールが届かない場合は、迷惑メールフォルダをご確認ください。
                   </p>
                 </div>
+              ) : (
+                <form className="space-y-6" onSubmit={handleFormSubmit}>
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-3">
+                      お名前 <span className="text-[#800000]">*</span>
+                    </label>
+                    <Input 
+                      placeholder="佐藤塾太郎" 
+                      className="border-border focus:border-[#002147] h-12"
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      required
+                    />
+                  </div>
 
-                <p className="text-xs text-center text-muted-foreground pt-2">
-                  送信いただいた情報は、お客様へのサービス提供のため、安全に管理されます。
-                </p>
-              </form>
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-3">
+                      メールアドレス <span className="text-[#800000]">*</span>
+                    </label>
+                    <Input
+                      type="email"
+                      placeholder="example@email.com"
+                      className="border-border focus:border-[#002147] h-12"
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-3">
+                      電話番号 <span className="text-[#800000]">*</span>
+                    </label>
+                    <Input 
+                      placeholder="09012345678" 
+                      className="border-border focus:border-[#002147] h-12"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-3">
+                      ご希望のプラン <span className="text-[#800000]">*</span>
+                    </label>
+                    <select 
+                      className="w-full h-12 px-4 border border-border rounded-md bg-white text-foreground focus:border-[#002147] focus:outline-none focus:ring-1 focus:ring-[#002147]"
+                      value={formData.plan}
+                      onChange={(e) => setFormData({...formData, plan: e.target.value})}
+                      required
+                    >
+                      <option value="">プランを選択してください</option>
+                      <option value="complete">AO入試＋一般入試：SFC二刀流プラン</option>
+                      <option value="basic">小論文のみ：小論文特化プラン</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-3">
+                      ご質問・ご相談
+                    </label>
+                    <Textarea
+                      placeholder="SFC合格に向けて不安なこと、知りたいことをご自由にお書きください。塾長が直接お答えします。"
+                      className="border-border focus:border-[#002147] min-h-32"
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    />
+                  </div>
+
+                  <div className="pt-2">
+                    <Button type="submit" className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
+                      今すぐ無料で個別相談を予約する
+                    </Button>
+                    <p className="text-xs text-center text-[#666666] mt-3">
+                      ※送信後、24時間以内に担当者よりご連絡いたします
+                    </p>
+                  </div>
+
+                  <p className="text-xs text-center text-muted-foreground pt-2">
+                    送信いただいた情報は、お客様へのサービス提供のため、安全に管理されます。
+                  </p>
+                </form>
+              )}
             </CardContent>
           </Card>
         </div>
