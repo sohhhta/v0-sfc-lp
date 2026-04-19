@@ -341,7 +341,7 @@ export default function Page() {
                     SFC専用の対策になっていない
                   </h3>
                   <p className="text-[#333333] leading-loose text-lg">
-                    学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」。しかし、SFCは独自の視点を求める特殊な入試。ありきたりな回答では、合格点には届きません。
+                    学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
                   </p>
                 </div>
               </div>
@@ -382,7 +382,7 @@ export default function Page() {
                   添削の回数が少なすぎる
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
-                  大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」が受験生の成長を止めてしまいます。
+                  大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低さ」が受験生の成長を止めてしまいます。
                 </p>
               </div>
             </div>
@@ -424,8 +424,8 @@ export default function Page() {
             <p className="text-lg md:text-xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed">
               佐藤塾は、この
               <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「独自性の壁」</span>
-              <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「時間の壁」</span>
-              <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「回数の壁」</span>を<br className="hidden md:block" />
+              <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「添削の壁」</span>
+              <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「計画の壁」</span>を<br className="hidden md:block" />
               すべて解消します。
             </p>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
