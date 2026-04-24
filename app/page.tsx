@@ -91,7 +91,7 @@ function ConsultationAICard() {
         {/* Guide text */}
         <p className="text-xs text-[#666666] mb-3 flex items-center gap-1">
           <span className="text-[#002147]"></span>
-          あてはまる悩みを��してください
+          あてはまる悩みを押してください
         </p>
 
         {/* Tabs - Horizontal scroll on mobile */}
@@ -900,7 +900,7 @@ export default function Page() {
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-5 shadow-md">
                   <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">学習計画（受験戦略の立案）</h4>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    志望校選定から、1週���単位の学習戦術まで一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
+                    志望校選定から、1週間単位の学習戦術まで一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
                   </p>
                 </div>
                 {/* Curved arrow */}
@@ -981,7 +981,7 @@ export default function Page() {
               合格までのロードマップ
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              いつ、何をして合格を掴むか。SFC合格への道筋を可視化���ます。
+              いつ、何をして合格を掴むか。SFC合格への道筋を可視化します。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -1151,7 +1151,7 @@ export default function Page() {
               { num: '01', title: 'AOと一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
               { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限なし' },
               { num: '03', title: '学習の徹底管理', desc: '週次、月次で学習計画を策定し、管理する' },
-              { num: '04', title: 'AO合格後の追加費用0円', desc: 'AO合格後は卒業となり自動退塾となります。追加料金は��要' },
+              { num: '04', title: 'AO合格後の追加費用0円', desc: 'AO合格後は卒業となり自動退塾となります。追加料金は不要' },
               { num: '05', title: 'SFC特化ロジック', desc: '7年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
               { num: '06', title: '通塾ゼロ', desc: '指導も授業もすべてオンライン。通塾時間を勉強に充てられる' },
             ].map((item) => (
@@ -1491,8 +1491,8 @@ export default function Page() {
                   </div>
 
                   <div className="pt-2">
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       disabled={isLoading}
                       className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                     >
@@ -1552,7 +1552,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限ま��両立させていることが、この数字の根拠です。
+                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
               </div>
             </details>
 
