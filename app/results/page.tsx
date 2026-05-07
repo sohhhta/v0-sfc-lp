@@ -48,13 +48,16 @@ export default function ResultsPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-12 md:py-16 px-4 bg-gradient-to-b from-[#002147]/5 to-white">
+      <section className="relative py-20 md:py-28 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center">
-            <h1 className="text-3xl md:text-5xl font-bold text-primary mb-4 md:mb-6 font-serif tracking-wider" style={{ wordBreak: 'keep-all' }}>
-              合格実績・合格者の声
+            <span className="inline-block text-xs font-bold tracking-[0.2em] text-[#C5A059] border border-[#C5A059]/50 px-4 py-1.5 rounded-full mb-6 uppercase">
+              ACHIEVEMENTS
+            </span>
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 font-serif tracking-wider" style={{ wordBreak: 'keep-all' }}>
+              合格実績
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
+            <p className="text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed px-4">
               AIと塾長のハイブリッド指導で、慶應SFCへ合格した生徒たちの実績と体験談をご紹介します。
             </p>
           </div>
