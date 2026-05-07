@@ -3,14 +3,8 @@
 import { Button } from '@/components/ui/button'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
-import { Metadata } from 'next'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
-
-export const metadata: Metadata = {
-  title: '慶應SFC合格実績・合格者の声 | 佐藤塾',
-  description: '慶應SFC合格率50.0%を誇る佐藤塾の合格実績。6年間で39名の合格者を輩出した、AIと塾長による圧倒的な指導結果を公開。',
-}
 
 // SectionTitle component - exactly as in app/page.tsx
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
