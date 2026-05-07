@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { FAQAccordion } from './faq-accordion'
 
 export const metadata: Metadata = {
-  title: '慶應SFC合格のためのコース・料金体系 | 佐藤塾（AI×塾長のハイブリッド指導）',
-  description: '慶應SFC小論文・情報入試に特化した佐藤塾のコース案内。AIによる24時間即時添削と塾長の戦略的指導で、合格率50.0%を実現。',
+  title: '慶應SFC合格のためのコース・料金体系 | 佐藤塾',
+  description: '慶應SFC小論文・情報入試に特化した佐藤塾のコース案内。AIと塾長のハイブリッド指導で合格を確実に。',
 }
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -73,10 +73,10 @@ export default function CoursePage() {
                 <div className="mb-10 space-y-4">
                   <p className="font-bold text-[#002147] text-sm" style={{ fontFamily: "'Noto Sans JP', sans-serif", letterSpacing: '0.05em' }}>このプランに含まれるもの</p>
                   <div className="space-y-3">
-                    <p className="text-sm text-[#333333]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>AI添削</strong> 24時間 / 無制限 / 即時</p>
-                    <p className="text-sm text-[#333333]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>個別面談</strong> 週1回（60分）</p>
-                    <p className="text-sm text-[#333333]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>志望理由書指導</strong> 作成・深化</p>
-                    <p className="text-sm text-[#333333]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>学習ロードマップ</strong> 全科目対応</p>
+                    <p className="text-sm text-[#333333]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>AI24時間添削</strong> 回数無制限・即時フィードバック</p>
+                    <p className="text-sm text-[#333333]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>個別面談</strong> 週1回（塾長との戦略指導）</p>
+                    <p className="text-sm text-[#333333]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>統合戦略</strong> AO入試・一般入試の両対応</p>
+                    <p className="text-sm text-[#333333]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>志望理由深化</strong> 個別面談で論理の強化</p>
                   </div>
                 </div>
 
@@ -105,10 +105,10 @@ export default function CoursePage() {
                 <div className="mb-10 space-y-4">
                   <p className="font-bold text-[#555555] text-sm" style={{ fontFamily: "'Noto Sans JP', sans-serif", letterSpacing: '0.05em' }}>このプランに含まれるもの</p>
                   <div className="space-y-3">
-                    <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>AI添削</strong> 24時間 / 無制限 / 即時</p>
-                    <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>個別面談</strong> 月2回（45分）</p>
-                    <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>小論文特化</strong> SFC型対策集中</p>
-                    <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>チャット相談</strong> 無制限</p>
+                    <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>小論文特化AI添削</strong> 回数無制限・24時間即時フィードバック</p>
+                    <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>個別戦略面談</strong> 月2回（塾長による小論文戦略指導）</p>
+                    <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>SFC型対策</strong> 過去問に基づく論理的構成指導</p>
+                    <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}><strong>他塾連携</strong> 他の学習との効果的な組み合わせ</p>
                   </div>
                 </div>
 
@@ -127,15 +127,15 @@ export default function CoursePage() {
             <div className="space-y-6">
               <div>
                 <p className="font-bold text-[#002147] text-sm mb-2" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>入会金</p>
-                <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}>0円 — 入塾時に別途費用は一切ございません。</p>
+                <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}>0円</p>
               </div>
               <div>
-                <p className="font-bold text-[#002147] text-sm mb-2" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>教材費・その他費用</p>
-                <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}>0円 — 全ての教材・システムが料金に含まれています。追加費用は一切発生しません。</p>
+                <p className="font-bold text-[#002147] text-sm mb-2" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>教材費</p>
+                <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}>0円</p>
               </div>
               <div>
-                <p className="font-bold text-[#002147] text-sm mb-2" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>合格後の費用</p>
-                <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}>0円 — 合格発表日の月末をもって自動退塾。その後の費用は一切発生しません。</p>
+                <p className="font-bold text-[#002147] text-sm mb-2" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>追加費用</p>
+                <p className="text-sm text-[#666666]" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.7' }}>全てシステム内で完結するため、月額料金以外の追加費用は一切発生しません。</p>
               </div>
             </div>
           </div>
@@ -158,7 +158,7 @@ export default function CoursePage() {
                 <p className="text-xs text-[#002147] mt-1" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>佐藤塾</p>
               </div>
               <div className="bg-white rounded-lg p-6 text-center border border-[#E5E7EB]">
-                <p className="text-base text-[#AAAAAA]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>週1〜2回</p>
+                <p className="text-base text-[#AAAAAA]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>制限あり</p>
                 <p className="text-xs text-[#CCCCCC] mt-1" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>一般的な塾</p>
               </div>
             </div>
@@ -166,14 +166,14 @@ export default function CoursePage() {
             {/* Comparison Item 2 */}
             <div className="grid md:grid-cols-3 gap-6 items-center">
               <div className="text-[#002147] font-bold text-lg md:text-xl" style={{ fontFamily: "'Noto Sans JP', sans-serif", letterSpacing: '0.05em' }}>
-                フィードバック時間
+                待ち時間
               </div>
               <div className="bg-gradient-to-r from-[#D4AF37] to-[#E8C547] rounded-lg p-6 text-center shadow-lg">
                 <p className="text-2xl md:text-3xl font-bold text-[#002147]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>即時</p>
                 <p className="text-xs text-[#002147] mt-1" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>佐藤塾</p>
               </div>
               <div className="bg-white rounded-lg p-6 text-center border border-[#E5E7EB]">
-                <p className="text-base text-[#AAAAAA]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>3日〜1週間</p>
+                <p className="text-base text-[#AAAAAA]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>数日〜1週間</p>
                 <p className="text-xs text-[#CCCCCC] mt-1" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>一般的な塾</p>
               </div>
             </div>
@@ -184,7 +184,7 @@ export default function CoursePage() {
                 対応時間
               </div>
               <div className="bg-gradient-to-r from-[#D4AF37] to-[#E8C547] rounded-lg p-6 text-center shadow-lg">
-                <p className="text-2xl md:text-3xl font-bold text-[#002147]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>24時間365日</p>
+                <p className="text-2xl md:text-3xl font-bold text-[#002147]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>24時間</p>
                 <p className="text-xs text-[#002147] mt-1" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>佐藤塾</p>
               </div>
               <div className="bg-white rounded-lg p-6 text-center border border-[#E5E7EB]">
@@ -196,7 +196,7 @@ export default function CoursePage() {
             {/* Comparison Item 4 */}
             <div className="grid md:grid-cols-3 gap-6 items-center">
               <div className="text-[#002147] font-bold text-lg md:text-xl" style={{ fontFamily: "'Noto Sans JP', sans-serif", letterSpacing: '0.05em' }}>
-                指導対応範囲
+                指導範囲
               </div>
               <div className="bg-gradient-to-r from-[#D4AF37] to-[#E8C547] rounded-lg p-6 text-center shadow-lg">
                 <p className="text-lg md:text-xl font-bold text-[#002147]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>AO・一般<br />両対応</p>
