@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '慶應SFC合格実績・合格者の声 | 佐藤塾',
-  description: '慶應SFC合格率50.0%を誇る佐藤塾の合格実績。7年間で39名の合格者を輩出した、AIと塾長による圧倒的な指導結果を公開。',
+  description: '慶應SFC合格率50.0%を誇る佐藤塾の合格実績。6年間で39名の合格者を輩出した、AIと塾長による圧倒的な指導結果を公開。',
 }
 
 // SectionTitle component - exactly as in app/course/page.tsx
