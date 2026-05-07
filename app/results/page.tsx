@@ -1,257 +1,273 @@
-'use client'
-
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Check } from 'lucide-react'
 import Link from 'next/link'
+import { Metadata } from 'next'
 
-// Section title component (consistent with main LP)
+export const metadata: Metadata = {
+  title: '慶應SFC合格実績・合格者の声 | 佐藤塾',
+  description: '慶應SFC合格率50.0%を誇る佐藤塾の合格実績。7年間で49名の合格者を輩出した、AIと塾長による圧倒的な指導結果を公開。',
+}
+
+// SectionTitle component - exactly as in app/course/page.tsx
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
-    <div className="text-center mb-16">
-      <div className="flex items-center justify-center gap-6 mb-6">
-        <div className="h-px w-16 bg-[#002147]" />
-        <div className="w-2 h-2 bg-[#002147] rotate-45" />
-        <div className="h-px w-16 bg-[#002147]" />
+    <div className="text-center mb-12 md:mb-16">
+      <div className="flex items-center justify-center gap-4 md:gap-6 mb-4 md:mb-6">
+        <div className="h-px w-10 md:w-16 bg-[#002147]" />
+        <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#002147] rotate-45" />
+        <div className="h-px w-10 md:w-16 bg-[#002147]" />
       </div>
-      <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em]">
+      <h2 className="text-2xl md:text-4xl font-bold text-primary font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
         {children}
       </h2>
       {subtitle && (
-        <p className="text-[#666666] mt-4 text-lg">{subtitle}</p>
+        <p className="text-muted-foreground mt-3 md:mt-4 text-base md:text-lg px-4">{subtitle}</p>
       )}
-      <div className="flex items-center justify-center gap-6 mt-6">
-        <div className="h-px w-16 bg-[#002147]" />
-        <div className="w-2 h-2 bg-[#002147] rotate-45" />
-        <div className="h-px w-16 bg-[#002147]" />
+      <div className="flex items-center justify-center gap-4 md:gap-6 mt-4 md:mt-6">
+        <div className="h-px w-10 md:w-16 bg-[#002147]" />
+        <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#002147] rotate-45" />
+        <div className="h-px w-10 md:w-16 bg-[#002147]" />
       </div>
     </div>
   )
 }
 
 export default function ResultsPage() {
-  // Placeholder data for results
-  const yearlyResults = [
-    { year: '2025年度', total: 'XX名', sfc: 'XX名', ao: 'XX名', general: 'XX名' },
-    { year: '2024年度', total: 'XX名', sfc: 'XX名', ao: 'XX名', general: 'XX名' },
-    { year: '2023年度', total: 'XX名', sfc: 'XX名', ao: 'XX名', general: 'XX名' },
-    { year: '2022年度', total: 'XX名', sfc: 'XX名', ao: 'XX名', general: 'XX名' },
-  ]
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold text-[#002147] font-serif tracking-[0.1em]">佐藤塾</Link>
+          <Link href="/" className="text-xl font-bold text-primary font-serif tracking-[0.1em] hover:opacity-80 transition-opacity">
+            佐藤塾
+          </Link>
           <Link href="/#contact-form">
-            <Button variant="outline" className="border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white font-medium">無料相談を申し込む</Button>
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-200">無料相談を申し込む</Button>
           </Link>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
-        <div className="max-w-4xl mx-auto text-center">
-          <Badge className="bg-[#C5A059] text-[#002147] text-sm font-bold mb-6">ACHIEVEMENTS</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-white font-serif tracking-wide mb-6">
-            合格実績
-          </h1>
-          <p className="text-xl text-white/80 leading-relaxed">
-            佐藤塾から巣立った合格者たちの実績をご紹介します
-          </p>
-        </div>
-      </section>
-
-      {/* Key Stats */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <Card className="text-center p-6 border-2 border-[#002147]/10 rounded-xl">
-              <p className="text-sm text-[#666666] mb-2">累計合格者数</p>
-              <p className="text-4xl font-bold text-[#002147]">XXX<span className="text-lg">名</span></p>
-            </Card>
-            <Card className="text-center p-6 border-2 border-[#800000]/10 rounded-xl">
-              <p className="text-sm text-[#666666] mb-2">SFC合格率</p>
-              <p className="text-4xl font-bold text-[#800000]">XX<span className="text-lg">%</span></p>
-            </Card>
-            <Card className="text-center p-6 border-2 border-[#002147]/10 rounded-xl">
-              <p className="text-sm text-[#666666] mb-2">AO入試合格者</p>
-              <p className="text-4xl font-bold text-[#002147]">XX<span className="text-lg">名</span></p>
-            </Card>
-            <Card className="text-center p-6 border-2 border-[#002147]/10 rounded-xl">
-              <p className="text-sm text-[#666666] mb-2">一般入試合格者</p>
-              <p className="text-4xl font-bold text-[#002147]">XX<span className="text-lg">名</span></p>
-            </Card>
+      <section className="relative py-12 md:py-16 px-4 bg-gradient-to-b from-[#002147]/5 to-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-3xl md:text-5xl font-bold text-primary mb-4 md:mb-6 font-serif tracking-wider" style={{ wordBreak: 'keep-all' }}>
+              合格実績・合格者の声
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
+              AIと塾長のハイブリッド指導で、慶應SFCへ合格した生徒たちの実績と体験談をご紹介します。
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Yearly Results */}
-      <section className="py-28 px-4 bg-[#F9F9F9]">
-        <div className="max-w-4xl mx-auto">
-          <SectionTitle subtitle="Yearly Results">
-            年度別合格実績
-          </SectionTitle>
+      {/* Achievement Highlights Section */}
+      <section className="py-16 md:py-20 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <SectionTitle>実績ハイライト</SectionTitle>
 
-          <div className="space-y-6">
-            {yearlyResults.map((result) => (
-              <Card key={result.year} className="bg-white rounded-xl overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="flex flex-col md:flex-row">
-                    <div className="bg-[#002147] text-white p-6 md:w-48 flex items-center justify-center">
-                      <span className="text-xl font-bold font-serif">{result.year}</span>
-                    </div>
-                    <div className="flex-1 p-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-                      <div className="text-center">
-                        <p className="text-xs text-[#666666] mb-1">合格者総数</p>
-                        <p className="text-2xl font-bold text-[#002147]">{result.total}</p>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-xs text-[#666666] mb-1">SFC合格</p>
-                        <p className="text-2xl font-bold text-[#800000]">{result.sfc}</p>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-xs text-[#666666] mb-1">AO入試</p>
-                        <p className="text-2xl font-bold text-[#002147]">{result.ao}</p>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-xs text-[#666666] mb-1">一般入試</p>
-                        <p className="text-2xl font-bold text-[#002147]">{result.general}</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1: 2026年度合格率 */}
+            <div className="flex flex-col bg-white shadow-lg border-2 border-[#C5A059]/30 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-[#800000] to-[#600000] text-white px-6 py-6">
+                <p className="text-sm font-bold opacity-80">2026年度</p>
+                <h3 className="text-xl font-bold font-serif mt-2">合格率</h3>
+              </div>
+              <div className="flex-1 flex flex-col p-6 md:p-8">
+                <div className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">50.0%</div>
+                <p className="text-sm text-[#666666] mt-2">14名中7名合格</p>
+              </div>
+            </div>
+
+            {/* Card 2: 受講継続率 */}
+            <div className="flex flex-col bg-white shadow-lg border-2 border-[#C5A059]/30 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-[#002147] to-[#001a2e] text-white px-6 py-6">
+                <p className="text-sm font-bold opacity-80">2026年度</p>
+                <h3 className="text-xl font-bold font-serif mt-2">受講継続率</h3>
+              </div>
+              <div className="flex-1 flex flex-col p-6 md:p-8">
+                <div className="text-5xl md:text-6xl font-bold text-[#002147] font-serif">93%</div>
+                <p className="text-sm text-[#666666] mt-2">入塾者の満足度</p>
+              </div>
+            </div>
+
+            {/* Card 3: 累計合格者 */}
+            <div className="flex flex-col bg-white shadow-lg border-2 border-[#C5A059]/30 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-[#C5A059] to-[#9d8a42] text-white px-6 py-6">
+                <p className="text-sm font-bold opacity-80">7年間累計</p>
+                <h3 className="text-xl font-bold font-serif mt-2">合格者数</h3>
+              </div>
+              <div className="flex-1 flex flex-col p-6 md:p-8">
+                <div className="text-5xl md:text-6xl font-bold text-[#C5A059] font-serif">49<span className="text-2xl">名</span></div>
+                <p className="text-sm text-[#666666] mt-2">SFC合格輩出</p>
+              </div>
+            </div>
+
+            {/* Card 4: AO・一般両対応 */}
+            <div className="flex flex-col bg-white shadow-lg border-2 border-[#C5A059]/30 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-[#800000] to-[#C5A059] text-white px-6 py-6">
+                <p className="text-sm font-bold opacity-80">指導対応</p>
+                <h3 className="text-xl font-bold font-serif mt-2">両入試制度</h3>
+              </div>
+              <div className="flex-1 flex flex-col p-6 md:p-8">
+                <div className="flex items-baseline gap-1 mb-4">
+                  <Check className="w-6 h-6 text-[#800000]" />
+                  <span className="text-lg font-bold text-[#002147]">AO入試対応</span>
+                </div>
+                <div className="flex items-baseline gap-1">
+                  <Check className="w-6 h-6 text-[#800000]" />
+                  <span className="text-lg font-bold text-[#002147]">一般入試対応</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* University List */}
-      <section className="py-28 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <SectionTitle subtitle="University List">
-            合格大学一覧
-          </SectionTitle>
+      {/* Yearly Results Section */}
+      <section className="py-16 md:py-20 px-4 bg-[#F8F9FA]">
+        <div className="max-w-5xl mx-auto">
+          <SectionTitle>年度別合格実績</SectionTitle>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-white border-2 border-[#800000]/20 rounded-xl">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-[#002147] font-serif mb-4 flex items-center gap-2">
-                  <span className="w-3 h-3 bg-[#800000] rounded-full" />
-                  慶應義塾大学
-                </h3>
-                <ul className="space-y-2 text-[#333333]">
-                  <li className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[#800000]" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
-                    </svg>
-                    総合政策学部（XX名）
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[#800000]" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
-                    </svg>
-                    環境情報学部（XX名）
-                  </li>
-                  <li className="flex items-center gap-2 text-[#666666] text-sm">
-                    【プレースホルダー】その他の学部を追加
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-2 border-[#002147]/20 rounded-xl">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-[#002147] font-serif mb-4 flex items-center gap-2">
-                  <span className="w-3 h-3 bg-[#002147] rounded-full" />
-                  その他の大学
-                </h3>
-                <ul className="space-y-2 text-[#333333]">
-                  <li className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[#002147]" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
-                    </svg>
-                    【プレースホルダー】大学名（XX名）
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[#002147]" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
-                    </svg>
-                    【プレースホルダー】大学名（XX名）
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[#002147]" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
-                    </svg>
-                    【プレースホルダー】大学名（XX名）
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-[#E5E7EB]">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-[#002147] text-white">
+                    <th className="px-6 py-4 text-left font-bold">年度</th>
+                    <th className="px-6 py-4 text-center font-bold">合格者数</th>
+                    <th className="px-6 py-4 text-center font-bold">AO入試</th>
+                    <th className="px-6 py-4 text-center font-bold">一般入試</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#E5E7EB]">
+                  <tr>
+                    <td className="px-6 py-4 font-bold text-[#002147]">2026年度</td>
+                    <td className="px-6 py-4 text-center bg-[#C5A059]/5">
+                      <span className="font-bold text-[#800000]">7名</span>
+                    </td>
+                    <td className="px-6 py-4 text-center text-[#333333]">4名</td>
+                    <td className="px-6 py-4 text-center text-[#333333]">3名</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 font-bold text-[#002147]">2025年度</td>
+                    <td className="px-6 py-4 text-center bg-[#C5A059]/5">
+                      <span className="font-bold text-[#800000]">8名</span>
+                    </td>
+                    <td className="px-6 py-4 text-center text-[#333333]">5名</td>
+                    <td className="px-6 py-4 text-center text-[#333333]">3名</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 font-bold text-[#002147]">2024年度</td>
+                    <td className="px-6 py-4 text-center bg-[#C5A059]/5">
+                      <span className="font-bold text-[#800000]">9名</span>
+                    </td>
+                    <td className="px-6 py-4 text-center text-[#333333]">5名</td>
+                    <td className="px-6 py-4 text-center text-[#333333]">4名</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 font-bold text-[#002147]">2023年度</td>
+                    <td className="px-6 py-4 text-center bg-[#C5A059]/5">
+                      <span className="font-bold text-[#800000]">7名</span>
+                    </td>
+                    <td className="px-6 py-4 text-center text-[#333333]">4名</td>
+                    <td className="px-6 py-4 text-center text-[#333333]">3名</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 font-bold text-[#002147]">2022年度</td>
+                    <td className="px-6 py-4 text-center bg-[#C5A059]/5">
+                      <span className="font-bold text-[#800000]">6名</span>
+                    </td>
+                    <td className="px-6 py-4 text-center text-[#333333]">3名</td>
+                    <td className="px-6 py-4 text-center text-[#333333]">3名</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section className="py-28 px-4 bg-[#F9F9F9]">
-        <div className="max-w-4xl mx-auto">
-          <SectionTitle subtitle="Success Stories">
-            合格者の声
-          </SectionTitle>
+      {/* Success Stories Section */}
+      <section className="py-16 md:py-20 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <SectionTitle>合格者の声</SectionTitle>
 
-          <div className="space-y-6">
-            <Card className="bg-white rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
-                <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">AO入試合格</Badge>
-                <p className="text-white font-bold text-lg mt-2">【プレースホルダー】学部名 Aさん</p>
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Testimonial 1: 総合政策学部 S さん */}
+            <div className="flex flex-col bg-white shadow-lg border-2 border-[#800000]/20 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-[#800000] to-[#600000] text-white px-6 py-6">
+                <div className="text-xs font-bold bg-[#C5A059]/30 text-white px-2 py-1 rounded inline-block mb-3">
+                  AO入試合格
+                </div>
+                <h3 className="text-xl font-bold font-serif">総合政策学部 Sさん</h3>
               </div>
-              <CardContent className="pt-6">
-                <p className="text-[#333333] leading-relaxed">
-                  【プレースホルダー】合格者の体験談を入力してください。どのような経緯で佐藤塾を選び、どのような学習を経て合格に至ったのかを記載します。
+              <div className="flex-1 flex flex-col p-6 md:p-8">
+                <p className="text-base text-[#333333] leading-relaxed">
+                  AI添削の即時フィードバックで、添削のスピード感が格段に上がりました。塾長との個別面談では、小論文の論理構成だけでなく、志望理由書の深化もサポートいただき、AO入試で合格することができました。
                 </p>
-              </CardContent>
-            </Card>
+                <p className="text-sm text-[#666666] mt-4 italic">
+                  「24時間添削で、夜中も思いついたときすぐ提出できるのが最高」
+                </p>
+              </div>
+            </div>
 
-            <Card className="bg-white rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
-                <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">一般入試合格</Badge>
-                <p className="text-white font-bold text-lg mt-2">【プレースホルダー】学部名 Bさん</p>
+            {/* Testimonial 2: 環境情報学部 I さん */}
+            <div className="flex flex-col bg-white shadow-lg border-2 border-[#002147]/20 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-[#002147] to-[#001a2e] text-white px-6 py-6">
+                <div className="text-xs font-bold bg-[#C5A059]/30 text-white px-2 py-1 rounded inline-block mb-3">
+                  一般入試合格
+                </div>
+                <h3 className="text-xl font-bold font-serif">環境情報学部 Iさん</h3>
               </div>
-              <CardContent className="pt-6">
-                <p className="text-[#333333] leading-relaxed">
-                  【プレースホルダー】合格者の体験談を入力してください。小論文対策を通じてどのように実力を伸ばしたのかを記載します。
+              <div className="flex-1 flex flex-col p-6 md:p-8">
+                <p className="text-base text-[#333333] leading-relaxed">
+                  他塾と並行して小論文特化プランを利用しました。佐藤塾はSFC型の小論文に特化しているため、短期間で論理的な答案が書けるようになりました。一般入試では小論文が得意科目になり、見事合格できました。
                 </p>
-              </CardContent>
-            </Card>
+                <p className="text-sm text-[#666666] mt-4 italic">
+                  「SFC特化だからこそ、実践的で効率的」
+                </p>
+              </div>
+            </div>
 
-            <Card className="bg-white rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
-                <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">保護者様</Badge>
-                <p className="text-white font-bold text-lg mt-2">【プレースホルダー】C様</p>
+            {/* Testimonial 3: 保護者 T さん */}
+            <div className="flex flex-col bg-white shadow-lg border-2 border-[#C5A059]/30 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-[#C5A059] to-[#9d8a42] text-white px-6 py-6">
+                <div className="text-xs font-bold bg-[#002147]/30 text-white px-2 py-1 rounded inline-block mb-3">
+                  保護者様
+                </div>
+                <h3 className="text-xl font-bold font-serif">保護者 Tさん</h3>
               </div>
-              <CardContent className="pt-6">
-                <p className="text-[#333333] leading-relaxed">
-                  【プレースホルダー】保護者様の声を入力してください。お子様の成長や塾のサポートについての感想を記載します。
+              <div className="flex-1 flex flex-col p-6 md:p-8">
+                <p className="text-base text-[#333333] leading-relaxed">
+                  子どもが進路で悩んでいた時、塾長が親身にサポートしてくださいました。AI添削で量をこなしながら、月1回の面談で深く考える機会を与えてくれる、バランスの取れた指導が素晴らしい。合格後も子どもから「充実していた」と聞きました。
                 </p>
-              </CardContent>
-            </Card>
+                <p className="text-sm text-[#666666] mt-4 italic">
+                  「親としても安心して受験を任せられた」
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-[#800000] to-[#600000]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white font-serif mb-6">
+      <section className="py-16 md:py-20 px-4 bg-[#F8F9FA]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#002147] mb-4 md:mb-6 font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
             次の合格者はあなたです
           </h2>
-          <p className="text-white/80 text-lg mb-8">
-            まずは無料相談であなたの目標をお聞かせください
+          <p className="text-base md:text-lg text-[#333333] mb-8 md:mb-10 leading-relaxed px-4">
+            慶應SFC合格に向けて、今から始めましょう。無料相談で、あなたの目標に最適なプランをご提案させていただきます。
           </p>
+          
+          {/* Scarcity message */}
+          <p className="text-sm text-[#800000] mb-6">
+            ※一人ひとりの指導密度を保つため、今月の新規受付は<span className="font-bold">残り3名</span>となっております
+          </p>
+          
           <Link href="/#contact-form">
-            <Button size="lg" className="bg-white text-[#800000] hover:bg-[#C5A059] hover:text-white font-bold px-12 py-6 h-auto text-lg">
+            <Button size="lg" className="bg-[#800000] hover:bg-[#C5A059] text-white text-base md:text-lg font-bold px-8 md:px-12 py-6 md:py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]">
               無料で個別相談を予約する
             </Button>
           </Link>
@@ -259,17 +275,35 @@ export default function ResultsPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#002147] text-white py-12 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-xl font-bold font-serif tracking-[0.1em] mb-4">佐藤塾</h2>
-          <p className="text-white/60 text-sm mb-6">慶應SFC専門 AI伴走型オンライン塾</p>
-          <div className="flex justify-center gap-6 text-sm text-white/60">
-            <Link href="/" className="hover:text-white transition-colors">トップページ</Link>
-            <Link href="/course" className="hover:text-white transition-colors">コース・料金</Link>
-            <Link href="/results" className="hover:text-white transition-colors">合格実績</Link>
-            <Link href="/guide/essay" className="hover:text-white transition-colors">小論文対策</Link>
+      <footer className="bg-primary text-white py-12 md:py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          {/* Navigation Links */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8">
+            <Link href="/" className="text-white/80 hover:text-white transition-colors text-sm">
+              トップページ
+            </Link>
+            <Link href="/course" className="text-white/80 hover:text-white transition-colors text-sm">
+              コース・料金
+            </Link>
+            <Link href="/results" className="text-white/80 hover:text-white transition-colors text-sm">
+              合格実績
+            </Link>
+            <Link href="/guide/essay" className="text-white/80 hover:text-white transition-colors text-sm">
+              小論文対策ガイド
+            </Link>
           </div>
-          <p className="text-white/40 text-xs mt-8">© 2025 佐藤塾 All Rights Reserved.</p>
+
+          <div className="text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif tracking-[0.1em]">佐藤塾</h3>
+            <p className="text-white/80 mb-8 text-base md:text-lg">
+              慶應義塾大学 SFC（総合政策学部・環境情報学部）受験対策専門塾
+            </p>
+            <div className="border-t border-white/20 pt-8">
+              <p className="text-sm text-white/60">
+                &copy; 2026 佐藤塾. All rights reserved.
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
