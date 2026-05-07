@@ -8,7 +8,7 @@ import { Menu, X } from 'lucide-react'
 // Section title component (consistent with main LP)
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
-    <div className="text-center mb-16">
+    <div className="text-center mb-10">
       <div className="flex items-center justify-center gap-6 mb-6">
         <div className="h-px w-16 bg-[#002147]" />
         <div className="w-2 h-2 bg-[#002147] rotate-45" />
@@ -169,7 +169,7 @@ export default function EssayGuidePage() {
         {/* SFC小論文とは */}
         <section className="mb-20">
           <SectionTitle>SFC小論文とは</SectionTitle>
-          <div className="bg-white border-l-4 border-[#002147] pl-6 py-6 rounded-lg shadow-lg mb-8">
+          <div className="bg-white border-l-4 border-[#002147] px-6 md:px-10 py-8 rounded-lg shadow-lg mb-8">
             <p className="text-base md:text-lg text-[#333333] leading-relaxed font-medium">
               SFCの小論文は、文章力ではなく<span className="text-[#800000] font-bold">「問題発見・解決能力」を測る試験</span>です。10枚以上の膨大な資料を読み解き、現代社会の複雑な課題に対し、あなた独自の具体的な解決策を提示することが求められます。
             </p>
@@ -244,56 +244,28 @@ export default function EssayGuidePage() {
           </div>
         </section>
 
-        {/* 過去問分析 */}
-        <section className="mb-20">
-          <SectionTitle>過去問分析</SectionTitle>
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* 総合政策 */}
-            <div className="bg-white border-2 border-[#002147] rounded-lg p-8 shadow-lg">
-              <h4 className="text-xl font-bold text-[#002147] font-serif mb-6">総合政策学部</h4>
-              <div className="space-y-4">
-                <div>
-                  <p className="text-sm font-bold text-[#666666] mb-1">2025年度</p>
-                  <p className="text-base text-[#333333]">地域活性化とデジタル化</p>
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-[#666666] mb-1">2024年度</p>
-                  <p className="text-base text-[#333333]">民主主義の再構築</p>
-                </div>
-              </div>
-            </div>
-
-            {/* 環境情報 */}
-            <div className="bg-white border-2 border-[#800000] rounded-lg p-8 shadow-lg">
-              <h4 className="text-xl font-bold text-[#800000] font-serif mb-6">環境情報学部</h4>
-              <div className="space-y-4">
-                <div>
-                  <p className="text-sm font-bold text-[#666666] mb-1">2025年度</p>
-                  <p className="text-base text-[#333333]">AIと創造性</p>
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-[#666666] mb-1">2024年度</p>
-                  <p className="text-base text-[#333333]">環境問題へのシステム的アプローチ</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* 書き方のポイント */}
         <section className="mb-20">
           <SectionTitle>書き方のポイント</SectionTitle>
           <div className="space-y-6">
             {/* Point 1 */}
-            <div className="bg-white border-2 border-[#002147]/40 rounded-lg p-6 shadow-md">
+            <div className="bg-white border-2 border-[#002147] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">設問の意図を正確に捉える</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
                 出題者が何を求めているか、資料のどこにヒントがあるかを最初に見抜く。この第一段階が不正確だと、その後の論述がいくら素晴らしくても合格点に達しません。
               </p>
             </div>
 
-            {/* Point 2 */}
-            <div className="bg-white border-2 border-[#800000]/40 rounded-lg p-6 shadow-md">
+            {/* Point 2 - NEW */}
+            <div className="bg-white border-2 border-[#C5A059] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-bold text-[#C5A059] font-serif mb-3">小論文としての文を書く</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                客観的な文体、明確な論理構成、そして学術的な用語選定。日記や作文ではない「論考」としての質を追求する。SFCが求める答案は、高度な思考力を文章で表現したものです。
+              </p>
+            </div>
+
+            {/* Point 3 */}
+            <div className="bg-white border-2 border-[#800000] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-bold text-[#800000] font-serif mb-3">具体性と実現可能性</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
                 単なる理想論ではなく、技術的・社会的に実行可能な解決策を提示する。SFCが求めているのは、現実を見据えた実践的な思考力です。
@@ -315,12 +287,12 @@ export default function EssayGuidePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/#contact-form" onClick={handleSmoothScroll}>
-              <Button className="bg-[#C5A059] hover:bg-[#9d8a42] text-white font-bold px-10 py-6 h-auto">
+              <Button className="bg-[#C5A059] hover:bg-[#9d8a42] text-[#002147] font-bold px-10 py-6 h-auto">
                 無料で塾長に相談する
               </Button>
             </a>
             <Link href="/course">
-              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#800000] font-bold px-10 py-6 h-auto">
+              <Button className="border-2 border-[#C5A059] text-[#C5A059] bg-transparent hover:bg-[#C5A059] hover:text-[#002147] font-bold px-10 py-6 h-auto transition-all duration-300">
                 コース詳細を見る
               </Button>
             </Link>
