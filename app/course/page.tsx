@@ -310,7 +310,7 @@ export default function CoursePage() {
                 <tr>
                   <td className="px-6 py-4 font-bold text-[#002147]">フィードバック時間</td>
                   <td className="px-6 py-4 text-center bg-[#C5A059]/5">
-                    <span className="font-bold text-[#800000]">即時</span>
+                    <span className="font-bold text-[#800000]">24時間以内</span>
                   </td>
                   <td className="px-6 py-4 text-center text-[#AAAAAA]">3日〜1週間</td>
                 </tr>
@@ -351,12 +351,12 @@ export default function CoursePage() {
             無料相談で、あなたの受験状況に最適なプランをご提案させていただきます。<br className="hidden md:inline" />
             塾長が直接、プラン選択のサポートを行いますので、お気軽にお申し込みください。
           </p>
-          
+
           {/* Scarcity message */}
           <p className="text-sm text-[#800000] mb-6">
             ※一人ひとりの指導密度を保つため、今年度の新規受付は<span className="font-bold">残り13名</span>となっております
           </p>
-          
+
           <Link href="/#contact-form">
             <Button size="lg" className="bg-[#800000] hover:bg-[#C5A059] text-white text-base md:text-lg font-bold px-8 md:px-12 py-6 md:py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]">
               無料で個別相談を予約する
