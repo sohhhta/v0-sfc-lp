@@ -1,14 +1,18 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: '慶應SFC合格実績・合格者の声 | 佐藤塾',
   description: '慶應SFC合格率50.0%を誇る佐藤塾の合格実績。6年間で39名の合格者を輩出した、AIと塾長による圧倒的な指導結果を公開。',
 }
 
-// SectionTitle component - exactly as in app/course/page.tsx
+// SectionTitle component - exactly as in app/page.tsx
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
     <div className="text-center mb-12 md:mb-16">
@@ -33,18 +37,122 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function ResultsPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = (e.currentTarget as HTMLAnchorElement).href
+    const targetId = href.substring(href.indexOf('#') + 1)
+
+    if (targetId) {
+      e.preventDefault()
+      const targetElement = document.getElementById(targetId)
+
+      if (targetElement) {
+        const headerHeight = 80
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+          {/* Logo - left */}
           <Link href="/" className="text-xl font-bold text-primary font-serif tracking-[0.1em] hover:opacity-80 transition-opacity">
             佐藤塾
           </Link>
-          <Link href="/#contact-form">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-200">無料相談を申し込む</Button>
-          </Link>
+
+          {/* Desktop Navigation - center */}
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-sm text-[#333333] hover:text-primary transition-colors">
+              ホーム
+            </Link>
+            <Link href="/course" className="text-sm text-[#333333] hover:text-primary transition-colors">
+              コース・料金
+            </Link>
+            <Link href="/results" className="text-sm text-[#333333] hover:text-primary transition-colors font-semibold">
+              合格実績
+            </Link>
+            <Link href="/guide/essay" className="text-sm text-[#333333] hover:text-primary transition-colors">
+              小論文ガイド
+            </Link>
+          </div>
+
+          {/* Right side - button and mobile menu toggle */}
+          <div className="flex items-center gap-4">
+            {/* Desktop Button */}
+            <a href="/#contact-form" onClick={handleSmoothScroll} className="hidden md:block">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
+            </a>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 hover:bg-[#F0F0F0] rounded-lg transition-colors"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6 text-primary" />
+              ) : (
+                <Menu className="w-6 h-6 text-primary" />
+              )}
+            </button>
+
+            {/* Mobile Button */}
+            <a href="/#contact-form" onClick={handleSmoothScroll} className="md:hidden">
+              <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">
+                無料相談
+              </Button>
+            </a>
+          </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-border">
+            <div className="px-4 py-4 space-y-3">
+              <Link
+                href="/"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                ホーム
+              </Link>
+              <Link
+                href="/course"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                コース・料金
+              </Link>
+              <Link
+                href="/results"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors font-semibold"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                合格実績
+              </Link>
+              <Link
+                href="/guide/essay"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                小論文ガイド
+              </Link>
+              <a href="/#contact-form" onClick={(e) => { handleSmoothScroll(e); setMobileMenuOpen(false); }} className="block pt-2">
+                <Button size="sm" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-200">
+                  無料相談を申し込む
+                </Button>
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
