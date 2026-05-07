@@ -1514,7 +1514,7 @@ export default function Page() {
       {/* Contact Form Section - White */}
       <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-20">
         <div className="max-w-2xl mx-auto">
-          <SectionTitle subtitle="プランの選び方や学習スケジュールの立て方など、塾長が直接お答えします">
+          <SectionTitle subtitle="一人ひとりの指導密度を保つため、今年度の新規受付は残り13名となっております">
             30秒で申し込み！個別相談申し込み
           </SectionTitle>
 
