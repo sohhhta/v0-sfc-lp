@@ -185,14 +185,6 @@ export default function ResultsPage() {
                     <td className="px-4 py-4 text-center text-sm text-[#333333]">3名</td>
                     <td className="px-4 py-4 text-center text-sm text-[#333333]">3名</td>
                   </tr>
-                  <tr>
-                    <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm font-bold text-[#002147] whitespace-nowrap">2021年度</td>
-                    <td className="px-4 py-4 text-center bg-[#C5A059]/10 border-l-2 border-[#C5A059]/30">
-                      <span className="text-base font-bold text-[#800000]">6名</span>
-                    </td>
-                    <td className="px-4 py-4 text-center text-sm text-[#333333]">3名</td>
-                    <td className="px-4 py-4 text-center text-sm text-[#333333]">3名</td>
-                  </tr>
                 </tbody>
               </table>
             </div>
