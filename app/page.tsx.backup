@@ -449,15 +449,6 @@ export default function Page() {
             </Card>
           </div>
         </div>
-
-          {/* CTA Button for Results */}
-          <div className="text-center mt-12">
-            <Link href="/results">
-              <Button className="bg-[#002147] hover:bg-[#800000] text-white font-bold px-8 py-6 h-auto transition-all duration-300 hover:shadow-lg">
-                すべての合格実績と年度別の推移を見る
-              </Button>
-            </Link>
-          </div>
       </section>
 
       {/* Problem Section - Editorial Magazine Style */}
@@ -1059,23 +1050,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Essay Guide Banner */}
-      <section className="py-16 md:py-20 px-4 bg-[#F8F9FA]">
-        <div className="max-w-3xl mx-auto">
-          <Link href="/guide/essay">
-            <div className="border-l-4 border-[#002147] pl-6 py-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer">
-              <p className="text-sm text-[#666666] font-bold mb-2">無料教材</p>
-              <h3 className="text-lg md:text-xl font-bold text-[#002147] font-serif mb-3">
-                【無料公開】合格者が実践した「SFC小論文・完全攻略ガイド」
-              </h3>
-              <p className="text-sm text-[#333333] leading-relaxed">
-                慶應SFC合格に必要な小論文戦略、実例、よくある落とし穴を完全網羅。完全無料でダウンロード・活用できます。
-              </p>
-            </div>
-          </Link>
-        </div>
-      </section>
-
       {/* Roadmap Section - Timeline */}
       <section className="py-28 px-4 bg-[#F9F9F9]">
         <div className="max-w-5xl mx-auto">
@@ -1344,9 +1318,6 @@ export default function Page() {
                 <a href="#contact-form" onClick={handleSmoothScroll} className="mt-auto">
                   <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
                     このプランで相談を予約する
-                    <Link href="/course" className="text-xs text-[#666666] hover:text-[#002147] underline mt-2 inline-block">
-                      このプランの詳細とサポート体制を確認する
-                    </Link>
                   </Button>
                 </a>
               </div>
@@ -1401,9 +1372,6 @@ export default function Page() {
                 <a href="#contact-form" onClick={handleSmoothScroll} className="mt-auto">
                   <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium">
                     このプランで相談を予約する
-                    <Link href="/course" className="text-xs text-[#666666] hover:text-[#002147] underline mt-2 inline-block">
-                      このプランの詳細とサポート体制を確認する
-                    </Link>
                   </Button>
                 </a>
               </div>
