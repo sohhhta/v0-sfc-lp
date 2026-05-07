@@ -443,7 +443,7 @@ export default function Page() {
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「当初はAI指導に不安もありましたが、対話を通じてく<span className="font-bold text-[#800000]">息子が自律的に机に向かう姿を見て驚きました。</span>単なる受験テクニックではなく、自分の人生を切り拓く<span className="font-bold text-[#800000]">『オーナーシップ』を育ててくれる</span>塾だと感じ、安心してお任せできました。」
+                  「当初はAI指導に不安もありましたが、対話を通じてく<span className="font-bold text-[#800000]">息子が自律的に机に向かう姿を見て驚きました。</span>単なる受験���クニックではなく、自分の人生を切り拓く<span className="font-bold text-[#800000]">『オーナーシップ』を育ててくれる</span>塾だと感じ、安心してお任せできました。」
                 </p>
               </CardContent>
             </Card>
@@ -1059,15 +1059,24 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Essay Guide Banner */}
-      <section className="py-16 md:py-20 px-4 bg-white">
-        <div className="max-w-3xl mx-auto">
+      {/* Essay Method Section */}
+      <section className="py-20 md:py-24 px-4" style={{ backgroundColor: '#C5A05910' }}>
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Main Headline */}
+          <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif mb-8 tracking-wide" style={{ wordBreak: 'keep-all' }}>
+            佐藤塾の小論文指導は何が違うのか？
+          </h2>
+
+          {/* Description */}
+          <p className="text-base md:text-lg text-[#333333] leading-relaxed mb-10 max-w-2xl mx-auto">
+            慶應SFC合格に必要な「問いを立てる力」を、AIと塾長がどう鍛えるか。合格メソッドの全貌を公開しています。
+          </p>
+
+          {/* CTA Button */}
           <Link href="/guide/essay">
-            <button className="w-full border-2 border-[#002147] rounded-lg px-6 py-6 md:py-8 bg-white hover:bg-[#F0F4F8] transition-colors duration-300 text-left">
-              <h3 className="text-lg md:text-xl font-bold text-[#002147] font-serif mb-2">
-                佐藤塾の合格メソッドを公開中。小論文学習メソッドの詳細説明はこちら
-              </h3>
-            </button>
+            <Button className="bg-[#002147] hover:bg-[#800000] text-white font-bold px-10 py-6 h-auto text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              小論文学習メソッドの詳細説明はこちら
+            </Button>
           </Link>
         </div>
       </section>
@@ -1082,7 +1091,7 @@ export default function Page() {
               合格までのロードマップ
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              いつ、何をして合格を掴むか。SFC合格への道筋を可視化します。
+              ���つ、何をして合格を掴むか。SFC合格への道筋を可視化します。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -1343,8 +1352,10 @@ export default function Page() {
                       このプランで相談を予約する
                     </Button>
                   </a>
-                  <Link href="/course" className="text-xs text-[#666666] hover:text-[#002147] underline text-center py-2">
-                    このプランの詳細とサポート体制を確認する
+                  <Link href="/course">
+                    <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-medium transition-all duration-200">
+                      このプランの詳細とサポート体制を確認する
+                    </Button>
                   </Link>
                 </div>
               </div>
@@ -1402,8 +1413,10 @@ export default function Page() {
                       このプランで相談を予約する
                     </Button>
                   </a>
-                  <Link href="/course" className="text-xs text-[#666666] hover:text-[#002147] underline text-center py-2">
-                    このプランの詳細とサポート体制を確認する
+                  <Link href="/course">
+                    <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-medium transition-all duration-200">
+                      このプランの詳細とサポート体制を確認する
+                    </Button>
                   </Link>
                 </div>
               </div>
@@ -1697,7 +1710,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                はい、<strong>月単位でのプラン変更が可能</strong>です。学力進捗や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
+                はい、<strong>月単位でのプラン���更が可能</strong>です。学力進捗や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
               </div>
             </details>
           </div>
