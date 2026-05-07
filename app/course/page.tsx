@@ -1,10 +1,7 @@
-'use client'
-
 import { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import Link from 'next/link'
-import { useState } from 'react'
+import { FAQAccordion } from './faq-accordion'
 
 export const metadata: Metadata = {
   title: '慶應SFC合格のためのコース・料金体系 | 佐藤塾（AI×塾長のハイブリッド指導）',
@@ -22,30 +19,6 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 }
 
 export default function CoursePage() {
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
-
-  const toggleFaq = (index: number) => {
-    setOpenFaqIndex(openFaqIndex === index ? null : index)
-  }
-
-  const faqs = [
-    {
-      question: 'AO入試と一般入試のどちらを受験するか決まっていないのですが',
-      answer: 'SFC二刀流プランをお勧めします。このプランではAO入試・一般入試両方の対策を行いますので、いずれの入試形式にも対応できます。'
-    },
-    {
-      question: '他塾と併用することはできますか',
-      answer: 'もちろん可能です。特に小論文特化プランは他塾の授業と組み合わせてご利用いただくことを想定した設計になっています。'
-    },
-    {
-      question: '月途中での退会は可能ですか',
-      answer: 'はい、月単位でのご退会が可能です。合格後は自動退塾となり、追加の費用は一切発生しません。'
-    },
-    {
-      question: '料金プランの変更はできますか',
-      answer: 'はい、月単位でプランの変更が可能です。学習進度や状況に応じて、いつでも柔軟に対応できます。お気軽にご相談ください。'
-    }
-  ]
 
   return (
     <div className="min-h-screen bg-white">
@@ -242,35 +215,7 @@ export default function CoursePage() {
       <section className="py-40 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <SectionTitle>よくある質問</SectionTitle>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white border border-[#E5E7EB] rounded-lg overflow-hidden hover:border-[#D4AF37] transition-colors" style={{ boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)' }}>
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between p-6 hover:bg-[#F8FAFC] transition-colors"
-                  style={{ fontFamily: "'Noto Sans JP', sans-serif" }}
-                >
-                  <span className="font-bold text-[#002147] text-left text-sm md:text-base" style={{ letterSpacing: '0.02em' }}>
-                    {faq.question}
-                  </span>
-                  <div className={`flex-shrink-0 w-6 h-6 flex items-center justify-center text-[#D4AF37] transition-transform ${openFaqIndex === index ? 'rotate-180' : ''}`}>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                </button>
-                
-                {openFaqIndex === index && (
-                  <div className="px-6 pb-6 border-t border-[#E5E7EB] bg-[#F8FAFC]">
-                    <p className="text-sm md:text-base text-[#555555] leading-relaxed" style={{ fontFamily: "'Noto Sans JP', sans-serif", lineHeight: '1.8', letterSpacing: '0.02em' }}>
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+          <FAQAccordion />
         </div>
       </section>
 
