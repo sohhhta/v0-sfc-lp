@@ -255,7 +255,7 @@ export default function CoursePage() {
                   <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm font-bold text-[#002147] whitespace-nowrap">フィードバック</td>
                     <td className="px-4 py-4 text-center bg-[#C5A059]/10 border-l-2 border-[#C5A059]/30">
-                      <span className="text-base font-bold text-[#800000]">即時</span>
+                      <span className="text-base font-bold text-[#800000]">24時間以内</span>
                     </td>
                     <td className="px-4 py-4 text-center text-sm text-[#999999]">3日〜1週間</td>
                   </tr>
