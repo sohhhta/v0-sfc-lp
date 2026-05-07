@@ -113,7 +113,7 @@ export default function CoursePage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">英語・��学・情報の学習支援 <span className="font-bold text-[#800000]">学習計画と徹底管理</span></span>
+                    <span className="text-sm text-[#333333]">英語・数学・情報の学習支援 <span className="font-bold text-[#800000]">学習計画と徹底管理</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
