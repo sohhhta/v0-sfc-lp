@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '慶應SFC合格実績・合格者の声 | 佐藤塾',
-  description: '慶應SFC合格率50.0%を誇る佐藤塾の合格実績。7年間で49名の合格者を輩出した、AIと塾長による圧倒的な指導結果を公開。',
+  description: '慶應SFC合格率50.0%を誇る佐藤塾の合格実績。7年間で39名の合格者を輩出した、AIと塾長による圧倒的な指導結果を公開。',
 }
 
 // SectionTitle component - exactly as in app/course/page.tsx
@@ -101,7 +101,7 @@ export default function ResultsPage() {
                 <h3 className="text-lg font-bold font-serif mt-1">合格者数</h3>
               </div>
               <div className="flex-1 flex flex-col items-center justify-center p-6 md:p-8">
-                <div className="text-6xl md:text-7xl font-black text-[#C5A059] font-serif tracking-tight">49<span className="text-4xl md:text-5xl">名</span></div>
+                <div className="text-6xl md:text-7xl font-black text-[#C5A059] font-serif tracking-tight">39<span className="text-4xl md:text-5xl">名</span></div>
                 <p className="text-sm text-[#666666] mt-3 font-medium">SFC合格輩出</p>
               </div>
             </div>
