@@ -1060,18 +1060,14 @@ export default function Page() {
       </section>
 
       {/* Essay Guide Banner */}
-      <section className="py-16 md:py-20 px-4 bg-[#F8F9FA]">
+      <section className="py-16 md:py-20 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <Link href="/guide/essay">
-            <div className="border-l-4 border-[#002147] pl-6 py-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer">
-              <p className="text-sm text-[#666666] font-bold mb-2">無料教材</p>
-              <h3 className="text-lg md:text-xl font-bold text-[#002147] font-serif mb-3">
-                【無料公開】合格者が実践した「SFC小論文・完全攻略ガイド」
+            <button className="w-full border-2 border-[#002147] rounded-lg px-6 py-6 md:py-8 bg-white hover:bg-[#F0F4F8] transition-colors duration-300 text-left">
+              <h3 className="text-lg md:text-xl font-bold text-[#002147] font-serif mb-2">
+                佐藤塾の合格メソッドを公開中。小論文学習メソッドの詳細説明はこちら
               </h3>
-              <p className="text-sm text-[#333333] leading-relaxed">
-                慶應SFC合格に必要な小論文戦略、実例、よくある落とし穴を完全網羅。完全無料でダウンロード・活用できます。
-              </p>
-            </div>
+            </button>
           </Link>
         </div>
       </section>
@@ -1340,15 +1336,17 @@ export default function Page() {
                   </li>
                 </ul>
 
-                {/* CTA Button */}
-                <a href="#contact-form" onClick={handleSmoothScroll} className="mt-auto">
-                  <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
-                    このプランで相談を予約する
-                    <Link href="/course" className="text-xs text-[#666666] hover:text-[#002147] underline mt-2 inline-block">
-                      このプランの詳細とサポート体制を確認する
-                    </Link>
-                  </Button>
-                </a>
+                {/* Buttons Container */}
+                <div className="mt-auto flex flex-col gap-3">
+                  <a href="#contact-form" onClick={handleSmoothScroll}>
+                    <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
+                      このプランで相談を予約する
+                    </Button>
+                  </a>
+                  <Link href="/course" className="text-xs text-[#666666] hover:text-[#002147] underline text-center py-2">
+                    このプランの詳細とサポート体制を確認する
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -1397,15 +1395,17 @@ export default function Page() {
                   </li>
                 </ul>
 
-                {/* CTA Button */}
-                <a href="#contact-form" onClick={handleSmoothScroll} className="mt-auto">
-                  <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium">
-                    このプランで相談を予約する
-                    <Link href="/course" className="text-xs text-[#666666] hover:text-[#002147] underline mt-2 inline-block">
-                      このプランの詳細とサポート体制を確認する
-                    </Link>
-                  </Button>
-                </a>
+                {/* Buttons Container */}
+                <div className="mt-auto flex flex-col gap-3">
+                  <a href="#contact-form" onClick={handleSmoothScroll}>
+                    <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium">
+                      このプランで相談を予約する
+                    </Button>
+                  </a>
+                  <Link href="/course" className="text-xs text-[#666666] hover:text-[#002147] underline text-center py-2">
+                    このプランの詳細とサポート体制を確認する
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
