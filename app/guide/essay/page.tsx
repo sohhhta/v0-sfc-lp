@@ -286,11 +286,11 @@ export default function EssayGuidePage() {
             あなたの現在地を診断し、SFC合格までの道筋を塾長が直接ご提案します。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/#contact-form" onClick={handleSmoothScroll}>
+            <Link href="/#contact-form">
               <Button className="bg-[#C5A059] hover:bg-[#9d8a42] text-[#002147] font-bold px-10 py-6 h-auto">
                 無料で塾長に相談する
               </Button>
-            </a>
+            </Link>
             <Link href="/course">
               <Button className="border-2 border-[#C5A059] text-[#C5A059] bg-transparent hover:bg-[#C5A059] hover:text-[#002147] font-bold px-10 py-6 h-auto transition-all duration-300">
                 コース詳細を見る
