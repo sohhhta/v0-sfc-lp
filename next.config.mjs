@@ -6,35 +6,28 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // ここからリダイレクト設定を追加
+  // リダイレクト設定（旧サイトパスから新サイトパスへ）
+  // 注意: sourceには完全URLではなくパスのみを指定
   async redirects() {
     return [
       {
-        // 旧：コース・料金ページのURL
-        source: 'https://lifeeling.jp/elements/course-content/', 
+        // 旧：コース・料金ページのパス
+        source: '/elements/course-content',
         destination: '/course',
-        permanent: true, // trueにすることで301リダイレクトになります
+        permanent: true,
       },
       {
-        // 旧：合格実績ページのURL
-        source: 'https://lifeeling.jp/passing-record/',
+        // 旧：合格実績ページのパス
+        source: '/passing-record',
         destination: '/results',
         permanent: true,
       },
       {
-        // 旧：小論文ガイド関連のURL
-        source: 'https://lifeeling.jp/recommended-articles/',
+        // 旧：小論文ガイド関連のパス
+        source: '/recommended-articles',
         destination: '/guide/essay',
         permanent: true,
       },
-      // もし旧サイトの特定のディレクトリ（例: /blog/...）をすべて新ガイドに飛ばしたい場合
-      /*
-      {
-        source: '/blog/:path*',
-        destination: '/guide/essay',
-        permanent: true,
-      },
-      */
     ]
   },
 }
