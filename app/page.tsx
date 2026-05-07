@@ -1064,7 +1064,7 @@ export default function Page() {
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Headline */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif mb-8 tracking-wide" style={{ wordBreak: 'keep-all' }}>
-            佐藤塾の小論文指導は何が違うのか？
+            佐藤塾の小論文指導とは
           </h2>
 
           {/* Description */}
