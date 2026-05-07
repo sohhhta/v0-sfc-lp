@@ -48,13 +48,16 @@ export default function CoursePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-12 md:py-16 px-4 bg-gradient-to-b from-[#002147]/5 to-white">
+      <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center">
-            <h1 className="text-3xl md:text-5xl font-bold text-primary mb-4 md:mb-6 font-serif tracking-wider" style={{ wordBreak: 'keep-all' }}>
+            <span className="inline-block text-xs font-bold tracking-[0.25em] text-[#C5A059] border border-[#C5A059]/50 px-5 py-2 rounded-full mb-8 uppercase">
+              PRICING
+            </span>
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-5 md:mb-6 font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
               コース詳細・料金体系
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
+            <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed px-4">
               慶應SFC合格に特化した2つのプラン。あなたの受験戦略に合わせて、最適なプランをお選びください。
             </p>
           </div>
@@ -68,7 +71,7 @@ export default function CoursePage() {
 
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {/* Main Plan - SFC二刀流プラン */}
-            <div className="relative flex flex-col bg-white shadow-xl border-4 border-[#800000] rounded-xl overflow-hidden">
+            <div className="relative flex flex-col bg-white shadow-xl border-4 border-[#800000]/60 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.01]">
               {/* 人気No.1 ラベル */}
               <div className="absolute top-4 right-4 bg-[#800000] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10 border-2 border-[#C5A059]">
                 人気No.1
@@ -83,10 +86,10 @@ export default function CoursePage() {
                 <div className="mb-6">
                   <p className="text-[#666666] text-xs mb-1">月額料金</p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">138,000</span>
-                    <span className="text-xl font-bold text-[#800000]">円</span>
+                    <span className="text-6xl md:text-7xl font-black text-[#800000] font-serif tracking-tight">138,000</span>
+                    <span className="text-2xl font-black text-[#800000]">円</span>
                   </div>
-                  <p className="text-sm text-[#333333] mt-1">/ 月（税込 151,800円）</p>
+                  <p className="text-sm text-[#333333] mt-2 font-medium">/ 月（税込 151,800円）</p>
                 </div>
 
                 {/* Zero fees highlight */}
@@ -131,7 +134,7 @@ export default function CoursePage() {
             </div>
 
             {/* Secondary Plan - 小論文特化プラン */}
-            <div className="relative flex flex-col bg-white shadow-md border-2 border-[#E5E7EB] rounded-xl overflow-hidden">
+            <div className="relative flex flex-col bg-white shadow-xl border-2 border-[#002147]/40 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.01]">
               <div className="bg-[#F3F4F6] text-[#333333] px-6 py-6 border-b border-[#E5E7EB]">
                 <h2 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">他塾併願者に推奨<br />小論文特化プラン</h2>
               </div>
@@ -141,10 +144,10 @@ export default function CoursePage() {
                 <div className="mb-6">
                   <p className="text-[#666666] text-xs mb-1">月額料金</p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-[#002147] font-serif">118,000</span>
-                    <span className="text-xl font-bold text-[#002147]">円</span>
+                    <span className="text-6xl md:text-7xl font-black text-[#002147] font-serif tracking-tight">118,000</span>
+                    <span className="text-2xl font-black text-[#002147]">円</span>
                   </div>
-                  <p className="text-sm text-[#333333] mt-1">/ 月（税込 129,800円）</p>
+                  <p className="text-sm text-[#333333] mt-2 font-medium">/ 月（税込 129,800円）</p>
                 </div>
 
                 {/* Zero fees highlight */}
