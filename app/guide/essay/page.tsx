@@ -155,10 +155,10 @@ export default function EssayGuidePage() {
             ESSAY GUIDE
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-5 md:mb-6 font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
-            SFC小論文完全攻略ガイド
+            SFC小論文攻略メソッド
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed px-4">
-            慶應SFC合格に必要な「問題発見・解決能力」を測る小論文試験。その全容と対策を、完全網羅しています。
+            慶應SFC合格に必要な「問題発見・解決能力」を測る小論文試験。その全容と対策の大枠を解説しています。
           </p>
         </div>
       </section>
@@ -171,7 +171,7 @@ export default function EssayGuidePage() {
           <SectionTitle>SFC小論文とは</SectionTitle>
           <div className="bg-white border-l-4 border-[#002147] px-6 md:px-10 py-8 rounded-lg shadow-lg mb-8">
             <p className="text-base md:text-lg text-[#333333] leading-relaxed font-medium">
-              SFCの小論文は、文章力ではなく<span className="text-[#800000] font-bold">「問題発見・解決能力」を測る試験</span>です。10枚以上の膨大な資料を読み解き、現代社会の複雑な課題に対し、あなた独自の具体的な解決策を提示することが求められます。
+              SFCの小論文は、文章力ではなく<span className="text-[#800000] font-bold">「問題発見・解決能力」を測る試験</span>です。平均でも10枚以上の膨大な資料を読み解き、現代社会の複雑な課題に対し、あなた独自の具体的な解決策を提示することが求められます。
             </p>
           </div>
         </section>
@@ -212,31 +212,31 @@ export default function EssayGuidePage() {
           <div className="space-y-6">
             {/* Method 1 */}
             <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
-              <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">過去問の「型」を覚える</h4>
+              <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">小論文の基礎を固める</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                総合政策と環境情報の出題傾向の違いを理解し、AIで何度も反復練習する。毎年出題される「問題群」がパターン化されており、これを把握することが最初の一歩です。
+                まずは、ロジカルシンキングとロジカルライティングの基礎を固めます。その他にも接続詞や体系的記述なども学びます。<span className="font-bold">この過程を踏めるかどうかが合格に一番影響します</span>。
               </p>
             </div>
 
             {/* Method 2 */}
             <div className="bg-[#F8F9FA] border-l-4 border-[#800000] pl-6 py-6 rounded-r-lg">
-              <h4 className="text-lg font-bold text-[#800000] font-serif mb-3">論理構成の24時間添削</h4>
+              <h4 className="text-lg font-bold text-[#800000] font-serif mb-3">とにかく量をこなす</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                自分の思考をすぐに言語化し、AIによる即時フィードバックで<span className="font-bold">「論理の穴」を潰す</span>。この反復サイクルが、最も効率的な学習方法です。
+                次に様々な問題に対して、自分の思考を言語化しフィードバックをもらうという工程をとにかく踏みましょう。佐藤塾ではAIによる即時フィードバックで<span className="font-bold">圧倒的な量の担保を実現します</span>。この反復サイクルが、最も効率的な学習方法です。
               </p>
             </div>
 
             {/* Method 3 */}
             <div className="bg-[#F8F9FA] border-l-4 border-[#C5A059] pl-6 py-6 rounded-r-lg">
-              <h4 className="text-lg font-bold text-[#C5A059] font-serif mb-3">時事問題のストック</h4>
+              <h4 className="text-lg font-bold text-[#C5A059] font-serif mb-3">過去問の「型」を覚える</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                最新のテクノロジー（AI、Web3等）や社会問題（少子高齢化、地方創生）への<span className="font-bold">解像度を上げる</span>。出題の背景にある社会課題を理解することで、深い考察が可能になります。
+                総合政策と環境情報の出題傾向の違いを理解し、何度も反復練習する。<span className="font-bold">1年度の問題に対しても複数の回答を作成し、SFCの過去問を徹底的に叩き込みましょう</span>。全く異なる年度の問題も特定のパターンに落とし込めます。
               </p>
             </div>
 
             {/* Method 4 */}
             <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
-              <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">塾長との戦略会議</h4>
+              <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">同じ人に長期的に指導してもらう</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
                 自分では気づけない「独自の視点」を、個別面談で深掘りし、磨き上げる。AIの添削だけでなく、人間にしかできない指導を組み合わせることが合格への最短ルートです。
               </p>
