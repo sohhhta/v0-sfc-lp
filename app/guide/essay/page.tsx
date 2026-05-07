@@ -258,17 +258,17 @@ export default function EssayGuidePage() {
 
             {/* Point 2 - NEW */}
             <div className="bg-white border-2 border-[#C5A059] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <h4 className="text-lg font-bold text-[#C5A059] font-serif mb-3">小論文としての文を書く</h4>
+              <h4 className="text-lg font-bold text-[#C5A059] font-serif mb-3">小論文として成立する文を書く</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                客観的な文体、明確な論理構成、そして学術的な用語選定。日記や作文ではない「論考」としての質を追求する。SFCが求める答案は、高度な思考力を文章で表現したものです。
+                ロジカルにライティングすることは小論文にとって最重要です。どれだけ面白い内容や独自性が高い内容を書いても論理的に書かれていないと高得点は取れません。
               </p>
             </div>
 
             {/* Point 3 */}
             <div className="bg-white border-2 border-[#800000] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <h4 className="text-lg font-bold text-[#800000] font-serif mb-3">具体性と実現可能性</h4>
+              <h4 className="text-lg font-bold text-[#800000] font-serif mb-3">独自性と実現可能性</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                単なる理想論ではなく、技術的・社会的に実行可能な解決策を提示する。SFCが求めているのは、現実を見据えた実践的な思考力です。
+                単なる理想論や一般論ではなく、技術的・社会的に実行可能かつ独自性がある解決策を提示するようにしましょう。SFCが求めているのは、現実を見据えた実践的かつ個性的な思考力です。
               </p>
             </div>
           </div>
