@@ -435,7 +435,7 @@ export default function Page() {
             </p>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
               <span className="text-[#C5A059] mr-1">◆</span>
-              佐藤塾が独自に開発したSFC専用AIが、あなたの答案をその場ですぐに分析。24時間、何度でも高品質なフィードバックを受けられる環境に加え塾長が並走指導を行うことで、合格ラインを確実に突破する力を引き上げます。
+              佐藤塾が独自に開発したSFC専用AIが、あなたの答案をその場ですぐに分析。24時間、何度でも高品質なフィードバ��クを受けられる環境に加え塾長が並走指導を行うことで、合格ラインを確実に突破する力を引き上げます。
             </p>
           </div>
         </div>
@@ -1377,7 +1377,7 @@ export default function Page() {
                   </p>
                 </div>
               ) : (
-                <form className="space-y-6" onSubmit={handleFormSubmit}>
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   {/* Error message display */}
                   {formError && (
                     <div className="bg-red-50 border border-red-200 rounded-lg p-4">
@@ -1515,7 +1515,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
+                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字��根拠です。
               </div>
             </details>
 
