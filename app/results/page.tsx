@@ -324,7 +324,7 @@ export default function ResultsPage() {
           
           {/* Scarcity message */}
           <p className="text-sm text-[#800000] mb-6">
-            ※一人ひとりの指導密度を保つため、今月の新規受付は<span className="font-bold">残り3名</span>となっております
+            ※一人ひとりの指導密度を保つため、今年度の新規受付は<span className="font-bold">残り13名</span>となっております
           </p>
           
           <Link href="/#contact-form">
