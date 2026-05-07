@@ -278,7 +278,7 @@ export default function CoursePage() {
                     <td className="px-4 py-4 text-center bg-[#C5A059]/10 border-l-2 border-[#C5A059]/30">
                       <span className="text-base font-bold text-[#800000]">0円</span>
                     </td>
-                    <td className="px-4 py-4 text-center text-sm text-[#999999]">別途請求あり</td>
+                    <td className="px-4 py-4 text-center text-sm text-[#999999]">別途請求(講習代)あり</td>
                   </tr>
                 </tbody>
               </table>
