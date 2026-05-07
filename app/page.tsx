@@ -1470,7 +1470,7 @@ export default function Page() {
       <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-20">
         <div className="max-w-2xl mx-auto">
           <SectionTitle subtitle="プランの選び方や学習スケジュールの立て方など、塾長が直接お答えします">
-            30秒で申し込み！個別相��申し込み
+            30秒で申し込み！個別相談申し込み
           </SectionTitle>
 
           <Card className="bg-white shadow-lg border-t-4 border-t-[#800000] border-x border-b border-border rounded-xl">
@@ -1614,7 +1614,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                はい、全く問題ありません。本塾のシステムは<strong>スマートフォン1台</strong>で全ての添削・指導が完結するように設計されています。PCの有無が合否に影響することはありませんのでご安心ください���
+                はい、全く問題ありません。本塾のシステムは<strong>スマートフォン1台</strong>で全ての添削・指導が完結するように設計されています。PCの有無が合否に影響することはありませんのでご安心ください。
               </div>
             </details>
 
