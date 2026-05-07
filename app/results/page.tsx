@@ -97,7 +97,7 @@ export default function ResultsPage() {
             {/* Card 3: 累計合格者 */}
             <div className="flex flex-col bg-white shadow-xl border-2 border-[#C5A059]/50 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
               <div className="bg-gradient-to-br from-[#C5A059] to-[#9d8a42] text-white px-6 py-5">
-                <p className="text-xs font-bold tracking-wider opacity-90">7年間累計</p>
+                <p className="text-xs font-bold tracking-wider opacity-90">6年間累計</p>
                 <h3 className="text-lg font-bold font-serif mt-1">合格者数</h3>
               </div>
               <div className="flex-1 flex flex-col items-center justify-center p-6 md:p-8">
@@ -208,40 +208,40 @@ export default function ResultsPage() {
                   <td className="px-6 py-4 text-center bg-[#C5A059]/5">
                     <span className="font-bold text-[#800000]">7名</span>
                   </td>
-                  <td className="px-6 py-4 text-center text-[#333333]">4名</td>
-                  <td className="px-6 py-4 text-center text-[#333333]">3名</td>
+                  <td className="px-6 py-4 text-center text-[#333333]">2名</td>
+                  <td className="px-6 py-4 text-center text-[#333333]">5名</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-bold text-[#002147]">2025年度</td>
                   <td className="px-6 py-4 text-center bg-[#C5A059]/5">
                     <span className="font-bold text-[#800000]">8名</span>
                   </td>
-                  <td className="px-6 py-4 text-center text-[#333333]">5名</td>
                   <td className="px-6 py-4 text-center text-[#333333]">3名</td>
+                  <td className="px-6 py-4 text-center text-[#333333]">5名</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-bold text-[#002147]">2024年度</td>
                   <td className="px-6 py-4 text-center bg-[#C5A059]/5">
                     <span className="font-bold text-[#800000]">9名</span>
                   </td>
-                  <td className="px-6 py-4 text-center text-[#333333]">5名</td>
-                  <td className="px-6 py-4 text-center text-[#333333]">4名</td>
+                  <td className="px-6 py-4 text-center text-[#333333]">3名</td>
+                  <td className="px-6 py-4 text-center text-[#333333]">6名</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-bold text-[#002147]">2023年度</td>
                   <td className="px-6 py-4 text-center bg-[#C5A059]/5">
                     <span className="font-bold text-[#800000]">7名</span>
                   </td>
-                  <td className="px-6 py-4 text-center text-[#333333]">4名</td>
-                  <td className="px-6 py-4 text-center text-[#333333]">3名</td>
+                  <td className="px-6 py-4 text-center text-[#333333]">2名</td>
+                  <td className="px-6 py-4 text-center text-[#333333]">5名</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-bold text-[#002147]">2022年度</td>
                   <td className="px-6 py-4 text-center bg-[#C5A059]/5">
                     <span className="font-bold text-[#800000]">6名</span>
                   </td>
-                  <td className="px-6 py-4 text-center text-[#333333]">3名</td>
-                  <td className="px-6 py-4 text-center text-[#333333]">3名</td>
+                  <td className="px-6 py-4 text-center text-[#333333]">1名</td>
+                  <td className="px-6 py-4 text-center text-[#333333]">5名</td>
                 </tr>
               </tbody>
             </table>
