@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'コース詳細・料金体系 | 佐藤塾 - 慶應SFC専門',
+  title: '慶應SFC合格のためのコース・料金体系 | 佐藤塾',
   description: '慶應SFC合格に特化した2つのプラン。AI添削24時間無制限と塾長の個別指導で合格率50%を実現。SFC二刀流プラン¥151,800/月、小論文特化プラン¥129,800/月。',
 }
 
@@ -113,7 +113,7 @@ export default function CoursePage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">英語・数学・情報の学習支援 <span className="font-bold text-[#800000]">学習計画と徹底管理</span></span>
+                    <span className="text-sm text-[#333333]">英語・��学・情報の学習支援 <span className="font-bold text-[#800000]">学習計画と徹底管理</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
@@ -229,34 +229,61 @@ export default function CoursePage() {
       </section>
 
       {/* Comparison Table Section */}
-      <section className="py-16 md:py-20 px-4 bg-[#F8F9FA]">
+      <section className="py-16 md:py-20 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <SectionTitle>他塾との違い</SectionTitle>
 
-          {/* Mobile: Card layout */}
-          <div className="md:hidden space-y-4">
-            {[
-              { label: '添削回数', sato: '無制限', other: '週1〜2回' },
-              { label: 'フィードバック', sato: '即時', other: '3日〜1週間' },
-              { label: '対応時間', sato: '24時間365日', other: '営業時間のみ' },
-              { label: '指導範囲', sato: 'AO・一般両対応', other: '片方のみ' },
-              { label: '追加費用', sato: '0円', other: '別途請求あり' },
-            ].map((item, i) => (
-              <div key={i} className="bg-white rounded-lg shadow-sm border border-[#E5E7EB] p-4">
-                <p className="text-xs text-[#666666] mb-2">{item.label}</p>
-                <div className="flex justify-between items-center">
-                  <div className="flex-1">
-                    <p className="text-xs text-[#C5A059] font-bold mb-1">佐藤塾</p>
-                    <p className="text-lg font-bold text-[#800000]">{item.sato}</p>
-                  </div>
-                  <div className="w-px h-10 bg-[#E5E7EB] mx-4" />
-                  <div className="flex-1 text-right">
-                    <p className="text-xs text-[#999999] mb-1">一般的な塾</p>
-                    <p className="text-base text-[#AAAAAA]">{item.other}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+          {/* Mobile: Horizontal scroll table with sticky first column */}
+          <div className="md:hidden">
+            <div className="relative overflow-x-auto rounded-xl shadow-lg" style={{ boxShadow: '4px 0 8px -4px rgba(0,0,0,0.1) inset, -4px 0 8px -4px rgba(0,0,0,0.05) inset' }}>
+              <table className="w-full min-w-[400px] border-collapse">
+                <thead>
+                  <tr className="bg-[#002147]">
+                    <th className="sticky left-0 z-10 bg-[#002147] px-4 py-3 text-left text-sm font-bold text-white whitespace-nowrap" style={{ minWidth: '100px' }}>項目</th>
+                    <th className="px-4 py-3 text-center text-sm font-bold text-[#C5A059] whitespace-nowrap border-l-2 border-[#C5A059]/30" style={{ minWidth: '120px' }}>佐藤塾</th>
+                    <th className="px-4 py-3 text-center text-sm font-bold text-white/60 whitespace-nowrap" style={{ minWidth: '120px' }}>一般的な塾</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-[#E5E7EB]">
+                    <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm font-bold text-[#002147] whitespace-nowrap">添削回数</td>
+                    <td className="px-4 py-4 text-center bg-[#C5A059]/10 border-l-2 border-[#C5A059]/30">
+                      <span className="text-base font-bold text-[#800000]">無制限</span>
+                    </td>
+                    <td className="px-4 py-4 text-center text-sm text-[#999999]">週1〜2回</td>
+                  </tr>
+                  <tr className="border-b border-[#E5E7EB]">
+                    <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm font-bold text-[#002147] whitespace-nowrap">フィードバック</td>
+                    <td className="px-4 py-4 text-center bg-[#C5A059]/10 border-l-2 border-[#C5A059]/30">
+                      <span className="text-base font-bold text-[#800000]">即時</span>
+                    </td>
+                    <td className="px-4 py-4 text-center text-sm text-[#999999]">3日〜1週間</td>
+                  </tr>
+                  <tr className="border-b border-[#E5E7EB]">
+                    <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm font-bold text-[#002147] whitespace-nowrap">対応時間</td>
+                    <td className="px-4 py-4 text-center bg-[#C5A059]/10 border-l-2 border-[#C5A059]/30">
+                      <span className="text-base font-bold text-[#800000]">24時間</span>
+                    </td>
+                    <td className="px-4 py-4 text-center text-sm text-[#999999]">営業時間のみ</td>
+                  </tr>
+                  <tr className="border-b border-[#E5E7EB]">
+                    <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm font-bold text-[#002147] whitespace-nowrap">指導範囲</td>
+                    <td className="px-4 py-4 text-center bg-[#C5A059]/10 border-l-2 border-[#C5A059]/30">
+                      <span className="text-base font-bold text-[#800000]">AO・一般</span>
+                    </td>
+                    <td className="px-4 py-4 text-center text-sm text-[#999999]">片方のみ</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm font-bold text-[#002147] whitespace-nowrap">追加費用</td>
+                    <td className="px-4 py-4 text-center bg-[#C5A059]/10 border-l-2 border-[#C5A059]/30">
+                      <span className="text-base font-bold text-[#800000]">0円</span>
+                    </td>
+                    <td className="px-4 py-4 text-center text-sm text-[#999999]">別途請求あり</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-[#999999] text-center mt-3">左右にスワイプして全体を確認できます</p>
           </div>
 
           {/* Desktop: Table layout */}
@@ -312,7 +339,7 @@ export default function CoursePage() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-16 md:py-20 px-4 bg-white">
+      <section className="py-16 md:py-20 px-4 bg-[#F8F9FA]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-4xl font-bold text-[#002147] mb-4 md:mb-6 font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
             プラン選択に迷った方へ
@@ -321,6 +348,12 @@ export default function CoursePage() {
             無料相談で、あなたの受験状況に最適なプランをご提案させていただきます。<br className="hidden md:inline" />
             塾長が直接、プラン選択のサポートを行いますので、お気軽にお申し込みください。
           </p>
+          
+          {/* Scarcity message */}
+          <p className="text-sm text-[#800000] mb-6">
+            ※一人ひとりの指導密度を保つため、今月の新規受付は<span className="font-bold">残り3名</span>となっております
+          </p>
+          
           <Link href="/#contact-form">
             <Button size="lg" className="bg-[#800000] hover:bg-[#C5A059] text-white text-base md:text-lg font-bold px-8 md:px-12 py-6 md:py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]">
               無料で個別相談を予約する
