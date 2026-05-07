@@ -238,7 +238,7 @@ export default function EssayGuidePage() {
             <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
               <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">同じ人に長期的に指導してもらう</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                自分では気づけない「独自の視点」を、個別面談で深掘りし、磨き上げる。AIの添削だけでなく、人間にしかできない指導を組み合わせることが合格への最短ルートです。
+                長期的に指導してもらうことで、過去の内容も踏まえ自分では気づけない「独自の視点」を磨き上げます。<span className="font-bold">1佐藤塾ではAIの添削だけでなく、人間にしかできない指導を塾長と一緒に組み合わせることができます。
               </p>
             </div>
           </div>
