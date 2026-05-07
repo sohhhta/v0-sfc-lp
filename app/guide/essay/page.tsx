@@ -1,9 +1,9 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
+import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
 
 // Section title component (consistent with main LP)
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
@@ -14,11 +14,11 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
         <div className="w-2 h-2 bg-[#002147] rotate-45" />
         <div className="h-px w-16 bg-[#002147]" />
       </div>
-      <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em]">
+      <h3 className="text-3xl md:text-4xl font-bold text-primary font-serif tracking-[0.08em]">
         {children}
-      </h2>
+      </h3>
       {subtitle && (
-        <p className="text-[#666666] mt-4 text-lg">{subtitle}</p>
+        <p className="text-muted-foreground mt-4 text-lg">{subtitle}</p>
       )}
       <div className="flex items-center justify-center gap-6 mt-6">
         <div className="h-px w-16 bg-[#002147]" />
@@ -30,308 +30,334 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function EssayGuidePage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = (e.currentTarget as HTMLAnchorElement).href
+    const targetId = href.substring(href.indexOf('#') + 1)
+
+    if (targetId) {
+      e.preventDefault()
+      const targetElement = document.getElementById(targetId)
+
+      if (targetElement) {
+        const headerHeight = 80
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold text-[#002147] font-serif tracking-[0.1em]">佐藤塾</Link>
-          <Link href="/#contact-form">
-            <Button variant="outline" className="border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white font-medium">無料相談を申し込む</Button>
+          {/* Logo - left */}
+          <Link href="/" className="text-xl font-bold text-primary font-serif tracking-[0.1em] hover:opacity-80 transition-opacity">
+            佐藤塾
           </Link>
+
+          {/* Desktop Navigation - center */}
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-sm text-[#333333] hover:text-primary transition-colors">
+              ホーム
+            </Link>
+            <Link href="/course" className="text-sm text-[#333333] hover:text-primary transition-colors">
+              コース・料金
+            </Link>
+            <Link href="/results" className="text-sm text-[#333333] hover:text-primary transition-colors">
+              合格実績
+            </Link>
+            <Link href="/guide/essay" className="text-sm text-[#333333] hover:text-primary transition-colors font-semibold">
+              小論文ガイド
+            </Link>
+          </div>
+
+          {/* Right side - button and mobile menu toggle */}
+          <div className="flex items-center gap-4">
+            {/* Desktop Button */}
+            <a href="/#contact-form" onClick={handleSmoothScroll} className="hidden md:block">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
+            </a>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 hover:bg-[#F0F0F0] rounded-lg transition-colors"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6 text-primary" />
+              ) : (
+                <Menu className="w-6 h-6 text-primary" />
+              )}
+            </button>
+
+            {/* Mobile Button */}
+            <a href="/#contact-form" onClick={handleSmoothScroll} className="md:hidden">
+              <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">
+                無料相談
+              </Button>
+            </a>
+          </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-border">
+            <div className="px-4 py-4 space-y-3">
+              <Link
+                href="/"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                ホーム
+              </Link>
+              <Link
+                href="/course"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                コース・料金
+              </Link>
+              <Link
+                href="/results"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                合格実績
+              </Link>
+              <Link
+                href="/guide/essay"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors font-semibold"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                小論文ガイド
+              </Link>
+              <a href="/#contact-form" onClick={(e) => { handleSmoothScroll(e); setMobileMenuOpen(false); }} className="block pt-2">
+                <Button size="sm" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-200">
+                  無料相談を申し込む
+                </Button>
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
-        <div className="max-w-4xl mx-auto text-center">
-          <Badge className="bg-[#C5A059] text-[#002147] text-sm font-bold mb-6">ESSAY GUIDE</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-white font-serif tracking-wide mb-6">
-            SFC小論文対策ガイド
+      <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
+        <div className="max-w-5xl mx-auto text-center">
+          <span className="inline-block text-xs font-bold tracking-[0.25em] text-[#C5A059] border border-[#C5A059]/50 px-5 py-2 rounded-full mb-8 uppercase">
+            ESSAY GUIDE
+          </span>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-5 md:mb-6 font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
+            SFC小論文完全攻略ガイド
           </h1>
-          <p className="text-xl text-white/80 leading-relaxed">
-            SFC小論文の特徴と攻略法を徹底解説
+          <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed px-4">
+            慶應SFC合格に必要な「問題発見・解決能力」を測る小論文試験。その全容と対策を、完全網羅しています。
           </p>
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-[#F9F9F9] rounded-xl p-8 border-l-4 border-[#800000]">
-            <h2 className="text-2xl font-bold text-[#002147] font-serif mb-4">SFC小論文とは</h2>
-            <p className="text-[#333333] leading-relaxed">
-              【プレースホルダー】SFC小論文の概要を入力してください。慶應義塾大学SFC（総合政策学部・環境情報学部）の小論文は、他大学とは一線を画す独自の出題形式が特徴です。ここではその特徴と対策法を詳しく解説します。
+      {/* Main Content */}
+      <main className="max-w-5xl mx-auto px-4 py-16 md:py-20">
+
+        {/* SFC小論文とは */}
+        <section className="mb-20">
+          <SectionTitle>SFC小論文とは</SectionTitle>
+          <div className="bg-white border-l-4 border-[#002147] pl-6 py-6 rounded-lg shadow-lg mb-8">
+            <p className="text-base md:text-lg text-[#333333] leading-relaxed font-medium">
+              SFCの小論文は、文章力ではなく<span className="text-[#800000] font-bold">「問題発見・解決能力」を測る試験</span>です。10枚以上の膨大な資料を読み解き、現代社会の複雑な課題に対し、あなた独自の具体的な解決策を提示することが求められます。
             </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* SFC Essay Features */}
-      <section className="py-28 px-4 bg-[#F9F9F9]">
-        <div className="max-w-4xl mx-auto">
-          <SectionTitle subtitle="Features">
-            SFC小論文の特徴
-          </SectionTitle>
+        {/* SFC小論文の3つの特徴 */}
+        <section className="mb-20">
+          <SectionTitle>SFC小論文の3つの特徴</SectionTitle>
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Feature 1 */}
+            <div className="bg-white border-2 border-[#002147]/30 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-bold text-[#002147] font-serif mb-4">圧倒的な資料量</h3>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                学部によっては20ページ近い資料が出されることもあり、<span className="text-[#800000] font-bold">速読力と情報の取捨選択が必須</span>。限られた試験時間で、どの資料が最も重要かを見抜く判断力が問われます。
+              </p>
+            </div>
 
+            {/* Feature 2 */}
+            <div className="bg-white border-2 border-[#800000]/30 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-bold text-[#800000] font-serif mb-4">配点の高さ</h3>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                英語や数学と同じ<span className="text-[#800000] font-bold">200点満点</span>。小論文での逆転合格が最も起きやすいのがSFC。一教科の比重が極めて大きいからこそ、集中的な対策が効果的です。
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="bg-white border-2 border-[#C5A059]/30 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-bold text-[#C5A059] font-serif mb-4">「問い」を立てる力</h3>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                与えられた課題に答えるだけでなく、<span className="text-[#800000] font-bold">「何が真の問題なのか」を自ら定義する力</span>が最も評価されます。これがSFCで最も求められる思考力です。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 効果的な学習法 */}
+        <section className="mb-20">
+          <SectionTitle>効果的な学習法</SectionTitle>
           <div className="space-y-6">
-            <Card className="bg-white rounded-xl overflow-hidden">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#002147] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">1</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#002147] mb-2">【プレースホルダー】特徴1のタイトル</h3>
-                    <p className="text-[#333333] leading-relaxed">
-                      【プレースホルダー】特徴1の詳細説明を入力してください。例：長文の資料読解が求められる、など。
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Method 1 */}
+            <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
+              <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">過去問の「型」を覚える</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                総合政策と環境情報の出題傾向の違いを理解し、AIで何度も反復練習する。毎年出題される「問題群」がパターン化されており、これを把握することが最初の一歩です。
+              </p>
+            </div>
 
-            <Card className="bg-white rounded-xl overflow-hidden">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#002147] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">2</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#002147] mb-2">【プレースホルダー】特徴2のタイトル</h3>
-                    <p className="text-[#333333] leading-relaxed">
-                      【プレースホルダー】特徴2の詳細説明を入力してください。例：問題解決型の出題が多い、など。
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Method 2 */}
+            <div className="bg-[#F8F9FA] border-l-4 border-[#800000] pl-6 py-6 rounded-r-lg">
+              <h4 className="text-lg font-bold text-[#800000] font-serif mb-3">論理構成の24時間添削</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                自分の思考をすぐに言語化し、AIによる即時フィードバックで<span className="font-bold">「論理の穴」を潰す</span>。この反復サイクルが、最も効率的な学習方法です。
+              </p>
+            </div>
 
-            <Card className="bg-white rounded-xl overflow-hidden">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#002147] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">3</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#002147] mb-2">【プレースホルダー】特徴3のタイトル</h3>
-                    <p className="text-[#333333] leading-relaxed">
-                      【プレースホルダー】特徴3の詳細説明を入力してください。例：独自の視点や発想が評価される、など。
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Method 3 */}
+            <div className="bg-[#F8F9FA] border-l-4 border-[#C5A059] pl-6 py-6 rounded-r-lg">
+              <h4 className="text-lg font-bold text-[#C5A059] font-serif mb-3">時事問題のストック</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                最新のテクノロジー（AI、Web3等）や社会問題（少子高齢化、地方創生）への<span className="font-bold">解像度を上げる</span>。出題の背景にある社会課題を理解することで、深い考察が可能になります。
+              </p>
+            </div>
+
+            {/* Method 4 */}
+            <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
+              <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">塾長との戦略会議</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                自分では気づけない「独自の視点」を、個別面談で深掘りし、磨き上げる。AIの添削だけでなく、人間にしかできない指導を組み合わせることが合格への最短ルートです。
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Study Method */}
-      <section className="py-28 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <SectionTitle subtitle="Study Method">
-            効果的な学習法
-          </SectionTitle>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="bg-white border-2 border-[#800000]/20 rounded-xl hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="w-16 h-16 bg-[#800000]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-[#800000]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+        {/* 過去問分析 */}
+        <section className="mb-20">
+          <SectionTitle>過去問分析</SectionTitle>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* 総合政策 */}
+            <div className="bg-white border-2 border-[#002147] rounded-lg p-8 shadow-lg">
+              <h4 className="text-xl font-bold text-[#002147] font-serif mb-6">総合政策学部</h4>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm font-bold text-[#666666] mb-1">2025年度</p>
+                  <p className="text-base text-[#333333]">地域活性化とデジタル化</p>
                 </div>
-                <h3 className="text-lg font-bold text-[#002147] mb-2">【プレースホルダー】学習法1</h3>
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  【プレースホルダー】学習法1の説明を入力してください。例：過去問の徹底分析と傾向把握。
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-2 border-[#002147]/20 rounded-xl hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="w-16 h-16 bg-[#002147]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-[#002147]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                  </svg>
+                <div>
+                  <p className="text-sm font-bold text-[#666666] mb-1">2024年度</p>
+                  <p className="text-base text-[#333333]">民主主義の再構築</p>
                 </div>
-                <h3 className="text-lg font-bold text-[#002147] mb-2">【プレースホルダー】学習法2</h3>
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  【プレースホルダー】学習法2の説明を入力してください。例：反復添削による文章力向上。
-                </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-white border-2 border-[#002147]/20 rounded-xl hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="w-16 h-16 bg-[#002147]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-[#002147]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
+            {/* 環境情報 */}
+            <div className="bg-white border-2 border-[#800000] rounded-lg p-8 shadow-lg">
+              <h4 className="text-xl font-bold text-[#800000] font-serif mb-6">環境情報学部</h4>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm font-bold text-[#666666] mb-1">2025年度</p>
+                  <p className="text-base text-[#333333]">AIと創造性</p>
                 </div>
-                <h3 className="text-lg font-bold text-[#002147] mb-2">【プレースホルダー】学習法3</h3>
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  【プレースホルダー】学習法3の説明を入力してください。例：時事問題への関心と知識の蓄積。
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-2 border-[#800000]/20 rounded-xl hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="w-16 h-16 bg-[#800000]/10 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-[#800000]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                <div>
+                  <p className="text-sm font-bold text-[#666666] mb-1">2024年度</p>
+                  <p className="text-base text-[#333333]">環境問題へのシステム的アプローチ</p>
                 </div>
-                <h3 className="text-lg font-bold text-[#002147] mb-2">【プレースホルダー】学習法4</h3>
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  【プレースホルダー】学習法4の説明を入力してください。例：時間配分のトレーニング。
-                </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Past Questions Analysis */}
-      <section className="py-28 px-4 bg-[#F9F9F9]">
-        <div className="max-w-4xl mx-auto">
-          <SectionTitle subtitle="Past Questions">
-            過去問分析
-          </SectionTitle>
-
+        {/* 書き方のポイント */}
+        <section className="mb-20">
+          <SectionTitle>書き方のポイント</SectionTitle>
           <div className="space-y-6">
-            <Card className="bg-white rounded-xl">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-[#002147] font-serif mb-4">総合政策学部</h3>
-                <div className="space-y-4">
-                  <div className="border-b border-border pb-4">
-                    <p className="text-sm text-[#666666] mb-1">2025年度</p>
-                    <p className="text-[#333333]">【プレースホルダー】出題テーマ・概要を入力してください</p>
-                  </div>
-                  <div className="border-b border-border pb-4">
-                    <p className="text-sm text-[#666666] mb-1">2024年度</p>
-                    <p className="text-[#333333]">【プレースホルダー】出題テーマ・概要を入力してください</p>
-                  </div>
-                  <div className="pb-4">
-                    <p className="text-sm text-[#666666] mb-1">2023年度</p>
-                    <p className="text-[#333333]">【プレースホルダー】出題テーマ・概要を入力してください</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white rounded-xl">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-[#002147] font-serif mb-4">環境情報学部</h3>
-                <div className="space-y-4">
-                  <div className="border-b border-border pb-4">
-                    <p className="text-sm text-[#666666] mb-1">2025年度</p>
-                    <p className="text-[#333333]">【プレースホルダー】出題テーマ・概要を入力してください</p>
-                  </div>
-                  <div className="border-b border-border pb-4">
-                    <p className="text-sm text-[#666666] mb-1">2024年度</p>
-                    <p className="text-[#333333]">【プレースホルダー】出題テーマ・概要を入力してください</p>
-                  </div>
-                  <div className="pb-4">
-                    <p className="text-sm text-[#666666] mb-1">2023年度</p>
-                    <p className="text-[#333333]">【プレースホルダー】出題テーマ・概要を入力してください</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Writing Tips */}
-      <section className="py-28 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <SectionTitle subtitle="Writing Tips">
-            書き方のポイント
-          </SectionTitle>
-
-          <div className="space-y-6">
-            <div className="flex items-start gap-4 p-6 bg-[#F9F9F9] rounded-xl">
-              <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-sm">01</span>
-              </div>
-              <div>
-                <h4 className="font-bold text-[#002147] mb-2">【プレースホルダー】ポイント1のタイトル</h4>
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  【プレースホルダー】ポイント1の詳細説明を入力してください。例：問題文の意図を正確に把握する。
-                </p>
-              </div>
+            {/* Point 1 */}
+            <div className="bg-white border-2 border-[#002147]/40 rounded-lg p-6 shadow-md">
+              <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">設問の意図を正確に捉える</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                出題者が何を求めているか、資料のどこにヒントがあるかを最初に見抜く。この第一段階が不正確だと、その後の論述がいくら素晴らしくても合格点に達しません。
+              </p>
             </div>
 
-            <div className="flex items-start gap-4 p-6 bg-[#F9F9F9] rounded-xl">
-              <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-sm">02</span>
-              </div>
-              <div>
-                <h4 className="font-bold text-[#002147] mb-2">【プレースホルダー】ポイント2のタイトル</h4>
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  【プレースホルダー】ポイント2の詳細説明を入力してください。例：論理的な構成で説得力を持たせる。
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 p-6 bg-[#F9F9F9] rounded-xl">
-              <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-sm">03</span>
-              </div>
-              <div>
-                <h4 className="font-bold text-[#002147] mb-2">【プレースホルダー】ポイント3のタイトル</h4>
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  【プレースホルダー】ポイント3の詳細説明を入力してください。例：独自の視点を明確に示す。
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 p-6 bg-[#F9F9F9] rounded-xl">
-              <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-sm">04</span>
-              </div>
-              <div>
-                <h4 className="font-bold text-[#002147] mb-2">【プレースホルダー】ポイント4のタイトル</h4>
-                <p className="text-sm text-[#333333] leading-relaxed">
-                  【プレースホルダー】ポイント4の詳細説明を入力してください。例：具体例を効果的に使用する。
-                </p>
-              </div>
+            {/* Point 2 */}
+            <div className="bg-white border-2 border-[#800000]/40 rounded-lg p-6 shadow-md">
+              <h4 className="text-lg font-bold text-[#800000] font-serif mb-3">具体性と実現可能性</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                単なる理想論ではなく、技術的・社会的に実行可能な解決策を提示する。SFCが求めているのは、現実を見据えた実践的な思考力です。
+              </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+      </main>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-[#800000] to-[#600000]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white font-serif mb-6">
-            本気でSFC合格を目指すなら
+      <section className="py-16 md:py-20 px-4 bg-gradient-to-r from-[#800000] to-[#600000]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4">
+            小論文対策で迷ったら、まずは無料相談
           </h2>
-          <p className="text-white/80 text-lg mb-8">
-            24時間AI添削と塾長の戦略的指導で、小論文を武器に変える
+          <p className="text-base text-white/80 mb-8 leading-relaxed">
+            あなたの現在地を診断し、SFC合格までの道筋を塾長が直接ご提案します。
           </p>
-          <Link href="/#contact-form">
-            <Button size="lg" className="bg-white text-[#800000] hover:bg-[#C5A059] hover:text-white font-bold px-12 py-6 h-auto text-lg">
-              無料で個別相談を予約する
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contact-form" onClick={handleSmoothScroll}>
+              <Button className="bg-[#C5A059] hover:bg-[#9d8a42] text-white font-bold px-10 py-6 h-auto">
+                無料で塾長に相談する
+              </Button>
+            </a>
+            <Link href="/course">
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#800000] font-bold px-10 py-6 h-auto">
+                コース詳細を見る
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#002147] text-white py-12 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-xl font-bold font-serif tracking-[0.1em] mb-4">佐藤塾</h2>
-          <p className="text-white/60 text-sm mb-6">慶應SFC専門 AI伴走型オンライン塾</p>
-          <div className="flex justify-center gap-6 text-sm text-white/60">
-            <Link href="/" className="hover:text-white transition-colors">トップページ</Link>
-            <Link href="/course" className="hover:text-white transition-colors">コース・料金</Link>
-            <Link href="/results" className="hover:text-white transition-colors">合格実績</Link>
-            <Link href="/guide/essay" className="hover:text-white transition-colors">小論文対策</Link>
+      <footer className="bg-primary text-white py-12 md:py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          {/* Navigation Links */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8">
+            <Link href="/" className="text-white/80 hover:text-white transition-colors text-sm">
+              トップページ
+            </Link>
+            <Link href="/course" className="text-white/80 hover:text-white transition-colors text-sm">
+              コース・料金
+            </Link>
+            <Link href="/results" className="text-white/80 hover:text-white transition-colors text-sm">
+              合格実績
+            </Link>
+            <Link href="/guide/essay" className="text-white/80 hover:text-white transition-colors text-sm">
+              小論文対策ガイド
+            </Link>
           </div>
-          <p className="text-white/40 text-xs mt-8">© 2025 佐藤塾 All Rights Reserved.</p>
+
+          <div className="text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif tracking-[0.1em]">佐藤塾</h3>
+            <p className="text-white/80 mb-8 text-base md:text-lg">
+              慶應義塾大学 SFC（総合政策学部・環境情報学部）受験対策専門塾
+            </p>
+            <div className="border-t border-white/20 pt-8">
+              <p className="text-sm text-white/60">
+                &copy; 2026 佐藤塾. All rights reserved.
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
