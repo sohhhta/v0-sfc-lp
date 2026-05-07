@@ -29,16 +29,221 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
         <div className="h-px w-16 bg-[#002147]" />
         <div className="w-2 h-2 bg-[#002147] rotate-45" />
         <div className="h-px w-16 bg-[#002147]" />
+      </div>
+    </div>
+  )
+}
+
+export default function Page() {
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [formError, setFormError] = useState('')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    plan: '',
+    message: ''
+  })
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = (e.currentTarget as HTMLAnchorElement).href
+    const targetId = href.substring(href.indexOf('#') + 1)
+
+    if (targetId) {
+      e.preventDefault()
+      const targetElement = document.getElementById(targetId)
+
+      if (targetElement) {
+        const headerHeight = 80
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsLoading(true)
+    setFormError('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || '送信に失敗しました')
+      }
+
+      setIsSubmitted(true)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        plan: '',
+        message: ''
+      })
+    } catch (error) {
+      setFormError(error instanceof Error ? error.message : '送信に失敗しました。もう一度お試しください。')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+          {/* Logo */}
+          <Link href="/" className="text-xl font-bold text-primary font-serif tracking-[0.1em] hover:opacity-80 transition-opacity">
+            佐藤塾
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-sm font-medium text-[#333333] hover:text-primary transition-colors">
+              ホーム
+            </Link>
+            <Link href="/course" className="text-sm font-medium text-[#333333] hover:text-primary transition-colors">
+              コース・料金
+            </Link>
+            <Link href="/results" className="text-sm font-medium text-[#333333] hover:text-primary transition-colors">
+              合格実績
+            </Link>
+            <Link href="/guide/essay" className="text-sm font-medium text-[#333333] hover:text-primary transition-colors">
+              小論文ガイド
+            </Link>
+          </div>
+
+          {/* Right Section */}
+          <div className="flex items-center gap-4">
+            <a href="#contact-form" onClick={handleSmoothScroll} className="hidden md:block">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-200">
+                無料相談を申し込む
+              </Button>
+            </a>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 hover:bg-[#F0F0F0] rounded-lg transition-colors"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6 text-primary" />
+              ) : (
+                <Menu className="w-6 h-6 text-primary" />
+              )}
+            </button>
           </div>
         </div>
 
-        {/* CTA Button for Course Details */}
-        <div className="text-center mt-12">
-          <Link href="/course">
-            <Button size="lg" className="bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-8 py-6 h-auto transition-all duration-300 hover:shadow-lg">
-              詳細なサポート体制と利用規約を確認する
-            </Button>
-          </Link>
+        {/* Mobile Navigation Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-border">
+            <div className="px-4 py-4 space-y-3">
+              <Link
+                href="/"
+                className="block px-4 py-2 text-sm font-medium text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                ホーム
+              </Link>
+              <Link
+                href="/course"
+                className="block px-4 py-2 text-sm font-medium text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                コース・料金
+              </Link>
+              <Link
+                href="/results"
+                className="block px-4 py-2 text-sm font-medium text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                合格実績
+              </Link>
+              <Link
+                href="/guide/essay"
+                className="block px-4 py-2 text-sm font-medium text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                小論文ガイド
+              </Link>
+              <a href="#contact-form" onClick={(e) => { handleSmoothScroll(e); setMobileMenuOpen(false); }} className="block pt-2">
+                <Button size="sm" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-200">
+                  無料相談を申し込む
+                </Button>
+              </a>
+            </div>
+          </div>
+        )}
+      </nav>
+
+      {/* Hero Section - Keio Blue gradient */}
+      <section className="relative py-20 md:py-32 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b] overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
+
+        <div className="relative max-w-5xl mx-auto text-center">
+          {/* Main Copy */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-snug text-balance" style={{ wordBreak: 'keep-all' }}>
+            2人に1人が慶應SFCへ。<br className="hidden sm:block" />
+            <span className="text-[#C5A059]">合格率50%</span>を叩き出す、<br className="hidden md:block" />
+            独自のAI伴走指導。
+          </h1>
+
+          <p className="text-base md:text-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+            AIが24時間無制限で添削、塾長が週1回の戦略指導。<br className="hidden md:block" />
+            SFC合格に特化した、日本唯一のハイブリッド指導で合格へ導きます。
+          </p>
+
+          {/* Stats Row */}
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-[#C5A059] font-serif">50%</div>
+              <p className="text-sm text-white/70 mt-1">2026年度合格率</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-[#C5A059] font-serif">49名</div>
+              <p className="text-sm text-white/70 mt-1">累計合格者数</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-[#C5A059] font-serif">24h</div>
+              <p className="text-sm text-white/70 mt-1">AI添削対応</p>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contact-form" onClick={handleSmoothScroll}>
+              <Button size="lg" className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-10 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]">
+                無料で個別相談を予約する
+              </Button>
+            </a>
+            <Link href="/results">
+              <Button size="lg" variant="outline" className="border-2 border-white/50 text-white hover:bg-white hover:text-[#002147] text-lg font-bold px-10 py-7 h-auto transition-all duration-300">
+                合格実績を見る
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -842,7 +1047,7 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
                     独自性の磨き上げ
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える時期。唯一無二の志望理由書を作成。
+                    <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える時期。唯一無二の志望理由書を作���。
                   </p>
                 </div>
               </div>
