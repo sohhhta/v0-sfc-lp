@@ -330,7 +330,7 @@ export default function Page() {
           {/* Main Copy */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-snug text-balance">
             2人に1人が慶應SFCへ。<br className="hidden sm:block" />
-            <span className="text-[#C5A059]">合格率50%</span>を叩き出す、<br className="hidden md:block" />
+            <span className="text-[#C5A059]">合格率50%</span>を叩き出す<br className="hidden md:block" />
             独自のAI伴走指導。
           </h1>
 
