@@ -4,8 +4,8 @@ import { Card, CardContent } from '@/components/ui/card'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'コース・料金 | 佐藤塾 - 慶應SFC専門AI×塾長ハイブリッド指導',
-  description: '佐藤塾のコース詳細と料金体系。SFC二刀流プラン・小論文特化プランの2コースをご用意。AIによる24時間添削と塾長の戦略的指導で合格へ導きます。',
+  title: '慶應SFC合格のためのコース・料金体系 | 佐藤塾',
+  description: '慶應SFC小論文・情報入試に特化した佐藤塾のコース案内。AIと塾長のハイブリッド指導で合格を確実に。',
 }
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -59,7 +59,7 @@ export default function CoursePage() {
               </div>
               <CardContent className="pt-8 pb-8">
                 <div className="text-center mb-8">
-                  <p className="text-4xl font-bold text-[#002147]">¥XX,XXX<span className="text-lg font-normal text-[#666666]">/月</span></p>
+                  <p className="text-4xl font-bold text-[#002147]">¥151,800<span className="text-lg font-normal text-[#666666]">/月</span></p>
                   <p className="text-sm text-[#888888] mt-2">（税込）</p>
                 </div>
 
@@ -106,7 +106,7 @@ export default function CoursePage() {
               </div>
               <CardContent className="pt-8 pb-8">
                 <div className="text-center mb-8">
-                  <p className="text-4xl font-bold text-[#002147]">¥XX,XXX<span className="text-lg font-normal text-[#666666]">/月</span></p>
+                  <p className="text-4xl font-bold text-[#002147]">¥129,800<span className="text-lg font-normal text-[#666666]">/月</span></p>
                   <p className="text-sm text-[#888888] mt-2">（税込）</p>
                 </div>
 
@@ -153,27 +153,22 @@ export default function CoursePage() {
             <div className="space-y-8">
               <div className="border-b border-border pb-6">
                 <h3 className="font-bold text-[#002147] mb-2">入会金</h3>
-                <p className="text-[#333333]">【プレースホルダー：入会金の有無・金額を記載】</p>
+                <p className="text-[#333333]">一律100,000円</p>
               </div>
 
               <div className="border-b border-border pb-6">
-                <h3 className="font-bold text-[#002147] mb-2">教材費</h3>
-                <p className="text-[#333333]">【プレースホルダー：教材費の有無・金額を記載】</p>
+                <h3 className="font-bold text-[#002147] mb-2">追加費用</h3>
+                <p className="text-[#333333]">全てシステム内で完結するため、入会金と月額料金以外の追加費用は一切発生しません。</p>
               </div>
 
               <div className="border-b border-border pb-6">
                 <h3 className="font-bold text-[#002147] mb-2">お支払い方法</h3>
-                <p className="text-[#333333]">【プレースホルダー：クレジットカード、銀行振込など対応方法を記載】</p>
-              </div>
-
-              <div className="border-b border-border pb-6">
-                <h3 className="font-bold text-[#002147] mb-2">退会について</h3>
-                <p className="text-[#333333]">【プレースホルダー：退会条件・手続きを記載】</p>
+                <p className="text-[#333333]">クレジットカード、銀行振込</p>
               </div>
 
               <div>
                 <h3 className="font-bold text-[#002147] mb-2">その他注意事項</h3>
-                <p className="text-[#333333]">【プレースホルダー：その他の注意事項を記載】</p>
+                <p className="text-[#333333]">ご不明な点は、無料相談でお気軽にお聞きください。</p>
               </div>
             </div>
           </div>
