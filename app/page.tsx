@@ -1470,7 +1470,7 @@ export default function Page() {
       <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-20">
         <div className="max-w-2xl mx-auto">
           <SectionTitle subtitle="プランの選び方や学習スケジュールの立て方など、塾長が直接お答えします">
-            30秒で申し込み！個別相談申し込み
+            30秒で申し込み！個別相��申し込み
           </SectionTitle>
 
           <Card className="bg-white shadow-lg border-t-4 border-t-[#800000] border-x border-b border-border rounded-xl">
@@ -1614,7 +1614,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                はい、全く問題ありません。本塾のシステムは<strong>スマートフォン1台</strong>で全ての添削・指導が完結するように設計されています。PCの有無が合否に影響することはありませんのでご安心ください。
+                はい、全く問題ありません。本塾のシステムは<strong>スマートフォン1台</strong>で全ての添削・指導が完結するように設計されています。PCの有無が合否に影響することはありませんのでご安心ください���
               </div>
             </details>
 
@@ -1673,16 +1673,34 @@ export default function Page() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl font-bold mb-3 font-serif tracking-[0.1em]">佐藤塾</h3>
-          <p className="text-white/80 mb-8 text-lg">
-            慶應義塾大学 SFC（総合政策学部・環境情報学部）受験対策専門塾
-          </p>
-          <div className="border-t border-white/20 pt-8">
-            <p className="text-sm text-white/60">
-              &copy; 2026 佐藤塾. All rights reserved.
+      <footer className="bg-primary text-white py-12 md:py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          {/* Navigation Links */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8">
+            <Link href="/" className="text-white/80 hover:text-white transition-colors text-sm">
+              トップページ
+            </Link>
+            <Link href="/course" className="text-white/80 hover:text-white transition-colors text-sm">
+              コース・料金
+            </Link>
+            <Link href="/results" className="text-white/80 hover:text-white transition-colors text-sm">
+              合格実績
+            </Link>
+            <Link href="/guide/essay" className="text-white/80 hover:text-white transition-colors text-sm">
+              小論文対策ガイド
+            </Link>
+          </div>
+
+          <div className="text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif tracking-[0.1em]">佐藤塾</h3>
+            <p className="text-white/80 mb-8 text-base md:text-lg">
+              慶應義塾大学 SFC（総合政策学部・環境情報学部）受験対策専門塾
             </p>
+            <div className="border-t border-white/20 pt-8">
+              <p className="text-sm text-white/60">
+                &copy; 2026 佐藤塾. All rights reserved.
+              </p>
+            </div>
           </div>
         </div>
       </footer>
