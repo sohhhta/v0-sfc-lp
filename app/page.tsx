@@ -7,7 +7,8 @@ import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Check } from 'lucide-react'
+import { Check, Menu, X } from 'lucide-react'
+import Link from 'next/link'
 
 // Section title with Keio blue decorative lines
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
@@ -155,6 +156,7 @@ export default function Page() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [formError, setFormError] = useState('')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -226,11 +228,88 @@ export default function Page() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+          {/* Logo - left */}
           <h1 className="text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</h1>
-          <a href="#contact-form" onClick={handleSmoothScroll}>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
-          </a>
+
+          {/* Desktop Navigation - center */}
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-sm text-[#333333] hover:text-primary transition-colors">
+              ホーム
+            </Link>
+            <Link href="/course" className="text-sm text-[#333333] hover:text-primary transition-colors">
+              コース・料金
+            </Link>
+            <Link href="/results" className="text-sm text-[#333333] hover:text-primary transition-colors">
+              合格実績
+            </Link>
+            <Link href="/guide/essay" className="text-sm text-[#333333] hover:text-primary transition-colors">
+              小論文ガイド
+            </Link>
+          </div>
+
+          {/* Right side - button and mobile menu toggle */}
+          <div className="flex items-center gap-4">
+            {/* Desktop Button */}
+            <a href="#contact-form" onClick={handleSmoothScroll} className="hidden md:block">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
+            </a>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 hover:bg-[#F0F0F0] rounded-lg transition-colors"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6 text-primary" />
+              ) : (
+                <Menu className="w-6 h-6 text-primary" />
+              )}
+            </button>
+
+            {/* Mobile Button */}
+            <a href="#contact-form" onClick={handleSmoothScroll} className="md:hidden">
+              <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">
+                無料相談
+              </Button>
+            </a>
+          </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-border">
+            <div className="px-4 py-4 space-y-3">
+              <Link
+                href="/"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                ホーム
+              </Link>
+              <Link
+                href="/course"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                コース・料金
+              </Link>
+              <Link
+                href="/results"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                合格実績
+              </Link>
+              <Link
+                href="/guide/essay"
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                小論文ガイド
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
