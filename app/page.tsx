@@ -499,7 +499,36 @@ export default function Page() {
             </div>
 
             {/* AI 2: 相談AI */}
-            <ConsultationAICard />
+            <div className="bg-white border-l-4 border-[#800000] shadow-lg rounded-r-lg overflow-hidden">
+              <div className="p-6 md:p-10">
+                {/* Title */}
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">AI 02</span>
+                  <div className="h-px flex-1 bg-[#800000]/10" />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-[#800000] font-serif tracking-wide mb-4">
+                  相談用AI
+                </h3>
+
+                {/* Development Background */}
+                <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
+                  塾長の全知識と過去7年分の生徒対応履歴を学習。学習計画の相談から志望理由書の深掘り、メンタル面のサポートまで、24時間いつでも相談可能なパートナーです。
+                </p>
+
+                {/* Chat Mockup */}
+                <div className="bg-[#F8F9FA] rounded-lg p-5 md:p-6 border border-[#E5E7EB]">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-2 h-2 rounded-full bg-[#800000]" />
+                    <span className="text-xs font-bold text-[#800000] tracking-wider">相談AIからの回答</span>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 md:p-5 border border-[#800000]/10 shadow-sm">
+                    <p className="text-sm md:text-base text-[#333333] leading-relaxed">
+                      志望理由書の「研究テーマ」について悩んでいるんですね。あなたの<span className="text-[#800000] font-bold">過去の活動履歴</span>を見ると、環境問題への関心が一貫しています。この軸を活かして、SFCの<span className="text-[#800000] font-bold">「問題発見・解決」</span>という理念と結びつけてみましょう。具体的には・・・
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -793,7 +822,7 @@ export default function Page() {
                     <h4 className="text-lg font-bold text-[#002147] font-serif">AI支援</h4>
                   </div>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を解消する時間を短縮し、圧倒的な学習量を担保します。
+                    日々の���習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を解消する時間を短縮し、圧倒的な学習量を担保します。
                   </p>
                 </div>
               </div>
@@ -1083,7 +1112,7 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { num: '01', title: 'AOと一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
-              { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限なし' },
+              { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限な��' },
               { num: '03', title: '学習の徹底管理', desc: '週次、月次で学習計画を策定し、管理する' },
               { num: '04', title: 'AO合格後の追加費用0円', desc: 'AO合格後は卒業となり自動退塾となります。追加料金は不要' },
               { num: '05', title: 'SFC特化ロジック', desc: '6年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
