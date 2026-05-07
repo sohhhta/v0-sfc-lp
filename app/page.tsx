@@ -7,8 +7,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Check, Menu, X } from 'lucide-react'
-import Link from 'next/link'
+import { Check } from 'lucide-react'
 
 // Section title with Keio blue decorative lines
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
@@ -34,11 +33,128 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
   )
 }
 
+// Consultation AI Card with tabbed conversations
+function ConsultationAICard() {
+  const [activeTab, setActiveTab] = useState(0)
+  const [isTyping, setIsTyping] = useState(false)
+
+  const conversations = [
+    {
+      label: 'AO入試の悩み',
+      question: 'AO入試に興味はありますが、全国大会優勝のようなすごい実績がありません。やっぱり諦めるべきでしょうか？',
+      answer: 'いいえ、諦めるべきではありません。SFCが求めているのは<highlight>「実績の凄さ」ではなく「問題発見の鋭さ」</highlight>です。過去の合格者も最初は「ただの趣味」と認識していたことを深掘りし、独自の実績にできました。<highlight>まずはあなたが日頃頑張らなくてもできていること</highlight>を書き出して共有してください。'
+    },
+    {
+      label: '小論文の不安',
+      question: '小論文を勉強したことがない私でもSFCを目指せるのでしょうか？',
+      answer: '<highlight>もちろん、目指せます</highlight>。小論文は量をこなす勉強が最重要です。まずはめちゃくちゃな内容でも良いのでどんどん量をこなしていきましょう。添削内容を踏まえ書き直すことで自然と書けるようになっていきます。<highlight>過去の合格者もこのように学習し始めました</highlight>。焦らず、一緒に着実に進めていきましょう。'
+    },
+    {
+      label: '併願・戦略の疑問',
+      question: 'SFC対策に絞ると、他大学が疎かになりそうで不安です',
+      answer: '大丈夫です。<highlight>幅広い大学の合格を目指すのではなく、SFC合格から逆算した受験戦略</highlight>が重要になります。SFCで鍛える論理力は早稲田や他の慶應学部でも最大の武器になります。<highlight>負けない併願戦略</highlight>を一緒に立てましょう。'
+    }
+  ]
+
+  const handleTabChange = (index: number) => {
+    if (index !== activeTab) {
+      setIsTyping(true)
+      setActiveTab(index)
+      setTimeout(() => setIsTyping(false), 600)
+    }
+  }
+
+  const renderAnswer = (text: string) => {
+    const parts = text.split(/<highlight>|<\/highlight>/)
+    return parts.map((part, i) =>
+      i % 2 === 1 ? <span key={i} className="text-[#800000] font-bold">{part}</span> : part
+    )
+  }
+
+  return (
+    <div className="bg-white border-l-4 border-[#800000] shadow-lg rounded-r-lg overflow-hidden">
+      <div className="p-6 md:p-10">
+        {/* Title */}
+        <div className="flex items-center gap-4 mb-6">
+          <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">AI 02</span>
+          <div className="h-px flex-1 bg-[#800000]/10" />
+        </div>
+        <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
+          相談用AI
+        </h3>
+
+        {/* Development Background */}
+        <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
+          過去の合格者と塾長の会話データや、質問に対する塾長の全回答、そして独自分析した過去問解析データを集約。24時間、あたかも塾長に気軽に質問し続けることのできる体験を実現しました。
+        </p>
+
+        {/* Guide text */}
+        <p className="text-xs text-[#666666] mb-3 flex items-center gap-1">
+          <span className="text-[#002147]"></span>
+          あてはまる悩みを押してください
+        </p>
+
+        {/* Tabs - Horizontal scroll on mobile */}
+        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 mb-5">
+          <div className="flex gap-2 md:gap-3 min-w-max md:min-w-0 md:flex-wrap">
+            {conversations.map((conv, index) => (
+              <button
+                key={index}
+                onClick={() => handleTabChange(index)}
+                className={`flex items-center gap-2 px-4 py-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${activeTab === index
+                  ? 'bg-[#002147] text-white shadow-md'
+                  : 'bg-white text-[#333333] border-2 border-[#E5E7EB] hover:border-[#002147]/30'
+                  }`}
+              >
+                <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+                {conv.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Chat Mockup - Dialogue Style */}
+        <div className="bg-white rounded-xl p-5 md:p-8 border border-[#E5E7EB] shadow-sm">
+          <div className="flex items-center gap-2 mb-5">
+            <div className="w-2.5 h-2.5 rounded-full bg-[#800000]" />
+            <span className="text-xs font-bold text-[#002147] tracking-wider">相談AIとの対話</span>
+          </div>
+          <div className="space-y-5">
+            {/* User message */}
+            <div className="flex justify-end">
+              <div className="bg-[#002147] text-white rounded-2xl rounded-br-none px-6 py-5 max-w-[92%] md:max-w-[85%] shadow-lg">
+                <p className="text-base md:text-lg leading-relaxed font-medium">{conversations[activeTab].question}</p>
+              </div>
+            </div>
+            {/* AI response with typing animation */}
+            <div className="flex justify-start">
+              <div className="bg-[#FAFAFA] rounded-2xl rounded-bl-none px-6 py-5 max-w-[92%] md:max-w-[85%] border-2 border-[#800000]/20 shadow-lg">
+                {isTyping ? (
+                  <div className="flex items-center gap-2 py-3">
+                    <span className="w-2.5 h-2.5 bg-[#800000]/60 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                    <span className="w-2.5 h-2.5 bg-[#800000]/60 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                    <span className="w-2.5 h-2.5 bg-[#800000]/60 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                  </div>
+                ) : (
+                  <p className="text-base md:text-lg text-[#333333] leading-[1.8] animate-in fade-in duration-300">
+                    {renderAnswer(conversations[activeTab].answer)}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function Page() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [formError, setFormError] = useState('')
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -47,27 +163,7 @@ export default function Page() {
     message: ''
   })
 
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const href = (e.currentTarget as HTMLAnchorElement).href
-    const targetId = href.substring(href.indexOf('#') + 1)
-
-    if (targetId) {
-      e.preventDefault()
-      const targetElement = document.getElementById(targetId)
-
-      if (targetElement) {
-        const headerHeight = 80
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        })
-      }
-    }
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
     setFormError('')
@@ -81,13 +177,13 @@ export default function Page() {
         body: JSON.stringify(formData),
       })
 
-      const data = await response.json()
-
       if (!response.ok) {
-        throw new Error(data.error || '送信に失敗しました')
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'メール送信に失敗しました')
       }
 
       setIsSubmitted(true)
+      // Reset form data after successful submission
       setFormData({
         name: '',
         email: '',
@@ -96,9 +192,32 @@ export default function Page() {
         message: ''
       })
     } catch (error) {
-      setFormError(error instanceof Error ? error.message : '送信に失敗しました。もう一度お試しください。')
+      setFormError(error instanceof Error ? error.message : 'エラーが発生しました')
+      console.error('Form submission error:', error)
     } finally {
       setIsLoading(false)
+    }
+  }
+
+  // Smooth scroll handler for anchor links with header offset
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = (e.currentTarget as HTMLAnchorElement).href
+    const targetId = href.substring(href.indexOf('#') + 1)
+
+    if (targetId) {
+      e.preventDefault()
+      const targetElement = document.getElementById(targetId)
+
+      if (targetElement) {
+        // Header height offset (80px for sticky header)
+        const headerHeight = 80
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        })
+      }
     }
   }
 
@@ -107,143 +226,99 @@ export default function Page() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-primary font-serif tracking-[0.1em] hover:opacity-80 transition-opacity">
-            佐藤塾
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm font-medium text-[#333333] hover:text-primary transition-colors">
-              ホーム
-            </Link>
-            <Link href="/course" className="text-sm font-medium text-[#333333] hover:text-primary transition-colors">
-              コース・料金
-            </Link>
-            <Link href="/results" className="text-sm font-medium text-[#333333] hover:text-primary transition-colors">
-              合格実績
-            </Link>
-            <Link href="/guide/essay" className="text-sm font-medium text-[#333333] hover:text-primary transition-colors">
-              小論文ガイド
-            </Link>
-          </div>
-
-          {/* Right Section */}
-          <div className="flex items-center gap-4">
-            <a href="#contact-form" onClick={handleSmoothScroll} className="hidden md:block">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-200">
-                無料相談を申し込む
-              </Button>
-            </a>
-
-            {/* Mobile Menu Toggle */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 hover:bg-[#F0F0F0] rounded-lg transition-colors"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-primary" />
-              ) : (
-                <Menu className="w-6 h-6 text-primary" />
-              )}
-            </button>
-          </div>
+          <h1 className="text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</h1>
+          <a href="#contact-form" onClick={handleSmoothScroll}>
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
+          </a>
         </div>
-
-        {/* Mobile Navigation Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-border">
-            <div className="px-4 py-4 space-y-3">
-              <Link
-                href="/"
-                className="block px-4 py-2 text-sm font-medium text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                ホーム
-              </Link>
-              <Link
-                href="/course"
-                className="block px-4 py-2 text-sm font-medium text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                コース・料金
-              </Link>
-              <Link
-                href="/results"
-                className="block px-4 py-2 text-sm font-medium text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                合格実績
-              </Link>
-              <Link
-                href="/guide/essay"
-                className="block px-4 py-2 text-sm font-medium text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                小論文ガイド
-              </Link>
-              <a href="#contact-form" onClick={(e) => { handleSmoothScroll(e); setMobileMenuOpen(false); }} className="block pt-2">
-                <Button size="sm" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-200">
-                  無料相談を申し込む
-                </Button>
-              </a>
-            </div>
-          </div>
-        )}
       </nav>
 
-      {/* Hero Section - Keio Blue gradient */}
-      <section className="relative py-20 md:py-32 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b] overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        {/* Background with navy gradient overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/hero.jpg"
+            alt="Keio SFC Campus"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/97 via-[#002147]/93 to-[#002147]/98"></div>
         </div>
 
-        <div className="relative max-w-5xl mx-auto text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-16">
           {/* Main Copy */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-snug text-balance" style={{ wordBreak: 'keep-all' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-snug text-balance">
             2人に1人が慶應SFCへ。<br className="hidden sm:block" />
             <span className="text-[#C5A059]">合格率50%</span>を叩き出す、<br className="hidden md:block" />
             独自のAI伴走指導。
           </h1>
 
-          <p className="text-base md:text-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            AIが24時間無制限で添削、塾長が週1回の戦略指導。<br className="hidden md:block" />
-            SFC合格に特化した、日本唯一のハイブリッド指導で合格へ導きます。
+          {/* Sub Copy */}
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide">
+            学校や予備校では教えてくれないSFCの正解を、AIと塾長が24時間フルサポート。<br className="hidden md:block" />
+            最短距離で合格する思考を鍛え上げる。
           </p>
 
-          {/* Stats Row */}
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#C5A059] font-serif">50%</div>
-              <p className="text-sm text-white/70 mt-1">2026年度合格率</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#C5A059] font-serif">49名</div>
-              <p className="text-sm text-white/70 mt-1">累計合格者数</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#C5A059] font-serif">24h</div>
-              <p className="text-sm text-white/70 mt-1">AI添削対応</p>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* CTA Button */}
+          <div className="mb-16">
             <a href="#contact-form" onClick={handleSmoothScroll}>
-              <Button size="lg" className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-10 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]">
+              <Button
+                size="lg"
+                className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]"
+              >
                 無料で個別相談を予約する
               </Button>
             </a>
-            <Link href="/results">
-              <Button size="lg" variant="outline" className="border-2 border-white/50 text-white hover:bg-white hover:text-[#002147] text-lg font-bold px-10 py-7 h-auto transition-all duration-300">
-                合格実績を見る
-              </Button>
-            </Link>
           </div>
+
+          {/* Stats Section - Medal-like design */}
+          {/* Mobile: center card full-width on top, two side cards in a row below */}
+          {/* Desktop: all three in one row, center slightly elevated */}
+          <div className="max-w-4xl mx-auto w-full">
+            {/* Center card — full-width on mobile, hidden on md+ (rendered in the 3-col grid) */}
+            <div className="md:hidden flex flex-col items-center justify-center p-6 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg mb-4">
+              <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
+              <p className="text-6xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>50<span className="text-2xl">%</span></p>
+              <p className="text-sm text-[#D4AF37] mt-2 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生14名中7名が合格)</p>
+            </div>
+
+            {/* Side cards row on mobile */}
+            <div className="grid grid-cols-2 gap-4 md:hidden">
+              <div className="flex flex-col items-center justify-center p-4 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+                <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium">2026年度 受講継続率</p>
+                <p className="text-4xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>93<span className="text-lg ml-0.5">%</span></p>
+              </div>
+              <div className="flex flex-col items-center justify-center p-4 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+                <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium">7年間累計</p>
+                <p className="text-4xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>49<span className="text-lg ml-0.5">名</span></p>
+              </div>
+            </div>
+
+            {/* Desktop: all three in one row */}
+            <div className="hidden md:grid md:grid-cols-3 gap-4">
+              <div className="flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+                <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">2026年度 受講継続率</p>
+                <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>93<span className="text-2xl ml-1">%</span></p>
+              </div>
+              <div className="flex flex-col items-center justify-center p-8 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg scale-110 -my-2">
+                <p className="text-xs text-[#C5A059] mb-2 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
+                <p className="text-7xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>50<span className="text-3xl">%</span></p>
+                <p className="text-sm text-[#D4AF37] mt-3 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生14名中7名が合格)</p>
+              </div>
+              <div className="flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
+                <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">7年間累計</p>
+                <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>49<span className="text-2xl ml-1">名</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="relative z-10 mt-16 pb-8 flex flex-col items-center animate-pulse">
+          <span className="text-white/60 text-xs tracking-[0.3em] mb-3 font-medium">SCROLL</span>
+          <div className="w-px h-14 bg-gradient-to-b from-white/70 via-white/30 to-transparent"></div>
         </div>
       </section>
 
@@ -294,15 +369,6 @@ export default function Page() {
               </CardContent>
             </Card>
           </div>
-
-          {/* CTA Button for Results */}
-          <div className="text-center mt-12">
-            <Link href="/results">
-              <Button size="lg" className="bg-[#002147] hover:bg-[#800000] text-white font-bold px-8 py-6 h-auto transition-all duration-300 hover:shadow-lg">
-                すべての合格実績と年度別の推移を見る
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -320,7 +386,7 @@ export default function Page() {
           {/* Section Title - Editorial Style */}
           <div className="text-center mb-20">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed text-balance" style={{ wordBreak: 'keep-all' }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed text-balance">
               なぜ、一般的な塾・学校の対策では、<br className="hidden sm:block" />
               慶應SFCの合格ラインに届かないのか？
             </h2>
@@ -435,7 +501,7 @@ export default function Page() {
             </p>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
               <span className="text-[#C5A059] mr-1">◆</span>
-              佐藤塾が独自に開発したSFC専用AIが、あなたの答案をその場ですぐに分析。24時間、何度でも高品質なフィードバ��クを受けられる環境に加え塾長が並走指導を行うことで、合格ラインを確実に突破する力を引き上げます。
+              佐藤塾が独自に開発したSFC専用AIが、あなたの答案をその場ですぐに分析。24時間、何度でも高品質なフィードバックを受けられる環境に加え塾長が並走指導を行うことで、合格ラインを確実に突破する力を引き上げます。
             </p>
           </div>
         </div>
@@ -480,7 +546,7 @@ export default function Page() {
 
                 {/* Development Background */}
                 <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
-                  6年間の合格者が書いた全答案と、その成長過程（ビフォー・アフター）をすべて学習。SFC特有の評価基準を佐藤塾なりに基準化し、合格ラインを超えるための「添削」と「情報提供」を実現します。
+                  7年間の合格者が書いた全答案と、その成長過程（ビフォー・アフター）をすべて学習。SFC特有の評価基準を佐藤塾なりに基準化し、合格ラインを超えるための「添削」と「情報提供」を実現します。
                 </p>
 
                 {/* Chat Mockup */}
@@ -491,7 +557,7 @@ export default function Page() {
                   </div>
                   <div className="bg-white rounded-lg p-4 md:p-5 border border-[#002147]/10 shadow-sm">
                     <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      ��回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>していることです。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専門的知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
+                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>していることです。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専門的知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
                     </p>
                   </div>
                 </div>
@@ -499,36 +565,7 @@ export default function Page() {
             </div>
 
             {/* AI 2: 相談AI */}
-            <div className="bg-white border-l-4 border-[#800000] shadow-lg rounded-r-lg overflow-hidden">
-              <div className="p-6 md:p-10">
-                {/* Title */}
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">AI 02</span>
-                  <div className="h-px flex-1 bg-[#800000]/10" />
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#800000] font-serif tracking-wide mb-4">
-                  相談用AI
-                </h3>
-
-                {/* Development Background */}
-                <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
-                  塾長の全知識と過去7年分の生徒対応履歴を学習。学習計画の相談から志望理由書の深掘り、メンタル面のサポートまで、24時間いつでも相談可能なパートナーです。
-                </p>
-
-                {/* Chat Mockup */}
-                <div className="bg-[#F8F9FA] rounded-lg p-5 md:p-6 border border-[#E5E7EB]">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-2 h-2 rounded-full bg-[#800000]" />
-                    <span className="text-xs font-bold text-[#800000] tracking-wider">相談AIからの回答</span>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 md:p-5 border border-[#800000]/10 shadow-sm">
-                    <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      志望理由書の「研究テーマ」について悩んでいるんですね。あなたの<span className="text-[#800000] font-bold">過去の活動履歴</span>を見ると、環境問題への関心が一貫しています。この軸を活かして、SFCの<span className="text-[#800000] font-bold">「問題発見・解決」</span>という理念と結びつけてみましょう。具体的には・・・
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ConsultationAICard />
           </div>
         </div>
       </section>
@@ -822,7 +859,7 @@ export default function Page() {
                     <h4 className="text-lg font-bold text-[#002147] font-serif">AI支援</h4>
                   </div>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の���習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を解消する時間を短縮し、圧倒的な学習量を担保します。
+                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を解消する時間を短縮し、圧倒的な学習量を担保します。
                   </p>
                 </div>
               </div>
@@ -1076,7 +1113,7 @@ export default function Page() {
                     独自性の磨き上げ
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える時期。唯一無二の志望理由書を作���。
+                    <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える時期。唯一無二の志望理由書を作成。
                   </p>
                 </div>
               </div>
@@ -1112,10 +1149,10 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { num: '01', title: 'AOと一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
-              { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限な��' },
+              { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限なし' },
               { num: '03', title: '学習の徹底管理', desc: '週次、月次で学習計画を策定し、管理する' },
               { num: '04', title: 'AO合格後の追加費用0円', desc: 'AO合格後は卒業となり自動退塾となります。追加料金は不要' },
-              { num: '05', title: 'SFC特化ロジック', desc: '6年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
+              { num: '05', title: 'SFC特化ロジック', desc: '7年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
               { num: '06', title: '通塾ゼロ', desc: '指導も授業もすべてオンライン。通塾時間を勉強に充てられる' },
             ].map((item) => (
               <Card key={item.num} className="bg-white shadow-md border-t-2 border-t-primary border-x-0 border-b-0 rounded-lg hover:shadow-lg transition-shadow">
@@ -1334,7 +1371,7 @@ export default function Page() {
                 諦めるのはまだまだ早く、こんな私が？と思うあなたこそ一度話をしましょう！
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                6年間で39名の合格者を輩出した経験と、最新のAI技術を組み合わせ、あなたの「本当の実力」を引き出します。
+                7年間で49名の合格者を輩出した経験と、最新のAI技術を組み合わせ、あなたの「本当の実力」を引き出します。
               </p>
               <p className="text-lg text-foreground mb-10 leading-relaxed">
                 <strong className="text-primary">私が直接、あなたと並走することを約束します。</strong>
@@ -1377,7 +1414,7 @@ export default function Page() {
                   </p>
                 </div>
               ) : (
-                <form className="space-y-6" onSubmit={handleSubmit}>
+                <form className="space-y-6" onSubmit={handleFormSubmit}>
                   {/* Error message display */}
                   {formError && (
                     <div className="bg-red-50 border border-red-200 rounded-lg p-4">
@@ -1515,7 +1552,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字��根拠です。
+                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
               </div>
             </details>
 
