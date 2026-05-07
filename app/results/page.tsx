@@ -188,7 +188,6 @@ export default function ResultsPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-[#999999] text-center mt-3">左右にスワイプして全体を確認できます</p>
           </div>
 
           {/* Desktop: Table layout */}
