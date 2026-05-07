@@ -443,7 +443,7 @@ export default function Page() {
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「当初はAI指導に不安もありましたが、対話を通じてく<span className="font-bold text-[#800000]">息子が自律的に机に向かう姿を見て驚きました。</span>単なる受験���クニックではなく、自分の人生を切り拓く<span className="font-bold text-[#800000]">『オーナーシップ』を育ててくれる</span>塾だと感じ、安心してお任せできました。」
+                  「当初はAI指導に不安もありましたが、対話を通じてく<span className="font-bold text-[#800000]">息子が自律的に机に向かう姿を見て驚きました。</span>単なる受験テクニックではなく、自分の人生を切り拓く<span className="font-bold text-[#800000]">『オーナーシップ』を育ててくれる</span>塾だと感じ、安心してお任せできました。」
                 </p>
               </CardContent>
             </Card>
@@ -1091,7 +1091,7 @@ export default function Page() {
               合格までのロードマップ
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              ���つ、何をして合格を掴むか。SFC合格への道筋を可視化します。
+              いつ、何をして合格を掴むか。SFC合格への道筋を可視化します。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -1710,7 +1710,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                はい、<strong>月単位でのプラン���更が可能</strong>です。学力進捗や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
+                はい、<strong>月単位でのプラン変更が可能</strong>です。学力進捗や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
               </div>
             </details>
           </div>
