@@ -8,7 +8,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // 1. 特定の重要ページを個別に飛ばす
+      // 1. 特定の重要ページを詳細へリダイレクト
       {
         source: '/elements/course-content/',
         destination: '/course',
@@ -24,10 +24,10 @@ const nextConfig = {
         destination: '/guide/essay',
         permanent: true,
       },
-      // 2. 指定したページ「以外」で、かつ「1文字以上のパス」がある場合のみトップへ飛ばす
-      // 除外リストに guide ディレクトリ全体と sitemap.xml を追加
+      // 2. キャッチオール設定（無限ループ防止版）
+      // 「guide/essay」ではなく「guide」と書くことで、配下のページすべてを許可します。
       {
-        source: '/:path((?!course|results|guide|sitemap.xml).+)',
+        source: '/:path((?!course|results|guide|sitemap.xml|icon).+)',
         destination: '/',
         permanent: true,
       },
