@@ -8,7 +8,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // 1. 特定の重要ページを個別に飛ばす設定
+      // 1. 特定の重要ページを個別に飛ばす
       {
         source: '/elements/course-content/',
         destination: '/course',
@@ -24,10 +24,10 @@ const nextConfig = {
         destination: '/guide/essay',
         permanent: true,
       },
-      // 2. それ以外のパス（旧ブログ記事など）をすべて新サイトのトップへ飛ばす
-      // ※新サイトの既存ページ（/course等）をリダイレクトから除外する正規表現
+      // 2. 指定したページ「以外」で、かつ「1文字以上のパス」がある場合のみトップへ飛ばす
+      // 末尾を「.+」にすることで、空のパス（ホームページ自体）を対象から外し、無限ループを防ぎます
       {
-        source: '/:path((?!course|results|guide/essay).*)',
+        source: '/:path((?!course|results|guide/essay).+)',
         destination: '/',
         permanent: true,
       },
