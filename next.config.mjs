@@ -25,9 +25,9 @@ const nextConfig = {
         permanent: true,
       },
       // 2. 指定したページ「以外」で、かつ「1文字以上のパス」がある場合のみトップへ飛ばす
-      // 除外リストに sitemap.xml を追加しました
+      // 除外リストに guide ディレクトリ全体と sitemap.xml を追加
       {
-        source: '/:path((?!course|results|guide/essay|sitemap.xml).+)',
+        source: '/:path((?!course|results|guide|sitemap.xml).+)',
         destination: '/',
         permanent: true,
       },
