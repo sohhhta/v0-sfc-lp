@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: '慶應SFC合格への最短距離 - 佐藤塾',
   description: '3人に2人が合格する、AI伴走ロジック。圧倒的な合格実績と充実の返金保証。',
   generator: 'v0.app',
+  // Google Search Console 所有権確認用コードを追加
+  verification: {
+    google: "jVBvchuFr-2bGgeIwJbnZFlOnCrIRFLY54lY5BgEqr8",
+  },
   icons: {
     icon: [
       {
