@@ -24,10 +24,11 @@ const nextConfig = {
         destination: '/guide/essay',
         permanent: true,
       },
-      // 2. キャッチオール設定（無限ループ防止版）
-      // 「guide/essay」ではなく「guide」と書くことで、配下のページすべてを許可します。
+      // 2. キャッチオール設定（システムファイルと特定ページを除外）
       {
-        source: '/:path((?!course|results|guide|sitemap.xml|icon).+)',
+        // 除外リストに _next (システム用) と api を追加しました
+        // これを入れないとNext.jsが動かなくなります
+        source: '/:path((?!_next|api|course|results|guide|sitemap.xml|icon|hero.jpg|jukucho.jpg|signature.png).+)',
         destination: '/',
         permanent: true,
       },
