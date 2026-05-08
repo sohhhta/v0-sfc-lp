@@ -238,7 +238,7 @@ export default function EssayGuidePage() {
             <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
               <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">同じ人に長期的に指導してもらう</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                長期的に指導してもらうことで、過去の内容も踏まえ自分では気づけない「独自の視点」を磨き上げます。<span className="font-bold">佐藤塾ではAIの添削だけでなく、人間にしかできない指導を塾長と一緒に組み合わせることができます。</span>
+                長期的に指導してもらうことで、過去の内容も踏まえ自分では気づけない「独自の視点」を磨き上げます。<span className="font-bold">佐藤塾ではAIの添削だけでなく、人間にしかできない指導を塾長自ら行うことで、AIと人間を組み合わせた指導を実現しています。</span>
               </p>
             </div>
           </div>
