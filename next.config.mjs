@@ -25,9 +25,9 @@ const nextConfig = {
         permanent: true,
       },
       // 2. 指定したページ「以外」で、かつ「1文字以上のパス」がある場合のみトップへ飛ばす
-      // 末尾を「.+」にすることで、空のパス（ホームページ自体）を対象から外し、無限ループを防ぎます
+      // 除外リストに sitemap.xml を追加しました
       {
-        source: '/:path((?!course|results|guide/essay).+)',
+        source: '/:path((?!course|results|guide/essay|sitemap.xml).+)',
         destination: '/',
         permanent: true,
       },
