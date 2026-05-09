@@ -9,18 +9,29 @@ const sansJP = Noto_Sans_JP({ subsets: ["latin", "japanese"], weight: ["400", "5
 
 export const metadata: Metadata = {
   title: '慶應SFC合格への最短距離 - 佐藤塾',
-  description: '3人に2人が合格する、AI伴走ロジック。圧倒的な合格実績と充実の返金保証。',
+  description: '2人に1人が合格する、AI伴走指導。塾長 佐藤颯太が直接指導する慶應SFC専門塾。',
   generator: 'v0.app',
   verification: {
     google: "jVBvchuFr-2bGgeIwJbnZFlOnCrIRFLY54lY5BgEqr8",
   },
+  openGraph: {
+    title: '慶應SFC合格への最短距離 - 佐藤塾',
+    description: '2人に1人が合格する、AI伴走指導。塾長 佐藤颯太が直接指導する慶應SFC専門塾。',
+    url: 'https://www.sfc-satojuku.com',
+    siteName: '佐藤塾',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '慶應SFC合格への最短距離 - 佐藤塾',
+    description: '2人に1人が合格する、AI伴走指導。塾長 佐藤颯太が直接指導する慶應SFC専門塾。',
+    images: ['/og-image.png'],
+  },
   icons: {
-    icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/favicon.png',
+    apple: '/favicon.png',
   },
 }
 
