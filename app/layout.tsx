@@ -1,16 +1,8 @@
-import type { Metadata } from 'next'
-import { Noto_Serif_JP, Noto_Sans_JP } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import Script from 'next/script' // 1. Scriptコンポーネントをインポート
-import './globals.css'
-
-const serifJP = Noto_Serif_JP({ subsets: ["latin", "japanese"], weight: ["400", "700"] });
-const sansJP = Noto_Sans_JP({ subsets: ["latin", "japanese"], weight: ["400", "500", "700"] });
-
 export const metadata: Metadata = {
+  // ここが最も重要な追加ポイントです
+  metadataBase: new URL('https://www.sfc-satojuku.com'), 
   title: '慶應SFC合格への最短距離 - 佐藤塾',
   description: '2人に1人が合格する、AI伴走指導。塾長 佐藤颯太が直接指導する慶應SFC専門塾。',
-  generator: 'v0.app',
   verification: {
     google: "jVBvchuFr-2bGgeIwJbnZFlOnCrIRFLY54lY5BgEqr8",
   },
@@ -19,7 +11,14 @@ export const metadata: Metadata = {
     description: '2人に1人が合格する、AI伴走指導。塾長 佐藤颯太が直接指導する慶應SFC専門塾。',
     url: 'https://www.sfc-satojuku.com',
     siteName: '佐藤塾',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: '佐藤塾 塾長 佐藤颯太',
+      },
+    ],
     locale: 'ja_JP',
     type: 'website',
   },
@@ -31,37 +30,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.png',
+    shortcut: '/favicon.png', // ショートカットアイコン用に追加
     apple: '/favicon.png',
   },
-}
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="ja">
-      <head>
-        {/* 2. Googleアナリティクス設定 (G-NVR474N8XP) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-NVR474N8XP"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-NVR474N8XP');
-          `}
-        </Script>
-      </head>
-      <body style={{ fontFamily: `${sansJP.style.fontFamily}, ${serifJP.style.fontFamily}` }} className="antialiased">
-        {children}
-        {/* Vercelの基本アナリティクスも併用 */}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
-    </html>
-  )
 }
