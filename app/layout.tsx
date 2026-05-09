@@ -1,6 +1,5 @@
 export const metadata: Metadata = {
-  // ここが最も重要な追加ポイントです
-  metadataBase: new URL('https://www.sfc-satojuku.com'), 
+  metadataBase: new URL('https://www.sfc-satojuku.com'),
   title: '慶應SFC合格への最短距離 - 佐藤塾',
   description: '2人に1人が合格する、AI伴走指導。塾長 佐藤颯太が直接指導する慶應SFC専門塾。',
   verification: {
@@ -29,8 +28,11 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png', // ショートカットアイコン用に追加
+    icon: [
+      { url: '/favicon.png' },
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+    ],
+    shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
 }
