@@ -18,8 +18,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
   },
-  icons: {
-    icon: '/favicon.png', // メールの指摘通り、1行にシンプル化
-    apple: '/favicon.png',
-  },
+  // icons設定を削除しました。
+  // これにより app/favicon.ico が自動的に認識されます。
 }
