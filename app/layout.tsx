@@ -1,3 +1,12 @@
+import type { Metadata } from 'next'
+import { Noto_Serif_JP, Noto_Sans_JP } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
+import './globals.css'
+
+const serifJP = Noto_Serif_JP({ subsets: ["latin", "japanese"], weight: ["400", "700"] });
+const sansJP = Noto_Sans_JP({ subsets: ["latin", "japanese"], weight: ["400", "500", "700"] });
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sfc-satojuku.com'),
   title: '慶應SFC合格への最短距離 - 佐藤塾',
@@ -18,6 +27,33 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
   },
-  // icons設定を削除しました。
-  // これにより app/favicon.ico が自動的に認識されます。
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="ja">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NVR474N8XP"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NVR474N8XP');
+          `}
+        </Script>
+      </head>
+      <body style={{ fontFamily: `${sansJP.style.fontFamily}, ${serifJP.style.fontFamily}` }} className="antialiased">
+        {children}
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
+    </html>
+  )
 }

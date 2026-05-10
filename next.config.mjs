@@ -8,7 +8,8 @@ const nextConfig = {
       { source: '/passing-record/', destination: '/results', permanent: true },
       { source: '/recommended-articles/', destination: '/guide/essay', permanent: true },
       {
-        source: '/:path((?!_next|api|course|results|guide|sitemap.xml|favicon\\.png|og-image\\.png|hero\\.jpg|jukucho\\.jpg|signature\\.png).+)',
+        // 修正点：favicon\\.ico を除外リストに追加しました
+        source: '/:path((?!_next|api|course|results|guide|sitemap.xml|favicon\\.png|favicon\\.ico|og-image\\.png|hero\\.jpg|jukucho\\.jpg|signature\\.png).+)',
         destination: '/',
         permanent: true,
       },
