@@ -1,176 +1,133 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { 
-  Menu, 
-  X, 
-  ChevronRight, 
-  PenTool, 
-  BarChart, 
-  BookOpen, 
-  Clock, 
-  CheckCircle2 
-} from 'lucide-react'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { ChevronRight, PenTool, BarChart, BookOpen, Clock, CheckCircle2, List, User } from 'lucide-react'
 
-// 佐藤塾共通の装飾付きセクションタイトル（他ページと統一）
-function SectionTitle({ children }: { children: React.ReactNode }) {
+// 装飾付き見出しコンポーネント
+function SectionTitle({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
-    <div className="text-center mb-10 mt-16">
+    <div className="text-center mb-10 mt-20" id={id}>
       <div className="flex items-center justify-center gap-6 mb-6">
-        <div className="h-px w-16 bg-[#002147]" />
+        <div className="h-px w-12 bg-[#002147]" />
         <div className="w-2 h-2 bg-[#002147] rotate-45" />
-        <div className="h-px w-16 bg-[#002147]" />
+        <div className="h-px w-12 bg-[#002147]" />
       </div>
       <h2 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wider">
         {children}
       </h2>
-      <div className="flex items-center justify-center gap-6 mt-6">
-        <div className="h-px w-16 bg-[#002147]" />
-        <div className="w-2 h-2 bg-[#002147] rotate-45" />
-        <div className="h-px w-16 bg-[#002147]" />
-      </div>
     </div>
   )
 }
 
 export default function LogicWritingPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
   return (
-    <div className="min-h-screen bg-white font-sans text-[#333333]">
-      {/* --- ナビゲーション（app/page.tsx を完全踏襲） --- */}
-      <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20 items-center">
-            <Link href="/" className="flex flex-col">
-              <span className="text-2xl font-bold tracking-tighter text-[#002147] font-serif">佐藤塾</span>
-              <span className="text-[10px] text-[#002147] tracking-[0.2em] font-medium">慶應SFC合格への最短距離</span>
-            </Link>
-
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-sm font-medium hover:text-[#C5A059] transition-colors">ホーム</Link>
-              <Link href="/course" className="text-sm font-medium hover:text-[#C5A059] transition-colors">コース・料金</Link>
-              <Link href="/results" className="text-sm font-medium hover:text-[#C5A059] transition-colors">合格実績</Link>
-              <Link href="/#contact-form">
-                <Button className="bg-[#002147] hover:bg-[#003366] text-white rounded-none px-6">
-                  無料相談・体験授業
-                </Button>
-              </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[#002147]">
-                {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 py-4 px-6 space-y-4">
-            <Link href="/" className="block text-base font-medium" onClick={() => setIsMenuOpen(false)}>ホーム</Link>
-            <Link href="/course" className="block text-base font-medium" onClick={() => setIsMenuOpen(false)}>コース・料金</Link>
-            <Link href="/results" className="block text-base font-medium" onClick={() => setIsMenuOpen(false)}>合格実績</Link>
-            <Link href="/#contact-form" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full bg-[#002147] text-white rounded-none">無料相談・体験授業</Button>
-            </Link>
-          </div>
-        )}
-      </nav>
-
-      {/* --- メインコンテンツ --- */}
+    <div className="min-h-screen bg-white">
+      <Header />
+      
       <main className="pt-32 pb-20">
         <article className="max-w-4xl mx-auto px-6">
-          {/* 記事ヘッダー */}
+          {/* ヘッダー */}
           <header className="mb-12 text-center">
             <div className="inline-block px-4 py-1 bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold tracking-widest mb-6 rounded-full">
               SFC小論文 対策ガイド
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#002147] leading-[1.3] mb-8 font-serif">
+            <h1 className="text-3xl md:text-5xl font-bold text-[#002147] leading-[1.3] mb-8 font-serif">
               慶應SFCの小論文で<br className="hidden md:block" />「合格点」に届かない理由とは？
             </h1>
             <div className="flex items-center justify-center text-gray-500 text-sm space-x-6 border-y border-gray-100 py-4">
-              <span className="flex items-center"><Clock size={16} className="mr-1.5 text-[#800000]" /> 読了目安：5分</span>
-              <span className="font-bold text-[#002147]">監修：佐藤塾 塾長 佐藤颯太</span>
+              <span className="flex items-center"><Clock size={16} className="mr-1.5 text-[#800000]" /> 5分で読めます</span>
+              <span className="font-bold text-[#002147]">監修：佐藤颯太</span>
             </div>
           </header>
 
-          {/* 記事本文 */}
+          {/* 目次 (ToC) */}
+          <div className="bg-[#F8F9FA] p-8 rounded-2xl mb-16 border border-gray-100">
+            <h3 className="text-lg font-bold text-[#002147] mb-4 flex items-center">
+              <List size={20} className="mr-2 text-[#C5A059]" /> この記事のポイント
+            </h3>
+            <ul className="grid md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-[#002147]">
+              <li><a href="#sec1" className="hover:text-[#C5A059] flex items-center">・「評価の対象」にならない原因とは？</a></li>
+              <li><a href="#sec2" className="hover:text-[#C5A059] flex items-center">・圧倒的練習量を支えるAI添削の役割</a></li>
+              <li><a href="#sec3" className="hover:text-[#C5A059] flex items-center">・逆転合格に必要な「準備期間」の真実</a></li>
+              <li><a href="#sec4" className="hover:text-[#C5A059] flex items-center">・SFC対策が他大学合格に繋がる理由</a></li>
+            </ul>
+          </div>
+
           <div className="prose prose-slate max-w-none leading-[1.9] text-gray-700">
-            <div className="bg-[#f8f9fa] p-8 rounded-2xl border-l-4 border-[#C5A059] mb-12 italic text-lg shadow-sm">
+            <p className="text-lg mb-8 italic border-l-4 border-[#C5A059] pl-6 py-2 text-slate-600 bg-slate-50">
               「SFCの小論文は、特別な才能がないと合格点をもらえないのではないか？」<br />
               「独創的なアイデアなんて、自分には思いつかない……」
+            </p>
+
+            <SectionTitle id="sec1">1. なぜ、あなたの小論文は「評価の対象」にならないのか？</SectionTitle>
+            <p>
+              多くの受験生が「何かすごいことを書かなければ」と焦るあまり、問いかけ（設問）を置き去りにしてしまいます。
+              SFCの採点官が見ているのは、あなたの「感性」以上に、<strong>大学で学ぶために必要な「考える手順」</strong>が身についているかです。
+            </p>
+
+            {/* 図解エリア：ロジックの3要素 */}
+            <div className="my-12 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+              <div className="p-6 bg-white border border-gray-100 shadow-sm rounded-xl">
+                <div className="w-10 h-10 bg-[#002147] text-white flex items-center justify-center rounded-full mx-auto mb-4 font-bold">1</div>
+                <p className="font-bold text-sm">設問の正確な把握</p>
+                <p className="text-xs text-gray-500 mt-2">求められている問いに<br />真っ直ぐ答える</p>
+              </div>
+              <div className="p-6 bg-white border border-gray-100 shadow-sm rounded-xl">
+                <div className="w-10 h-10 bg-[#002147] text-white flex items-center justify-center rounded-full mx-auto mb-4 font-bold">2</div>
+                <p className="font-bold text-sm">論理的な構成</p>
+                <p className="text-xs text-gray-500 mt-2">接続詞を正しく使い<br />筋道を通す</p>
+              </div>
+              <div className="p-6 bg-white border border-gray-100 shadow-sm rounded-xl">
+                <div className="w-10 h-10 bg-[#002147] text-white flex items-center justify-center rounded-full mx-auto mb-4 font-bold">3</div>
+                <p className="font-bold text-sm">体系的な解答</p>
+                <p className="text-xs text-gray-500 mt-2">自分の考えを<br />客観的に組み立てる</p>
+              </div>
             </div>
-            
-            <p className="mb-8">
-              受験生や保護者の方から、このような不安の声をよくいただきます。しかし、数多くの逆転合格者の答案を分析してきた結果、一つの明快な事実が見えてきました。
-            </p>
 
-            <div className="bg-[#002147] text-white p-8 rounded-xl my-10 shadow-lg">
-              <p className="font-bold text-lg mb-0 leading-relaxed">
-                慶應SFCの小論文で点数が伸び悩む最大の原因は、内容の「面白さ」以前に、大学側が求めている「学問のルール」に沿った書き方（ロジカルライティング）ができていないことにあります。
-              </p>
+            <SectionTitle id="sec2">2. 「練習の量」が、本番の揺るぎない自信に変わる</SectionTitle>
+            <p>
+              論理的な書き方は、頭で理解するだけでは身につきません。佐藤塾がAI添削を導入したのは、従来の指導では難しかった<strong>「圧倒的な演習量」</strong>を、塾長とAIのダブルチェックで実現するためです。
+            </p>
+            {/* まとめポイントボックス */}
+            <div className="bg-[#800000]/5 border-l-4 border-[#800000] p-6 my-8 rounded-r-xl text-sm">
+              <p className="font-bold text-[#800000] mb-1">💡 ポイント</p>
+              「昨日よりも、3ヶ月前よりも、自分の文章が分かりやすくなっている」という成長実感こそが、逆転合格のガソリンになります。
             </div>
 
-            <SectionTitle>1. なぜ、あなたの小論文は「評価の対象」にならないのか？</SectionTitle>
+            <SectionTitle id="sec4">4. SFC対策で磨いた力は、一生モノの財産になる</SectionTitle>
             <p>
-              多くの受験生が「何かすごいことを書かなければ」と焦るあまり、問いかけ（設問）を置き去りにして、自分の言いたいことだけを書いてしまいます。
-            </p>
-            <p>
-              SFCの採点官が見ているのは、あなたの「感性」だけではありません。「出題者の意図を正確に読み取り、筋道を立てて、客観的に自分の考えを組み立てられているか」という、<span className="font-bold text-[#002147] border-b-2 border-[#C5A059]/30">大学で学ぶために必要な「考える手順」</span>が身についているかを確認しています。
-            </p>
-            <p>
-              接続詞の使い方が不自然だったり、話が急に飛躍したりする文章は、どんなに良いアイデアが含まれていても、合格点には届きません。まずは「相手に伝わる書き方の基本」を整えること。これが、実は合格への一番の近道なのです。
+              SFCのために磨いた力で、<strong>青山学院、法政、立教、中央</strong>といった難関大学にも次々と合格しています。
+              これは、佐藤塾で教える内容が単なる小論文対策ではなく、どこでも通用する「本質的な知力」だからです。
             </p>
 
-            <SectionTitle>2. 「練習の量」が、本番の揺るぎない自信に変わる</SectionTitle>
-            <p>
-              この「筋道を立てて書く力」は、スポーツと同じで、頭で理解するだけでは身につきません。何度も書いて、そのたびに客観的な指摘を受け、修正する。この繰り返しによって、初めて自分の技術になります。
-            </p>
-            <p>
-              ここで多くの受験生が直面するのが、<strong>「添削の回数が足りない」</strong>という壁です。
-              従来の指導では、先生一人が見られる数に限りがあったり、指導者の「好みの書き方」に偏ってしまったりする課題がありました。
-            </p>
-            <p>
-              この課題を克服するために、私たちが辿り着いたのが、客観的な視点を持つAIと経験豊富な講師によるダブルチェックです。一人の講師の感覚だけに頼らず、納得いくまで何度も繰り返す。この圧倒的な演習量こそが、本番での迷いを消し去ります。
-            </p>
+            {/* 監修者プロフィール */}
+            <div className="mt-24 p-8 border border-gray-200 rounded-3xl flex flex-col md:flex-row items-center gap-8 bg-slate-50/50">
+              <div className="w-24 h-24 bg-gray-200 rounded-full flex-shrink-0 bg-[url('/jukucho.jpg')] bg-cover bg-center border-2 border-[#C5A059]"></div>
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs font-bold text-[#C5A059] uppercase tracking-tighter">監修者</span>
+                  <h4 className="text-xl font-bold text-[#002147] font-serif">佐藤 颯太 <span className="text-sm font-medium text-gray-500">Sota Sato</span></h4>
+                </div>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数百名の受験生と向き合い、独自の「ロジカルライティング・メソッド」と最新のAI技術を融合させた指導で、多数の逆転合格者を輩出。
+                </p>
+                <Link href="/#contact-form" className="text-sm font-bold text-[#800000] hover:underline inline-flex items-center">
+                  塾長の詳しい指導方針を見る <ChevronRight size={14} className="ml-1" />
+                </Link>
+              </div>
+            </div>
 
-            <SectionTitle>3. 長期の準備期間が「逆転合格」を現実にする理由</SectionTitle>
-            <p>
-              「直前の対策だけで何とかしたい」というお気持ちもよく分かります。しかし、長年染み付いた「書き方のクセ」を直し、新しい思考の基礎を作るには、やはり一定の時間が必要です。
-            </p>
-            <p>
-              いきなり過去問という難しい課題に挑んで自信を失うのではなく、まずは「論理的に考え、書く」という土台から一歩ずつ積み上げる。
-              このプロセスを数ヶ月かけて丁寧に踏むことで、今の偏差値がどうあっても、本番で「慶應SFCが求めているレベル」に到達する力が備わります。
-            </p>
-
-            <SectionTitle>4. SFC対策で磨いた力は、一生モノの財産になる</SectionTitle>
-            <p>
-              SFCの小論文対策は、非常に特殊だと思われがちです。しかし、ここで身につける「論理的に考える力」は、他大学の入試はもちろん、大学入学後のレポート作成、さらには社会に出てからの資料作成でも、最強の武器になります。
-            </p>
-            <p>
-              事実、SFCを志してこの力を磨いた受験生たちは、<strong>青山学院、法政、立教、中央</strong>といった難関大学にも併願して合格を勝ち取っています。SFCのために学んだことは、決して無駄にならず、どこでも通用する「一生モノの知力」になるのです。
-            </p>
-
-            {/* コンタクトエリア */}
-            <div className="mt-20 p-10 bg-[#f4f1e0] rounded-2xl border border-[#C5A059]/30 text-center shadow-inner">
-              <h3 className="text-2xl font-bold text-[#002147] mb-6 font-serif">合格を願うすべての受験生へ</h3>
-              <p className="mb-8 text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                合格点に届かないことを、過度に恐れる必要はありません。
-                正しいルールを知り、十分な練習を積みさえすれば、SFCの門は必ず開きます。
-              </p>
-              <p className="mb-10 text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                もし、今の自分の書き方に不安があるなら、一度客観的なフィードバックを受けてみることをお勧めします。自分の弱点を知ることは、合格に向けた最も大きな一歩になるはずです。
+            {/* CTA */}
+            <div className="mt-20 p-10 bg-[#002147] text-white rounded-3xl text-center shadow-2xl">
+              <h3 className="text-2xl font-bold mb-6 font-serif">合格への第一歩を、ここから</h3>
+              <p className="mb-10 text-slate-300 max-w-2xl mx-auto">
+                正しいルールを知り、十分な練習を積みさえすれば、SFCの門は必ず開きます。まずはあなたの現状を詳しくお聞かせください。
               </p>
               <Link href="/#contact-form">
-                <Button className="bg-[#800000] hover:bg-[#600000] text-white font-bold py-7 px-10 text-lg rounded-none shadow-xl transition-transform hover:scale-105">
-                  まずは無料相談・体験授業から
-                  <ChevronRight size={20} className="ml-2" />
+                <Button className="bg-[#C5A059] hover:bg-[#B48F48] text-[#002147] font-bold py-7 px-12 text-lg rounded-none">
+                  無料相談・体験授業を予約する
                 </Button>
               </Link>
             </div>
@@ -178,27 +135,7 @@ export default function LogicWritingPage() {
         </article>
       </main>
 
-      {/* --- フッター（app/page.tsx を完全踏襲） --- */}
-      <footer className="bg-[#002147] text-white py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold font-serif mb-2 tracking-wider">佐藤塾</h3>
-              <p className="text-gray-400 text-sm tracking-widest uppercase">Keio SFC Prep School</p>
-            </div>
-            <div className="flex flex-wrap gap-8 text-sm font-medium">
-              <Link href="/" className="hover:text-[#C5A059] transition-colors underline-offset-4 hover:underline">ホーム</Link>
-              <Link href="/course" className="hover:text-[#C5A059] transition-colors underline-offset-4 hover:underline">コース・料金</Link>
-              <Link href="/results" className="hover:text-[#C5A059] transition-colors underline-offset-4 hover:underline">合格実績</Link>
-              <Link href="/#contact-form" className="hover:text-[#C5A059] transition-colors underline-offset-4 hover:underline">お問い合わせ</Link>
-            </div>
-          </div>
-          <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-            <p>&copy; 2026 佐藤塾. All rights reserved.</p>
-            <p>慶應義塾大学SFC（総合政策学部・環境情報学部）受験対策専門</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
