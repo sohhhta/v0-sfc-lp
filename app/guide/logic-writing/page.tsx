@@ -3,7 +3,8 @@
 import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
-import { ChevronRight, PenTool, BarChart, BookOpen, Clock, CheckCircle2, List, User } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { ChevronRight, Clock, List } from 'lucide-react'
 
 // 装飾付き見出しコンポーネント
 function SectionTitle({ children, id }: { children: React.ReactNode; id?: string }) {
