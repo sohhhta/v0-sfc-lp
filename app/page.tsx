@@ -86,7 +86,7 @@ function ConsultationAICard() {
 
         {/* Development Background */}
         <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
-          過去の合格者と塾長の会話データや、質問に対する塾長の全回答、そして独自分析した過去問解析データを集約。24時間、あたかも塾長に気軽に質問し続けることのできる体験を実現しました。
+          過去の合格者と塾長の会話データや、質問に対する塾長の全回答、そこで独自分析した過去問解析データを集約。24時間、あたかも塾長に気軽に質問し続けることのできる体験を実現しました。
         </p>
 
         {/* Guide text */}
@@ -156,7 +156,6 @@ export default function Page() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [formError, setFormError] = useState('')
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -185,7 +184,6 @@ export default function Page() {
       }
 
       setIsSubmitted(true)
-      // Reset form data after successful submission
       setFormData({
         name: '',
         email: '',
@@ -201,7 +199,6 @@ export default function Page() {
     }
   }
 
-  // Smooth scroll handler for anchor links with header offset
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const href = (e.currentTarget as HTMLAnchorElement).href
     const targetId = href.substring(href.indexOf('#') + 1)
@@ -211,7 +208,6 @@ export default function Page() {
       const targetElement = document.getElementById(targetId)
 
       if (targetElement) {
-        // Header height offset (80px for sticky header)
         const headerHeight = 80
         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
 
@@ -225,92 +221,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          {/* Logo - left */}
-          <h1 className="text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</h1>
-
-          {/* Desktop Navigation - center */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm text-[#333333] hover:text-primary transition-colors">
-              ホーム
-            </Link>
-            <Link href="/course" className="text-sm text-[#333333] hover:text-primary transition-colors">
-              コース・料金
-            </Link>
-            <Link href="/results" className="text-sm text-[#333333] hover:text-primary transition-colors">
-              合格実績
-            </Link>
-            <Link href="/guide/essay" className="text-sm text-[#333333] hover:text-primary transition-colors">
-              小論文ガイド
-            </Link>
-          </div>
-
-          {/* Right side - button and mobile menu toggle */}
-          <div className="flex items-center gap-4">
-            {/* Desktop Button */}
-            <a href="#contact-form" onClick={handleSmoothScroll} className="hidden md:block">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
-            </a>
-
-            {/* Mobile Menu Toggle */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 hover:bg-[#F0F0F0] rounded-lg transition-colors"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-primary" />
-              ) : (
-                <Menu className="w-6 h-6 text-primary" />
-              )}
-            </button>
-
-            {/* Mobile Button */}
-            <a href="#contact-form" onClick={handleSmoothScroll} className="md:hidden">
-              <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">
-                無料相談
-              </Button>
-            </a>
-          </div>
-        </div>
-
-        {/* Mobile Navigation Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-border">
-            <div className="px-4 py-4 space-y-3">
-              <Link
-                href="/"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                ホーム
-              </Link>
-              <Link
-                href="/course"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                コース・料金
-              </Link>
-              <Link
-                href="/results"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                合格実績
-              </Link>
-              <Link
-                href="/guide/essay"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                小論文ガイド
-              </Link>
-            </div>
-          </div>
-        )}
-      </nav>
+      {/* 共通メニューとの重複を防ぐため、ここにあった独自の<nav>ブロックのみを完全に削除しました */}
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -353,17 +264,13 @@ export default function Page() {
           </div>
 
           {/* Stats Section - Medal-like design */}
-          {/* Mobile: center card full-width on top, two side cards in a row below */}
-          {/* Desktop: all three in one row, center slightly elevated */}
           <div className="max-w-4xl mx-auto w-full">
-            {/* Center card — full-width on mobile, hidden on md+ (rendered in the 3-col grid) */}
             <div className="md:hidden flex flex-col items-center justify-center p-6 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg mb-4">
               <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
               <p className="text-6xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>50<span className="text-2xl">%</span></p>
               <p className="text-sm text-[#D4AF37] mt-2 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生14名中7名が合格)</p>
             </div>
 
-            {/* Side cards row on mobile */}
             <div className="grid grid-cols-2 gap-4 md:hidden">
               <div className="flex flex-col items-center justify-center p-4 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
                 <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium">2026年度 受講継続率</p>
@@ -375,7 +282,6 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Desktop: all three in one row */}
             <div className="hidden md:grid md:grid-cols-3 gap-4">
               <div className="flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
                 <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">2026年度 受講継続率</p>
@@ -401,7 +307,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Testimonials Section - 合格者・保護者の生の声 */}
+      {/* Testimonials Section */}
       <section className="py-28 px-4 bg-[#F8F9FA]">
         <div className="max-w-5xl mx-auto">
           <SectionTitle subtitle="AI と塾長の2軸指導により、確実に合格を掴んだ3人の声（合格者の中から抜粋）">
@@ -409,7 +315,6 @@ export default function Page() {
           </SectionTitle>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Case 01: AO合格 */}
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
               <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
                 <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">AO入試合格</Badge>
@@ -422,7 +327,6 @@ export default function Page() {
               </CardContent>
             </Card>
 
-            {/* Case 02: 一般合格 */}
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
               <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
                 <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">一般入試合格</Badge>
@@ -435,7 +339,6 @@ export default function Page() {
               </CardContent>
             </Card>
 
-            {/* Case 03: 保護者 */}
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg border border-border overflow-hidden">
               <div className="bg-gradient-to-r from-[#002147] to-[#003d6b] px-6 py-4">
                 <Badge className="bg-[#C5A059] text-[#002147] text-xs font-bold">保護者様</Badge>
@@ -443,26 +346,24 @@ export default function Page() {
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「当初はAI指導に不安もありましたが、対話を通じてく<span className="font-bold text-[#800000]">息子が自律的に机に向かう姿を見て驚きました。</span>単なる受験テクニックではなく、自分の人生を切り拓く<span className="font-bold text-[#800000]">『オーナーシップ』を育ててくれる</span>塾だと感じ、安心してお任せできました。」
+                  「当初はAI指導に不安もありましたが、対話を通じてく<span className="font-bold text-[#800000]">息子が自律的に机に向かう姿を見て驚しました。</span>単なる受験テクニックではなく、自分の人生を切り拓く<span className="font-bold text-[#800000]">『オーナーシップ』を育ててくれる</span>塾だと感じ、安心してお任せできました。」
                 </p>
               </CardContent>
             </Card>
           </div>
         </div>
 
-          {/* CTA Button for Results */}
-          <div className="text-center mt-12">
-            <Link href="/results">
-              <Button className="bg-[#002147] hover:bg-[#800000] text-white font-bold px-8 py-6 h-auto transition-all duration-300 hover:shadow-lg">
-                すべての合格実績と年度別の推移を見る
-              </Button>
-            </Link>
-          </div>
+        <div className="text-center mt-12">
+          <Link href="/results">
+            <Button className="bg-[#002147] hover:bg-[#800000] text-white font-bold px-8 py-6 h-auto transition-all duration-300 hover:shadow-lg">
+              すべての合格実績と年度別の推移を見る
+            </Button>
+          </Link>
+        </div>
       </section>
 
-      {/* Problem Section - Editorial Magazine Style */}
+      {/* Problem Section */}
       <section className="relative py-28 px-4 bg-white overflow-hidden">
-        {/* Pinstripe background pattern */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -471,7 +372,6 @@ export default function Page() {
         />
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Section Title - Editorial Style */}
           <div className="text-center mb-20">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed text-balance">
@@ -481,15 +381,11 @@ export default function Page() {
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
 
-          {/* Walls - Editorial Layout */}
           <div className="space-y-12 md:space-y-28">
-            {/* Cause 01 */}
             <div className="relative">
-              {/* Mobile: Large text as background watermark */}
               <div className="md:hidden absolute -top-2 -left-2 opacity-[0.08] pointer-events-none">
                 <span className="text-7xl font-bold text-[#800000] font-serif leading-none">01</span>
               </div>
-              {/* Desktop: Side column layout */}
               <div className="hidden md:flex gap-14">
                 <div className="flex-shrink-0 w-32">
                   <span className="text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
@@ -504,7 +400,6 @@ export default function Page() {
                   </p>
                 </div>
               </div>
-              {/* Mobile: Stacked layout */}
               <div className="md:hidden relative border-l-4 border-[#002147] pl-5">
                 <div className="text-xs font-bold text-[#C5A059] tracking-[0.2em] mb-1">原因 01</div>
                 <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
@@ -516,7 +411,6 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Cause 02 */}
             <div className="relative">
               <div className="md:hidden absolute -top-2 -left-2 opacity-[0.08] pointer-events-none">
                 <span className="text-7xl font-bold text-[#800000] font-serif leading-none">02</span>
@@ -546,7 +440,6 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Cause 03 */}
             <div className="relative">
               <div className="md:hidden absolute -top-2 -left-2 opacity-[0.08] pointer-events-none">
                 <span className="text-7xl font-bold text-[#800000] font-serif leading-none">03</span>
@@ -577,7 +470,6 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Closing Statement - Three Walls Resolution */}
           <div className="mt-20 md:mt-36 space-y-8 text-center">
             <div className="w-16 h-px bg-[#002147] mx-auto" />
             <p className="text-lg md:text-xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed">
@@ -595,9 +487,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Solution Section: Two AIs - Light Gray with intellectual pattern */}
+      {/* Solution Section */}
       <section className="relative py-28 px-4 bg-[#F9F9F9] overflow-hidden">
-        {/* Subtle intellectual pattern background */}
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
@@ -606,7 +497,6 @@ export default function Page() {
         />
 
         <div className="relative max-w-5xl mx-auto">
-          {/* Section Header */}
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
@@ -620,10 +510,8 @@ export default function Page() {
           </div>
 
           <div className="space-y-16 md:space-y-20">
-            {/* AI 1: 添削AI */}
             <div className="bg-white border-l-4 border-[#002147] shadow-lg rounded-r-lg overflow-hidden">
               <div className="p-6 md:p-10">
-                {/* Title */}
                 <div className="flex items-center gap-4 mb-6">
                   <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">AI 01</span>
                   <div className="h-px flex-1 bg-[#002147]/10" />
@@ -631,13 +519,9 @@ export default function Page() {
                 <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
                   添削用AI
                 </h3>
-
-                {/* Development Background */}
                 <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
                   6年間の合格者が書いた全答案と、その成長過程（ビフォー・アフター）をすべて学習。SFC特有の評価基準を佐藤塾なりに基準化し、合格ラインを超えるための「添削」と「情報提供」を実現します。
                 </p>
-
-                {/* Chat Mockup */}
                 <div className="bg-[#F8F9FA] rounded-lg p-5 md:p-6 border border-[#E5E7EB]">
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-2 h-2 rounded-full bg-[#002147]" />
@@ -652,13 +536,12 @@ export default function Page() {
               </div>
             </div>
 
-            {/* AI 2: 相談AI */}
             <ConsultationAICard />
           </div>
         </div>
       </section>
 
-      {/* AI x 塾長 Role Division Section */}
+      {/* Role Division Section */}
       <section className="py-28 px-4 bg-white border-t border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
           <SectionTitle subtitle="『量』と『質』を極限まで両立させる">
@@ -666,7 +549,6 @@ export default function Page() {
           </SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* AI Section */}
             <div className="bg-[#f0f4f8] rounded-xl p-8 border-l-4 border-[#002147]">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-[#002147] rounded-lg flex items-center justify-center">
@@ -695,7 +577,6 @@ export default function Page() {
               </p>
             </div>
 
-            {/* Instructor Section */}
             <div className="bg-[#fff5f5] rounded-xl p-8 border-l-4 border-[#800000]">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-[#800000] rounded-lg flex items-center justify-center">
@@ -734,10 +615,9 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Comparison Section - Light Gray */}
+      {/* Comparison Section */}
       <section className="py-28 px-4 bg-[#F9F9F9]">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
@@ -749,7 +629,6 @@ export default function Page() {
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
 
-          {/* Desktop: Full 3-column table */}
           <div className="hidden md:block pt-6 overflow-visible rounded-lg shadow-lg">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -764,7 +643,6 @@ export default function Page() {
                 </tr>
               </thead>
               <tbody>
-                {/* Row 1: 小論文の添削 */}
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">小論文の添削</td>
                   <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold">24時間無制限<br /><span className="text-xs text-[#666666]">（AI×塾長）</span></td>
@@ -772,7 +650,6 @@ export default function Page() {
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">週1回<br /><span className="text-xs">（学生バイト中心）</span></td>
                 </tr>
 
-                {/* Row 2: 対策範囲 */}
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">対策範囲</td>
                   <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold"><span className="text-[#800000] font-bold">AO・一般 二刀流</span><br /><span className="text-xs text-[#666666]">（完全並走）</span></td>
@@ -780,7 +657,6 @@ export default function Page() {
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">一般入試のみ</td>
                 </tr>
 
-                {/* Row 3: 費用 */}
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">費用（年間）</td>
                   <td className="p-6 text-center bg-[#800000]/5">
@@ -791,7 +667,6 @@ export default function Page() {
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">年間 100万円〜<br /><span className="text-xs">（講習は別料金）</span></td>
                 </tr>
 
-                {/* Row 4: 質問・相談 */}
                 <tr>
                   <td className="p-6 font-bold text-[#002147]">質問・相談</td>
                   <td className="p-6 text-center bg-[#800000]/5">
@@ -805,22 +680,18 @@ export default function Page() {
             </table>
           </div>
 
-          {/* Mobile: Horizontal scroll - simplified stable design */}
           <div className="md:hidden mt-8 pb-6 relative">
-            {/* Swipe Guide Animation - Top Right */}
             <div className="overflow-x-auto overflow-y-visible rounded-lg shadow-lg bg-white mt-6">
               <table className="w-full border-collapse" style={{ minWidth: '420px' }}>
                 <thead>
                   <tr>
                     <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[13px] bg-white border-r border-[#E5E7EB]" style={{ minWidth: '90px' }}>項目</th>
-                    <th className="p-3 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '80px' }}>
-                      佐藤塾</th>
+                    <th className="p-3 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '80px' }}>佐藤塾</th>
                     <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F8F8F8] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>特化塾</th>
                     <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F3F3F3] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>一般塾</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {/* Row 1 */}
                   <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">小論文添削</td>
                     <td className="p-3 bg-[#fff5f5] text-center">
@@ -830,7 +701,6 @@ export default function Page() {
                     <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1回</td>
                   </tr>
 
-                  {/* Row 2 */}
                   <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">対策範囲</td>
                     <td className="p-3 bg-[#fff5f5] text-center">
@@ -840,7 +710,6 @@ export default function Page() {
                     <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">一般のみ</td>
                   </tr>
 
-                  {/* Row 3 */}
                   <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">月額費用</td>
                     <td className="p-3 bg-[#fff5f5] text-center">
@@ -851,7 +720,6 @@ export default function Page() {
                     <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">8万〜+講習費</td>
                   </tr>
 
-                  {/* Row 4 — extra pb to clear scrollbar */}
                   <tr>
                     <td className="sticky left-0 z-20 p-3 pb-6 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">相談対応</td>
                     <td className="p-3 pb-6 bg-[#fff5f5] text-center">
@@ -865,7 +733,6 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Cost Disclaimer */}
           <div className="mt-10 bg-white rounded-lg border-l-4 border-[#800000] p-5 md:p-6 shadow-md">
             <p className="text-sm md:text-base text-[#333333]">
               <span className="text-[#800000] font-bold">※ 佐藤塾の費用は月額 11.8万円〜。</span>
@@ -878,7 +745,6 @@ export default function Page() {
       {/* Cycle Section - 4 Steps */}
       <section className="py-28 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          {/* Section Header */}
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed">
@@ -887,9 +753,7 @@ export default function Page() {
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
 
-          {/* Desktop: Cycle Layout */}
           <div className="hidden lg:block relative">
-            {/* Center text */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10">
               <div className="bg-white rounded-full w-48 h-48 flex items-center justify-center shadow-lg border-2 border-[#002147]/10">
                 <div>
@@ -899,23 +763,19 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Circular arrows SVG */}
             <svg className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px]" viewBox="0 0 420 420">
               <defs>
                 <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
                   <polygon points="0 0, 10 3.5, 0 7" fill="#002147" />
                 </marker>
               </defs>
-              {/* Circular path arrows */}
               <path d="M 210 40 A 170 170 0 0 1 380 210" fill="none" stroke="#002147" strokeWidth="2" markerEnd="url(#arrowhead)" />
               <path d="M 380 210 A 170 170 0 0 1 210 380" fill="none" stroke="#002147" strokeWidth="2" markerEnd="url(#arrowhead)" />
               <path d="M 210 380 A 170 170 0 0 1 40 210" fill="none" stroke="#002147" strokeWidth="2" markerEnd="url(#arrowhead)" />
               <path d="M 40 210 A 170 170 0 0 1 210 40" fill="none" stroke="#002147" strokeWidth="2" markerEnd="url(#arrowhead)" />
             </svg>
 
-            {/* 4 Cards positioned around the circle: Top=01, Right=02, Bottom=03, Left=04 */}
             <div className="grid grid-cols-2 gap-x-96 gap-y-16 py-8">
-              {/* Top: Step 01 - 学習計画 */}
               <div className="col-span-2 flex justify-center">
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-6 w-80 shadow-md">
                   <div className="flex items-center gap-3 mb-3">
@@ -928,7 +788,6 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* Middle: Step 04 (left) and Step 02 (right) - clockwise order */}
               <div className="flex justify-start">
                 <div className="bg-white border-4 border-[#800000] rounded-lg p-6 w-80 shadow-lg">
                   <div className="flex items-center gap-3 mb-3">
@@ -952,7 +811,6 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* Bottom: Step 03 - 進捗レポート */}
               <div className="col-span-2 flex justify-center">
                 <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-6 w-80 shadow-md">
                   <div className="flex items-center gap-3 mb-3">
@@ -967,9 +825,7 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Mobile/Tablet: Vertical flow with curved connectors */}
           <div className="lg:hidden">
-            {/* Center label */}
             <div className="text-center mb-10">
               <div className="inline-block bg-[#002147] text-white px-6 py-3 rounded-full">
                 <p className="text-sm font-bold tracking-wider">合格率50%を支えるサイクル</p>
@@ -977,10 +833,8 @@ export default function Page() {
             </div>
 
             <div className="relative max-w-md mx-auto">
-              {/* Vertical connecting line */}
               <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#002147] via-[#002147] to-[#002147]" />
 
-              {/* Step 01 */}
               <div className="relative pl-16 pb-10">
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
                   01
@@ -991,13 +845,11 @@ export default function Page() {
                     志望校選定から、1週間単位の学習戦術まで一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
                   </p>
                 </div>
-                {/* Curved arrow */}
                 <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
                   <path d="M12 5v14M12 19l-4-4M12 19l4-4" stroke="#002147" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
 
-              {/* Step 02 */}
               <div className="relative pl-16 pb-10">
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
                   02
@@ -1013,7 +865,6 @@ export default function Page() {
                 </svg>
               </div>
 
-              {/* Step 03 */}
               <div className="relative pl-16 pb-10">
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
                   03
@@ -1029,7 +880,6 @@ export default function Page() {
                 </svg>
               </div>
 
-              {/* Step 04 - Emphasized */}
               <div className="relative pl-16 pb-4">
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
                   04
@@ -1042,7 +892,6 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* Return arrow to step 01 */}
               <div className="flex justify-center mt-6">
                 <div className="flex items-center gap-2 text-[#002147]">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
@@ -1062,17 +911,12 @@ export default function Page() {
       {/* Essay Method Section */}
       <section className="py-20 md:py-24 px-4" style={{ backgroundColor: '#C5A05910' }}>
         <div className="max-w-4xl mx-auto text-center">
-          {/* Main Headline */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif mb-8 tracking-wide" style={{ wordBreak: 'keep-all' }}>
             佐藤塾の小論文指導とは
           </h2>
-
-          {/* Description */}
           <p className="text-base md:text-lg text-[#333333] leading-relaxed mb-10 max-w-2xl mx-auto">
             慶應SFC合格に必要な「問いを立てる力」を、AIと塾長がどう鍛えるか。合格メソッドの全貌を公開しています。
           </p>
-
-          {/* CTA Button */}
           <Link href="/guide/essay">
             <Button className="bg-[#002147] hover:bg-[#800000] text-white font-bold px-10 py-6 h-auto text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
               小論文学習メソッドの詳細説明はこちら
@@ -1081,10 +925,9 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Roadmap Section - Timeline */}
+      {/* Roadmap Section */}
       <section className="py-28 px-4 bg-[#F9F9F9]">
         <div className="max-w-5xl mx-auto">
-          {/* Section Header */}
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
@@ -1096,14 +939,11 @@ export default function Page() {
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
 
-          {/* Desktop: Horizontal Steps */}
           <div className="hidden lg:block">
             <div className="relative">
-              {/* Connecting Line */}
               <div className="absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-[#002147] via-[#800000] to-[#C5A059]" />
 
               <div className="grid grid-cols-3 gap-8">
-                {/* Step 01 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
                     <div className="w-14 h-14 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-lg z-10 border-4 border-white">
@@ -1129,7 +969,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* Step 02 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
                     <div className="w-14 h-14 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-lg font-serif shadow-lg z-10 border-4 border-white">
@@ -1155,7 +994,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* Step 03 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
                     <div className="w-14 h-14 rounded-full bg-[#C5A059] text-[#002147] flex items-center justify-center font-bold text-lg font-serif shadow-lg z-10 border-4 border-white">
@@ -1184,13 +1022,10 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Mobile/Tablet: Vertical Timeline */}
           <div className="lg:hidden">
             <div className="relative max-w-md mx-auto">
-              {/* Vertical connecting line */}
               <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#002147] via-[#800000] to-[#C5A059]" />
 
-              {/* Step 01 */}
               <div className="relative pl-16 pb-10">
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
                   01
@@ -1209,7 +1044,6 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* Step 02 */}
               <div className="relative pl-16 pb-10">
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
                   02
@@ -1228,7 +1062,6 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* Step 03 */}
               <div className="relative pl-16">
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-[#C5A059] text-[#002147] flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
                   03
@@ -1251,7 +1084,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Six Reasons Section - White */}
+      {/* Six Reasons Section */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <SectionTitle>佐藤塾が選ばれる6つの理由</SectionTitle>
@@ -1285,15 +1118,13 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Pricing Section - White */}
+      {/* Pricing Section */}
       <section className="py-28 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <SectionTitle subtitle="AO入試受験の有無で決められるシンプルなプラン">2つの料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            {/* Main Plan - 完全攻略プラン */}
             <div className="relative flex flex-col bg-white shadow-xl border-4 border-[#800000] rounded-xl overflow-hidden">
-              {/* 人気No.1 ラベル */}
               <div className="absolute top-4 right-4 bg-[#800000] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10 border-2 border-[#C5A059]">
                 人気No.1
               </div>
@@ -1303,7 +1134,6 @@ export default function Page() {
               </div>
 
               <div className="flex-1 flex flex-col p-6 md:p-8">
-                {/* Price */}
                 <div className="mb-6">
                   <p className="text-[#666666] text-xs mb-1">月額料金</p>
                   <div className="flex items-baseline gap-1">
@@ -1313,7 +1143,6 @@ export default function Page() {
                   <p className="text-sm text-[#333333] mt-1">/ 月（税込 151,800円）</p>
                 </div>
 
-                {/* Zero fees highlight */}
                 <div className="flex items-center gap-2 mb-6">
                   <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
@@ -1321,7 +1150,6 @@ export default function Page() {
                   <span className="text-sm font-bold text-[#002147]">追加講習費 0円</span>
                 </div>
 
-                {/* Features */}
                 <ul className="space-y-3 mb-8 flex-1">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
@@ -1345,8 +1173,7 @@ export default function Page() {
                   </li>
                 </ul>
 
-                {/* Buttons Container */}
-                <div className="mt-auto flex flex-col gap-3">
+                <div className="flex flex-col gap-3">
                   <a href="#contact-form" onClick={handleSmoothScroll}>
                     <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
                       このプランで相談を予約する
@@ -1361,14 +1188,12 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Secondary Plan - 標準プラン */}
             <div className="relative flex flex-col bg-white shadow-md border-2 border-[#E5E7EB] rounded-xl overflow-hidden">
               <div className="bg-[#F3F4F6] text-[#333333] px-6 py-6 border-b border-[#E5E7EB]">
                 <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">他塾併願者に推奨<br />小論文特化プラン</h4>
               </div>
 
               <div className="flex-1 flex flex-col p-6 md:p-8">
-                {/* Price */}
                 <div className="mb-6">
                   <p className="text-[#666666] text-xs mb-1">月額料金</p>
                   <div className="flex items-baseline gap-1">
@@ -1378,7 +1203,6 @@ export default function Page() {
                   <p className="text-sm text-[#333333] mt-1">/ 月（税込 129,800円）</p>
                 </div>
 
-                {/* Zero fees highlight */}
                 <div className="flex items-center gap-2 mb-6">
                   <svg className="w-5 h-5 text-[#666666]" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
@@ -1386,7 +1210,6 @@ export default function Page() {
                   <span className="text-sm text-[#666666]">追加講習費 0円</span>
                 </div>
 
-                {/* Features */}
                 <ul className="space-y-3 mb-8 flex-1">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
@@ -1406,8 +1229,7 @@ export default function Page() {
                   </li>
                 </ul>
 
-                {/* Buttons Container */}
-                <div className="mt-auto flex flex-col gap-3">
+                <div className="flex flex-col gap-3">
                   <a href="#contact-form" onClick={handleSmoothScroll}>
                     <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium">
                       このプランで相談を予約する
@@ -1423,7 +1245,6 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Graduation Rule - Soft & Reassuring */}
           <div className="mt-12 bg-white rounded-xl p-6 md:p-8 border-2 border-[#800000]/30">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#800000]/10 flex items-center justify-center">
@@ -1440,7 +1261,6 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Additional Info */}
           <div className="mt-6 bg-[#F8F9FA] rounded-xl p-6 md:p-8 border border-[#E5E7EB]">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start gap-3">
@@ -1466,7 +1286,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Instructor Message Section - Light Gray */}
+      {/* Instructor Message Section */}
       <section className="py-24 px-4 bg-[#F9F9F9]">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -1511,7 +1331,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Contact Form Section - White */}
+      {/* Contact Form Section */}
       <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-20">
         <div className="max-w-2xl mx-auto">
           <SectionTitle subtitle="一人ひとりの指導密度を保つため、今年度の新規受付は残り13名となっております">
@@ -1521,7 +1341,6 @@ export default function Page() {
           <Card className="bg-white shadow-lg border-t-4 border-t-[#800000] border-x border-b border-border rounded-xl">
             <CardContent className="pt-10">
               {isSubmitted ? (
-                /* Thank You Message */
                 <div className="text-center py-12">
                   <div className="w-20 h-20 bg-[#800000]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg className="w-10 h-10 text-[#800000]" viewBox="0 0 24 24" fill="currentColor">
@@ -1539,7 +1358,6 @@ export default function Page() {
                 </div>
               ) : (
                 <form className="space-y-6" onSubmit={handleFormSubmit}>
-                  {/* Error message display */}
                   {formError && (
                     <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                       <p className="text-sm text-red-700 font-medium">{formError}</p>
@@ -1637,7 +1455,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* FAQ Section - After Contact Form */}
+      {/* FAQ Section */}
       <section className="py-20 px-4 bg-[#F9F9F9]">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
@@ -1646,7 +1464,6 @@ export default function Page() {
           </div>
 
           <div className="space-y-4">
-            {/* FAQ 01 */}
             <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
               <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
                 <span className="font-semibold text-[#002147]">
@@ -1663,7 +1480,6 @@ export default function Page() {
               </div>
             </details>
 
-            {/* FAQ 02 */}
             <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
               <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
                 <span className="font-semibold text-[#002147]">
@@ -1680,7 +1496,6 @@ export default function Page() {
               </div>
             </details>
 
-            {/* FAQ 03 */}
             <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
               <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
                 <span className="font-semibold text-[#002147]">
@@ -1697,7 +1512,6 @@ export default function Page() {
               </div>
             </details>
 
-            {/* FAQ 04 */}
             <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
               <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
                 <span className="font-semibold text-[#002147]">
@@ -1717,38 +1531,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-primary text-white py-12 md:py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8">
-            <Link href="/" className="text-white/80 hover:text-white transition-colors text-sm">
-              トップページ
-            </Link>
-            <Link href="/course" className="text-white/80 hover:text-white transition-colors text-sm">
-              コース・料金
-            </Link>
-            <Link href="/results" className="text-white/80 hover:text-white transition-colors text-sm">
-              合格実績
-            </Link>
-            <Link href="/guide/essay" className="text-white/80 hover:text-white transition-colors text-sm">
-              小論文対策ガイド
-            </Link>
-          </div>
-
-          <div className="text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif tracking-[0.1em]">佐藤塾</h3>
-            <p className="text-white/80 mb-8 text-base md:text-lg">
-              慶應義塾大学 SFC（総合政策学部・環境情報学部）受験対策専門塾
-            </p>
-            <div className="border-t border-white/20 pt-8">
-              <p className="text-sm text-white/60">
-                &copy; 2026 佐藤塾. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      {/* 共通フッターとの重複を防ぐため、ここにあった独自の<footer>ブロックのみを完全に削除しました */}
     </div>
   )
 }
