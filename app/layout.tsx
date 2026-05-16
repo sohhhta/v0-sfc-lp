@@ -3,6 +3,8 @@ import { Noto_Serif_JP, Noto_Sans_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script'
 import './globals.css'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 const serifJP = Noto_Serif_JP({ subsets: ["latin", "japanese"], weight: ["400", "700"] });
 const sansJP = Noto_Sans_JP({ subsets: ["latin", "japanese"], weight: ["400", "500", "700"] });
@@ -50,8 +52,21 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body style={{ fontFamily: `${sansJP.style.fontFamily}, ${serifJP.style.fontFamily}` }} className="antialiased">
-        {children}
+      <body 
+        style={{ fontFamily: `${sansJP.style.fontFamily}, ${serifJP.style.fontFamily}` }} 
+        className="antialiased min-h-screen flex flex-col"
+      >
+        {/* 全ページ共通のヘッダー */}
+        <Header />
+
+        {/* メインコンテンツ（flex-growでフッターを最下部に押し出す） */}
+        <div className="flex-grow">
+          {children}
+        </div>
+
+        {/* 全ページ共通のフッター */}
+        <Footer />
+        
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
