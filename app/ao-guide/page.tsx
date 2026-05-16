@@ -9,7 +9,7 @@ export default function AoGuidePage() {
           AO ENTRANCE GUIDE
         </span>
         <h1 className="text-2xl md:text-4xl font-bold text-[#002147] mb-4 font-serif">
-          AO入試対策ガイド
+          AO入試対策ガイド！
         </h1>
         <p className="text-slate-600 leading-relaxed mb-8 text-sm md:text-base">
           ただいま慶應SFCのAO入試（志望理由書・面接）における「問題発見能力」の磨き方を徹底解説した特化ガイド記事を執筆中です。近日中に公開いたします。
