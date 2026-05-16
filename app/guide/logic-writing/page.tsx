@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ChevronRight, Clock, List } from 'lucide-react'
 
@@ -58,7 +59,7 @@ export default function LogicWritingPage() {
           <div className="prose prose-slate max-w-none leading-[1.9] text-gray-700">
             <p className="text-lg mb-8 italic border-l-4 border-[#C5A059] pl-6 py-2 text-slate-600 bg-slate-50">
               「SFCの小論文は、特別な才能がないと合格点をもらえないのではないか？」<br />
-              「独創的なアイデアなんて、自分には思いつかない……」
+              「独独創的なアイデアなんて、自分には思いつかない……」
             </p>
 
             <SectionTitle id="sec1">1. なぜ、あなたの小論文は「評価の対象」にならないのか？</SectionTitle>
@@ -102,9 +103,16 @@ export default function LogicWritingPage() {
               これは、佐藤塾で教える内容が単なる小論文対策ではなく、どこでも通用する「本質的な知力」だからです。
             </p>
 
-            {/* 監修者プロフィール */}
+            {/* 監修者プロフィール（実画像URLへの差し替えと円形トリミングの適用） */}
             <div className="mt-24 p-8 border border-gray-200 rounded-3xl flex flex-col md:flex-row items-center gap-8 bg-slate-50/50">
-              <div className="w-24 h-24 bg-gray-200 rounded-full flex-shrink-0 bg-[url('/jukucho.jpg')] bg-cover bg-center border-2 border-[#C5A059]"></div>
+              <div className="relative w-24 h-24 flex-shrink-0 border-2 border-[#C5A059] rounded-full overflow-hidden">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LP%E7%94%A8%E7%94%BB%E5%83%8F-AOR1a22XLXmxYxq6qMvKO1B5HygCnh.png"
+                  alt="佐藤塾 塾長 佐藤颯太"
+                  fill
+                  className="object-cover object-top scale-125"
+                />
+              </div>
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs font-bold text-[#C5A059] uppercase tracking-tighter">監修者</span>
