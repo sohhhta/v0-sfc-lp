@@ -2,8 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Check } from 'lucide-react'
 
 // Section title component (consistent with main LP)
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
@@ -30,123 +29,9 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function EssayGuidePage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const href = (e.currentTarget as HTMLAnchorElement).href
-    const targetId = href.substring(href.indexOf('#') + 1)
-
-    if (targetId) {
-      e.preventDefault()
-      const targetElement = document.getElementById(targetId)
-
-      if (targetElement) {
-        const headerHeight = 80
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        })
-      }
-    }
-  }
-
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          {/* Logo - left */}
-          <Link href="/" className="text-xl font-bold text-primary font-serif tracking-[0.1em] hover:opacity-80 transition-opacity">
-            佐藤塾
-          </Link>
-
-          {/* Desktop Navigation - center */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm text-[#333333] hover:text-primary transition-colors">
-              ホーム
-            </Link>
-            <Link href="/course" className="text-sm text-[#333333] hover:text-primary transition-colors">
-              コース・料金
-            </Link>
-            <Link href="/results" className="text-sm text-[#333333] hover:text-primary transition-colors">
-              合格実績
-            </Link>
-            <Link href="/guide/essay" className="text-sm text-[#333333] hover:text-primary transition-colors font-semibold">
-              小論文ガイド
-            </Link>
-          </div>
-
-          {/* Right side - button and mobile menu toggle */}
-          <div className="flex items-center gap-4">
-            {/* Desktop Button */}
-            <a href="/#contact-form" onClick={handleSmoothScroll} className="hidden md:block">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
-            </a>
-
-            {/* Mobile Menu Toggle */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 hover:bg-[#F0F0F0] rounded-lg transition-colors"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-primary" />
-              ) : (
-                <Menu className="w-6 h-6 text-primary" />
-              )}
-            </button>
-
-            {/* Mobile Button */}
-            <a href="/#contact-form" onClick={handleSmoothScroll} className="md:hidden">
-              <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">
-                無料相談
-              </Button>
-            </a>
-          </div>
-        </div>
-
-        {/* Mobile Navigation Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-border">
-            <div className="px-4 py-4 space-y-3">
-              <Link
-                href="/"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                ホーム
-              </Link>
-              <Link
-                href="/course"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                コース・料金
-              </Link>
-              <Link
-                href="/results"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                合格実績
-              </Link>
-              <Link
-                href="/guide/essay"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors font-semibold"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                小論文ガイド
-              </Link>
-              <a href="/#contact-form" onClick={(e) => { handleSmoothScroll(e); setMobileMenuOpen(false); }} className="block pt-2">
-                <Button size="sm" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-200">
-                  無料相談を申し込む
-                </Button>
-              </a>
-            </div>
-          </div>
-        )}
-      </nav>
+      {/* 共通ナビゲーション（layout.tsx）から自動出力されるため、固有の<nav>ブロックを完全に削除しました */}
 
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
@@ -192,7 +77,7 @@ export default function EssayGuidePage() {
             <div className="bg-white border-2 border-[#800000]/30 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-lg font-bold text-[#800000] font-serif mb-4">配点の高さ</h3>
               <p className="text-sm text-[#333333] leading-relaxed">
-                英語や数学と同じ<span className="text-[#800000] font-bold">200点満点</span>。小論文での逆転合格が最も起きやすいのがSFC。一教科の比重が極めて大きいからこそ、集中的な対策が効果的です。
+                英語や数学と同じ<span className="text-[#800000] font-bold">200点満点</span>。小論文での逆転合格が最も起きやすいのがSFC。一教科の比重が極めて大きいからこそ、集集中な対策が効果的です。
               </p>
             </div>
 
@@ -214,7 +99,7 @@ export default function EssayGuidePage() {
             <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
               <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">小論文の基礎を固める</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                まずは、ロジカルシンキングとロジカルライティングの基礎を固めます。その他にも接続詞や体系的記述なども学びます。<span className="font-bold">この過程を踏めるかどうかが合格に一番影響します</span>。
+                まずは、ロジカルシンキングとロジカルライティングの基礎を固めます。その他にも接続詞や体系적記述なども学びます。<span className="font-bold">この過程を踏めるかどうかが合格に一番影響します</span>。
               </p>
             </div>
 
@@ -256,7 +141,7 @@ export default function EssayGuidePage() {
               </p>
             </div>
 
-            {/* Point 2 - NEW */}
+            {/* Point 2 */}
             <div className="bg-white border-2 border-[#C5A059] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-bold text-[#C5A059] font-serif mb-3">小論文として成立する文を書く</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
@@ -276,6 +161,7 @@ export default function EssayGuidePage() {
 
       </main>
 
+      {/* Contact Form へのスクロールが他ページからでも正しくトップページへ飛ぶよう href を /#contact-form に整理しました */}
       {/* CTA Section */}
       <section className="py-16 md:py-20 px-4 bg-gradient-to-r from-[#800000] to-[#600000]">
         <div className="max-w-3xl mx-auto text-center">
@@ -287,12 +173,12 @@ export default function EssayGuidePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/#contact-form">
-              <Button className="bg-[#C5A059] hover:bg-[#9d8a42] text-[#002147] font-bold px-10 py-6 h-auto">
+              <Button className="bg-[#C5A059] hover:bg-[#9d8a42] text-[#002147] font-bold px-10 py-6 h-auto w-full sm:w-auto">
                 無料で塾長に相談する
               </Button>
             </Link>
             <Link href="/course">
-              <Button className="border-2 border-[#C5A059] text-[#C5A059] bg-transparent hover:bg-[#C5A059] hover:text-[#002147] font-bold px-10 py-6 h-auto transition-all duration-300">
+              <Button className="border-2 border-[#C5A059] text-[#C5A059] bg-transparent hover:bg-[#C5A059] hover:text-[#002147] font-bold px-10 py-6 h-auto transition-all duration-300 w-full sm:w-auto">
                 コース詳細を見る
               </Button>
             </Link>
@@ -300,38 +186,7 @@ export default function EssayGuidePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-primary text-white py-12 md:py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8">
-            <Link href="/" className="text-white/80 hover:text-white transition-colors text-sm">
-              トップページ
-            </Link>
-            <Link href="/course" className="text-white/80 hover:text-white transition-colors text-sm">
-              コース・料金
-            </Link>
-            <Link href="/results" className="text-white/80 hover:text-white transition-colors text-sm">
-              合格実績
-            </Link>
-            <Link href="/guide/essay" className="text-white/80 hover:text-white transition-colors text-sm">
-              小論文対策ガイド
-            </Link>
-          </div>
-
-          <div className="text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif tracking-[0.1em]">佐藤塾</h3>
-            <p className="text-white/80 mb-8 text-base md:text-lg">
-              慶應義塾大学 SFC（総合政策学部・環境情報学部）受験対策専門塾
-            </p>
-            <div className="border-t border-white/20 pt-8">
-              <p className="text-sm text-white/60">
-                &copy; 2026 佐藤塾. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      {/* 共通フッター（layout.tsx）から自動出力されるため、固有の<footer>ブロックを完全に削除しました */}
     </div>
   )
 }
