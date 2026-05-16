@@ -48,31 +48,6 @@ export default function EssayGuidePage() {
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 py-16 md:py-20">
 
-        {/* 【新設】個別記事：ロジカルライティングへの導線バナー（ツリー構造の強化） */}
-        <section className="mb-20">
-          <div className="bg-[#800000]/5 border-2 border-[#800000]/20 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center flex-shrink-0">
-                <PenTool size={22} />
-              </div>
-              <div>
-                <span className="text-xs font-bold text-[#800000] tracking-wider uppercase block mb-1">RECOMMENDED ARTICLE</span>
-                <h4 className="text-lg md:text-xl font-bold text-[#002147] font-serif">
-                  【実践編】合格点に届かない理由とロジカルライティング
-                </h4>
-                <p className="text-xs text-slate-500 mt-1">
-                  採点官に評価される文章の書き方をステップバイステップで詳しく解説。
-                </p>
-              </div>
-            </div>
-            <Link href="/guide/logic-writing" className="w-full md:w-auto">
-              <Button className="bg-[#800000] hover:bg-[#600000] text-white font-bold w-full md:w-auto px-6 py-4 flex items-center justify-center gap-2">
-                この記事を読む <ArrowRight size={16} />
-              </Button>
-            </Link>
-          </div>
-        </section>
-
         {/* SFC小論文とは */}
         <section className="mb-20">
           <SectionTitle>SFC小論文とは</SectionTitle>
@@ -124,7 +99,7 @@ export default function EssayGuidePage() {
             <div className="bg-[#F8F9FA] border-l-4 border-[#800000] pl-6 py-6 rounded-r-lg">
               <h4 className="text-lg font-bold text-[#800000] font-serif mb-3">とにかく量をこなす</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                次各種問題に対して、自分の思考を言語化しフィードバックをもらうという工程をとにかく踏みましょう。佐藤塾ではAIによる即時フィードバックで<span className="font-bold">圧倒的な量の担保を実現します</span>。この反復サイクルが、最も効率的な学習方法です。
+                次に様々な問題に対して、自分の思考を言語化しフィードバックをもらうという工程をとにかく踏みましょう。佐藤塾ではAIによる即時フィードバックで<span className="font-bold">圧倒的な量の担保を実現します</span>。この反復サイクルが、最も効率的な学習方法です。
               </p>
             </div>
 
@@ -168,6 +143,31 @@ export default function EssayGuidePage() {
                 単なる理想論や一般論ではなく、技術的・社会的に実行可能かつ独自性がある解決策を提示するようにしましょう。SFCが求めているのは、現実を見据えた実践的かつ個性的な思考力です。
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* 【位置調整】個別記事（ロジカルライティング）への案内カードを、下部CTAのすぐ上に移動しました */}
+        <section className="mt-24 mb-10">
+          <div className="bg-[#800000]/5 border-2 border-[#800000]/20 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center flex-shrink-0">
+                <PenTool size={22} />
+              </div>
+              <div className="text-left">
+                <span className="text-xs font-bold text-[#800000] tracking-wider uppercase block mb-1">RECOMMENDED ARTICLE</span>
+                <h4 className="text-lg md:text-xl font-bold text-[#002147] font-serif">
+                  【実践編】合格点に届かない理由とロジカルライティング
+                </h4>
+                <p className="text-xs text-slate-500 mt-1">
+                  採点官に評価される文章の書き方をステップバイステップで詳しく解説。
+                </p>
+              </div>
+            </div>
+            <Link href="/guide/logic-writing" className="w-full md:w-auto">
+              <Button className="bg-[#800000] hover:bg-[#600000] text-white font-bold w-full md:w-auto px-6 py-4 flex items-center justify-center gap-2 whitespace-nowrap">
+                この記事を読む <ArrowRight size={16} />
+              </Button>
+            </Link>
           </div>
         </section>
 
