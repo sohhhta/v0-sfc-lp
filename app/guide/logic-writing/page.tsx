@@ -122,7 +122,7 @@ export default function LogicWritingPage() {
                   佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数百名の受験生と向き合い、独自の「ロジカルライティング・メソッド」と最新のAI技術を融合させた指導で、多数 of 逆転合格者を輩出。
                 </p>
                 <Link href="/#contact-form" className="text-sm font-bold text-[#800000] hover:underline inline-flex items-center">
-                  塾長の詳しい指導方針を見る <ChevronRight size={14} className="ml-1" />
+                  塾長から詳しい指導方針を聞く <ChevronRight size={14} className="ml-1" />
                 </Link>
               </div>
             </div>
