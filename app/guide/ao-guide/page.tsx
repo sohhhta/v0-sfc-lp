@@ -1,11 +1,9 @@
-'use client'
-
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
 export default function AoGuidePage() {
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center pt-20 px-6 font-sans">
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center py-20 px-6 font-sans">
       <div className="text-center max-w-xl mx-auto">
         <span className="inline-block text-xs font-bold tracking-[0.25em] text-[#C5A059] border border-[#C5A059]/50 px-5 py-2 rounded-full mb-6 uppercase">
           AO ENTRANCE GUIDE

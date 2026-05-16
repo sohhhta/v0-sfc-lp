@@ -13,7 +13,7 @@ export function Header() {
     { name: 'コース・料金', href: '/course' },
     { name: '合格実績', href: '/results' },
     { name: '小論文ガイド', href: '/guide/logic-writing' }, // 記事一覧ができたら /guide に変更
-    { name: 'AO入試ガイド', href: '/ao-guide' },
+    { name: 'AO入試ガイド', href: '/guide/ao-guide' },
   ]
 
   return (

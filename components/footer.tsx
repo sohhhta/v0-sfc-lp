@@ -11,7 +11,7 @@ export function Footer() {
           <Link href="/course" className="text-white/80 hover:text-white transition-colors text-sm">コース・料金</Link>
           <Link href="/results" className="text-white/80 hover:text-white transition-colors text-sm">合格実績</Link>
           <Link href="/guide/logic-writing" className="text-white/80 hover:text-white transition-colors text-sm">小論文ガイド</Link>
-          <Link href="/ao-guide" className="text-white/80 hover:text-white transition-colors text-sm">AO入試ガイド</Link>
+          <Link href="/guide/ao-guide" className="text-white/80 hover:text-white transition-colors text-sm">AO入試ガイド</Link>
         </div>
 
         <div className="text-center border-t border-white/10 pt-10">
