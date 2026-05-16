@@ -1,12 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { ChevronRight, Clock, List } from 'lucide-react'
 
-// 装飾付き見出しコンポーネント
+// 装飾付き見出しコンポーネント（他ページと統一）
 function SectionTitle({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
     <div className="text-center mb-10 mt-20" id={id}>
@@ -25,9 +23,10 @@ function SectionTitle({ children, id }: { children: React.ReactNode; id?: string
 export default function LogicWritingPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      {/* 共通ナビゲーション（layout.tsx）から自動出力されるため、固有の<Header />を削除しました */}
       
-      <main className="pt-32 pb-20">
+      {/* stickyヘッダーの高さに合わせ、不要な隙間を削るため pt-32 から pt-12 md:pt-20 へ最適化しました */}
+      <main className="pt-12 md:pt-20 pb-20">
         <article className="max-w-4xl mx-auto px-6">
           {/* ヘッダー */}
           <header className="mb-12 text-center">
@@ -112,7 +111,7 @@ export default function LogicWritingPage() {
                   <h4 className="text-xl font-bold text-[#002147] font-serif">佐藤 颯太 <span className="text-sm font-medium text-gray-500">Sota Sato</span></h4>
                 </div>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数百名の受験生と向き合い、独自の「ロジカルライティング・メソッド」と最新のAI技術を融合させた指導で、多数の逆転合格者を輩出。
+                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数百名の受験生と向き合い、独自の「ロジカルライティング・メソッド」と最新のAI技術を融合させた指導で、多数 of 逆転合格者を輩出。
                 </p>
                 <Link href="/#contact-form" className="text-sm font-bold text-[#800000] hover:underline inline-flex items-center">
                   塾長の詳しい指導方針を見る <ChevronRight size={14} className="ml-1" />
@@ -136,7 +135,7 @@ export default function LogicWritingPage() {
         </article>
       </main>
 
-      <Footer />
+      {/* 共通フッター（layout.tsx）から自動出力されるため、固有の<Footer />を削除しました */}
     </div>
   )
 }
