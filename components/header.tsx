@@ -12,14 +12,14 @@ export function Header() {
     { name: 'ホーム', href: '/' },
     { name: 'コース・料金', href: '/course' },
     { name: '合格実績', href: '/results' },
-    { name: '小論文ガイド', href: '/guide/logic-writing' }, // 記事一覧ができたら /guide に変更
-    { name: 'AO入試ガイド', href: '/guide/ao-guide' },
+    { name: '小論文ガイド', href: '/guide/essay' }, // /guide/essay に修正
+    { name: 'AO入試ガイド', href: '/ao-guide' },
   ]
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        {/* Logo - app/page.tsxのデザインと完全一致 */}
+        {/* Logo */}
         <Link href="/" className="hover:opacity-80 transition-opacity">
           <h1 className="text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</h1>
         </Link>
@@ -37,7 +37,7 @@ export function Header() {
           ))}
         </div>
 
-        {/* Right side - ボタンデザインをapp/page.tsxと完全一致 */}
+        {/* Right side */}
         <div className="flex items-center gap-4">
           <Link href="/#contact-form" className="hidden md:block">
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">
