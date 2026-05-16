@@ -3,17 +3,15 @@
 import { Button } from '@/components/ui/button'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
 
 // SectionTitle component - exactly as in app/page.tsx
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
     <div className="text-center mb-12 md:mb-16">
-      <div className="flex items-center justify-center gap-4 md:gap-6 mb-4 md:mb-6">
-        <div className="h-px w-10 md:w-16 bg-[#002147]" />
-        <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#002147] rotate-45" />
-        <div className="h-px w-10 md:w-16 bg-[#002147]" />
+      <div className="flex items-center justify-center gap-6 mb-6">
+        <div className="h-px w-16 bg-[#002147]" />
+        <div className="w-2 h-2 bg-[#002147] rotate-45" />
+        <div className="h-px w-16 bg-[#002147]" />
       </div>
       <h2 className="text-2xl md:text-4xl font-bold text-primary font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
         {children}
@@ -21,133 +19,19 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
       {subtitle && (
         <p className="text-muted-foreground mt-3 md:mt-4 text-base md:text-lg px-4">{subtitle}</p>
       )}
-      <div className="flex items-center justify-center gap-4 md:gap-6 mt-4 md:mt-6">
-        <div className="h-px w-10 md:w-16 bg-[#002147]" />
-        <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#002147] rotate-45" />
-        <div className="h-px w-10 md:w-16 bg-[#002147]" />
+      <div className="flex items-center justify-center gap-6 mt-6">
+        <div className="h-px w-16 bg-[#002147]" />
+        <div className="w-2 h-2 bg-[#002147] rotate-45" />
+        <div className="h-px w-16 bg-[#002147]" />
       </div>
     </div>
   )
 }
 
 export default function ResultsPage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const href = (e.currentTarget as HTMLAnchorElement).href
-    const targetId = href.substring(href.indexOf('#') + 1)
-
-    if (targetId) {
-      e.preventDefault()
-      const targetElement = document.getElementById(targetId)
-
-      if (targetElement) {
-        const headerHeight = 80
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        })
-      }
-    }
-  }
-
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          {/* Logo - left */}
-          <Link href="/" className="text-xl font-bold text-primary font-serif tracking-[0.1em] hover:opacity-80 transition-opacity">
-            佐藤塾
-          </Link>
-
-          {/* Desktop Navigation - center */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm text-[#333333] hover:text-primary transition-colors">
-              ホーム
-            </Link>
-            <Link href="/course" className="text-sm text-[#333333] hover:text-primary transition-colors">
-              コース・料金
-            </Link>
-            <Link href="/results" className="text-sm text-[#333333] hover:text-primary transition-colors font-semibold">
-              合格実績
-            </Link>
-            <Link href="/guide/essay" className="text-sm text-[#333333] hover:text-primary transition-colors">
-              小論文ガイド
-            </Link>
-          </div>
-
-          {/* Right side - button and mobile menu toggle */}
-          <div className="flex items-center gap-4">
-            {/* Desktop Button */}
-            <a href="/#contact-form" onClick={handleSmoothScroll} className="hidden md:block">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">無料相談を申し込む</Button>
-            </a>
-
-            {/* Mobile Menu Toggle */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 hover:bg-[#F0F0F0] rounded-lg transition-colors"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-primary" />
-              ) : (
-                <Menu className="w-6 h-6 text-primary" />
-              )}
-            </button>
-
-            {/* Mobile Button */}
-            <a href="/#contact-form" onClick={handleSmoothScroll} className="md:hidden">
-              <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">
-                無料相談
-              </Button>
-            </a>
-          </div>
-        </div>
-
-        {/* Mobile Navigation Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-border">
-            <div className="px-4 py-4 space-y-3">
-              <Link
-                href="/"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                ホーム
-              </Link>
-              <Link
-                href="/course"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                コース・料金
-              </Link>
-              <Link
-                href="/results"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors font-semibold"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                合格実績
-              </Link>
-              <Link
-                href="/guide/essay"
-                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                小論文ガイド
-              </Link>
-              <a href="/#contact-form" onClick={(e) => { handleSmoothScroll(e); setMobileMenuOpen(false); }} className="block pt-2">
-                <Button size="sm" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-200">
-                  無料相談を申し込む
-                </Button>
-              </a>
-            </div>
-          </div>
-        )}
-      </nav>
+      {/* 共通ナビゲーション（layout.tsx）から自動出力されるため、固有の<nav>ブロックを完全に削除しました */}
 
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
@@ -290,6 +174,7 @@ export default function ResultsPage() {
                 </tbody>
               </table>
             </div>
+            <p className="text-xs text-[#999999] text-center mt-3">左右にスワイプして全体を確認できます</p>
           </div>
 
           {/* Desktop: Table layout */}
@@ -423,7 +308,6 @@ export default function ResultsPage() {
             慶應SFC合格に向けて、今から始めましょう。無料相談で、あなたの目標に最適なプランをご提案させていただきます。
           </p>
           
-          {/* Scarcity message */}
           <p className="text-sm text-[#800000] mb-6">
             ※一人ひとりの指導密度を保つため、今年度の新規受付は<span className="font-bold">残り13名</span>となっております
           </p>
@@ -436,38 +320,7 @@ export default function ResultsPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-primary text-white py-12 md:py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8">
-            <Link href="/" className="text-white/80 hover:text-white transition-colors text-sm">
-              トップページ
-            </Link>
-            <Link href="/course" className="text-white/80 hover:text-white transition-colors text-sm">
-              コース・料金
-            </Link>
-            <Link href="/results" className="text-white/80 hover:text-white transition-colors text-sm">
-              合格実績
-            </Link>
-            <Link href="/guide/essay" className="text-white/80 hover:text-white transition-colors text-sm">
-              小論文対策ガイド
-            </Link>
-          </div>
-
-          <div className="text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif tracking-[0.1em]">佐藤塾</h3>
-            <p className="text-white/80 mb-8 text-base md:text-lg">
-              慶應義塾大学 SFC（総合政策学部・環境情報学部）受験対策専門塾
-            </p>
-            <div className="border-t border-white/20 pt-8">
-              <p className="text-sm text-white/60">
-                &copy; 2026 佐藤塾. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      {/* 共通フッター（layout.tsx）から自動出力されるため、固有の<footer>ブロックを完全に削除しました */}
     </div>
   )
 }
