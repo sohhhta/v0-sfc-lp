@@ -3,7 +3,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { CheckCircle2, Lightbulb, ShieldCheck, ArrowRight, BrainCircuit, UserCheck, GraduationCap, ArrowUpRight, Target } from 'lucide-react';
+import { CheckCircle2, Lightbulb, ShieldCheck, ArrowRight, BrainCircuit, UserCheck, GraduationCap, ArrowUpRight, Target, RefreshCw, MessageSquare } from 'lucide-react';
 
 // 佐藤塾の既存下層ページ（essay/page.tsx）と一字一句違わぬ共通見出し装飾コンポーネント
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
@@ -92,7 +92,7 @@ export default function AoGuidePage() {
           </div>
         </section>
 
-        {/* Section 2: 合格率50.0%を支える「非・美化」戦略（塾長指示により解決策の前段へ移動） */}
+        {/* Section 2: 合格率50.0%を支える「非・美化」戦略 */}
         <section className="mb-20">
           <SectionTitle>AO入試に対して持つべき正しい「非・美化」戦略</SectionTitle>
           
@@ -129,34 +129,34 @@ export default function AoGuidePage() {
           </div>
         </section>
 
-        {/* Section 3: 24時間SFC専用AI伴走指導（塾長指示により解決策としてストーリーの山場へ配置） */}
+        {/* Section 3: 24時間SFC専用AI伴走指導 */}
         <section className="mb-20">
-          <SectionTitle>24時間SFC専用AI伴走指導</SectionTitle>
+          <SectionTitle>佐藤塾メソッド① 24時間SFC専用AI伴走指導</SectionTitle>
           
           <div className="grid md:grid-cols-2 gap-12 items-center mt-12">
             <div className="space-y-6">
               <div className="flex items-center gap-2 text-[#C5A059]">
                 <BrainCircuit size={24} />
-                <span className="text-xs font-bold tracking-widest uppercase">SOLUTION METHOD</span>
+                <span className="text-xs font-bold tracking-widest uppercase">SOLUTION METHOD 01</span>
               </div>
               <h4 className="text-xl md:text-2xl font-serif font-bold text-[#002147] tracking-[0.08em] leading-tight">
-                ボトムアップで積み上げる、思考の高速化。
+                繰り返すことで積み上げる思考
               </h4>
               <p className="text-[#333333] leading-relaxed">
                 最初から完璧な構成案を考えて提出する必要は一切ありません。あなたの頭の中にある断片的な興味や関心を、まずはそのまま佐藤塾のAIシステムにぶつけてください。
               </p>
               <p className="text-[#333333] leading-relaxed">
-                あらゆる可能性、あらゆる direction（方向性）、あらゆる先行研究や手段の調査をAIと共に徹底的に行います。この高速な試行錯誤（ブラッシュアップ）の積み重ねが、あなたの思考を劇的に進化させます。
+                あらゆる可能性、あらゆる方向性、あらゆる先行研究や手段の調査をAIと共に徹底的に行います。この高速な試行錯誤（ボトムアップな壁打ち）の積み重ねが、あなたの思考スピードを極限まで引き上げ、大量の「具体的なアウトプット」を生み出します。
               </p>
               
               <div className="space-y-3 pt-2">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="text-[#800000] shrink-0 mt-1" size={18} />
-                  <span className="text-sm text-[#333333]"><strong>4年間ブレない自信の構築:</strong> 腑に落ちるまで検証し尽くすため、入学後もそのまま走り続けられる研究計画が完成します。</span>
+                  <span className="text-sm text-[#333333]"><strong>完璧主義による停滞をゼロに:</strong> アイデアの断片を即座に形にするための強力な「武器」としてAIを使い倒します。</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="text-[#800000] shrink-0 mt-1" size={18} />
-                  <span className="text-sm text-[#333333]"><strong>圧倒的なアウトプットスピード:</strong> 完璧主義による停滞をゼロにし、面接でも「自分の言葉」で自信を持って受け答えができるようになります。</span>
+                  <span className="text-sm text-[#333333]"><strong>圧倒的な調査量と解像度:</strong> 先行研究の網羅的なリサーチをAIが伴走し、書類の「客観的な根拠」の土台を爆速で構築します。</span>
                 </div>
               </div>
             </div>
@@ -181,18 +181,76 @@ export default function AoGuidePage() {
                 <div className="flex flex-col items-start">
                   <div className="bg-[#002147] text-white p-3 rounded-lg max-w-[90%] rounded-tl-none">
                     <p className="text-xs text-[#C5A059] font-bold mb-1">佐藤塾SFC特化AI</p>
-                    <p className="leading-relaxed text-slate-200">素晴らしい着眼点です。単なる批判に留めず、SFCの「環境情報学」の視点から、ローカルメディアを用いた自律的なコミュニティ再定義 of 先行研究と接続してみましょう。以下の3つのアプローチが考えられます...</p>
+                    <p className="leading-relaxed text-slate-200">素晴らしい着眼点です。単なる批判に留めず、SFCの「環境情報学」の視点から、ローカルメディアを用いた自律的なコミュニティ再定義の先行研究と接続してみましょう。以下の3つのアプローチが考えられます...</p>
                   </div>
                 </div>
                 <div className="bg-[#C5A059]/10 text-[#002147] p-3 rounded border border-[#C5A059]/30 text-xs font-medium">
-                  💡 <strong>効果:</strong> この圧倒的な対話量によって自分の研究に誰よりも詳しくなり、二次試験の面接でも「自分の言葉」で自信を持って受け答えができるようになります。
+                  💡 <strong>重要:</strong> ここで生まれた「大量のアウトプット」こそが、次なる「塾長との魂の対話」の最高の素材となります。
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Section 4: Recent Trends */}
+        {/* Section 4: AI高速アウトプット×塾長1on1対話による本物の面接対策（塾長指示により新規追加） */}
+        <section className="mb-20">
+          <SectionTitle>佐藤塾メソッド② AIによる高速アウトプット × 塾長1on1対話が実現する「本物の面接対策」</SectionTitle>
+          
+          <div className="grid md:grid-cols-12 gap-8 items-center mt-12">
+            <div className="md:col-span-5 bg-gradient-to-br from-[#002147]/5 to-[#003d6b]/5 p-8 rounded-xl border border-[#002147]/10 shadow-md">
+              <h4 className="text-lg font-serif font-bold text-[#002147] mb-6 flex items-center gap-2">
+                <RefreshCw size={20} className="text-[#800000]" />
+                合格へ導く圧倒的サイクル
+              </h4>
+              <div className="space-y-5">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-[#002147] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</div>
+                  <div>
+                    <span className="font-bold text-[#002147] block text-sm">AIでアイデアを爆速具体化</span>
+                    <p className="text-xs text-[#333333] mt-1">完璧を求めず、ボトムアップに積み上げる感覚で、大量の仮説やリサーチ内容を書類化。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-[#C5A059] text-[#002147] flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</div>
+                  <div>
+                    <span className="font-bold text-[#002147] block text-sm">塾長との1on1対話</span>
+                    <p className="text-xs text-[#333333] mt-1">形になった書類をもとに、塾長がさらに深く鋭く「なぜ？」を問いかける。あなたの内なる意志とロジックを1on1で深堀します。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-[#800000] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</div>
+                  <div>
+                    <span className="font-bold text-[#002147] block text-sm">手厚い面接対策</span>
+                    <p className="text-xs text-[#333333] mt-1">この「アウトプットベースの修正サイクル」を繰り返すことで、自分の言葉で言語化することができるようになります。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="md:col-span-7 space-y-6">
+              <div className="flex items-center gap-2 text-[#C5A059] mb-2">
+                <MessageSquare size={24} />
+                <span className="text-xs font-bold tracking-widest uppercase">SOLUTION METHOD 02</span>
+              </div>
+              <p className="text-base md:text-lg text-[#333333] leading-loose">
+                AIによる壁打ちは、合格のための「第一歩」に過ぎません。多くの受験生が「ツールを使ってそれらしい書類を整えて終わり」にする中、佐藤塾が驚異的な合格率を叩き出せる真の理由は、「アウトプットをもとにした、塾長との徹底的な対話と反復」にあります。
+              </p>
+              <p className="text-base md:text-lg text-[#333333] leading-loose">
+                AIを駆使して限界まで高速に具体化された書類を机の上に置き、そこから本当の「佐藤塾の指導」が始まります。
+                「本当にこのアプローチで課題を解決できるのか？」「なぜ他の大学ではなく、SFCでなければならないのか？」
+                塾長が1on1で投げかける本質的な問いに対し、考えることや調査を繰り返し、自らの言葉で明文化する。この泥臭いブラッシュアップの往復の中で、書類は「借り物の綺麗な言葉」から、在学中も4年間継続できる「あなた自身の腑に落ちた確信」へと昇華します。
+              </p>
+              <div className="bg-white border-l-4 border-[#C5A059] px-6 py-4 rounded-r-lg shadow-md border border-slate-100">
+                <p className="text-sm font-bold text-[#002147] leading-relaxed">
+                  💡 <strong>面接対策の真実：</strong><br />
+                  SFCの二次試験（面接）対策とは、試験直前に想定質問の回答を暗記することではありません。圧倒的なアウトプットを自ら作り、塾長との激しい対話のなかで修正を繰り返したという「自律的なプロセス（オーナーシップ）」そのものが、教授陣のいかなる鋭い突っ込みをも笑顔で跳ね返す、最強の面接実戦力となるのです。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 5: Recent Trends */}
         <section className="mb-10">
           <div className="bg-[#002147] text-white p-8 md:p-12 rounded-xl shadow-xl flex flex-col md:flex-row gap-6 items-center md:items-start">
             <div className="p-4 bg-[#C5A059] rounded-lg text-[#002147] shrink-0 shadow-md">
@@ -206,7 +264,7 @@ export default function AoGuidePage() {
                 現在のSFC入試において、求められるオーナーシップの基準はさらに高まっています。
               </p>
               <p className="text-slate-100 text-sm md:text-base leading-loose">
-                どんなに素晴らしい実績の持ち主であっても、「大学に入学すること」がゴールになっている受験生は冷酷に落とされます。大学をあくまで「手段」として位置づけ、「本当にそれをやりたいのか？」「大学の4年間、外部環境が変わってもやり続けることができるのか？」という、強烈な意志と客観的な根拠がこれまで以上に対比されています。
+                どんなに素晴らしい実績の持ち主であっても、「大学に入学すること」がゴールになっている受験生は冷酷に落とされます。大学をあくまで「手段」として位置づけ、「本当にそれをやりたいのか？」「大学の4年間、外部環境が変わってもやり続けることができるのか？」という、確固たる意志と客観的な根拠がこれまで以上に対比されています。
               </p>
             </div>
           </div>
