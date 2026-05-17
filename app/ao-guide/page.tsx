@@ -3,7 +3,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { CheckCircle2, Lightbulb, ShieldCheck, Zap, ArrowRight, BrainCircuit, UserCheck, GraduationCap, ArrowUpRight, BookOpen, Target } from 'lucide-react';
+import { CheckCircle2, Lightbulb, ShieldCheck, ArrowRight, BrainCircuit, UserCheck, GraduationCap, ArrowUpRight, Target } from 'lucide-react';
 
 // 佐藤塾の既存下層ページ（essay/page.tsx）と一字一句違わぬ共通見出し装飾コンポーネント
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
@@ -39,12 +39,10 @@ export default function AoGuidePage() {
             SFC AO CONCEPT LP
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-5 md:mb-6 font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
-            才能の有無ではない。<br className="hidden sm:inline" />
-            SFC AO入試で「2人に1人が合格する」<br />
-            真実の攻略ロジック。
+            AO入試攻略メソッド
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed px-4">
-            実績を誇るだけの書類は、もういらない。大学入学を「ゴール」ではなく「手段」に変える、佐藤塾のオーナーシップ教育。
+            実績を誇るだけの書類は不要、大学入学を「ゴール」ではなく「手段」に変える、佐藤塾のオーナーシップ教育。
           </p>
         </div>
       </section>
@@ -52,26 +50,26 @@ export default function AoGuidePage() {
       {/* Main Content - 既存下層ページと共通のコンテナ幅・余白構造 */}
       <main className="max-w-5xl mx-auto px-4 py-16 md:py-20">
 
-        {/* Section 1: 実績の大きさは、合否に関係ない */}
+        {/* Section 1: 実績がないと合格できない、は勘違い */}
         <section className="mb-20">
-          <SectionTitle>実績の大きさは、合否に関係ない</SectionTitle>
+          <SectionTitle>実績がないと合格できない、は勘違い</SectionTitle>
           
           <div className="grid md:grid-cols-12 gap-8 items-center mt-12">
             <div className="md:col-span-7 space-y-6">
-              <p className="text-base md:text-lg leading-loose text-slate-800">
+              <p className="text-base md:text-lg text-[#333333] leading-loose">
                 「世界一周をしました」と「日本一周をしました」。<br />
-                一見、世界一周の方が社会的な評価が高く、AO入試でも有利に思えるかもしれません。しかし、慶應SFCの教授陣が見ているのは、その**表面的なスケールではありません**。
+                一見、世界一周の方が社会的な評価が高く、AO入試でも有利に思えるかもしれません。しかし、慶應SFCの教授陣が見ているのは、その表面的なスケールではありません。
               </p>
               <div className="bg-white border-l-4 border-[#002147] px-6 md:px-10 py-6 rounded-lg shadow-lg border border-slate-100">
                 <p className="font-bold text-[#002147] mb-2 text-base md:text-lg">
-                  「どうして世界（日本）を一周しようと思ったのか？」
+                  「どうして世界または日本一周をしようと思ったのか？」
                 </p>
-                <p className="text-slate-700 text-sm md:text-base leading-relaxed">
-                  その行動の背景にある独自の動機（意志）と、そこから得た問いが、あなたが大学で進めたい研究の方向性とどれほど強固に繋がっているか。この「因果の解像度」こそが合否を分ける唯一の基準です。
+                <p className="text-[#333333] text-sm md:text-base leading-relaxed">
+                  その行動の背景にある独自の動機（意志）と、そこから得た問いが、あなたが大学で進めたい研究の方向性とどれほど強固に繋がっているか。この「因果の解像度」こそが合否を分ける基準です。
                 </p>
               </div>
-              <p className="text-slate-800">
-                佐藤塾では、過去の華々しい実績をただ並べるだけの無意味な書類作成は行いません。あなたの内側にある純粋な「なぜ」を、SFCの学問領域へと論理的に接続します。
+              <p className="text-[#333333]">
+                佐藤塾では、過去の実績を並べるだけの書類作成は行いません。あなたの内側にある純粋な「なぜ」を対話を通じて一緒に探索し、SFCの学問領域へと論理的に接続します。
               </p>
             </div>
 
@@ -83,18 +81,55 @@ export default function AoGuidePage() {
               <div className="space-y-4">
                 <div className="bg-white p-4 rounded border border-slate-200">
                   <span className="text-xs font-bold text-[#800000] block mb-1">✕ 誤ったアプローチ</span>
-                  <p className="text-sm font-medium text-slate-700">「こんなにすごい実績があるから合格させてください」という実績アピール</p>
+                  <p className="text-sm font-medium text-[#333333]">「こんなにすごい実績があるから合格させてください」という実績アピール</p>
                 </div>
                 <div className="bg-white p-4 rounded border border-[#C5A059]/40 bg-[#C5A059]/5">
                   <span className="text-xs font-bold text-[#002147] block mb-1">◯ 正しいアプローチ</span>
-                  <p className="text-sm font-bold text-[#002147]">「この強烈な問題意識を解決するために、SFCのこの環境が必要である」という必然性</p>
+                  <p className="text-sm font-bold text-[#002147]">「この問題意識を解決するために、SFCのこの環境が必要である」という必然性</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Section 2: AI Companion (Method 1) */}
+        {/* Section 2: 合格率50.0%を支える「非・美化」戦略（塾長指示により解決策の前段へ移動） */}
+        <section className="mb-20">
+          <SectionTitle>合格率50.0%を支える「非・美化」戦略</SectionTitle>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-12 h-12 bg-[#800000] rounded flex items-center justify-center mb-6 text-white shadow-sm">
+                <ShieldCheck size={24} />
+              </div>
+              <h4 className="text-xl font-serif font-bold text-[#002147] mb-4 tracking-wide">
+                1. 一般入試と並行するロードマップ
+              </h4>
+              <p className="text-[#333333] text-sm md:text-base leading-loose">
+                AO入試は非常に倍率も高い不確実な試験です。だからこそ、佐藤塾では**「一般入試の学力を同時に身につけるロードマップ」**を前提として指導を行います。
+              </p>
+              <p className="text-[#333333] text-sm md:text-base leading-loose mt-4">
+                「万が一AOが不合格でも一般で戦いきれる」という絶対的な学力と精神的な余裕。これがあるからこそ、AOの書類作成においても守りに入らず、大胆で力強いロジックを展開することが可能になります。
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-12 h-12 bg-[#002147] rounded flex items-center justify-center mb-6 text-white shadow-sm">
+                <UserCheck size={24} />
+              </div>
+              <h4 className="text-xl font-serif font-bold text-[#002147] mb-4 tracking-wide">
+                2. 評価ベースの「割引」を捨て、自分ごと化する
+              </h4>
+              <p className="text-[#333333] text-sm md:text-base leading-loose">
+                「こう書いた方が評価されるのではないか」といった他人軸の割引を重視した書類は、SFCの教授陣に一瞬で見抜かれます。
+              </p>
+              <p className="text-[#333333] text-sm md:text-base leading-loose mt-4">
+                大切なのは、自分で考え、自分で調査し、自ら根拠を持って明文化するプロセスです。この**「オーナーシップ（自律性）」**が芽生えた受験生は、塾長への質問の質が劇的に変わり、自分の研究テーマに関して誰よりも深い解像度を持つようになります。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: 24時間SFC専用AI伴走指導（塾長指示により解決策としてストーリーの山場へ配置） */}
         <section className="mb-20">
           <SectionTitle>24時間SFC専用AI伴走指導</SectionTitle>
           
@@ -102,26 +137,26 @@ export default function AoGuidePage() {
             <div className="space-y-6">
               <div className="flex items-center gap-2 text-[#C5A059]">
                 <BrainCircuit size={24} />
-                <span className="text-xs font-bold tracking-widest uppercase">METHOD 01</span>
+                <span className="text-xs font-bold tracking-widest uppercase">SOLUTION METHOD</span>
               </div>
               <h4 className="text-xl md:text-2xl font-serif font-bold text-[#002147] tracking-[0.08em] leading-tight">
                 ボトムアップで積み上げる、思考の高速化。
               </h4>
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-[#333333] leading-relaxed">
                 最初から完璧な構成案を考えて提出する必要は一切ありません。あなたの頭の中にある断片的な興味や関心を、まずはそのまま佐藤塾のAIシステムにぶつけてください。
               </p>
-              <p className="text-slate-700 leading-relaxed">
-                あらゆる可能性、あらゆる方向性、あらゆる先行研究や手段の調査をAIと共に徹底的に行います。この高速な試行錯誤（ブラッシュアップ）の積み重ねが、あなたの思考を劇的に進化させます。
+              <p className="text-[#333333] leading-relaxed">
+                あらゆる可能性、あらゆる direction（方向性）、あらゆる先行研究や手段の調査をAIと共に徹底的に行います。この高速な試行錯誤（ブラッシュアップ）の積み重ねが、あなたの思考を劇的に進化させます。
               </p>
               
               <div className="space-y-3 pt-2">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="text-[#800000] shrink-0 mt-1" size={18} />
-                  <span className="text-sm text-slate-800"><strong>4年間ブレない自信の構築:</strong> 腑に落ちるまで検証し尽くすため、入学後もそのまま走り続けられる研究計画が完成します。</span>
+                  <span className="text-sm text-[#333333]"><strong>4年間ブレない自信の構築:</strong> 腑に落ちるまで検証し尽くすため、入学後もそのまま走り続けられる研究計画が完成します。</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="text-[#800000] shrink-0 mt-1" size={18} />
-                  <span className="text-sm text-slate-800"><strong>圧倒的なアウトプットスピード:</strong> 完璧主義による停滞をゼロにし、面接でも「自分の言葉」で自信を持って受け答えができるようになります。</span>
+                  <span className="text-sm text-[#333333]"><strong>圧倒的なアウトプットスピード:</strong> 完璧主義による停滞をゼロにし、面接でも「自分の言葉」で自信を持って受け答えができるようになります。</span>
                 </div>
               </div>
             </div>
@@ -146,50 +181,13 @@ export default function AoGuidePage() {
                 <div className="flex flex-col items-start">
                   <div className="bg-[#002147] text-white p-3 rounded-lg max-w-[90%] rounded-tl-none">
                     <p className="text-xs text-[#C5A059] font-bold mb-1">佐藤塾SFC特化AI</p>
-                    <p className="leading-relaxed text-slate-200">素晴らしい着眼点です。単なる批判に留めず、SFCの「環境情報学」の視点から、ローカルメディアを用いた自律的なコミュニティ再定義の先行研究と接続してみましょう。以下の3つのアプローチが考えられます...</p>
+                    <p className="leading-relaxed text-slate-200">素晴らしい着眼点です。単なる批判に留めず、SFCの「環境情報学」の視点から、ローカルメディアを用いた自律的なコミュニティ再定義 of 先行研究と接続してみましょう。以下の3つのアプローチが考えられます...</p>
                   </div>
                 </div>
                 <div className="bg-[#C5A059]/10 text-[#002147] p-3 rounded border border-[#C5A059]/30 text-xs font-medium">
                   💡 <strong>効果:</strong> この圧倒的な対話量によって自分の研究に誰よりも詳しくなり、二次試験の面接でも「自分の言葉」で自信を持って受け答えができるようになります。
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 3: Dual Track Strategy */}
-        <section className="mb-20">
-          <SectionTitle>合格率50.0%を支える「非・美化」戦略</SectionTitle>
-          
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
-            <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-[#800000] rounded flex items-center justify-center mb-6 text-white shadow-sm">
-                <ShieldCheck size={24} />
-              </div>
-              <h4 className="text-xl font-serif font-bold text-[#002147] mb-4 tracking-wide">
-                1. 一般入試と並行するロードマップ
-              </h4>
-              <p className="text-slate-700 text-sm md:text-base leading-loose">
-                AO入試は非常に倍率も高い不確実な試験です。だからこそ、佐藤塾では**「一般入試の学力を同時に身につけるロードマップ」**を前提として指導を行います。
-              </p>
-              <p className="text-slate-700 text-sm md:text-base leading-loose mt-4">
-                「万が一AOが不合格でも一般で戦いきれる」という絶対的な学力と精神的な余裕。これがあるからこそ、AOの書類作成においても守りに入らず、大胆で力強いロジックを展開することが可能になります。
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-[#002147] rounded flex items-center justify-center mb-6 text-white shadow-sm">
-                <UserCheck size={24} />
-              </div>
-              <h4 className="text-xl font-serif font-bold text-[#002147] mb-4 tracking-wide">
-                2. 評価ベースの「割引」を捨て、自分ごと化する
-              </h4>
-              <p className="text-slate-700 text-sm md:text-base leading-loose">
-                「こう書いた方が評価されるのではないか」といった他人軸の割引を重視した書類は、SFCの教授陣に一瞬で見抜かれます。
-              </p>
-              <p className="text-slate-700 text-sm md:text-base leading-loose mt-4">
-                大切なのは、自分で考え、自分で調査し、自ら根拠を持って明文化するプロセスです。この**「オーナーシップ（自律性）」**が芽生えた受験生は、塾長への質問の質が劇的に変わり、自分の研究テーマに関して誰よりも深い解像度を持つようになります。
-              </p>
             </div>
           </div>
         </section>
