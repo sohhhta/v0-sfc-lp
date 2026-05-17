@@ -94,7 +94,7 @@ export default function AoGuidePage() {
 
         {/* Section 2: 合格率50.0%を支える「非・美化」戦略（塾長指示により解決策の前段へ移動） */}
         <section className="mb-20">
-          <SectionTitle>合格率50.0%を支える「非・美化」戦略</SectionTitle>
+          <SectionTitle>AO入試に対して持つべき正しい「非・美化」戦略</SectionTitle>
           
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -108,7 +108,7 @@ export default function AoGuidePage() {
                 AO入試は非常に倍率も高い不確実な試験です。だからこそ、佐藤塾では「一般入試の学力を同時に身につけるロードマップ」を前提として指導を行います。
               </p>
               <p className="text-[#333333] text-sm md:text-base leading-loose mt-4">
-                「万が一AOが不合格でも一般で戦いきれる」という絶対的な学力と精神的な余裕。これがあるからこそ、AOの書類作成においても守りに入らず、大胆で力強いロジックを展開することが可能になります。
+                「万が一AOが不合格でも一般で戦いきれる」という確かな学力と精神。これがあるからこそ、小論文で培ったロジカルライティングを駆使した効率的かつ生産的な書類作成をすることが可能になります。
               </p>
             </div>
 
@@ -117,10 +117,10 @@ export default function AoGuidePage() {
                 <UserCheck size={24} />
               </div>
               <h4 className="text-xl font-serif font-bold text-[#002147] mb-4 tracking-wide">
-                2. 評価ベースの「割引」を捨て、自分ごと化する
+                2. 本気で自分ごと化する
               </h4>
               <p className="text-[#333333] text-sm md:text-base leading-loose">
-                「こう書いた方が評価されるのではないか」といった他人軸の割引を重視した書類は、SFCの教授陣に一瞬で見抜かれます。
+                「こう書いた方が評価されるのではないか」といった他人軸を重視した書類は、SFCの教授陣に一瞬で見抜かれます。
               </p>
               <p className="text-[#333333] text-sm md:text-base leading-loose mt-4">
                 大切なのは、自分で考え、自分で調査し、自ら根拠を持って明文化するプロセスです。この「オーナーシップ（自律性）」が芽生えた受験生は、塾長への質問の質が劇的に変わり、自分の研究テーマに関して誰よりも深い解像度を持つようになります。
