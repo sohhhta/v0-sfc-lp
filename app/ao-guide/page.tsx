@@ -30,8 +30,56 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function AoGuidePage() {
+  // Google検索エンジン（Googlebot）に直接佐藤塾の強みをインデックスさせるための構造化データ
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "慶應SFC AO入試・完全攻略ガイド | 佐藤塾",
+    "description": "実績を誇るだけの書類は不要、大学入学を「ゴール」ではなく「手段」に変える、佐藤塾のオーナーシップ教育。",
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "name": "佐藤塾",
+      "url": "https://lifeeling.jp"
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "慶應SFCのAO入試は、華々しい実績がないと合格できませんか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "表面的な実績のスケールは合否に関係ありません。SFCの教授陣が見ているのは、行動の背景にある独自の動機（意志）と、大学での研究テーマとの強固な繋がり（因果の解像度）です。佐藤塾では内なる「なぜ」を対話を通じて探索し、論理的に接続します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AO入試対策と一般入試の勉強は両立できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "佐藤塾では「一般入試の学力を同時に身につけるロードマップ」を前提として指導を行います。「万が一AOが不合格でも一般で戦いきれる」という確かな学力と精神的余裕を持つことが、結果としてAOの書類作成においても守りに入らず、大胆で力強いロジックを展開することを可能にします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "24時間SFC専用AI伴走指導とはどのようなものですか？AIだけで書類を作るのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AIによる壁打ちは合格への「第一歩」に過ぎません。AIを駆使してアイデアの断片を爆速で具体化・調査し、大量のアウトプットを作った上で、塾長との徹底的な1on1対話と反復（泥臭いブラッシュアップの往復）を行います。このプロセスそのものが、二次試験の面接でも自分の言葉で腑に落ちた確信を持って受け答えできる「最強の面接実戦力（オーナーシップ）」へと昇華されます。"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-slate-900 font-sans leading-relaxed selection:bg-[#C5A059]/30">
+      {/* SEO構造化データの流し込み（ハイドレーションに影響を及ぼさないNext.js標準安全設計） */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero Section - 既存下層ページと100%同一の背景・テキスト中央揃え（text-center）仕様 */}
       <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
         <div className="max-w-5xl mx-auto text-center">
@@ -131,7 +179,7 @@ export default function AoGuidePage() {
 
         {/* Section 3: 24時間SFC専用AI伴走指導 */}
         <section className="mb-20">
-          <SectionTitle>佐藤塾メソッド① 24時間SFC専用AI伴走指導</SectionTitle>
+          <SectionTitle>24時間SFC専用AI伴走指導</SectionTitle>
           
           <div className="grid md:grid-cols-2 gap-12 items-center mt-12">
             <div className="space-y-6">
@@ -140,7 +188,7 @@ export default function AoGuidePage() {
                 <span className="text-xs font-bold tracking-widest uppercase">SOLUTION METHOD 01</span>
               </div>
               <h4 className="text-xl md:text-2xl font-serif font-bold text-[#002147] tracking-[0.08em] leading-tight">
-                繰り返すことで積み上げる思考
+                ボトムアップで積み上げる、思考の高速化。
               </h4>
               <p className="text-[#333333] leading-relaxed">
                 最初から完璧な構成案を考えて提出する必要は一切ありません。あなたの頭の中にある断片的な興味や関心を、まずはそのまま佐藤塾のAIシステムにぶつけてください。
@@ -192,9 +240,9 @@ export default function AoGuidePage() {
           </div>
         </section>
 
-        {/* Section 4: AI高速アウトプット×塾長1on1対話による本物の面接対策（塾長指示により新規追加） */}
+        {/* Section 4: AI高速アウトプット×塾長1on1対話による本物の面接対策 */}
         <section className="mb-20">
-          <SectionTitle>佐藤塾メソッド② AIによる高速アウトプット × 塾長1on1対話が実現する「本物の面接対策」</SectionTitle>
+          <SectionTitle>AIによる高速アウトプット × 塾長1on1対話が実現する「本物の面接対策」</SectionTitle>
           
           <div className="grid md:grid-cols-12 gap-8 items-center mt-12">
             <div className="md:col-span-5 bg-gradient-to-br from-[#002147]/5 to-[#003d6b]/5 p-8 rounded-xl border border-[#002147]/10 shadow-md">
@@ -213,15 +261,15 @@ export default function AoGuidePage() {
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#C5A059] text-[#002147] flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</div>
                   <div>
-                    <span className="font-bold text-[#002147] block text-sm">塾長との1on1対話</span>
-                    <p className="text-xs text-[#333333] mt-1">形になった書類をもとに、塾長がさらに深く鋭く「なぜ？」を問いかける。あなたの内なる意志とロジックを1on1で深堀します。</p>
+                    <span className="font-bold text-[#002147] block text-sm">塾長1on1対話で「魂」を宿す</span>
+                    <p className="text-xs text-[#333333] mt-1">形になった書類をもとに、塾長がさらに深く鋭く「なぜ？」を問いかける。あなたの内なる意志とロジックを1on1で接続。</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#800000] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</div>
                   <div>
-                    <span className="font-bold text-[#002147] block text-sm">手厚い面接対策</span>
-                    <p className="text-xs text-[#333333] mt-1">この「アウトプットベースの修正サイクル」を繰り返すことで、自分の言葉で言語化することができるようになります。</p>
+                    <span className="font-bold text-[#002147] block text-sm">言語化の反復＝最強の面接力</span>
+                    <p className="text-xs text-[#333333] mt-1">この「アウトプットベースの修正サイクル」を極限まで繰り返すことで、テーマへの解像度が他を圧倒する次元に到達。</p>
                   </div>
                 </div>
               </div>
@@ -233,12 +281,12 @@ export default function AoGuidePage() {
                 <span className="text-xs font-bold tracking-widest uppercase">SOLUTION METHOD 02</span>
               </div>
               <p className="text-base md:text-lg text-[#333333] leading-loose">
-                AIによる壁打ちは、合格のための「第一歩」に過ぎません。多くの受験生が「ツールを使ってそれらしい書類を整えて終わり」にする中、佐藤塾が驚異的な合格率を叩き出せる真の理由は、「アウトプットをもとにした、塾長との徹底的な対話と反復」にあります。
+                AIによる壁打ちは、合格のための「第一歩」に過ぎません。多くの受験生が「ツールを使ってそれらしい書類を整えて終わり」にする中、佐藤塾が驚異的な合格率を叩き出せる真の理由は、**「アウトプットをもとにした、塾長との徹底的な対話と反復」**にあります。
               </p>
               <p className="text-base md:text-lg text-[#333333] leading-loose">
                 AIを駆使して限界まで高速に具体化された書類を机の上に置き、そこから本当の「佐藤塾の指導」が始まります。
                 「本当にこのアプローチで課題を解決できるのか？」「なぜ他の大学ではなく、SFCでなければならないのか？」
-                塾長が1on1で投げかける本質的な問いに対し、考えることや調査を繰り返し、自らの言葉で明文化する。この泥臭いブラッシュアップの往復の中で、書類は「借り物の綺麗な言葉」から、在学中も4年間継続できる「あなた自身の腑に落ちた確信」へと昇華します。
+                塾長が1on1で投げかける本質的な問いに対し、自らの頭で調査し、自らの言葉で明文化する。この泥臭いブラッシュアップの往復の中で、書類は「借り物の綺麗な言葉」から、4年間走り続けられる**「あなた自身の腑に落ちた確信」**へと昇華します。
               </p>
               <div className="bg-white border-l-4 border-[#C5A059] px-6 py-4 rounded-r-lg shadow-md border border-slate-100">
                 <p className="text-sm font-bold text-[#002147] leading-relaxed">
@@ -264,7 +312,7 @@ export default function AoGuidePage() {
                 現在のSFC入試において、求められるオーナーシップの基準はさらに高まっています。
               </p>
               <p className="text-slate-100 text-sm md:text-base leading-loose">
-                どんなに素晴らしい実績の持ち主であっても、「大学に入学すること」がゴールになっている受験生は冷酷に落とされます。大学をあくまで「手段」として位置づけ、「本当にそれをやりたいのか？」「大学の4年間、外部環境が変わってもやり続けることができるのか？」という、確固たる意志と客観的な根拠がこれまで以上に対比されています。
+                どんなに素晴らしい実績の持ち主であっても、「大学に入学すること」がゴールになっている受験生は冷酷に落とされます。大学をあくまで「手段」として位置づけ、「本当にそれをやりたいのか？」「大学の4年間、外部環境が変わってもやり続けることができるのか？」という、強烈な意志と客観的な根拠がこれまで以上に対比されています。
               </p>
             </div>
           </div>
