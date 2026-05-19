@@ -28,8 +28,30 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function EssayGuidePage() {
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SFC小論文攻略メソッド | 慶應SFC専門対策の佐藤塾",
+    "description": "慶應SFC合格に必要な「問題発見・解決能力」を測る小論文試験の全容と対策。圧倒的な資料量や配点の高さへの正しいアプローチを解説。",
+    "image": "https://lifeeling.jp/hero.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "佐藤颯太",
+      "url": "https://lifeeling.jp"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "佐藤塾"
+    },
+    "mainEntityOfPage": "https://lifeeling.jp/guide/essay"
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
         <div className="max-w-5xl mx-auto text-center">
