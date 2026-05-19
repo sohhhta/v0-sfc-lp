@@ -48,7 +48,7 @@ function ConsultationAICard() {
     {
       label: '小論文の不安',
       question: '小論文を勉強したことがない私でもSFCを目指せるのでしょうか？',
-      answer: '<highlight>もちろん、目指せます</highlight>。小論文は量をこなす勉強が最重要です。まずはめちゃくちゃな内容でも良いのでどんどん量をこなしていきましょう。添削内容を踏まえ書き直すことで自然と書けるようになっていきます。<highlight>過去の合格者もこのように学習し始めました</highlight>。焦らず、一緒に着実に進めていきましょう。'
+      answer: '<highlight>もちろん、目指せます</highlight>。小論文は量をこなす勉強が最重要です。まずはめちゃくちゃな内容でも良いのでどんどん量をこなしていきましょう。添削内容を踏まえ書き重すことで自然と書けるようになっていきます。<highlight>過去の合格者もこのように学習し始めました</highlight>。焦らず、一緒に着実に進めていきましょう。'
     },
     {
       label: '併願・戦略の疑問',
@@ -219,8 +219,39 @@ export default function Page() {
     }
   }
 
+  // 教育組織としての評価をGoogleコアシステムに認識させる構造化データ
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://lifeeling.jp/#organization",
+        "name": "佐藤塾",
+        "url": "https://lifeeling.jp",
+        "description": "合格率50.0%を叩き出す慶應SFC（総合政策・環境情報）専門の独自AI伴走指導塾。",
+        "image": "https://lifeeling.jp/hero.jpg",
+        "founder": {
+          "@type": "Person",
+          "name": "佐藤颯太",
+          "jobTitle": "塾長"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lifeeling.jp/#website",
+        "url": "https://lifeeling.jp",
+        "name": "佐藤塾 | 慶應SFC特化型AI伴走指導塾",
+        "publisher": { "@id": "https://lifeeling.jp/#organization" }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
       {/* 共通メニューとの重複を防ぐため、ここにあった独自の<nav>ブロックのみを完全に削除しました */}
 
       {/* Hero Section */}
@@ -406,7 +437,7 @@ export default function Page() {
                   SFC専用の対策になっていない
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
-                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
+                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。環境、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
                 </p>
               </div>
             </div>
@@ -620,7 +651,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed text-balance">
               佐藤塾と他塾の比較表
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
@@ -826,14 +857,14 @@ export default function Page() {
           </div>
 
           <div className="lg:hidden">
-            <div className="text-center mb-10">
+            <div className="text-center mt-10">
               <div className="inline-block bg-[#002147] text-white px-6 py-3 rounded-full">
                 <p className="text-sm font-bold tracking-wider">合格率50%を支えるサイクル</p>
               </div>
             </div>
 
             <div className="relative max-w-md mx-auto">
-              <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#002147] via-[#002147] to-[#002147]" />
+              <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#002147] via-[#800000] to-[#C5A059]" />
 
               <div className="relative pl-16 pb-10">
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
@@ -1492,7 +1523,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
+                一般的な塾では不可能な<strong>「24時間・無制限の演戦量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
               </div>
             </details>
 
