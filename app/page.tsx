@@ -48,7 +48,7 @@ function ConsultationAICard() {
     {
       label: '小論文の不安',
       question: '小論文を勉強したことがない私でもSFCを目指せるのでしょうか？',
-      answer: '<highlight>もちろん、目指せます</highlight>。小論文は量をこなす勉強が最重要です。まずはめちゃくちゃな内容でも良いのでどんどん量をこなしていきましょう。添削内容を踏まえ書き重すことで自然と書けるようになっていきます。<highlight>過去の合格者もこのように学習し始めました</highlight>。焦らず、一緒に着実に進めていきましょう。'
+      answer: '<highlight>もちろん、目指せます</highlight>。小論文は量をこなす勉強が最重要です。まずはめちゃくちゃな内容でも良いのでどんどん量をこなしていきましょう。添削内容を踏まえ書き直すことで自然と書けるようになっていきます。<highlight>過去の合格者もこのように学習し始めました</highlight>。焦らず、一緒に着実に進めていきましょう。'
     },
     {
       label: '併願・戦略の疑問',
@@ -233,8 +233,11 @@ export default function Page() {
         "founder": {
           "@type": "Person",
           "name": "佐藤颯太",
-          "jobTitle": "塾長"
-        }
+          "jobTitle": "塾長",
+          "description": "慶應義塾大学総合政策学部卒業生。6年間で39名のSFC合格者を輩出。"
+        },
+        "knowsAbout": ["慶應SFC対策", "AO入試小論文", "ロジカルライティング"],
+        "priceRange": "¥¥¥"
       },
       {
         "@type": "WebSite",
@@ -353,7 +356,7 @@ export default function Page() {
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「<span className="font-bold text-[#800000]">24時間並走</span>してくれるAI添削のおかげで、深夜に思いついたアイディアもすぐに形にできました。塾長との1on1では、自分でも気づかなかった<span className="font-bold text-[#800000]">『学びの軸』を言語化</span>してもらい、自信を持って出願に臨めました。」
+                  「24時間並走してくれるAI添削のおかげで、深夜に思いついたアイディアもすぐに形にできました。塾長との1on1では、自分でも気づかなかった『学びの軸』を言語化してもらい、自信を持って出願に臨めました。」
                 </p>
               </CardContent>
             </Card>
@@ -365,7 +368,7 @@ export default function Page() {
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「小論文の基礎をAIで徹底的に反復した上で塾長からSFC特有の『視点の鋭さ』を叩き込まれました。AIによる<span className="font-bold text-[#800000]">圧倒的な演習量</span>と、塾長による<span className="font-bold text-[#800000]">戦略的指導</span>の二軸こそが、最短ルートだったのだと振り返っています。」
+                  「小論文の基礎をAIで徹底的に反復した上で塾長からSFC特有の『視点の鋭さ』を叩き込まれました。AIによる圧倒的な演習量と、塾長による戦略的指導の二軸こそが、最短ルートだったのだと振り返っています。」
                 </p>
               </CardContent>
             </Card>
@@ -377,7 +380,7 @@ export default function Page() {
               </div>
               <CardContent className="pt-6">
                 <p className="text-sm text-[#333333] leading-relaxed">
-                  「当初はAI指導に不安もありましたが、対話を通じてく<span className="font-bold text-[#800000]">息子が自律的に机に向かう姿を見て驚しました。</span>単なる受験テクニックではなく、自分の人生を切り拓く<span className="font-bold text-[#800000]">『オーナーシップ』を育ててくれる</span>塾だと感じ、安心してお任せできました。」
+                  「当初はAI指導に不安もありましたが、対話を通じてく息子が自律的に机に向かう姿を見て驚しました。単なる受験テクニックではなく、自分の人生を切り拓く『オーナーシップ』を育ててくれる塾だと感じ、安心してお任せできました。」
                 </p>
               </CardContent>
             </Card>
@@ -437,7 +440,7 @@ export default function Page() {
                   SFC専用の対策になっていない
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
-                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。環境、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
+                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
                 </p>
               </div>
             </div>
@@ -560,7 +563,7 @@ export default function Page() {
                   </div>
                   <div className="bg-white rounded-lg p-4 md:p-5 border border-[#002147]/10 shadow-sm">
                     <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張は<span className="text-[#800000] font-bold">SFCの求める「多角的視点」が不足</span>していることです。具体的には設問2については、単なる現状分析だけでなく、<span className="text-[#800000] font-bold">居住者の権利という対立軸</span>を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専門的知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
+                      今回の回答はもう一度書き直してください。修正箇所は3点あります。1つ目は、あなたの主張はSFCの求める「多角的視点」が不足していることです。具体的には設問2については、単なる現状分析だけでなく、居住者の権利という対立軸を加えて再構成してください。そうすることで論理の深みが増します。2つ目は、・・・。また、今回の内容における背景知識があまりないように見受けられたので、専門的知識を培うために「〇〇（サイトURL）」というサイトの記事を読んでおいてください。
                     </p>
                   </div>
                 </div>
@@ -651,7 +654,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed text-balance">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
               佐藤塾と他塾の比較表
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
@@ -767,7 +770,7 @@ export default function Page() {
           <div className="mt-10 bg-white rounded-lg border-l-4 border-[#800000] p-5 md:p-6 shadow-md">
             <p className="text-sm md:text-base text-[#333333]">
               <span className="text-[#800000] font-bold">※ 佐藤塾の費用は月額 11.8万円〜。</span>
-              講習費、教材費といった追加料金は<span className="font-bold">一切かかりません</span>。他塾のように「合格時には別途〇万円」といった費用も発生しません。
+              講習費、教材費といった追加料金は一切かかりません。他塾のように「合格時には別途〇万円」といった費用も発生しません。
             </p>
           </div>
         </div>
@@ -857,7 +860,7 @@ export default function Page() {
           </div>
 
           <div className="lg:hidden">
-            <div className="text-center mt-10">
+            <div className="text-center mb-10">
               <div className="inline-block bg-[#002147] text-white px-6 py-3 rounded-full">
                 <p className="text-sm font-bold tracking-wider">合格率50%を支えるサイクル</p>
               </div>
@@ -1286,7 +1289,7 @@ export default function Page() {
               <div>
                 <p className="text-lg md:text-xl font-bold text-[#002147] mb-2">AO入試合格 ＝ 卒業。合格後の費用は一切かかりません。</p>
                 <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                  AO入試合格後は、合格発表日の月末をもって<span className="font-bold text-[#800000]">自動退塾（契約終了）となります。</span>。だからこそ、親御様も安心してお子さんの受験を応援できます。
+                  AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。。だからこそ、親御様も安心してお子さんの受験を応援できます。
                 </p>
               </div>
             </div>
@@ -1381,7 +1384,7 @@ export default function Page() {
                   <h3 className="text-2xl font-bold text-[#002147] mb-4 font-serif">送信が完了しました！</h3>
                   <p className="text-[#333333] leading-relaxed mb-6 text-lg">
                     お申し込みいただきありがとうございます。<br />
-                    担当者より<strong>24時間以内</strong>にご連絡いたします。
+                    担当者より24時間以内にご連絡いたします。
                   </p>
                   <p className="text-sm text-[#666666]">
                     ※メールが届かない場合は、迷惑メールフォルダをご確認ください。
@@ -1523,7 +1526,7 @@ export default function Page() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                一般的な塾では不可能な<strong>「24時間・無制限の演戦量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
+                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
               </div>
             </details>
 
@@ -1561,8 +1564,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      {/* 共通フッターとの重複を防ぐため、ここにあった独自の<footer>ブロックのみを完全に削除しました */}
     </div>
   )
 }
