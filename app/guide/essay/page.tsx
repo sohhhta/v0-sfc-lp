@@ -168,7 +168,7 @@ export default function EssayGuidePage() {
           </div>
         </section>
 
-        {/* 【位置調整】個別記事（ロジカルライティング）への案内カードを、下部CTAのすぐ上に移動しました */}
+        {/* リンク案内カード */}
         <section className="mt-24 mb-10">
           <div className="bg-[#800000]/5 border-2 border-[#800000]/20 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
             <div className="flex items-center gap-4">
