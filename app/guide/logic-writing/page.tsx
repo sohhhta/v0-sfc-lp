@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ChevronRight, Clock, List } from 'lucide-react'
 
-// 装飾付き見出しコンポーネント（他ページと統一）
+// 装飾付き見出しコンポーネント（既存マスタのid受け渡しロジックを完全復元）
 function SectionTitle({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
     <div className="text-center mb-10 mt-20" id={id}>
@@ -22,6 +22,7 @@ function SectionTitle({ children, id }: { children: React.ReactNode; id?: string
 }
 
 export default function LogicWritingPage() {
+  // 実践ガイドとしてのE-E-A-T評価を最大化させるArticleスキーマ
   const logicJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -45,10 +46,8 @@ export default function LogicWritingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(logicJsonLd) }}
       />
-      {/* 共通ナビゲーション（layout.tsx）から自動出力されるため、固有の<Header />を削除しました */}
       
-      {/* stickyヘッダーの高さに合わせ、不要な隙間を削るため pt-32 から pt-12 md:pt-20 へ最適化しました */}
-      <main className="pt-12 md:pt-20 pb-20">
+      <main className="pt-32 md:pt-40 pb-20">
         <article className="max-w-4xl mx-auto px-6">
           {/* ヘッダー */}
           <header className="mb-12 text-center">
@@ -80,7 +79,10 @@ export default function LogicWritingPage() {
           <div className="prose prose-slate max-w-none leading-[1.9] text-gray-700">
             <p className="text-lg mb-8 italic border-l-4 border-[#C5A059] pl-6 py-2 text-slate-600 bg-slate-50">
               「SFCの小論文は、特別な才能がないと合格点をもらえないのではないか？」<br />
-              「独独創的なアイデアなんて、自分には思いつかない……」
+              「独創的なアイデアなんて、自分には思いつかない……」
+            </p>
+            <p className="mb-12">
+              毎年、多くの受験生からこのような相談を受けます。しかし、断言します。SFCの小論文に<strong>奇抜なひらめきや天性のセンスは不要</strong>です。合格点に届かない最大の理由は、才能の不足ではなく、採点官に評価される「書き方のルール」を知らないことにあります。
             </p>
 
             <SectionTitle id="sec1">1. なぜ、あなたの小論文は「評価の対象」にならないのか？</SectionTitle>
@@ -88,8 +90,11 @@ export default function LogicWritingPage() {
               多くの受験生が「何かすごいことを書かなければ」と焦るあまり、問いかけ（設問）を置き去りにしてしまいます。
               SFCの採点官が見ているのは、あなたの「感性」以上に、<strong>大学で学ぶために必要な「考える手順」</strong>が身についているかです。
             </p>
+            <p className="mb-6">
+              どれほど独自性の高いアイデアであっても、設問の要求からズレていたり、論理の飛躍があったりする文章は、採点基準にすら乗りません。まずは「相手の問いに正確に、過不足なく答える」という、ロジカルライティングの徹底的な反復が必要です。
+            </p>
 
-            {/* 図解エリア：ロジックの3要素 */}
+            {/* 図解エリア */}
             <div className="my-12 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div className="p-6 bg-white border border-gray-100 shadow-sm rounded-xl">
                 <div className="w-10 h-10 bg-[#002147] text-white flex items-center justify-center rounded-full mx-auto mb-4 font-bold">1</div>
@@ -112,26 +117,39 @@ export default function LogicWritingPage() {
             <p>
               論理的な書き方は、頭で理解するだけでは身につきません。佐藤塾がAI添削を導入したのは、従来の指導では難しかった<strong>「圧倒的な演習量」</strong>を、塾長とAIのダブルチェックで実現するためです。
             </p>
+            <p className="mb-6">
+              週に1回、数日待って添削を受け取るだけのスピード感では、SFCの複雑な過去問に対応する修正力は育ちません。書いたその場でAIが構造的な不備を指摘し、何度も書き直す。この高速な試行錯誤を繰り返すことで、本番のプレッシャー下でもブレない論理的思考力が脳に定着します。
+            </p>
             {/* まとめポイントボックス */}
             <div className="bg-[#800000]/5 border-l-4 border-[#800000] p-6 my-8 rounded-r-xl text-sm">
               <p className="font-bold text-[#800000] mb-1">💡 ポイント</p>
               「昨日よりも、3ヶ月前よりも、自分の文章が分かりやすくなっている」という成長実感こそが、逆転合格のガソリンになります。
             </div>
 
-            <SectionTitle id="sec4">4. SFC対策で磨いた力は、一生モノの財産になる</SectionTitle>
+            <SectionTitle id="sec3">3. 逆転合格に必要な「準備期間」の真実</SectionTitle>
             <p>
-              SFCのために磨いた力で、<strong>青山学院、法政、立教、中央</strong>といった難関大学にも次々と合格しています。
-              これは、佐藤塾で教える内容が単なる小論文対策ではなく、どこでも通用する「本質的な知力」だからです。
+              「小論文の対策は秋からで間に合う」という予備校の言葉を真に受けてはいけません。SFCの200点という配点は、他大学とは比較にならないほど重く、求められる教養（社会問題、データサイエンス、デザイン思考など）の範囲も広大です。
+            </p>
+            <p className="mb-12">
+              理想的なスタートは春（4月〜6月）。この時期にAIを使い倒して「論理の型」と「基礎知識」を脳に叩き込んでおくからこそ、夏以降に塾長との1on1面談で、誰にも真似できない「独自性の磨き上げ」に全リソースを集中させることが可能になります。
             </p>
 
-            {/* 監修者プロフィール（実画像URLへの差し替えと円形トリミングの適用） */}
+            <SectionTitle id="sec4">4. SFC対策で磨いた力は、一生モノの財産になる</SectionTitle>
+            <p>
+              多くの人が「SFCの小論文は特殊すぎて、併願校の対策にならない」と勘違いしています。しかし、佐藤塾の塾生たちは、SFCのために磨いた力で、<strong>青山学院、法政、立教、中央</strong>といった難関大学にも次々と合格しています。
+            </p>
+            <p className="mb-12">
+              これは、佐藤塾で教える内容が単なる小論文のテクニックではなく、どこでも通用する「本質的な知力」そのものだからです。SFCという最高峰を目指す過程で培われる圧倒的な論理力は、一般入試の現代文や他学部の小論文をも容易に凌駕する強力な武器になります。
+            </p>
+
+            {/* 塾長プロフィール */}
             <div className="mt-24 p-8 border border-gray-200 rounded-3xl flex flex-col md:flex-row items-center gap-8 bg-slate-50/50">
               <div className="relative w-24 h-24 flex-shrink-0 border-2 border-[#C5A059] rounded-full overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LP%E7%94%A8%E7%94%BB%E5%83%8F-AOR1a22XLXmxYxq6qMvKO1B5HygCnh.png"
+                  src="/jukucho.jpg"
                   alt="佐藤塾 塾長 佐藤颯太"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top scale-125"
                 />
               </div>
               <div>
@@ -140,7 +158,7 @@ export default function LogicWritingPage() {
                   <h4 className="text-xl font-bold text-[#002147] font-serif">佐藤 颯太 <span className="text-sm font-medium text-gray-500">Sota Sato</span></h4>
                 </div>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数百名の受験生と向き合い、独自の「ロジカルライティング・メソッド」と最新のAI技術を融合させた指導で、多数 of 逆転合格者を輩出。
+                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数百名の受験生と向き合い、独自の「ロジカルライティング・メソッド」と最新のAI技術を融合させた指導で、多数の逆転合格者を輩出。
                 </p>
                 <Link href="/#contact-form" className="text-sm font-bold text-[#800000] hover:underline inline-flex items-center">
                   塾長から詳しい指導方針を聞く <ChevronRight size={14} className="ml-1" />
@@ -163,8 +181,6 @@ export default function LogicWritingPage() {
           </div>
         </article>
       </main>
-
-      {/* 共通フッター（layout.tsx）から自動出力されるため、固有の<Footer />を削除しました */}
     </div>
   )
 }

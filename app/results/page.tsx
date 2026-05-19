@@ -33,7 +33,7 @@ export default function ResultsPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "慶應SFC 合格実績・合格者の声 | 佐藤塾",
-    "description": "6年間累計39名、2026年度合格率50.0%（14名中7名合格）を叩き出す佐藤塾の年度別合格推移と合格者の生の声をご紹介。",
+    "description": "6年間累計39名、2026年度合格率 50.0%（14名中7名合格）を叩き出す佐藤塾の年度別合格推移と合格者の生の声をご紹介。",
     "image": "https://lifeeling.jp/hero.jpg",
     "mainEntity": {
       "@type": "ItemList",
@@ -77,7 +77,6 @@ export default function ResultsPage() {
           <SectionTitle>実績ハイライト</SectionTitle>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Card 1: 2026年度合格率 */}
             <div className="flex flex-col bg-white shadow-xl border-2 border-[#800000]/40 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
               <div className="bg-gradient-to-br from-[#800000] to-[#600000] text-white px-6 py-5">
                 <p className="text-xs font-bold tracking-wider opacity-90">2026年度</p>
@@ -89,7 +88,6 @@ export default function ResultsPage() {
               </div>
             </div>
 
-            {/* Card 2: 受講継続率 */}
             <div className="flex flex-col bg-white shadow-xl border-2 border-[#002147]/40 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
               <div className="bg-gradient-to-br from-[#002147] to-[#001a2e] text-white px-6 py-5">
                 <p className="text-xs font-bold tracking-wider opacity-90">2026年度</p>
@@ -101,7 +99,6 @@ export default function ResultsPage() {
               </div>
             </div>
 
-            {/* Card 3: 累計合格者 */}
             <div className="flex flex-col bg-white shadow-xl border-2 border-[#C5A059]/50 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
               <div className="bg-gradient-to-br from-[#C5A059] to-[#9d8a42] text-white px-6 py-5">
                 <p className="text-xs font-bold tracking-wider opacity-90">6年間累計</p>
@@ -113,7 +110,6 @@ export default function ResultsPage() {
               </div>
             </div>
 
-            {/* Card 4: AO・一般両対応 */}
             <div className="flex flex-col bg-white shadow-lg border-2 border-[#C5A059]/30 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
               <div className="bg-gradient-to-br from-[#800000] to-[#C5A059] text-white px-6 py-6">
                 <p className="text-sm font-bold opacity-80">指導対応</p>
@@ -141,7 +137,7 @@ export default function ResultsPage() {
 
           {/* Mobile: Horizontal scroll table with sticky first column */}
           <div className="md:hidden">
-            <div className="relative overflow-x-auto rounded-xl shadow-lg" style={{ boxShadow: '4px 0 8px -4px rgba(0,0,0,0.1) inset, -4px 0 8px -4px rgba(0,0,0,0.05) inset' }}>
+            <div className="relative overflow-x-auto rounded-xl shadow-lg bg-white mt-6" style={{ boxShadow: '4px 0 8px -4px rgba(0,0,0,0.1) inset, -4px 0 8px -4px rgba(0,0,0,0.05) inset' }}>
               <table className="w-full min-w-[360px] border-collapse">
                 <thead>
                   <tr className="bg-[#002147]">
@@ -262,7 +258,6 @@ export default function ResultsPage() {
           <SectionTitle>合格者の声</SectionTitle>
 
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Testimonial 1: 総合政策学部 S さん */}
             <div className="flex flex-col bg-white shadow-lg border-2 border-[#800000]/20 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
               <div className="bg-gradient-to-br from-[#800000] to-[#600000] text-white px-6 py-6">
                 <div className="text-xs font-bold bg-[#C5A059]/30 text-white px-2 py-1 rounded inline-block mb-3">
@@ -280,7 +275,6 @@ export default function ResultsPage() {
               </div>
             </div>
 
-            {/* Testimonial 2: 環境情報学部 I さん */}
             <div className="flex flex-col bg-white shadow-lg border-2 border-[#002147]/20 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
               <div className="bg-gradient-to-br from-[#002147] to-[#001a2e] text-white px-6 py-6">
                 <div className="text-xs font-bold bg-[#C5A059]/30 text-white px-2 py-1 rounded inline-block mb-3">
@@ -298,7 +292,6 @@ export default function ResultsPage() {
               </div>
             </div>
 
-            {/* Testimonial 3: 保護者 T さん */}
             <div className="flex flex-col bg-white shadow-lg border-2 border-[#C5A059]/30 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
               <div className="bg-gradient-to-br from-[#C5A059] to-[#9d8a42] text-white px-6 py-6">
                 <div className="text-xs font-bold bg-[#002147]/30 text-white px-2 py-1 rounded inline-block mb-3">
@@ -340,7 +333,6 @@ export default function ResultsPage() {
           </Link>
         </div>
       </section>
-      {/* 共通フッター（layout.tsx）から自動出力されるため、固有の<footer>ブロックを完全に削除しました */}
     </div>
   )
 }
