@@ -29,8 +29,29 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function ResultsPage() {
+  const resultsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "慶應SFC 合格実績・合格者の声 | 佐藤塾",
+    "description": "6年間累計39名、2026年度合格率50.0%（14名中7名合格）を叩き出す佐藤塾の年度別合格推移と合格者の生の声をご紹介。",
+    "image": "https://lifeeling.jp/hero.jpg",
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": 3,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "2026年度合格率 50.0%（14名中7名合格）" },
+        { "@type": "ListItem", "position": 2, "name": "6年間累計SFC合格者数 39名" },
+        { "@type": "ListItem", "position": 3, "name": "受講継続率 93%" }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(resultsJsonLd) }}
+      />
       {/* 共通ナビゲーション（layout.tsx）から自動出力されるため、固有の<nav>ブロックを完全に削除しました */}
 
       {/* Hero Section */}
@@ -319,7 +340,6 @@ export default function ResultsPage() {
           </Link>
         </div>
       </section>
-
       {/* 共通フッター（layout.tsx）から自動出力されるため、固有の<footer>ブロックを完全に削除しました */}
     </div>
   )
