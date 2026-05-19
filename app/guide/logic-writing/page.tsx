@@ -22,8 +22,29 @@ function SectionTitle({ children, id }: { children: React.ReactNode; id?: string
 }
 
 export default function LogicWritingPage() {
+  const logicJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "慶應SFCの小論文で「合格点」に届かない理由とは？ | 佐藤塾",
+    "description": "多くの受験生が陥る『設問の置き去り』を解決する。設問の正確な把握、論理的な構成、体系的な解答からなるロジカルライティングの手順を解説。",
+    "image": "https://lifeeling.jp/hero.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "佐藤颯太"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "佐藤塾"
+    },
+    "mainEntityOfPage": "https://lifeeling.jp/guide/logic-writing"
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(logicJsonLd) }}
+      />
       {/* 共通ナビゲーション（layout.tsx）から自動出力されるため、固有の<Header />を削除しました */}
       
       {/* stickyヘッダーの高さに合わせ、不要な隙間を削るため pt-32 から pt-12 md:pt-20 へ最適化しました */}
@@ -110,7 +131,7 @@ export default function LogicWritingPage() {
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LP%E7%94%A8%E7%94%BB%E5%83%8F-AOR1a22XLXmxYxq6qMvKO1B5HygCnh.png"
                   alt="佐藤塾 塾長 佐藤颯太"
                   fill
-                  className="object-cover object-top scale-125"
+                  className="object-cover"
                 />
               </div>
               <div>
