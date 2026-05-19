@@ -28,6 +28,7 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function EssayGuidePage() {
+  // 【追加】SEO構造化データ（JSON-LD）
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -36,8 +37,7 @@ export default function EssayGuidePage() {
     "image": "https://lifeeling.jp/hero.jpg",
     "author": {
       "@type": "Person",
-      "name": "佐藤颯太",
-      "url": "https://lifeeling.jp"
+      "name": "佐藤颯太"
     },
     "publisher": {
       "@type": "Organization",
@@ -48,10 +48,12 @@ export default function EssayGuidePage() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* 【追加】Google構造化データの流し込み */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
         <div className="max-w-5xl mx-auto text-center">
