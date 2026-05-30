@@ -9,6 +9,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Check, Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import { FloatingCTA } from '@/components/ui/floating-cta'
 
 // Section title with Keio blue decorative lines
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
@@ -1271,7 +1272,7 @@ export default function Page() {
                   </a>
                   <Link href="/course">
                     <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-medium transition-all duration-200">
-                      このプランの詳細とサポート体制を確認する
+                      このプランの詳細とサポ���ト体制を確認する
                     </Button>
                   </Link>
                 </div>
@@ -1564,6 +1565,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <FloatingCTA />
     </div>
   )
 }
