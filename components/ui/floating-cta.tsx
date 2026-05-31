@@ -85,12 +85,8 @@ export function FloatingCTA() {
           
           {/* ベネフィット訴求：2人に1人が合格する戦略の直接提案 */}
           <h4 className="text-base font-serif font-bold text-[#002147] mb-2 leading-snug">
-            2人に1人が合格するSFC受験戦略を、<br />塾長が直接1on1提案。
+            2人に1人が合格するSFC受験戦略を、<br />塾長が直接個別で提案します。
           </h4>
-          
-          <p className="text-xs text-muted-foreground leading-relaxed mb-4">
-            あなたの現在地から総合政策・環境情報の合格ラインを突破する最短ルートを、オンラインで完全個別ナビゲートします。
-          </p>
           
           {/* 簡易動線の訴求 */}
           <p className="text-[10px] text-[#C5A059] font-bold text-center mb-1.5 tracking-wide">
