@@ -39,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        {/* Google Analytics & Google Ads Global Site Tag */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NVR474N8XP"
           strategy="afterInteractive"
@@ -48,7 +49,12 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            
+            // Google Analytics
             gtag('config', 'G-NVR474N8XP');
+            
+            // Google Ads (コンバージョンIDをここに設定してください)
+            gtag('config', 'AW-XXXXXXXXXX');
           `}
         </Script>
       </head>
@@ -59,7 +65,7 @@ export default function RootLayout({
         {/* 全ページ共通のヘッダー */}
         <Header />
 
-        {/* メインコンテンツ（flex-growでフッターを最下部に押し出す） */}
+        {/* メインコンテンツ */}
         <div className="flex-grow">
           {children}
         </div>
