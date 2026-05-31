@@ -13,9 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.sfc-satojuku.com'),
   title: '慶應SFC合格への最短距離 - 佐藤塾',
   description: '2人に1人が合格する、AI伴走指導。塾長 佐藤颯太が直接指導する慶應SFC専門塾。',
-  verification: {
-    google: "jVBvchuFr-2bGgeIwJbnZFlOnCrIRFLY54lY5BgEqr8",
-  },
+  verification: { google: "jVBvchuFr-2bGgeIwJbnZFlOnCrIRFLY54lY5BgEqr8" },
   openGraph: {
     title: '慶應SFC合格への最短距離 - 佐藤塾',
     description: '2人に1人が合格する、AI伴走指導。塾長 佐藤颯太が直接指導する慶應SFC専門塾。',
@@ -25,23 +23,16 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    images: ['/og-image.png'],
-  },
+  twitter: { card: 'summary_large_image', images: ['/og-image.png'] },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
       <head>
         {/* Google Analytics & Google Ads Global Site Tag */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-NVR474N8XP"
+          src="https://www.googletagmanager.com/gtag/js?id=G-RWYJZR6MJ3"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -50,11 +41,11 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             
-            // Google Analytics
-            gtag('config', 'G-NVR474N8XP');
+            // GA4
+            gtag('config', 'G-RWYJZR6MJ3');
             
-            // Google Ads (コンバージョンIDをここに設定してください)
-            gtag('config', 'AW-XXXXXXXXXX');
+            // Google Ads
+            gtag('config', 'AW-384283541');
           `}
         </Script>
       </head>
@@ -62,17 +53,9 @@ export default function RootLayout({
         style={{ fontFamily: `${sansJP.style.fontFamily}, ${serifJP.style.fontFamily}` }} 
         className="antialiased min-h-screen flex flex-col"
       >
-        {/* 全ページ共通のヘッダー */}
         <Header />
-
-        {/* メインコンテンツ */}
-        <div className="flex-grow">
-          {children}
-        </div>
-
-        {/* 全ページ共通のフッター */}
+        <div className="flex-grow">{children}</div>
         <Footer />
-        
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
