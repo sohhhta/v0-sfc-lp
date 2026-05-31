@@ -1272,7 +1272,7 @@ export default function Page() {
                   </a>
                   <Link href="/course">
                     <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-medium transition-all duration-200">
-                      このプランの詳細とサポ���ト体制を確認する
+                      このプランの詳細とサポート体制を確認する
                     </Button>
                   </Link>
                 </div>
