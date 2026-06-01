@@ -1,0 +1,63 @@
+import Link from "next/link";
+import { ChevronRight, AlertTriangle, CheckCircle2 } from "lucide-react";
+import { Highlight, ArticleH2, ArticleCTA } from "@/components/article-ui";
+
+export default function AoStrategyPage() {
+  return (
+    <main className="min-h-screen bg-slate-50 py-12">
+      <article className="container mx-auto px-4 max-w-3xl bg-white shadow-sm rounded-2xl overflow-hidden">
+
+        <header className="bg-[#002147] text-white p-8 md:p-12">
+          <div className="flex items-center gap-2 text-[#C5A059] text-sm font-bold mb-4">
+            <Link href="/ao-guide" className="hover:underline">AO入試ガイド</Link>
+            <ChevronRight className="w-4 h-4" />
+            <span>戦略・マインド編</span>
+          </div>
+          <h1 className="text-2xl md:text-4xl font-bold leading-tight md:leading-normal mb-6">
+            慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由
+          </h1>
+        </header>
+
+        <div className="p-8 md:p-12 text-slate-800">
+          <ArticleH2 icon={AlertTriangle}>
+            誤解だらけのSFC AO入試：「起業」も「全国大会」も必須ではない
+          </ArticleH2>
+
+          <p className="mb-6 leading-relaxed">「SFCのAO入試に合格するには、学生起業や全国大会での優勝経験が必要だ」</p>
+          <p className="mb-6 leading-relaxed">毎年、面談に訪れる受験生や保護者の方から、必ずと言っていいほど聞かれる言葉です。</p>
+          <p className="mb-6 leading-relaxed">ネット上には華々しい実績を持つ合格者の声が溢れており、そう思い込んでしまうのも無理はありません。</p>
+          <p className="mb-6 leading-relaxed">しかし、結論から申し上げます。</p>
+          <p className="mb-6 leading-relaxed text-lg"><Highlight>「特別な実績がなければ合格できない」というのは完全な誤解です。</Highlight></p>
+          <p className="mb-6 leading-relaxed">確かに、目を引く実績を持つ受験生は目立ちます。</p>
+          <p className="mb-6 leading-relaxed">ですが、SFCの教授陣が出願書類の中で本質的に求めているのは、過去の活動実績や大会記録の羅列ではありません。</p>
+          <p className="mb-6 leading-relaxed text-lg">彼らが見極めようとしているのは、<Highlight>未解決の社会課題に対する「未来へのオーナーシップ（当事者意識）」</Highlight>なのです。</p>
+
+          <ArticleH2 icon={CheckCircle2}>
+            なぜ「AO単願」は危険なのか？佐藤塾が“二刀流”を強く推奨する理由
+          </ArticleH2>
+
+          <p className="mb-6 leading-relaxed">実績づくりに焦るあまり、AO入試の対策だけに没頭してしまう受験生が多くいます。</p>
+          <p className="mb-6 leading-relaxed">佐藤塾では、AO入試のみに絞る「AO単願」という戦略を推奨していません。</p>
+          <p className="mb-6 leading-relaxed text-lg">なぜなら、<Highlight>一般入試に向けた「小論文対策」こそが、AO入試の書類と面接に圧倒的な説得力をもたらすからです。</Highlight></p>
+          <p className="mb-6 leading-relaxed">SFCの小論文では、与えられた資料から問題の構造を読み解き、論理的に解決策を提示する力が求められます。</p>
+          <p className="mb-6 leading-relaxed">この訓練を通じて鍛え上げられた「論理的思考力（ロジック）」は、そのまま志望理由書の骨格になります。</p>
+          <p className="mb-6 leading-relaxed">「AOと一般、両方なんて手が回らない」と考えるかもしれません。</p>
+          <p className="mb-6 leading-relaxed">しかし実際は逆であり、両者を並行して進める「二刀流」こそが、思考の質を高め合う最短距離のロードマップなのです。</p>
+
+          <ArticleH2 icon={CheckCircle2}>
+            あなたの中にある「まだ言語化されていない問い」を見つける方法
+          </ArticleH2>
+
+          <p className="mb-6 leading-relaxed">では、実績がない状態から、どのようにしてSFCの教授を唸らせる志望理由書を作ればよいのでしょうか。</p>
+          <p className="mb-6 leading-relaxed">答えは「あなた自身の原体験を極限まで深掘りすること」にあります。</p>
+          <p className="mb-6 leading-relaxed">しかし、自分一人の頭の中で考えていても、視点はすぐにループし、行き詰まってしまいます。</p>
+          <p className="mb-6 leading-relaxed text-lg">だからこそ佐藤塾では、<Highlight>24時間稼働のAIとの壁打ちで圧倒的な量の思考をこなし、塾長との1on1でその質を極限まで高める</Highlight>という環境を用意しています。</p>
+          <p className="mb-6 leading-relaxed">AIがあなたの思考の「抜け漏れ」を容赦なく指摘し、塾長である私がSFCの合格基準に照らし合わせてロジックを磨き上げます。</p>
+          <p className="mb-6 leading-relaxed">このプロセスを経ることで、借り物ではない、あなただけの強烈な「問い（テーマ）」が必ず見つかります。</p>
+
+          <ArticleCTA />
+        </div>
+      </article>
+    </main>
+  );
+}
