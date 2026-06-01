@@ -4,7 +4,6 @@ import {
   Highlight,
   ArticleH2,
   ArticleCTA,
-  AuthorProfile,
   TableOfContents,
   AuthorBox,
 } from "@/components/article-ui";
@@ -29,14 +28,13 @@ export default function AoStrategyPage() {
           <h1 className="text-2xl md:text-4xl font-bold leading-tight md:leading-normal mb-2">
             慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由
           </h1>
-          <AuthorProfile date="2026.06.01" />
         </header>
 
         <div className="p-8 md:p-12 text-slate-800">
           <img
-            src="/hero.jpg"
-            alt="SFC対策"
-            className="w-full h-auto object-cover md:h-[400px] rounded-xl mb-10"
+            src={`/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由")}`}
+            alt="アイキャッチ画像"
+            className="w-full h-auto object-cover md:h-[630px] rounded-xl mb-10 border border-slate-200 shadow-sm"
           />
 
           <TableOfContents items={tocItems} />

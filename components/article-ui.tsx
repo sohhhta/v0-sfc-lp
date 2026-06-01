@@ -25,21 +25,6 @@ export const ArticleH2 = ({
   </h2>
 );
 
-// 記事タイトル直下の著者情報
-export const AuthorProfile = ({ date }: { date: string }) => (
-  <div className="flex items-center gap-3 mt-6">
-    <img
-      src="/jukucho.jpg"
-      alt="塾長 佐藤颯太"
-      className="w-11 h-11 rounded-full object-cover border-2 border-[#C5A059]"
-    />
-    <div className="leading-tight">
-      <p className="text-sm font-bold text-white">塾長 佐藤颯太</p>
-      <p className="text-xs text-white/70">公開日: {date}</p>
-    </div>
-  </div>
-);
-
 // 記事冒頭の目次
 export const TableOfContents = ({
   items,
@@ -71,7 +56,7 @@ export const TableOfContents = ({
 export const AuthorBox = () => (
   <section className="flex flex-col sm:flex-row gap-5 items-center sm:items-start bg-slate-50 border border-slate-200 rounded-xl p-6 md:p-8 mt-16">
     <img
-      src="/jukucho.jpg"
+      src="/og-image.png"
       alt="塾長 佐藤颯太"
       className="w-24 h-24 rounded-full object-cover border-4 border-[#C5A059] shrink-0"
     />
