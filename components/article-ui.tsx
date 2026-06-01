@@ -9,12 +9,82 @@ export const Highlight = ({ children }: { children: React.ReactNode }) => (
   </span>
 );
 
-// 記事用H2見出し
-export const ArticleH2 = ({ icon: Icon, children }: { icon: any, children: React.ReactNode }) => (
-  <h2 className="text-xl md:text-2xl font-bold text-[#002147] border-b-2 border-[#C5A059] pb-3 mb-8 flex items-center gap-2 mt-16">
-    <Icon className="w-6 h-6 text-[#800000]" />
+// 記事用H2見出し（左に紺の縦線、下に金の細い横線）
+export const ArticleH2 = ({
+  id,
+  children,
+}: {
+  id?: string;
+  children: React.ReactNode;
+}) => (
+  <h2
+    id={id}
+    className="scroll-mt-24 text-xl md:text-2xl font-bold text-[#002147] border-l-4 border-[#002147] border-b border-[#C5A059] pl-4 pb-3 mb-8 mt-16 leading-snug"
+  >
     {children}
   </h2>
+);
+
+// 記事タイトル直下の著者情報
+export const AuthorProfile = ({ date }: { date: string }) => (
+  <div className="flex items-center gap-3 mt-6">
+    <img
+      src="/jukucho.jpg"
+      alt="塾長 佐藤颯太"
+      className="w-11 h-11 rounded-full object-cover border-2 border-[#C5A059]"
+    />
+    <div className="leading-tight">
+      <p className="text-sm font-bold text-white">塾長 佐藤颯太</p>
+      <p className="text-xs text-white/70">公開日: {date}</p>
+    </div>
+  </div>
+);
+
+// 記事冒頭の目次
+export const TableOfContents = ({
+  items,
+}: {
+  items: { id: string; label: string }[];
+}) => (
+  <nav
+    aria-label="この記事の目次"
+    className="bg-slate-100 border border-slate-200 rounded-xl p-6 mb-12"
+  >
+    <p className="text-base font-bold text-[#002147] mb-4">この記事の目次</p>
+    <ol className="space-y-3">
+      {items.map((item, i) => (
+        <li key={item.id} className="flex gap-2 leading-relaxed">
+          <span className="text-[#C5A059] font-bold">{String(i + 1).padStart(2, "0")}</span>
+          <a
+            href={`#${item.id}`}
+            className="text-slate-700 hover:text-[#800000] hover:underline transition-colors text-sm md:text-base"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+);
+
+// 記事末尾の著者紹介ボックス
+export const AuthorBox = () => (
+  <section className="flex flex-col sm:flex-row gap-5 items-center sm:items-start bg-slate-50 border border-slate-200 rounded-xl p-6 md:p-8 mt-16">
+    <img
+      src="/jukucho.jpg"
+      alt="塾長 佐藤颯太"
+      className="w-24 h-24 rounded-full object-cover border-4 border-[#C5A059] shrink-0"
+    />
+    <div className="text-center sm:text-left">
+      <p className="text-xs text-[#800000] font-bold mb-1">この記事を書いた人</p>
+      <p className="text-lg font-bold text-[#002147] mb-3">塾長 佐藤颯太</p>
+      <p className="text-sm text-slate-600 leading-relaxed">
+        慶應SFC専門塾の塾長。<Highlight>2人に1人が合格</Highlight>という圧倒的な実績を誇る。
+        単なる受験テクニックではなく、生徒自身が社会課題の当事者となる「オーナーシップ教育」を信条とし、
+        AIとの壁打ちと1on1指導を融合させた独自メソッドで、一人ひとりの「本気の覚悟」を合格へと導いている。
+      </p>
+    </div>
+  </section>
 );
 
 // 記事末尾の共通CTA
