@@ -79,7 +79,7 @@ export const ArticleCTA = () => (
       まとめ：小手先のテクニックを捨て、自分の人生と向き合おう
     </h3>
     <p className="mb-8 text-center text-slate-700 leading-relaxed">
-      SFCのAO入試は、決して「実績の品評会」ではありません。<br />
+      SFCのAO入試は、決して「過去の経歴を競う場」ではありません。<br />
       今のあなたに自信を持てる実績がなくても、全く問題ありません。<br />
       大切なのは、これからSFCで何を成し遂げたいかという「本気の覚悟」です。
     </p>

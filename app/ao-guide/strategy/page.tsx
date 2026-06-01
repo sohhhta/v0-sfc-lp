@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import {
@@ -7,6 +8,19 @@ import {
   TableOfContents,
   AuthorBox,
 } from "@/components/article-ui";
+
+export const metadata: Metadata = {
+  title: "慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由",
+  openGraph: {
+    images: [
+      {
+        url: `/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由")}`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
 
 const tocItems = [
   { id: "section-1", label: "誤解だらけのSFC AO入試：「起業」も「全国大会」も必須ではない" },
