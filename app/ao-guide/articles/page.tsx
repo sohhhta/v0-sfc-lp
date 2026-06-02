@@ -62,18 +62,28 @@ export default function AoGuideArticlesPage() {
             </div>
           </Link>
 
-          {/* Coming Soon枠 */}
-          <div className="flex flex-col bg-slate-100/50 rounded-2xl border border-dashed border-slate-300 shadow-sm overflow-hidden items-center justify-center p-8 text-center min-h-[350px]">
-            <div className="w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center mb-4 text-slate-400">
-              <BookOpen size={24} />
+          {/* 第2号記事カード */}
+          <Link href="/ao-guide/theme" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div className="relative h-48 w-full bg-[#002147] overflow-hidden">
+              <img 
+                src={`/api/og?title=${encodeURIComponent("慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠")}`} 
+                alt="サムネイル" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
-            <h3 className="text-lg font-bold text-slate-400 mb-2">
-              【テーマ設定編】「問題発見・解決」の本当の意味
-            </h3>
-            <span className="inline-block bg-slate-200 text-slate-500 text-xs font-bold px-3 py-1 rounded-full mt-2">
-              Coming Soon
-            </span>
-          </div>
+            <div className="p-6 flex flex-col flex-grow">
+              <span className="text-xs font-bold text-[#C5A059] mb-3">テーマ設定編</span>
+              <h3 className="text-lg md:text-xl font-bold text-[#002147] mb-4 leading-tight group-hover:text-[#800000] transition-colors">
+                慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠
+              </h3>
+              <p className="text-sm text-slate-600 line-clamp-3 mb-6 flex-grow">
+                「ニュースで見るような大きな社会問題じゃないと合格できない？」そんな不安を解き、SFCの教授陣が本当に求めている「内発的な動機」を見つけるための具体的なステップと、陥りがちな思考の罠を解説します。
+              </p>
+              <div className="flex items-center text-[#800000] font-bold text-sm mt-auto">
+                記事を読む <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </Link>
 
         </div>
       </main>
