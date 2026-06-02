@@ -1,326 +1,84 @@
-'use client'
+import { Metadata } from "next";
+import Link from 'next/link';
+import { ArrowRight, BookOpen } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
-import React from 'react';
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { CheckCircle2, Lightbulb, ShieldCheck, ArrowRight, BrainCircuit, UserCheck, GraduationCap, ArrowUpRight, Target, RefreshCw, MessageSquare } from 'lucide-react';
+export const metadata: Metadata = {
+  title: "AO入試 攻略ガイド（記事一覧） | 慶應SFC専門塾 佐藤塾",
+  description: "「すごい実績」は不要。慶應SFCの教授陣が本当に求めている「未来へのオーナーシップ」を言語化し、合格を掴み取るための佐藤塾独自のメソッド・記事一覧です。",
+};
 
-// 佐藤塾の既存下層ページ（essay/page.tsx）と一字一句違わぬ共通見出し装飾コンポーネント
-function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
+export default function AoGuidePortalPage() {
   return (
-    <div className="text-center mb-10">
-      <div className="flex items-center justify-center gap-6 mb-6">
-        <div className="h-px w-16 bg-[#002147]" />
-        <div className="w-2 h-2 bg-[#002147] rotate-45" />
-        <div className="h-px w-16 bg-[#002147]" />
-      </div>
-      <h3 className="text-3xl md:text-4xl font-bold text-primary font-serif tracking-[0.08em]">
-        {children}
-      </h3>
-      {subtitle && (
-        <p className="text-muted-foreground mt-4 text-lg">{subtitle}</p>
-      )}
-      <div className="flex items-center justify-center gap-6 mt-6">
-        <div className="h-px w-16 bg-[#002147]" />
-        <div className="w-2 h-2 bg-[#002147] rotate-45" />
-        <div className="h-px w-16 bg-[#002147]" />
-      </div>
-    </div>
-  )
-}
-
-export default function AoGuidePage() {
-  // Google検索エンジン（Googlebot）に直接佐藤塾の強みをインデックスさせるための構造化データ
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "慶應SFC AO入試・完全攻略ガイド | 佐藤塾",
-    "description": "実績を誇るだけの書類は不要、大学入学を「ゴール」ではなく「手段」に変える、佐藤塾のオーナーシップ教育。",
-    "publisher": {
-      "@type": "EducationalOrganization",
-      "name": "佐藤塾",
-      "url": "https://lifeeling.jp"
-    },
-    "mainEntity": {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "慶應SFCのAO入試は、華々しい実績がないと合格できませんか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "表面的な実績のスケールは合否に関係ありません。SFCの教授陣が見ているのは、行動の背景にある独自の動機（意志）と、大学での研究テーマとの強固な繋がり（因果の解像度）です。佐藤塾では内なる「なぜ」を対話を通じて探索し、論理的に接続します。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "AO入試対策と一般入試の勉強は両立できますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "佐藤塾では「一般入試の学力を同時に身につけるロードマップ」を前提として指導を行います。「万が一AOが不合格でも一般で戦いきれる」という確かな学力と精神的余裕を持つことが、結果としてAOの書類作成においても守りに入らず、大胆で力強いロジックを展開することを可能にします。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "24時間SFC専用AI伴走指導とはどのようなものですか？AIだけで書類を作るのですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "AIによる壁打ちは合格への「第一歩」に過ぎません。AIを駆使してアイデアの断片を爆速で具体化・調査し、大量のアウトプットを作った上で、塾長との徹底的な1on1対話と反復（泥臭いブラッシュアップの往復）を行います。このプロセスそのものが、二次試験の面接でも自分の言葉で腑に落ちた確信を持って受け答えできる「最強の面接実戦力（オーナーシップ）」へと昇華されます。"
-          }
-        }
-      ]
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-background text-slate-900 font-sans leading-relaxed selection:bg-[#C5A059]/30">
-      {/* SEO構造化データの流し込み（ハイドレーションに影響を及ぼさないNext.js標準安全設計） */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      {/* Hero Section - 既存下層ページと100%同一の背景・テキスト中央揃え（text-center）仕様 */}
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans leading-relaxed selection:bg-[#C5A059]/30">
+      
+      {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-block text-xs font-bold tracking-[0.25em] text-[#C5A059] border border-[#C5A059]/50 px-5 py-2 rounded-full mb-8 uppercase">
-            SFC AO CONCEPT LP
+            AO ENTRANCE EXAM GUIDE
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-5 md:mb-6 font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
-            AO入試攻略メソッド
+            AO入試 攻略ガイド
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed px-4">
-            実績を誇るだけの書類は不要、大学入学を「ゴール」ではなく「手段」に変える、佐藤塾のオーナーシップ教育。
+            「すごい実績」は不要。慶應SFCの教授陣が本当に求めている「未来へのオーナーシップ」を言語化し、合格を掴み取るためのメソッドを公開します。
           </p>
         </div>
       </section>
 
-      {/* Main Content - 既存下層ページと共通のコンテナ幅・余白構造 */}
+      {/* 記事一覧 Section */}
       <main className="max-w-5xl mx-auto px-4 py-16 md:py-20">
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#C5A059] pb-3 flex items-center gap-3">
+            <BookOpen className="text-[#800000]" size={28} />
+            記事一覧
+          </h2>
+        </div>
 
-        {/* Section 1: 実績がないと合格できない、は勘違い */}
-        <section className="mb-20">
-          <SectionTitle>実績がないと合格できない、は勘違い</SectionTitle>
+        {/* 記事カードグリッド */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          <div className="grid md:grid-cols-12 gap-8 items-center mt-12">
-            <div className="md:col-span-7 space-y-6">
-              <p className="text-base md:text-lg text-[#333333] leading-loose">
-                「世界一周をしました」と「日本一周をしました」。<br />
-                一見、世界一周の方が社会的な評価が高く、AO入試でも有利に思えるかもしれません。しかし、慶應SFCの教授陣が見ているのは、その表面的なスケールではありません。
-              </p>
-              <div className="bg-white border-l-4 border-[#002147] px-6 md:px-10 py-6 rounded-lg shadow-lg border border-slate-100">
-                <p className="font-bold text-[#002147] mb-2 text-base md:text-lg">
-                  「どうして世界または日本一周をしようと思ったのか？」
-                </p>
-                <p className="text-[#333333] text-sm md:text-base leading-relaxed">
-                  その行動の背景にある独自の動機（意志）と、そこから得た問いが、あなたが大学で進めたい研究の方向性とどれほど強固に繋がっているか。この「因果の解像度」こそが合否を分ける基準です。
-                </p>
-              </div>
-              <p className="text-[#333333]">
-                佐藤塾では、過去の実績を並べるだけの書類作成は行いません。あなたの内側にある純粋な「なぜ」を対話を通じて一緒に探索し、SFCの学問領域へと論理的に接続します。
-              </p>
+          {/* 第1号記事カード */}
+          <Link href="/ao-guide/strategy" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div className="relative h-48 w-full bg-[#002147] overflow-hidden">
+              <img 
+                src={`/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由")}`} 
+                alt="サムネイル" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
-
-            <div className="md:col-span-5 bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-xl border border-slate-200 shadow-md">
-              <h3 className="text-lg font-serif font-bold text-[#002147] mb-4 flex items-center gap-2">
-                <Target className="text-[#800000]" size={20} />
-                SFCが見抜く2つの本質
+            <div className="p-6 flex flex-col flex-grow">
+              <span className="text-xs font-bold text-[#C5A059] mb-3">戦略・マインド編</span>
+              <h3 className="text-lg md:text-xl font-bold text-[#002147] mb-4 leading-tight group-hover:text-[#800000] transition-colors">
+                慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由
               </h3>
-              <div className="space-y-4">
-                <div className="bg-white p-4 rounded border border-slate-200">
-                  <span className="text-xs font-bold text-[#800000] block mb-1">✕ 誤ったアプローチ</span>
-                  <p className="text-sm font-medium text-[#333333]">「こんなにすごい実績があるから合格させてください」という実績アピール</p>
-                </div>
-                <div className="bg-white p-4 rounded border border-[#C5A059]/40 bg-[#C5A059]/5">
-                  <span className="text-xs font-bold text-[#002147] block mb-1">◯ 正しいアプローチ</span>
-                  <p className="text-sm font-bold text-[#002147]">「この問題意識を解決するために、SFCのこの環境が必要である」という必然性</p>
-                </div>
+              <p className="text-sm text-slate-600 line-clamp-3 mb-6 flex-grow">
+                「特別な実績がないと合格できない」は誤解です。一般入試との両立戦略と、圧倒的な原体験の深掘りこそがSFC合格の最短ルートであることを解説します。
+              </p>
+              <div className="flex items-center text-[#800000] font-bold text-sm mt-auto">
+                記事を読む <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
+          </Link>
+
+          {/* Coming Soon枠 */}
+          <div className="flex flex-col bg-slate-100/50 rounded-2xl border border-dashed border-slate-300 shadow-sm overflow-hidden items-center justify-center p-8 text-center min-h-[350px]">
+            <div className="w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center mb-4 text-slate-400">
+              <BookOpen size={24} />
+            </div>
+            <h3 className="text-lg font-bold text-slate-400 mb-2">
+              【テーマ設定編】「問題発見・解決」の本当の意味
+            </h3>
+            <span className="inline-block bg-slate-200 text-slate-500 text-xs font-bold px-3 py-1 rounded-full mt-2">
+              Coming Soon
+            </span>
           </div>
-        </section>
 
-        {/* Section 2: 合格率50.0%を支える「非・美化」戦略 */}
-        <section className="mb-20">
-          <SectionTitle>AO入試に対して持つべき正しい「非・美化」戦略</SectionTitle>
-          
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
-            <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-[#800000] rounded flex items-center justify-center mb-6 text-white shadow-sm">
-                <ShieldCheck size={24} />
-              </div>
-              <h4 className="text-xl font-serif font-bold text-[#002147] mb-4 tracking-wide">
-                1. 一般入試と並行するロードマップ
-              </h4>
-              <p className="text-[#333333] text-sm md:text-base leading-loose">
-                AO入試は非常に倍率も高い不確実な試験です。だからこそ、佐藤塾では「一般入試の学力を同時に身につけるロードマップ」を前提として指導を行います。
-              </p>
-              <p className="text-[#333333] text-sm md:text-base leading-loose mt-4">
-                「万が一AOが不合格でも一般で戦いきれる」という確かな学力と精神。これがあるからこそ、小論文で培ったロジカルライティングを駆使した効率的かつ生産的な書類作成をすることが可能になります。
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-[#002147] rounded flex items-center justify-center mb-6 text-white shadow-sm">
-                <UserCheck size={24} />
-              </div>
-              <h4 className="text-xl font-serif font-bold text-[#002147] mb-4 tracking-wide">
-                2. 本気で自分ごと化する
-              </h4>
-              <p className="text-[#333333] text-sm md:text-base leading-loose">
-                「こう書いた方が評価されるのではないか」といった他人軸を重視した書類は、SFCの教授陣に一瞬で見抜かれます。
-              </p>
-              <p className="text-[#333333] text-sm md:text-base leading-loose mt-4">
-                大切なのは、自分で考え、自分で調査し、自ら根拠を持って明文化するプロセスです。この「オーナーシップ（自律性）」が芽生えた受験生は、塾長への質問の質が劇的に変わり、自分の研究テーマに関して誰よりも深い解像度を持つようになります。
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 3: 24時間SFC専用AI伴走指導 */}
-        <section className="mb-20">
-          <SectionTitle>24時間SFC専用AI伴走指導</SectionTitle>
-          
-          <div className="grid md:grid-cols-2 gap-12 items-center mt-12">
-            <div className="space-y-6">
-              <div className="flex items-center gap-2 text-[#C5A059]">
-                <BrainCircuit size={24} />
-                <span className="text-xs font-bold tracking-widest uppercase">SOLUTION METHOD 01</span>
-              </div>
-              <h4 className="text-xl md:text-2xl font-serif font-bold text-[#002147] tracking-[0.08em] leading-tight">
-                ボトムアップで積み上げる、思考の高速化。
-              </h4>
-              <p className="text-[#333333] leading-relaxed">
-                最初から完璧な構成案を考えて提出する必要は一切ありません。あなたの頭の中にある断片的な興味や関心を、まずはそのまま佐藤塾のAIシステムにぶつけてください。
-              </p>
-              <p className="text-[#333333] leading-relaxed">
-                あらゆる可能性、あらゆる方向性、あらゆる先行研究や手段の調査をAIと共に徹底的に行います。この高速な試行錯誤（ボトムアップな壁打ち）の積み重ねが、あなたの思考スピードを極限まで引き上げ、大量の「具体的なアウトプット」を生み出します。
-              </p>
-              
-              <div className="space-y-3 pt-2">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="text-[#800000] shrink-0 mt-1" size={18} />
-                  <span className="text-sm text-[#333333]"><strong>完璧主義による停滞をゼロに:</strong> アイデアの断片を即座に形にするための強力な「武器」としてAIを使い倒します。</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="text-[#800000] shrink-0 mt-1" size={18} />
-                  <span className="text-sm text-[#333333]"><strong>圧倒的な調査量と解像度:</strong> 先行研究の網羅的なリサーチをAIが伴走し、書類の「客観的な根拠」の土台を爆速で構築します。</span>
-                </div>
-              </div>
-            </div>
-
-            {/* AI Interaction Simulation Component */}
-            <div className="bg-white p-6 rounded-xl shadow-xl border border-slate-200">
-              <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-red-400" />
-                  <div className="w-2 h-2 rounded-full bg-yellow-400" />
-                  <div className="w-2 h-2 rounded-full bg-green-400" />
-                </div>
-                <span className="text-xs font-mono text-slate-400">SatoJuku AI Dashboard</span>
-              </div>
-              <div className="space-y-4 text-sm">
-                <div className="flex flex-col items-end">
-                  <div className="bg-slate-100 text-slate-800 p-3 rounded-lg max-w-[90%] rounded-tr-none">
-                    <p className="text-xs text-slate-500 font-bold mb-1">受験生</p>
-                    <p className="leading-relaxed">メディアによる地方の過疎化のイメージを覆したいという断片的なアイデアしかありません...</p>
-                  </div>
-                </div>
-                <div className="flex flex-col items-start">
-                  <div className="bg-[#002147] text-white p-3 rounded-lg max-w-[90%] rounded-tl-none">
-                    <p className="text-xs text-[#C5A059] font-bold mb-1">佐藤塾SFC特化AI</p>
-                    <p className="leading-relaxed text-slate-200">素晴らしい着眼点です。単なる批判に留めず、SFCの「環境情報学」の視点から、ローカルメディアを用いた自律的なコミュニティ再定義の先行研究と接続してみましょう。以下の3つのアプローチが考えられます...</p>
-                  </div>
-                </div>
-                <div className="bg-[#C5A059]/10 text-[#002147] p-3 rounded border border-[#C5A059]/30 text-xs font-medium">
-                  💡 <strong>重要:</strong> ここで生まれた「大量のアウトプット」こそが、次なる「塾長との魂の対話」の最高の素材となります。
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 4: AI高速アウトプット×塾長1on1対話による本物の面接対策 */}
-        <section className="mb-20">
-          <SectionTitle>AIによる高速アウトプット × 塾長1on1対話が実現する「本物の面接対策」</SectionTitle>
-          
-          <div className="grid md:grid-cols-12 gap-8 items-center mt-12">
-            <div className="md:col-span-5 bg-gradient-to-br from-[#002147]/5 to-[#003d6b]/5 p-8 rounded-xl border border-[#002147]/10 shadow-md">
-              <h4 className="text-lg font-serif font-bold text-[#002147] mb-6 flex items-center gap-2">
-                <RefreshCw size={20} className="text-[#800000]" />
-                合格へ導く圧倒的サイクル
-              </h4>
-              <div className="space-y-5">
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#002147] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</div>
-                  <div>
-                    <span className="font-bold text-[#002147] block text-sm">AIでアイデアを爆速具体化</span>
-                    <p className="text-xs text-[#333333] mt-1">完璧を求めず、ボトムアップに積み上げる感覚で、大量の仮説やリサーチ内容を書類化。</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#C5A059] text-[#002147] flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</div>
-                  <div>
-                    <span className="font-bold text-[#002147] block text-sm">塾長1on1対話で「魂」を宿す</span>
-                    <p className="text-xs text-[#333333] mt-1">形になった書類をもとに、塾長がさらに深く鋭く「なぜ？」を問いかける。あなたの内なる意志とロジックを1on1で接続。</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#800000] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</div>
-                  <div>
-                    <span className="font-bold text-[#002147] block text-sm">言語化の反復＝最強の面接力</span>
-                    <p className="text-xs text-[#333333] mt-1">この「アウトプットベースの修正サイクル」を極限まで繰り返すことで、テーマへの解像度が他を圧倒する次元に到達。</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="md:col-span-7 space-y-6">
-              <div className="flex items-center gap-2 text-[#C5A059] mb-2">
-                <MessageSquare size={24} />
-                <span className="text-xs font-bold tracking-widest uppercase">SOLUTION METHOD 02</span>
-              </div>
-              <p className="text-base md:text-lg text-[#333333] leading-loose">
-                AIによる壁打ちは、合格のための「第一歩」に過ぎません。多くの受験生が「ツールを使ってそれらしい書類を整えて終わり」にする中、佐藤塾が驚異的な合格率を叩き出せる真の理由は、**「アウトプットをもとにした、塾長との徹底的な対話と反復」**にあります。
-              </p>
-              <p className="text-base md:text-lg text-[#333333] leading-loose">
-                AIを駆使して限界まで高速に具体化された書類を机の上に置き、そこから本当の「佐藤塾の指導」が始まります。
-                「本当にこのアプローチで課題を解決できるのか？」「なぜ他の大学ではなく、SFCでなければならないのか？」
-                塾長が1on1で投げかける本質的な問いに対し、自らの頭で調査し、自らの言葉で明文化する。この泥臭いブラッシュアップの往復の中で、書類は「借り物の綺麗な言葉」から、4年間走り続けられる**「あなた自身の腑に落ちた確信」**へと昇華します。
-              </p>
-              <div className="bg-white border-l-4 border-[#C5A059] px-6 py-4 rounded-r-lg shadow-md border border-slate-100">
-                <p className="text-sm font-bold text-[#002147] leading-relaxed">
-                  💡 <strong>面接対策の真実：</strong><br />
-                  SFCの二次試験（面接）対策とは、試験直前に想定質問の回答を暗記することではありません。圧倒的なアウトプットを自ら作り、塾長との激しい対話のなかで修正を繰り返したという「自律的なプロセス（オーナーシップ）」そのものが、教授陣のいかなる鋭い突っ込みをも笑顔で跳ね返す、最強の面接実戦力となるのです。
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 5: Recent Trends */}
-        <section className="mb-10">
-          <div className="bg-[#002147] text-white p-8 md:p-12 rounded-xl shadow-xl flex flex-col md:flex-row gap-6 items-center md:items-start">
-            <div className="p-4 bg-[#C5A059] rounded-lg text-[#002147] shrink-0 shadow-md">
-              <Lightbulb size={36} />
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-xl md:text-2xl font-serif font-bold tracking-[0.08em]">
-                直近のSFC AO入試が求める人物像の真実
-              </h4>
-              <p className="text-slate-300 text-base md:text-lg leading-relaxed">
-                現在のSFC入試において、求められるオーナーシップの基準はさらに高まっています。
-              </p>
-              <p className="text-slate-100 text-sm md:text-base leading-loose">
-                どんなに素晴らしい実績の持ち主であっても、「大学に入学すること」がゴールになっている受験生は冷酷に落とされます。大学をあくまで「手段」として位置づけ、「本当にそれをやりたいのか？」「大学の4年間、外部環境が変わってもやり続けることができるのか？」という、強烈な意志と客観的な根拠がこれまで以上に対比されています。
-              </p>
-            </div>
-          </div>
-        </section>
-
+        </div>
       </main>
 
-      {/* CTA Section - essay/page.tsxの下部コンバージョンエリアと100%同一のコンポーネント・クラス設計 */}
+      {/* CTA Section */}
       <section className="py-16 md:py-20 px-4 bg-gradient-to-r from-[#800000] to-[#600000]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4">
