@@ -1,104 +1,86 @@
-import React from "react";
+import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import { Highlight, ArticleH2, TableOfContents, AuthorBox, ArticleCTA } from "@/components/article-ui";
 
-// 強調マーカー
-export const Highlight = ({ children }: { children: React.ReactNode }) => (
-  <span className="font-bold text-[#800000] border-b-2 border-[#C5A059]/40 bg-[#C5A059]/10 px-1 rounded-sm">
-    {children}
-  </span>
-);
+export const metadata: Metadata = {
+  title: "慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由",
+  openGraph: {
+    images: [
+      {
+        url: `/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由")}`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
 
-// 記事用H2見出し（左に紺の縦線、下に金の細い横線）
-export const ArticleH2 = ({
-  id,
-  children,
-}: {
-  id?: string;
-  children: React.ReactNode;
-}) => (
-  <h2
-    id={id}
-    className="scroll-mt-24 text-xl md:text-2xl font-bold text-[#002147] border-l-4 border-[#002147] border-b border-[#C5A059] pl-4 pb-3 mb-8 mt-16 leading-snug"
-  >
-    {children}
-  </h2>
-);
+export default function AoStrategyPage() {
+  const tocItems = [
+    { id: "section1", label: "誤解だらけのSFC AO入試：「起業」も「全国大会」も必須ではない" },
+    { id: "section2", label: "なぜ「AO単願」は危険なのか？佐藤塾が“二刀流”を強く推奨する理由" },
+    { id: "section3", label: "あなたの中にある「まだ言語化されていない問い」を見つける方法" },
+  ];
 
-// 記事冒頭の目次
-export const TableOfContents = ({
-  items,
-}: {
-  items: { id: string; label: string }[];
-}) => (
-  <nav
-    aria-label="この記事の目次"
-    className="bg-slate-100 border border-slate-200 rounded-xl p-6 mb-12"
-  >
-    <p className="text-base font-bold text-[#002147] mb-4">この記事の目次</p>
-    <ol className="space-y-3">
-      {items.map((item, i) => (
-        <li key={item.id} className="flex gap-2 leading-relaxed">
-          <span className="text-[#C5A059] font-bold">{String(i + 1).padStart(2, "0")}</span>
-          <a
-            href={`#${item.id}`}
-            className="text-slate-700 hover:text-[#800000] hover:underline transition-colors text-sm md:text-base"
-          >
-            {item.label}
-          </a>
-        </li>
-      ))}
-    </ol>
-  </nav>
-);
+  return (
+    <main className="min-h-screen bg-slate-50 py-12">
+      <article className="container mx-auto px-4 max-w-3xl bg-white shadow-sm rounded-2xl overflow-hidden">
+        
+        <header className="bg-[#002147] text-white p-8 md:p-12">
+          <div className="flex items-center gap-2 text-[#C5A059] text-sm font-bold mb-4">
+            <Link href="/ao-guide" className="hover:underline">AO入試ガイド</Link>
+            <ChevronRight className="w-4 h-4" />
+            <span>戦略・マインド編</span>
+          </div>
+          <h1 className="text-2xl md:text-4xl font-bold leading-tight md:leading-normal mb-0">
+            慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由
+          </h1>
+        </header>
 
-// 記事末尾の著者紹介ボックス
-export const AuthorBox = () => (
-  <section className="flex flex-col sm:flex-row gap-5 items-center sm:items-start bg-slate-50 border border-slate-200 rounded-xl p-6 md:p-8 mt-16">
-    <img
-      src="/og-image.png"
-      alt="塾長 佐藤颯太"
-      className="w-24 h-24 rounded-full object-cover border-4 border-[#C5A059] shrink-0"
-    />
-    <div className="text-center sm:text-left">
-      <p className="text-xs text-[#800000] font-bold mb-1">この記事を書いた人</p>
-      <p className="text-lg font-bold text-[#002147] mb-3">塾長 佐藤颯太</p>
-      <p className="text-sm text-slate-600 leading-relaxed">
-        慶應SFC専門塾の塾長。<Highlight>2人に1人が合格</Highlight>という圧倒的な実績を誇る。
-        単なる受験テクニックではなく、生徒自身が社会課題の当事者となる「オーナーシップ教育」を信条とし、
-        AIとの壁打ちと1on1指導を融合させた独自メソッドで、一人ひとりの「本気の覚悟」を合格へと導いている。
-      </p>
-    </div>
-  </section>
-);
+        <div className="p-8 md:p-12 text-slate-800">
+          <TableOfContents items={tocItems} />
 
-// 記事末尾の共通CTA
-export const ArticleCTA = () => (
-  <section className="bg-slate-100 p-8 rounded-xl border border-slate-200 mt-16">
-    <h3 className="text-xl font-bold text-[#002147] mb-6 text-center">
-      まとめ：小手先のテクニックを捨て、自分の人生と向き合おう
-    </h3>
-    <p className="mb-8 text-center text-slate-700 leading-relaxed">
-      SFCのAO入試は、決して「過去の経歴を競う場」ではありません。<br />
-      今のあなたに自信を持てる実績がなくても、全く問題ありません。<br />
-      大切なのは、これからSFCで何を成し遂げたいかという「本気の覚悟」です。
-    </p>
+          <ArticleH2 id="section1">
+            誤解だらけのSFC AO入試：「起業」も「全国大会」も必須ではない
+          </ArticleH2>
+          
+          <p className="mb-6 leading-relaxed">「SFCのAO入試に合格するには、学生起業や全国大会での優勝経験が必要だ」</p>
+          <p className="mb-6 leading-relaxed">毎年、面談に訪れる受験生や保護者の方から、必ずと言っていいほど聞かれる言葉です。</p>
+          <p className="mb-6 leading-relaxed">ネット上には華々しい実績を持つ合格者の声が溢れており、そう思い込んでしまうのも無理はありません。</p>
+          <p className="mb-6 leading-relaxed">しかし、結論から申し上げます。</p>
+          <p className="mb-6 leading-relaxed text-lg"><Highlight>「特別な実績がなければ合格できない」というのは完全な誤解です。</Highlight></p>
+          <p className="mb-6 leading-relaxed">確かに、目を引く実績を持つ受験生は目立ちます。</p>
+          <p className="mb-6 leading-relaxed">ですが、SFCの教授陣が出願書類の中で本質的に求めているのは、過去の活動実績や大会記録の羅列ではありません。</p>
+          <p className="mb-6 leading-relaxed text-lg">彼らが見極めようとしているのは、<Highlight>未解決の社会課題に対する「未来へのオーナーシップ（当事者意識）」</Highlight>なのです。</p>
 
-    <div className="bg-white p-6 rounded-lg shadow-sm text-center border-t-4 border-[#800000]">
-      <h4 className="text-lg font-bold text-[#800000] mb-4">
-        あなたの「SFCへの想い」を、私にぶつけてみませんか？
-      </h4>
-      <p className="mb-6 text-slate-600 text-sm md:text-base">
-        今年度の伴走指導は残り枠がわずかとなっています。<br />
-        実績がないと悩んでいる方、テーマが決まらない方、まずは無料相談で現状の課題を整理しましょう。
-      </p>
-      <Link
-        href="/#contact"
-        className="inline-flex items-center justify-center gap-2 bg-[#800000] text-white px-8 py-4 rounded-full font-bold hover:bg-[#600000] transition-colors duration-300 shadow-md hover:shadow-lg w-full md:w-auto"
-      >
-        無料で塾長に個別相談する
-        <ArrowRight className="w-5 h-5" />
-      </Link>
-    </div>
-  </section>
-);
+          <ArticleH2 id="section2">
+            なぜ「AO単願」は危険なのか？佐藤塾が“二刀流”を強く推奨する理由
+          </ArticleH2>
+          
+          <p className="mb-6 leading-relaxed">実績づくりに焦るあまり、AO入試の対策だけに没頭してしまう受験生が多くいます。</p>
+          <p className="mb-6 leading-relaxed">佐藤塾では、AO入試のみに絞る「AO単願」という戦略を推奨していません。</p>
+          <p className="mb-6 leading-relaxed text-lg">なぜなら、<Highlight>一般入試に向けた「小論文対策」こそが、AO入試の書類と面接に圧倒的な説得力をもたらすからです。</Highlight></p>
+          <p className="mb-6 leading-relaxed">SFCの小論文では、与えられた資料から問題の構造を読み解き、論理的に解決策を提示する力が求められます。</p>
+          <p className="mb-6 leading-relaxed">この訓練を通じて鍛え上げられた「論理的思考力（ロジック）」は、そのまま志望理由書の骨格になります。</p>
+          <p className="mb-6 leading-relaxed">「AOと一般、両方なんて手が回らない」と考えるかもしれません。</p>
+          <p className="mb-6 leading-relaxed">しかし実際は逆であり、両者を並行して進める「二刀流」こそが、思考の質を高め合う最短距離のロードマップなのです。</p>
+
+          <ArticleH2 id="section3">
+            あなたの中にある「まだ言語化されていない問い」を見つける方法
+          </ArticleH2>
+          
+          <p className="mb-6 leading-relaxed">では、実績がない状態から、どのようにしてSFCの教授を納得させる志望理由書を作ればよいのでしょうか。</p>
+          <p className="mb-6 leading-relaxed">答えは「あなた自身の原体験を極限まで深掘りすること」にあります。</p>
+          <p className="mb-6 leading-relaxed">しかし、自分一人の頭の中で考えていても、視点はすぐにループし、行き詰まってしまいます。</p>
+          <p className="mb-6 leading-relaxed text-lg">だからこそ佐藤塾では、<Highlight>24時間稼働のAIとの壁打ちで圧倒的な量の思考をこなし、塾長との1on1でその質を極限まで高める</Highlight>という環境を用意しています。</p>
+          <p className="mb-6 leading-relaxed">AIがあなたの思考の「抜け漏れ」を的確に洗い出し、塾長である私がSFCの合格基準に照らし合わせてロジックを磨き上げます。</p>
+          <p className="mb-6 leading-relaxed">このプロセスを経ることで、借り物ではない、あなただけの確固たる「問い（テーマ）」が必ず見つかります。</p>
+
+          <AuthorBox />
+          <ArticleCTA />
+        </div>
+      </article>
+    </main>
+  );
+}
