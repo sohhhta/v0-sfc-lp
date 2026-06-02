@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -13,7 +13,14 @@ export function Header() {
     { name: 'コース・料金', href: '/course' },
     { name: '合格実績', href: '/results' },
     { name: '小論文ガイド', href: '/guide/essay' }, // /guide/essay に修正
-    { name: 'AO入試ガイド', href: '/ao-guide' },
+    {
+      name: 'AO入試ガイド',
+      href: '/ao-guide',
+      children: [
+        { name: 'はじめに：SFC AO入試の真実', href: '/ao-guide' },
+        { name: 'テーマ別 対策記事一覧', href: '/ao-guide/articles' },
+      ],
+    },
   ]
 
   return (
@@ -26,15 +33,41 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              href={link.href} 
-              className="text-sm text-[#333333] hover:text-primary transition-colors font-medium"
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.children ? (
+              <div key={link.name} className="relative group">
+                <Link
+                  href={link.href}
+                  className="flex items-center gap-1 text-sm text-[#333333] hover:text-primary transition-colors font-medium"
+                >
+                  {link.name}
+                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                </Link>
+                {/* Dropdown */}
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-56 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                  <div className="bg-white rounded-xl border border-border shadow-xl overflow-hidden py-2">
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.name}
+                        href={child.href}
+                        className="block px-5 py-3 text-sm text-[#333333] hover:bg-[#F0F0F0] hover:text-primary transition-colors font-medium"
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm text-[#333333] hover:text-primary transition-colors font-medium"
+              >
+                {link.name}
+              </Link>
+            )
+          )}
         </div>
 
         {/* Right side */}
@@ -58,16 +91,34 @@ export function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-border px-4 py-4 space-y-3 shadow-xl">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.children ? (
+              <div key={link.name} className="space-y-1">
+                <span className="block px-4 py-2 text-sm text-primary font-bold">
+                  {link.name}
+                </span>
+                {link.children.map((child) => (
+                  <Link
+                    key={child.name}
+                    href={child.href}
+                    className="block pl-8 pr-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors font-medium"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {child.name}
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="block px-4 py-2 text-sm text-[#333333] hover:bg-[#F0F0F0] rounded-lg transition-colors font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            )
+          )}
           <Link href="/#contact-form" onClick={() => setMobileMenuOpen(false)} className="block pt-2">
             <Button variant="outline" className="w-full border-primary text-primary font-medium">
               無料相談

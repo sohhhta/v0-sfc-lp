@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { CheckCircle2, Lightbulb, ShieldCheck, ArrowRight, BrainCircuit, UserCheck, GraduationCap, ArrowUpRight, Target, RefreshCw, MessageSquare } from 'lucide-react';
 
-// 佐藤塾の既存下層ページ（essay/page.tsx）と一字一句違わぬ共通見出し装飾コンポーネント
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
     <div className="text-center mb-10">
@@ -30,7 +29,6 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function AoGuidePage() {
-  // Google検索エンジン（Googlebot）に直接佐藤塾の強みをインデックスさせるための構造化データ
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -74,13 +72,10 @@ export default function AoGuidePage() {
 
   return (
     <div className="min-h-screen bg-background text-slate-900 font-sans leading-relaxed selection:bg-[#C5A059]/30">
-      {/* SEO構造化データの流し込み（ハイドレーションに影響を及ぼさないNext.js標準安全設計） */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
-      {/* Hero Section - 既存下層ページと100%同一の背景・テキスト中央揃え（text-center）仕様 */}
       <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-block text-xs font-bold tracking-[0.25em] text-[#C5A059] border border-[#C5A059]/50 px-5 py-2 rounded-full mb-8 uppercase">
@@ -95,13 +90,9 @@ export default function AoGuidePage() {
         </div>
       </section>
 
-      {/* Main Content - 既存下層ページと共通のコンテナ幅・余白構造 */}
       <main className="max-w-5xl mx-auto px-4 py-16 md:py-20">
-
-        {/* Section 1: 実績がないと合格できない、は勘違い */}
         <section className="mb-20">
           <SectionTitle>実績がないと合格できない、は勘違い</SectionTitle>
-          
           <div className="grid md:grid-cols-12 gap-8 items-center mt-12">
             <div className="md:col-span-7 space-y-6">
               <p className="text-base md:text-lg text-[#333333] leading-loose">
@@ -120,7 +111,6 @@ export default function AoGuidePage() {
                 佐藤塾では、過去の実績を並べるだけの書類作成は行いません。あなたの内側にある純粋な「なぜ」を対話を通じて一緒に探索し、SFCの学問領域へと論理的に接続します。
               </p>
             </div>
-
             <div className="md:col-span-5 bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-xl border border-slate-200 shadow-md">
               <h3 className="text-lg font-serif font-bold text-[#002147] mb-4 flex items-center gap-2">
                 <Target className="text-[#800000]" size={20} />
@@ -140,10 +130,8 @@ export default function AoGuidePage() {
           </div>
         </section>
 
-        {/* Section 2: 合格率50.0%を支える「非・美化」戦略 */}
         <section className="mb-20">
           <SectionTitle>AO入試に対して持つべき正しい「非・美化」戦略</SectionTitle>
-          
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 bg-[#800000] rounded flex items-center justify-center mb-6 text-white shadow-sm">
@@ -159,7 +147,6 @@ export default function AoGuidePage() {
                 「万が一AOが不合格でも一般で戦いきれる」という確かな学力と精神。これがあるからこそ、小論文で培ったロジカルライティングを駆使した効率的かつ生産的な書類作成をすることが可能になります。
               </p>
             </div>
-
             <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 bg-[#002147] rounded flex items-center justify-center mb-6 text-white shadow-sm">
                 <UserCheck size={24} />
@@ -177,10 +164,8 @@ export default function AoGuidePage() {
           </div>
         </section>
 
-        {/* Section 3: 24時間SFC専用AI伴走指導 */}
         <section className="mb-20">
           <SectionTitle>24時間SFC専用AI伴走指導</SectionTitle>
-          
           <div className="grid md:grid-cols-2 gap-12 items-center mt-12">
             <div className="space-y-6">
               <div className="flex items-center gap-2 text-[#C5A059]">
@@ -196,7 +181,6 @@ export default function AoGuidePage() {
               <p className="text-[#333333] leading-relaxed">
                 あらゆる可能性、あらゆる方向性、あらゆる先行研究や手段の調査をAIと共に徹底的に行います。この高速な試行錯誤（ボトムアップな壁打ち）の積み重ねが、あなたの思考スピードを極限まで引き上げ、大量の「具体的なアウトプット」を生み出します。
               </p>
-              
               <div className="space-y-3 pt-2">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="text-[#800000] shrink-0 mt-1" size={18} />
@@ -208,8 +192,6 @@ export default function AoGuidePage() {
                 </div>
               </div>
             </div>
-
-            {/* AI Interaction Simulation Component */}
             <div className="bg-white p-6 rounded-xl shadow-xl border border-slate-200">
               <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
                 <div className="flex items-center gap-2">
@@ -240,10 +222,8 @@ export default function AoGuidePage() {
           </div>
         </section>
 
-        {/* Section 4: AI高速アウトプット×塾長1on1対話による本物の面接対策 */}
         <section className="mb-20">
           <SectionTitle>AIによる高速アウトプット × 塾長1on1対話が実現する「本物の面接対策」</SectionTitle>
-          
           <div className="grid md:grid-cols-12 gap-8 items-center mt-12">
             <div className="md:col-span-5 bg-gradient-to-br from-[#002147]/5 to-[#003d6b]/5 p-8 rounded-xl border border-[#002147]/10 shadow-md">
               <h4 className="text-lg font-serif font-bold text-[#002147] mb-6 flex items-center gap-2">
@@ -274,7 +254,6 @@ export default function AoGuidePage() {
                 </div>
               </div>
             </div>
-
             <div className="md:col-span-7 space-y-6">
               <div className="flex items-center gap-2 text-[#C5A059] mb-2">
                 <MessageSquare size={24} />
@@ -298,7 +277,6 @@ export default function AoGuidePage() {
           </div>
         </section>
 
-        {/* Section 5: Recent Trends */}
         <section className="mb-10">
           <div className="bg-[#002147] text-white p-8 md:p-12 rounded-xl shadow-xl flex flex-col md:flex-row gap-6 items-center md:items-start">
             <div className="p-4 bg-[#C5A059] rounded-lg text-[#002147] shrink-0 shadow-md">
@@ -317,10 +295,8 @@ export default function AoGuidePage() {
             </div>
           </div>
         </section>
-
       </main>
 
-      {/* CTA Section - essay/page.tsxの下部コンバージョンエリアと100%同一のコンポーネント・クラス設計 */}
       <section className="py-16 md:py-20 px-4 bg-gradient-to-r from-[#800000] to-[#600000]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4">
