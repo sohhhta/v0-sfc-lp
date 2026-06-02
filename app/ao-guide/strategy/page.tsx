@@ -11,6 +11,7 @@ import {
 
 export const metadata: Metadata = {
   title: "慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由",
+  description: "「特別な実績がないとSFCのAO入試には受からない」は誤解です。一般入試とAO入試を並行する「二刀流」戦略と、原体験の圧倒的な深掘りこそが合格への最短距離。SFC専門塾がその理由を解説します。",
   openGraph: {
     images: [
       {
