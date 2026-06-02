@@ -1,3 +1,6 @@
+現在の `app/ao-guide/strategy/page.tsx` のコードには、削除すべき画像タグが残っており、文章表現の修正も反映されていません。
+部分的な修正ではなく、以下のコードで `app/ao-guide/strategy/page.tsx` を【完全に上書き（フルリプレイス）】してください。省略や要約は絶対に禁止です。
+
 import { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
@@ -45,12 +48,6 @@ export default function AoStrategyPage() {
         </header>
 
         <div className="p-8 md:p-12 text-slate-800">
-          <img
-            src={`/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由")}`}
-            alt="アイキャッチ画像"
-            className="w-full h-auto object-cover md:h-[630px] rounded-xl mb-10 border border-slate-200 shadow-sm"
-          />
-
           <TableOfContents items={tocItems} />
 
           <ArticleH2 id="section-1">
@@ -72,7 +69,7 @@ export default function AoStrategyPage() {
 
           <p className="mb-6 leading-relaxed">実績づくりに焦るあまり、AO入試の対策だけに没頭してしまう受験生が多くいます。</p>
           <p className="mb-6 leading-relaxed">佐藤塾では、AO入試のみに絞る「AO単願」という戦略を推奨していません。</p>
-          <p className="mb-10 leading-relaxed text-lg">なぜなら、<Highlight>一般入試に向けた「小論文対策」こそが、AO入試の書類と面接に圧倒的な説得力をもたらすからです。</Highlight></p>
+          <p className="mb-10 leading-relaxed text-lg"><Highlight>一般入試に向けた「小論文対策」こそが、AO入試の書類と面接に圧倒的な説得力をもたらすからです。</Highlight></p>
           <p className="mb-6 leading-relaxed">SFCの小論文では、与えられた資料から問題の構造を読み解き、論理的に解決策を提示する力が求められます。</p>
           <p className="mb-6 leading-relaxed">この訓練を通じて鍛え上げられた「論理的思考力（ロジック）」は、そのまま志望理由書の骨格になります。</p>
           <p className="mb-6 leading-relaxed">「AOと一般、両方なんて手が回らない」と考えるかもしれません。</p>
@@ -82,12 +79,12 @@ export default function AoStrategyPage() {
             あなたの中にある「まだ言語化されていない問い」を見つける方法
           </ArticleH2>
 
-          <p className="mb-6 leading-relaxed">では、実績がない状態から、どのようにしてSFCの教授を唸らせる志望理由書を作ればよいのでしょうか。</p>
+          <p className="mb-6 leading-relaxed">では、実績がない状態から、どのようにしてSFCの教授を納得させる志望理由書を作ればよいのでしょうか。</p>
           <p className="mb-6 leading-relaxed">答えは「あなた自身の原体験を極限まで深掘りすること」にあります。</p>
           <p className="mb-6 leading-relaxed">しかし、自分一人の頭の中で考えていても、視点はすぐにループし、行き詰まってしまいます。</p>
           <p className="mb-10 leading-relaxed text-lg">だからこそ佐藤塾では、<Highlight>24時間稼働のAIとの壁打ちで圧倒的な量の思考をこなし、塾長との1on1でその質を極限まで高める</Highlight>という環境を用意しています。</p>
-          <p className="mb-6 leading-relaxed">AIがあなたの思考の「抜け漏れ」を容赦なく指摘し、塾長である私がSFCの合格基準に照らし合わせてロジックを磨き上げます。</p>
-          <p className="mb-6 leading-relaxed">このプロセスを経ることで、借り物ではない、あなただけの強烈な「問い（テーマ）」が必ず見つかります。</p>
+          <p className="mb-6 leading-relaxed">AIがあなたの思考の「抜け漏れ」を的確に洗い出し、塾長である私がSFCの合格基準に照らし合わせてロジックを磨き上げます。</p>
+          <p className="mb-6 leading-relaxed">このプロセスを経ることで、借り物ではない、あなただけの確固たる「問い（テーマ）」が必ず見つかります。</p>
 
           <AuthorBox />
 
