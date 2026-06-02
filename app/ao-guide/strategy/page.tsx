@@ -1,6 +1,3 @@
-現在の `app/ao-guide/strategy/page.tsx` のコードには、削除すべき画像タグが残っており、文章表現の修正も反映されていません。
-部分的な修正ではなく、以下のコードで `app/ao-guide/strategy/page.tsx` を【完全に上書き（フルリプレイス）】してください。省略や要約は絶対に禁止です。
-
 import { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
