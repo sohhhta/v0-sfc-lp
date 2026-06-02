@@ -17,8 +17,8 @@ export function Header() {
       name: 'AO入試ガイド',
       href: '/ao-guide',
       children: [
-        { name: '理念と攻略メソッド', href: '/ao-guide' },
-        { name: '対策記事一覧', href: '/ao-guide/articles' },
+        { name: 'はじめに：SFC AO入試の真実', href: '/ao-guide' },
+        { name: 'テーマ別 対策記事一覧', href: '/ao-guide/articles' },
       ],
     },
   ]
