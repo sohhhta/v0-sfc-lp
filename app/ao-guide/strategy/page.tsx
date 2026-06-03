@@ -93,7 +93,9 @@ export default function AoStrategyPage() {
           />
 
           <AuthorBox />
-
+          <ArticleNavigation
+            next={{ title: "慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠", href: "/ao-guide/theme" }}
+          />
           <ArticleCTA />
         </div>
       </article>
