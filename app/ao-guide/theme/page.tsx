@@ -107,7 +107,9 @@ export default function AoThemePage() {
           />
 
           <AuthorBox />
-
+          <ArticleNavigation
+            prev={{ title: "慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由", href: "/ao-guide/strategy" }}
+          />
           <ArticleCTA />
         </div>
       </article>
