@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // 本文中のハイライト（重要箇所の強調）
@@ -58,9 +59,11 @@ export const TableOfContents = ({
 // 記事末尾の著者紹介ボックス
 export const AuthorBox = () => (
   <section className="flex flex-col sm:flex-row gap-5 items-center sm:items-start bg-slate-50 border border-slate-200 rounded-xl p-6 md:p-8 mt-16">
-    <img
+    <Image
       src="/og-image.png"
       alt="塾長 佐藤颯太"
+      width={96}
+      height={96}
       className="w-24 h-24 rounded-full object-cover border-4 border-[#C5A059] shrink-0"
     />
     <div className="text-center sm:text-left">
