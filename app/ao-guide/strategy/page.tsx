@@ -7,6 +7,7 @@ import {
   ArticleCTA,
   TableOfContents,
   AuthorBox,
+  ArticleNavigation,
 } from "@/components/article-ui";
 
 export const metadata: Metadata = {
@@ -83,6 +84,13 @@ export default function AoStrategyPage() {
           <p className="mb-10 leading-relaxed text-lg">だからこそ佐藤塾では、<Highlight>24時間稼働のAIとの壁打ちで圧倒的な量の思考をこなし、塾長との1on1でその質を極限まで高める</Highlight>という環境を用意しています。</p>
           <p className="mb-6 leading-relaxed">AIがあなたの思考の「抜け漏れ」を的確に洗い出し、塾長である私がSFCの合格基準に照らし合わせてロジックを磨き上げます。</p>
           <p className="mb-6 leading-relaxed">このプロセスを経ることで、借り物ではない、あなただけの確固たる「問い（テーマ）」が必ず見つかります。</p>
+
+          <ArticleNavigation
+            next={{
+              title: "慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠",
+              href: "/ao-guide/theme",
+            }}
+          />
 
           <AuthorBox />
 

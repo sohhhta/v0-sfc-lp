@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from 'next/link';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -42,10 +43,13 @@ export default function AoGuideArticlesPage() {
           {/* 第1号記事カード */}
           <Link href="/ao-guide/strategy" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="relative h-48 w-full bg-[#002147] overflow-hidden">
-              <img 
+              <Image 
                 src={`/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由")}`} 
                 alt="サムネイル" 
+                width={1200}
+                height={630}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                unoptimized
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
@@ -65,10 +69,13 @@ export default function AoGuideArticlesPage() {
           {/* 第2号記事カード */}
           <Link href="/ao-guide/theme" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="relative h-48 w-full bg-[#002147] overflow-hidden">
-              <img 
+              <Image 
                 src={`/api/og?title=${encodeURIComponent("慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠")}`} 
                 alt="サムネイル" 
+                width={1200}
+                height={630}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                unoptimized
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">

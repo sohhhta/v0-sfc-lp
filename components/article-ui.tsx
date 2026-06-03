@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // 本文中のハイライト（重要箇所の強調）
 export const Highlight = ({ children }: { children: React.ReactNode }) => (
@@ -57,9 +59,11 @@ export const TableOfContents = ({
 // 記事末尾の著者紹介ボックス
 export const AuthorBox = () => (
   <section className="flex flex-col sm:flex-row gap-5 items-center sm:items-start bg-slate-50 border border-slate-200 rounded-xl p-6 md:p-8 mt-16">
-    <img
+    <Image
       src="/og-image.png"
       alt="塾長 佐藤颯太"
+      width={96}
+      height={96}
       className="w-24 h-24 rounded-full object-cover border-4 border-[#C5A059] shrink-0"
     />
     <div className="text-center sm:text-left">
@@ -74,6 +78,39 @@ export const AuthorBox = () => (
     </div>
   </section>
 );
+
+// 記事間ナビゲーション（前後の記事への導線）
+export function ArticleNavigation({
+  prev,
+  next,
+}: {
+  prev?: { title: string; href: string };
+  next?: { title: string; href: string };
+}) {
+  return (
+    <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-16 mb-8 pt-8 border-t border-slate-200">
+      {prev ? (
+        <Link href={prev.href} className="group flex items-center gap-3 text-[#002147] hover:text-[#800000] transition-colors w-full md:w-1/2">
+          <ChevronLeft className="w-6 h-6 shrink-0 group-hover:-translate-x-1 transition-transform" />
+          <div className="flex flex-col text-left">
+            <span className="text-xs text-slate-500 font-bold mb-1">前の記事</span>
+            <span className="text-sm font-bold line-clamp-2">{prev.title}</span>
+          </div>
+        </Link>
+      ) : <div className="hidden md:block w-1/2"></div>}
+
+      {next ? (
+        <Link href={next.href} className="group flex items-center justify-end gap-3 text-[#002147] hover:text-[#800000] transition-colors w-full md:w-1/2 text-right">
+          <div className="flex flex-col text-right">
+            <span className="text-xs text-slate-500 font-bold mb-1">次の記事</span>
+            <span className="text-sm font-bold line-clamp-2">{next.title}</span>
+          </div>
+          <ChevronRight className="w-6 h-6 shrink-0 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      ) : <div className="hidden md:block w-1/2"></div>}
+    </div>
+  )
+}
 
 // 記事末尾のCTA（無料相談への導線）
 export const ArticleCTA = () => (
