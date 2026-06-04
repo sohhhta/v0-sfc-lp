@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Noto_Serif_JP, Noto_Sans_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
 import './globals.css'
 import { Header } from '@/components/header'
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
+      <GoogleAnalytics gaId="G-NVR474N8XP" />
     </html>
   )
 }
