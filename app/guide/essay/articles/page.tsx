@@ -53,21 +53,31 @@ export default function EssayArticlesPortal() {
             </div>
           </Link>
 
-          {/* Coming Soon カード */}
-          <div className="flex flex-col bg-slate-100 rounded-2xl border-2 border-dashed border-slate-300 overflow-hidden opacity-80">
-            <div className="relative h-48 md:h-56 w-full bg-slate-200 flex items-center justify-center">
-              <span className="text-slate-400 font-bold text-lg tracking-widest">COMING SOON</span>
+          {/* 第2号記事カード: 過去問演習編 */}
+          <Link href="/guide/past-exams" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">
+              <Image
+                src={`/api/og?title=${encodeURIComponent("【過去問演習編】白紙から合格答案を組み立てる思考プロセスの可視化")}`}
+                alt="サムネイル"
+                width={1200}
+                height={630}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                unoptimized
+              />
             </div>
-            <div className="p-6 md:p-8 flex flex-col flex-grow justify-center text-center">
-              <span className="text-xs font-bold text-slate-400 mb-3 tracking-wider">PAST EXAMS</span>
-              <h3 className="text-lg md:text-xl font-bold text-slate-500 mb-4 leading-tight">
-                【過去問解体編】白紙から合格答案を生み出すプロセスの可視化
+            <div className="p-6 md:p-8 flex flex-col flex-grow">
+              <span className="text-xs font-bold text-[#C5A059] mb-3 tracking-wider">PAST EXAMS</span>
+              <h3 className="text-lg md:text-xl font-bold text-[#002147] mb-4 leading-tight group-hover:text-[#800000] transition-colors">
+                【過去問演習編】白紙から合格答案を組み立てる思考プロセスの可視化
               </h3>
-              <p className="text-sm text-slate-500 mb-6 flex-grow leading-relaxed">
-                現在、塾長が精魂込めて執筆中です。SFCの実際の過去問を使用し、どのように資料を読み解き、論理を構築していくのかをステップバイステップで解説します。
+              <p className="text-sm text-slate-600 line-clamp-3 mb-6 flex-grow leading-relaxed">
+                SFC小論文の過去問演習において、膨大な資料をどう読み解き、どう論理を構築するのか。設問の把握からアウトライン作成、当事者意識の示し方まで、具体的なプロセスを解説します。
               </p>
+              <div className="flex items-center text-[#800000] font-bold text-sm mt-auto">
+                記事を読む <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </main>
