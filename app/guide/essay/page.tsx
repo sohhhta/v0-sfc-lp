@@ -1,10 +1,8 @@
-
 'use client'
 
-import React from 'react';
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { BookOpen, BrainCircuit, FileSearch, PenTool, LightbulbOff, RefreshCw, MessageSquare } from 'lucide-react';
+import { Check, ArrowRight, PenTool } from 'lucide-react'
 
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
@@ -30,172 +28,183 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function EssayGuidePage() {
-  const jsonLd = {
+  // 【追加】SEO構造化データ（JSON-LD）
+  const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "慶應SFC 小論文・完全攻略ガイド | 佐藤塾",
-    "description": "SFC小論文に「天才的なひらめき」や「模範解答の暗記」は不要。求められているのは『問題発見・解決』の論理的思考プロセスです。",
-    "publisher": {
-      "@type": "EducationalOrganization",
-      "name": "佐藤塾",
-      "url": "https://lifeeling.jp"
+    "@type": "Article",
+    "headline": "SFC小論文攻略メソッド | 慶應SFC専門対策の佐藤塾",
+    "description": "慶應SFC合格に必要な「問題発見・解決能力」を測る小論文試験の全容と対策。圧倒的な資料量や配点の高さへの正しいアプローチを解説。",
+    "image": "https://lifeeling.jp/hero.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "佐藤颯太"
     },
-    "mainEntity": {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "SFCの小論文は、天才的な発想力がないと合格できませんか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "奇抜なアイデアや天才的な発想力は全く不要です。SFCの小論文は「与えられた膨大な資料から論理の制約を読み解き、矛盾なく解決策を組み立てるパズル」です。論理的思考力さえ鍛えれば、誰でも確実に合格点に到達できます。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "一般的な小論文の「序論・本論・結論」の型で書けば受かりますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "SFCの小論文において、一般的な型への当てはめは非常に危険です。設問ごとに複雑な条件設定や資料分析が求められるため、SFC特有の「問題発見・解決のプロセス」に沿った柔軟な論理構築力が必須となります。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "佐藤塾の小論文対策は、他塾と何が違うのですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "完成された「美しすぎる模範解答」を渡すだけの指導は行いません。AIを活用して大量の社会課題の切り口を壁打ちし、塾長との1on1を通じて「真っ白な原稿用紙から、どのような手順で論理を組み立てていけばよいか」という泥臭い思考プロセスそのものを徹底的に鍛え上げます。"
-          }
-        }
-      ]
-    }
+    "publisher": {
+      "@type": "Organization",
+      "name": "佐藤塾"
+    },
+    "mainEntityOfPage": "https://lifeeling.jp/guide/essay"
   };
 
   return (
-    <div className="min-h-screen bg-background text-slate-900 font-sans leading-relaxed selection:bg-[#C5A059]/30">
+    <div className="min-h-screen bg-background">
+      {/* 【追加】Google構造化データの流し込み */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-
+      
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-block text-xs font-bold tracking-[0.25em] text-[#C5A059] border border-[#C5A059]/50 px-5 py-2 rounded-full mb-8 uppercase">
-            SFC ESSAY CONCEPT LP
+            ESSAY GUIDE
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-5 md:mb-6 font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
-            小論文攻略メソッド
+            SFC小論文攻略メソッド
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed px-4">
-            「奇抜なアイデア」も「模範解答の暗記」も不要。<br />SFCが求める『問題発見・解決』の思考プロセスを完全解剖。
+            慶應SFC合格に必要な「問題発見・解決能力」を測る小論文試験。その全容と対策の大枠を解説しています。
           </p>
         </div>
       </section>
 
+      {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 py-16 md:py-20">
 
-        {/* Section 1: 致命的な誤解 */}
+        {/* SFC小論文とは */}
         <section className="mb-20">
-          <SectionTitle>SFC小論文に対する「致命的な誤解」</SectionTitle>
-          <div className="grid md:grid-cols-12 gap-8 items-center mt-12">
-            <div className="md:col-span-7 space-y-6">
-              <p className="text-base md:text-lg text-[#333333] leading-loose">
-                大量の資料、複雑な条件設定、時には図や絵を描かせる難解な設問。<br />
-                SFCの小論文問題を見て、「自分には天才的な発想力がないから無理だ」と絶望する受験生は後を絶ちません。あるいは、一般的な小論文の「序論・本論・結論」の型に無理やり当てはめようとして手が止まってしまうケースも多発しています。
+          <SectionTitle>SFC小論文とは</SectionTitle>
+          <div className="bg-white border-l-4 border-[#002147] px-6 md:px-10 py-8 rounded-lg shadow-lg mb-8">
+            <p className="text-base md:text-lg text-[#333333] leading-relaxed font-medium">
+              SFCの小論文は、文章力ではなく<span className="text-[#800000] font-bold">「問題発見・解決能力」を測る試験</span>です。平均でも10枚以上の膨大な資料を読み解き、現代社会の複雑な課題に対し、あなた独自の具体的な解決策を提示することが求められます。
+            </p>
+          </div>
+        </section>
+
+        {/* SFC小論文の3つの特徴 */}
+        <section className="mb-20">
+          <SectionTitle>SFC小論文の3つの特徴</SectionTitle>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white border-2 border-[#002147]/30 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-bold text-[#002147] font-serif mb-4">圧倒的な資料量</h3>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                学部によっては20ページ近い資料が出されることもあり、<span className="text-[#800000] font-bold">速読力と情報の取捨選択が必須</span>。限られた試験時間で、どの資料が最も重要かを見抜く判断力が問われます。
               </p>
-              <div className="bg-white border-l-4 border-[#800000] px-6 md:px-10 py-6 rounded-lg shadow-lg border border-slate-100">
-                <p className="font-bold text-[#800000] mb-2 text-base md:text-lg flex items-center gap-2">
-                  <LightbulbOff size={20} />
-                  SFCに「ひらめき」は一切不要です
-                </p>
-                <p className="text-[#333333] text-sm md:text-base leading-relaxed">
-                  赤本や他塾のサイトに載っている「美しすぎる模範解答」を見て焦る必要はありません。SFCが求めているのは、誰も思いつかないような奇抜なアイデアではなく、<strong className="text-[#002147]">「与えられた資料から制約を正確に読み取り、矛盾なく論理を組み立てる力」</strong>なのです。
-                </p>
-              </div>
             </div>
-            <div className="md:col-span-5 bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-xl border border-slate-200 shadow-md">
-              <h3 className="text-lg font-serif font-bold text-[#002147] mb-4 flex items-center gap-2">
-                <PenTool className="text-[#002147]" size={20} />
-                小論文対策の罠
-              </h3>
-              <div className="space-y-4">
-                <div className="bg-white p-4 rounded border border-slate-200">
-                  <span className="text-xs font-bold text-[#800000] block mb-1">✕ 陥りがちな罠</span>
-                  <p className="text-sm font-medium text-[#333333]">「模範解答」を暗記し、それらしい言葉で原稿用紙を埋めようとする</p>
-                </div>
-                <div className="bg-white p-4 rounded border border-[#C5A059]/40 bg-[#C5A059]/5">
-                  <span className="text-xs font-bold text-[#002147] block mb-1">◯ 合格者の思考</span>
-                  <p className="text-sm font-bold text-[#002147]">真っ白な原稿用紙を前に、資料の意図を汲み取り「思考のプロセス」を可視化する</p>
-                </div>
-              </div>
+
+            <div className="bg-white border-2 border-[#800000]/30 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-bold text-[#800000] font-serif mb-4">配点の高さ</h3>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                英語や数学と同じ<span className="text-[#800000] font-bold">200点満点</span>。小論文での逆転合格が最も起きやすいのがSFC。一教科の比重が極めて大きいからこそ、集中的な対策が効果的です。
+              </p>
+            </div>
+
+            <div className="bg-white border-2 border-[#C5A059]/30 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-bold text-[#C5A059] font-serif mb-4">「問い」を立てる力</h3>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                与えられた課題に答えるだけでなく、<span className="text-[#800000] font-bold">「何が真の問題なのか」を自ら定義する力</span>が最も評価されます。これがSFCで最も求められる思考力です。
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Section 2: SFC小論文の正体 */}
+        {/* 効果的な学習法 */}
         <section className="mb-20">
-          <div className="bg-[#002147] text-white p-8 md:p-12 rounded-xl shadow-xl">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-1/3 flex justify-center">
-                <div className="w-32 h-32 bg-[#C5A059] rounded-full flex items-center justify-center shadow-lg">
-                  <FileSearch size={48} className="text-[#002147]" />
-                </div>
+          <SectionTitle>効果的な学習法</SectionTitle>
+          <div className="space-y-6">
+            <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
+              <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">小論文の基礎を固める</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                まずは、ロジカルシンキングとロジカルライティングの基礎を固めます。その他にも接続詞や体系的記述なども学びます。<span className="font-bold">この過程を踏めるかどうかが合格に一番影響します</span>。
+              </p>
+            </div>
+
+            <div className="bg-[#F8F9FA] border-l-4 border-[#800000] pl-6 py-6 rounded-r-lg">
+              <h4 className="text-lg font-bold text-[#800000] font-serif mb-3">とにかく量をこなす</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                次に様々な問題に対して、自分の思考を言語化しフィードバックをもらうという工程をとにかく踏みましょう。佐藤塾ではAIによる即時フィードバックで<span className="font-bold">圧倒的な量の担保を実現します</span>。この反復サイクルが、最も効率的な学習方法です。
+              </p>
+            </div>
+
+            <div className="bg-[#F8F9FA] border-l-4 border-[#C5A059] pl-6 py-6 rounded-r-lg">
+              <h4 className="text-lg font-bold text-[#C5A059] font-serif mb-3">過去問の「型」を覚える</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                総合政策と環境情報の出題傾向の違いを理解し、何度も反復練習する。<span className="font-bold">1年度の問題に対しても複数の回答を作成し、SFCの過去問を徹底的に叩き込みましょう</span>。全く異なる年度の問題も特定のパターンに落とし込めます。
+              </p>
+            </div>
+
+            <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
+              <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">同じ人に長期的に指導してもらう</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                長期的に指導してもらうことで、過去の内容も踏まえ自分では気づけない「独自の視点」を磨き上げます。<span className="font-bold">佐藤塾ではAIの添削だけでなく、人間にしかできない指導を塾長自ら行うことで、AIと人間を組み合わせた指導を実現しています。</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 書き方のポイント */}
+        <section className="mb-20">
+          <SectionTitle>書き方のポイント</SectionTitle>
+          <div className="space-y-6">
+            <div className="bg-white border-2 border-[#002147] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">設問の意図を正確に捉える</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                出題者が何を求めているか、資料のどこにヒントがあるかを最初に見抜く。この第一段階が不正確だと、その後の論述がいくら素晴らしくても合格点に達しません。
+              </p>
+            </div>
+
+            <div className="bg-white border-2 border-[#C5A059] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-bold text-[#C5A059] font-serif mb-3">小論文として成立する文を書く</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                ロジカルにライティングすることは小論文にとって最重要です。どれだけ面白い内容や独自性が高い内容を書いても論理的に書かれていないと高得点は取れません。
+              </p>
+            </div>
+
+            <div className="bg-white border-2 border-[#800000] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-bold text-[#800000] font-serif mb-3">独自性と実現可能性</h4>
+              <p className="text-sm text-[#333333] leading-relaxed">
+                単なる理想論や一般論ではなく、技術的・社会的に実行可能かつ独自性がある解決策を提示するようにしましょう。SFCが求めているのは、現実を見据えた実践的かつ個性的な思考力です。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* リンク案内カード */}
+        <section className="mt-24 mb-10">
+          <div className="bg-[#800000]/5 border-2 border-[#800000]/20 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center flex-shrink-0">
+                <PenTool size={22} />
               </div>
-              <div className="md:w-2/3 space-y-4">
-                <h4 className="text-xl md:text-2xl font-serif font-bold tracking-[0.08em] text-[#C5A059]">
-                  SFC小論文の正体は「AO入試のペーパーテスト化」
+              <div className="text-left">
+                <span className="text-xs font-bold text-[#800000] tracking-wider uppercase block mb-1">RECOMMENDED ARTICLE</span>
+                <h4 className="text-lg md:text-xl font-bold text-[#002147] font-serif">
+                  【実践編】合格点に届かない理由とロジカルライティング
                 </h4>
-                <p className="text-slate-200 text-base leading-loose">
-                  SFCの小論文は、国語のテストでも、作文コンクールでもありません。それは、あなたが大学に入ってから行う「問題発見・解決」のプロセスを、試験時間内に紙の上でシミュレーションできるかを測るテストです。
-                </p>
-                <p className="text-slate-200 text-base leading-loose">
-                  だからこそ、佐藤塾では「文章の書き方」よりも先に「物事の考え方・論理の組み立て方」を徹底的に鍛えます。この思考力こそが、本番でどんな未知のテーマが出題されてもパニックにならずに対応できる「最強の現場対応力」となります。
+                <p className="text-xs text-slate-500 mt-1">
+                  採点官に評価される文章の書き方をステップバイステップで詳しく解説。
                 </p>
               </div>
             </div>
+            <Link href="/guide/logic-writing" className="w-full md:w-auto">
+              <Button className="bg-[#800000] hover:bg-[#600000] text-white font-bold w-full md:w-auto px-6 py-4 flex items-center justify-center gap-2 whitespace-nowrap">
+                この記事を読む <ArrowRight size={16} />
+              </Button>
+            </Link>
           </div>
         </section>
 
-        {/* Section 3: 佐藤塾のメソッド */}
-        <section className="mb-20">
-          <SectionTitle>佐藤塾が提供する「再現性のある」小論文対策</SectionTitle>
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
-            <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-              <div className="w-12 h-12 bg-[#002147] rounded flex items-center justify-center mb-6 text-white shadow-sm">
-                <BrainCircuit size={24} />
-              </div>
-              <h4 className="text-xl font-serif font-bold text-[#002147] mb-4 tracking-wide">
-                AIを活用した「思考の壁打ち」
-              </h4>
-              <p className="text-[#333333] text-sm md:text-base leading-loose flex-grow">
-                小論文に必要なのは、様々な社会課題に対する「引き出しの多さ」です。佐藤塾のSFC特化AIを利用し、あらゆるテーマに対する解決策の切り口やディスカッションを24時間高速で繰り返すことで、あなたの思考の幅とスピードを極限まで拡張します。
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-              <div className="w-12 h-12 bg-[#800000] rounded flex items-center justify-center mb-6 text-white shadow-sm">
-                <MessageSquare size={24} />
-              </div>
-              <h4 className="text-xl font-serif font-bold text-[#002147] mb-4 tracking-wide">
-                塾長との1on1で論理の飛躍を潰す
-              </h4>
-              <p className="text-[#333333] text-sm md:text-base leading-loose flex-grow">
-                自分が書いた答案は、自分では論理の破綻に気づけません。AIによる基礎力の底上げに加えて、塾長との徹底的な1on1指導により「なぜこの結論に至ったのか」「この制約条件を見落としていないか」というプロセスを泥臭く解体し、確実に得点できる論理構築力を定着させます。
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
 
       {/* CTA Section */}
       <section className="py-16 md:py-20 px-4 bg-gradient-to-r from-[#800000] to-[#600000]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4">
-            小論文対策に限界を感じたら、無料相談へ
+            小論文対策で迷ったら、まずは無料相談
           </h2>
           <p className="text-base text-white/80 mb-8 leading-relaxed">
-            「何から手をつければいいか分からない」「書いた答案が合っているか不安」<br />
-            あなたの現在地を診断し、SFC合格までの最短ルートをご提案します。
+            あなたの現在地を診断し、SFC合格までの道筋を塾長が直接ご提案します。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/#contact-form">
@@ -212,5 +221,5 @@ export default function EssayGuidePage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
