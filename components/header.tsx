@@ -12,7 +12,14 @@ export function Header() {
     { name: 'ホーム', href: '/' },
     { name: 'コース・料金', href: '/course' },
     { name: '合格実績', href: '/results' },
-    { name: '小論文ガイド', href: '/guide/essay' }, // /guide/essay に修正
+    {
+      name: '小論文ガイド',
+      href: '/guide/essay',
+      children: [
+        { name: 'はじめに：SFC小論文の真実', href: '/guide/essay' },
+        { name: 'テーマ別 対策記事一覧', href: '/guide/essay/articles' },
+      ],
+    },
     {
       name: 'AO入試ガイド',
       href: '/ao-guide',
