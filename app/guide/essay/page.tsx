@@ -202,11 +202,6 @@ export default function EssayGuidePage() {
           </div>
         </section>
 
-        {/* 【追加】共通のナビゲーションで回遊率をさらに底上げ */}
-        <ArticleNavigation
-          next={{ title: "【実践編】合格点に届かない理由とロジカルライティング", href: "/guide/logic-writing" }}
-        />
-
       </main>
 
       {/* CTA Section */}
