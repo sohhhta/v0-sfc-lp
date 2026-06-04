@@ -1,9 +1,12 @@
 'use client'
 
+import React from 'react';
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { Check, ArrowRight, PenTool } from 'lucide-react'
+import { Check, ArrowRight, PenTool, FileSearch, BrainCircuit, MessageSquare, LightbulbOff } from 'lucide-react'
+import { ArticleNavigation } from '@/components/article-ui';
 
+// 【SEO最適化】H3だった見出しをH2に変更し、検索エンジンが文書構造を正しく理解できるように修正
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
     <div className="text-center mb-10">
@@ -12,9 +15,9 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
         <div className="w-2 h-2 bg-[#002147] rotate-45" />
         <div className="h-px w-16 bg-[#002147]" />
       </div>
-      <h3 className="text-3xl md:text-4xl font-bold text-primary font-serif tracking-[0.08em]">
+      <h2 className="text-3xl md:text-4xl font-bold text-primary font-serif tracking-[0.08em]">
         {children}
-      </h3>
+      </h2>
       {subtitle && (
         <p className="text-muted-foreground mt-4 text-lg">{subtitle}</p>
       )}
@@ -28,7 +31,7 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function EssayGuidePage() {
-  // 【追加】SEO構造化データ（JSON-LD）
+  // SEO構造化データ（JSON-LD）は維持
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -47,18 +50,18 @@ export default function EssayGuidePage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* 【追加】Google構造化データの流し込み */}
+    <div className="min-h-screen bg-background text-slate-900 font-sans leading-relaxed selection:bg-[#C5A059]/30">
+      {/* Google構造化データの流し込み */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-block text-xs font-bold tracking-[0.25em] text-[#C5A059] border border-[#C5A059]/50 px-5 py-2 rounded-full mb-8 uppercase">
-            ESSAY GUIDE
+            SFC ESSAY CONCEPT LP
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-5 md:mb-6 font-serif tracking-[0.08em]" style={{ wordBreak: 'keep-all' }}>
             SFC小論文攻略メソッド
@@ -74,7 +77,8 @@ export default function EssayGuidePage() {
 
         {/* SFC小論文とは */}
         <section className="mb-20">
-          <SectionTitle>SFC小論文とは</SectionTitle>
+          {/* 【SEO最適化】自然な形で検索キーワードを注入 */}
+          <SectionTitle>慶應SFC小論文とは</SectionTitle>
           <div className="bg-white border-l-4 border-[#002147] px-6 md:px-10 py-8 rounded-lg shadow-lg mb-8">
             <p className="text-base md:text-lg text-[#333333] leading-relaxed font-medium">
               SFCの小論文は、文章力ではなく<span className="text-[#800000] font-bold">「問題発見・解決能力」を測る試験</span>です。平均でも10枚以上の膨大な資料を読み解き、現代社会の複雑な課題に対し、あなた独自の具体的な解決策を提示することが求められます。
@@ -84,7 +88,8 @@ export default function EssayGuidePage() {
 
         {/* SFC小論文の3つの特徴 */}
         <section className="mb-20">
-          <SectionTitle>SFC小論文の3つの特徴</SectionTitle>
+          {/* 【SEO最適化】自然な形で検索キーワードを注入 */}
+          <SectionTitle>SFC小論文の3つの特徴と難しさ</SectionTitle>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white border-2 border-[#002147]/30 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-lg font-bold text-[#002147] font-serif mb-4">圧倒的な資料量</h3>
@@ -111,7 +116,8 @@ export default function EssayGuidePage() {
 
         {/* 効果的な学習法 */}
         <section className="mb-20">
-          <SectionTitle>効果的な学習法</SectionTitle>
+          {/* 【SEO最適化】自然な形で検索キーワードを注入 */}
+          <SectionTitle>SFC小論文対策における効果的な学習法</SectionTitle>
           <div className="space-y-6">
             <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
               <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">小論文の基礎を固める</h4>
@@ -145,7 +151,8 @@ export default function EssayGuidePage() {
 
         {/* 書き方のポイント */}
         <section className="mb-20">
-          <SectionTitle>書き方のポイント</SectionTitle>
+          {/* 【SEO最適化】自然な形で検索キーワードを注入 */}
+          <SectionTitle>高得点を狙う書き方のポイント</SectionTitle>
           <div className="space-y-6">
             <div className="bg-white border-2 border-[#002147] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">設問の意図を正確に捉える</h4>
@@ -170,7 +177,7 @@ export default function EssayGuidePage() {
           </div>
         </section>
 
-        {/* リンク案内カード */}
+        {/* リンク案内カード (既存の強い導線を維持) */}
         <section className="mt-24 mb-10">
           <div className="bg-[#800000]/5 border-2 border-[#800000]/20 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
             <div className="flex items-center gap-4">
@@ -194,6 +201,11 @@ export default function EssayGuidePage() {
             </Link>
           </div>
         </section>
+
+        {/* 【追加】共通のナビゲーションで回遊率をさらに底上げ */}
+        <ArticleNavigation
+          next={{ title: "【実践編】合格点に届かない理由とロジカルライティング", href: "/guide/logic-writing" }}
+        />
 
       </main>
 
