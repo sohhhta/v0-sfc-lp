@@ -3,26 +3,17 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ChevronRight, Clock, List } from 'lucide-react'
+import { ChevronRight, Clock } from 'lucide-react'
+import { TableOfContents, ArticleH2, ArticleNavigation } from '@/components/article-ui'
 
-// 装飾付き見出しコンポーネント（既存マスタのid受け渡しロジックを完全復元）
-function SectionTitle({ children, id }: { children: React.ReactNode; id?: string }) {
-  return (
-    <div className="text-center mb-10 mt-20" id={id}>
-      <div className="flex items-center justify-center gap-6 mb-6">
-        <div className="h-px w-12 bg-[#002147]" />
-        <div className="w-2 h-2 bg-[#002147] rotate-45" />
-        <div className="h-px w-12 bg-[#002147]" />
-      </div>
-      <h2 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wider">
-        {children}
-      </h2>
-    </div>
-  )
-}
+const tocItems = [
+  { id: "sec1", label: "なぜ、あなたの小論文は「評価の対象」にならないのか？" },
+  { id: "sec2", label: "「練習の量」が、本番の揺るぎない自信に変わる" },
+  { id: "sec3", label: "逆転合格に必要な「準備期間」の真実" },
+  { id: "sec4", label: "SFC対策で磨いた力は、一生モノの財産になる" },
+];
 
 export default function LogicWritingPage() {
-  // 実践ガイドとしてのE-E-A-T評価を最大化させるArticleスキーマ
   const logicJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -63,21 +54,11 @@ export default function LogicWritingPage() {
             </div>
           </header>
 
-          {/* 目次 (ToC) */}
-          <div className="bg-[#F8F9FA] p-8 rounded-2xl mb-16 border border-gray-100">
-            <h3 className="text-lg font-bold text-[#002147] mb-4 flex items-center">
-              <List size={20} className="mr-2 text-[#C5A059]" /> この記事のポイント
-            </h3>
-            <ul className="grid md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-[#002147]">
-              <li><a href="#sec1" className="hover:text-[#C5A059] flex items-center">・「評価の対象」にならない原因とは？</a></li>
-              <li><a href="#sec2" className="hover:text-[#C5A059] flex items-center">・圧倒的練習量を支えるAI添削の役割</a></li>
-              <li><a href="#sec3" className="hover:text-[#C5A059] flex items-center">・逆転合格に必要な「準備期間」の真実</a></li>
-              <li><a href="#sec4" className="hover:text-[#C5A059] flex items-center">・SFC対策が他大学合格に繋がる理由</a></li>
-            </ul>
-          </div>
+          {/* 共通の目次コンポーネントを適用 */}
+          <TableOfContents items={tocItems} />
 
           <div className="prose prose-slate max-w-none leading-[1.9] text-gray-700">
-            <p className="text-lg mb-8 italic border-l-4 border-[#C5A059] pl-6 py-2 text-slate-600 bg-slate-50">
+            <p className="text-lg mb-8 italic border-l-4 border-[#C5A059] pl-6 py-2 text-slate-600 bg-slate-50 mt-12">
               「SFCの小論文は、特別な才能がないと合格点をもらえないのではないか？」<br />
               「独創的なアイデアなんて、自分には思いつかない……」
             </p>
@@ -85,7 +66,8 @@ export default function LogicWritingPage() {
               毎年、多くの受験生からこのような相談を受けます。しかし、断言します。SFCの小論文に<strong>奇抜なひらめきや天性のセンスは不要</strong>です。合格点に届かない最大の理由は、才能の不足ではなく、採点官に評価される「書き方のルール」を知らないことにあります。
             </p>
 
-            <SectionTitle id="sec1">1. なぜ、あなたの小論文は「評価の対象」にならないのか？</SectionTitle>
+            {/* 共通の見出しコンポーネントを適用 */}
+            <ArticleH2 id="sec1">1. なぜ、あなたの小論文は「評価の対象」にならないのか？</ArticleH2>
             <p>
               多くの受験生が「何かすごいことを書かなければ」と焦るあまり、問いかけ（設問）を置き去りにしてしまいます。
               SFCの採点官が見ているのは、あなたの「感性」以上に、<strong>大学で学ぶために必要な「考える手順」</strong>が身についているかです。
@@ -113,7 +95,7 @@ export default function LogicWritingPage() {
               </div>
             </div>
 
-            <SectionTitle id="sec2">2. 「練習の量」が、本番の揺るぎない自信に変わる</SectionTitle>
+            <ArticleH2 id="sec2">2. 「練習の量」が、本番の揺るぎない自信に変わる</ArticleH2>
             <p>
               論理的な書き方は、頭で理解するだけでは身につきません。佐藤塾がAI添削を導入したのは、従来の指導では難しかった<strong>「圧倒的な演習量」</strong>を、塾長とAIのダブルチェックで実現するためです。
             </p>
@@ -126,7 +108,7 @@ export default function LogicWritingPage() {
               「昨日よりも、3ヶ月前よりも、自分の文章が分かりやすくなっている」という成長実感こそが、逆転合格のガソリンになります。
             </div>
 
-            <SectionTitle id="sec3">3. 逆転合格に必要な「準備期間」の真実</SectionTitle>
+            <ArticleH2 id="sec3">3. 逆転合格に必要な「準備期間」の真実</ArticleH2>
             <p>
               「小論文の対策は秋からで間に合う」という予備校の言葉を真に受けてはいけません。SFCの200点という配点は、他大学とは比較にならないほど重く、求められる教養（社会問題、データサイエンス、デザイン思考など）の範囲も広大です。
             </p>
@@ -134,7 +116,7 @@ export default function LogicWritingPage() {
               理想的なスタートは春（4月〜6月）。この時期にAIを使い倒して「論理の型」と「基礎知識」を脳に叩き込んでおくからこそ、夏以降に塾長との1on1面談で、誰にも真似できない「独自性の磨き上げ」に全リソースを集中させることが可能になります。
             </p>
 
-            <SectionTitle id="sec4">4. SFC対策で磨いた力は、一生モノの財産になる</SectionTitle>
+            <ArticleH2 id="sec4">4. SFC対策で磨いた力は、一生モノの財産になる</ArticleH2>
             <p>
               多くの人が「SFCの小論文は特殊すぎて、併願校の対策にならない」と勘違いしています。しかし、佐藤塾の塾生たちは、SFCのために磨いた力で、<strong>青山学院、法政、立教、中央</strong>といった難関大学にも次々と合格しています。
             </p>
@@ -146,10 +128,11 @@ export default function LogicWritingPage() {
             <div className="mt-24 p-8 border border-gray-200 rounded-3xl flex flex-col md:flex-row items-center gap-8 bg-slate-50/50">
               <div className="relative w-24 h-24 flex-shrink-0 border-2 border-[#C5A059] rounded-full overflow-hidden">
                 <Image
-                  src="/jukucho.jpg"
+                  src="/og-image.png"
                   alt="佐藤塾 塾長 佐藤颯太"
                   fill
                   className="object-cover object-top scale-125"
+                  unoptimized
                 />
               </div>
               <div>
@@ -165,6 +148,11 @@ export default function LogicWritingPage() {
                 </Link>
               </div>
             </div>
+
+            {/* 共通のナビゲーション（前のLPへ戻る導線） */}
+            <ArticleNavigation 
+              prev={{ title: "SFC小論文攻略メソッド", href: "/guide/essay" }} 
+            />
 
             {/* CTA */}
             <div className="mt-20 p-10 bg-[#002147] text-white rounded-3xl text-center shadow-2xl">
