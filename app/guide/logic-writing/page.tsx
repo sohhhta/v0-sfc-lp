@@ -146,7 +146,7 @@ export default function LogicWritingPage() {
             <div className="mt-24 p-8 border border-gray-200 rounded-3xl flex flex-col md:flex-row items-center gap-8 bg-slate-50/50">
               <div className="relative w-24 h-24 flex-shrink-0 border-2 border-[#C5A059] rounded-full overflow-hidden">
                 <Image
-                  src="/jukucho.jpg"
+                  src="/og-image.png"
                   alt="佐藤塾 塾長 佐藤颯太"
                   fill
                   className="object-cover object-top scale-125"
@@ -158,29 +158,4 @@ export default function LogicWritingPage() {
                   <h4 className="text-xl font-bold text-[#002147] font-serif">佐藤 颯太 <span className="text-sm font-medium text-gray-500">Sota Sato</span></h4>
                 </div>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数百名の受験生と向き合い、独自の「ロジカルライティング・メソッド」と最新のAI技術を融合させた指導で、多数の逆転合格者を輩出。
-                </p>
-                <Link href="/#contact-form" className="text-sm font-bold text-[#800000] hover:underline inline-flex items-center">
-                  塾長から詳しい指導方針を聞く <ChevronRight size={14} className="ml-1" />
-                </Link>
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="mt-20 p-10 bg-[#002147] text-white rounded-3xl text-center shadow-2xl">
-              <h3 className="text-2xl font-bold mb-6 font-serif">合格への第一歩を、ここから</h3>
-              <p className="mb-10 text-slate-300 max-w-2xl mx-auto">
-                正しいルールを知り、十分な練習を積みさえすれば、SFCの門は必ず開きます。まずはあなたの現状を詳しくお聞かせください。
-              </p>
-              <Link href="/#contact-form">
-                <Button className="bg-[#C5A059] hover:bg-[#B48F48] text-[#002147] font-bold py-7 px-12 text-lg rounded-none">
-                  無料相談・体験授業を予約する
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </article>
-      </main>
-    </div>
-  )
-}
+                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数百名の受験生と向き合い、独自の「ロ
