@@ -89,19 +89,21 @@ export function ArticleNavigation({
   back?: { title: string; href: string }
 }) {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center gap-6 py-10 border-t border-gray-200 mt-12">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10 border-t border-gray-200 mt-12 items-center">
       {/* 前の記事 */}
-      <div className="w-full md:flex-1 flex justify-start order-2 md:order-1">
+      <div className="flex justify-start order-2 md:order-1">
         {prev && (
           <Link href={prev.href} className="group flex flex-col text-left">
             <span className="text-xs font-bold text-[#C5A059] mb-1">前の記事</span>
-            <span className="text-[#002147] font-bold group-hover:text-[#800000] transition-colors">{prev.title}</span>
+            <span className="text-[#002147] font-bold group-hover:text-[#800000] transition-colors line-clamp-2">
+              {prev.title}
+            </span>
           </Link>
         )}
       </div>
 
       {/* 一覧に戻る */}
-      <div className="w-full md:flex-none flex justify-center order-1 md:order-2 mb-2 md:mb-0">
+      <div className="flex justify-center order-1 md:order-2">
         {back && (
           <Link href={back.href} className="px-8 py-3 border border-gray-200 rounded-full text-sm font-bold text-[#002147] hover:bg-slate-50 transition-colors whitespace-nowrap">
             {back.title}
@@ -110,11 +112,13 @@ export function ArticleNavigation({
       </div>
 
       {/* 次の記事 */}
-      <div className="w-full md:flex-1 flex justify-end order-3 md:order-3 mt-2 md:mt-0">
+      <div className="flex justify-end order-3 md:order-3 text-right">
         {next && (
-          <Link href={next.href} className="group flex flex-col text-right">
+          <Link href={next.href} className="group flex flex-col items-end text-right">
             <span className="text-xs font-bold text-[#C5A059] mb-1">次の記事</span>
-            <span className="text-[#002147] font-bold group-hover:text-[#800000] transition-colors">{next.title}</span>
+            <span className="text-[#002147] font-bold group-hover:text-[#800000] transition-colors line-clamp-2">
+              {next.title}
+            </span>
           </Link>
         )}
       </div>
