@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { LayoutGrid } from "lucide-react";
 
 // 本文中のハイライト（重要箇所の強調）
 export const Highlight = ({ children }: { children: React.ReactNode }) => (
@@ -79,35 +79,51 @@ export const AuthorBox = () => (
   </section>
 );
 
-// 記事間ナビゲーション（前後の記事への導線）
+// 記事間ナビゲーション（前の記事・一覧に戻る・次の記事の3点配置）
 export function ArticleNavigation({
   prev,
   next,
+  back,
 }: {
-  prev?: { title: string; href: string };
-  next?: { title: string; href: string };
+  prev?: { title: string; href: string }
+  next?: { title: string; href: string }
+  back?: { title: string; href: string }
 }) {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-16 mb-8 pt-8 border-t border-slate-200">
-      {prev ? (
-        <Link href={prev.href} className="group flex items-center gap-3 text-[#002147] hover:text-[#800000] transition-colors w-full md:w-1/2">
-          <ChevronLeft className="w-6 h-6 shrink-0 group-hover:-translate-x-1 transition-transform" />
-          <div className="flex flex-col text-left">
-            <span className="text-xs text-slate-500 font-bold mb-1">前の記事</span>
-            <span className="text-sm font-bold line-clamp-2">{prev.title}</span>
-          </div>
-        </Link>
-      ) : <div className="hidden md:block w-1/2"></div>}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10 border-t border-gray-200 mt-12 items-center">
+      {/* 前の記事 */}
+      <div className="flex justify-start order-2 md:order-1">
+        {prev && (
+          <Link href={prev.href} className="group flex flex-col text-left">
+            <span className="text-xs font-bold text-[#C5A059] mb-1">前の記事</span>
+            <span className="text-[#002147] font-bold group-hover:text-[#800000] transition-colors line-clamp-2">
+              {prev.title}
+            </span>
+          </Link>
+        )}
+      </div>
 
-      {next ? (
-        <Link href={next.href} className="group flex items-center justify-end gap-3 text-[#002147] hover:text-[#800000] transition-colors w-full md:w-1/2 text-right">
-          <div className="flex flex-col text-right">
-            <span className="text-xs text-slate-500 font-bold mb-1">次の記事</span>
-            <span className="text-sm font-bold line-clamp-2">{next.title}</span>
-          </div>
-          <ChevronRight className="w-6 h-6 shrink-0 group-hover:translate-x-1 transition-transform" />
-        </Link>
-      ) : <div className="hidden md:block w-1/2"></div>}
+      {/* 一覧に戻る */}
+      <div className="flex justify-center order-1 md:order-2">
+        {back && (
+          <Link href={back.href} className="inline-flex items-center justify-center px-6 py-3 border border-gray-200 rounded-full text-sm font-bold text-[#002147] hover:bg-slate-50 transition-colors whitespace-nowrap group">
+            <LayoutGrid size={16} className="mr-2 text-[#C5A059] group-hover:text-[#800000] transition-colors" />
+            {back.title}
+          </Link>
+        )}
+      </div>
+
+      {/* 次の記事 */}
+      <div className="flex justify-end order-3 md:order-3 text-right">
+        {next && (
+          <Link href={next.href} className="group flex flex-col items-end text-right">
+            <span className="text-xs font-bold text-[#C5A059] mb-1">次の記事</span>
+            <span className="text-[#002147] font-bold group-hover:text-[#800000] transition-colors line-clamp-2">
+              {next.title}
+            </span>
+          </Link>
+        )}
+      </div>
     </div>
   )
 }

@@ -90,8 +90,9 @@ export default function AoStrategyPage() {
           <p className="mb-6 leading-relaxed">このプロセスを経ることで、借り物ではない、あなただけの確固たる「問い（テーマ）」が必ず見つかります。</p>
 
           <ArticleNavigation
+            back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
             next={{
-              title: "慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠",
+              title: "【テーマ設定編】自分だけの研究テーマを見つける3ステップ",
               href: "/ao-guide/theme",
             }}
           />
