@@ -7,6 +7,7 @@ import {
   TableOfContents,
   AuthorBox,
   ArticleNavigation,
+  ArticleHighlight,
 } from "@/components/article-ui";
 
 export const metadata: Metadata = {
@@ -63,10 +64,10 @@ export default function AoThemePage() {
           </ArticleH2>
 
           <p className="mb-6 leading-relaxed">SFCは「問題発見・解決の大学」です。だからこそ、多くの受験生が「社会的に評価されそうなテーマ」を探そうとします。SDGs、環境問題、教育格差、AIの倫理問題など、入り口は様々です。</p>
-          <p className="mb-10 leading-relaxed text-lg"><strong className="text-[#800000] font-bold">しかし、ニュースや教科書から借りてきた「正解」のようなテーマは、面接ですぐに見抜かれます。</strong></p>
+          <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>しかし、ニュースや教科書から借りてきた「正解」のようなテーマは、面接ですぐに見抜かれます。</ArticleHighlight></p>
           <p className="mb-6 leading-relaxed">なぜなら、そこには「あなた自身の血の通った体験」が欠けているからです。どんなに論理的で立派な解決策であっても、第三者的な視点で作られた書類には熱が宿りません。</p>
           <p className="mb-6 leading-relaxed">SFCの教授陣が見極めようとしているのは、課題のスケール（大きさ）ではありません。</p>
-          <p className="mb-10 leading-relaxed text-lg"><strong className="text-[#800000] font-bold">「なぜ、他の誰でもない『あなた』が、大学の4年間（あるいはその先の人生）をかけてその問題に取り組むのか」という圧倒的な必然性です。</strong></p>
+          <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>「なぜ、他の誰でもない『あなた』が、大学の4年間（あるいはその先の人生）をかけてその問題に取り組むのか」という圧倒的な必然性です。</ArticleHighlight></p>
 
           <ArticleH2 id="section-2">
             今日からできる！自分だけの「テーマ」を掘り起こす3ステップ
@@ -88,7 +89,7 @@ export default function AoThemePage() {
           </ArticleH2>
 
           <p className="mb-6 leading-relaxed">ここまでのステップを頭で理解できても、いざ一人で机に向かって実践しようとすると、多くの受験生が厚い壁にぶつかります。</p>
-          <p className="mb-10 leading-relaxed text-lg"><strong className="text-[#800000] font-bold">「想いは見えてきたけれど、それがSFCのアカデミア（学問）とどう結びつくのかわからない」という壁です。</strong></p>
+          <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>「想いは見えてきたけれど、それがSFCのアカデミア（学問）とどう結びつくのかわからない」という壁です。</ArticleHighlight></p>
           <p className="mb-6 leading-relaxed">高校生が一人で考えていても、想いを学術的なアプローチに変換するための「語彙力」や「先行研究の知識」が圧倒的に不足しています。</p>
           <p className="mb-6 leading-relaxed">ネットで検索を重ねても、どこかで見たようなありきたりな言葉や、他人の論文のつぎはぎしか出てきません。結果として、思考が堂々巡りになり、時間だけが過ぎていく「思考のループ」に陥ってしまうのです。</p>
 
@@ -97,8 +98,8 @@ export default function AoThemePage() {
           </ArticleH2>
 
           <p className="mb-6 leading-relaxed">この苦しい「思考のループ」を破壊し、テーマを爆発的に進化させるのが、佐藤塾が提供する独自の伴走環境です。</p>
-          <p className="mb-6 leading-relaxed">まず、<strong className="text-[#800000] font-bold">24時間稼働のSFC特化AI</strong>に、あなたのまとまらないモヤモヤや思考の断片をそのままぶつけてください。AIはあなたの言葉を瞬時に読み解き、関連する先行研究、SFCの教授陣の知見、そしてアカデミックな切り口へと「翻訳」して返してくれます。一人では何日もかかる調査と思考の整理が、圧倒的なスピードで進みます。</p>
-          <p className="mb-10 leading-relaxed text-lg"><strong className="text-[#800000] font-bold">しかし、AIが出力したものはあくまで「質の高い素材」に過ぎません。最後に必要不可欠なのが、塾長である私との「1on1対話」です。</strong></p>
+          <p className="mb-6 leading-relaxed">まず、<ArticleHighlight>24時間稼働のSFC特化AI</ArticleHighlight>に、あなたのまとまらないモヤモヤや思考の断片をそのままぶつけてください。AIはあなたの言葉を瞬時に読み解き、関連する先行研究、SFCの教授陣の知見、そしてアカデミックな切り口へと「翻訳」して返してくれます。一人では何日もかかる調査と思考の整理が、圧倒的なスピードで進みます。</p>
+          <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>しかし、AIが出力したものはあくまで「質の高い素材」に過ぎません。最後に必要不可欠なのが、塾長である私との「1on1対話」です。</ArticleHighlight></p>
           <p className="mb-6 leading-relaxed">「それは本当に君がやりたいことなのか？」「SFCのこの教授の元で学ぶ必然性はどこにあるのか？」——容赦のない、しかし本質的な問いを投げかけます。</p>
           <p className="mb-6 leading-relaxed">この泥臭い対話の���復を通じて、AIが整えた綺麗なロジックに「あなた自身の血」が通い始めます。こうして出来上がったテーマこそが、いかなる面接官の鋭い質問も跳ね返す、最強の「本気の覚悟」へと昇華されるのです。</p>
 

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ChevronRight, Clock } from 'lucide-react'
-import { TableOfContents, ArticleH2, ArticleNavigation } from '@/components/article-ui'
+import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight } from '@/components/article-ui'
 
 const tocItems = [
   { id: "sec1", label: "なぜ、あなたの小論文は「評価の対象」にならないのか？" },
@@ -63,14 +63,14 @@ export default function LogicWritingPage() {
               「独創的なアイデアなんて、自分には思いつかない……」
             </p>
             <p className="mb-12">
-              毎年、多くの受験生からこのような相談を受けます。しかし、断言します。SFCの小論文に<strong>奇抜なひらめきや天性のセンスは不要</strong>です。合格点に届かない最大の理由は、才能の不足ではなく、採点官に評価される「書き方のルール」を知らないことにあります。
+              毎年、多くの受験生からこのような相談を受けます。しかし、断言します。SFCの小論文に<ArticleHighlight>奇抜なひらめきや天性のセンスは不要</ArticleHighlight>です。合格点に届かない最大の理由は、才能の不足ではなく、採点官に評価される「書き方のルール」を知らないことにあります。
             </p>
 
             {/* 共通の見出しコンポーネントを適用 */}
             <ArticleH2 id="sec1">1. なぜ、あなたの小論文は「評価の対象」にならないのか？</ArticleH2>
             <p>
               多くの受験生が「何かすごいことを書かなければ」と焦るあまり、問いかけ（設問）を置き去りにしてしまいます。
-              SFCの採点官が見ているのは、あなたの「感性」以上に、<strong>大学で学ぶために必要な「考える手順」</strong>が身についているかです。
+              SFCの採点官が見ているのは、あなたの「感性」以上に、<ArticleHighlight>大学で学ぶために必要な「考える手順」</ArticleHighlight>が身についているかです。
             </p>
             <p className="mb-6">
               どれほど独自性の高いアイデアであっても、設問の要求からズレていたり、論理の飛躍があったりする文章は、採点基準にすら乗りません。まずは「相手の問いに正確に、過不足なく答える」という、ロジカルライティングの徹底的な反復が必要です。
@@ -97,7 +97,7 @@ export default function LogicWritingPage() {
 
             <ArticleH2 id="sec2">2. 「練習の量」が、本番の揺るぎない自信に変わる</ArticleH2>
             <p>
-              論理的な書き方は、頭で理解するだけでは身につきません。佐藤塾がAI添削を導入したのは、従来の指導では難しかった<strong>「圧倒的な演習量」</strong>を、塾長とAIのダブルチェックで実現するためです。
+              論理的な書き方は、頭で理解するだけでは身につきません。佐藤塾がAI添削を導入したのは、従来の指導では難しかった<ArticleHighlight>「圧倒的な演習量」</ArticleHighlight>を、塾長とAIのダブルチェックで実現するためです。
             </p>
             <p className="mb-6">
               週に1回、数日待って添削を受け取るだけのスピード感では、SFCの複雑な過去問に対応する修正力は育ちません。書いたその場でAIが構造的な不備を指摘し、何度も書き直す。この高速な試行錯誤を繰り返すことで、本番のプレッシャー下でもブレない論理的思考力が脳に定着します。
@@ -118,10 +118,10 @@ export default function LogicWritingPage() {
 
             <ArticleH2 id="sec4">4. SFC対策で磨いた力は、一生モノの財産になる</ArticleH2>
             <p>
-              多くの人が「SFCの小論文は特殊すぎて、併願校の対策にならない」と勘違いしています。しかし、佐藤塾の塾生たちは、SFCのために磨いた力で、<strong>青山学院、法政、立教、中央</strong>といった難関大学にも次々と合格しています。
+              多くの人が「SFCの小論文は特殊すぎて、併願校の対策にならない」と勘違いしています。しかし、佐藤塾の塾生たちは、SFCのために磨いた力で、<ArticleHighlight>青山学院、法政、立教、中央</ArticleHighlight>といった難関大学にも次々と合格しています。
             </p>
             <p className="mb-12">
-              これは、佐藤塾で教える内容が単なる小論文のテクニックではなく、どこでも通用する「本質的な知力」そのものだからです。SFCという最高峰を目指す過程で培われる圧倒的な論理力は、一般入試の現代文や他学部の小論文をも容易に凌駕する強力な武器になります。
+              これは、佐藤塾で教える内容が単なる小論文のテクニックではなく、どこでも通用する「本質的な知力」そのものだからです。SFCという最高峰を目指す過程で培われる圧倒的な論理力は、一般入試の現代文や他学部の小論文をも容易に��駕する強力な武器になります。
             </p>
 
             {/* 塾長プロフィール */}
