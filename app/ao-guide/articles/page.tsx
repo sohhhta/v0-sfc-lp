@@ -80,21 +80,31 @@ export default function AoArticlesPortal() {
             </div>
           </Link>
 
-          {/* Coming Soon カード */}
-          <div className="flex flex-col bg-slate-100 rounded-2xl border-2 border-dashed border-slate-300 overflow-hidden opacity-80">
-            <div className="relative h-48 md:h-56 w-full bg-slate-200 flex items-center justify-center">
-              <span className="text-slate-400 font-bold text-lg tracking-widest">COMING SOON</span>
+          {/* 第3号記事カード: 面接対策編 */}
+          <Link href="/ao-guide/interview" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">
+              <Image 
+                src={`/api/og?title=${encodeURIComponent("【面接対策編】面接官の「圧迫」を「対話」に変える、主導権の握り方")}`} 
+                alt="サムネイル" 
+                width={1200}
+                height={630}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                unoptimized
+              />
             </div>
-            <div className="p-6 md:p-8 flex flex-col flex-grow justify-center text-center">
-              <span className="text-xs font-bold text-slate-400 mb-3 tracking-wider">INTERVIEW</span>
-              <h3 className="text-lg md:text-xl font-bold text-slate-500 mb-4 leading-tight">
+            <div className="p-6 md:p-8 flex flex-col flex-grow">
+              <span className="text-xs font-bold text-[#C5A059] mb-3 tracking-wider">INTERVIEW</span>
+              <h3 className="text-lg md:text-xl font-bold text-[#002147] mb-4 leading-tight group-hover:text-[#800000] transition-colors">
                 【面接対策編】面接官の「圧迫」を「対話」に変える、主導権の握り方
               </h3>
-              <p className="text-sm text-slate-500 mb-6 flex-grow leading-relaxed">
-                現在、塾長が執筆中です。SFC特有の鋭い突っ込みに対して、暗記した解答ではなく「自分の言葉」で本質的な議論を展開するためのマインドセットと準備方法を解説します。
+              <p className="text-sm text-slate-600 line-clamp-3 mb-6 flex-grow leading-relaxed">
+                SFC特有の鋭いツッコミに対して、暗記した解答ではなく「自分の言葉」で本質的な議論を展開するためのマインドセットと、佐藤塾ならではの実践的な準備方法を解説します。
               </p>
+              <div className="flex items-center text-[#800000] font-bold text-sm mt-auto">
+                記事を読む <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </main>
