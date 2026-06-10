@@ -112,6 +112,15 @@ export function ArticleNavigation({
   )
 }
 
+// 本文中の強調表現（太字＋ゴールドのアンダーライン）統一ルール
+export function ArticleHighlight({ children }: { children: React.ReactNode }) {
+  return (
+    <strong className="font-bold border-b-[3px] border-[#C5A059]/60 pb-0.5">
+      {children}
+    </strong>
+  );
+}
+
 // 記事末尾のCTA（無料相談への導線）
 export const ArticleCTA = () => (
   <section className="bg-[#002147] text-white rounded-2xl p-8 md:p-10 mt-12 text-center">
