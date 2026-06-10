@@ -40,16 +40,18 @@ export default function InterviewPage() {
       
       <main className="pt-32 md:pt-40 pb-20">
         <article className="max-w-4xl mx-auto px-6">
-          <header className="mb-12 text-center">
-            <div className="inline-block px-4 py-1 bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold tracking-widest mb-6 rounded-full">
-              SFC AO入試 対策ガイド
+          <header className="bg-[#002147] text-white p-8 md:p-12 rounded-2xl mb-12">
+            <div className="flex items-center gap-2 text-[#C5A059] text-sm font-bold mb-4">
+              <Link href="/ao-guide" className="hover:underline">AO入試ガイド</Link>
+              <ChevronRight className="w-4 h-4" />
+              <span>面接対策編</span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-[#002147] leading-[1.3] mb-8 font-serif">
-              【面接対策編】面接官の「圧迫」を<br className="hidden md:block" />「対話」に変える、主導権の握り方
+            <h1 className="text-2xl md:text-4xl font-bold leading-tight md:leading-normal mb-6">
+              【面接対策編】面接官の「圧迫」を「対話」に変える、主導権の握り方
             </h1>
-            <div className="flex items-center justify-center text-gray-500 text-sm space-x-6 border-y border-gray-100 py-4">
-              <span className="flex items-center"><Clock size={16} className="mr-1.5 text-[#800000]" /> 5分で読めます</span>
-              <span className="font-bold text-[#002147]">監修：佐藤颯太</span>
+            <div className="flex items-center gap-6 text-sm text-white/80 border-t border-white/20 pt-4">
+              <span className="font-bold text-white">監修：佐藤颯太</span>
+              <span className="flex items-center"><Clock size={16} className="mr-1.5 text-[#C5A059]" /> 5分で読めます</span>
             </div>
           </header>
 
