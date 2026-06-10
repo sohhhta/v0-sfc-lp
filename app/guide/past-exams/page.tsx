@@ -125,7 +125,7 @@ export default function PastExamsPage() {
             {/* 共通のナビゲーション */}
             <ArticleNavigation 
               prev={{ title: "【実践編】合格点に届かない理由とロジカルライティング", href: "/guide/logic-writing" }} 
-              back={{ title: "SFC小論文 対策記事一覧", href: "/guide/essay/articles" }} 
+              back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }} 
             />
 
             {/* CTA */}

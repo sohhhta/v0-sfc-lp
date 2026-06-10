@@ -108,7 +108,7 @@ export default function AoThemePage() {
               title: "【二刀流戦略】一般入試とAO入試の相乗効果",
               href: "/ao-guide/strategy",
             }}
-            back={{ title: "AO入試 対策記事一覧", href: "/ao-guide/articles" }}
+            back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
           />
 
           <AuthorBox />

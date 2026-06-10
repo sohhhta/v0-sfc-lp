@@ -151,7 +151,7 @@ export default function LogicWritingPage() {
 
             {/* 共通のナビゲーション（一覧に戻る・次の記事への導線） */}
             <ArticleNavigation
-              back={{ title: "SFC小論文 対策記事一覧", href: "/guide/essay/articles" }}
+              back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
               next={{ title: "【過去問演習編】白紙から合格答案を組み立てる思考プロセスの可視化", href: "/guide/past-exams" }}
             />
 

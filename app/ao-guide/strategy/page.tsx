@@ -90,7 +90,7 @@ export default function AoStrategyPage() {
           <p className="mb-6 leading-relaxed">このプロセスを経ることで、借り物ではない、あなただけの確固たる「問い（テーマ）」が必ず見つかります。</p>
 
           <ArticleNavigation
-            back={{ title: "AO入試 対策記事一覧", href: "/ao-guide/articles" }}
+            back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
             next={{
               title: "【テーマ設定編】自分だけの研究テーマを見つける3ステップ",
               href: "/ao-guide/theme",

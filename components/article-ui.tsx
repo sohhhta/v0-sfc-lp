@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { LayoutGrid } from "lucide-react";
 
 // 本文中のハイライト（重要箇所の強調）
 export const Highlight = ({ children }: { children: React.ReactNode }) => (
@@ -105,7 +106,8 @@ export function ArticleNavigation({
       {/* 一覧に戻る */}
       <div className="flex justify-center order-1 md:order-2">
         {back && (
-          <Link href={back.href} className="px-8 py-3 border border-gray-200 rounded-full text-sm font-bold text-[#002147] hover:bg-slate-50 transition-colors whitespace-nowrap">
+          <Link href={back.href} className="inline-flex items-center justify-center px-6 py-3 border border-gray-200 rounded-full text-sm font-bold text-[#002147] hover:bg-slate-50 transition-colors whitespace-nowrap group">
+            <LayoutGrid size={16} className="mr-2 text-[#C5A059] group-hover:text-[#800000] transition-colors" />
             {back.title}
           </Link>
         )}
