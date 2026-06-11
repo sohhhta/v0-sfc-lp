@@ -7,6 +7,7 @@ import {
   ArticleNavigation,
   ArticleHighlight,
   ArticleHeader,
+  ArticleContainer,
 } from "@/components/article-ui";
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ const tocItems = [
 export default function AoThemePage() {
   return (
     <main className="min-h-screen bg-slate-50 py-12">
-      <article className="container mx-auto px-4 max-w-3xl bg-white shadow-sm rounded-2xl overflow-hidden">
+      <ArticleContainer>
 
         <ArticleHeader
           theme="ao"
@@ -96,7 +97,7 @@ export default function AoThemePage() {
 
           <ArticleNavigation
             prev={{
-              title: "【二刀流戦略】一般入試とAO入試の相乗効果",
+              title: "��二刀流戦略】一般入試とAO入試の相乗効果",
               href: "/ao-guide/strategy",
             }}
             back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
@@ -106,7 +107,7 @@ export default function AoThemePage() {
 
           <ArticleCTA />
         </div>
-      </article>
+      </ArticleContainer>
     </main>
   );
 }

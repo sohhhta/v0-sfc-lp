@@ -2,6 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { LayoutGrid, Clock } from "lucide-react";
 
+// 記事全体のレイアウト幅を一元管理するコンテナ
+export function ArticleContainer({ children }: { children: React.ReactNode }) {
+  return (
+    <article className="max-w-4xl mx-auto px-6">
+      {children}
+    </article>
+  )
+}
+
 // 本文中のハイライト（重要箇所の強調）
 export const Highlight = ({ children }: { children: React.ReactNode }) => (
   <span className="bg-gradient-to-b from-transparent from-60% to-[#C5A059]/30 to-60% font-bold text-[#002147]">

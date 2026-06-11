@@ -7,6 +7,7 @@ import {
   ArticleNavigation,
   ArticleHighlight,
   ArticleHeader,
+  ArticleContainer,
 } from "@/components/article-ui";
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ const tocItems = [
 export default function AoStrategyPage() {
   return (
     <main className="min-h-screen bg-slate-50 py-12">
-      <article className="container mx-auto px-4 max-w-3xl bg-white shadow-sm rounded-2xl overflow-hidden">
+      <ArticleContainer>
 
         <ArticleHeader
           theme="ao"
@@ -92,7 +93,7 @@ export default function AoStrategyPage() {
 
           <ArticleCTA />
         </div>
-      </article>
+      </ArticleContainer>
     </main>
   );
 }
