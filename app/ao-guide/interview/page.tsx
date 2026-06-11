@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ChevronRight } from 'lucide-react'
-import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight, ArticleHeader } from '@/components/article-ui'
+import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight, ArticleHeader, ArticleContainer } from '@/components/article-ui'
 
 const tocItems = [
   { id: "sec1", label: "「圧迫面接」の正体は、教授からの知的なディスカッション" },
@@ -39,7 +39,7 @@ export default function InterviewPage() {
       />
       
       <main className="pt-32 md:pt-40 pb-20">
-        <article className="max-w-4xl mx-auto px-6">
+        <ArticleContainer>
           <ArticleHeader
             theme="ao"
             category="SFC AO入試 対策ガイド"
@@ -132,7 +132,7 @@ export default function InterviewPage() {
               </Link>
             </div>
           </div>
-        </article>
+        </ArticleContainer>
       </main>
     </div>
   )

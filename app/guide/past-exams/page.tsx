@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ChevronRight } from 'lucide-react'
-import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight, ArticleHeader } from '@/components/article-ui'
+import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight, ArticleHeader, ArticleContainer } from '@/components/article-ui'
 
 const tocItems = [
   { id: "sec1", label: "いきなり資料を読み始めない。「設問の要求」を正確に把握する" },
@@ -39,7 +39,7 @@ export default function PastExamsPage() {
       />
       
       <main className="pt-32 md:pt-40 pb-20">
-        <article className="max-w-4xl mx-auto px-6">
+        <ArticleContainer>
           {/* ヘッダー */}
           <ArticleHeader
             theme="essay"
@@ -135,7 +135,7 @@ export default function PastExamsPage() {
               </Link>
             </div>
           </div>
-        </article>
+        </ArticleContainer>
       </main>
     </div>
   )
