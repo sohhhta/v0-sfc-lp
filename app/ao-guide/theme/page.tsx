@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import Link from "next/link";
-import { ChevronRight, Clock } from "lucide-react";
 import {
   ArticleH2,
   ArticleCTA,
@@ -8,6 +6,7 @@ import {
   AuthorBox,
   ArticleNavigation,
   ArticleHighlight,
+  ArticleHeader,
 } from "@/components/article-ui";
 
 export const metadata: Metadata = {
@@ -36,20 +35,12 @@ export default function AoThemePage() {
     <main className="min-h-screen bg-slate-50 py-12">
       <article className="container mx-auto px-4 max-w-3xl bg-white shadow-sm rounded-2xl overflow-hidden">
 
-        <header className="bg-[#002147] text-white p-8 md:p-12">
-          <div className="flex items-center gap-2 text-[#C5A059] text-sm font-bold mb-4">
-            <Link href="/ao-guide/articles" className="hover:underline">対策記事一覧</Link>
-            <ChevronRight className="w-4 h-4" />
-            <span>テーマ設定編</span>
-          </div>
-          <h1 className="text-2xl md:text-4xl font-bold leading-tight md:leading-normal mb-6">
-            慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠
-          </h1>
-          <div className="flex items-center gap-6 text-sm text-white/80 border-t border-white/20 pt-4">
-            <span className="font-bold text-white">監修：佐藤颯太</span>
-            <span className="flex items-center"><Clock size={16} className="mr-1.5 text-[#C5A059]" /> 6分で読めます</span>
-          </div>
-        </header>
+        <ArticleHeader
+          theme="ao"
+          category="SFC AO入試 対策ガイド"
+          title={<>【テーマ設定編】自分だけの<br className="hidden md:block" />研究テーマを見つける3ステップ</>}
+          readTime={6}
+        />
 
         <div className="p-8 md:p-12 text-slate-800">
           <p className="mb-8 leading-relaxed text-slate-700 md:text-lg">

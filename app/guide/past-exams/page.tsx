@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ChevronRight, Clock } from 'lucide-react'
-import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight } from '@/components/article-ui'
+import { ChevronRight } from 'lucide-react'
+import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight, ArticleHeader } from '@/components/article-ui'
 
 const tocItems = [
   { id: "sec1", label: "いきなり資料を読み始めない。「設問の要求」を正確に把握する" },
@@ -41,18 +41,12 @@ export default function PastExamsPage() {
       <main className="pt-32 md:pt-40 pb-20">
         <article className="max-w-4xl mx-auto px-6">
           {/* ヘッダー */}
-          <header className="mb-12 text-center">
-            <div className="inline-block px-4 py-1 bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold tracking-widest mb-6 rounded-full">
-              SFC小論文 対策ガイド
-            </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-[#002147] leading-[1.3] mb-8 font-serif">
-              【過去問演習編】白紙から合格答案を<br className="hidden md:block" />組み立てる思考プロセスの可視化
-            </h1>
-            <div className="flex items-center justify-center text-gray-500 text-sm space-x-6 border-y border-gray-100 py-4">
-              <span className="flex items-center"><Clock size={16} className="mr-1.5 text-[#800000]" /> 6分で読めます</span>
-              <span className="font-bold text-[#002147]">監修：佐藤颯太</span>
-            </div>
-          </header>
+          <ArticleHeader
+            theme="essay"
+            category="SFC小論文 対策ガイド"
+            title={<>【過去問演習編】白紙から合格答案を組み立てる<br className="hidden md:block" />思考プロセスの可視化</>}
+            readTime={6}
+          />
 
           <TableOfContents items={tocItems} />
 

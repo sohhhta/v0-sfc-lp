@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ChevronRight, Clock } from 'lucide-react'
-import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight } from '@/components/article-ui'
+import { ChevronRight } from 'lucide-react'
+import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight, ArticleHeader } from '@/components/article-ui'
 
 const tocItems = [
   { id: "sec1", label: "なぜ、あなたの小論文は「評価の対象」にならないのか？" },
@@ -41,18 +41,12 @@ export default function LogicWritingPage() {
       <main className="pt-32 md:pt-40 pb-20">
         <article className="max-w-4xl mx-auto px-6">
           {/* ヘッダー */}
-          <header className="mb-12 text-center">
-            <div className="inline-block px-4 py-1 bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold tracking-widest mb-6 rounded-full">
-              SFC小論文 対策ガイド
-            </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-[#002147] leading-[1.3] mb-8 font-serif">
-              慶應SFCの小論文で<br className="hidden md:block" />「合格点」に届かない理由とは？
-            </h1>
-            <div className="flex items-center justify-center text-gray-500 text-sm space-x-6 border-y border-gray-100 py-4">
-              <span className="flex items-center"><Clock size={16} className="mr-1.5 text-[#800000]" /> 5分で読めます</span>
-              <span className="font-bold text-[#002147]">監修：佐藤颯太</span>
-            </div>
-          </header>
+          <ArticleHeader
+            theme="essay"
+            category="SFC小論文 対策ガイド"
+            title={<>【実践編】合格点に届かない理由と<br className="hidden md:block" />ロジカルライティング</>}
+            readTime={5}
+          />
 
           {/* 共通の目次コンポーネントを適用 */}
           <TableOfContents items={tocItems} />
@@ -121,7 +115,7 @@ export default function LogicWritingPage() {
               多くの人が「SFCの小論文は特殊すぎて、併願校の対策にならない」と勘違いしています。しかし、佐藤塾の塾生たちは、SFCのために磨いた力で、<ArticleHighlight>青山学院、法政、立教、中央</ArticleHighlight>といった難関大学にも次々と合格しています。
             </p>
             <p className="mb-12">
-              これは、佐藤塾で教える内容が単なる小論文のテクニックではなく、どこでも通用する「本質的な知力」そのものだからです。SFCという最高峰を目指す過程で培われる圧倒的な論理力は、一般入試の現代文や他学部の小論文をも容易に��駕する強力な武器になります。
+              これは、佐藤塾で教える内容が単なる小論文のテクニックではなく、どこでも通用する「本質的な知力」そのものだからです。SFCという最高峰を目指す過程で培われる圧倒的な論理力は、一般入試��現代文や他学部の小論文をも容易に��駕する強力な武器になります。
             </p>
 
             {/* 塾長プロフィール */}

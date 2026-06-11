@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ChevronRight, Clock } from 'lucide-react'
-import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight } from '@/components/article-ui'
+import { ChevronRight } from 'lucide-react'
+import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight, ArticleHeader } from '@/components/article-ui'
 
 const tocItems = [
   { id: "sec1", label: "「圧迫面接」の正体は、教授からの知的なディスカッション" },
@@ -40,20 +40,12 @@ export default function InterviewPage() {
       
       <main className="pt-32 md:pt-40 pb-20">
         <article className="max-w-4xl mx-auto px-6">
-          <header className="bg-[#002147] text-white p-8 md:p-12 rounded-2xl mb-12">
-            <div className="flex items-center gap-2 text-[#C5A059] text-sm font-bold mb-4">
-              <Link href="/ao-guide" className="hover:underline">AO入試ガイド</Link>
-              <ChevronRight className="w-4 h-4" />
-              <span>面接対策編</span>
-            </div>
-            <h1 className="text-2xl md:text-4xl font-bold leading-tight md:leading-normal mb-6">
-              【面接対策編】面接官の「圧迫」を「対話」に変える、主導権の握り方
-            </h1>
-            <div className="flex items-center gap-6 text-sm text-white/80 border-t border-white/20 pt-4">
-              <span className="font-bold text-white">監修：佐藤颯太</span>
-              <span className="flex items-center"><Clock size={16} className="mr-1.5 text-[#C5A059]" /> 5分で読めます</span>
-            </div>
-          </header>
+          <ArticleHeader
+            theme="ao"
+            category="SFC AO入試 対策ガイド"
+            title={<>【面接対策編】面接官の「圧迫」を<br className="hidden md:block" />「対話」に変える、主導権の握り方</>}
+            readTime={5}
+          />
 
           <TableOfContents items={tocItems} />
 
