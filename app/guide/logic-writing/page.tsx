@@ -1,5 +1,4 @@
-'use client'
-
+import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
@@ -12,6 +11,32 @@ const tocItems = [
   { id: "sec3", label: "逆転合格に必要な「準備期間」の真実" },
   { id: "sec4", label: "SFC対策で磨いた力は、一生モノの財産になる" },
 ];
+
+const articleTitle = "【実践編】合格点に届かない理由とロジカルライティング";
+const articleDescription = "慶應SFCの小論文で合格点に届かない本当の理由を解説。才能やひらめきではなく、再現性のある「論理の組み立て方」と圧倒的な演習量こそが逆転合格の鍵であることを伝えます。";
+
+export const metadata: Metadata = {
+  title: `${articleTitle} | 佐藤塾`,
+  description: articleDescription,
+  openGraph: {
+    title: `${articleTitle} | 佐藤塾`,
+    description: articleDescription,
+    images: [
+      {
+        url: `/api/og?title=${encodeURIComponent(articleTitle)}`,
+        width: 1200,
+        height: 630,
+        alt: articleTitle,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${articleTitle} | 佐藤塾`,
+    description: articleDescription,
+    images: [`/api/og?title=${encodeURIComponent(articleTitle)}`],
+  },
+};
 
 export default function LogicWritingPage() {
   const logicJsonLd = {

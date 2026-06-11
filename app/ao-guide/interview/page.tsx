@@ -1,5 +1,4 @@
-'use client'
-
+import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
@@ -12,6 +11,32 @@ const tocItems = [
   { id: "sec3", label: "想定外の質問には「誠実さと未来志向」で切り返す" },
   { id: "sec4", label: "佐藤塾の1on1が「対話力」を飛躍的に高める理由" },
 ];
+
+const articleTitle = "【面接対策編】面接官の「圧迫」を「対話」に変える、主導権の握り方";
+const articleDescription = "SFCのAO入試面接で受験生が恐れる「鋭いツッコミ」の正体と、暗記に頼らず本質的な議論を展開するためのマインドセット・準備方法を解説します。";
+
+export const metadata: Metadata = {
+  title: `${articleTitle} | 佐藤塾`,
+  description: articleDescription,
+  openGraph: {
+    title: `${articleTitle} | 佐藤塾`,
+    description: articleDescription,
+    images: [
+      {
+        url: `/api/og?title=${encodeURIComponent(articleTitle)}`,
+        width: 1200,
+        height: 630,
+        alt: articleTitle,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${articleTitle} | 佐藤塾`,
+    description: articleDescription,
+    images: [`/api/og?title=${encodeURIComponent(articleTitle)}`],
+  },
+};
 
 export default function InterviewPage() {
   const articleJsonLd = {
@@ -107,7 +132,7 @@ export default function InterviewPage() {
                   <h4 className="text-xl font-bold text-[#002147] font-serif">佐藤 颯太 <span className="text-sm font-medium text-gray-500">Sota Sato</span></h4>
                 </div>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数十名の受験生と向き合い、書類作成から面接対策まで一貫した伴走指導を実施。本番で実力を120%発揮させるメンタルと論理的思考力の育成に定評がある。
+                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数十名の受験生と向き合い、書類作成から面接対策まで���貫した伴走指導を実施。本番で実力を120%発揮させるメンタルと論理的思考力の育成に定評がある。
                 </p>
                 <Link href="/#contact-form" className="text-sm font-bold text-[#800000] hover:underline inline-flex items-center">
                   塾長から詳しい指導方針を聞く <ChevronRight size={14} className="ml-1" />
