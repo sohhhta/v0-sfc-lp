@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import Link from "next/link";
-import { ChevronRight, Clock } from "lucide-react";
 import {
   ArticleH2,
   ArticleCTA,
@@ -8,6 +6,7 @@ import {
   AuthorBox,
   ArticleNavigation,
   ArticleHighlight,
+  ArticleHeader,
 } from "@/components/article-ui";
 
 export const metadata: Metadata = {
@@ -35,20 +34,12 @@ export default function AoStrategyPage() {
     <main className="min-h-screen bg-slate-50 py-12">
       <article className="container mx-auto px-4 max-w-3xl bg-white shadow-sm rounded-2xl overflow-hidden">
 
-        <header className="bg-[#002147] text-white p-8 md:p-12">
-          <div className="flex items-center gap-2 text-[#C5A059] text-sm font-bold mb-4">
-            <Link href="/ao-guide" className="hover:underline">AO入試ガイド</Link>
-            <ChevronRight className="w-4 h-4" />
-            <span>戦略・マインド編</span>
-          </div>
-          <h1 className="text-2xl md:text-4xl font-bold leading-tight md:leading-normal mb-6">
-            慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由
-          </h1>
-          <div className="flex items-center gap-6 text-sm text-white/80 border-t border-white/20 pt-4">
-            <span className="font-bold text-white">監修：佐藤颯太</span>
-            <span className="flex items-center"><Clock size={16} className="mr-1.5 text-[#C5A059]" /> 5分で読めます</span>
-          </div>
-        </header>
+        <ArticleHeader
+          theme="ao"
+          category="SFC AO入試 対策ガイド"
+          title={<>【二刀流戦略】一般入試と<br className="hidden md:block" />AO入試の相乗効果</>}
+          readTime={5}
+        />
 
         <div className="p-8 md:p-12 text-slate-800">
           <TableOfContents items={tocItems} />

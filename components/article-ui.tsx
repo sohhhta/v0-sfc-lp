@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { LayoutGrid } from "lucide-react";
+import { LayoutGrid, Clock } from "lucide-react";
 
 // 本文中のハイライト（重要箇所の強調）
 export const Highlight = ({ children }: { children: React.ReactNode }) => (
@@ -134,6 +134,66 @@ export function ArticleHighlight({ children }: { children: React.ReactNode }) {
     <strong className="font-bold border-b-[3px] border-[#C5A059]/60 pb-0.5">
       {children}
     </strong>
+  );
+}
+
+// 記事のファーストビュー（小論文＝白／AO＝紺背景でテーマ出し分け）
+export function ArticleHeader({
+  theme,
+  category,
+  title,
+  readTime,
+  author = "佐藤颯太",
+}: {
+  theme: "essay" | "ao";
+  category: string;
+  title: React.ReactNode;
+  readTime: number;
+  author?: string;
+}) {
+  const isAo = theme === "ao";
+
+  return (
+    <header
+      className={`mb-12 text-center ${
+        isAo ? "-mx-6 px-6 pt-16 pb-20 bg-[#002147] text-white" : ""
+      }`}
+    >
+      <div
+        className={`inline-block px-4 py-1 text-xs font-bold tracking-widest mb-6 rounded-full ${
+          isAo
+            ? "bg-[#C5A059]/20 text-[#C5A059] border border-[#C5A059]/30"
+            : "bg-[#C5A059]/10 text-[#C5A059]"
+        }`}
+      >
+        {category}
+      </div>
+      <h1
+        className={`text-3xl md:text-5xl font-bold leading-[1.3] mb-8 font-serif ${
+          isAo ? "text-white" : "text-[#002147]"
+        }`}
+      >
+        {title}
+      </h1>
+      <div
+        className={`flex items-center justify-center text-sm space-x-6 py-4 max-w-2xl mx-auto ${
+          isAo
+            ? "text-slate-300 border-y border-white/10"
+            : "text-gray-500 border-y border-gray-100"
+        }`}
+      >
+        <span className="flex items-center">
+          <Clock
+            size={16}
+            className={`mr-1.5 ${isAo ? "text-[#C5A059]" : "text-[#800000]"}`}
+          />{" "}
+          {readTime}分で読めます
+        </span>
+        <span className={`font-bold ${isAo ? "text-white" : "text-[#002147]"}`}>
+          監修：{author}
+        </span>
+      </div>
+    </header>
   );
 }
 
