@@ -1,5 +1,4 @@
-'use client'
-
+import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
@@ -12,6 +11,32 @@ const tocItems = [
   { id: "sec3", label: "書き始める前の勝負。「論理のアウトライン」を構築する" },
   { id: "sec4", label: "SFCが求める「当事者意識（オーナーシップ）」の示し方" },
 ];
+
+const articleTitle = "【過去問演習編】白紙から合格答案を組み立てる思考プロセスの可視化";
+const articleDescription = "慶應SFCの過去問演習で差がつく「思考プロセス」を可視化。設問の要求の把握から真の問題発見、論理のアウトライン構築、当事者意識の示し方まで、合格答案を組み立てる具体的な手順を解説します。";
+
+export const metadata: Metadata = {
+  title: `${articleTitle} | 佐藤塾`,
+  description: articleDescription,
+  openGraph: {
+    title: `${articleTitle} | 佐藤塾`,
+    description: articleDescription,
+    images: [
+      {
+        url: `https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`,
+        width: 1200,
+        height: 630,
+        alt: articleTitle,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${articleTitle} | 佐藤塾`,
+    description: articleDescription,
+    images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
+  },
+};
 
 export default function PastExamsPage() {
   const articleJsonLd = {
@@ -64,7 +89,7 @@ export default function PastExamsPage() {
               SFCの小論文では、数十ページに及ぶ膨大な資料が提示されることがあります。試験開始と同時に1ページ目から丁寧に資料を読み始めてしまうと、時間がいくらあっても足りません。
             </p>
             <p className="mb-6">
-              まず行うべきは<ArticleHighlight>「設問文の熟読と条件の抽出」</ArticleHighlight>です。例えば、「資料A〜Dを踏まえ、現在の社会における問題点を〇〇字以内で要約し、それに対するあなたの解決策を〇〇字で提案しなさい」といった具体的な要求をマーキングします。「何について書くべきか」「どの資料を使うよう指定されているか」「字数配分はどうなっているか」という<ArticleHighlight>論理の外枠（制約）</ArticleHighlight>を最初に確定させることが、すべての出発点となります。
+              まず行うべきは<ArticleHighlight>「設問文の熟読と条件の抽出」</ArticleHighlight>です。例えば、「資料A〜Dを踏まえ、現在の社会における問題点を〇〇字以内で要約し、それに対するあなたの解決策を〇〇字で提案しなさい」といった具体的な要求をマーキングします。「何について書くべきか」「どの資料を使うよう指定されているか」「字数配分はどうなっているか」という<ArticleHighlight>論理の外枠（制約）</ArticleHighlight>を最初に確定させることが、すべての��発点となります。
             </p>
 
             <ArticleH2 id="sec2">2. 資料から「真の問題」を見つけ出す思考法</ArticleH2>

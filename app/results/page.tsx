@@ -1,8 +1,30 @@
-'use client'
-
+import { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import { Check, PenTool } from 'lucide-react'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: "合格実績 | 佐藤塾",
+  description: "合格率50.0%を誇る佐藤塾の慶應SFC（総合政策学部・環境情報学部）合格実績と、逆転合格を果たした生徒たちの声をご紹介します。",
+  openGraph: {
+    title: "合格実績 | 佐藤塾",
+    description: "合格率50.0%を誇る佐藤塾の慶應SFC（総合政策学部・環境情報学部）合格実績と、逆転合格を果たした生徒たちの声をご紹介します。",
+    images: [
+      {
+        url: "/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "合格実績 | 佐藤塾",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "合格実績 | 佐藤塾",
+    description: "合格率50.0%を誇る佐藤塾の慶應SFC（総合政策学部・環境情報学部）合格実績と、逆転合格を果たした生徒たちの声をご紹介します。",
+    images: ["/hero.jpg"],
+  },
+}
 
 // SectionTitle component - exactly as in app/page.tsx
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
