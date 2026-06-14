@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: articleDescription,
     images: [
       {
-        url: `/api/og?title=${encodeURIComponent(articleTitle)}`,
+        url: `https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`,
         width: 1200,
         height: 630,
         alt: articleTitle,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${articleTitle} | 佐藤塾`,
     description: articleDescription,
-    images: [`/api/og?title=${encodeURIComponent(articleTitle)}`],
+    images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
   },
 };
 

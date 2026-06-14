@@ -10,17 +10,29 @@ import {
   ArticleContainer,
 } from "@/components/article-ui";
 
+const articleTitle = "慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠";
+const articleDescription = "「ニュースで見るような大きな社会問題じゃないと合格できない？」そんな不安を解き、SFCの教授陣が本当に求めている「内発的な動機」を見つけるための具体的なステップと、陥りがちな思考の罠を解説します。";
+
 export const metadata: Metadata = {
-  title: "慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠",
-  description: "「ニュースで見るような大きな社会問題じゃないと合格できない？」そんな不安を解き、SFCの教授陣が本当に求めている「内発的な動機」を見つけるための具体的なステップと、陥りがちな思考の罠を解説します。",
+  title: `${articleTitle} | 佐藤塾`,
+  description: articleDescription,
   openGraph: {
+    title: `${articleTitle} | 佐藤塾`,
+    description: articleDescription,
     images: [
       {
-        url: `/api/og?title=${encodeURIComponent("慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠")}`,
+        url: `https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`,
         width: 1200,
         height: 630,
+        alt: articleTitle,
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${articleTitle} | 佐藤塾`,
+    description: articleDescription,
+    images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
   },
 };
 
@@ -68,7 +80,7 @@ export default function AoThemePage() {
           <p className="mb-6 leading-relaxed">では、どうすれば自分だけのテーマが見つかるのでしょうか。特別な実績や海外経験は全く不要です。以下の3つのステップで、自分の内面を掘り下げてみましょう。</p>
 
           <h3 className="text-lg font-bold text-[#002147] mb-3 mt-8">Step1. 日常の中で見過ごせない「違和感」や「偏愛」を書き出す</h3>
-          <p className="mb-6 leading-relaxed">まずは、日々の生活の中で感じる些細な「不便さ」や「怒り」、あるいは時間を忘れて没頭してしまう「好きなこと（偏愛）」をノートに書き出してみてください。「なぜあのシステムは使いにくいのか」「なぜこの地域の伝統は廃れていくのか」といった、等身大の気づきが最高のスタート地点になります。</p>
+          <p className="mb-6 leading-relaxed">まずは、日々の生活の中で感じる些細な「不便さ」や「怒り」、あるいは時間を��れて没頭してしまう「好きなこと（偏愛）」をノートに書き出してみてください。「なぜあのシステムは使いにくいのか」「なぜこの地域の伝統は廃れていくのか」といった、等身大の気づきが最高のスタート地点になります。</p>
 
           <h3 className="text-lg font-bold text-[#002147] mb-3 mt-8">Step2. 「なぜ？」を繰り返し、個人的な想いの根源を探る</h3>
           <p className="mb-6 leading-relaxed">次に、書き出した違和感に対して「なぜそう感じるのか？」を5回繰り返します。自分自身の過去の体験（原体験）を丁寧に紐解き、表面的な興味の奥にある「自分自身の価値観の根源」にアクセスするプロセスです。</p>

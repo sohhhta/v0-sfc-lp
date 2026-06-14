@@ -10,17 +10,29 @@ import {
   ArticleContainer,
 } from "@/components/article-ui";
 
+const articleTitle = "慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由";
+const articleDescription = "「特別な実績がないとSFCのAO入試には受からない」は誤解です。一般入試とAO入試を並行する「二刀流」戦略と、原体験の圧倒的な深掘りこそが合格への最短距離。SFC専門塾がその理由を解説します。";
+
 export const metadata: Metadata = {
-  title: "慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由",
-  description: "「特別な実績がないとSFCのAO入試には受からない」は誤解です。一般入試とAO入試を並行する「二刀流」戦略と、原体験の圧倒的な深掘りこそが合格への最短距離。SFC専門塾がその理由を解説します。",
+  title: `${articleTitle} | 佐藤塾`,
+  description: articleDescription,
   openGraph: {
+    title: `${articleTitle} | 佐藤塾`,
+    description: articleDescription,
     images: [
       {
-        url: `/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由")}`,
+        url: `https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`,
         width: 1200,
         height: 630,
+        alt: articleTitle,
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${articleTitle} | 佐藤塾`,
+    description: articleDescription,
+    images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
   },
 };
 
