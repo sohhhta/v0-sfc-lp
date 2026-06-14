@@ -141,7 +141,7 @@ export default function InterviewPage() {
             </div>
 
             <ArticleNavigation 
-              prev={{ title: "【テーマ設定編】自分だけの研究テーマを見つける3ステップ", href: "/ao-guide/theme" }} 
+              prev={{ title: "【志望理由書編】SFC教授の心を動かす「志望理由書」の書き方と構成", href: "/ao-guide/statement" }} 
               back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }} 
             />
 
