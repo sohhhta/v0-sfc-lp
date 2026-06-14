@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
 import {
   TableOfContents,
   ArticleH2,
@@ -10,6 +8,7 @@ import {
   ArticleHeader,
   ArticleContainer,
   ArticleNavigation,
+  AuthorBox,
 } from "@/components/article-ui";
 
 const tocItems = [
@@ -174,38 +173,7 @@ export default function StatementPage() {
               <ArticleHighlight>塾長がSFCの評価基準に合わせて緻密な論理構造へと組み上げます。</ArticleHighlight>
             </p>
 
-            <div className="mt-24 p-8 border border-gray-200 rounded-3xl flex flex-col md:flex-row items-center gap-8 bg-slate-50/50">
-              <div className="relative w-24 h-24 flex-shrink-0 border-2 border-[#C5A059] rounded-full overflow-hidden">
-                <Image
-                  src="/og-image.png"
-                  alt="佐藤塾 塾長 佐藤颯太"
-                  fill
-                  className="object-cover object-top scale-125"
-                  unoptimized
-                />
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-bold text-[#C5A059] uppercase tracking-tighter">
-                    監修者
-                  </span>
-                  <h4 className="text-xl font-bold text-[#002147] font-serif">
-                    佐藤 颯太{" "}
-                    <span className="text-sm font-medium text-gray-500">Sota Sato</span>
-                  </h4>
-                </div>
-                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数十名の受験生と向き合い、書類作成から面接対策まで一貫した伴走指導を実施。本番で実力を120%発揮させるメンタルと論理的思考力の育成に定評がある。
-                </p>
-                <Link
-                  href="/#contact-form"
-                  className="text-sm font-bold text-[#800000] hover:underline inline-flex items-center"
-                >
-                  塾長から詳しい指導方針を聞く{" "}
-                  <ChevronRight size={14} className="ml-1" />
-                </Link>
-              </div>
-            </div>
+            <AuthorBox />
 
             <ArticleNavigation
               prev={{ title: "【テーマ設定編】自分だけの研究テーマを見つける3ステップ", href: "/ao-guide/theme" }}
