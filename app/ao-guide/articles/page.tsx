@@ -124,6 +124,32 @@ export default function AoArticlesPortal() {
             </div>
           </Link>
 
+          {/* 記事カード: 任意提出資料編 */}
+          <Link href="/ao-guide/portfolio" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">
+              <Image 
+                src={`/api/og?title=${encodeURIComponent("【任意提出資料編】「活動実績ゼロ」からでも勝負できるポートフォリオの作り方")}`} 
+                alt="サムネイル" 
+                width={1200}
+                height={630}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                unoptimized
+              />
+            </div>
+            <div className="p-6 md:p-8 flex flex-col flex-grow">
+              <span className="text-xs font-bold text-[#C5A059] mb-3 tracking-wider">PORTFOLIO</span>
+              <h3 className="text-lg md:text-xl font-bold text-[#002147] mb-4 leading-tight group-hover:text-[#800000] transition-colors">
+                【任意提出資料編】「活動実績ゼロ」からでも勝負できるポートフォリオの作り方
+              </h3>
+              <p className="text-sm text-slate-600 line-clamp-3 mb-6 flex-grow leading-relaxed">
+                「アプリ開発や起業の経験がないとSFCは受からない」という誤解を解き、活動実績ゼロからでも教授の心を動かす「思考プロセスの視覚化」によるポートフォリオ作成術を解説します。
+              </p>
+              <div className="flex items-center text-[#800000] font-bold text-sm mt-auto">
+                記事を読む <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </Link>
+
           {/* 第3号記事カード: 面接対策編 */}
           <Link href="/ao-guide/interview" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">

@@ -178,7 +178,7 @@ export default function StatementPage() {
             <ArticleNavigation
               prev={{ title: "【テーマ設定編】自分だけの研究テーマを見つける3ステップ", href: "/ao-guide/theme" }}
               back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
-              next={{ title: "【面接対策編】面接官の「圧迫」を「対話」に変える", href: "/ao-guide/interview" }}
+              next={{ title: "【任意提出資料編】「活動実績ゼロ」からでも勝負できるポートフォリオの作り方", href: "/ao-guide/portfolio" }}
             />
 
             <div className="mt-20 p-10 bg-[#002147] text-white rounded-3xl text-center shadow-2xl">
