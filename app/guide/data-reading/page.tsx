@@ -131,8 +131,8 @@ export default function DataReadingPage() {
           <Link className="text-slate-400 hover:text-[#002147] transition-colors p-2" href="/guide/essay/articles">
             <LayoutGrid size={24}/>
           </Link>
-          <Link className="flex items-center text-slate-500 hover:text-[#002147] transition-colors group w-full sm:w-auto justify-end" href="/guide/time-management">
-            <div className="text-sm text-right">
+          <Link className="flex items-center text-right text-[#002147] hover:text-[#C5A059] transition-colors group w-full sm:w-auto justify-end" href="/guide/time-management">
+            <div className="text-sm">
               <div className="text-slate-400 mb-1">次の記事</div>
               <div className="font-bold">時間配分編</div>
             </div>
