@@ -1,10 +1,19 @@
 import { Resend } from 'resend'
 import { NextRequest, NextResponse } from 'next/server'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(request: NextRequest) {
   try {
+    // Resendクライアントはリクエスト時に初期化（ビルド時の評価を避ける）
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      console.error('RESEND_API_KEY is not set')
+      return NextResponse.json(
+        { error: 'メール送信の設定が完了していません' },
+        { status: 500 }
+      )
+    }
+    const resend = new Resend(apiKey)
+
     const body = await request.json()
     const { name, email, phone, plan, message } = body
 
