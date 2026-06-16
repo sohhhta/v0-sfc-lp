@@ -130,15 +130,13 @@ export default function TimeManagementPage() {
           <Link className="text-slate-400 hover:text-[#002147] transition-colors p-2" href="/guide/essay/articles">
             <LayoutGrid size={24}/>
           </Link>
-          <div className="w-full sm:w-auto opacity-50 cursor-not-allowed">
-            <div className="flex items-center text-right text-slate-400 justify-end">
-              <div className="text-sm">
-                <div className="text-slate-400 mb-1">次の記事</div>
-                <div className="font-bold">頻出テーマ編(準備中)</div>
-              </div>
-              <ArrowRight className="ml-2" size={20} />
+          <Link className="flex items-center text-right text-[#002147] hover:text-[#C5A059] transition-colors group w-full sm:w-auto justify-end" href="/guide/tech-society">
+            <div className="text-sm">
+              <div className="text-slate-400 mb-1">次の記事</div>
+              <div className="font-bold">頻出テーマ編</div>
             </div>
-          </div>
+            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={20}/>
+          </Link>
         </div>
       </ArticleContainer>
     </main>

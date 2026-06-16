@@ -148,6 +148,32 @@ export default function EssayArticlesPortal() {
               </div>
             </div>
           </Link>
+
+          {/* 第5号記事カード: 頻出テーマ編 */}
+          <Link href="/guide/tech-society" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">
+              <Image
+                src={`/api/og?title=${encodeURIComponent("【頻出テーマ編】SFC小論文で狙われる「テクノロジーと社会問題」の攻略法")}`}
+                alt="サムネイル"
+                width={1200}
+                height={630}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                unoptimized
+              />
+            </div>
+            <div className="p-6 md:p-8 flex flex-col flex-grow">
+              <span className="text-xs font-bold text-[#C5A059] mb-3 tracking-wider">TECH & SOCIETY</span>
+              <h3 className="text-lg md:text-xl font-bold text-[#002147] mb-4 leading-tight group-hover:text-[#800000] transition-colors">
+                【頻出テーマ編】SFC小論文で狙われる「テクノロジーと社会問題」の攻略法
+              </h3>
+              <p className="text-sm text-slate-600 line-clamp-3 mb-6 flex-grow leading-relaxed">
+                AIやデータサイエンスなどのテクノロジーを用いて、現代の社会課題をどう解決するか。SFC小論文で最も頻出するテーマに対し、教授陣が高く評価する「SFC的アプローチ」の型を解説します。
+              </p>
+              <div className="flex items-center text-[#800000] font-bold text-sm mt-auto">
+                記事を読む <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </main>
