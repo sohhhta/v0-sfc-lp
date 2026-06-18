@@ -334,7 +334,7 @@ export default function ResultsPage() {
                     SFC合格レベル
                   </div>
                   <p className="text-slate-800 text-sm leading-relaxed">
-                    「<strong className="text-[#002147]">【P】</strong>地方の医療過疎問題に対し、AI画像診断技術の導入を推進すべきだ。<strong className="text-[#002147]">【R】</strong>なぜなら、専門医不足の地域では初期診断の遅れが深刻化しており、テクノロジーによる代替が急務だからである。<strong className="text-[#002147]">【E】</strong>資料2のグラフが示す通り、A県では医師1人あたりの負担が全国平均の2倍を超えている。AIに定型的な診断を代替させることで、<strong className="text-[#002147]">【P】</strong>医師は患者との対話や治療方針の決定という『人間にしかできない医療』に専念できるようになり、結果として地域医療の質は向上する。」
+                    「<strong className="text-[#002147]">【P】</strong>地方の医療過疎問題に対し、AI画像診断技術の導入を推進すべきだと考える。<strong className="text-[#002147]">【R】</strong>なぜなら、専門医不足の地域では初期診断の遅れが深刻化しており、テクノロジーによる代替が急務だと考えるからである。<strong className="text-[#002147]">【E】</strong>具体的には、資料2のグラフが示す通り、A県では医師1人あたりの負担が全国平均の2倍を超えている。つまり、AIに定型的な診断を代替させることで、<strong className="text-[#002147]">【P】</strong>医師は患者との対話や治療方針の決定という『人間にしかできない医療』に専念できるようになり、結果として地域医療の質は向上すると考えるのである。」
                   </p>
                 </div>
 
