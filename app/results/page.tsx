@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
-import { Check, PenTool } from 'lucide-react'
+import { Check, PenTool, AlertCircle, ArrowRight, CheckCircle2 } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: "合格率50.0%を誇る佐藤塾の慶應SFC（総合政策学部・環境情報学部）合格実績と、逆転合格を果たした生徒たちの声をご紹介します。",
     images: [
       {
-        url: "/hero.jpg",
+        url: "https://www.sfc-satojuku.com/hero.jpg",
         width: 1200,
         height: 630,
         alt: "合格実績 | 佐藤塾",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "合格実績 | 佐藤塾",
     description: "合格率50.0%を誇る佐藤塾の慶應SFC（総合政策学部・環境情報学部）合格実績と、逆転合格を果たした生徒たちの声をご紹介します。",
-    images: ["/hero.jpg"],
+    images: ["https://www.sfc-satojuku.com/hero.jpg"],
   },
 }
 
@@ -56,7 +56,7 @@ export default function ResultsPage() {
     "@type": "WebPage",
     "name": "慶應SFC 合格実績・合格者の声 | 佐藤塾",
     "description": "6年間累計39名、2026年度合格率 50.0%（14名中7名合格）を叩き出す佐藤塾の年度別合格推移と合格者の生の声をご紹介。",
-    "image": "https://lifeeling.jp/hero.jpg",
+    "image": "https://www.sfc-satojuku.com/hero.jpg",
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": 3,
@@ -273,154 +273,171 @@ export default function ResultsPage() {
         </div>
       </section>
 
-      {/* Success Stories Section (Enhanced with comprehensive detail panels) */}
-      <section className="py-16 md:py-24 px-4 bg-white">
+      {/* Before / After Text Section */}
+      <section className="py-16 md:py-20 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="入塾時の課題を克服し、慶應SFCへの逆転合格を果たした先輩たちのリアルな奇跡">合格者の声・先輩たちの軌跡</SectionTitle>
-
-          <div className="space-y-14 md:space-y-18">
-            {/* Story 1: O-san */}
-            <div className="bg-white border-t-4 border-[#002147] shadow-xl rounded-b-xl overflow-hidden border border-slate-100">
-              <div className="bg-slate-50 px-6 py-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div>
-                  <span className="inline-block text-[11px] font-bold text-[#002147] bg-[#002147]/5 px-2.5 py-1 rounded-sm tracking-wider uppercase mb-1">
-                    2026年度 AO入試合格
-                  </span>
-                  <h3 className="text-xl md:text-2xl font-bold font-serif text-[#002147]">総合政策学部合格 / Oさん</h3>
+          <SectionTitle>小論文：たった3ヶ月での劇的変化</SectionTitle>
+          
+          <div className="bg-white rounded-3xl p-6 md:p-10 shadow-lg border border-slate-100 relative mt-8">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 relative">
+              
+              {/* Before */}
+              <div className="flex flex-col h-full bg-slate-50 p-6 md:p-8 rounded-2xl border-t-4 border-slate-300">
+                <div className="flex items-center mb-6">
+                  <span className="bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">入塾前（3ヶ月前）</span>
+                  <h3 className="font-bold text-slate-700 text-lg">感情論と論理の飛躍</h3>
                 </div>
-                <p className="text-xs sm:text-sm font-serif font-bold text-[#C5A059] italic bg-[#002147] px-4 py-2 rounded text-center sm:text-left">
-                  「凡庸な実績」から紡ぎ出した、SFCが求める問題発見の鋭さ
-                </p>
-              </div>
-              <div className="p-6 md:p-10 grid md:grid-cols-3 gap-8">
-                <div className="md:col-span-1 bg-slate-50/50 p-5 rounded-lg border border-slate-100">
-                  <h4 className="text-xs font-bold text-[#800000] tracking-wider uppercase mb-3 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#800000]" /> 入塾時の課題と壁
-                  </h4>
-                  <p className="text-sm text-[#333333] leading-relaxed font-medium">
-                    「全国大会優勝のような輝かしい実績が何もない」――それがOさんの最初の焦りでした。誇れるアピールポイントがなく、自分にはSFCのAO入試に挑戦する資格すらすでにないのではないかと深く悩んでいました。
+                
+                {/* 答案テキスト（Before） */}
+                <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-inner mb-6 relative">
+                  <div className="absolute -top-3 -right-3 bg-red-100 text-red-600 text-xs font-bold px-2 py-1 rounded border border-red-200 transform rotate-12">
+                    不合格答案
+                  </div>
+                  <p className="text-slate-600 text-sm leading-relaxed italic">
+                    「私はAIの進化に反対だ。なぜなら、人間の仕事が奪われてしまうからだ。最近もスーパーのレジが自動化されている。このままでは人間はAIに支配されてしまうため、国はAIの開発を法律で禁止すべきだと思う。」
                   </p>
                 </div>
-                <div className="md:col-span-2 space-y-5">
-                  <div>
-                    <h4 className="text-xs font-bold text-[#002147] tracking-wider uppercase mb-2 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#002147]" /> 佐藤塾による1on1の昇華プロセス
-                    </h4>
-                    <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      塾長との密度の高い1on1面談の中で、Oさんが日頃から強い関心を持っていた「生成AIがもたらす社会の倫理観への影響」という独自のテーマに着目。単なるテクノロジーへの個人的な興味を、SFCの教員陣が最も重視する「現代社会における真の問題を自ら定義し、その解決をメタ視点から模索する知のプロセス」へと徹底的に深掘りし、ブラッシュアップしました。
-                    </p>
-                  </div>
-                  <div className="pt-3 border-t border-slate-100">
-                    <h4 className="text-xs font-bold text-[#C5A059] tracking-wider uppercase mb-2 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" /> 掴み取った未来とSFC基準
-                    </h4>
-                    <p className="text-sm md:text-base text-[#333333] leading-relaxed font-medium bg-[#C5A059]/5 p-3 rounded border border-[#C5A059]/20">
-                      塾長との本質的な対話、そして24時間フル稼働するSFC専用AIとの壁打ちを愚直に繰り返した結果、自身の日常的な問題意識を「SFC基準を満たす圧倒的な研究計画」へと昇華させ、見事志望理由書の段階から最高峰の評価を得て合格。特別な実績がなくとも、思考の鋭さと論理の強度さえあれば勝利できることを完璧に証明してくれました。
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Story 2: K-san */}
-            <div className="bg-white border-t-4 border-[#800000] shadow-xl rounded-b-xl overflow-hidden border border-slate-100">
-              <div className="bg-slate-50 px-6 py-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div>
-                  <span className="inline-block text-[11px] font-bold text-[#800000] bg-[#800000]/5 px-2.5 py-1 rounded-sm tracking-wider uppercase mb-1">
-                    2026年度 一般入試合格
-                  </span>
-                  <h3 className="text-xl md:text-2xl font-bold font-serif text-[#800000]">総合政策学部合格 / Kさん</h3>
+                <div className="bg-white p-4 rounded-xl text-sm text-slate-600 border border-slate-200 flex-grow">
+                  <p className="mb-2 flex items-center text-[#800000] font-bold">
+                    <AlertCircle className="mr-2" size={16}/>
+                    【佐藤塾の添削ポイント】
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2 mb-0">
+                    <li>「AIは仕事を奪う」という思いつきの<strong>感情論</strong>で書かれている。</li>
+                    <li>SFCが求める「具体的な資料（データ）の引用」が一切ない。</li>
+                    <li>「レジの自動化」から「AIの禁止」へと<strong>深刻な論理の飛躍</strong>が起きている。</li>
+                  </ul>
                 </div>
-                <p className="text-xs sm:text-sm font-serif font-bold text-[#002147] italic bg-[#C5A059]/20 px-4 py-2 rounded text-center sm:text-left border border-[#C5A059]/30">
-                  4月入塾の初学者が、「その日中フィードバック」の反復で掴んだ質の勝利
-                </p>
               </div>
-              <div className="p-6 md:p-10 grid md:grid-cols-3 gap-8">
-                <div className="md:col-span-1 bg-slate-50/50 p-5 rounded-lg border border-slate-100">
-                  <h4 className="text-xs font-bold text-[#800000] tracking-wider uppercase mb-3 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#800000]" /> 入塾時の課題と壁
-                  </h4>
-                  <p className="text-sm text-[#333333] leading-relaxed font-medium">
-                    4月に佐藤塾の門をたたいた時、Kさんは本格的な小論文の学習経験が一切ない「完全な初学者」でした。膨大な背景知識や記述スキルが不足しており、資料の正しい読み方すら手探りの状態から、日本最難関とも称されるSFC一般入試への孤独な挑戦が始まりました。
+
+              {/* Arrow Indicator */}
+              <div className="hidden xl:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-[#002147] rounded-full items-center justify-center shadow-xl z-10 border-4 border-white">
+                <ArrowRight className="text-white" size={24}/>
+              </div>
+              <div className="flex xl:hidden justify-center -my-8 relative z-10">
+                <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center shadow-lg border-4 border-white transform rotate-90">
+                  <ArrowRight className="text-white" size={20}/>
+                </div>
+              </div>
+
+              {/* After */}
+              <div className="flex flex-col h-full bg-[#C5A059]/5 p-6 md:p-8 rounded-2xl border-t-4 border-[#C5A059]">
+                <div className="flex items-center mb-6">
+                  <span className="bg-[#C5A059] text-white text-xs font-bold px-3 py-1 rounded-full mr-3">入塾後（本番直前）</span>
+                  <h3 className="font-bold text-[#002147] text-lg">PREP法に基づく論理的思考</h3>
+                </div>
+                
+                {/* 答案テキスト（After） */}
+                <div className="bg-white p-5 rounded-lg border-2 border-[#C5A059]/40 shadow-sm mb-6 relative">
+                  <div className="absolute -top-3 -right-3 bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded border border-green-200 transform rotate-12">
+                    SFC合格レベル
+                  </div>
+                  <p className="text-slate-800 text-sm leading-relaxed">
+                    「<strong className="text-[#002147]">【P】</strong>地方の医療過疎問題に対し、AI画像診断技術の導入を推進すべきだ。<strong className="text-[#002147]">【R】</strong>なぜなら、専門医不足の地域では初期診断の遅れが深刻化しており、テクノロジーによる代替が急務だからである。<strong className="text-[#002147]">【E】</strong>資料2のグラフが示す通り、A県では医師1人あたりの負担が全国平均の2倍を超えている。AIに定型的な診断を代替させることで、<strong className="text-[#002147]">【P】</strong>医師は患者との対話や治療方針の決定という『人間にしかできない医療』に専念できるようになり、結果として地域医療の質は向上する。」
                   </p>
                 </div>
-                <div className="md:col-span-2 space-y-5">
-                  <div>
-                    <h4 className="text-xs font-bold text-[#002147] tracking-wider uppercase mb-2 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#002147]" /> 佐藤塾による「その日中フィードバック」と圧倒的量の担保
-                    </h4>
-                    <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      Kさんはまず、塾の根幹である「ロジカルライティング・メソッド」を基礎から徹底的に脳に叩き込みました。そして、佐藤塾のAI添削環境をフル活用し、他塾ではあり得ない「提出した答案がその日中に必ず添削され、具体的な改善アクション付きで返ってくる」という超高速なサイクルを4月から愚直に継続。疑問や論理のズレを翌日に絶対に持ち越さず、その日のうちに100%修正して次の新しい1本へと進む。この驚異的なサイクルを何ヶ月も反復したからこそ、本番で採点官を唸らせる卓越した「記述の質」が磨き上げられました。
-                    </p>
-                  </div>
-                  <div className="pt-3 border-t border-slate-100">
-                    <h4 className="text-xs font-bold text-[#C5A059] tracking-wider uppercase mb-2 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" /> 掴み取った未来と「量から生まれる質」
-                    </h4>
-                    <p className="text-sm md:text-base text-[#333333] leading-relaxed font-medium bg-[#800000]/5 p-3 rounded border border-[#800000]/20">
-                      「圧倒的な量をこなしたからこそ、本質的な質が生まれる」――それを身を以て体現したKさんは、本番の極限状態でも全くブレない論理構成で答案を書き上げ見事合格。4月からの地道な日々の積み重ねと、日中フィードバックという最高峰の環境の力が、初学者をわずか1年でSFC合格者へと覚醒させた瞬間でした。
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Story 3: Y-san */}
-            <div className="bg-white border-t-4 border-[#C5A059] shadow-xl rounded-b-xl overflow-hidden border border-slate-100">
-              <div className="bg-slate-50 px-6 py-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div>
-                  <span className="inline-block text-[11px] font-bold text-[#C5A059] bg-[#C5A059]/10 px-2.5 py-1 rounded-sm tracking-wider uppercase mb-1">
-                    2026年度 一般入試合格
-                  </span>
-                  <h3 className="text-xl md:text-2xl font-bold font-serif text-[#002147]">環境情報学部合格 / Yさん</h3>
-                </div>
-                <p className="text-xs sm:text-sm font-serif font-bold text-white italic bg-[#800000] px-4 py-2 rounded text-center sm:text-left">
-                  夏の終わりまで部活に捧げた日々。前夜の計画と10分単位の自己管理で掴んだ逆転劇
-                </p>
-              </div>
-              <div className="p-6 md:p-10 grid md:grid-cols-3 gap-8">
-                <div className="md:col-span-1 bg-slate-50/50 p-5 rounded-lg border border-slate-100">
-                  <h4 className="text-xs font-bold text-[#800000] tracking-wider uppercase mb-3 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#800000]" /> 入塾時の課題と壁
-                  </h4>
-                  <p className="text-sm text-[#333333] leading-relaxed font-medium">
-                    高3の夏の終わりまで厳しい部活動に全力を注ぎ続けていたYさん。周りの受験生が春から本格的に受験勉強を積み上げる中、自身は「圧倒的な学習時間の不足」という、一般入試において致命的とも言える巨大なハンデを背負ってのスタートでした。
+                <div className="bg-white p-4 rounded-xl text-sm text-slate-700 border border-[#C5A059]/20 flex-grow shadow-sm">
+                  <p className="mb-2 flex items-center text-[#002147] font-bold">
+                    <CheckCircle2 className="mr-2 text-[#C5A059]" size={16}/>
+                    【佐藤塾の指導による変化】
                   </p>
-                </div>
-                <div className="md:col-span-2 space-y-5">
-                  <div>
-                    <h4 className="text-xs font-bold text-[#002147] tracking-wider uppercase mb-2 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#002147]" /> 塾長による「10分単位の徹底管理」と圧倒的な超効率学習
-                    </h4>
-                    <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                      限られた時間の中で確実に逆転するため、佐藤塾はYさんと共に「SFC合格から逆算した月間目標」をミリ単位で設定し、日々の「習慣目標」へと徹底的に落とし込みました。さらに、毎日のルーティンとして「前日の夜に、翌日の学習計画を10分単位で緻密に組み立て、当日はその計画を完全に遂行。そしてその日の夜に、計画がうまくいったかどうかを必ず厳密に振り返る」という、1日単位・1週間単位の徹底的なタイムマネジメントを塾長自ら並走して遂行。何が不足していて、どこに無駄があるのかがリアルタイムで可視化されたため、限られた時間の中でも最大の爆発力を生む「極限まで効率化された超密度学習」を実現しました。
-                    </p>
-                  </div>
-                  <div className="pt-3 border-t border-slate-100">
-                    <h4 className="text-xs font-bold text-[#C5A059] tracking-wider uppercase mb-2 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" /> 掴み取った未来とオーナーシップ
-                    </h4>
-                    <p className="text-sm md:text-base text-[#333333] leading-relaxed font-medium bg-[#002147]/5 p-3 rounded border border-[#002147]/20">
-                      この徹底した進捗管理とハイブリッド指導により、秋以降の短期間で偏差値を爆発的に向上させ、難解な環境情報の一般入試を現役で見事突破。佐藤塾が掲げる、時間がないことを言い訳にしない自律的な「タイムマネジメント能力（オーナーシップ）」を最高レベルで身につけ、自らの手で栄冠を毟り取った最高の逆転勝利です。
-                    </p>
-                  </div>
+                  <ul className="list-disc pl-5 space-y-2 mb-0">
+                    <li>最初の30分で<strong>「PREP法の構成メモ」</strong>を作成する型を完全習得</li>
+                    <li>複数の資料をクロス分析し、<strong>ファクトベース</strong>のエビデンスを配置</li>
+                    <li>「テクノロジーの導入→人間の尊厳」という<strong>SFC的な発想</strong>を理解</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Parents testimonial preserved exactly */}
-          <div className="mt-16 bg-[#800000]/5 border-2 border-[#800000]/20 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center flex-shrink-0">
-                <Check size={22} />
+      {/* Student Testimonials Section */}
+      <section className="py-16 md:py-20 px-4 bg-[#F8F9FA]">
+        <div className="max-w-5xl mx-auto">
+          <SectionTitle>合格者の声</SectionTitle>
+
+          <div className="space-y-8">
+            {/* Testimony 1: Oさん */}
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-[#C5A059]/10 border-2 border-[#C5A059]">
+                    <span className="text-lg font-bold text-[#C5A059]">O</span>
+                  </div>
+                </div>
+                <div className="flex-grow">
+                  <div className="mb-2">
+                    <h3 className="text-lg font-bold text-slate-800">Oさん（高3現役・SFC環境情報学部合格）</h3>
+                    <p className="text-sm text-[#800000] font-semibold">AO入試・小論文対策コース</p>
+                  </div>
+                  <blockquote className="text-slate-700 leading-relaxed italic border-l-4 border-[#C5A059] pl-4 py-2">
+                    「最初は『書きながら考える』癖があって、設問分析の大切さに全く気づいていませんでした。佐藤塾では毎回、構成メモだけで30分使うという指導を受けて、最初は違和感がありましたが、本番ではその30分が何度も何度も活きてきました。」
+                  </blockquote>
+                </div>
               </div>
-              <div className="text-left">
-                <span className="text-xs font-bold text-[#800000] tracking-wider uppercase block mb-1">PROTECTOR'S VOICE</span>
-                <h4 className="text-lg md:text-xl font-bold text-[#002147] font-serif">保護者 Tさん</h4>
-                <p className="text-sm text-[#333333] mt-2 leading-relaxed max-w-2xl">
-                  「子どもが進路で悩んでいた時、塾長が親身にサポートしてくださいました。AI添削で量をこなしながら、月1回の面談で深く考える機会を与えてくれる、バランスの取れた指導が素晴らしい。合格後も子どもから『充実していた』と聞きました。親としても安心して受験を任せられました。」
-                </p>
+            </div>
+
+            {/* Testimony 2: Kさん */}
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-[#C5A059]/10 border-2 border-[#C5A059]">
+                    <span className="text-lg font-bold text-[#C5A059]">K</span>
+                  </div>
+                </div>
+                <div className="flex-grow">
+                  <div className="mb-2">
+                    <h3 className="text-lg font-bold text-slate-800">Kさん（浪人生・SFC総合政策学部合格）</h3>
+                    <p className="text-sm text-[#800000] font-semibold">一般入試・小論文対策コース</p>
+                  </div>
+                  <blockquote className="text-slate-700 leading-relaxed italic border-l-4 border-[#C5A059] pl-4 py-2">
+                    「AI壁打ちのおかげで、『この論理の流れで大丈夫か』という不安を毎日払拭することができました。予備校では『良い小論文とは何か』がぼんやりしていたけど、佐藤塾では『なぜそれはSFCに評価されるのか』という理由まで理解できた。」
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimony 3: Yさん */}
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-[#C5A059]/10 border-2 border-[#C5A059]">
+                    <span className="text-lg font-bold text-[#C5A059]">Y</span>
+                  </div>
+                </div>
+                <div className="flex-grow">
+                  <div className="mb-2">
+                    <h3 className="text-lg font-bold text-slate-800">Yさん（高3現役・SFC総合政策学部合格）</h3>
+                    <p className="text-sm text-[#800000] font-semibold">AO入試・ポートフォリオ対策コース</p>
+                  </div>
+                  <blockquote className="text-slate-700 leading-relaxed italic border-l-4 border-[#C5A059] pl-4 py-2">
+                    「『何もない』と思っていた自分の経験も、塾長との壁打ちを通じて『立派な研究テーマになり得る』ことが分かった。面接でも『あ、この人は自分の思考過程を大事にしている人だな』と評価官に伝わったと思う。」
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimony 4: 保護者 */}
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-[#C5A059]/10 border-2 border-[#C5A059]">
+                    <span className="text-lg font-bold text-[#C5A059]">P</span>
+                  </div>
+                </div>
+                <div className="flex-grow">
+                  <div className="mb-2">
+                    <h3 className="text-lg font-bold text-slate-800">保護者（Oさんの母）</h3>
+                    <p className="text-sm text-[#800000] font-semibold">AO入試対策コース利用</p>
+                  </div>
+                  <blockquote className="text-slate-700 leading-relaxed italic border-l-4 border-[#C5A059] pl-4 py-2">
+                    「親からすると『本当に合格できるのか』という不安がありました。ただ、塾長との面談を通じて『この先生は単に合格させるのではなく、この子の人生を応援しているんだな』という信頼が生まれました。結果として娘も親も、プレッシャーをポジティブなエネルギーに変えられた。」
+                  </blockquote>
+                </div>
               </div>
             </div>
           </div>
@@ -428,31 +445,21 @@ export default function ResultsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 px-4 bg-gradient-to-r from-[#800000] to-[#600000]">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4">
-            次の合格者はあなたです
+      <section className="py-16 md:py-24 px-4 bg-[#002147] relative overflow-hidden">
+        <div className="max-w-5xl mx-auto text-center text-white relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
+            次は、あなたの番です。
           </h2>
-          <p className="text-base text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto">
-            慶應SFC合格に向けて、今から始めましょう。無料相談で、あなたの現在の立ち位置と目標に最適な学習プランを塾長が直接ご提案させていただきます。
+          <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
+            「今の自分で本当に合格できるのか」「何から始めればいいのか」——その不安や迷い、まずは無料相談で塾長にぶつけてください。
           </p>
-          <p className="text-xs sm:text-sm text-[#C5A059] font-bold mb-6 tracking-wide">
-            ※一人ひとりの指導密度と10分単位の計画管理を完全に維持するため、今年度の新規受付は【残り13名】となっております
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact-form">
-              <Button className="bg-[#C5A059] hover:bg-[#9d8a42] text-[#002147] font-bold px-10 py-6 h-auto w-full sm:w-auto text-base shadow-lg">
-                無料で塾長に相談する
-              </Button>
-            </Link>
-            <Link href="/course">
-              <Button className="border-2 border-[#C5A059] text-[#C5A059] bg-transparent hover:bg-[#C5A059] hover:text-[#002147] font-bold px-10 py-6 h-auto transition-all duration-300 w-full sm:w-auto text-base">
-                コース詳細を見る
-              </Button>
-            </Link>
-          </div>
+          <Link href="/#contact-form">
+            <Button className="bg-[#C5A059] hover:bg-[#B38D45] text-white font-bold py-6 px-10 rounded-full text-lg shadow-lg shadow-[#C5A059]/30 transition-all hover:scale-105">
+              無料相談に申し込む
+            </Button>
+          </Link>
         </div>
       </section>
     </div>
-  )
+  );
 }
