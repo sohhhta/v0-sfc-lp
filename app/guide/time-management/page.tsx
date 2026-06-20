@@ -34,7 +34,7 @@ export default function TimeManagementPage() {
   return (
     <main className="pt-32 md:pt-40 pb-20 bg-slate-50 min-h-screen">
       <ArticleContainer>
-        <ArticleHeader 
+        <ArticleHeader
           theme="essay"
           category="SFC小論文 対策ガイド"
           title={<>【時間配分編】120分をどう使う？<br className="hidden md:block" />構成メモ作成から執筆までの最適タイムマネジメント</>}
@@ -56,7 +56,7 @@ export default function TimeManagementPage() {
             <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
               黄金の時間配分：40分・60分・20分
             </h2>
-            
+
             <div className="space-y-6 my-8">
               <div className="bg-blue-50 p-6 md:p-8 rounded-xl border border-blue-100">
                 <h3 className="flex items-center text-xl font-bold text-[#002147] mt-0 mb-4">
@@ -79,7 +79,7 @@ export default function TimeManagementPage() {
                   このように、どの段落でどの資料をエビデンスとして使うか（Exampleの配置）までを最初の40分で完全にフィックスさせます。この設計図があれば、不本意な論理の飛躍は絶対に起こりません。
                 </p>
               </div>
-              
+
               <div className="bg-slate-50 p-6 md:p-8 rounded-xl border border-slate-200">
                 <h3 className="flex items-center text-xl font-bold text-slate-800 mt-0 mb-3">
                   <Pencil className="mr-2" />
@@ -89,7 +89,7 @@ export default function TimeManagementPage() {
                   PREPの構造図が完成していれば、あとの60分はそれを原稿用紙の文字数に合わせて膨らませるだけの「翻訳作業」です。途中で「やっぱりこっちの意見にしよう」と論旨を変更するのは絶対にNGです。迷わず、止まらず、設計図通りに文字を紡ぎ出します。
                 </p>
               </div>
-              
+
               <div className="bg-red-50 p-6 md:p-8 rounded-xl border border-red-100">
                 <h3 className="flex items-center text-xl font-bold text-[#800000] mt-0 mb-3">
                   <Clock className="mr-2" />
@@ -99,19 +99,6 @@ export default function TimeManagementPage() {
                   最後に必ず20分を残してください。誤字脱字のチェックはもちろん、設問の条件（「〇〇という言葉を使って」「資料2を踏まえて」など）を落としていないか最終確認を行います。この20分が、D判定をC判定に、B判定をA判定（合格）へと押し上げます。
                 </p>
               </div>
-            </div>
-
-            <div className="bg-[#002147] text-white p-8 rounded-2xl mt-12 text-center">
-              <h3 className="text-2xl font-bold mb-4 font-serif text-white">あなたの構成メモ、論理破綻していませんか？</h3>
-              <p className="mb-8 text-blue-100 text-sm md:text-base">
-                時間をかけて書いたのに点数が伸びない原因は、最初の40分の「設計図」にあります。<br />
-                佐藤塾のAI壁打ちを使えば、あなたの構成メモの論理的な飛躍を瞬時に指摘し、修正できます。
-              </p>
-              <Link href="/#contact">
-                <Button className="bg-[#C5A059] hover:bg-[#B38D45] text-white font-bold py-6 px-10 rounded-full text-lg w-full sm:w-auto shadow-lg shadow-[#C5A059]/20 transition-all hover:scale-105">
-                  無料相談で構成メモの添削を受ける
-                </Button>
-              </Link>
             </div>
           </div>
         </div>
@@ -165,7 +152,19 @@ export default function TimeManagementPage() {
                 これらのスキルは、頭で理解しただけですぐにできるものではありません。佐藤塾では、過去問はもちろんのこと、塾長が独自に作成した予想問題や教材を通じ、この「割り切った資料読解」と「文章設計図の作成」を徹底的に反復させます。この訓練を繰り返すことで、本番の極限状態でも圧倒的な質を保ったまま、確実な時間管理で合格答案を書き上げることができるようになります。
               </p>
             </div>
-            {/* --- ここまで加筆セクション --- */}
+
+            <div className="bg-[#002147] text-white p-8 rounded-2xl mt-12 text-center">
+              <h3 className="text-2xl font-bold mb-4 font-serif text-white">あなたの小論文、論理破綻していませんか？</h3>
+              <p className="mb-8 text-blue-100 text-sm md:text-base">
+                時間をかけて書いたのに点数が伸びない原因は、最初の40分の「設計図」にあります。<br />
+                佐藤塾のAI壁打ちを使えば、あなたの構成メモの論理的な飛躍を瞬時に指摘し、修正できます。
+              </p>
+              <Link href="/#contact">
+                <Button className="bg-[#C5A059] hover:bg-[#B38D45] text-white font-bold py-6 px-10 rounded-full text-lg w-full sm:w-auto shadow-lg shadow-[#C5A059]/20 transition-all hover:scale-105">
+                  無料で塾長に相談してみる
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -174,21 +173,21 @@ export default function TimeManagementPage() {
         {/* Navigation */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 py-8 border-t border-slate-200">
           <Link className="flex items-center text-slate-500 hover:text-[#002147] transition-colors group w-full sm:w-auto" href="/guide/data-reading">
-            <ArrowRight className="mr-2 rotate-180 transform transition-transform group-hover:-translate-x-1" size={20}/>
+            <ArrowRight className="mr-2 rotate-180 transform transition-transform group-hover:-translate-x-1" size={20} />
             <div className="text-sm">
               <div className="text-slate-400 mb-1">前の記事</div>
               <div className="font-bold">資料読解編</div>
             </div>
           </Link>
           <Link className="text-slate-400 hover:text-[#002147] transition-colors p-2" href="/guide/essay/articles">
-            <LayoutGrid size={24}/>
+            <LayoutGrid size={24} />
           </Link>
           <Link className="flex items-center text-right text-[#002147] hover:text-[#C5A059] transition-colors group w-full sm:w-auto justify-end" href="/guide/tech-society">
             <div className="text-sm">
               <div className="text-slate-400 mb-1">次の記事</div>
               <div className="font-bold">頻出テーマ編</div>
             </div>
-            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={20}/>
+            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={20} />
           </Link>
         </div>
       </ArticleContainer>
