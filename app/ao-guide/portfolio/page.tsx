@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation, TableOfContents } from "@/components/article-ui";
 import { Button } from "@/components/ui/button";
 import { FileText, Lightbulb } from "lucide-react";
 import Link from "next/link";
@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   },
 };
 
+const tocItems = [
+  { id: "section-1", title: "1. 「結果」ではなく「プロセス」を視覚化する" },
+  { id: "section-2", title: "2. いますぐ始められる「3つの行動実績」" },
+];
+
 export default function PortfolioPage() {
   return (
     <main className="pt-32 md:pt-40 pb-20 bg-white min-h-screen">
@@ -50,7 +55,9 @@ export default function PortfolioPage() {
               しかし、それは大きな誤解です。SFCの教授陣は、高校生に対してプロ顔負けの「完成された実績」など求めていません。彼らが見たいのは、あなたの<strong>「探究心の深さ」と「試行錯誤の軌跡（思考プロセス）」</strong>です。本記事では、目立つ実績がゼロの状態からでも、教授を唸らせるポートフォリオを作り上げる佐藤塾のメソッドを公開します。
             </p>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <TableOfContents items={tocItems} />
+
+            <h2 id="section-1" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
               1. 「結果」ではなく「プロセス」を視覚化する
             </h2>
             <p>
@@ -81,7 +88,7 @@ export default function PortfolioPage() {
               </div>
             </div>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <h2 id="section-2" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
               2. いますぐ始められる「3つの行動実績」
             </h2>
             <p>
@@ -107,7 +114,7 @@ export default function PortfolioPage() {
                 <div className="bg-[#002147] text-white w-6 h-6 rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1 mr-3 text-sm">3</div>
                 <div>
                   <strong>未完成のプロトタイプ（模型・ワイヤーフレーム）：</strong><br />
-                  解決策のアイデアがあ��なら、完成していなくても良いので「形」にしてみましょう。アプリなら画面の絵（ワイヤーフレーム）を描き、プロダクトなら紙粘土や段ボールで模型を作ります。その写真を載せるだけで、熱量は10倍伝わります。
+                  解決策のアイデアがあるなら、完成していなくても良いので「形」にしてみましょう。アプリなら画面の絵（ワイヤーフレーム）を描き、プロダクトなら紙粘土や段ボールで模型を作ります。その写真を載せるだけで、熱量は10倍伝わります。
                 </div>
               </li>
             </ul>
