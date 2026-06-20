@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { ArticleHeader, ArticleContainer, AuthorBox } from "@/components/article-ui";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, LayoutGrid, Clock, Pencil, BrainCircuit } from "lucide-react";
+import { ArrowRight, LayoutGrid, Clock, Pencil, BrainCircuit, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 
 const articleTitle = "【時間配分編】120分をどう使う？構成メモ作成から執筆までの最適タイムマネジメント";
@@ -113,6 +113,59 @@ export default function TimeManagementPage() {
                 </Button>
               </Link>
             </div>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 mb-12">
+          <div className="prose prose-lg prose-slate max-w-none">
+            {/* --- ここから加筆セクション --- */}
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-16 mb-6">
+              佐藤塾式・圧倒的な時間管理を生む「2つの掟」
+            </h2>
+            <p>
+              ここまで一般的な時間配分の考え方を解説しましたが、実際のSFC入試という極限状態において、確実に1500字を書き切るためには、さらなる「割り切り」と「戦略」が必要です。佐藤塾で徹底的に指導している独自のタイムマネジメント術を公開します。
+            </p>
+
+            <div className="space-y-8 my-8">
+              {/* 掟1: 資料の読み飛ばし */}
+              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+                <div className="flex items-center mb-4">
+                  <div className="bg-[#800000] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">1</div>
+                  <h3 className="font-bold text-slate-800 text-xl m-0">資料は「設問に応えるため」だけに読む</h3>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  SFCの膨大な資料を前にすると、多くの受験生が「全てを満遍なく読まなければ」という罠に陥ります。しかし、私たちの目的は資料の専門家になることではなく、<strong>「設問に応えること」</strong>です。
+                </p>
+                <p className="text-slate-600 text-sm leading-relaxed m-0">
+                  設問の意図を正確に把握していれば、それに沿った資料の読み解きだけを行えば足ります。アンテナに引っかからない箇所は、<strong>時には思い切って読み飛ばしたり、理解度70%で次へ進んでしまっても全く問題ありません。</strong>重要なのは、全ての資料を完璧に理解することではなく、設問に応えるためのエビデンスを見つけ出すことと、何より「時間管理」なのです。
+                </p>
+              </div>
+
+              {/* 掟2: 文章設計図 */}
+              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+                <div className="flex items-center mb-4">
+                  <div className="bg-[#002147] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">2</div>
+                  <h3 className="font-bold text-slate-800 text-xl m-0">書き始める前に「文章設計図」を完成させる</h3>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  資料を読み終えた後、焦ってすぐに原稿用紙のマス目を埋め始めてはいけません。佐藤塾では、頭の中を整理する目的で<strong>「文章設計図」</strong>という独自のフォーマットを作成することを義務付けています。
+                </p>
+                <p className="text-slate-600 text-sm leading-relaxed m-0">
+                  これは、回答の大枠の構造（PREP法など）を可視化するものです。ここで決めた構造を絶対に崩さずに実際の執筆を進めることが極めて重要です。この設計図があることで、「考えながら書き進める」という迷走状態を防ぎ、<strong>一貫性を保ちながら、かつ設問の要件を完全に満たした回答をハイスピードで作成すること</strong>が可能になります。
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#C5A059]/10 p-6 md:p-8 rounded-2xl border border-[#C5A059]/30 my-8">
+              <h3 className="text-[#800000] font-bold text-lg mb-3 flex items-center mt-0">
+                <AlertTriangle className="mr-2" size={20} />
+                圧倒的な「質」と「時間管理」を持って本番へ
+              </h3>
+              <p className="text-slate-700 text-sm leading-relaxed m-0">
+                これらのスキルは、頭で理解しただけですぐにできるものではありません。佐藤塾では、過去問はもちろんのこと、塾長が独自に作成した予想問題や教材を通じ、この「割り切った資料読解」と「文章設計図の作成」を徹底的に反復させます。この訓練を繰り返すことで、本番の極限状態でも圧倒的な質を保ったまま、確実な時間管理で合格答案を書き上げることができるようになります。
+              </p>
+            </div>
+            {/* --- ここまで加筆セクション --- */}
           </div>
         </div>
 
