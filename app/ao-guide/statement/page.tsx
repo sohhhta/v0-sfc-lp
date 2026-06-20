@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { MessageSquare, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 import {
   TableOfContents,
   ArticleH2,
@@ -172,6 +173,66 @@ export default function StatementPage() {
               AIがあなたの曖昧なアイデアに対して「その問題の根本原因は何か？」「なぜそのアプローチが有効なのか？」と鋭い問いを投げかけます。そして、引き出された思考のピースを、
               <ArticleHighlight>塾長がSFCの評価基準に合わせて緻密な論理構造へと組み上げます。</ArticleHighlight>
             </p>
+
+            {/* --- ここから加筆セクション --- */}
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-16 mb-6">
+              【実録】「貧困をなくしたい」というポエムが、SFC基準の研究計画に化けた日
+            </h2>
+            <p>
+              佐藤塾で実際にあったAO入試指導のケーススタディをご紹介します。「ポエム」がいかにして「SFC教授陣が唸る具体策」へと昇華されるのか、そのプロセスをご覧ください。
+            </p>
+            <p>
+              Dさんは入塾当初、「将来は途上国の貧困をなくし、架け橋になりたい」という非常に抽象的な志望理由書を持ってきました。熱意は本物でしたが、SFCの評価基準では「具体性がゼロ」とみなされ不合格になる典型的なパターンです。
+            </p>
+            <p>
+              ここで力を発揮するのが、<strong>佐藤塾の真髄である「塾長との1on1壁打ち指導」</strong>です。
+            </p>
+
+            <div className="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 my-8 space-y-6">
+              {/* 塾長からの問い */}
+              <div className="flex items-start">
+                <div className="bg-[#002147] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <MessageSquare size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#002147] mb-1">塾長からの問い（1on1面談）</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「貧困をなくすって素晴らしいね。でも、具体的に"どこの国"の"どんな人たち"が、"何に困っている"から貧困を抜け出せないの？寄付をするだけじゃ根本解決にならないよね？」</p>
+                </div>
+              </div>
+              
+              {/* 生徒の深掘り */}
+              <div className="flex items-start">
+                <div className="bg-[#800000] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <Target size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#800000] mb-1">Dさんの思考の深掘り</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「……確かに。調べてみると、農村部の女性たちが『銀行口座を持てないから事業資金を借りられない』ことが負の連鎖を生んでいるようです。」</p>
+                </div>
+              </div>
+
+              {/* テクノロジーの統合 */}
+              <div className="flex items-start">
+                <div className="bg-[#C5A059] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <Lightbulb size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-slate-800 mb-1">解決策（テクノロジー）の統合</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「なら、SFCで『ブロックチェーン技術やモバイルFinTechを用いた、農村部向けの少額融資（マイクロファイナンス）モデルの構築』を研究テーマにするのはどう？これなら"どうやって解決するか"が明確になるよ。」</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-green-50 p-6 md:p-8 rounded-xl border border-green-100 my-8 flex items-start">
+              <CheckCircle2 className="text-green-600 mr-4 mt-1 flex-shrink-0" size={28} />
+              <div>
+                <h4 className="text-green-800 font-bold text-lg mt-0 mb-3">圧倒的な解像度への到達</h4>
+                <p className="text-sm text-green-800 mb-0 leading-relaxed">
+                  この対話とAIを用いた追加リサーチを経て、Dさんの志望理由書は「感情的なポエム」から、SFCの教授が専門的な知見から議論したくなる「緻密な研究計画書」へと劇的に進化しました。面接でもこの解決策の妥当性が高く評価され、見事合格を掴み取りました。
+                </p>
+              </div>
+            </div>
+            {/* --- ここまで加筆セクション --- */}
 
             <AuthorBox />
 
