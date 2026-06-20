@@ -53,6 +53,8 @@ export default function EssayArticlesPortal() {
                 alt="サムネイル"
                 width={1200}
                 height={630}
+                priority
+                quality={90}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
@@ -79,6 +81,7 @@ export default function EssayArticlesPortal() {
                 alt="サムネイル"
                 width={1200}
                 height={630}
+                quality={90}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
@@ -105,6 +108,7 @@ export default function EssayArticlesPortal() {
                 alt="サムネイル"
                 width={1200}
                 height={630}
+                quality={90}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
@@ -131,6 +135,7 @@ export default function EssayArticlesPortal() {
                 alt="サムネイル"
                 width={1200}
                 height={630}
+                quality={90}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
@@ -157,6 +162,7 @@ export default function EssayArticlesPortal() {
                 alt="サムネイル"
                 width={1200}
                 height={630}
+                quality={90}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
