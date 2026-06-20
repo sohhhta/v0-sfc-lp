@@ -45,7 +45,7 @@ const tocItems = [
 
 export default function AoThemePage() {
   return (
-    <main className="min-h-screen bg-slate-50 py-12">
+    <main className="min-h-screen bg-white py-12">
       <ArticleContainer>
 
         <ArticleHeader
@@ -105,15 +105,16 @@ export default function AoThemePage() {
           <p className="mb-6 leading-relaxed">まず、<ArticleHighlight>24時間稼働のSFC特化AI</ArticleHighlight>に、あなたのまとまらないモヤモヤや思考の断片をそのままぶつけてください。AIはあなたの言葉を瞬時に読み解き、関連する先行研究、SFCの教授陣の知見、そしてアカデミックな切り口へと「翻訳」して返してくれます。一人では何日もかかる調査と思考の整理が、圧倒的なスピードで進みます。</p>
           <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>しかし、AIが出力したものはあくまで「質の高い素材」に過ぎません。最後に必要不可欠なのが、塾長である私との「1on1対話」です。</ArticleHighlight></p>
           <p className="mb-6 leading-relaxed">「それは本当に君がやりたいことなのか？」「SFCのこの教授の元で学ぶ必然性はどこにあるのか？」——容赦のない、しかし本質的な問いを投げかけます。</p>
-          <p className="mb-6 leading-relaxed">この泥臭い対話の往復を通じて、AIが整えた綺麗なロジックに「あなた自身の血」が通い始めます。こうして出来上がったテーマこそが、いかなる面接官の鋭い質問も跳ね返す、最強の「本気の覚悟」へと昇華されるのです。</p>
+          <p className="mb-6 leading-relaxed">この泥臭い対話の往復を通じて、AIが整えた綺麗なロジックに「あなた自身の血」が通い始めます。こうして出来上がったテーマこそが、いかなる面接官の鋭い質問も跳ね返す、最強の「本気��覚悟」へと昇華されるのです。</p>
 
-          <ArticleNavigation
-            prev={{
-              title: "【二刀流戦略】一般入試とAO入試の相乗効果",
-              href: "/ao-guide/strategy",
-            }}
-            back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
-          />
+            <ArticleNavigation
+              prev={{
+                title: "慶應SFCのAO入試に「すごい実績」は不要。一般・AO\"二刀流\"が合格の最短距離である理由",
+                href: "/ao-guide/strategy",
+              }}
+              back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
+              next={{ title: "【志望理由書編】SFC教授の心を動かす「志望理由書」の書き方と構成", href: "/ao-guide/statement" }}
+            />
 
           <AuthorBox />
 
