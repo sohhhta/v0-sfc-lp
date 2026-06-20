@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function TimeManagementPage() {
   return (
-    <main className="pt-32 md:pt-40 pb-20 bg-slate-50 min-h-screen">
+    <main className="pt-32 md:pt-40 pb-20 bg-white min-h-screen">
       <ArticleContainer>
         <ArticleHeader
           theme="essay"
