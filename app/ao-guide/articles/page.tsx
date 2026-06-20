@@ -50,10 +50,12 @@ export default function AoArticlesPortal() {
           <Link href="/ao-guide/strategy" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">
               <Image 
-                src={`/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由")}`} 
+                src={`/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO二刀流が合格の最短距離である理由")}`} 
                 alt="サムネイル" 
                 width={1200}
                 height={630}
+                priority
+                quality={90}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
@@ -61,7 +63,7 @@ export default function AoArticlesPortal() {
             <div className="p-6 md:p-8 flex flex-col flex-grow">
               <span className="text-xs font-bold text-[#C5A059] mb-3 tracking-wider">STRATEGY</span>
               <h3 className="text-lg md:text-xl font-bold text-[#002147] mb-4 leading-tight group-hover:text-[#800000] transition-colors">
-                慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由
+                慶應SFCのAO入試に「すごい実績」は不要。一般・AO"二刀流"が合格の最短距離である理由
               </h3>
               <p className="text-sm text-slate-600 line-clamp-3 mb-6 flex-grow leading-relaxed">
                 「起業経験や国際大会での入賞がないとSFCのAOは受からない」という誤解を解き、一般入試の小論文対策とAO入試対策がどのように相乗効果を生むのか、その具体的な戦略を解説します。
@@ -80,6 +82,7 @@ export default function AoArticlesPortal() {
                 alt="サムネイル" 
                 width={1200}
                 height={630}
+                quality={90}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
@@ -106,6 +109,7 @@ export default function AoArticlesPortal() {
                 alt="サムネイル" 
                 width={1200}
                 height={630}
+                quality={90}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
@@ -132,6 +136,7 @@ export default function AoArticlesPortal() {
                 alt="サムネイル" 
                 width={1200}
                 height={630}
+                quality={90}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
@@ -158,6 +163,7 @@ export default function AoArticlesPortal() {
                 alt="サムネイル" 
                 width={1200}
                 height={630}
+                quality={90}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
