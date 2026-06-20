@@ -1,11 +1,17 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents, ArticleNavigation } from "@/components/article-ui";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, LayoutGrid, Search, TrendingUp } from "lucide-react";
+import { Search, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
+const tocItems = [
+  { id: "sec1", label: "現代文の癖を捨てろ。「設問からの逆算」が全て" },
+  { id: "sec2", label: "グラフや表の「変曲点」と「異常値」に社会課題が潜む" },
+  { id: "sec3", label: "複数の資料を「クロス分析」して独自の結論を生む" },
+];
+
 const articleTitle = "【資料読解編】SFC特有の「膨大な資料」から使えるデータを瞬時に見抜くテクニック";
-const articleDescription = "総合政策・環境情報学部で出題される大量のグラフや文章。すべてを読もうとして時間切れになる受験生へ、自分の主張を補強する「エビデンス」だけを素早く抽出する読解法を解説します。";
+const articleDescription = "総合政策・環境情報学部で出題される大量のグラフや文章。すべてを読もうとして時間切れになる受験生へ、自分の主張を補強する「エビデンス」だけを素早く抽出する読解法を解説します";
 
 export const metadata: Metadata = {
   title: `${articleTitle} | 佐藤塾`,
@@ -32,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function DataReadingPage() {
   return (
-    <main className="pt-32 md:pt-40 pb-20 bg-slate-50 min-h-screen">
+    <main className="pt-32 md:pt-40 pb-20 bg-white min-h-screen">
       <ArticleContainer>
         <ArticleHeader 
           theme="essay"
@@ -40,6 +46,8 @@ export default function DataReadingPage() {
           title={<>【資料読解編】SFC特有の「膨大な資料」から<br className="hidden md:block" />使えるデータを瞬時に見抜くテクニック</>}
           readTime={6}
         />
+
+        <TableOfContents items={tocItems} />
 
         <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 mb-12">
           <div className="prose prose-lg prose-slate max-w-none">
@@ -50,7 +58,7 @@ export default function DataReadingPage() {
               SFCの教授陣は、あなたの「現代文的な読解力」を測りたいわけではありません。彼らが求めているのは、社会に散らばるノイズだらけの情報の中から、<strong>自分の仮説を証明するための「エビデンス（証拠）」を素早く抽出し、論理を組み立てる能力</strong>です。本記事では、SFC小論文を攻略するための「逆算型リーディング」とデータの読み解き方を解説します。
             </p>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6" id="sec1">
               1. 現代文の癖を捨てろ。「設問からの逆算」が全て
             </h2>
             <p>
@@ -69,7 +77,7 @@ export default function DataReadingPage() {
               </p>
             </div>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6" id="sec2">
               2. グラフや表の「変曲点」と「異常値」に社会課題が潜む
             </h2>
             <p>
@@ -92,7 +100,7 @@ export default function DataReadingPage() {
               </li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6" id="sec3">
               3. 複数の資料を「クロス分析」して独自の結論を生む
             </h2>
             <p>
@@ -119,26 +127,11 @@ export default function DataReadingPage() {
 
         <AuthorBox />
 
-        {/* Navigation */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 py-8 border-t border-slate-200">
-          <Link className="flex items-center text-slate-500 hover:text-[#002147] transition-colors group w-full sm:w-auto" href="/guide/past-exams">
-            <ArrowRight className="mr-2 rotate-180 transform transition-transform group-hover:-translate-x-1" size={20}/>
-            <div className="text-sm">
-              <div className="text-slate-400 mb-1">前の記事</div>
-              <div className="font-bold">過去問演習編</div>
-            </div>
-          </Link>
-          <Link className="text-slate-400 hover:text-[#002147] transition-colors p-2" href="/guide/essay/articles">
-            <LayoutGrid size={24}/>
-          </Link>
-          <Link className="flex items-center text-right text-[#002147] hover:text-[#C5A059] transition-colors group w-full sm:w-auto justify-end" href="/guide/time-management">
-            <div className="text-sm">
-              <div className="text-slate-400 mb-1">次の記事</div>
-              <div className="font-bold">時間配分編</div>
-            </div>
-            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={20}/>
-          </Link>
-        </div>
+        <ArticleNavigation
+          prev={{ title: "【時間配分編】120分をどう使う？構成メモ作成から執筆までの最適タイムマネジメント", href: "/guide/time-management" }}
+          back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
+          next={{ title: "【頻出テーマ編】SFC小論文で狙われる「テクノロジーと社会問題」の攻略法", href: "/guide/tech-society" }}
+        />
       </ArticleContainer>
     </main>
   );

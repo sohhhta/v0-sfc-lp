@@ -1,8 +1,13 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents, ArticleNavigation } from "@/components/article-ui";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, LayoutGrid, MonitorSmartphone, AlertTriangle, Lightbulb } from "lucide-react";
+import { MonitorSmartphone, AlertTriangle, Lightbulb } from "lucide-react";
 import Link from "next/link";
+
+const tocItems = [
+  { id: "sec1", label: "絶対に避けるべき「評論家・AI脅威論」" },
+  { id: "sec2", label: "SFCが高く評価する「テクノロジー×課題解決」の型" },
+];
 
 const articleTitle = "【頻出テーマ編】SFC小論文で狙われる「テクノロジーと社会問題」の攻略法";
 const articleDescription = "AIやデータサイエンスなどのテクノロジーを用いて、現代の社会課題をどう解決するか。SFC小論文で最も頻出するテーマに対し、教授陣が高く評価する「SFC的アプローチ」の型を解説します。";
@@ -32,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function TechSocietyPage() {
   return (
-    <main className="pt-32 md:pt-40 pb-20 bg-slate-50 min-h-screen">
+    <main className="pt-32 md:pt-40 pb-20 bg-white min-h-screen">
       <ArticleContainer>
         <ArticleHeader 
           theme="essay"
@@ -40,6 +45,8 @@ export default function TechSocietyPage() {
           title={<>【頻出テーマ編】SFC小論文で狙われる<br className="hidden md:block" />「テクノロジーと社会問題」の攻略法</>}
           readTime={6}
         />
+
+        <TableOfContents items={tocItems} />
 
         <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 mb-12">
           <div className="prose prose-lg prose-slate max-w-none">
@@ -50,7 +57,7 @@ export default function TechSocietyPage() {
               多くの受験生は、AIや最新技術がテーマになると「AIは人間の仕事を奪う危険なものだ」「テクノロジーへの過度な依存は避けるべきだ」といった、評論家のようなネガティブな解答を書いてしまいます。しかし、SFCの教授陣はテクノロジーの最前線で研究を行う専門家です。彼らが求めているのは、テクノロジーを忌避する姿勢ではなく、<strong>「それを道具として使いこなし、どう社会課題を解決するか」という未来志向の設計図</strong>なのです。
             </p>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6" id="sec1">
               1. 絶対に避けるべき「評論家・AI脅威論」
             </h2>
             <div className="bg-red-50 p-6 rounded-xl border border-red-100 my-6">
@@ -66,11 +73,11 @@ export default function TechSocietyPage() {
               一見すると尤もらしい文章ですが、SFCの評価基準では低得点となります。なぜなら、具体的な解決策（あなたなりのアイデア）が全く提示されておらず、現状の懸念をまとめただけの「評論」に終始しているからです。
             </p>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6" id="sec2">
               2. SFCが高く評価する「テクノロジー×課題解決」の型
             </h2>
             <p>
-              SFCの小論文では、テクノロジーを「魔法の杖」ではなく、「現実的なツール」として扱う必要があります。以下の型（アプローチ）を意識して構成メモを作成してください。
+              SFCの小論文では、テクノロジーを「魔法の杖」ではなく、「現実的なツール」として扱う必要があります。以下の型（アプローチ）を意��して構成メモを作成してください。
             </p>
 
             <div className="space-y-6 my-8">
@@ -121,28 +128,11 @@ export default function TechSocietyPage() {
 
         <AuthorBox />
 
-        {/* Navigation */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 py-8 border-t border-slate-200">
-          <Link className="flex items-center text-slate-500 hover:text-[#002147] transition-colors group w-full sm:w-auto" href="/guide/time-management">
-            <ArrowRight className="mr-2 rotate-180 transform transition-transform group-hover:-translate-x-1" size={20}/>
-            <div className="text-sm">
-              <div className="text-slate-400 mb-1">前の記事</div>
-              <div className="font-bold">時間配分編</div>
-            </div>
-          </Link>
-          <Link className="text-slate-400 hover:text-[#002147] transition-colors p-2" href="/guide/essay/articles">
-            <LayoutGrid size={24}/>
-          </Link>
-          <div className="w-full sm:w-auto opacity-50 cursor-not-allowed">
-            <div className="flex items-center text-right text-slate-400 justify-end">
-              <div className="text-sm">
-                <div className="text-slate-400 mb-1">次の記事</div>
-                <div className="font-bold">次の記事はありません</div>
-              </div>
-              <ArrowRight className="ml-2" size={20} />
-            </div>
-          </div>
-        </div>
+        <ArticleNavigation
+          prev={{ title: "【資料読解編】膨大な資料から使えるデータを瞬時に見抜くテクニック", href: "/guide/data-reading" }}
+          back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
+          next={{ title: "【過去問演習編】白紙から合格答案を組み立てる思考プロセスの可視化", href: "/guide/past-exams" }}
+        />
       </ArticleContainer>
     </main>
   );

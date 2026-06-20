@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <main className="pt-32 md:pt-40 pb-20 bg-slate-50 min-h-screen">
+    <main className="pt-32 md:pt-40 pb-20 bg-white min-h-screen">
       <ArticleContainer>
         <ArticleHeader
           theme="ao"
@@ -107,7 +107,7 @@ export default function PortfolioPage() {
                 <div className="bg-[#002147] text-white w-6 h-6 rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1 mr-3 text-sm">3</div>
                 <div>
                   <strong>未完成のプロトタイプ（模型・ワイヤーフレーム）：</strong><br />
-                  解決策のアイデアがあるなら、完成していなくても良いので「形」にしてみましょう。アプリなら画面の絵（ワイヤーフレーム）を描き、プロダクトなら紙粘土や段ボールで模型を作ります。その写真を載せるだけで、熱量は10倍伝わります。
+                  解決策のアイデアがあ��なら、完成していなくても良いので「形」にしてみましょう。アプリなら画面の絵（ワイヤーフレーム）を描き、プロダクトなら紙粘土や段ボールで模型を作ります。その写真を載せるだけで、熱量は10倍伝わります。
                 </div>
               </li>
             </ul>
@@ -131,8 +131,8 @@ export default function PortfolioPage() {
 
         <ArticleNavigation
           prev={{ title: "【志望理由書編】SFC教授の心を動かす「志望理由書」の書き方と構成", href: "/ao-guide/statement" }}
-          next={{ title: "【面接対策編】面接官の「圧迫」を「対話」に変える、主導権の握り方", href: "/ao-guide/interview" }}
           back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
+          next={{ title: "【面接対策編】面接官の「圧迫」を「対話」に変える、主導権の握り方", href: "/ao-guide/interview" }}
         />
       </ArticleContainer>
     </main>

@@ -143,8 +143,7 @@ export default function PastExamsPage() {
 
             {/* 共通のナビゲーション */}
             <ArticleNavigation 
-              prev={{ title: "【実践編】合格点に届かない理由とロジカルライティング", href: "/guide/logic-writing" }} 
-              next={{ title: "【資料読解編】膨大な資料から使えるデータを瞬時に見抜くテクニック", href: "/guide/data-reading" }} 
+              prev={{ title: "【頻出テーマ編】SFC小論文で狙われる「テクノロジーと社会問題」の攻略法", href: "/guide/tech-society" }} 
               back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }} 
             />
 

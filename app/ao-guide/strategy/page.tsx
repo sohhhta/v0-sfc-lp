@@ -44,7 +44,7 @@ const tocItems = [
 
 export default function AoStrategyPage() {
   return (
-    <main className="min-h-screen bg-slate-50 py-12">
+    <main className="min-h-screen bg-white py-12">
       <ArticleContainer>
 
         <ArticleHeader
