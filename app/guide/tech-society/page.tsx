@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents, ArticleNavigation } from "@/components/article-ui";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, LayoutGrid, MonitorSmartphone, AlertTriangle, Lightbulb } from "lucide-react";
+import { MonitorSmartphone, AlertTriangle, Lightbulb } from "lucide-react";
 import Link from "next/link";
 
 const tocItems = [
@@ -128,28 +128,11 @@ export default function TechSocietyPage() {
 
         <AuthorBox />
 
-        {/* Navigation */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 py-8 border-t border-slate-200">
-          <Link className="flex items-center text-slate-500 hover:text-[#002147] transition-colors group w-full sm:w-auto" href="/guide/time-management">
-            <ArrowRight className="mr-2 rotate-180 transform transition-transform group-hover:-translate-x-1" size={20}/>
-            <div className="text-sm">
-              <div className="text-slate-400 mb-1">前の記事</div>
-              <div className="font-bold">時間配分編</div>
-            </div>
-          </Link>
-          <Link className="text-slate-400 hover:text-[#002147] transition-colors p-2" href="/guide/essay/articles">
-            <LayoutGrid size={24}/>
-          </Link>
-          <div className="w-full sm:w-auto opacity-50 cursor-not-allowed">
-            <div className="flex items-center text-right text-slate-400 justify-end">
-              <div className="text-sm">
-                <div className="text-slate-400 mb-1">次の記事</div>
-                <div className="font-bold">次の記事はありません</div>
-              </div>
-              <ArrowRight className="ml-2" size={20} />
-            </div>
-          </div>
-        </div>
+        <ArticleNavigation
+          prev={{ title: "【資料読解編】膨大な資料から使えるデータを瞬時に見抜くテクニック", href: "/guide/data-reading" }}
+          back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
+          next={{ title: "【過去問演習編】白紙から合格答案を組み立てる思考プロセスの可視化", href: "/guide/past-exams" }}
+        />
       </ArticleContainer>
     </main>
   );

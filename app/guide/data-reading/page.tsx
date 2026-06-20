@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents, ArticleNavigation } from "@/components/article-ui";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, LayoutGrid, Search, TrendingUp } from "lucide-react";
+import { Search, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
 const tocItems = [
@@ -127,26 +127,11 @@ export default function DataReadingPage() {
 
         <AuthorBox />
 
-        {/* Navigation */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 py-8 border-t border-slate-200">
-          <Link className="flex items-center text-slate-500 hover:text-[#002147] transition-colors group w-full sm:w-auto" href="/guide/past-exams">
-            <ArrowRight className="mr-2 rotate-180 transform transition-transform group-hover:-translate-x-1" size={20}/>
-            <div className="text-sm">
-              <div className="text-slate-400 mb-1">前の記事</div>
-              <div className="font-bold">過去問演習編</div>
-            </div>
-          </Link>
-          <Link className="text-slate-400 hover:text-[#002147] transition-colors p-2" href="/guide/essay/articles">
-            <LayoutGrid size={24}/>
-          </Link>
-          <Link className="flex items-center text-right text-[#002147] hover:text-[#C5A059] transition-colors group w-full sm:w-auto justify-end" href="/guide/time-management">
-            <div className="text-sm">
-              <div className="text-slate-400 mb-1">次の記事</div>
-              <div className="font-bold">時間配分編</div>
-            </div>
-            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={20}/>
-          </Link>
-        </div>
+        <ArticleNavigation
+          prev={{ title: "【時間配分編】120分をどう使う？構成メモ作成から執筆までの最適タイムマネジメント", href: "/guide/time-management" }}
+          back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
+          next={{ title: "【頻出テーマ編】SFC小論文で狙われる「テクノロジーと社会問題」の攻略法", href: "/guide/tech-society" }}
+        />
       </ArticleContainer>
     </main>
   );

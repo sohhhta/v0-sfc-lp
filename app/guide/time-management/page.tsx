@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents, ArticleNavigation } from "@/components/article-ui";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, LayoutGrid, Clock, Pencil, BrainCircuit, AlertTriangle } from "lucide-react";
+import { Clock, Pencil, BrainCircuit, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 
 const tocItems = [
@@ -131,7 +131,7 @@ export default function TimeManagementPage() {
                   SFCの膨大な資料を前にすると、多くの受験生が「全てを満遍なく読まなければ」という罠に陥ります。しかし、私たちの目的は資料の専門家になることではなく、<strong>「設問に応えること」</strong>です。
                 </p>
                 <p className="text-slate-600 text-sm leading-relaxed m-0">
-                  設問の意図を正確に把握していれば、それに沿った資料の読み解きだけを行えば足ります。アンテナに引っかからない箇所は、<strong>時には思い切って読み飛ばしたり、理解度70%で次へ進んでしまっても全く問題ありません。</strong>重要なのは、全ての資料を完璧に理解することではなく、設問に応えるためのエビデンスを見つけ出すことと、何より「時間管理」な��です。
+                  設問の意図を正確に把握していれば、それに沿った資料の読み解きだけを行えば足ります。アンテナに引っかからない箇所は、<strong>時には思い切って読み飛ばしたり、理解��70%で次へ進んでしまっても全く問題ありません。</strong>重要なのは、全ての資料を完璧に理解することではなく、設問に応えるためのエビデンスを見つけ出すことと、何より「時間管理」な��です。
                 </p>
               </div>
 
@@ -177,26 +177,11 @@ export default function TimeManagementPage() {
 
         <AuthorBox />
 
-        {/* Navigation */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 py-8 border-t border-slate-200">
-          <Link className="flex items-center text-slate-500 hover:text-[#002147] transition-colors group w-full sm:w-auto" href="/guide/data-reading">
-            <ArrowRight className="mr-2 rotate-180 transform transition-transform group-hover:-translate-x-1" size={20} />
-            <div className="text-sm">
-              <div className="text-slate-400 mb-1">前の記事</div>
-              <div className="font-bold">資料読解編</div>
-            </div>
-          </Link>
-          <Link className="text-slate-400 hover:text-[#002147] transition-colors p-2" href="/guide/essay/articles">
-            <LayoutGrid size={24} />
-          </Link>
-          <Link className="flex items-center text-right text-[#002147] hover:text-[#C5A059] transition-colors group w-full sm:w-auto justify-end" href="/guide/tech-society">
-            <div className="text-sm">
-              <div className="text-slate-400 mb-1">次の記事</div>
-              <div className="font-bold">頻出テーマ編</div>
-            </div>
-            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={20} />
-          </Link>
-        </div>
+        <ArticleNavigation
+          prev={{ title: "【実践編】合格点に届かない理由とロジカルライティング", href: "/guide/logic-writing" }}
+          back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
+          next={{ title: "【資料読解編】膨大な資料から使えるデータを瞬時に見抜くテクニック", href: "/guide/data-reading" }}
+        />
       </ArticleContainer>
     </main>
   );
