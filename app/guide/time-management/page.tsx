@@ -1,8 +1,13 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents } from "@/components/article-ui";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, LayoutGrid, Clock, Pencil, BrainCircuit, AlertTriangle } from "lucide-react";
 import Link from "next/link";
+
+const tocItems = [
+  { id: "sec1", label: "黄金の時間配分：40分・60分・20分" },
+  { id: "sec2", label: "佐藤塾式・圧倒的な時間管理を生む「2つの掟」" },
+];
 
 const articleTitle = "【時間配分編】120分をどう使う？構成メモ作成から執筆までの最適タイムマネジメント";
 const articleDescription = "SFC小論文の120分間で時間が足りなくなる受験生必見。最初40分で合否が決まるPREP法を用いた「構成メモ」の作り方と、焦らず書き切るための具体的なタイムマネジメント術を解説します。";
@@ -41,6 +46,8 @@ export default function TimeManagementPage() {
           readTime={7}
         />
 
+        <TableOfContents items={tocItems} />
+
         <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 mb-12">
           <div className="prose prose-lg prose-slate max-w-none">
             <p>
@@ -53,7 +60,7 @@ export default function TimeManagementPage() {
               小論文の合否は、書き始める前の「構成メモ（設計図）」の緻密さで9割決まります。本記事では、120分を最大限に活用し、ブレることなく書き切るための黄金のタイムマネジメントを解説します。
             </p>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6" id="sec1">
               黄金の時間配分：40分・60分・20分
             </h2>
 
@@ -106,7 +113,7 @@ export default function TimeManagementPage() {
         <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 mb-12">
           <div className="prose prose-lg prose-slate max-w-none">
             {/* --- ここから加筆セクション --- */}
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-16 mb-6">
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-16 mb-6" id="sec2">
               佐藤塾式・圧倒的な時間管理を生む「2つの掟」
             </h2>
             <p>
@@ -124,7 +131,7 @@ export default function TimeManagementPage() {
                   SFCの膨大な資料を前にすると、多くの受験生が「全てを満遍なく読まなければ」という罠に陥ります。しかし、私たちの目的は資料の専門家になることではなく、<strong>「設問に応えること」</strong>です。
                 </p>
                 <p className="text-slate-600 text-sm leading-relaxed m-0">
-                  設問の意図を正確に把握していれば、それに沿った資料の読み解きだけを行えば足ります。アンテナに引っかからない箇所は、<strong>時には思い切って読み飛ばしたり、理解度70%で次へ進んでしまっても全く問題ありません。</strong>重要なのは、全ての資料を完璧に理解することではなく、設問に応えるためのエビデンスを見つけ出すことと、何より「時間管理」なのです。
+                  設問の意図を正確に把握していれば、それに沿った資料の読み解きだけを行えば足ります。アンテナに引っかからない箇所は、<strong>時には思い切って読み飛ばしたり、理解度70%で次へ進んでしまっても全く問題ありません。</strong>重要なのは、全ての資料を完璧に理解することではなく、設問に応えるためのエビデンスを見つけ出すことと、何より「時間管理」な��です。
                 </p>
               </div>
 

@@ -1,11 +1,17 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents } from "@/components/article-ui";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, LayoutGrid, Search, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
+const tocItems = [
+  { id: "sec1", label: "現代文の癖を捨てろ。「設問からの逆算」が全て" },
+  { id: "sec2", label: "グラフや表の「変曲点」と「異常値」に社会課題が潜む" },
+  { id: "sec3", label: "複数の資料を「クロス分析」して独自の結論を生む" },
+];
+
 const articleTitle = "【資料読解編】SFC特有の「膨大な資料」から使えるデータを瞬時に見抜くテクニック";
-const articleDescription = "総合政策・環境情報学部で出題される大量のグラフや文章。すべてを読もうとして時間切れになる受験生へ、自分の主張を補強する「エビデンス」だけを素早く抽出する読解法を解説します。";
+const articleDescription = "総合政策・環境情報学部で出題される大量のグラフや文章。すべてを読もうとして時間切れになる受験生へ、自分の主張を補強する「エビデンス」だけを素早く抽出する読解法を解説します";
 
 export const metadata: Metadata = {
   title: `${articleTitle} | 佐藤塾`,
@@ -41,6 +47,8 @@ export default function DataReadingPage() {
           readTime={6}
         />
 
+        <TableOfContents items={tocItems} />
+
         <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 mb-12">
           <div className="prose prose-lg prose-slate max-w-none">
             <p>
@@ -50,7 +58,7 @@ export default function DataReadingPage() {
               SFCの教授陣は、あなたの「現代文的な読解力」を測りたいわけではありません。彼らが求めているのは、社会に散らばるノイズだらけの情報の中から、<strong>自分の仮説を証明するための「エビデンス（証拠）」を素早く抽出し、論理を組み立てる能力</strong>です。本記事では、SFC小論文を攻略するための「逆算型リーディング」とデータの読み解き方を解説します。
             </p>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6" id="sec1">
               1. 現代文の癖を捨てろ。「設問からの逆算」が全て
             </h2>
             <p>
@@ -69,7 +77,7 @@ export default function DataReadingPage() {
               </p>
             </div>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6" id="sec2">
               2. グラフや表の「変曲点」と「異常値」に社会課題が潜む
             </h2>
             <p>
@@ -92,7 +100,7 @@ export default function DataReadingPage() {
               </li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+            <h2 className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6" id="sec3">
               3. 複数の資料を「クロス分析」して独自の結論を生む
             </h2>
             <p>
