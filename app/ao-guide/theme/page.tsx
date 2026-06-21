@@ -1,17 +1,10 @@
 import { Metadata } from "next";
-import {
-  ArticleH2,
-  ArticleCTA,
-  TableOfContents,
-  AuthorBox,
-  ArticleNavigation,
-  ArticleHighlight,
-  ArticleHeader,
-  ArticleContainer,
-} from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation } from "@/components/article-ui";
+import { TableOfContents } from "@/components/table-of-contents";
+import { MessageSquare, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 
 const articleTitle = "慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠";
-const articleDescription = "「ニュースで見るような大きな社会問題じゃないと合格できない？」そんな不安を解き、SFCの教授陣が本当に求めている「内発的な動機」を見つけるための具体的なステップと、陥りがちな思考の罠を解説します。";
+const articleDescription = "SDGsや貧困問題など、立派すぎるテーマを設定して失敗するSFC受験生は後を絶ちません。本当に評価される「自分だけの研究テーマ」を掘り起こすための具体的なステップを解説します。";
 
 export const metadata: Metadata = {
   title: `${articleTitle} | 佐藤塾`,
@@ -21,7 +14,7 @@ export const metadata: Metadata = {
     description: articleDescription,
     images: [
       {
-        url: `https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`,
+        url: `https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent("慶應SFCの志望理由書に「立派な社会問題」は不要")}`,
         width: 1200,
         height: 630,
         alt: articleTitle,
@@ -32,94 +25,126 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${articleTitle} | 佐藤塾`,
     description: articleDescription,
-    images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
+    images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent("慶應SFCの志望理由書に「立派な社会問題」は不要")}`],
   },
 };
 
 const tocItems = [
-  { id: "section-1", label: "SFCが求める「問題解決」に対する、受験生の致命的な誤解" },
-  { id: "section-2", label: "今日からできる！自分だけの「テーマ」を掘り起こす3ステップ" },
-  { id: "section-3", label: "【壁】一人で考えると必ず陥る「思考のループ」と限界" },
-  { id: "section-4", label: "佐藤塾の「AI壁打ち×魂の1on1」が、テーマを覚醒させる理由" },
+  { id: "section-1", title: "1. 面接官は「借り物のテーマ」を1秒で見抜く" },
+  { id: "section-2", title: "2. 「好き」や「違和感」を学問に接続する" },
+  { id: "section-3", title: "3. 研究テーマを見つける3つのステップ" },
+  { id: "section-4", title: "【実録】「SDGsの罠」から抜け出し、ニッチな偏愛でSFCを射止めた軌跡" }
 ];
 
-export default function AoThemePage() {
+export default function ThemePage() {
   return (
-    <main className="min-h-screen bg-white py-12">
+    <main className="pt-32 md:pt-40 pb-20 bg-white min-h-screen">
       <ArticleContainer>
-
         <ArticleHeader
           theme="ao"
           category="SFC AO入試 対策ガイド"
-          title={<>【テーマ設定編】自分だけの<br className="hidden md:block" />研究テーマを見つける3ステップ</>}
-          readTime={6}
+          title={<>慶應SFCの志望理由書に「立派な社会問題」は不要。<br className="hidden md:block" />自分だけの研究テーマを見つける3ステップと思考の罠</>}
+          readTime={7}
         />
 
-        <div className="p-8 md:p-12 text-slate-800">
-          <p className="mb-8 leading-relaxed text-slate-700 md:text-lg">
-            SFC受験生と保護者様が最も悩み、そして誤解しやすいのが「テーマ設定」です。「ニュースで見るような大きな社会課題や、最新のITテクノロジーなど、社会的に意義のある立派なテーマを掲げないと合格できないのではないか？」と不安に思う方も多いでしょう。<br />
-            しかし、SFCの教授陣が本当に求めているのは、ニュースから借りてきた社会問題ではありません。この記事では、自分自身の内側から湧き上がる「内発的な動機」を見つけ出し、SFCでの研究テーマへと昇華させる具体的なステップと、その過程で陥りがちな罠について解説します。
-          </p>
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 mb-12">
+          <div className="prose prose-lg prose-slate max-w-none">
+            <p>
+              SFCのAO入試において、最も重要かつ受験生が最初につまずくのが「研究テーマの設定」です。
+            </p>
+            <p>
+              「社会に貢献する立派なテーマでなければ合格できない」と思い込み、ネットで見つけたSDGsや環境問題をそのままテーマにしてしまう受験生が後を絶ちません。しかし、それは確実に不合格へと向かう「思考の罠」です。本記事では、SFCの教授陣が本当に求めている「あなただけの研究テーマ」を掘り起こすステップを解説します。
+            </p>
 
-          <TableOfContents items={tocItems} />
+            <TableOfContents items={tocItems} />
 
-          <ArticleH2 id="section-1">
-            SFCが求める「問題解決」に対する、受験生の致命的な誤解
-          </ArticleH2>
+            <h2 id="section-1" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+              1. 面接官は「借り物のテーマ」を1秒で見抜く
+            </h2>
+            <p>
+              SFCの教授陣は、毎年何千枚もの志望理由書を読み、数え切れないほどの受験生と面接をしています。「海洋プラスチック問題を解決したい」「途上国の教育格差をなくしたい」といったテーマは、一見立派ですが、本人の強烈な原体験（なぜあなたがそれをやるのか？）が伴っていなければ、「どこかで聞いたような借り物の言葉」として一瞬で見抜かれます。
+            </p>
 
-          <p className="mb-6 leading-relaxed">SFCは「問題発見・解決の大学」です。だからこそ、多くの受験生が「社会的に評価されそうなテーマ」を探そうとします。SDGs、環境問題、教育格差、AIの倫理問題など、入り口は様々です。</p>
-          <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>しかし、ニュースや教科書から借りてきた「正解」のようなテーマは、面接ですぐに見抜かれます。</ArticleHighlight></p>
-          <p className="mb-6 leading-relaxed">なぜなら、そこには「あなた自身の血の通った体験」が欠けているからです。どんなに論理的で立派な解決策であっても、第三者的な視点で作られた書類には熱が宿りません。</p>
-          <p className="mb-6 leading-relaxed">SFCの教授陣が見極めようとしているのは、課題のスケール（大きさ）ではありません。</p>
-          <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>「なぜ、他の誰でもない『あなた』が、大学の4年間（あるいはその先の人生）をかけてその問題に取り組むのか」という圧倒的な必然性です。</ArticleHighlight></p>
+            <h2 id="section-2" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+              2. 「好き」や「違和感」を学問に接続する
+            </h2>
+            <p>
+              SFCが求めているのは、世界を救う壮大な目標ではなく、<strong>「あなた自身が心の底から熱狂できるもの」や「日常で強く感じる違和感」</strong>です。アニメが好き、ゲームが好き、特定のスポーツが好き。そうした「偏愛」や「個人的な悩み」を起点とし、そこに「学問的なアプローチ」を掛け合わせることで、誰にも真似できない最強の研究テーマが生まれます。
+            </p>
 
-          <ArticleH2 id="section-2">
-            今日からできる！自分だけの「テーマ」を掘り起こす3ステップ
-          </ArticleH2>
+            <h2 id="section-3" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+              3. 研究テーマを見つける3つのステップ
+            </h2>
+            <ul className="space-y-4 my-6">
+              <li><strong>ステップ1（原体験の棚卸し）：</strong> 幼少期から現在まで、自分が時間を忘れて没頭したこと、悔しかったこと、疑問に思ったことをすべて書き出す。</li>
+              <li><strong>ステップ2（課題の言語化）：</strong> その中で「もっとこうなればいいのに」という不満や課題を見つける。</li>
+              <li><strong>ステップ3（SFCの学問との接続）：</strong> その課題を解決するために、SFCのどの教授の下で、どんなテクノロジーやデザイン、社会学の手法を学ぶ必要があるかを結びつける。</li>
+            </ul>
 
-          <p className="mb-6 leading-relaxed">では、どうすれば自分だけのテーマが見つかるのでしょうか。特別な実績や海外経験は全く不要です。以下の3つのステップで、自分の内面を掘り下げてみましょう。</p>
+            {/* --- ここから加筆セクション --- */}
+            <h2 id="section-4" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-16 mb-6">
+              【実録】「SDGsの罠」から抜け出し、ニッチな偏愛でSFCを射止めた軌跡
+            </h2>
+            <p>
+              ここで、見栄えの良い「借り物のテーマ」で行き詰まっていたIさんが、佐藤塾の1on1を通じて自分の「偏愛」に目覚め、AO合格を勝ち取ったケーススタディをご紹介します。
+            </p>
+            <p>
+              Iさんは入塾当初、「海洋プラスチックゴミの削減による海洋生態系の保全」というテーマを掲げていました。しかし、彼女自身は海沿いに住んでいるわけでもなく、海洋生物に特別な思い入れもありませんでした。AI壁打ちで「なぜあなたがそれを解決したいのですか？」と問われても、ネットの受け売りのような言葉しか出てこない状態でした。
+            </p>
 
-          <h3 className="text-lg font-bold text-[#002147] mb-3 mt-8">Step1. 日常の中で見過ごせない「違和感」や「偏愛」を書き出す</h3>
-          <p className="mb-6 leading-relaxed">まずは、日々の生活の中で感じる些細な「不便さ」や「怒り」、あるいは時間を��れて没頭してしまう「好きなこと（偏愛）」をノートに書き出してみてください。「なぜあのシステムは使いにくいのか」「なぜこの地域の伝統は廃れていくのか」といった、等身大の気づきが最高のスタート地点になります。</p>
+            <div className="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 my-8 space-y-6">
+              <div className="flex items-start">
+                <div className="bg-[#002147] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <MessageSquare size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#002147] mb-1">塾長からの問い（1on1面談）</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「Iさん、海洋プラ問題の志望理由書、なんだかIさんの"体温"を感じないんだよね。無理して『いいこと』を書こうとしてない？ 一旦SDGsは忘れて、Iさんが休日にお金と時間を一番使っている趣味って何？」</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="bg-[#800000] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <Target size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#800000] mb-1">Iさんの気づき</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「えっ…休日はずっと古着屋を巡っています。買った古着を自分でミシンでリメイクして、フリマアプリで売ったりするのが大好きで…。でも、そんなのただの趣味だし、大学の志望理由にはならないですよね？」</p>
+                </div>
+              </div>
 
-          <h3 className="text-lg font-bold text-[#002147] mb-3 mt-8">Step2. 「なぜ？」を繰り返し、個人的な想いの根源を探る</h3>
-          <p className="mb-6 leading-relaxed">次に、書き出した違和感に対して「なぜそう感じるのか？」を5回繰り返します。自分自身の過去の体験（原体験）を丁寧に紐解き、表面的な興味の奥にある「自分自身の価値観の根源」にアクセスするプロセスです。</p>
+              <div className="flex items-start">
+                <div className="bg-[#C5A059] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <Lightbulb size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-slate-800 mb-1">「偏愛」から唯一無二の研究テーマへ</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「いや、それこそが最強の武器だよ！ アパレル産業の大量廃棄は深刻な社会問題だ。Iさんの『古着リメイク』の技術と熱量に、SFCで学べる『プラットフォーム構築（IT）』や『ビジネスモデル設計』を掛け合わせたら、『Z世代向けの古着アップサイクル循環システム』という立派な研究テーマになるよ！」</p>
+                </div>
+              </div>
+            </div>
 
-          <h3 className="text-lg font-bold text-[#002147] mb-3 mt-8">Step3. 個人的なモヤモヤを「社会の課題」へと接続する</h3>
-          <p className="mb-10 leading-relaxed">個人的な想いの解像度が上がったら、それを社会構造の視点から捉え直します。「自分のこの悩みは、実は社会のシステムやテクノロジーの欠陥から生じているのではないか？」と考えることで、単なる「個人の感想」が「研究テーマ」の種へと変化し始めます。</p>
+            <div className="bg-green-50 p-6 md:p-8 rounded-xl border border-green-100 my-8 flex items-start">
+              <CheckCircle2 className="text-green-600 mr-4 mt-1 flex-shrink-0" size={28} />
+              <div>
+                <h4 className="text-green-800 font-bold text-lg mt-0 mb-3">自分の言葉で語れるから、面接でも無双できる</h4>
+                <p className="text-sm text-green-800 mb-0 leading-relaxed">
+                  大好きな「古着」をテーマにした途端、Iさんのタイピングは止まらなくなりました。AI壁打ち相手にも「実際のリメイク市場の課題」を熱く語るようになり、志望理由書の質が劇的に向上。面接でも教授と古着ビジネスの展望で大盛り上がりし、見事合格を勝ち取りました。
+                </p>
+              </div>
+            </div>
+            {/* --- ここまで加筆セクション --- */}
 
-          <ArticleH2 id="section-3">
-            【壁】一人で考えると必ず陥る「思考のループ」と限界
-          </ArticleH2>
-
-          <p className="mb-6 leading-relaxed">ここまでのステップを頭で理解できても、いざ一人で机に向かって実践しようとすると、多くの受験生が厚い壁にぶつかります。</p>
-          <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>「想いは見えてきたけれど、それがSFCのアカデミア（学問）とどう結びつくのかわからない」という壁です。</ArticleHighlight></p>
-          <p className="mb-6 leading-relaxed">高校生が一人で考えていても、想いを学術的なアプローチに変換するための「語彙力」や「先行研究の知識」が圧倒的に不足しています。</p>
-          <p className="mb-6 leading-relaxed">ネットで検索を重ねても、どこかで見たようなありきたりな言葉や、他人の論文のつぎはぎしか出てきません。結果として、思考が堂々巡りになり、時間だけが過ぎていく「思考のループ」に陥ってしまうのです。</p>
-
-          <ArticleH2 id="section-4">
-            佐藤塾の「AI壁打ち×魂の1on1」が、テーマを覚醒させる理由
-          </ArticleH2>
-
-          <p className="mb-6 leading-relaxed">この苦しい「思考のループ」を破壊し、テーマを爆発的に進化させるのが、佐藤塾が提供する独自の伴走環境です。</p>
-          <p className="mb-6 leading-relaxed">まず、<ArticleHighlight>24時間稼働のSFC特化AI</ArticleHighlight>に、あなたのまとまらないモヤモヤや思考の断片をそのままぶつけてください。AIはあなたの言葉を瞬時に読み解き、関連する先行研究、SFCの教授陣の知見、そしてアカデミックな切り口へと「翻訳」して返してくれます。一人では何日もかかる調査と思考の整理が、圧倒的なスピードで進みます。</p>
-          <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>しかし、AIが出力したものはあくまで「質の高い素材」に過ぎません。最後に必要不可欠なのが、塾長である私との「1on1対話」です。</ArticleHighlight></p>
-          <p className="mb-6 leading-relaxed">「それは本当に君がやりたいことなのか？」「SFCのこの教授の元で学ぶ必然性はどこにあるのか？」——容赦のない、しかし本質的な問いを投げかけます。</p>
-          <p className="mb-6 leading-relaxed">この泥臭い対話の往復を通じて、AIが整えた綺麗なロジックに「あなた自身の血」が通い始めます。こうして出来上がったテーマこそが、いかなる面接官の鋭い質問も跳ね返す、最強の「本気の覚悟」へと昇華されるのです。</p>
-
-            <ArticleNavigation
-              prev={{
-                title: "慶應SFCのAO入試に「すごい実績」は不要。一般・AO\"二刀流\"が合格の最短距離である理由",
-                href: "/ao-guide/strategy",
-              }}
-              back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
-              next={{ title: "【志望理由書編】SFC教授の心を動かす「志望理由書」の書き方と構成", href: "/ao-guide/statement" }}
-            />
-
-          <AuthorBox />
-
-          <ArticleCTA />
+          </div>
         </div>
+
+        <AuthorBox />
+
+        <ArticleNavigation
+          prev={{ title: "慶應SFCのAO入試に「すごい実績」は不要。一般・AO\"二刀流\"が合格の最短距離である理由", href: "/ao-guide/strategy" }}
+          back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
+          next={{ title: "【志望理由書編】SFC教授の心を動かす「志望理由書」の書き方と構成", href: "/ao-guide/statement" }}
+        />
       </ArticleContainer>
     </main>
   );
