@@ -1,19 +1,10 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import { ChevronRight } from 'lucide-react'
-import { TableOfContents, ArticleH2, ArticleNavigation, ArticleHighlight, ArticleHeader, ArticleContainer } from '@/components/article-ui'
-
-const tocItems = [
-  { id: "sec1", label: "いきなり資料を読み始めない。「設問の要求」を正確に把握する" },
-  { id: "sec2", label: "資料から「真の問題」を見つけ出す思考法" },
-  { id: "sec3", label: "書き始める前の勝負。「論理のアウトライン」を構築する" },
-  { id: "sec4", label: "SFCが求める「当事者意識（オーナーシップ）」の示し方" },
-];
+import { Metadata } from "next";
+import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation } from "@/components/article-ui";
+import { TableOfContents } from "@/components/table-of-contents";
+import { MessageSquare, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 
 const articleTitle = "【過去問演習編】白紙から合格答案を組み立てる思考プロセスの可視化";
-const articleDescription = "慶應SFCの過去問演習で差がつく「思考プロセス」を可視化。設問の要求の把握から真の問題発見、論理のアウトライン構築、当事者意識の示し方まで、合格答案を組み立てる具体的な手順を解説します。";
+const articleDescription = "SFC小論文の過去問演習において、膨大な資料をどう読み解き、どう論理を構築するのか。設問の把握からアウトライン作成、当事者意識の示し方まで、具体的なプロセスを解説します。";
 
 export const metadata: Metadata = {
   title: `${articleTitle} | 佐藤塾`,
@@ -38,130 +29,130 @@ export const metadata: Metadata = {
   },
 };
 
+const tocItems = [
+  { id: "section-1", title: "1. 過去問は「解く」のではなく「分析する」" },
+  { id: "section-2", title: "2. 白紙からアウトラインを構築する3ステップ" },
+  { id: "section-3", title: "3. 「当事者意識」を答案に落とし込む" },
+  { id: "section-4", title: "【実録】「ただ書いて満足」から脱却し、出題者の意図をハックする視点へ" }
+];
+
 export default function PastExamsPage() {
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "【過去問演習編】白紙から合格答案を組み立てる思考プロセスの可視化 | 佐藤塾",
-    "description": "SFC小論文の過去問演習において、膨大な資料をどう読み解き、どう論理を構築するのか。設問の把握からアウトライン作成、当事者意識の示し方まで、具体的なプロセスを解説します。",
-    "image": "https://lifeeling.jp/hero.jpg",
-    "author": {
-      "@type": "Person",
-      "name": "佐藤颯太"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "佐藤塾"
-    },
-    "mainEntityOfPage": "https://lifeeling.jp/guide/past-exams"
-  };
-
   return (
-    <div className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
-      
-      <main className="pt-32 md:pt-40 pb-20">
-        <ArticleContainer>
-          {/* ヘッダー */}
-          <ArticleHeader
-            theme="essay"
-            category="SFC小論文 対策ガイド"
-            title={<>【過去問演習編】白紙から合格答案を組み立てる<br className="hidden md:block" />思考プロセスの可視化</>}
-            readTime={6}
-          />
+    <main className="pt-32 md:pt-40 pb-20 bg-white min-h-screen">
+      <ArticleContainer>
+        <ArticleHeader
+          category="SFC小論文 対策ガイド"
+          title={<>【過去問演習編】白紙から合格答案を組み立てる<br className="hidden md:block" />思考プロセスの可視化</>}
+          readTime={7}
+        />
 
-          <TableOfContents items={tocItems} />
-
-          <div className="prose prose-slate max-w-none leading-[1.9] text-gray-700">
-            <p className="text-lg mb-8 italic border-l-4 border-[#C5A059] pl-6 py-2 text-slate-600 bg-slate-50 mt-12">
-              「過去問を開いてみたものの、資料の多さに圧倒されて何から手をつけていいか分からない」<br />
-              「模範解答の記述が立派すぎて、試験時間内に自分がこれを書けるイメージが湧かない」
-            </p>
-            <p className="mb-12">
-              SFCの小論文対策を始めたばかりの受験生が、最初に直面する壁です。しかし、完成された模範解答をどれだけ読んでも、本番で同じように書けるようにはなりません。必要なのは、特別なセンスではなく、<ArticleHighlight>「真っ白な原稿用紙から、どのような手順で論理を組み立てていくか」という具体的なプロセス</ArticleHighlight>を身につけることです。本記事では、過去問を解く際の具体的なステップを解説します。
-            </p>
-
-            <ArticleH2 id="sec1">1. いきなり資料を読み始めない。「設問の要求」を正確に把握する</ArticleH2>
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 mb-12">
+          <div className="prose prose-lg prose-slate max-w-none">
             <p>
-              SFCの小論文では、数十ページに及ぶ膨大な資料が提示されることがあります。試験開始と同時に1ページ目から丁寧に資料を読み始めてしまうと、時間がいくらあっても足りません。
+              基礎的な書き方や資料の読み方を学んだら、次はいよいよ過去問演習です。しかし、「とりあえず過去問を解いて、模範解答を読んで満足する」という勉強法では、いつまで経ってもSFCの小論文には太刀打ちできません。
             </p>
-            <p className="mb-6">
-              まず行うべきは<ArticleHighlight>「設問文の熟読と条件の抽出」</ArticleHighlight>です。例えば、「資料A〜Dを踏まえ、現在の社会における問題点を〇〇字以内で要約し、それに対するあなたの解決策を〇〇字で提案しなさい」といった具体的な要求をマーキングします。「何について書くべきか」「どの資料を使うよう指定されているか」「字数配分はどうなっているか」という<ArticleHighlight>論理の外枠（制約）</ArticleHighlight>を最初に確定させることが、すべての��発点となります。
-            </p>
-
-            <ArticleH2 id="sec2">2. 資料から「真の問題」を見つけ出す思考法</ArticleH2>
             <p>
-              設問の要求を把握したら、それに沿って資料を読み解きます。ここで重要なのは、資料に書かれている表面的な事実をそのまま書き写すのではなく、<ArticleHighlight>その背後にある「構造的な問題（ボトルネック）」を見つけ出すこと</ArticleHighlight>です。
-            </p>
-            <p className="mb-6">
-              例えば「食品ロス」に関する資料があったとします。「日本では年間〇〇トンの食品が捨てられている、だからもったいない」と書くのは単なる事実の羅列です。SFCで評価されるのは、「テクノロジーが発展しているのに、なぜ食品の需給予測が最適化されないのか」「法的な規制がリサイクルを阻んでいるのではないか」といった、<ArticleHighlight>問題が解決されない根本的な原因（真の問題）</ArticleHighlight>を提示する力です。佐藤塾では、この「視点の広げ方」をAIとの壁打ちを通じて徹底的にトレーニングします。
+              本記事では、真っ白な原稿用紙から「合格レベルの答案」を確実かつシステマティックに組み立てるための、具体的な思考プロセスと過去問の活用法を解説します。
             </p>
 
-            <ArticleH2 id="sec3">3. 書き始める前の勝負。「論理のアウトライン」を構築する</ArticleH2>
+            <TableOfContents items={tocItems} />
+
+            <h2 id="section-1" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+              1. 過去問は「解く」のではなく「分析する」
+            </h2>
             <p>
-              真の問題が見えてきたら、すぐに原稿用紙に書き始めたくなるかもしれません。しかし、文章を書きながら論理を考えようとすると、途中で筋道が破綻しやすくなります。
-            </p>
-            <p className="mb-6">
-              必ず、問題用紙の余白を使って<ArticleHighlight>「アウトライン（論理の骨組み）」</ArticleHighlight>を作成してください。箇条書きやマインドマップ形式で、「①真の問題の定義」「②その問題が発生している原因（資料に基づく根拠）」「③原因を取り除くための具体的な解決策」「④解決策がもたらす未来（結論）」というブロックを配置します。この骨組みが論理的に繋がっているかを確認してから、初めて原稿用紙のマス目を埋める作業に入ります。
+              過去問をただの「練習問題」として扱ってはいけません。SFCの過去問は、教授陣からの「私たちはこういう思考ができる学生を求めている」という強烈なメッセージです。設問の意図を正確に読み取り、「なぜこの資料が提示されているのか」「どのような論理展開が期待されているのか」を分析することが、過去問演習の最大の目的です。
             </p>
 
-            <ArticleH2 id="sec4">4. SFCが求める「当事者意識（オーナーシップ）」の示し方</ArticleH2>
+            <h2 id="section-2" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+              2. 白紙からアウトラインを構築する3ステップ
+            </h2>
             <p>
-              最後に、解決策を提示する際の最も重要なポイントについてお伝えします。それは<ArticleHighlight>「評論家にならず、当事者（オーナーシップを持つ者）として書く」</ArticleHighlight>ということです。
+              いきなり原稿用紙のマス目を埋め始めるのは危険です。必ず以下のステップでアウトライン（構成案）を構築しましょう。
             </p>
-            <p className="mb-12">
-              「政府が法律を変えるべきだ」「国民の意識を高めるべきだ」といった、誰かがやってくれるのを待つような意見は評価されません。<ArticleHighlight>「自分自身が（あるいは自分が立ち上げるプロジェクトが）、既存のテクノロジーや社会の仕組みをどのように活用し、この問題を解決に導くのか」</ArticleHighlight>という、地に足のついた実現可能性と当事者意識が求められます。佐藤塾の1on1指導では、生徒一人ひとりの興味関心とSFCの出題テーマをすり合わせ、この「自分事として語る力」を磨き上げ���いきます。
+            <ul className="space-y-4 my-6">
+              <li><strong>① 設問の要求整理：</strong> 何を、どの順番で、どの程度の分量で書くべきかをリストアップする。</li>
+              <li><strong>② 材料の配置：</strong> 資料から抽出したエビデンスや自分のアイデアを、PREP法などの論理の型に当てはめる。</li>
+              <li><strong>③ 論理の飛躍チェック：</strong> 各段落のつながりが自然か、第三者が読んで納得できるかを確認する。</li>
+            </ul>
+
+            <h2 id="section-3" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+              3. 「当事者意識」を答案に落とし込む
+            </h2>
+            <p>
+              SFCの教授陣は、評論家のように客観的な意見だけを述べる学生を評価しません。「その社会問題に対して、あなた自身はどう関わり、どう解決していくのか」という当事者意識（オーナーシップ）が求められます。自分の過去の経験や、将来SFCで学びたいこととリンクさせて論じることで、答案の説得力は飛躍的に高まります。
             </p>
 
-            {/* 塾長プロフィール */}
-            <div className="mt-24 p-8 border border-gray-200 rounded-3xl flex flex-col md:flex-row items-center gap-8 bg-slate-50/50">
-              <div className="relative w-24 h-24 flex-shrink-0 border-2 border-[#C5A059] rounded-full overflow-hidden">
-                <Image
-                  src="/og-image.png"
-                  alt="佐藤塾 塾長 佐藤颯太"
-                  fill
-                  className="object-cover object-top scale-125"
-                  unoptimized
-                />
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-bold text-[#C5A059] uppercase tracking-tighter">監修者</span>
-                  <h4 className="text-xl font-bold text-[#002147] font-serif">佐藤 颯太 <span className="text-sm font-medium text-gray-500">Sota Sato</span></h4>
+            {/* --- ここから加筆セクション --- */}
+            <h2 id="section-4" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-16 mb-6">
+              【実録】「ただ書いて満足」から脱却し、出題者の意図をハックする視点へ
+            </h2>
+            <p>
+              ここで、過去問を10年分以上解きながらも一向に手応えを掴めず苦しんでいたHさんが、佐藤塾の指導で「合格答案の設計図」を手に入れたケーススタディをご紹介します。
+            </p>
+            <p>
+              Hさんは非常に勉強熱心でしたが、過去問演習のやり方が「時間を測って書き、模範解答を見て一喜一憂するだけ」という作業になっていました。そのため、少しでも傾向が変わると手も足も出なくなり、点数が安定しませんでした。
+            </p>
+            <p>
+              この「作業としての演習」から抜け出させたのが、<strong>佐藤塾のAI添削と、塾長による「出題者視点のインストール（1on1）」</strong>です。
+            </p>
+
+            <div className="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 my-8 space-y-6">
+              {/* 塾長からの問い */}
+              <div className="flex items-start">
+                <div className="bg-[#002147] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <MessageSquare size={24} />
                 </div>
-                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                  佐藤塾 塾長。慶應SFC受験対策の専門家。これまで数多くの受験生と向き合い、独自の「ロジカルライティング・メソッド」と最新のAI技術を融合させた指導で、多数の逆転合格者を輩出。
-                </p>
-                <Link href="/#contact-form" className="text-sm font-bold text-[#800000] hover:underline inline-flex items-center">
-                  塾長から詳しい指導方針を聞く <ChevronRight size={14} className="ml-1" />
-                </Link>
+                <div>
+                  <p className="text-sm font-bold text-[#002147] mb-1">塾長からの問い（1on1面談）</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「Hさん、たくさん過去問を解いて偉いね。でも、解いた後に『この問題を作った教授は、受験生のどういう能力を試したかったのか？』まで考えているかな？ 模範解答と自分の答案を見比べるだけじゃなくて、採点基準そのものを想像してみよう。」</p>
+                </div>
+              </div>
+
+              {/* 生徒の深掘り */}
+              <div className="flex items-start">
+                <div className="bg-[#800000] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <Target size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#800000] mb-1">Hさんの気づき</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「採点基準の想像…。考えたこともありませんでした。ただ『上手な文章』が書ければ受かると思っていました。でも、教授がわざわざこの資料を用意したってことは、そこから論理を組み立てる能力を見たいってことですよね。」</p>
+                </div>
+              </div>
+
+              {/* 解決策の提示 */}
+              <div className="flex items-start">
+                <div className="bg-[#C5A059] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <Lightbulb size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-slate-800 mb-1">「採点者視点」によるアウトライン設計</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「その通り。だから、いきなり書き始めるのではなく、まずは『出題者の意図を満たすアウトライン』だけを徹底的に作る訓練をしよう。AI壁打ちを使って、『この構成で教授は納得するか？』を何度もシミュレーションするんだ。」</p>
+                </div>
               </div>
             </div>
 
-            {/* 共通のナビゲーション */}
-            <ArticleNavigation 
-              prev={{ title: "【頻出テーマ編】SFC小論文で狙われる「テクノロジーと社会問題」の攻略法", href: "/guide/tech-society" }} 
-              back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }} 
-            />
-
-            {/* CTA */}
-            <div className="mt-20 p-10 bg-[#002147] text-white rounded-3xl text-center shadow-2xl">
-              <h3 className="text-2xl font-bold mb-6 font-serif">合格へのプロセスを、共に歩みませんか</h3>
-              <p className="mb-10 text-slate-300 max-w-2xl mx-auto">
-                「正しい手順」を知り、「客観的なフィードバック」を受け続けること。それがSFC小論文攻略の唯一にして最短のルートです。まずは現状の課題をご相談ください。
-              </p>
-              <Link href="/#contact-form">
-                <Button className="bg-[#C5A059] hover:bg-[#B48F48] text-[#002147] font-bold py-7 px-12 text-lg rounded-none">
-                  無料相談・体験授業を予約する
-                </Button>
-              </Link>
+            <div className="bg-green-50 p-6 md:p-8 rounded-xl border border-green-100 my-8 flex items-start">
+              <CheckCircle2 className="text-green-600 mr-4 mt-1 flex-shrink-0" size={28} />
+              <div>
+                <h4 className="text-green-800 font-bold text-lg mt-0 mb-3">自己満足から脱却し、安定した合格ラインへ</h4>
+                <p className="text-sm text-green-800 mb-0 leading-relaxed">
+                  Hさんはその後、「解答を書き切る」ことよりも「アウトラインを練る」ことに時間を割くようになりました。AIによる客観的な評価と塾長との対話を通じて「出題者視点」をインストールした結果、どんな奇問が出ても確実に合格ラインを超える論理構成を瞬時に組み立てられるようになり、見事合格を掴み取りました。
+                </p>
+              </div>
             </div>
+            {/* --- ここまで加筆セクション --- */}
+
           </div>
-        </ArticleContainer>
-      </main>
-    </div>
-  )
+        </div>
+
+        <AuthorBox />
+
+        <ArticleNavigation
+          prev={{ title: "【頻出テーマ編】SFC小論文で狙われる「テクノロジーと社会問題」の攻略法", href: "/guide/tech-society" }}
+          back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
+        />
+      </ArticleContainer>
+    </main>
+  );
 }
