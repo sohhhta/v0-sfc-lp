@@ -1,17 +1,10 @@
 import { Metadata } from "next";
-import {
-  ArticleH2,
-  ArticleCTA,
-  TableOfContents,
-  AuthorBox,
-  ArticleNavigation,
-  ArticleHighlight,
-  ArticleHeader,
-  ArticleContainer,
-} from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation } from "@/components/article-ui";
+import { TableOfContents } from "@/components/table-of-contents";
+import { MessageSquare, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 
-const articleTitle = "慶應SFCのAO入試に「すごい実績」は不要。一般・AO“二刀流”が合格の最短距離である理由";
-const articleDescription = "「特別な実績がないとSFCのAO入試には受からない」は誤解です。一般入試とAO入試を並行する「二刀流」戦略と、原体験の圧倒的な深掘りこそが合格への最短距離。SFC専門塾がその理由を解説します。";
+const articleTitle = "慶應SFCのAO入試に「すごい実績」は不要。一般・AO\"二刀流\"が合格の最短距離である理由";
+const articleDescription = "「起業経験や国際大会での入賞がないとSFCのAOは受からない」という誤解を解き、一般入試の小論文対策とAO入試対策がどのように相乗効果を生むのか、その具体的な戦略を解説します。";
 
 export const metadata: Metadata = {
   title: `${articleTitle} | 佐藤塾`,
@@ -21,7 +14,7 @@ export const metadata: Metadata = {
     description: articleDescription,
     images: [
       {
-        url: `https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`,
+        url: `https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO二刀流が合格の最短距離である理由")}`,
         width: 1200,
         height: 630,
         alt: articleTitle,
@@ -32,79 +25,135 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${articleTitle} | 佐藤塾`,
     description: articleDescription,
-    images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
+    images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO二刀流が合格の最短距離である理由")}`],
   },
 };
 
 const tocItems = [
-  { id: "section-1", label: "誤解だらけのSFC AO入試：「起業」も「全国大会」も必須ではない" },
-  { id: "section-2", label: "なぜ「AO単願」は危険なのか？佐藤塾が“二刀流”を強く推奨する理由" },
-  { id: "section-3", label: "あなたの中にある「まだ言語化されていない問い」を見つける方法" },
+  { id: "section-1", title: "1. 「すごい実績がないと受からない」は最大の誤解" },
+  { id: "section-2", title: "2. 小論文とAO入試は「評価基準」が全く同じ" },
+  { id: "section-3", title: "3. 「二刀流」がもたらす圧倒的な相乗効果" },
+  { id: "section-4", title: "【実録】「起業しなきゃ」の強迫観念から解放され、日常の探究で合格を掴んだ軌跡" }
 ];
 
 export default function AoStrategyPage() {
   return (
-    <main className="min-h-screen bg-white py-12">
+    <main className="pt-32 md:pt-40 pb-20 bg-white min-h-screen">
       <ArticleContainer>
-
         <ArticleHeader
           theme="ao"
           category="SFC AO入試 対策ガイド"
-          title={<>【二刀流戦略】一般入試と<br className="hidden md:block" />AO入試の相乗効果</>}
-          readTime={5}
+          title={<>慶應SFCのAO入試に「すごい実績」は不要。<br className="hidden md:block" />一般・AO&quot;二刀流&quot;が合格の最短距離である理由</>}
+          readTime={6}
         />
 
-        <div className="p-8 md:p-12 text-slate-800">
-          <TableOfContents items={tocItems} />
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 mb-12">
+          <div className="prose prose-lg prose-slate max-w-none">
+            <p>
+              「SFCのAO入試を受けたいけれど、自分にはアプリ開発や起業の経験、ビジネスコンテストでの優勝歴なんてないから絶対に無理だ…」
+            </p>
+            <p>
+              毎年、数え切れないほどの受験生からこのような相談を受けます。しかし、結論から言えばそれは<strong>大きな誤解</strong>です。本記事では、華々しい実績を持たない普通の高校生が、なぜSFCのAO入試を突破できるのか。そして、一般入試（小論文）とAO入試を両方対策する「二刀流」がいかに最強の戦略であるかを解説します。
+            </p>
 
-          <ArticleH2 id="section-1">
-            誤解だらけのSFC AO入試：「起業」も「全国大会」も必須ではない
-          </ArticleH2>
+            <TableOfContents items={tocItems} />
 
-          <p className="mb-6 leading-relaxed">「SFCのAO入試に合格するには、学生起業や全国大会での優勝経験が必要だ」</p>
-          <p className="mb-6 leading-relaxed">毎年、面談に訪れる受験生や保護者の方から、必ずと言っていいほど聞かれる言葉です。</p>
-          <p className="mb-6 leading-relaxed">ネット上には華々しい実績を持つ合格者の声が溢れており、そう思い込んでしまうのも無理はありません。</p>
-          <p className="mb-6 leading-relaxed">しかし、結論から申し上げます。</p>
-          <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>「特別な実績がなければ合格できない」というのは完全な誤解です。</ArticleHighlight></p>
-          <p className="mb-6 leading-relaxed">確かに、目を引く実績を持つ受験生は目立ちます。</p>
-          <p className="mb-6 leading-relaxed">ですが、SFCの教授陣が出願書類の中で本質的に求めているのは、過去の活動実績や大会記録の羅列ではありません。</p>
-          <p className="mb-10 leading-relaxed text-lg">彼らが見極めようとしているのは、<ArticleHighlight>未解決の社会課題に対する「未来へのオーナーシップ（当事者意識）」</ArticleHighlight>なのです。</p>
+            <h2 id="section-1" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+              1. 「すごい実績がないと受からない」は最大の誤解
+            </h2>
+            <p>
+              たしかに、SFCのAO入試合格者の中には、起業家や国際大会のメダリストもいます。しかし、それは全体のごく一部に過ぎません。SFCの教授陣が最も見たいのは「過去の華々しい結果」ではなく、<strong>「身近な社会問題に対する強い当事者意識」と「それを解決しようとする思考のプロセス」</strong>です。
+            </p>
+            <p>
+              「地元の商店街が寂れている理由を自分なりに調査した」「学校の校則のおかしな点についてアンケートを取り、先生に改善案を出した」といった、地に足の着いた泥臭い活動の方が、表面的なビジネスコンテストの賞状よりも高く評価されることは多々あります。
+            </p>
 
-          <ArticleH2 id="section-2">
-            なぜ「AO単願」は危険なのか？佐藤塾が“二刀流”を強く推奨する理由
-          </ArticleH2>
+            <h2 id="section-2" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+              2. 小論文とAO入試は「評価基準」が全く同じ
+            </h2>
+            <p>
+              佐藤塾が「一般（小論文）とAOの二刀流」を強く推奨するのには理由があります。それは、<strong>両者の評価基準の根幹が完全に一致しているから</strong>です。
+            </p>
+            <p>
+              小論文で求められる「資料から課題を発見し、論理的な解決策を提示する力」は、そっくりそのままAO入試の「志望理由書（自分が解決したい課題と、SFCでの研究計画）」を書く力に直結します。つまり、小論文の勉強をすることが、そのまま最高のAO対策になるのです。
+            </p>
 
-          <p className="mb-6 leading-relaxed">実績づくりに焦るあまり、AO入試の対策だけに没頭してしまう受験生が多くいます。</p>
-          <p className="mb-6 leading-relaxed">佐藤塾では、AO入試のみに絞る「AO単願」という戦略を推奨していません。</p>
-          <p className="mb-10 leading-relaxed text-lg"><ArticleHighlight>一般入試に向けた「小論文対策」こそが、AO入試の書類と面接に圧倒的な説得力をもたらすからです。</ArticleHighlight></p>
-          <p className="mb-6 leading-relaxed">SFCの小論文では、与えられた資料から問題の構造を読み解き、論理的に解決策を提示する力が求められます。</p>
-          <p className="mb-6 leading-relaxed">この訓練を通じて鍛え上げられた「論理的思考力（ロジック）」は、そのまま志望理由書の骨格になります。</p>
-          <p className="mb-6 leading-relaxed">「AOと一般、両方なんて手が回らない」と考えるかもしれません。</p>
-          <p className="mb-10 leading-relaxed">しかし実際は逆であり、両者を並行して進める「二刀流」こそが、思考の質を高め合う最短距離のロードマップなのです。</p>
+            <h2 id="section-3" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
+              3. 「二刀流」がもたらす圧倒的な相乗効果
+            </h2>
+            <p>
+              二刀流のメリットはそれだけではありません。AO入試のために自分のテーマを深く探究し、専門書を読み込んだ経験は、一般入試の小論文において「誰よりも解像度の高い具体例（エビデンス）」として機能します。AO対策が小論文の質を上げ、小論文対策がAOの論理性を鍛える。この無限ループに入った受験生は、圧倒的なスピードで合格圏内へと駆け上がります。
+            </p>
 
-          <ArticleH2 id="section-3">
-            あなたの中にある「まだ言語化されていない問い」を見つける方法
-          </ArticleH2>
+            {/* --- ここから加筆セクション --- */}
+            <h2 id="section-4" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-16 mb-6">
+              【実録】「起業しなきゃ」の強迫観念から解放され、日常の探究で合格を掴んだ軌跡
+            </h2>
+            <p>
+              ここで、特別な実績が何一つない状態から佐藤塾に入塾し、見事AO入試でSFC合格を勝ち取ったHさんのケーススタディをご紹介します。
+            </p>
+            <p>
+              Hさんは「AOを受けるなら何かすごいことをしなきゃ！」と焦るあまり、自分の興味とは無関係な「途上国の貧困問題を解決するNPO法人の立ち上げ」という、極めてハードルの高い計画を無理やり志望理由書に書こうとしていました。当然、中身が伴わず、文章は完全にストップしてしまいました。
+            </p>
+            <p>
+              この硬直状態を打破したのが、<strong>佐藤塾のAI壁打ちと、塾長による「徹底的な自己分析（1on1）」</strong>でした。
+            </p>
 
-          <p className="mb-6 leading-relaxed">では、実績がない状態から、どのようにしてSFCの教授を納得させる志望理由書を作ればよいのでしょうか。</p>
-          <p className="mb-6 leading-relaxed">答えは「あなた自身の原体験を極限まで深掘りすること」にあります。</p>
-          <p className="mb-6 leading-relaxed">しかし、自分一人の頭の中で考えていても、視点はすぐにループし、行き詰まってしまいます。</p>
-          <p className="mb-10 leading-relaxed text-lg">だからこそ佐藤塾では、<ArticleHighlight>24時間稼働のAIとの壁打ちで圧倒的な量の思考をこなし、塾長との1on1でその質を極限まで高める</ArticleHighlight>という環境を用意しています。</p>
-          <p className="mb-6 leading-relaxed">AIがあなたの思考の「抜け漏れ」を的確に洗い出し、塾長である私がSFCの合格基準に照らし合わせてロジックを磨き上げます。</p>
-          <p className="mb-6 leading-relaxed">このプロセスを経ることで、借り物ではない、あなただけの確固たる「問い（テーマ）」が必ず見つかります。</p>
+            <div className="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 my-8 space-y-6">
+              {/* 塾長からの問い */}
+              <div className="flex items-start">
+                <div className="bg-[#002147] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <MessageSquare size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#002147] mb-1">塾長からの問い（1on1面談）</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「Hさん、NPO法人の話は一旦忘れよう。Hさんが最近、日常生活の中で『これ、絶対におかしいよな』『なんとかしたいな』って理不尽に感じたことは何かある？ どんなに小さなことでもいいから教えて。」</p>
+                </div>
+              </div>
 
-          <ArticleNavigation
-            back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
-            next={{
-              title: "【テーマ設定編】自分だけの研究テーマを見つける3ステップ",
-              href: "/ao-guide/theme",
-            }}
-          />
+              {/* 生徒の深掘り */}
+              <div className="flex items-start">
+                <div className="bg-[#800000] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <Target size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#800000] mb-1">Hさんの気づき</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「うーん…。あ、私の通っている高校は自転車通学が多いんですが、雨の日にレインコートを着て自転車に乗ると、視界が悪くてすごく危ないんです。実際に事故も起きていて。でも、学校は『安全運転を心がけろ』と言うだけで何の対策もしてくれなくて、ずっとイライラしていました。」</p>
+                </div>
+              </div>
 
-          <AuthorBox />
+              {/* 解決策の提示 */}
+              <div className="flex items-start">
+                <div className="bg-[#C5A059] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <Lightbulb size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-slate-800 mb-1">「日常のイライラ」を「研究テーマ」へ昇華</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「それだよ！ それこそが本物の当事者意識だ。じゃあ、SFCの環境情報学部で『人間工学』や『プロダクトデザイン』を学んで、視界を遮らない画期的なレインウェアを開発する、というのはどうだろう？ まずは今のレインコートの欠点を分析してみよう！」</p>
+                </div>
+              </div>
+            </div>
 
-          <ArticleCTA />
+            <div className="bg-green-50 p-6 md:p-8 rounded-xl border border-green-100 my-8 flex items-start">
+              <CheckCircle2 className="text-green-600 mr-4 mt-1 flex-shrink-0" size={28} />
+              <div>
+                <h4 className="text-green-800 font-bold text-lg mt-0 mb-3">「借り物の夢」を捨て、圧倒的な熱量へ</h4>
+                <p className="text-sm text-green-800 mb-0 leading-relaxed">
+                  Hさんは「借り物の大きな問題」を捨て、「自分の身近な理不尽」に向き合う決意をしました。AI壁打ちを使って自転車事故の統計データを調べ、自分なりにレインコートの改良案をスケッチし始めました。そのリアルな探究のプロセスが高く評価され、Hさんは見事AO入試で合格を手にしたのです。
+                </p>
+              </div>
+            </div>
+            {/* --- ここまで加筆セクション --- */}
+
+          </div>
         </div>
+
+        <AuthorBox />
+
+        <ArticleNavigation
+          back={{ title: "AO入試 対策記事一覧に戻る", href: "/ao-guide/articles" }}
+          next={{ title: "慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠", href: "/ao-guide/theme" }}
+        />
       </ArticleContainer>
     </main>
   );
