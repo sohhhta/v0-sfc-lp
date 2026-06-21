@@ -1,7 +1,8 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation, TableOfContents } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation } from "@/components/article-ui";
+import { TableOfContents } from "@/components/table-of-contents";
 import { Button } from "@/components/ui/button";
-import { FileText, Lightbulb } from "lucide-react";
+import { FileText, Lightbulb, MessageSquare, Target, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 const articleTitle = "【任意提出資料編】「活動実績ゼロ」からでも勝負できるポートフォリオの作り方";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     description: articleDescription,
     images: [
       {
-        url: `https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`,
+        url: `https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent("【任意提出資料編】活動実績ゼロからでも勝負できるポートフォリオの作り方")}`,
         width: 1200,
         height: 630,
         alt: articleTitle,
@@ -26,13 +27,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${articleTitle} | 佐藤塾`,
     description: articleDescription,
-    images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
+    images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent("【任意提出資料編】活動実績ゼロからでも勝負できるポートフォリオの作り方")}`],
   },
 };
 
 const tocItems = [
   { id: "section-1", title: "1. 「結果」ではなく「プロセス」を視覚化する" },
   { id: "section-2", title: "2. いますぐ始められる「3つの行動実績」" },
+  { id: "section-3", title: "【実録】「何もない」と絶望した生徒が、不格好な「失敗の記録」で逆転合格した軌跡" }
 ];
 
 export default function PortfolioPage() {
@@ -119,6 +121,60 @@ export default function PortfolioPage() {
               </li>
             </ul>
 
+            {/* --- ここから加筆セクション --- */}
+            <h2 id="section-3" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-16 mb-6">
+              【実録】「何もない」と絶望した生徒が、不格好な「失敗の記録」で逆転合格した軌跡
+            </h2>
+            <p>
+              ここで、「自分には本当に何の実績もない」と涙ながらに相談に来たJくんが、佐藤塾の指導を通じて見事なポートフォリオを完成させ、SFC合格を勝ち取ったケーススタディをご紹介します。
+            </p>
+            <p>
+              Jくんは「子ども食堂の支援」に興味を持っていましたが、彼自身が団体を立ち上げたわけでも、特別なボランティア経験があるわけでもありませんでした。周りのAO受験生が輝かしい実績を持っているのを見て、「やっぱり僕には無理だ」と諦めかけていました。
+            </p>
+
+            <div className="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 my-8 space-y-6">
+              <div className="flex items-start">
+                <div className="bg-[#002147] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <MessageSquare size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#002147] mb-1">塾長からの問い（1on1面談）</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「実績がないなら、今から行動すればいいだけだよ。例えば、Jくんの地元に子ども食堂はある？ そこにアポを取って、現場の手伝いをさせてもらいながら『運営の一番の課題は何か』を聞いてみようよ。」</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="bg-[#800000] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <Target size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#800000] mb-1">Jくんの挫折と気づき</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「塾長、言われた通り手伝いに行き、自分なりに『フードドライブ（食料集め）のイベント』を企画してみたんです。でも、近所の人にチラシを配っても、当日集まったのはたった3人でした…。大失敗です。こんなのポートフォリオに書けません。」</p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="bg-[#C5A059] text-white p-3 rounded-lg mr-4 flex-shrink-0 mt-1">
+                  <Lightbulb size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-slate-800 mb-1">「失敗」こそが最高の「プロセス」になる</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「いや、大成功だよ！ その『失敗の記録』こそSFCが一番見たいものなんだ。『なぜ人が集まらなかったのか（情報伝達のミス？ 地域の関心の低さ？）』を分析し、それを解決するためにSFCで『コミュニティデザイン』を学びたい、と書けば、机上の空論よりも100倍説得力のあるポートフォリオになる！」</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-green-50 p-6 md:p-8 rounded-xl border border-green-100 my-8 flex items-start">
+              <CheckCircle2 className="text-green-600 mr-4 mt-1 flex-shrink-0" size={28} />
+              <div>
+                <h4 className="text-green-800 font-bold text-lg mt-0 mb-3">不格好な「行動と分析の記録」が教授の心を打つ</h4>
+                <p className="text-sm text-green-800 mb-0 leading-relaxed">
+                  Jくんは、「イベント集客に失敗した理由の分析」と「そこから得た仮説」を泥臭くまとめ、ポートフォリオとして提出しました。面接では「失敗からどう学ぶか」について教授陣から高く評価され、見事に合格。華やかな実績がなくても、「行動と分析のプロセス」があればSFCは必ず評価してくれるのです。
+                </p>
+              </div>
+            </div>
+            {/* --- ここまで加筆セクション --- */}
+
             <div className="bg-[#002147] text-white p-8 rounded-2xl mt-12 text-center">
               <h3 className="text-2xl font-bold mb-4 font-serif text-white">「あなただけの思考プロセス」を武器にする</h3>
               <p className="mb-8 text-blue-100 text-sm md:text-base">
@@ -131,6 +187,7 @@ export default function PortfolioPage() {
                 </Button>
               </Link>
             </div>
+
           </div>
         </div>
 
