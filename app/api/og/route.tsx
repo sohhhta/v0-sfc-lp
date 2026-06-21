@@ -1,5 +1,32 @@
-import { ImageResponse } from "@vercel/og";
+import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+
+// Vercel上で高速動作させるための必須設定
+export const runtime = "edge";
+
+// OG画像に必要な日本語フォント（Noto Sans JP）を動的に取得する関数
+async function getJapaneseFont(text: string) {
+  try {
+    // 記事タイトルと固定テキストを結合し、重複文字を排除（通信を極限まで軽くするため）
+    const allText = text + "慶應SFC専門塾佐藤メソッド|";
+    const uniqueChars = Array.from(new Set(allText.split(""))).join("");
+
+    // 必要な文字だけの軽量なフォントをGoogle Fontsにリクエスト
+    const url = `https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&text=${encodeURIComponent(uniqueChars)}`;
+    const css = await fetch(url).then((res) => res.text());
+
+    // CSSから実際のフォントファイル（woff2等）のURLを抽出してダウンロード
+    const fontUrlMatch = css.match(/url\((.+?)\)/);
+    if (fontUrlMatch) {
+      const fontUrl = fontUrlMatch[1].replace(/['"]/g, "");
+      const fontData = await fetch(fontUrl).then((res) => res.arrayBuffer());
+      return fontData;
+    }
+  } catch (e) {
+    console.error("Font fetch error:", e);
+  }
+  return null;
+}
 
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
@@ -9,6 +36,9 @@ export async function GET(req: NextRequest) {
   const NAVY = "#002147";
   const GOLD = "#C5A059";
   const WHITE = "#FFFFFF";
+
+  // フォントデータの取得
+  const fontData = await getJapaneseFont(title);
 
   return new ImageResponse(
     (
@@ -22,7 +52,7 @@ export async function GET(req: NextRequest) {
           backgroundColor: NAVY,
           padding: "64px",
           position: "relative",
-          fontFamily: "sans-serif",
+          fontFamily: '"Noto Sans JP", sans-serif', // 取得したフォントを適用
         }}
       >
         {/* 外周のゴールド枠 */}
@@ -140,6 +170,17 @@ export async function GET(req: NextRequest) {
     {
       width: 1200,
       height: 630,
+      // 取得したフォントデータをImageResponseエンジンに渡す
+      fonts: fontData
+        ? [
+            {
+              name: "Noto Sans JP",
+              data: fontData,
+              style: "normal",
+              weight: 700,
+            },
+          ]
+        : undefined,
     }
   );
 }
