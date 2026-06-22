@@ -1,7 +1,8 @@
 import { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
-import { Check } from 'lucide-react'
+import { Check, ShieldCheck, GraduationCap, Laptop } from 'lucide-react'
 import Link from 'next/link'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
   title: "コース・料金 | 佐藤塾",
@@ -68,6 +69,49 @@ export default function CoursePage() {
             <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed px-4">
               慶應SFC合格に特化した2つのプラン。あなたの受験戦略に合わせて、最適なプランをお選びください。
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3つの約束（保護者向け安心ポイント） */}
+      <section className="py-12 md:py-16 px-4 bg-slate-50 border-b border-slate-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow bg-white">
+              <CardHeader className="pb-4">
+                <div className="bg-blue-50 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <ShieldCheck className="text-[#002147]" size={24} />
+                </div>
+                <CardTitle className="text-xl text-[#002147]">追加の講習費 0円</CardTitle>
+              </CardHeader>
+              <CardContent className="text-slate-600 text-sm leading-relaxed">
+                一般的な予備校で数十万円かかる「夏期講習」「冬期講習」「直前対策」などの追加費用は一切いただきません。入会金と月額料金のみで全サポートを受講可能です。
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow bg-white">
+              <CardHeader className="pb-4">
+                <div className="bg-[#800000]/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <GraduationCap className="text-[#800000]" size={24} />
+                </div>
+                <CardTitle className="text-xl text-[#800000]">AO合格で自動退塾</CardTitle>
+              </CardHeader>
+              <CardContent className="text-slate-600 text-sm leading-relaxed">
+                一般・AOの「二刀流」を推奨。秋のAO入試で見事合格を勝ち取った場合、合格発表日の月末をもって自動退塾（契約終了）となり、以降の費用は一切発生しません。
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow bg-white">
+              <CardHeader className="pb-4">
+                <div className="bg-[#C5A059]/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <Laptop className="text-[#C5A059]" size={24} />
+                </div>
+                <CardTitle className="text-xl text-slate-800">AI × 1on1の圧倒的指導</CardTitle>
+              </CardHeader>
+              <CardContent className="text-slate-600 text-sm leading-relaxed">
+                独自開発のSFC専用AIシステムによる「24時間無制限の添削」と、塾長直々の「オンライン1on1指導」をハイブリッドで提供。圧倒的な学習量と質を担保します。
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
