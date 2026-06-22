@@ -97,7 +97,7 @@ export default function CoursePage() {
                 <CardTitle className="text-xl text-[#800000]">AO合格で自動退塾</CardTitle>
               </CardHeader>
               <CardContent className="text-slate-600 text-sm leading-relaxed">
-                一般・AOの「二刀流」を推奨。秋のAO入試で見事合格を勝ち取った場合、合格発表日の月末をもって自動退塾（契約終了）となり、以降の費用は一切発生しません。
+                一般・AOの「二刀流」を推奨。秋のAO入試で見事合格した場合、合格発表日の月末をもって自動退塾（契約終了）となり、以降の費用は一切発生しません。
               </CardContent>
             </Card>
 
