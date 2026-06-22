@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Check, Menu, X } from 'lucide-react'
+import { Check, Menu, X, ArrowRight, PenTool, Target } from 'lucide-react'
 import Link from 'next/link'
 import { FloatingCTA } from '@/components/ui/floating-cta'
 
@@ -1119,6 +1119,58 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* SFC Guides Section (Added) */}
+      <section className="py-24 px-4" style={{ backgroundColor: '#002147' }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white font-serif tracking-wide mb-6">
+              SFC合格のための完全対策ガイド
+            </h2>
+            <p className="text-blue-100 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+              佐藤塾が培ってきた「小論文」と「AO入試」の攻略メソッドをすべて公開しています。無料ですのでぜひご覧ください。
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link href="/guide/essay/articles" className="group block h-full">
+              <div className="bg-white rounded-2xl p-8 h-full border-4 border-transparent hover:border-[#C5A059] transition-all duration-300 shadow-xl hover:-translate-y-2 flex flex-col">
+                <div className="w-14 h-14 bg-[#002147]/10 rounded-full flex items-center justify-center mb-6">
+                  <PenTool className="w-7 h-7 text-[#002147]" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#002147] font-serif mb-4 group-hover:text-[#800000] transition-colors">
+                  小論文 対策ガイド
+                </h3>
+                <p className="text-[#333333] mb-8 leading-relaxed flex-1">
+                  「何を書けばいいかわからない」から脱却し、SFC教授を唸らせる論理構成の型と資料読解の極意を解説します。
+                </p>
+                <div className="flex items-center text-[#C5A059] font-bold mt-auto">
+                  <span>記事一覧を見る</span>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/ao-guide/articles" className="group block h-full">
+              <div className="bg-white rounded-2xl p-8 h-full border-4 border-transparent hover:border-[#C5A059] transition-all duration-300 shadow-xl hover:-translate-y-2 flex flex-col">
+                <div className="w-14 h-14 bg-[#800000]/10 rounded-full flex items-center justify-center mb-6">
+                  <Target className="w-7 h-7 text-[#800000]" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#800000] font-serif mb-4 group-hover:text-[#002147] transition-colors">
+                  AO入試 対策ガイド
+                </h3>
+                <p className="text-[#333333] mb-8 leading-relaxed flex-1">
+                  「すごい実績」がなくても勝てる。自分だけの研究テーマの探し方から志望理由書、ポートフォリオ作成まで完全解説。
+                </p>
+                <div className="flex items-center text-[#C5A059] font-bold mt-auto">
+                  <span>記事一覧を見る</span>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Six Reasons Section */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -1215,8 +1267,9 @@ export default function HomeClient() {
                     </Button>
                   </a>
                   <Link href="/course">
-                    <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-medium transition-all duration-200">
-                      このプランの詳細とサポート体制を確認する
+                    <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-bold transition-all duration-300 hover:shadow-lg group">
+                      このプランの詳細を確認する
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                 </div>
@@ -1271,8 +1324,9 @@ export default function HomeClient() {
                     </Button>
                   </a>
                   <Link href="/course">
-                    <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-medium transition-all duration-200">
-                      このプランの詳細とサポート体制を確認する
+                    <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-bold transition-all duration-300 hover:shadow-lg group">
+                      このプランの詳細を確認する
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                 </div>
@@ -1357,7 +1411,7 @@ export default function HomeClient() {
               </p>
               <div className="border-l-4 border-accent pl-6">
                 <p className="text-xl font-bold text-secondary font-serif tracking-wide">
-                  総合政策学部卒業生　佐藤颯太
+                  総合政策学部卒業生 佐藤颯太
                 </p>
                 <p className="text-base text-muted-foreground mt-1">佐藤塾 塾長</p>
               </div>
