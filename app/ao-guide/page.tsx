@@ -3,7 +3,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { CheckCircle2, Lightbulb, ShieldCheck, ArrowRight, BrainCircuit, UserCheck, GraduationCap, ArrowUpRight, Target, RefreshCw, MessageSquare } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { CheckCircle2, Lightbulb, ShieldCheck, ArrowRight, BrainCircuit, UserCheck, GraduationCap, ArrowUpRight, Target, RefreshCw, MessageSquare, FileText, LayoutTemplate, Users, Map } from 'lucide-react';
 
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
@@ -70,12 +71,52 @@ export default function AoGuidePage() {
     }
   };
 
+  const articles = [
+    {
+      id: "theme",
+      title: "圧倒的な「問い」の立て方（テーマ設定）",
+      description: "SFC教授陣の心を動かすのは「実績」ではなく「問いの鋭さ」です。あなたの原体験から、社会に接続する唯一無二の研究テーマを発掘するメソッド。",
+      icon: <Lightbulb className="w-8 h-8 text-[#C5A059]" />,
+      path: "/ao-guide/theme"
+    },
+    {
+      id: "statement",
+      title: "志望理由書（2000字）の極意",
+      description: "「なぜSFCでなければならないのか」。過去・現在・未来を一直線に繋ぎ、読む者を引き込む圧倒的なストーリー（志望理由書）の論理構成を解説します。",
+      icon: <FileText className="w-8 h-8 text-[#C5A059]" />,
+      path: "/ao-guide/statement"
+    },
+    {
+      id: "portfolio",
+      title: "自由記述・任意提出資料の作り方",
+      description: "A4サイズ2枚の「自由記述」と、あなたの探究の軌跡を証明する「任意提出資料」。視覚的に魅せ、説得力を何倍にも引き上げるデザインと構成の秘訣。",
+      icon: <LayoutTemplate className="w-8 h-8 text-[#C5A059]" />,
+      path: "/ao-guide/portfolio"
+    },
+    {
+      id: "interview",
+      title: "2次試験（面接・プレゼン）対策",
+      description: "SFCの面接は「落とすための試験」ではなく「あなたを知るための対話」です。鋭いツッコミ（圧迫）を歓迎し、知的な議論へと昇華させるためのマインドセット。",
+      icon: <Users className="w-8 h-8 text-[#C5A059]" />,
+      path: "/ao-guide/interview"
+    },
+    {
+      id: "strategy",
+      title: "AO×一般の「二刀流」併願戦略",
+      description: "AO入試だけに固執するのはリスクが高すぎます。小論文対策とAO対策の相乗効果を生み出し、合格確率を最大化する佐藤塾流のスケジュールと併願戦略。",
+      icon: <Map className="w-8 h-8 text-[#C5A059]" />,
+      path: "/ao-guide/strategy"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background text-slate-900 font-sans leading-relaxed selection:bg-[#C5A059]/30">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      
+      {/* ヒーローセクション */}
       <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-[#002147] to-[#003d6b]">
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-block text-xs font-bold tracking-[0.25em] text-[#C5A059] border border-[#C5A059]/50 px-5 py-2 rounded-full mb-8 uppercase">
@@ -91,6 +132,8 @@ export default function AoGuidePage() {
       </section>
 
       <main className="max-w-5xl mx-auto px-4 py-16 md:py-20">
+        
+        {/* コンセプトセクション1 */}
         <section className="mb-20">
           <SectionTitle>実績がないと合格できない、は勘違い</SectionTitle>
           <div className="grid md:grid-cols-12 gap-8 items-center mt-12">
@@ -130,6 +173,7 @@ export default function AoGuidePage() {
           </div>
         </section>
 
+        {/* コンセプトセクション2 */}
         <section className="mb-20">
           <SectionTitle>AO入試に対して持つべき正しい「非・美化」戦略</SectionTitle>
           <div className="grid md:grid-cols-2 gap-8 mt-12">
@@ -164,6 +208,7 @@ export default function AoGuidePage() {
           </div>
         </section>
 
+        {/* コンセプトセクション3 */}
         <section className="mb-20">
           <SectionTitle>24時間SFC専用AI伴走指導</SectionTitle>
           <div className="grid md:grid-cols-2 gap-12 items-center mt-12">
@@ -222,6 +267,7 @@ export default function AoGuidePage() {
           </div>
         </section>
 
+        {/* コンセプトセクション4 */}
         <section className="mb-20">
           <SectionTitle>AIによる高速アウトプット × 塾長1on1対話が実現する「本物の面接対策」</SectionTitle>
           <div className="grid md:grid-cols-12 gap-8 items-center mt-12">
@@ -277,7 +323,7 @@ export default function AoGuidePage() {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-20">
           <div className="bg-[#002147] text-white p-8 md:p-12 rounded-xl shadow-xl flex flex-col md:flex-row gap-6 items-center md:items-start">
             <div className="p-4 bg-[#C5A059] rounded-lg text-[#002147] shrink-0 shadow-md">
               <Lightbulb size={36} />
@@ -295,8 +341,55 @@ export default function AoGuidePage() {
             </div>
           </div>
         </section>
+
+        {/* --------------------------------------------------------
+            🌟 新設：AO入試 攻略の5ステップ（記事導線）
+        --------------------------------------------------------- */}
+        <section className="mt-28 mb-10 border-t border-slate-200 pt-20">
+          <SectionTitle subtitle="SFC合格に向けて、以下のステップ順に各記事を読み進めてください">
+            AO入試 攻略の5ステップ
+          </SectionTitle>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative mt-12">
+            {/* 中央の縦線（PC表示時のみ） */}
+            <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-px bg-gradient-to-b from-[#C5A059]/50 via-[#C5A059]/20 to-transparent -translate-x-1/2" />
+
+            {articles.map((article, index) => (
+              <Link href={article.path} key={article.id} className={`group ${index === articles.length - 1 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''}`}>
+                <Card className="h-full bg-white border-2 border-transparent hover:border-[#C5A059] transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-1 overflow-hidden relative">
+                  {/* ステップ番号 */}
+                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center opacity-50 group-hover:bg-[#C5A059]/10 transition-colors">
+                    <span className="text-4xl font-black text-slate-200 font-serif group-hover:text-[#C5A059]/30">
+                      {index + 1}
+                    </span>
+                  </div>
+
+                  <CardHeader className="pb-2 relative z-10">
+                    <div className="bg-[#002147]/5 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      {article.icon}
+                    </div>
+                    <CardTitle className="text-xl md:text-2xl font-bold text-[#002147] font-serif leading-tight group-hover:text-[#800000] transition-colors">
+                      {article.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="relative z-10">
+                    <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                      {article.description}
+                    </p>
+                    <div className="flex items-center text-[#C5A059] font-bold text-sm">
+                      <span>この記事を読む</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </section>
+
       </main>
 
+      {/* フッター前 CTAセクション */}
       <section className="py-16 md:py-20 px-4 bg-gradient-to-r from-[#800000] to-[#600000]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4">
@@ -307,7 +400,7 @@ export default function AoGuidePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/#contact-form">
-              <Button className="bg-[#C5A059] hover:bg-[#9d8a42] text-[#002147] font-bold px-10 py-6 h-auto w-full sm:w-auto">
+              <Button className="bg-[#C5A059] hover:bg-[#9d8a42] text-[#002147] font-bold px-10 py-6 h-auto w-full sm:w-auto shadow-lg transition-transform hover:scale-105">
                 無料で塾長に相談する
               </Button>
             </Link>
