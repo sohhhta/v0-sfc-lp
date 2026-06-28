@@ -185,6 +185,16 @@ export default function HomeClient() {
       }
 
       setIsSubmitted(true)
+
+      // === GA4 コンバージョン（generate_lead）イベント送信 ===
+      if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+        (window as any).gtag('event', 'generate_lead', {
+          event_category: 'Contact',
+          event_label: formData.plan || 'No Plan Selected'
+        });
+      }
+      // ===================================================
+
       setFormData({
         name: '',
         email: '',
@@ -220,7 +230,6 @@ export default function HomeClient() {
     }
   }
 
-  // 教育組織としての評価をGoogleコアシステムに認識させる構造化データ
   const orgJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -256,7 +265,6 @@ export default function HomeClient() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
-      {/* 共通メニューとの重複を防ぐため、ここにあった独自の<nav>ブロックのみを完全に削除しました */}
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -1150,7 +1158,7 @@ export default function HomeClient() {
               </div>
             </Link>
 
-            <Link href="/ao-guide/articles" className="group block h-full">
+            <Link href="/ao-guide" className="group block h-full">
               <div className="bg-white rounded-2xl p-8 h-full border-4 border-transparent hover:border-[#C5A059] transition-all duration-300 shadow-xl hover:-translate-y-2 flex flex-col">
                 <div className="w-14 h-14 bg-[#800000]/10 rounded-full flex items-center justify-center mb-6">
                   <Target className="w-7 h-7 text-[#800000]" />
@@ -1162,7 +1170,7 @@ export default function HomeClient() {
                   「すごい実績」がなくても勝てる。自分だけの研究テーマの探し方から志望理由書、ポートフォリオ作成まで完全解説。
                 </p>
                 <div className="flex items-center text-[#C5A059] font-bold mt-auto">
-                  <span>記事一覧を見る</span>
+                  <span>ガイドを見る</span>
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                 </div>
               </div>
