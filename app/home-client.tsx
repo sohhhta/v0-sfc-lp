@@ -281,7 +281,7 @@ export default function HomeClient() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-24 pb-12">
-          
+
           {/* Hook Badge - Instant clarity on specialization */}
           <div className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex h-2.5 w-2.5 rounded-full bg-[#C5A059] animate-pulse"></span>
@@ -306,7 +306,7 @@ export default function HomeClient() {
           <div className="mb-16 relative w-full max-w-lg mx-auto animate-in fade-in slide-in-from-bottom-10 duration-700 delay-500">
             {/* Glowing background effect for the button */}
             <div className="absolute -inset-2 bg-gradient-to-r from-[#C5A059]/30 to-[#800000]/30 blur-xl rounded-full opacity-70 animate-pulse"></div>
-            
+
             <div className="relative flex flex-col items-center">
               <p className="text-[#C5A059] font-bold text-sm md:text-base mb-4 tracking-widest drop-shadow-md">
                 ＼ 今の悩み、まずは塾長に直接ぶつけてください ／
@@ -1414,7 +1414,7 @@ export default function HomeClient() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative flex justify-center md:justify-start">
               <Image
-                src="/jukucho.jpg"
+                src="/og-image.jpg"
                 alt="塾長"
                 width={400}
                 height={500}
