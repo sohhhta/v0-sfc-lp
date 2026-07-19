@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Check, Menu, X, ArrowRight, PenTool, Target } from 'lucide-react'
+import { Check, ArrowRight, PenTool, Target } from 'lucide-react'
 import Link from 'next/link'
 import { FloatingCTA } from '@/components/ui/floating-cta'
 
@@ -20,11 +20,11 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
         <div className="w-2 h-2 bg-[#002147] rotate-45" />
         <div className="h-px w-16 bg-[#002147]" />
       </div>
-      <h3 className="text-3xl md:text-4xl font-bold text-primary font-serif tracking-[0.08em]">
+      <h3 className="text-3xl md:text-4xl font-bold text-primary font-serif tracking-[0.08em] leading-snug">
         {children}
       </h3>
       {subtitle && (
-        <p className="text-muted-foreground mt-4 text-lg">{subtitle}</p>
+        <p className="text-muted-foreground mt-4 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">{subtitle}</p>
       )}
       <div className="flex items-center justify-center gap-6 mt-6">
         <div className="h-px w-16 bg-[#002147]" />
@@ -266,7 +266,7 @@ export default function HomeClient() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
 
-      {/* Hero Section */}
+      {/* Hero Section - REVAMPED FOR HIGHER CONVERSION */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* Background with navy gradient overlay */}
         <div className="absolute inset-0">
@@ -277,36 +277,61 @@ export default function HomeClient() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/97 via-[#002147]/93 to-[#002147]/98"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/95 via-[#002147]/90 to-[#002147]"></div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-16">
-          {/* Main Copy */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-snug text-balance">
-            2人に1人が慶應SFCへ。<br className="hidden sm:block" />
-            <span className="text-[#C5A059]">合格率50%</span>を叩き出す<br className="hidden md:block" />
+        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-24 pb-12">
+
+          {/* Hook Badge - Instant clarity on specialization */}
+          <div className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <span className="flex h-2.5 w-2.5 rounded-full bg-[#C5A059] animate-pulse"></span>
+            <span className="text-sm md:text-base font-bold text-white tracking-widest">慶應SFC（総合政策・環境情報）専門塾</span>
+          </div>
+
+          {/* Main Copy - High emotional impact & Data backed */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.3] text-balance drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
+            2人に1人が慶應SFCへ。<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none">合格率50.0%</span>を叩き出す<br className="hidden md:block" />
             独自のAI伴走指導。
           </h1>
 
-          {/* Sub Copy */}
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide">
-            学校や予備校では教えてくれないSFCの正解を、AIと塾長が24時間フルサポート。<br className="hidden md:block" />
-            最短距離で合格する思考を鍛え上げる。
+          {/* Sub Copy - Addressing the specific pain point */}
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+            「今の対策で本当に受かるのか？」その不安、今日で終わりにしませんか。<br className="hidden md:block" />
+            学校や予備校では教えられないSFCの正解を、<strong className="text-[#C5A059]">AIと塾長が24時間フルサポート。</strong><br className="hidden md:block" />
+            最短距離で合格を掴む「問いを立てる力」を徹底的に鍛え上げます。
           </p>
 
-          {/* CTA Button */}
-          <div className="mb-16">
-            <a href="#contact-form" onClick={handleSmoothScroll}>
-              <Button
-                size="lg"
-                className="bg-[#800000] hover:bg-[#C5A059] text-white text-lg font-bold px-12 py-7 h-auto shadow-[0_4px_24px_rgba(0,33,71,0.5)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.45)] transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-[#C5A059]"
-              >
-                無料で個別相談を予約する
-              </Button>
-            </a>
+          {/* Enhanced CTA Area */}
+          <div className="mb-16 relative w-full max-w-lg mx-auto animate-in fade-in slide-in-from-bottom-10 duration-700 delay-500">
+            {/* Glowing background effect for the button */}
+            <div className="absolute -inset-2 bg-gradient-to-r from-[#C5A059]/30 to-[#800000]/30 blur-xl rounded-full opacity-70 animate-pulse"></div>
+
+            <div className="relative flex flex-col items-center">
+              <p className="text-[#C5A059] font-bold text-sm md:text-base mb-4 tracking-widest drop-shadow-md">
+                ＼ 今の悩み、まずは塾長に直接ぶつけてください ／
+              </p>
+              <a href="#contact-form" onClick={handleSmoothScroll} className="w-full block">
+                <Button
+                  size="lg"
+                  className="w-full bg-[#800000] hover:bg-[#C5A059] text-white text-lg md:text-xl font-bold py-8 h-auto shadow-[0_4px_24px_rgba(128,0,0,0.6)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.5)] transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-white/50 rounded-full group"
+                >
+                  <span className="flex items-center gap-3">
+                    無料で個別相談を予約する
+                    <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                  </span>
+                </Button>
+              </a>
+              <div className="flex items-center gap-2 mt-5">
+                <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+                <p className="text-white/90 text-sm font-bold tracking-wider">
+                  指導密度を保つため、今年度の新規受付は <span className="text-[#C5A059] text-base border-b border-[#C5A059]">残り13名</span>
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Stats Section - Medal-like design */}
+          {/* Stats Section - Unchanged structure, ensuring exact layout */}
           <div className="max-w-4xl mx-auto w-full">
             <div className="md:hidden flex flex-col items-center justify-center p-6 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg mb-4">
               <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
@@ -330,7 +355,7 @@ export default function HomeClient() {
                 <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">2026年度 受講継続率</p>
                 <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>93<span className="text-2xl ml-1">%</span></p>
               </div>
-              <div className="flex flex-col items-center justify-center p-8 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg scale-110 -my-2">
+              <div className="flex flex-col items-center justify-center p-8 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg scale-110 -my-2 relative z-20">
                 <p className="text-xs text-[#C5A059] mb-2 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
                 <p className="text-7xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>50<span className="text-3xl">%</span></p>
                 <p className="text-sm text-[#D4AF37] mt-3 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生14名中7名が合格)</p>
@@ -344,9 +369,9 @@ export default function HomeClient() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="relative z-10 mt-16 pb-8 flex flex-col items-center animate-pulse">
+        <div className="relative z-10 pb-8 flex flex-col items-center animate-pulse">
           <span className="text-white/60 text-xs tracking-[0.3em] mb-3 font-medium">SCROLL</span>
-          <div className="w-px h-14 bg-gradient-to-b from-white/70 via-white/30 to-transparent"></div>
+          <div className="w-px h-14 bg-gradient-to-b from-[#C5A059] via-white/30 to-transparent"></div>
         </div>
       </section>
 
@@ -1127,7 +1152,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* SFC Guides Section (Added) */}
+      {/* SFC Guides Section */}
       <section className="py-24 px-4" style={{ backgroundColor: '#002147' }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -1389,11 +1414,11 @@ export default function HomeClient() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative flex justify-center md:justify-start">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LP%E7%94%A8%E7%94%BB%E5%83%8F-AOR1a22XLXmxYxq6qMvKO1B5HygCnh.png"
+                src="/og-image.jpg"
                 alt="塾長"
                 width={400}
                 height={500}
-                className="rounded-xl shadow-xl mx-auto md:mx-0"
+                className="rounded-xl shadow-xl mx-auto md:mx-0 object-cover"
               />
             </div>
 
@@ -1431,14 +1456,14 @@ export default function HomeClient() {
       {/* Contact Form Section */}
       <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-20">
         <div className="max-w-2xl mx-auto">
-          <SectionTitle subtitle="一人ひとりの指導密度を保つため、今年度の新規受付は残り13名となっております">
-            30秒で申し込み！個別相談申し込み
+          <SectionTitle subtitle="「自分の実績や文章力で本当に受かるのか」――その不安、まずはすべて塾長にぶつけてください。一人ひとりの指導密度を極限まで保つため、今年度の新規受付は残り13名となっております。">
+            30秒で申し込み！個別相談を予約する
           </SectionTitle>
 
-          <Card className="bg-white shadow-lg border-t-4 border-t-[#800000] border-x border-b border-border rounded-xl">
+          <Card className="bg-white shadow-xl border-t-8 border-t-[#800000] border-x border-b border-border rounded-2xl">
             <CardContent className="pt-10">
               {isSubmitted ? (
-                <div className="text-center py-12">
+                <div className="text-center py-12 animate-in zoom-in duration-500">
                   <div className="w-20 h-20 bg-[#800000]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg className="w-10 h-10 text-[#800000]" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
@@ -1529,15 +1554,16 @@ export default function HomeClient() {
                     />
                   </div>
 
-                  <div className="pt-2">
+                  <div className="pt-4">
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-[#800000] hover:bg-[#C5A059] text-white h-16 text-lg font-bold shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed rounded-full group"
                     >
                       {isLoading ? '送信中...' : '今すぐ無料で個別相談を予約する'}
+                      {!isLoading && <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />}
                     </Button>
-                    <p className="text-xs text-center text-[#666666] mt-3">
+                    <p className="text-xs text-center text-[#666666] mt-4 font-bold tracking-wider">
                       ※送信後、24時間以内に担当者よりご連絡いたします
                     </p>
                   </div>

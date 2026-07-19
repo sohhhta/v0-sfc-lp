@@ -213,7 +213,7 @@ export const ArticleCTA = () => (
   <section className="bg-[#002147] text-white rounded-2xl p-8 md:p-10 mt-12 text-center">
     <p className="text-base md:text-lg leading-relaxed mb-6">
       SFCのAO入試は、決して「過去の経歴を競う場」ではありません。<br />
-      あなたの中に眠る「問い」を、私たち���一緒に見つけ出しませんか。
+      あなたの中に眠る「問い」を、私たちと一緒に見つけ出しませんか。
     </p>
     <Link
       href="/#contact-form"
