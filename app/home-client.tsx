@@ -1414,7 +1414,7 @@ export default function HomeClient() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative flex justify-center md:justify-start">
               <Image
-                src="/og-image.jpg"
+                src="/og-image.png"
                 alt="塾長"
                 width={400}
                 height={500}
