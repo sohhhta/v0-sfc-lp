@@ -649,7 +649,7 @@ export default function HomeClient() {
               2つのAIを佐藤塾が開発
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              この2つのAIはただの汎用AIではなく、<span className="font-bold text-[#800000]">過去7年分以上の合格者脳</span>と塾長の全知識を学習させた、<span className="font-bold text-[#800000]">24時間365日</span>いつでも<span className="font-bold text-[#800000]">即時添削</span>できる、佐藤塾にしか作れない専用の指導システムです。
+              この2つのAIはただの汎用AIではなく、<span className="font-bold text-[#800000]">過去6年分以上の合格者脳</span>と塾長の全知識を学習させた、<span className="font-bold text-[#800000]">24時間365日</span>いつでも<span className="font-bold text-[#800000]">即時添削</span>できる、佐藤塾にしか作れない専用の指導システムです。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
