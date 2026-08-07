@@ -373,8 +373,8 @@ export default function HomeClient() {
           </h1>
 
           {/* Sub Copy - Addressing the specific pain point */}
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-            「本当に受かるのか」その不安、塾長が直接受け止めます。<br className="hidden md:block" />
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+            「本当に受かるのか」その不安、塾長が直接受け止めます。<br />
             あなた専用の受験戦略と1on1指導に、24時間即時添削できる独自AIを掛け合わせ、<br className="hidden md:block" />
             最短距離でSFC合格へ導きます。
           </p>
@@ -667,7 +667,7 @@ export default function HomeClient() {
                 <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-4 border-l-2 border-[#C5A059] pl-4">
                   6年間の合格者が書いた全答案と、その成長過程（ビフォー・アフター）をすべて学習。SFC特有の評価基準を佐藤塾なりに基準化し、合格ラインを超えるための「添削」と「情報提供」を実現します。
                 </p>
-
+                
                 {/* 置き換えた AI Correction Demo */}
                 <AICorrectionDemo />
 
@@ -687,7 +687,7 @@ export default function HomeClient() {
           </SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-
+            
             {/* 塾長の役割を先に配置 */}
             <div className="bg-[#fff5f5] rounded-xl p-8 border-l-4 border-[#800000]">
               <div className="flex items-center gap-3 mb-6">
@@ -980,10 +980,16 @@ export default function HomeClient() {
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
                   01
                 </div>
-                <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-5 shadow-md">
-                  <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">学習計画（受験戦略の立案）</h4>
+                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#002147]">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">AI中心</span>
+                    <span className="text-xs font-bold text-[#002147]">4月〜7月</span>
+                  </div>
+                  <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
+                    論理の型を構築
+                  </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    志望校選定から、1週間単位の学習戦術まで一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
+                    <span className="text-[#800000] font-bold">AIを使い倒し</span>、SFC特有の「問いを立てる力」を養う時期。小論文の基礎をこの時期に完成させる。
                   </p>
                 </div>
                 <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
@@ -992,13 +998,19 @@ export default function HomeClient() {
               </div>
 
               <div className="relative pl-16 pb-10">
-                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
+                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
                   02
                 </div>
-                <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-5 shadow-md">
-                  <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">24時間無制限のAI支援</h4>
+                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#800000]">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">塾長中心</span>
+                    <span className="text-xs font-bold text-[#800000]">8月〜10月</span>
+                  </div>
+                  <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
+                    独自性の磨き上げ
+                  </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
+                    <span className="text-[#800000] font-bold">塾長1on1</span>でAO提出書類を完成させ、合格を確信に変える時期。唯一無二の志望理由書を作成。
                   </p>
                 </div>
                 <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
@@ -1010,7 +1022,7 @@ export default function HomeClient() {
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
                   03
                 </div>
-                <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-5 shadow-md">
+                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#002147]">
                   <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">進捗レポートの可視化</h4>
                   <p className="text-sm text-[#333333] leading-relaxed">
                     AIと塾長があなたの学習データを踏まえ、現在の位置と合格までの課題を可視化し、客観的なデータに基づいた軌道修正を行います。
