@@ -657,7 +657,7 @@ export default function HomeClient() {
                 <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-4 border-l-2 border-[#C5A059] pl-4">
                   6年間の合格者が書いた全答案と、その成長過程（ビフォー・アフター）をすべて学習。SFC特有の評価基準を佐藤塾なりに基準化し、合格ラインを超えるための「添削」と「情報提供」を実現します。
                 </p>
-                
+
                 {/* 置き換えた AI Correction Demo */}
                 <AICorrectionDemo />
 
@@ -677,7 +677,7 @@ export default function HomeClient() {
           </SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            
+
             {/* 塾長の役割を先に配置 */}
             <div className="bg-[#fff5f5] rounded-xl p-8 border-l-4 border-[#800000]">
               <div className="flex items-center gap-3 mb-6">
@@ -781,7 +781,7 @@ export default function HomeClient() {
                       <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">塾長×AI</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-3 leading-snug">
-                      出願書類らを<br/>急ピッチでの完成
+                      出願書類らを<br />急ピッチでの完成
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
                       受験生のヒアリングを基に佐藤塾が志望理由書等の素案を作成します。その後、AI添削を活用し論理の破綻をなくし、塾長と共にSFC特有の<span className="text-[#800000] font-bold">「独自性」</span>を引き上げます。
@@ -804,7 +804,7 @@ export default function HomeClient() {
                       <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">小論文×面接</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-3 leading-snug">
-                      出願完了と<br/>「二刀流」の本格始動
+                      出願完了と<br />「二刀流」の本格始動
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
                       出願後、息つく間もなく小論文と面接対策を並走させます。ここで面接に振り切らず、一般入試でも通用する<span className="text-[#800000] font-bold">「書く力」</span>を培うことがSFC合格の最大の鍵となります。
@@ -827,7 +827,7 @@ export default function HomeClient() {
                       <span className="bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold px-2 py-1 rounded">二刀流で合格へ</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-3 leading-snug">
-                      面接本番と<br/>一般入試への完全接続
+                      面接本番と<br />一般入試への完全接続
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
                       10月のAO2次試験本番に挑むと同時に、一般入試に向けた対策を並走します。AOに依存しない<span className="text-[#800000] font-bold">二刀流</span>を活かし、いかなる状況でも合格圏内に入ることを目指します。
