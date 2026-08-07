@@ -30,7 +30,7 @@ export default function AoArticlesPortal() {
   return (
     <main className="min-h-screen bg-slate-50 py-16 md:py-24">
       <div className="container mx-auto px-4 max-w-5xl">
-        
+
         {/* ヘッダーセクション */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center justify-center p-4 bg-[#002147] rounded-full mb-6 text-[#C5A059] shadow-lg">
@@ -63,9 +63,9 @@ export default function AoArticlesPortal() {
             {/* 記事カード: 二刀流戦略 */}
             <Link href="/ao-guide/strategy" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">
-                <Image 
-                  src={`/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO二刀流が合格の最短距離である理由")}`} 
-                  alt="サムネイル" 
+                <Image
+                  src={`/api/og?title=${encodeURIComponent("慶應SFCのAO入試に「すごい実績」は不要。一般・AO二刀流が合格の最短距離である理由")}`}
+                  alt="サムネイル"
                   width={1200}
                   height={630}
                   priority
@@ -91,9 +91,9 @@ export default function AoArticlesPortal() {
             {/* 記事カード: テーマ設定編 */}
             <Link href="/ao-guide/theme" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">
-                <Image 
-                  src={`/api/og?title=${encodeURIComponent("慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠")}`} 
-                  alt="サムネイル" 
+                <Image
+                  src={`/api/og?title=${encodeURIComponent("慶應SFCの志望理由書に「立派な社会問題」は不要。自分だけの研究テーマを見つける3ステップと思考の罠")}`}
+                  alt="サムネイル"
                   width={1200}
                   height={630}
                   quality={90}
@@ -136,9 +136,9 @@ export default function AoArticlesPortal() {
             {/* 記事カード: 志望理由書編 */}
             <Link href="/ao-guide/statement" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">
-                <Image 
-                  src={`/api/og?title=${encodeURIComponent("【志望理由書編】SFC教授の心を動かす「志望理由書」の書き方と構成")}`} 
-                  alt="サムネイル" 
+                <Image
+                  src={`/api/og?title=${encodeURIComponent("【志望理由書編】SFC教授の心を動かす「志望理由書」の書き方と構成")}`}
+                  alt="サムネイル"
                   width={1200}
                   height={630}
                   quality={90}
@@ -181,9 +181,9 @@ export default function AoArticlesPortal() {
             {/* 記事カード: 任意提出資料編 */}
             <Link href="/ao-guide/portfolio" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">
-                <Image 
-                  src={`/api/og?title=${encodeURIComponent("【任意提出資料編】「活動実績ゼロ」からでも勝負できるポートフォリオの作り方")}`} 
-                  alt="サムネイル" 
+                <Image
+                  src={`/api/og?title=${encodeURIComponent("【任意提出資料編】「活動実績ゼロ」からでも勝負できるポートフォリオの作り方")}`}
+                  alt="サムネイル"
                   width={1200}
                   height={630}
                   quality={90}
@@ -208,9 +208,9 @@ export default function AoArticlesPortal() {
             {/* 第3号記事カード: 面接対策編 */}
             <Link href="/ao-guide/interview" className="group flex flex-col bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative h-48 md:h-56 w-full bg-[#002147] overflow-hidden">
-                <Image 
-                  src={`/api/og?title=${encodeURIComponent("【面接対策編】面接官の「圧迫」を「対話」に変える、主導権の握り方")}`} 
-                  alt="サムネイル" 
+                <Image
+                  src={`/api/og?title=${encodeURIComponent("【面接対策編】面接官の「圧迫」を「対話」に変える、主導権の握り方")}`}
+                  alt="サムネイル"
                   width={1200}
                   height={630}
                   quality={90}

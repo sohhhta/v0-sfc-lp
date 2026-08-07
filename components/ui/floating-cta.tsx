@@ -80,7 +80,7 @@ export function FloatingCTA() {
         <div className="bg-white/98 backdrop-blur-sm p-6 rounded-xl shadow-[0_12px_40px_rgba(0,33,71,0.18)] border-2 border-[#C5A059]/40 text-left w-[340px] animate-in fade-in duration-300">
           {/* メリット訴求：新規枠の希少性 */}
           <span className="inline-block text-[11px] font-bold text-[#800000] bg-[#800000]/5 border border-[#800000]/20 px-2.5 py-0.5 rounded-sm tracking-wider uppercase mb-3">
-            【今年度新規受入人数】 残り13名
+            【今年度新規受入人数】 残り7名
           </span>
           
           {/* ベネフィット訴求：2人に1人が合格する戦略の直接提案 */}
