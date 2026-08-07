@@ -781,7 +781,7 @@ export default function HomeClient() {
                       <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">塾長×AI</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-3 leading-snug">
-                      出願書類らを<br />急ピッチでの完成
+                      出願書類の<br />急ピッチでの完成
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
                       受験生のヒアリングを基に佐藤塾が志望理由書等の素案を作成します。その後、AI添削を活用し論理の破綻をなくし、塾長と共にSFC特有の<span className="text-[#800000] font-bold">「独自性」</span>を引き上げます。
@@ -857,7 +857,7 @@ export default function HomeClient() {
                     出願書類の急ピッチでの完成
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    塾長のヒアリングで素案を作成。その後、AIの24時間添削で論理の破綻を最速でなくし、塾長1on1でSFC特有の<span className="text-[#800000] font-bold">「独自性」</span>を極限まで引き上げます。
+                    受験生のヒアリングを基に佐藤塾が志望理由書等の素案を作成します。その後、AI添削を活用し論理の破綻をなくし、塾長と共にSFC特有の<span className="text-[#800000] font-bold">「独自性」</span>を引き上げます。
                   </p>
                 </div>
               </div>
@@ -895,7 +895,7 @@ export default function HomeClient() {
                     面接本番と一般入試への完全接続
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    10月のAO2次面接本番に挑むと同時に、一般入試に向けた対策を並走。<span className="text-[#800000] font-bold">二刀流</span>の準備がもたらす圧倒的な精神的余裕で合格を確実なものにします。
+                    10月のAO2次面接本番に挑むと同時に、一般入試に向けた対策を並走します。AOに依存しない<span className="text-[#800000] font-bold">二刀流</span>の準備がもたらす圧倒的な精神的余裕で合格を確実なものにします。
                   </p>
                 </div>
               </div>
@@ -1027,188 +1027,6 @@ export default function HomeClient() {
               <span className="text-[#800000] font-bold">※ 佐藤塾の費用は月額 11.8万円〜。</span>
               講習費、教材費といった追加料金は一切かかりません。他塾のように「合格時には別途〇万円」といった費用も発生しません。
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Cycle Section - 4 Steps */}
-      <section className="py-28 px-4 bg-white border-t border-[#E5E7EB]">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed">
-              合格を生む4ステップ・サイクル
-            </h2>
-            <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
-          </div>
-
-          <div className="hidden lg:block relative">
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10">
-              <div className="bg-white rounded-full w-48 h-48 flex items-center justify-center shadow-lg border-2 border-[#002147]/10">
-                <div>
-                  <p className="text-sm text-[#C5A059] font-bold tracking-wider mb-1">SUCCESS CYCLE</p>
-                  <p className="text-lg font-bold text-[#002147] font-serif">合格率50%を<br />支えるサイクル</p>
-                </div>
-              </div>
-            </div>
-
-            <svg className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px]" viewBox="0 0 420 420">
-              <defs>
-                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                  <polygon points="0 0, 10 3.5, 0 7" fill="#002147" />
-                </marker>
-              </defs>
-              <path d="M 210 40 A 170 170 0 0 1 380 210" fill="none" stroke="#002147" strokeWidth="2" markerEnd="url(#arrowhead)" />
-              <path d="M 380 210 A 170 170 0 0 1 210 380" fill="none" stroke="#002147" strokeWidth="2" markerEnd="url(#arrowhead)" />
-              <path d="M 210 380 A 170 170 0 0 1 40 210" fill="none" stroke="#002147" strokeWidth="2" markerEnd="url(#arrowhead)" />
-              <path d="M 40 210 A 170 170 0 0 1 210 40" fill="none" stroke="#002147" strokeWidth="2" markerEnd="url(#arrowhead)" />
-            </svg>
-
-            <div className="grid grid-cols-2 gap-x-96 gap-y-16 py-8">
-              <div className="col-span-2 flex justify-center">
-                <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-6 w-80 shadow-md">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-3xl font-bold text-[#002147]/20 font-serif">01</span>
-                    <h4 className="text-lg font-bold text-[#002147] font-serif">学習計画</h4>
-                  </div>
-                  <p className="text-sm text-[#333333] leading-relaxed">
-                    志望校選定から、1週間単位の学習戦術まで、一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex justify-start">
-                <div className="bg-white border-4 border-[#800000] rounded-lg p-6 w-80 shadow-lg">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-3xl font-bold text-[#800000]/30 font-serif">04</span>
-                    <h4 className="text-lg font-bold text-[#002147] font-serif">塾長1on1授業</h4>
-                  </div>
-                  <p className="text-sm text-[#333333] leading-relaxed">
-                    <span className="text-[#800000] font-bold">週1回</span>で総括を行い、AIでは解決できない深い悩みや高度な思考を<span className="text-[#800000] font-bold">「わかるまで」</span>塾長が直接指導。再び次の計画へと繋げます。
-                  </p>
-                </div>
-              </div>
-              <div className="flex justify-end">
-                <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-6 w-80 shadow-md">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-3xl font-bold text-[#002147]/20 font-serif">02</span>
-                    <h4 className="text-lg font-bold text-[#002147] font-serif">AI支援</h4>
-                  </div>
-                  <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を解消する時間を短縮し、圧倒的な学習量を担保します。
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-span-2 flex justify-center">
-                <div className="bg-white border-2 border-[#002147]/20 rounded-lg p-6 w-80 shadow-md">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-3xl font-bold text-[#002147]/20 font-serif">03</span>
-                    <h4 className="text-lg font-bold text-[#002147] font-serif">進捗レポート</h4>
-                  </div>
-                  <p className="text-sm text-[#333333] leading-relaxed">
-                    AIと塾長があなたの学習データを同期。現在の位置と課題を可視化し、客観的なデータに基づいた軌道修正を行います。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:hidden">
-            <div className="text-center mb-10">
-              <div className="inline-block bg-[#002147] text-white px-6 py-3 rounded-full">
-                <p className="text-sm font-bold tracking-wider">合格率50%を支えるサイクル</p>
-              </div>
-            </div>
-
-            <div className="relative max-w-md mx-auto">
-              <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#002147] via-[#800000] to-[#C5A059]" />
-
-              <div className="relative pl-16 pb-10">
-                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
-                  01
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#002147]">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">塾長中心</span>
-                  </div>
-                  <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
-                    学習計画
-                  </h3>
-                  <p className="text-sm text-[#333333] leading-relaxed">
-                    志望校選定から、1週間単位の学習戦術まで、一人ひとりに最適化された「勝てるロードマップ」を塾長と共に策定します。
-                  </p>
-                </div>
-                <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 5v14M12 19l-4-4M12 19l4-4" stroke="#002147" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-
-              <div className="relative pl-16 pb-10">
-                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
-                  02
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#002147]">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">AI並走</span>
-                  </div>
-                  <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
-                    AI支援
-                  </h3>
-                  <p className="text-sm text-[#333333] leading-relaxed">
-                    日々の演習は、独自開発AIが<span className="text-[#800000] font-bold">24時間無制限</span>で並走。添削の待ち時間や疑問を短縮し、圧倒的な学習量を担保します。
-                  </p>
-                </div>
-                <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 5v14M12 19l-4-4M12 19l4-4" stroke="#002147" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-
-              <div className="relative pl-16 pb-10">
-                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
-                  03
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#002147]">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">AI×塾長</span>
-                  </div>
-                  <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">進捗レポート</h4>
-                  <p className="text-sm text-[#333333] leading-relaxed">
-                    AIと塾長があなたの学習データを踏まえ、現在の位置と合格までの課題を可視化し、客観的なデータに基づいた軌道修正を行います。
-                  </p>
-                </div>
-                <svg className="absolute left-10 -bottom-2 w-8 h-8" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 5v14M12 19l-4-4M12 19l4-4" stroke="#002147" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-
-              <div className="relative pl-16 pb-4">
-                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
-                  04
-                </div>
-                <div className="bg-white border-4 border-[#800000] rounded-lg p-5 shadow-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">塾長中心</span>
-                  </div>
-                  <h4 className="text-lg font-bold text-[#002147] font-serif mb-2">塾長1on1授業</h4>
-                  <p className="text-sm text-[#333333] leading-relaxed">
-                    <span className="text-[#800000] font-bold">週1回</span>で総括を行い、AIでは解決できない深い悩みや高度な思考を<span className="text-[#800000] font-bold">「わかるまで」</span>直接指導。再び次の計画へと繋げます。
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex justify-center mt-6">
-                <div className="flex items-center gap-2 text-[#002147]">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                    <path d="M17 11H7M7 11l4-4M7 11l4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span className="text-sm font-bold tracking-wider">01へ戻り、サイクルを繰り返す</span>
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                    <path d="M7 11h10M17 11l-4-4M17 11l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
