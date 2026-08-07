@@ -683,7 +683,7 @@ export default function HomeClient() {
       <section className="py-28 px-4 bg-white border-t border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
           <SectionTitle subtitle="『量』と『質』を極限まで両立させる">
-            AI × 塾長の役割分担
+            塾長 × AI の役割分担
           </SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
