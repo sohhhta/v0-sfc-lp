@@ -781,10 +781,10 @@ export default function HomeClient() {
                       <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">塾長×AI</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-3 leading-snug">
-                      出願書類の<br/>急ピッチでの完成
+                      出願書類らを<br/>急ピッチでの完成
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      塾長のヒアリングで志望理由書の素案を作成。その後、AIの24時間添削で論理の破綻を最速でなくし、塾長1on1でSFC特有の<span className="text-[#800000] font-bold">「独自性」</span>を極限まで引き上げます。
+                      受験生のヒアリングを基に佐藤塾が志望理由書等の素案を作成します。その後、AI添削を活用し論理の破綻をなくし、塾長と共にSFC特有の<span className="text-[#800000] font-bold">「独自性」</span>を引き上げます。
                     </p>
                   </div>
                 </div>
@@ -830,7 +830,7 @@ export default function HomeClient() {
                       面接本番と<br/>一般入試への完全接続
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      10月のAO2次試験本番に挑むと同時に、一般入試に向けた対策を並走。<span className="text-[#800000] font-bold">二刀流</span>の準備がもたらす圧倒的な精神的余裕で、いかなる状況でも合格を確実なものにします。
+                      10月のAO2次試験本番に挑むと同時に、一般入試に向けた対策を並走します。AOに依存しない<span className="text-[#800000] font-bold">二刀流</span>を活かし、いかなる状況でも合格圏内に入ることを目指します。
                     </p>
                   </div>
                 </div>
