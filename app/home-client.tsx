@@ -52,7 +52,7 @@ function AICorrectionDemo() {
           onClick={() => setStep(2)}
           className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 2 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
         >
-          2. AIの即時スクリーニング
+          2. AIの1次スクリーニング
         </button>
         <button
           onClick={() => setStep(3)}
@@ -241,17 +241,17 @@ export default function HomeClient() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-24 pb-12">
 
-          {/* Hook Badge */}
+          {/* Hook Badge - Instant clarity on specialization */}
           <div className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex h-2.5 w-2.5 rounded-full bg-[#C5A059] animate-pulse"></span>
             <span className="text-sm md:text-base font-bold text-white tracking-widest">慶應SFC（総合政策・環境情報）専門塾</span>
           </div>
 
           {/* Main Copy - Reverse Success & Human First */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.3] text-balance drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-tight drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
             偏差値40台、実績ゼロから。<br />
             塾長の泥臭い1on1指導で掴む、<br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none">大逆転合格。</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none">SFC合格。</span>
           </h1>
 
           {/* Sub Copy */}
@@ -266,7 +266,7 @@ export default function HomeClient() {
             <div className="absolute -inset-2 bg-gradient-to-r from-[#C5A059]/30 to-[#800000]/30 blur-xl rounded-full opacity-70 animate-pulse"></div>
 
             <div className="relative flex flex-col items-center">
-              <p className="bg-red-600/90 text-white font-bold text-sm md:text-base mb-4 px-4 py-1.5 rounded-md tracking-widest shadow-md">
+              <p className="bg-[#800000]/95 border border-white/20 text-white font-bold text-sm md:text-base mb-4 px-4 py-2 rounded-md tracking-widest shadow-md">
                 ※SFC入試に間に合わせるには、この8月中のスタートが実質的な最終ボーダーラインです。
               </p>
               <a href="#contact-form" onClick={handleSmoothScroll} className="w-full block">
@@ -448,10 +448,10 @@ export default function HomeClient() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative flex justify-center md:justify-start">
-              {/* Placeholder for Principal's Profile Photo */}
+              {/* Principal's Profile Photo */}
               <div className="w-full max-w-[400px] aspect-[4/5] bg-slate-200 rounded-xl shadow-xl relative overflow-hidden">
-                <Image
-                  src="/principal-profile.jpg"
+                 <Image
+                  src="/og-image.png"
                   alt="佐藤塾 塾長 佐藤颯太"
                   fill
                   className="object-cover"
@@ -465,13 +465,13 @@ export default function HomeClient() {
                 <span className="text-sm font-medium text-primary tracking-widest">MESSAGE</span>
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 font-serif tracking-[0.08em] leading-snug">
-                偏差値40台からの<br />大逆転を、私が直接導く。
+                偏差値40台からの<br/>大逆転を、私が直接導く。
               </h3>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
                 「もともと文章を書くのが苦手」「すごい実績なんてない」。SFC合格者の8割は、皆さんと同じ不安を抱えてスタートしました。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                エリートしか受からないという誤解を捨ててください。<br />正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
+                エリートしか受からないという誤解を捨ててください。<br/>正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
                 6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の実力」を引き出します。
@@ -506,8 +506,9 @@ export default function HomeClient() {
               塾長の指導を最大化する、<br className="sm:hidden" />
               1次スクリーニングAI
             </h2>
-            <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              基礎的な文法や論理の破綻は、過去のSFC合格者脳を学習したAIが24時間体制で瞬時にスクリーニング。<strong className="text-[#800000]">だからこそ、塾長との1on1では「SFCを唸らせる独自のアイデア作り」という最も本質的な議論だけに100%の時間を使うことができます。</strong>
+            <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-4xl mx-auto text-left md:text-center">
+              小論文の基本となる文章構成や論理展開のズレは、過去のSFC合格者データを学習したAIが24時間以内に1次スクリーニングを行います。<br className="hidden md:block" />
+              <strong className="text-[#800000]">その上で、塾長との1on1指導では「SFC教授を唸らせるあなた独自のアイデア作り」や「探究テーマの言語化」といった、人間にしかできない本質的な指導に100%の時間を注ぎます。</strong>
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -520,18 +521,16 @@ export default function HomeClient() {
                   <div className="h-px flex-1 bg-[#002147]/10" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                  待ち時間ゼロの即時フィードバック
+                  24時間以内のフィードバック
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-4 border-l-2 border-[#C5A059] pl-4">
-                  提出後、人間がチェックする前にAIが瞬時に「SFCの評価基準」に照らし合わせ、基礎的なズレを指摘。これにより、塾長との貴重な面談時間を「基礎の修正」ではなく「強みの発見」にフル活用できます。
+                  提出後、まずはAIが24時間以内に「SFCの評価基準」に照らし合わせ、基礎的な論理のズレを指摘します。これにより、塾長との貴重な面談時間を「基礎の修正」ではなく「強みの発見」にフル活用できます。
                 </p>
-
+                
                 <AICorrectionDemo />
 
               </div>
             </div>
-
-            {/* Consultation AI removed completely based on feedback to avoid "AI delegation" impression */}
           </div>
         </div>
       </section>
@@ -544,7 +543,7 @@ export default function HomeClient() {
           </SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-
+            
             {/* 塾長の役割を先に配置 */}
             <div className="bg-[#fff5f5] rounded-xl p-8 border-l-4 border-[#800000]">
               <div className="flex items-center gap-3 mb-6">
@@ -591,7 +590,7 @@ export default function HomeClient() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#002147] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]">待ち時間ゼロの<span className="font-bold text-[#002147]">即時フィードバック</span></span>
+                  <span className="text-sm text-[#333333]">24時間以内の<span className="font-bold text-[#002147]">フィードバック</span></span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#002147] font-bold text-lg">→</span>
@@ -611,10 +610,10 @@ export default function HomeClient() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5"></div>
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
-            「自分に何ができるかわからない」<br className="md:hidden" />と悩んでいませんか？
+            「自分に何ができるかわからない」<br className="md:hidden"/>と悩んでいませんか？
           </h3>
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
-            実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「現状を正確に把握し、プロと正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />まずは無料相談で、あなたの不安や現状をすべて塾長に聞かせてください。
+            実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「現状を正確に把握し、プロと正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block"/>まずは無料相談で、あなたの不安や現状をすべて塾長に聞かせてください。
           </p>
           <a href="#contact-form" onClick={handleSmoothScroll}>
             <Button className="bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-10 py-6 h-auto text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 rounded-full group">
@@ -817,7 +816,7 @@ export default function HomeClient() {
               <tbody>
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">小論文の添削</td>
-                  <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold">24時間無制限<br /><span className="text-xs text-[#666666]">（AI1次チェック＋塾長）</span></td>
+                  <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold">回数無制限<br /><span className="text-xs text-[#666666]">（AI1次チェック＋塾長）</span></td>
                   <td className="p-6 text-center bg-white text-[#666666]">週1〜4回<br /><span className="text-xs">（対面メイン）</span></td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">週1回<br /><span className="text-xs">（学生バイト中心）</span></td>
                 </tr>
@@ -867,7 +866,7 @@ export default function HomeClient() {
                   <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">小論文添削</td>
                     <td className="p-3 bg-[#fff5f5] text-center">
-                      <p className="text-[12px] font-bold text-[#800000] leading-snug">24時間無制限</p>
+                      <p className="text-[12px] font-bold text-[#800000] leading-snug">回数無制限</p>
                     </td>
                     <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1〜4回</td>
                     <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1回</td>
@@ -1056,7 +1055,7 @@ export default function HomeClient() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">AI 1次スクリーニング <span className="font-bold text-[#800000]">24時間無制限</span></span>
+                    <span className="text-sm text-[#333333]">AI 1次スクリーニング <span className="font-bold text-[#800000]">回数無制限</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
@@ -1117,7 +1116,7 @@ export default function HomeClient() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">AI 1次スクリーニング <span className="font-bold text-[#002147]">24時間無制限</span></span>
+                    <span className="text-sm text-[#333333]">AI 1次スクリーニング <span className="font-bold text-[#002147]">回数無制限</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
