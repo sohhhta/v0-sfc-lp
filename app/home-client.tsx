@@ -247,8 +247,8 @@ export default function HomeClient() {
             <span className="text-sm md:text-base font-bold text-white tracking-widest">慶應SFC（総合政策・環境情報）専門塾</span>
           </div>
 
-          {/* Main Copy - Prevent unnatural breaks using inline-block */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.4] drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150" style={{ wordBreak: 'keep-all', overflowWrap: 'anywhere' }}>
+          {/* Main Copy - Prevent unnatural breaks using inline-block and restored large font size (lg:text-7xl) */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.3] drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150" style={{ wordBreak: 'keep-all', overflowWrap: 'anywhere' }}>
             <span className="inline-block">偏差値40台、</span><span className="inline-block">実績ゼロから。</span><br />
             <span className="inline-block">塾長の泥臭い1on1指導で</span><span className="inline-block">掴む、</span><br />
             <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none">SFC合格。</span>
@@ -446,7 +446,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Instructor Message Section (Moved UP for "Human-first" trust building) */}
+      {/* Instructor Message Section */}
       <section className="py-24 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB]">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -506,12 +506,12 @@ export default function HomeClient() {
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
-              塾長の指導を最大化する、<br className="sm:hidden" />
-              1次スクリーニングAI
+              佐藤塾メソッドを学習した<br className="sm:hidden" />
+              1次スクリーニングAIの活用
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-4xl mx-auto text-left md:text-center">
               小論文の基本となる文章構成や論理展開のズレは、過去のSFC合格者データを学習したAIが24時間以内に1次スクリーニングを行います。<br className="hidden md:block" />
-              <strong className="text-[#800000]">その上で、塾長との1on1指導では「SFC教授を唸らせるあなた独自のアイデア作り」や「探究テーマの言語化」といった、人間にしかできない本質的な指導に100%の時間を注ぎます。</strong>
+              <strong className="text-[#800000]">その上で、塾長との会話を通じて「基礎の修正」だけでなくSFCに合わせた「強み」や「アイデア」の言語化を一緒に行います。</strong>
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -527,7 +527,7 @@ export default function HomeClient() {
                   24時間以内のフィードバック
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-4 border-l-2 border-[#C5A059] pl-4">
-                  提出後、まずはAIが24時間以内に「SFCの評価基準」に照らし合わせ、基礎的な論理のズレを指摘します。これにより、塾長との貴重な面談時間を「基礎の修正」ではなく「強みの発見」にフル活用できます。
+                  提出後、まずはAIが24時間以内に「SFCの評価基準」に照らし合わせ、基礎的な論理のズレを指摘します。その上で、塾長との会話を通じて「基礎の修正」だけでなくSFCに合わせた「強み」や「アイデア」の言語化を一緒に行います。
                 </p>
                 
                 <AICorrectionDemo />
@@ -629,7 +629,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Roadmap Section (UPDATED FOR AUGUST START & FULL CSS VISUALS) */}
+      {/* Roadmap Section */}
       <section className="py-28 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
