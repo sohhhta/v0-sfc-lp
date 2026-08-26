@@ -248,16 +248,16 @@ export default function HomeClient() {
           </div>
 
           {/* Main Copy - Reverse Success & Human First */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-tight drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.3] drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
             偏差値40台、実績ゼロから。<br />
-            塾長の泥臭い1on1指導で掴む、<br className="hidden md:block" />
+            塾長の泥臭い1on1指導で掴む、<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none">SFC合格。</span>
           </h1>
 
           {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-            「特別な才能」や「全国レベルの実績」は必要ありません。<br className="hidden md:block" />
-            基礎の反復はAIに任せ、応用と受験戦略は塾長が直接1on1で叩き込む。<br className="hidden md:block" />
+            合格者の8割が「小論文未経験」「実績ゼロ」からのスタートです。<br className="hidden md:block" />
+            基礎の論理構成はAIで無限に反復し、SFC特有の独自性は塾長が直接1on1で引き上げる。<br className="hidden md:block" />
             2人に1人が合格する圧倒的実績で、最短距離でSFC合格へ導きます。
           </p>
 
@@ -266,9 +266,16 @@ export default function HomeClient() {
             <div className="absolute -inset-2 bg-gradient-to-r from-[#C5A059]/30 to-[#800000]/30 blur-xl rounded-full opacity-70 animate-pulse"></div>
 
             <div className="relative flex flex-col items-center">
-              <p className="bg-[#800000]/95 border border-white/20 text-white font-bold text-sm md:text-base mb-4 px-4 py-2 rounded-md tracking-widest shadow-md">
-                ※SFC入試に間に合わせるには、この8月中のスタートが実質的な最終ボーダーラインです。
-              </p>
+              <div className="mb-5 inline-flex items-center justify-center gap-3 bg-[#002147]/80 border-2 border-[#C5A059]/60 px-6 py-3 rounded-full backdrop-blur-md shadow-xl w-full sm:w-auto">
+                <span className="relative flex h-3.5 w-3.5 flex-shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500"></span>
+                </span>
+                <p className="text-white text-sm md:text-base font-bold tracking-wider leading-snug">
+                  指導密度を極限まで保つため、<br className="sm:hidden" />今年度の新規受付は<span className="text-[#C5A059] text-lg md:text-xl ml-1 border-b-2 border-[#C5A059]">残り7名</span>
+                </p>
+              </div>
+
               <a href="#contact-form" onClick={handleSmoothScroll} className="w-full block">
                 <Button
                   size="lg"
@@ -280,12 +287,6 @@ export default function HomeClient() {
                   </span>
                 </Button>
               </a>
-              <div className="flex items-center gap-2 mt-5">
-                <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
-                <p className="text-white/90 text-sm font-bold tracking-wider">
-                  指導密度を極限まで保つため、今年度の新規受付は <span className="text-[#C5A059] text-base border-b border-[#C5A059]">残り7名</span>
-                </p>
-              </div>
             </div>
           </div>
 
@@ -450,7 +451,7 @@ export default function HomeClient() {
             <div className="relative flex justify-center md:justify-start">
               {/* Principal's Profile Photo */}
               <div className="w-full max-w-[400px] aspect-[4/5] bg-slate-200 rounded-xl shadow-xl relative overflow-hidden">
-                 <Image
+                <Image
                   src="/og-image.png"
                   alt="佐藤塾 塾長 佐藤颯太"
                   fill
@@ -465,13 +466,13 @@ export default function HomeClient() {
                 <span className="text-sm font-medium text-primary tracking-widest">MESSAGE</span>
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 font-serif tracking-[0.08em] leading-snug">
-                偏差値40台からの<br/>大逆転を、私が直接導く。
+                偏差値40台からの<br />大逆転を、私が直接導く。
               </h3>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
                 「もともと文章を書くのが苦手」「すごい実績なんてない」。SFC合格者の8割は、皆さんと同じ不安を抱えてスタートしました。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                エリートしか受からないという誤解を捨ててください。<br/>正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
+                エリートしか受からないという誤解を捨ててください。<br />正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
                 6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の実力」を引き出します。
@@ -526,7 +527,7 @@ export default function HomeClient() {
                 <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-4 border-l-2 border-[#C5A059] pl-4">
                   提出後、まずはAIが24時間以内に「SFCの評価基準」に照らし合わせ、基礎的な論理のズレを指摘します。これにより、塾長との貴重な面談時間を「基礎の修正」ではなく「強みの発見」にフル活用できます。
                 </p>
-                
+
                 <AICorrectionDemo />
 
               </div>
@@ -543,7 +544,7 @@ export default function HomeClient() {
           </SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            
+
             {/* 塾長の役割を先に配置 */}
             <div className="bg-[#fff5f5] rounded-xl p-8 border-l-4 border-[#800000]">
               <div className="flex items-center gap-3 mb-6">
@@ -610,10 +611,10 @@ export default function HomeClient() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5"></div>
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
-            「自分に何ができるかわからない」<br className="md:hidden"/>と悩んでいませんか？
+            「自分に何ができるかわからない」<br className="md:hidden" />と悩んでいませんか？
           </h3>
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
-            実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「現状を正確に把握し、プロと正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block"/>まずは無料相談で、あなたの不安や現状をすべて塾長に聞かせてください。
+            実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「現状を正確に把握し、プロと正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />まずは無料相談で、あなたの不安や現状をすべて塾長に聞かせてください。
           </p>
           <a href="#contact-form" onClick={handleSmoothScroll}>
             <Button className="bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-10 py-6 h-auto text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 rounded-full group">
