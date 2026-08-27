@@ -122,7 +122,7 @@ export default function EssayGuidePage() {
             <div className="bg-[#F8F9FA] border-l-4 border-[#002147] pl-6 py-6 rounded-r-lg">
               <h4 className="text-lg font-bold text-[#002147] font-serif mb-3">小論文の基礎を固める</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                まずは、ロジカルシンキングとロジカルライティングの基礎を固めます。その他にも接続詞や体系的記述なども学びます。<span className="font-bold">この過程を踏めるかどうかが合格に一番影響します</span>。
+                まずは、ロジカルシンキングとロジカルライティングの基礎を固めます。その他にも接続詞や体系的な記述なども学びます。<span className="font-bold">この過程を踏めるかどうかが合格に一番影響します</span>。
               </p>
             </div>
 

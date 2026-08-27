@@ -44,21 +44,27 @@ function AICorrectionDemo() {
       <div className="flex border-b border-[#E5E7EB] bg-[#F8F9FA] overflow-x-auto hide-scrollbar">
         <button
           onClick={() => setStep(1)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 1 ? 'bg-[#002147] text-white' : 'text-[#666666] hover:bg-[#002147]/5'}`}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 1 ? 'bg-[#475569] text-white' : 'text-[#666666] hover:bg-[#475569]/5'}`}
         >
           1. 生徒の答案提出
         </button>
         <button
           onClick={() => setStep(2)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 2 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 2 ? 'bg-[#002147] text-white' : 'text-[#666666] hover:bg-[#002147]/5'}`}
         >
-          2. AIの即時添削
+          2. AIの1次スクリーニング
         </button>
         <button
           onClick={() => setStep(3)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 3 ? 'bg-[#C5A059] text-white' : 'text-[#666666] hover:bg-[#C5A059]/5'}`}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 3 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
         >
-          3. 修正後の答案
+          3. 塾長の直接添削
+        </button>
+        <button
+          onClick={() => setStep(4)}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 4 ? 'bg-[#C5A059] text-white' : 'text-[#666666] hover:bg-[#C5A059]/5'}`}
+        >
+          4. 修正後の答案
         </button>
       </div>
 
@@ -76,28 +82,54 @@ function AICorrectionDemo() {
         {step === 2 && (
           <div className="animate-in fade-in slide-in-from-bottom-2 duration-500 space-y-4">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#800000] animate-pulse" />
-              <span className="text-sm font-bold text-[#800000]">佐藤塾AIの分析結果</span>
+              <div className="w-2.5 h-2.5 rounded-full bg-[#002147] animate-pulse" />
+              <span className="text-sm font-bold text-[#002147]">佐藤塾AIによる1次チェック結果</span>
             </div>
-            <div className="bg-red-50 p-5 rounded-lg border border-red-100">
+            <div className="bg-[#002147]/5 p-5 rounded-lg border border-[#002147]/20">
               <ul className="space-y-4">
                 <li className="flex gap-3">
-                  <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm md:text-base text-red-900 leading-relaxed">「AIは仕事を奪う」という思いつきの<strong>感情論</strong>で書かれています。</span>
+                  <X className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-[#333333] leading-relaxed">「AIは仕事を奪う」という思いつきの<strong>感情論</strong>で書かれています。</span>
                 </li>
                 <li className="flex gap-3">
-                  <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm md:text-base text-red-900 leading-relaxed">SFCが求める「客観的なデータや資料の引用」が一切ありません。</span>
+                  <X className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-[#333333] leading-relaxed">SFCが求める「客観的なデータや資料の引用」が一切ありません。</span>
                 </li>
                 <li className="flex gap-3">
-                  <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm md:text-base text-red-900 leading-relaxed">「レジの自動化」から「AIの禁止」へと<strong>深刻な論理の飛躍</strong>が起きています。PREP法を用いて構成を練り直しましょう。</span>
+                  <X className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-[#333333] leading-relaxed">「レジの自動化」から「AIの禁止」へと<strong>深刻な論理の飛躍</strong>が起きています。PREP法を用いて構成を練り直しましょう。</span>
                 </li>
               </ul>
             </div>
           </div>
         )}
         {step === 3 && (
+          <div className="animate-in fade-in slide-in-from-bottom-2 duration-500 space-y-4">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-2.5 h-2.5 rounded-full bg-[#800000] animate-pulse" />
+              <span className="text-sm font-bold text-[#800000]">塾長からの1on1フィードバック</span>
+            </div>
+            <div className="bg-[#fff5f5] p-5 rounded-lg border border-[#800000]/20">
+              <p className="text-[#333333] leading-relaxed text-sm md:text-base mb-4">
+                お疲れ様！AIの指摘通り、少し主観が強くなってしまっているね。<br />
+                でも、「AIの進化に対する危機感」という着眼点自体はすごく良いと思うよ！<br />
+                SFCの教授を納得させるには、これを<strong className="text-[#800000]">「社会課題の解決」</strong>という視点に変換するのがコツなんだ。
+              </p>
+              <div className="bg-white p-4 rounded-md border border-[#E5E7EB] shadow-sm">
+                <p className="text-xs text-[#800000] font-bold mb-2 tracking-wider">💡 塾長からの提案アイデア</p>
+                <p className="text-[#333333] leading-relaxed text-sm md:text-base">
+                  例えば、AIを「禁止」するのではなく、「過疎地域の医師不足」など、<strong>人間が足りていない領域をサポートする技術</strong>として提案してみない？<br />
+                  <br />
+                  <span className="bg-[#f0f9ff] px-3 py-2 rounded text-[#002147] font-medium border border-[#bae6fd] block mb-2">
+                    「地方の医療過疎問題に対し、AI画像診断技術の導入を推進すべきだと考える。」
+                  </span>
+                  こんな風に主張（Point）を書き換えて、資料から「医師の負担を示すデータ」を引用（Evidence）すれば、説得力が段違いに上がるよ！一緒にこの構成で書き直してみよう。
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+        {step === 4 && (
           <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
             <div className="bg-[#C5A059]/10 p-5 rounded-lg border border-[#C5A059]/30 relative">
               <span className="absolute -top-3 -right-3 bg-[#002147] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm transform rotate-6">SFC合格レベル</span>
@@ -110,124 +142,6 @@ function AICorrectionDemo() {
       </div>
     </div>
   );
-}
-
-// Consultation AI Card with tabbed conversations
-function ConsultationAICard() {
-  const [activeTab, setActiveTab] = useState(0)
-  const [isTyping, setIsTyping] = useState(false)
-
-  const conversations = [
-    {
-      label: 'AO入試の悩み',
-      question: 'AO入試に興味はありますが、全国大会優勝のようなすごい実績がありません。やっぱり諦めるべきでしょうか？',
-      answer: 'いいえ、諦めるべきではありません。SFCが求めているのは<highlight>「実績の凄さ」ではなく「問題発見の鋭さ」</highlight>です。過去の合格者も最初は「ただの趣味」と認識していたことを深掘りし、独自の実績にできました。<highlight>まずはあなたが日頃頑張らなくてもできていること</highlight>を書き出して共有してください。'
-    },
-    {
-      label: '小論文の不安',
-      question: '小論文を勉強したことがない私でもSFCを目指せるのでしょうか？',
-      answer: '<highlight>もちろん、目指せます</highlight>。小論文は量をこなす勉強が最重要です。まずはめちゃくちゃな内容でも良いのでどんどん量をこなしていきましょう。添削内容を踏まえ書き直すことで自然と書けるようになっていきます。<highlight>過去の合格者もこのように学習し始めました</highlight>。焦らず、一緒に着実に進めていきましょう。'
-    },
-    {
-      label: '併願・戦略の疑問',
-      question: 'SFC対策に絞ると、他大学が疎かになりそうで不安です',
-      answer: '大丈夫です。<highlight>幅広い大学の合格を目指すのではなく、SFC合格から逆算した受験戦略</highlight>が重要になります。SFCで鍛える論理力は早稲田や他の慶應学部でも最大の武器になります。<highlight>負けない併願戦略</highlight>を一緒に立てましょう。'
-    }
-  ]
-
-  const handleTabChange = (index: number) => {
-    if (index !== activeTab) {
-      setIsTyping(true)
-      setActiveTab(index)
-      setTimeout(() => setIsTyping(false), 600)
-    }
-  }
-
-  const renderAnswer = (text: string) => {
-    const parts = text.split(/<highlight>|<\/highlight>/)
-    return parts.map((part, i) =>
-      i % 2 === 1 ? <span key={i} className="text-[#800000] font-bold">{part}</span> : part
-    )
-  }
-
-  return (
-    <div className="bg-white border-l-4 border-[#800000] shadow-lg rounded-r-lg overflow-hidden">
-      <div className="p-6 md:p-10">
-        {/* Title */}
-        <div className="flex items-center gap-4 mb-6">
-          <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">AI 02</span>
-          <div className="h-px flex-1 bg-[#800000]/10" />
-        </div>
-        <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-          相談用AI
-        </h3>
-
-        {/* Development Background */}
-        <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-8 border-l-2 border-[#C5A059] pl-4">
-          過去の合格者と塾長の会話データや、質問に対する塾長の全回答、そこで独自分析した過去問解析データを集約。24時間、あたかも塾長に気軽に質問し続けることのできる体験を実現しました。
-        </p>
-
-        {/* Guide text */}
-        <p className="text-xs text-[#666666] mb-3 flex items-center gap-1">
-          <span className="text-[#002147]"></span>
-          あてはまる悩みを押してください
-        </p>
-
-        {/* Tabs - Horizontal scroll on mobile */}
-        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 mb-5">
-          <div className="flex gap-2 md:gap-3 min-w-max md:min-w-0 md:flex-wrap">
-            {conversations.map((conv, index) => (
-              <button
-                key={index}
-                onClick={() => handleTabChange(index)}
-                className={`flex items-center gap-2 px-4 py-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${activeTab === index
-                  ? 'bg-[#002147] text-white shadow-md'
-                  : 'bg-white text-[#333333] border-2 border-[#E5E7EB] hover:border-[#002147]/30'
-                  }`}
-              >
-                <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                </svg>
-                {conv.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Chat Mockup - Dialogue Style */}
-        <div className="bg-white rounded-xl p-5 md:p-8 border border-[#E5E7EB] shadow-sm">
-          <div className="flex items-center gap-2 mb-5">
-            <div className="w-2.5 h-2.5 rounded-full bg-[#800000]" />
-            <span className="text-xs font-bold text-[#002147] tracking-wider">相談AIとの対話</span>
-          </div>
-          <div className="space-y-5">
-            {/* User message */}
-            <div className="flex justify-end">
-              <div className="bg-[#002147] text-white rounded-2xl rounded-br-none px-6 py-5 max-w-[92%] md:max-w-[85%] shadow-lg">
-                <p className="text-base md:text-lg leading-relaxed font-medium">{conversations[activeTab].question}</p>
-              </div>
-            </div>
-            {/* AI response with typing animation */}
-            <div className="flex justify-start">
-              <div className="bg-[#FAFAFA] rounded-2xl rounded-bl-none px-6 py-5 max-w-[92%] md:max-w-[85%] border-2 border-[#800000]/20 shadow-lg">
-                {isTyping ? (
-                  <div className="flex items-center gap-2 py-3">
-                    <span className="w-2.5 h-2.5 bg-[#800000]/60 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                    <span className="w-2.5 h-2.5 bg-[#800000]/60 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                    <span className="w-2.5 h-2.5 bg-[#800000]/60 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-                  </div>
-                ) : (
-                  <p className="text-base md:text-lg text-[#333333] leading-[1.8] animate-in fade-in duration-300">
-                    {renderAnswer(conversations[activeTab].answer)}
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
 }
 
 export default function HomeClient() {
@@ -315,8 +229,8 @@ export default function HomeClient() {
         "@id": "https://lifeeling.jp/#organization",
         "name": "佐藤塾",
         "url": "https://lifeeling.jp",
-        "description": "合格率50.0%を叩き出す慶應SFC（総合政策・環境情報）専門の独自AI伴走指導塾。",
-        "image": "https://lifeeling.jp/hero.jpg",
+        "description": "合格率50.0%を叩き出す慶應SFC（総合政策・環境情報）専門の伴走指導塾。",
+        "image": "https://lifeeling.jp/fv-coaching.jpg",
         "founder": {
           "@type": "Person",
           "name": "佐藤颯太",
@@ -330,7 +244,7 @@ export default function HomeClient() {
         "@type": "WebSite",
         "@id": "https://lifeeling.jp/#website",
         "url": "https://lifeeling.jp",
-        "name": "佐藤塾 | 慶應SFC特化型AI伴走指導塾",
+        "name": "佐藤塾 | 慶應SFC特化型指導塾",
         "publisher": { "@id": "https://lifeeling.jp/#organization" }
       }
     ]
@@ -343,18 +257,18 @@ export default function HomeClient() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
 
-      {/* Hero Section - REVAMPED FOR HIGHER CONVERSION */}
+      {/* Hero Section - FOCUS ON HUMAN COACHING & REVERSE SUCCESS */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        {/* Background with navy gradient overlay */}
-        <div className="absolute inset-0">
+        {/* Background with navy gradient overlay - Placeholder for actual coaching image */}
+        <div className="absolute inset-0 bg-slate-200">
           <Image
-            src="/hero.jpg"
-            alt="Keio SFC Campus"
+            src="/fv-coaching.jpg" // 塾長がオンライン指導している実際の風景画像
+            alt="塾長によるオンライン指導風景"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/95 via-[#002147]/90 to-[#002147]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/95 via-[#002147]/85 to-[#002147]"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-24 pb-12">
@@ -365,50 +279,52 @@ export default function HomeClient() {
             <span className="text-sm md:text-base font-bold text-white tracking-widest">慶應SFC（総合政策・環境情報）専門塾</span>
           </div>
 
-          {/* Main Copy - High emotional impact & Data backed */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.3] text-balance drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
-            2人に1人が慶應SFCへ。<br />
-            塾長による直接1on1指導 × 24時間AI伴走で掴む、<br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none">合格率50.0%</span>。
+          {/* Main Copy - Beautiful responsive line breaks and massive impact for "SFC合格。" */}
+          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.6] drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
+            偏差値40台、<br className="sm:hidden" />実績ゼロから。<br className="hidden sm:block" />
+            塾長の泥臭い1on1指導で<br className="sm:hidden" />掴む、<br className="hidden sm:block" />
+            <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-2 sm:mt-6 leading-tight">SFC合格。</span>
           </h1>
 
-          {/* Sub Copy - Addressing the specific pain point */}
+          {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-            「本当に受かるのか」その不安、塾長が直接受け止めます。<br />
-            あなた専用の受験戦略と1on1指導に、24時間即時添削できる独自AIを掛け合わせ、<br className="hidden md:block" />
-            最短距離でSFC合格へ導きます。
+            合格者の8割が「小論文未経験」「実績ゼロ」からのスタートです。<br className="hidden md:block" />
+            基礎の論理構成はAIで無限に反復し、SFC特有の独自性は塾長が直接1on1で引き上げる。<br className="hidden md:block" />
+            2人に1人が合格する圧倒的実績で、最短距離でSFC合格へ導きます。
           </p>
 
-          {/* Enhanced CTA Area */}
-          <div className="mb-16 relative w-full max-w-lg mx-auto animate-in fade-in slide-in-from-bottom-10 duration-700 delay-500">
-            {/* Glowing background effect for the button */}
+          {/* Enhanced CTA Area - Unified Width (max-w-[540px]) */}
+          <div className="mb-16 relative w-full max-w-[540px] mx-auto animate-in fade-in slide-in-from-bottom-10 duration-700 delay-500">
             <div className="absolute -inset-2 bg-gradient-to-r from-[#C5A059]/30 to-[#800000]/30 blur-xl rounded-full opacity-70 animate-pulse"></div>
 
-            <div className="relative flex flex-col items-center">
-              <p className="text-[#C5A059] font-bold text-sm md:text-base mb-4 tracking-widest drop-shadow-md">
-                ※SFCのAO・一般入試に間に合わせるには、この8月中のスタートが実質的な最終ボーダーラインです。
-              </p>
+            <div className="relative flex flex-col items-center w-full">
+              {/* Unified width Badge */}
+              <div className="mb-4 flex items-center justify-center gap-3 bg-[#002147]/90 border-2 border-[#C5A059]/80 px-4 py-4 rounded-full backdrop-blur-md shadow-xl w-full">
+                <span className="relative flex h-3.5 w-3.5 flex-shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500"></span>
+                </span>
+                <p className="text-white text-sm sm:text-base font-bold tracking-wider leading-snug text-center">
+                  指導密度を極限まで保つため、<br className="sm:hidden" />今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b-2 border-[#C5A059]">残り7名</span>
+                </p>
+              </div>
+
+              {/* Unified width Button */}
               <a href="#contact-form" onClick={handleSmoothScroll} className="w-full block">
                 <Button
                   size="lg"
                   className="w-full bg-[#800000] hover:bg-[#C5A059] text-white text-lg md:text-xl font-bold py-8 h-auto shadow-[0_4px_24px_rgba(128,0,0,0.6)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.5)] transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-white/50 rounded-full group"
                 >
-                  <span className="flex items-center gap-3">
+                  <span className="flex items-center justify-center gap-3">
                     無料で個別相談を予約する
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </Button>
               </a>
-              <div className="flex items-center gap-2 mt-5">
-                <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
-                <p className="text-white/90 text-sm font-bold tracking-wider">
-                  指導密度を保つため、今年度の新規受付は <span className="text-[#C5A059] text-base border-b border-[#C5A059]">残り7名</span>
-                </p>
-              </div>
             </div>
           </div>
 
-          {/* Stats Section - Unchanged structure, ensuring exact layout */}
+          {/* Stats Section */}
           <div className="max-w-4xl mx-auto w-full">
             <div className="md:hidden flex flex-col items-center justify-center p-6 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg mb-4">
               <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
@@ -559,36 +475,23 @@ export default function HomeClient() {
               </div>
             </div>
           </div>
-
-          <div className="mt-20 md:mt-36 space-y-8 text-center">
-            <div className="w-16 h-px bg-[#002147] mx-auto" />
-            <p className="text-lg md:text-xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed">
-              佐藤塾は、この
-              <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「独自性の壁」</span>
-              <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「添削の壁」</span>
-              <span className="underline decoration-1 decoration-[#002147] underline-offset-4">「計画の壁」</span>を<br className="hidden md:block" />
-              すべて解消します。
-            </p>
-            <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              <span className="text-[#C5A059] mr-1">◆</span>
-              佐藤塾では、塾長による直接の並走指導を軸に、あなたの合格ラインを確実に突破する思考力を引き上げます。さらに独自開発のSFC専用AIが24時間体制で答案を即時分析・フィードバックすることで、圧倒的な学習量と質を両立させます。
-            </p>
-          </div>
         </div>
       </section>
 
-      {/* Instructor Message Section (Moved UP for "Human-first" trust building) */}
+      {/* Instructor Message Section */}
       <section className="py-24 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB]">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative flex justify-center md:justify-start">
-              <Image
-                src="/og-image.png"
-                alt="塾長"
-                width={400}
-                height={500}
-                className="rounded-xl shadow-xl mx-auto md:mx-0 object-cover"
-              />
+              {/* Principal's Profile Photo */}
+              <div className="w-full max-w-[400px] aspect-[4/5] bg-slate-200 rounded-xl shadow-xl relative overflow-hidden">
+                <Image
+                  src="/og-image.png"
+                  alt="佐藤塾 塾長 佐藤颯太"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
 
             <div>
@@ -596,20 +499,20 @@ export default function HomeClient() {
                 <div className="h-px w-12 bg-[#002147]" />
                 <span className="text-sm font-medium text-primary tracking-widest">MESSAGE</span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 font-serif tracking-[0.08em]">
-                塾長からのメッセージ
+              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 font-serif tracking-[0.08em] leading-snug">
+                偏差値40台からの<br />大逆転を、私が直接導く。
               </h3>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                慶應SFCはとても難易度が高いと思っているかもしれませんが、戦略次第では合格は現実的です。
+                「もともと文章を書くのが苦手」「すごい実績なんてない」。SFC合格者の8割は、皆さんと同じ不安を抱えてスタートしました。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                諦めるのはまだまだ早く、こんな私が？と思うあなたこそ一度話をしましょう！
+                エリートしか受からないという誤解を捨ててください。<br />正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                6年間で39名の合格者を輩出した経験と、最新のAI技術を組み合わせ、あなたの「本当の実力」を引き出します。
+                6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の実力」を引き出します。
               </p>
               <p className="text-lg text-foreground mb-10 leading-relaxed">
-                <strong className="text-primary">私が直接、あなたと並走することを約束します。</strong>
+                <strong className="text-primary border-b-2 border-accent">私が直接、あなたと並走することを約束します。</strong>
               </p>
               <div className="border-l-4 border-accent pl-6">
                 <p className="text-xl font-bold text-secondary font-serif tracking-wide">
@@ -622,12 +525,12 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Solution Section */}
+      {/* Solution Section (1st Filtering AI) */}
       <section className="relative py-28 px-4 bg-white overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002147' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002147' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
 
@@ -635,11 +538,12 @@ export default function HomeClient() {
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6">
-              塾長の指導を最大化する、<br className="sm:hidden" />
-              佐藤塾独自の2つのAI
+              佐藤塾メソッドを学習した<br className="sm:hidden" />
+              1次スクリーニングAIの活用
             </h2>
-            <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              塾長の指導効果を最大化するために、過去の合格者脳と塾長の全知識を学習させた2つのAIを開発しました。24時間365日いつでも即時添削できる、佐藤塾にしか作れない専用の指導システムです。
+            <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-4xl mx-auto text-left md:text-center">
+              小論文の基本となる文章構成や論理展開のズレは、過去のSFC合格者データを学習したAIが24時間以内に1次スクリーニングを行います。<br className="hidden md:block" />
+              <strong className="text-[#800000]">その上で、塾長との会話を通じて「基礎の修正」だけでなくSFCに合わせた「強み」や「アイデア」の言語化を一緒に行います。</strong>
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -647,24 +551,17 @@ export default function HomeClient() {
           <div className="space-y-16 md:space-y-20">
             <div className="bg-white border-l-4 border-[#002147] shadow-lg rounded-r-lg overflow-hidden">
               <div className="p-6 md:p-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">AI 01</span>
-                  <div className="h-px flex-1 bg-[#002147]/10" />
-                </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                  添削用AI
+                  24時間以内のフィードバック
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-4 border-l-2 border-[#C5A059] pl-4">
-                  6年間の合格者が書いた全答案と、その成長過程（ビフォー・アフター）をすべて学習。SFC特有の評価基準を佐藤塾なりに基準化し、合格ラインを超えるための「添削」と「情報提供」を実現します。
+                  提出後、まずはAIが24時間以内に「SFCの評価基準」に照らし合わせ、基礎的な論理のズレを指摘します。その上で、塾長との会話を通じて「基礎の修正」だけでなくSFCに合わせた「強み」や「アイデア」の言語化を一緒に行います。
                 </p>
 
-                {/* 置き換えた AI Correction Demo */}
                 <AICorrectionDemo />
 
               </div>
             </div>
-
-            <ConsultationAICard />
           </div>
         </div>
       </section>
@@ -672,7 +569,7 @@ export default function HomeClient() {
       {/* Role Division Section */}
       <section className="py-28 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="『量』と『質』を極限まで両立させる">
+          <SectionTitle subtitle="基礎はAIで無限に。応用は塾長が直接叩き込む。">
             塾長 × AI の役割分担
           </SectionTitle>
 
@@ -691,24 +588,24 @@ export default function HomeClient() {
               <ul className="space-y-4">
                 <li className="flex gap-3">
                   <span className="text-[#800000] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">意志・探究心</span>：志望理由書の深化と言語化</span>
+                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">SFCに受かる独自性</span>の発見と指導</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#800000] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">オーナーシップ</span>教育で自律性を育成</span>
+                  <span className="text-sm text-[#333333]">不安をなくす<span className="font-bold text-[#800000]">受験戦略の立案と並走</span></span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#800000] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#800000]">戦略的指導</span>で合格ルートを確定</span>
+                  <span className="text-sm text-[#333333]">志望理由書やポートフォリオの<span className="font-bold text-[#800000]">最終完成</span></span>
                 </li>
               </ul>
-              <p className="text-xs text-[#666666] mt-6 pt-6 border-t border-[#800000]/20">
-                「意志と探究心」で合格への道を開く
+              <p className="text-xs text-[#666666] mt-6 pt-6 border-t border-[#800000]/20 font-bold">
+                AIにはできない、人による泥臭い「熱量と戦略」
               </p>
             </div>
 
             {/* AIの役割を後に配置 */}
-            <div className="bg-[#white] rounded-xl p-8 border-l-4 border-[#002147] shadow-sm">
+            <div className="bg-white rounded-xl p-8 border-l-4 border-[#002147] shadow-sm">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-[#002147] rounded-lg flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -720,34 +617,48 @@ export default function HomeClient() {
               <ul className="space-y-4">
                 <li className="flex gap-3">
                   <span className="text-[#002147] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">論理・反復</span>：24時間無制限の小論文添削</span>
+                  <span className="text-sm text-[#333333]">基礎的な論理破綻の<span className="font-bold text-[#002147]">1次スクリーニング</span></span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#002147] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">論理の型</span>を圧倒的な演習量で習得</span>
+                  <span className="text-sm text-[#333333]">24時間以内の<span className="font-bold text-[#002147]">フィードバック</span></span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#002147] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]"><span className="font-bold text-[#002147]">即時フィードバック</span>で成長を加速</span>
+                  <span className="text-sm text-[#333333]">圧倒的な演習量をこなすための<span className="font-bold text-[#002147]">壁打ち相手</span></span>
                 </li>
               </ul>
-              <p className="text-xs text-[#666666] mt-6 pt-6 border-t border-[#002147]/20">
-                「論理と反復」で学習の土台を構築
+              <p className="text-xs text-[#666666] mt-6 pt-6 border-t border-[#002147]/20 font-bold">
+                ヒューマンエラーを防ぐ「高速インフラ」
               </p>
             </div>
-          </div>
-
-          <div className="mt-12 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5 rounded-xl p-8 border border-[#002147]/10 text-center">
-            <p className="text-xl md:text-2xl font-bold text-[#002147] font-serif">
-              塾長で <span className="text-[#800000]">意志を</span> 。AIで <span className="text-[#800000]">論理を</span> 。<br />
-              あなたの"合格"を『質』と『量』を両立して実現する。
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Roadmap Section (UPDATED FOR AUGUST START) */}
-      <section className="py-28 px-4 bg-white">
+      {/* Intermediate CTA Section */}
+      <section className="py-20 px-4 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5"></div>
+        <div className="max-w-3xl mx-auto text-center relative z-10">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
+            「自分に何ができるかわからない」<br className="md:hidden" />と悩んでいませんか？
+          </h3>
+          <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
+            実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「現状を正確に把握し、プロと正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />まずは無料相談で、あなたの不安や現状をすべて塾長に聞かせてください。
+          </p>
+          <a href="#contact-form" onClick={handleSmoothScroll}>
+            <Button className="bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-10 py-6 h-auto text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 rounded-full group">
+              <span className="flex items-center gap-2">
+                まずは無料で塾長に相談する
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Button>
+          </a>
+        </div>
+      </section>
+
+      {/* Roadmap Section */}
+      <section className="py-28 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
@@ -760,77 +671,78 @@ export default function HomeClient() {
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
 
-          {/* PC版ロードマップ */}
+          {/* PC版ロードマップ (Pure CSS Timeline) */}
           <div className="hidden lg:block">
-            <div className="relative">
-              <div className="absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-[#002147] via-[#800000] to-[#C5A059]" />
+            <div className="relative pt-8">
+              {/* Horizontal Timeline Line */}
+              <div className="absolute top-16 left-[10%] right-[10%] h-1.5 bg-gradient-to-r from-[#002147] via-[#800000] to-[#C5A059] rounded-full" />
 
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-3 gap-10">
                 {/* STEP 01: 8月 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
-                    <div className="w-14 h-14 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-lg z-10 border-4 border-white">
+                    <div className="w-16 h-16 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-xl font-serif shadow-lg z-10 border-4 border-[#F9F9F9]">
                       01
                     </div>
-                    <div className="mt-4 flex items-center gap-2">
+                    <div className="mt-4 flex items-center gap-2 bg-[#002147]/10 px-4 py-1.5 rounded-full">
                       <span className="text-sm font-bold text-[#002147] tracking-wider">8月</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg p-6 shadow-lg border-t-4 border-[#002147]">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">塾長×AI</span>
+                  <div className="bg-white rounded-xl p-6 shadow-md border-t-4 border-[#002147] hover:shadow-xl transition-shadow relative">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#002147] text-white text-xs font-bold px-3 py-1 rounded shadow-sm">
+                      塾長×AI
                     </div>
-                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-3 leading-snug">
+                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
                       出願書類の<br />急ピッチでの完成
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      受験生のヒアリングを基に佐藤塾が志望理由書等の素案を作成します。その後、AI添削を活用し論理の破綻をなくし、塾長と共にSFC特有の<span className="text-[#800000] font-bold">「独自性」</span>を引き上げます。
+                      受験生のヒアリングを基に佐藤塾が志望理由書等の素案を作成します。その後、AIの1次チェックを活用して論理破綻をなくし、塾長と共にSFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。
                     </p>
                   </div>
                 </div>
 
-                {/* STEP 02: 9月 */}
+                {/* STEP 02: 9月〜10月 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
-                    <div className="w-14 h-14 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-lg font-serif shadow-lg z-10 border-4 border-white">
+                    <div className="w-16 h-16 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-xl font-serif shadow-lg z-10 border-4 border-[#F9F9F9]">
                       02
                     </div>
-                    <div className="mt-4 flex items-center gap-2">
+                    <div className="mt-4 flex items-center gap-2 bg-[#800000]/10 px-4 py-1.5 rounded-full">
                       <span className="text-sm font-bold text-[#800000] tracking-wider">9月〜10月</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg p-6 shadow-lg border-t-4 border-[#800000]">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">小論文×面接</span>
+                  <div className="bg-white rounded-xl p-6 shadow-md border-t-4 border-[#800000] hover:shadow-xl transition-shadow relative">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#800000] text-white text-xs font-bold px-3 py-1 rounded shadow-sm">
+                      小論文×面接
                     </div>
-                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-3 leading-snug">
+                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
                       出願完了と<br />「二刀流」の本格始動
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      出願後、息つく間もなく小論文と面接対策を並走させます。ここで面接に振り切らず、一般入試でも通用する<span className="text-[#800000] font-bold">「書く力」</span>を培うことがSFC合格の最大の鍵となります。
+                      出願後、息つく間もなく小論文と面接対策を並走させます。ここで面接に振り切らず、一般入試でも通用する<strong className="text-[#800000]">「書く力」</strong>を培うことがSFC合格の最大の鍵となります。
                     </p>
                   </div>
                 </div>
 
-                {/* STEP 03: 10月〜 */}
+                {/* STEP 03: 11月〜入試 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
-                    <div className="w-14 h-14 rounded-full bg-[#C5A059] text-[#002147] flex items-center justify-center font-bold text-lg font-serif shadow-lg z-10 border-4 border-white">
+                    <div className="w-16 h-16 rounded-full bg-[#C5A059] text-white flex items-center justify-center font-bold text-xl font-serif shadow-lg z-10 border-4 border-[#F9F9F9]">
                       03
                     </div>
-                    <div className="mt-4 flex items-center gap-2">
-                      <span className="text-sm font-bold text-[#C5A059] tracking-wider">11月〜入試</span>
+                    <div className="mt-4 flex items-center gap-2 bg-[#C5A059]/20 px-4 py-1.5 rounded-full">
+                      <span className="text-sm font-bold text-[#002147] tracking-wider">11月〜入試</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg p-6 shadow-lg border-t-4 border-[#C5A059]">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold px-2 py-1 rounded">二刀流で合格へ</span>
+                  <div className="bg-white rounded-xl p-6 shadow-md border-t-4 border-[#C5A059] hover:shadow-xl transition-shadow relative">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#C5A059] text-[#002147] text-xs font-bold px-3 py-1 rounded shadow-sm">
+                      二刀流で合格へ
                     </div>
-                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-3 leading-snug">
+                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
                       面接本番と<br />一般入試への完全接続
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      10月のAO2次試験本番に挑むと同時に、一般入試に向けた対策を並走します。AOに依存しない<span className="text-[#800000] font-bold">二刀流</span>を活かし、いかなる状況でも合格圏内に入ることを目指します。
+                      10月のAO2次面接本番に挑むと同時に、一般入試に向けた対策を並走します。AOに依存しない<strong className="text-[#800000]">二刀流</strong>を活かし、いかなる状況でも合格圏内に入ることを目指します。
                     </p>
                   </div>
                 </div>
@@ -838,18 +750,19 @@ export default function HomeClient() {
             </div>
           </div>
 
-          {/* スマホ版ロードマップ */}
-          <div className="lg:hidden">
-            <div className="relative max-w-md mx-auto">
-              <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#002147] via-[#800000] to-[#C5A059]" />
+          {/* スマホ版ロードマップ (Pure CSS Vertical Timeline) */}
+          <div className="lg:hidden mt-10">
+            <div className="relative max-w-md mx-auto px-4">
+              {/* Vertical Timeline Line */}
+              <div className="absolute left-10 top-4 bottom-10 w-1 bg-gradient-to-b from-[#002147] via-[#800000] to-[#C5A059] rounded-full" />
 
               {/* STEP 01: 8月 */}
-              <div className="relative pl-16 pb-10">
-                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
+              <div className="relative pl-14 pb-12">
+                <div className="absolute left-0 top-2 w-10 h-10 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-base font-serif shadow-md z-10 border-[3px] border-[#F9F9F9]">
                   01
                 </div>
-                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#002147]">
-                  <div className="flex items-center justify-between mb-2">
+                <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#002147]">
+                  <div className="flex items-center justify-between mb-3">
                     <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">塾長×AI</span>
                     <span className="text-xs font-bold text-[#002147] tracking-wider">8月</span>
                   </div>
@@ -857,18 +770,18 @@ export default function HomeClient() {
                     出願書類の急ピッチでの完成
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    受験生のヒアリングを基に佐藤塾が志望理由書等の素案を作成します。その後、AI添削を活用し論理の破綻をなくし、塾長と共にSFC特有の<span className="text-[#800000] font-bold">「独自性」</span>を引き上げます。
+                    受験生のヒアリングを基に佐藤塾が素案を作成。AIの1次チェックで論理破綻をなくし、塾長1on1で<strong className="text-[#800000]">「独自性」</strong>を極限まで引き上げます。
                   </p>
                 </div>
               </div>
 
               {/* STEP 02: 9月 */}
-              <div className="relative pl-16 pb-10">
-                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
+              <div className="relative pl-14 pb-12">
+                <div className="absolute left-0 top-2 w-10 h-10 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-base font-serif shadow-md z-10 border-[3px] border-[#F9F9F9]">
                   02
                 </div>
-                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#800000]">
-                  <div className="flex items-center justify-between mb-2">
+                <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#800000]">
+                  <div className="flex items-center justify-between mb-3">
                     <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">小論文×面接</span>
                     <span className="text-xs font-bold text-[#800000] tracking-wider">9月〜10月</span>
                   </div>
@@ -876,26 +789,26 @@ export default function HomeClient() {
                     出願完了と「二刀流」の本格始動
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    出願後、息つく間もなく小論文と面接対策を並走させます。一般入試でも通用する<span className="text-[#800000] font-bold">「書く力」</span>を培うことがSFC合格の最大の鍵となります。
+                    出願後、息つく間もなく小論文と面接対策を並走。一般入試でも通用する<strong className="text-[#800000]">「書く力」</strong>を培うことがSFC合格の鍵となります。
                   </p>
                 </div>
               </div>
 
               {/* STEP 03: 10月〜 */}
-              <div className="relative pl-16">
-                <div className="absolute left-0 w-12 h-12 rounded-full bg-[#C5A059] text-[#002147] flex items-center justify-center font-bold text-lg font-serif shadow-md z-10">
+              <div className="relative pl-14 pb-4">
+                <div className="absolute left-0 top-2 w-10 h-10 rounded-full bg-[#C5A059] text-white flex items-center justify-center font-bold text-base font-serif shadow-md z-10 border-[3px] border-[#F9F9F9]">
                   03
                 </div>
-                <div className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#C5A059]">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="bg-[#C5A059]/10 text-[#C5A059] text-xs font-bold px-2 py-1 rounded">二刀流で合格へ</span>
+                <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#C5A059]">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="bg-[#C5A059]/20 text-[#002147] text-xs font-bold px-2 py-1 rounded">二刀流で合格へ</span>
                     <span className="text-xs font-bold text-[#C5A059] tracking-wider">11月〜入試</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
                     面接本番と一般入試への完全接続
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    10月のAO2次面接本番に挑むと同時に、一般入試に向けた対策を並走します。AOに依存しない<span className="text-[#800000] font-bold">二刀流</span>の準備がもたらす圧倒的な精神的余裕で合格を確実なものにします。
+                    10月のAO2次面接に挑むと同時に一般対策を並走。<strong className="text-[#800000]">二刀流</strong>の準備がもたらす精神的余裕で合格を確実なものにします。
                   </p>
                 </div>
               </div>
@@ -905,7 +818,7 @@ export default function HomeClient() {
       </section>
 
       {/* Comparison Section */}
-      <section className="py-28 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB]">
+      <section className="py-28 px-4 bg-white border-t border-[#E5E7EB]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
@@ -934,7 +847,7 @@ export default function HomeClient() {
               <tbody>
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">小論文の添削</td>
-                  <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold">24時間無制限<br /><span className="text-xs text-[#666666]">（AI×塾長）</span></td>
+                  <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold">回数無制限<br /><span className="text-xs text-[#666666]">（AI1次チェック＋塾長）</span></td>
                   <td className="p-6 text-center bg-white text-[#666666]">週1〜4回<br /><span className="text-xs">（対面メイン）</span></td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">週1回<br /><span className="text-xs">（学生バイト中心）</span></td>
                 </tr>
@@ -959,8 +872,8 @@ export default function HomeClient() {
                 <tr>
                   <td className="p-6 font-bold text-[#002147]">質問・相談</td>
                   <td className="p-6 text-center bg-[#800000]/5">
-                    <p className="text-[#800000] font-bold">24時間 / 予約不要</p>
-                    <p className="text-xs text-[#666666] mt-1">いつでも即時回答</p>
+                    <p className="text-[#800000] font-bold">塾長直通ライン</p>
+                    <p className="text-xs text-[#666666] mt-1">24時間いつでも質問可能</p>
                   </td>
                   <td className="p-6 text-center bg-white text-[#666666]">予約制 / 開校時間内</td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">予約制 / 開校時間内</td>
@@ -984,7 +897,7 @@ export default function HomeClient() {
                   <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">小論文添削</td>
                     <td className="p-3 bg-[#fff5f5] text-center">
-                      <p className="text-[12px] font-bold text-[#800000] leading-snug">24時間無制限</p>
+                      <p className="text-[12px] font-bold text-[#800000] leading-snug">回数無制限</p>
                     </td>
                     <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1〜4回</td>
                     <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1回</td>
@@ -1012,7 +925,7 @@ export default function HomeClient() {
                   <tr>
                     <td className="sticky left-0 z-20 p-3 pb-6 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">相談対応</td>
                     <td className="p-3 pb-6 bg-[#fff5f5] text-center">
-                      <p className="text-[12px] font-bold text-[#800000] leading-snug">24時間予約不要</p>
+                      <p className="text-[12px] font-bold text-[#800000] leading-snug">塾長直通ライン</p>
                     </td>
                     <td className="p-3 pb-6 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">予約制</td>
                     <td className="p-3 pb-6 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">予約制</td>
@@ -1108,8 +1021,8 @@ export default function HomeClient() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { num: '01', title: 'AOと一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
-              { num: '02', title: 'AI添削無制限', desc: '24時間いつでも、何度でも小論文を添削。時間制限なし' },
-              { num: '03', title: '学習の徹底管理', desc: '週次、月次で学習計画を策定し、管理する' },
+              { num: '02', title: '24時間1次チェックAI', desc: '提出書類や小論文の論理破綻をAIが瞬時に弾き、修正時間を短縮' },
+              { num: '03', title: '塾長の熱量ある1on1', desc: 'SFC合格の明暗を分ける「独自性」の言語化を塾長が直接指導' },
               { num: '04', title: 'AO合格後の追加費用0円', desc: 'AO合格後は卒業となり自動退塾となります。追加料金は不要' },
               { num: '05', title: 'SFC特化ロジック', desc: '6年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
               { num: '06', title: '通塾ゼロ', desc: '指導も授業もすべてオンライン。通塾時間を勉強に充てられる' },
@@ -1135,7 +1048,7 @@ export default function HomeClient() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-28 px-4 bg-white">
+      <section className="py-28 px-4 bg-white border-t border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
           <SectionTitle subtitle="AO入試受験の有無で決められるシンプルなプラン">2つの料金プラン</SectionTitle>
 
@@ -1173,7 +1086,7 @@ export default function HomeClient() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">AI添削 <span className="font-bold text-[#800000]">24時間無制限</span></span>
+                    <span className="text-sm text-[#333333]">AI 1次スクリーニング <span className="font-bold text-[#800000]">回数無制限</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
@@ -1185,7 +1098,7 @@ export default function HomeClient() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">相談AI 24時間対応</span>
+                    <span className="text-sm text-[#333333]">塾長直通の相談ライン</span>
                   </li>
                 </ul>
 
@@ -1234,7 +1147,7 @@ export default function HomeClient() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">AI添削 24時間無制限</span>
+                    <span className="text-sm text-[#333333]">AI 1次スクリーニング <span className="font-bold text-[#002147]">回数無制限</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
@@ -1242,7 +1155,7 @@ export default function HomeClient() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#333333]">相談AI 24時間対応</span>
+                    <span className="text-sm text-[#333333]">塾長直通の相談ライン</span>
                   </li>
                 </ul>
 
@@ -1273,7 +1186,7 @@ export default function HomeClient() {
               <div>
                 <p className="text-lg md:text-xl font-bold text-[#002147] mb-2">AO入試合格 ＝ 卒業。合格後の費用は一切かかりません。</p>
                 <p className="text-sm md:text-base text-[#333333] leading-relaxed">
-                  AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。。だからこそ、親御様も安心してお子さんの受験を応援できます。
+                  AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。だからこそ、親御様も安心してお子さんの受験を応援できます。
                 </p>
               </div>
             </div>
@@ -1287,7 +1200,7 @@ export default function HomeClient() {
                 </svg>
                 <div>
                   <p className="font-bold text-[#002147] text-sm mb-1">入会金＋授業料のみ</p>
-                  <p className="text-xs text-[#666666]">追加の追加講習費や合格祝福金などは一切かかりません。</p>
+                  <p className="text-xs text-[#666666]">追加講習費や合格祝福金などは一切かかりません。</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -1307,7 +1220,7 @@ export default function HomeClient() {
       {/* Contact Form Section */}
       <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-20">
         <div className="max-w-2xl mx-auto">
-          <SectionTitle subtitle="「自分の実績や文章力で本当に受かるのか」――その不安、まずはすべて塾長にぶつけてください。一人ひとりの指導密度を極限まで保つため、今年度の新規受付は残り7名となっております。">
+          <SectionTitle subtitle="「自分の実績や文章力で本当に受かるのか」――その不安、まずはすべて私にぶつけてください。一人ひとりの指導密度を極限まで保つため、今年度の新規受付は残り7名となっております。">
             30秒で申し込み！個別相談を予約する
           </SectionTitle>
 
@@ -1475,7 +1388,7 @@ export default function HomeClient() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                一般的な塾では不可能な<strong>「24時間・無制限の演習量」</strong>をAIで確保しつつ、最も重要な「志望理由の深化」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。学習の『量』と『質』を極限まで両立させていることが、この数字の根拠です。
+                AIによる<strong>「基礎的な論理破綻の高速スクリーニング」</strong>で時間を生み出し、最も重要な「SFCに受かる独自性の深掘り」と「戦略立案」に塾長が全リソースを割く仕組みを構築しているからです。このシステムこそが、実績ゼロからの大逆転を生み出します。
               </div>
             </details>
 
