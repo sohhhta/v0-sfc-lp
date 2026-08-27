@@ -127,7 +127,7 @@ export default function ResultsPage() {
               </div>
               <div className="flex-1 flex flex-col items-center justify-center p-6 md:p-8">
                 <div className="text-6xl md:text-7xl font-black text-[#C5A059] font-serif tracking-tight">39<span className="text-4xl md:text-5xl">名</span></div>
-                <p className="text-sm text-[#666666] mt-3 font-medium">SFC合格輩出</p>
+                <p className="text-sm text-[#666666] mt-3 font-medium">SFC合格者輩出</p>
               </div>
             </div>
 
