@@ -44,21 +44,27 @@ function AICorrectionDemo() {
       <div className="flex border-b border-[#E5E7EB] bg-[#F8F9FA] overflow-x-auto hide-scrollbar">
         <button
           onClick={() => setStep(1)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 1 ? 'bg-[#002147] text-white' : 'text-[#666666] hover:bg-[#002147]/5'}`}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 1 ? 'bg-[#475569] text-white' : 'text-[#666666] hover:bg-[#475569]/5'}`}
         >
           1. 生徒の答案提出
         </button>
         <button
           onClick={() => setStep(2)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 2 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 2 ? 'bg-[#002147] text-white' : 'text-[#666666] hover:bg-[#002147]/5'}`}
         >
           2. AIの1次スクリーニング
         </button>
         <button
           onClick={() => setStep(3)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 3 ? 'bg-[#C5A059] text-white' : 'text-[#666666] hover:bg-[#C5A059]/5'}`}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 3 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
         >
-          3. 修正後の答案
+          3. 塾長の直接添削
+        </button>
+        <button
+          onClick={() => setStep(4)}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 4 ? 'bg-[#C5A059] text-white' : 'text-[#666666] hover:bg-[#C5A059]/5'}`}
+        >
+          4. 修正後の答案
         </button>
       </div>
 
@@ -76,28 +82,54 @@ function AICorrectionDemo() {
         {step === 2 && (
           <div className="animate-in fade-in slide-in-from-bottom-2 duration-500 space-y-4">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#800000] animate-pulse" />
-              <span className="text-sm font-bold text-[#800000]">佐藤塾AIによる1次チェック結果</span>
+              <div className="w-2.5 h-2.5 rounded-full bg-[#002147] animate-pulse" />
+              <span className="text-sm font-bold text-[#002147]">佐藤塾AIによる1次チェック結果</span>
             </div>
-            <div className="bg-red-50 p-5 rounded-lg border border-red-100">
+            <div className="bg-[#002147]/5 p-5 rounded-lg border border-[#002147]/20">
               <ul className="space-y-4">
                 <li className="flex gap-3">
-                  <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm md:text-base text-red-900 leading-relaxed">「AIは仕事を奪う」という思いつきの<strong>感情論</strong>で書かれています。</span>
+                  <X className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-[#333333] leading-relaxed">「AIは仕事を奪う」という思いつきの<strong>感情論</strong>で書かれています。</span>
                 </li>
                 <li className="flex gap-3">
-                  <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm md:text-base text-red-900 leading-relaxed">SFCが求める「客観的なデータや資料の引用」が一切ありません。</span>
+                  <X className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-[#333333] leading-relaxed">SFCが求める「客観的なデータや資料の引用」が一切ありません。</span>
                 </li>
                 <li className="flex gap-3">
-                  <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm md:text-base text-red-900 leading-relaxed">「レジの自動化」から「AIの禁止」へと<strong>深刻な論理の飛躍</strong>が起きています。PREP法を用いて構成を練り直しましょう。</span>
+                  <X className="w-5 h-5 text-[#002147] flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-[#333333] leading-relaxed">「レジの自動化」から「AIの禁止」へと<strong>深刻な論理の飛躍</strong>が起きています。PREP法を用いて構成を練り直しましょう。</span>
                 </li>
               </ul>
             </div>
           </div>
         )}
         {step === 3 && (
+          <div className="animate-in fade-in slide-in-from-bottom-2 duration-500 space-y-4">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-2.5 h-2.5 rounded-full bg-[#800000] animate-pulse" />
+              <span className="text-sm font-bold text-[#800000]">塾長からの1on1フィードバック</span>
+            </div>
+            <div className="bg-[#fff5f5] p-5 rounded-lg border border-[#800000]/20">
+              <p className="text-[#333333] leading-relaxed text-sm md:text-base mb-4">
+                お疲れ様！AIの指摘通り、少し主観が強くなってしまっているね。<br />
+                でも、「AIの進化に対する危機感」という着眼点自体はすごく良いと思うよ！<br />
+                SFCの教授を納得させるには、これを<strong className="text-[#800000]">「社会課題の解決」</strong>という視点に変換するのがコツなんだ。
+              </p>
+              <div className="bg-white p-4 rounded-md border border-[#E5E7EB] shadow-sm">
+                <p className="text-xs text-[#800000] font-bold mb-2 tracking-wider">💡 塾長からの提案アイデア</p>
+                <p className="text-[#333333] leading-relaxed text-sm md:text-base">
+                  例えば、AIを「禁止」するのではなく、「過疎地域の医師不足」など、<strong>人間が足りていない領域をサポートする技術</strong>として提案してみない？<br />
+                  <br />
+                  <span className="bg-[#f0f9ff] px-3 py-2 rounded text-[#002147] font-medium border border-[#bae6fd] block mb-2">
+                    「地方の医療過疎問題に対し、AI画像診断技術の導入を推進すべきだと考える。」
+                  </span>
+                  こんな風に主張（Point）を書き換えて、資料から「医師の負担を示すデータ」を引用（Evidence）すれば、説得力が段違いに上がるよ！一緒にこの構成で書き直してみよう。
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+        {step === 4 && (
           <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
             <div className="bg-[#C5A059]/10 p-5 rounded-lg border border-[#C5A059]/30 relative">
               <span className="absolute -top-3 -right-3 bg-[#002147] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm transform rotate-6">SFC合格レベル</span>
@@ -247,15 +279,15 @@ export default function HomeClient() {
             <span className="text-sm md:text-base font-bold text-white tracking-widest">慶應SFC（総合政策・環境情報）専門塾</span>
           </div>
 
-          {/* Main Copy - Prevent unnatural breaks using inline-block and restored large font size (lg:text-7xl) */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.3] drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150" style={{ wordBreak: 'keep-all', overflowWrap: 'anywhere' }}>
-            <span className="inline-block">偏差値40台、</span><span className="inline-block">実績ゼロから。</span><br />
-            <span className="inline-block">塾長の泥臭い1on1指導で</span><span className="inline-block">掴む、</span><br />
-            <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none">SFC合格。</span>
+          {/* Main Copy - Beautiful line breaks without inline-blocks and restored large font size (lg:text-7xl) */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.35] drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
+            偏差値40台、実績ゼロから。<br />
+            塾長の泥臭い1on1指導で掴む、<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none">SFC合格。</span>
           </h1>
 
           {/* Sub Copy */}
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300" style={{ wordBreak: 'keep-all' }}>
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
             合格者の8割が「小論文未経験」「実績ゼロ」からのスタートです。<br className="hidden md:block" />
             基礎の論理構成はAIで無限に反復し、SFC特有の独自性は塾長が直接1on1で引き上げる。<br className="hidden md:block" />
             2人に1人が合格する圧倒的実績で、最短距離でSFC合格へ導きます。
@@ -272,8 +304,8 @@ export default function HomeClient() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500"></span>
                 </span>
-                <p className="text-white text-sm sm:text-base font-bold tracking-wider leading-snug text-center" style={{ wordBreak: 'keep-all' }}>
-                  指導密度を極限まで保つため、今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b-2 border-[#C5A059]">残り7名</span>
+                <p className="text-white text-sm sm:text-base font-bold tracking-wider leading-snug text-center">
+                  指導密度を極限まで保つため、<br className="sm:hidden" />今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b-2 border-[#C5A059]">残り7名</span>
                 </p>
               </div>
               
@@ -519,10 +551,6 @@ export default function HomeClient() {
           <div className="space-y-16 md:space-y-20">
             <div className="bg-white border-l-4 border-[#002147] shadow-lg rounded-r-lg overflow-hidden">
               <div className="p-6 md:p-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-xs font-bold text-[#C5A059] tracking-[0.2em] uppercase">SYSTEM 01</span>
-                  <div className="h-px flex-1 bg-[#002147]/10" />
-                </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide mb-4">
                   24時間以内のフィードバック
                 </h3>
