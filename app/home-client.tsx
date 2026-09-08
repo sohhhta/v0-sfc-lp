@@ -616,7 +616,7 @@ export default function HomeClient() {
               <ul className="space-y-4">
                 <li className="flex gap-3">
                   <span className="text-[#002147] font-bold text-lg">→</span>
-                  <span className="text-sm text-[#333333]">基礎的な論理破綻の<span className="font-bold text-[#002147]">1次スクリーニン��</span></span>
+                  <span className="text-sm text-[#333333]">基礎的な論理破綻の<span className="font-bold text-[#002147]">1次スクリーニング</span></span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#002147] font-bold text-lg">→</span>
