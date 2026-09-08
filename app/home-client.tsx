@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Check, ArrowRight, PenTool, Target, X } from 'lucide-react'
+import { Check, ArrowRight, PenTool, Target, X, MessageCircle, Zap, Video, HelpCircle } from 'lucide-react'
 import Link from 'next/link'
 import { FloatingCTA } from '@/components/ui/floating-cta'
 
@@ -257,15 +257,13 @@ export default function HomeClient() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
 
-      {/* Hero Section */}
+      {/* Hero Section - Restored original navy gradient background with native img for safety */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-slate-200">
-          <Image
+          <img
             src="/hero.jpg"
             alt="Keio SFC Campus"
-            fill
-            className="object-cover"
-            priority
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/95 via-[#002147]/90 to-[#002147]"></div>
         </div>
@@ -278,7 +276,7 @@ export default function HomeClient() {
             <span className="text-sm md:text-base font-bold text-white tracking-widest">慶應SFC（総合政策・環境情報）専門塾</span>
           </div>
 
-          {/* Main Copy */}
+          {/* Main Copy - Cleaned up line breaks and optimized font size for PC */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-relaxed drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
             偏差値40台、実績ゼロから。<br />
             塾長の泥臭い1on1指導で掴む、<br />
@@ -297,6 +295,7 @@ export default function HomeClient() {
             <div className="absolute -inset-2 bg-gradient-to-r from-[#C5A059]/30 to-[#800000]/30 blur-xl rounded-full opacity-70 animate-pulse"></div>
 
             <div className="relative flex flex-col items-center w-full">
+              {/* Unified width Badge */}
               <div className="mb-4 flex items-center justify-center gap-3 bg-[#002147]/90 border-2 border-[#C5A059]/80 px-4 py-4 rounded-full backdrop-blur-md shadow-xl w-full">
                 <span className="relative flex h-3.5 w-3.5 flex-shrink-0">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -307,6 +306,7 @@ export default function HomeClient() {
                 </p>
               </div>
               
+              {/* Unified width Button */}
               <a href="#contact-form" onClick={handleSmoothScroll} className="w-full block">
                 <Button
                   size="lg"
@@ -480,7 +480,7 @@ export default function HomeClient() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative flex justify-center md:justify-start">
-              {/* Principal's Profile Photo */}
+              {/* Principal's Profile Photo - Native img used here as well */}
               <div className="w-full max-w-[400px] aspect-[4/5] bg-slate-200 rounded-xl shadow-xl relative overflow-hidden">
                  <img
                   src="/og-image.png"
@@ -517,28 +517,6 @@ export default function HomeClient() {
                 <p className="text-base text-muted-foreground mt-1">佐藤塾 塾長</p>
               </div>
             </div>
-          </div>
-
-          {/* ADDED: Online Coaching Scene embedded naturally within the message context */}
-          <div className="mt-24 pt-16 border-t border-[#E5E7EB]">
-            <div className="text-center mb-10">
-              <p className="text-sm font-bold text-[#800000] tracking-widest mb-3">ONLINE 1on1 COACHING</p>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide">
-                全国どこからでも。熱量そのままのオンライン指導
-              </h3>
-            </div>
-            
-            <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-xl overflow-hidden shadow-lg border-4 border-white bg-slate-200 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-              <img
-                src="/fv-coaching.jpg"
-                alt="佐藤塾 塾長とのオンライン1on1指導風景"
-                className="absolute inset-0 w-full h-full object-cover object-center scale-[1.15]"
-              />
-            </div>
-            
-            <p className="mt-8 text-[#666666] text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-center font-medium">
-              AIには指摘できない「あなた独自の強み」や「SFCへの適性」を、<br className="hidden md:block"/>塾長が直接、泥臭く徹底的に言語化します。
-            </p>
           </div>
         </div>
       </section>
@@ -648,6 +626,89 @@ export default function HomeClient() {
               </ul>
               <p className="text-xs text-[#666666] mt-6 pt-6 border-t border-[#002147]/20 font-bold">
                 ヒューマンエラーを防ぐ「高速インフラ」
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Daily Coaching Cycle Section (UX Improved with Contextual Image) */}
+      <section className="py-24 px-4 bg-white border-t border-[#E5E7EB]">
+        <div className="max-w-5xl mx-auto">
+          <SectionTitle subtitle="「オンラインだと放置されそう…」という不安は無用です。塾長とAIが、圧倒的な密度であなたに伴走します。">
+            合格を引き寄せる、日々の指導サイクル
+          </SectionTitle>
+
+          <div className="space-y-8">
+            {/* Cycle Steps Grid */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Step 1 */}
+              <div className="bg-[#F8F9FA] rounded-2xl p-8 border border-[#E5E7EB] hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-[#E5E7EB]">
+                    <span className="text-xl font-bold text-[#002147] font-serif">01</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#002147]">いつでもLINEで提出</h3>
+                </div>
+                <p className="text-[#333333] leading-relaxed">
+                  小論文の答案や志望理由書のドラフトが書けたら、スマホからLINEでいつでも提出。回数制限は一切ありません。
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="bg-[#F8F9FA] rounded-2xl p-8 border border-[#E5E7EB] hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-[#E5E7EB]">
+                    <span className="text-xl font-bold text-[#002147] font-serif">02</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#002147]">AIによる高速フィードバック</h3>
+                </div>
+                <p className="text-[#333333] leading-relaxed">
+                  提出後、24時間以内にAIが構成のズレや論理飛躍をチェックし返却。まずはここで「SFCの基礎フォーマット」を完璧にします。
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 (Main Coaching with Image) */}
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-lg">
+              <div className="grid md:grid-cols-2">
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-[#800000] rounded-full flex items-center justify-center shadow-md">
+                      <span className="text-xl font-bold text-white font-serif">03</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#800000]">塾長との1on1オンライン指導</h3>
+                  </div>
+                  <p className="text-[#333333] leading-relaxed mb-6">
+                    基礎が整った答案をもとに、週1回の面談を実施。<strong>「なぜそう考えたの？」「その視点、社会課題に繋がらない？」</strong>と塾長が直接問いかけ、AIには絶対に作れない「あなただけの強みと独自性」を限界まで引き出します。
+                  </p>
+                  <div className="flex items-center gap-2 text-sm font-bold text-[#C5A059]">
+                    <Video className="w-5 h-5" />
+                    <span>Zoomにて全国どこからでも受講可能</span>
+                  </div>
+                </div>
+                <div className="relative aspect-video md:aspect-auto border-t md:border-t-0 md:border-l border-slate-200">
+                  <img 
+                    src="/fv-coaching.jpg" 
+                    alt="佐藤塾 塾長とのオンライン1on1指導風景" 
+                    className="absolute inset-0 w-full h-full object-cover object-center scale-[1.15]" 
+                  />
+                  {/* Subtle inner shadow for blending */}
+                  <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] pointer-events-none"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="bg-[#F8F9FA] rounded-2xl p-8 border border-[#E5E7EB] hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-[#E5E7EB]">
+                  <span className="text-xl font-bold text-[#002147] font-serif">04</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#002147]">塾長直通ラインで軌道修正</h3>
+              </div>
+              <p className="text-[#333333] leading-relaxed">
+                面談後、次の課題を進める中で迷ったらいつでも塾長直通のLINEで相談可能。「このテーマで進めていいか？」など、小さな不安をその日のうちに解消し、迷いなく勉強に集中できる環境を作ります。
               </p>
             </div>
           </div>
