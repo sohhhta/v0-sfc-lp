@@ -230,7 +230,7 @@ export default function HomeClient() {
         "name": "佐藤塾",
         "url": "https://lifeeling.jp",
         "description": "合格率50.0%を叩き出す慶應SFC（総合政策・環境情報）専門の伴走指導塾。",
-        "image": "https://lifeeling.jp/fv-coaching.jpg",
+        "image": "https://lifeeling.jp/hero.jpg",
         "founder": {
           "@type": "Person",
           "name": "佐藤颯太",
@@ -257,17 +257,17 @@ export default function HomeClient() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
 
-      {/* Hero Section - FOCUS ON HUMAN COACHING & REVERSE SUCCESS */}
+      {/* Hero Section - Restored original navy gradient background */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        
-        {/* CSS背景画像による確実な表示とトリミング */}
-        <div className="absolute inset-0 bg-slate-200 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center scale-[1.15]"
-            style={{ backgroundImage: "url('/fv-coaching.jpg')" }}
+        <div className="absolute inset-0 bg-slate-200">
+          <Image
+            src="/hero.jpg"
+            alt="Keio SFC Campus"
+            fill
+            className="object-cover"
+            priority
           />
-          {/* 画像を透けさせる適度なグラデーション */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/70 via-[#002147]/50 to-[#002147]/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/95 via-[#002147]/90 to-[#002147]"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-24 pb-12">
@@ -278,11 +278,11 @@ export default function HomeClient() {
             <span className="text-sm md:text-base font-bold text-white tracking-widest">慶應SFC（総合政策・環境情報）専門塾</span>
           </div>
 
-          {/* Main Copy - inline-blockを排除し、シンプルな<br>で美しく制御 */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.6] lg:leading-[1.4] drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
-            偏差値40台、<br className="sm:hidden" />実績ゼロから。<br className="hidden sm:block" />
-            塾長の泥臭い1on1指導で<br className="sm:hidden" />掴む、<br className="hidden sm:block" />
-            <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-2 sm:mt-6 leading-tight">SFC合格。</span>
+          {/* Main Copy - Cleaned up line breaks and optimized font size for PC */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-relaxed drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
+            偏差値40台、実績ゼロから。<br />
+            塾長の泥臭い1on1指導で掴む、<br />
+            <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-4 leading-tight">SFC合格。</span>
           </h1>
 
           {/* Sub Copy */}
@@ -364,6 +364,27 @@ export default function HomeClient() {
         <div className="relative z-10 pb-8 flex flex-col items-center animate-pulse">
           <span className="text-white/60 text-xs tracking-[0.3em] mb-3 font-medium">SCROLL</span>
           <div className="w-px h-14 bg-gradient-to-b from-[#C5A059] via-white/30 to-transparent"></div>
+        </div>
+      </section>
+
+      {/* NEW: Online Coaching Scene Section */}
+      <section className="py-20 md:py-28 bg-white border-b border-[#E5E7EB]">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <p className="text-sm font-bold text-[#800000] tracking-widest mb-4">ONLINE 1on1 COACHING</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif mb-12 tracking-wide">実際のオンライン指導風景</h2>
+          
+          <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-[#F8F9FA] bg-slate-100">
+            {/* Next.jsのImageコンポーネントの代わりに、確実なCSS Backgroundを使用 */}
+            <div
+              className="absolute inset-0 bg-cover bg-center scale-[1.15]"
+              style={{ backgroundImage: "url('/fv-coaching.jpg')" }}
+              role="img"
+              aria-label="佐藤塾 塾長とのオンライン1on1指導風景"
+            />
+          </div>
+          <p className="mt-6 text-[#666666] text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+            全国どこからでも受講可能。塾長と顔を突き合わせ、AIには指摘できない「あなた独自の強み」を1on1で徹底的に言語化します。
+          </p>
         </div>
       </section>
 
