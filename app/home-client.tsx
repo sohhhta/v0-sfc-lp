@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { useState } from 'react'
 import { Check, ArrowRight, PenTool, Target, X } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FloatingCTA } from '@/components/ui/floating-cta'
 
 // Section title with Keio blue decorative lines
@@ -371,12 +372,13 @@ export default function HomeClient() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif mb-12 tracking-wide">実際のオンライン指導風景</h2>
 
           <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-[#F8F9FA] bg-slate-100">
-            {/* v0環境での画像最適化エラーを完全に回避するため、ネイティブのimgタグを使用 */}
-            <img
-              src="/fv-coaching.jpg"
-              alt="佐藤塾 塾長とのオンライン1on1指導風景"
-              className="absolute inset-0 w-full h-full object-cover object-center scale-[1.15]"
-            />
+  <Image
+  src="/fv-coaching.jpg"
+  alt="佐藤塾 塾長とのオンライン1on1指導風景"
+  fill
+  sizes="(max-width: 768px) 100vw, 896px"
+  className="object-cover object-center scale-[1.15]"
+  />
           </div>
           <p className="mt-6 text-[#666666] text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             全国どこからでも受講可能。塾長と顔を突き合わせ、AIには指摘できない「あなた独自の強み」を1on1で徹底的に言語化します。
@@ -521,10 +523,10 @@ export default function HomeClient() {
                 「もともと文章を書くのが苦手」「すごい実績なんてない」。SFC合格者の8割は、皆さんと同じ不安を抱えてスタートしました。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                エリートしか受からないという誤解を捨ててください。<br />正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
+                エリートしか受からないとい���誤解を捨ててください。<br />正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の実力」を引き出します。
+                6年間で39名の逆転合格を生み出したノウハウで��あなたの「本当の実力」を引き出します。
               </p>
               <p className="text-lg text-foreground mb-10 leading-relaxed">
                 <strong className="text-primary border-b-2 border-accent">私が直接、あなたと並走することを約束します。</strong>
@@ -1031,7 +1033,7 @@ export default function HomeClient() {
       {/* Six Reasons Section */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle>佐藤塾が選ばれる6つの理由</SectionTitle>
+          <SectionTitle>佐藤塾が選��れる6つの理由</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
