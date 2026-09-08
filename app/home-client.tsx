@@ -259,13 +259,13 @@ export default function HomeClient() {
 
       {/* Hero Section - FOCUS ON HUMAN COACHING & REVERSE SUCCESS */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        {/* Background with navy gradient overlay - Placeholder for actual coaching image */}
-        <div className="absolute inset-0 bg-slate-200">
+        {/* Background with navy gradient overlay - CSS crop for Zoom UI */}
+        <div className="absolute inset-0 bg-slate-200 overflow-hidden">
           <Image
-            src="/fv-coaching.jpg" // 塾長がオンライン指導している実際の風景画像
+            src="/fv-coaching.jpg" // Zoom画面のスクリーンショットを設定
             alt="塾長によるオンライン指導風景"
             fill
-            className="object-cover"
+            className="object-cover object-center scale-[1.15]" // ZoomのUI部分を画面外に押し出してトリミング
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/95 via-[#002147]/85 to-[#002147]"></div>
@@ -279,15 +279,15 @@ export default function HomeClient() {
             <span className="text-sm md:text-base font-bold text-white tracking-widest">慶應SFC（総合政策・環境情報）専門塾</span>
           </div>
 
-          {/* Main Copy - Beautiful responsive line breaks and massive impact for "SFC合格。" */}
-          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.6] drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
+          {/* Main Copy - Responsive line breaks and massive impact for "SFC合格。" */}
+          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-8 font-serif tracking-wider leading-[1.6] lg:leading-[1.4] drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
             偏差値40台、<br className="sm:hidden" />実績ゼロから。<br className="hidden sm:block" />
             塾長の泥臭い1on1指導で<br className="sm:hidden" />掴む、<br className="hidden sm:block" />
-            <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-2 sm:mt-6 leading-tight">SFC合格。</span>
+            <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-2 sm:mt-6 leading-tight">SFC合格。</span>
           </h1>
 
           {/* Sub Copy */}
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300" style={{ wordBreak: 'keep-all' }}>
             合格者の8割が「小論文未経験」「実績ゼロ」からのスタートです。<br className="hidden md:block" />
             基礎の論理構成はAIで無限に反復し、SFC特有の独自性は塾長が直接1on1で引き上げる。<br className="hidden md:block" />
             2人に1人が合格する圧倒的実績で、最短距離でSFC合格へ導きます。
