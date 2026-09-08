@@ -268,7 +268,8 @@ export default function HomeClient() {
             className="object-cover object-center scale-[1.15]" // ZoomのUI部分を画面外に押し出してトリミング
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/95 via-[#002147]/85 to-[#002147]"></div>
+          {/* 修正点：グラデーションの不透明度を下げ、画像が透けて見えるように調整 */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/70 via-[#002147]/50 to-[#002147]/95"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-24 pb-12">
@@ -925,7 +926,7 @@ export default function HomeClient() {
                   <tr>
                     <td className="sticky left-0 z-20 p-3 pb-6 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">相談対応</td>
                     <td className="p-3 pb-6 bg-[#fff5f5] text-center">
-                      <p className="text-[12px] font-bold text-[#800000] leading-snug">塾長直通ライン</p>
+                      <p className="text-[12px] font-bold text-[#800000] leading-snug">塾直通ライン</p>
                     </td>
                     <td className="p-3 pb-6 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">予約制</td>
                     <td className="p-3 pb-6 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">予約制</td>
