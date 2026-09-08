@@ -374,12 +374,12 @@ export default function HomeClient() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif mb-12 tracking-wide">実際のオンライン指導風景</h2>
           
           <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-[#F8F9FA] bg-slate-100">
-            {/* Next.jsのImageコンポーネントの代わりに、確実なCSS Backgroundを使用 */}
-            <div
-              className="absolute inset-0 bg-cover bg-center scale-[1.15]"
-              style={{ backgroundImage: "url('/fv-coaching.jpg')" }}
-              role="img"
-              aria-label="佐藤塾 塾長とのオンライン1on1指導風景"
+            <Image
+              src="/fv-coaching.jpg"
+              alt="佐藤塾 塾長とのオンライン1on1指導風景"
+              fill
+              className="object-cover scale-[1.15]"
+              sizes="(max-width: 768px) 100vw, 896px"
             />
           </div>
           <p className="mt-6 text-[#666666] text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
@@ -529,7 +529,7 @@ export default function HomeClient() {
                 エリートしか受からないという誤解を捨ててください。<br/>正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の実力」を引き出します。
+                6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の��力」を引き出します。
               </p>
               <p className="text-lg text-foreground mb-10 leading-relaxed">
                 <strong className="text-primary border-b-2 border-accent">私が直接、あなたと並走することを約束します。</strong>
