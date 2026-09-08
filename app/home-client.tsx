@@ -257,7 +257,7 @@ export default function HomeClient() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
 
-      {/* Hero Section - Restored original navy gradient background with native img for safety */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-slate-200">
           <Image
@@ -278,7 +278,7 @@ export default function HomeClient() {
             <span className="text-sm md:text-base font-bold text-white tracking-widest">慶應SFC（総合政策・環境情報）専門塾</span>
           </div>
 
-          {/* Main Copy - Cleaned up line breaks and optimized font size for PC */}
+          {/* Main Copy */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-relaxed drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
             偏差値40台、実績ゼロから。<br />
             塾長の泥臭い1on1指導で掴む、<br />
@@ -297,7 +297,6 @@ export default function HomeClient() {
             <div className="absolute -inset-2 bg-gradient-to-r from-[#C5A059]/30 to-[#800000]/30 blur-xl rounded-full opacity-70 animate-pulse"></div>
 
             <div className="relative flex flex-col items-center w-full">
-              {/* Unified width Badge */}
               <div className="mb-4 flex items-center justify-center gap-3 bg-[#002147]/90 border-2 border-[#C5A059]/80 px-4 py-4 rounded-full backdrop-blur-md shadow-xl w-full">
                 <span className="relative flex h-3.5 w-3.5 flex-shrink-0">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -308,7 +307,6 @@ export default function HomeClient() {
                 </p>
               </div>
               
-              {/* Unified width Button */}
               <a href="#contact-form" onClick={handleSmoothScroll} className="w-full block">
                 <Button
                   size="lg"
@@ -364,40 +362,6 @@ export default function HomeClient() {
         <div className="relative z-10 pb-8 flex flex-col items-center animate-pulse">
           <span className="text-white/60 text-xs tracking-[0.3em] mb-3 font-medium">SCROLL</span>
           <div className="w-px h-14 bg-gradient-to-b from-[#C5A059] via-white/30 to-transparent"></div>
-        </div>
-      </section>
-
-      {/* NEW: Online Coaching Scene Section - Cinematic Panorama Style */}
-      <section className="py-24 bg-slate-50 border-b border-[#E5E7EB]">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <div className="mb-10">
-            <p className="text-sm font-bold text-[#800000] tracking-widest mb-3">ONLINE 1on1 COACHING</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-wide">
-              実際のオンライン指導風景
-            </h2>
-          </div>
-          
-          {/* 
-            PCでは横長（aspect-[21/9]）にしてシネマティックに演出し、「突飛さ」を排除。
-            背景を少しなじませるために影（shadow-xl）と薄いボーダー（border-slate-200）を使用。
-          */}
-          <div className="relative w-full aspect-[4/3] sm:aspect-video md:aspect-[21/9] rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-slate-200 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            <Image
-              src="/fv-coaching.jpg"
-              alt="佐藤塾 塾長とのオンライン1on1指導風景"
-              fill
-              sizes="(max-w-768px) 100vw, 1200px"
-              className="object-cover object-center scale-[1.15]"
-            />
-            {/* Inner shadow to blend image gracefully */}
-            <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] rounded-2xl pointer-events-none"></div>
-          </div>
-
-          <p className="mt-8 text-[#333333] text-base md:text-lg max-w-3xl mx-auto leading-relaxed font-medium">
-            全国どこからでも受講可能。<br className="md:hidden" />
-            塾長と顔を突き合わせ、AIには指摘できない<br className="hidden md:block" />
-            <strong className="text-[#800000]">「あなた独自の強み」を1on1で徹底的に言語化</strong>します。
-          </p>
         </div>
       </section>
 
@@ -518,11 +482,10 @@ export default function HomeClient() {
             <div className="relative flex justify-center md:justify-start">
               {/* Principal's Profile Photo */}
               <div className="w-full max-w-[400px] aspect-[4/5] bg-slate-200 rounded-xl shadow-xl relative overflow-hidden">
-                 <Image
+                 <img
                   src="/og-image.png"
                   alt="佐藤塾 塾長 佐藤颯太"
-                  fill
-                  className="object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -554,6 +517,28 @@ export default function HomeClient() {
                 <p className="text-base text-muted-foreground mt-1">佐藤塾 塾長</p>
               </div>
             </div>
+          </div>
+
+          {/* ADDED: Online Coaching Scene embedded naturally within the message context */}
+          <div className="mt-24 pt-16 border-t border-[#E5E7EB]">
+            <div className="text-center mb-10">
+              <p className="text-sm font-bold text-[#800000] tracking-widest mb-3">ONLINE 1on1 COACHING</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif tracking-wide">
+                全国どこからでも。熱量そのままのオンライン指導
+              </h3>
+            </div>
+            
+            <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-xl overflow-hidden shadow-lg border-4 border-white bg-slate-200 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+              <img
+                src="/fv-coaching.jpg"
+                alt="佐藤塾 塾長とのオンライン1on1指導風景"
+                className="absolute inset-0 w-full h-full object-cover object-center scale-[1.15]"
+              />
+            </div>
+            
+            <p className="mt-8 text-[#666666] text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-center font-medium">
+              AIには指摘できない「あなた独自の強み」や「SFCへの適性」を、<br className="hidden md:block"/>塾長が直接、泥臭く徹底的に言語化します。
+            </p>
           </div>
         </div>
       </section>
