@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
-import Image from 'next/image'
 import { useState } from 'react'
 import { Check, ArrowRight, PenTool, Target, X } from 'lucide-react'
 import Link from 'next/link'
@@ -257,15 +256,13 @@ export default function HomeClient() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
 
-      {/* Hero Section - Restored original navy gradient background */}
+      {/* Hero Section - Restored original navy gradient background with native img for safety */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-slate-200">
-          <Image
+          <img
             src="/hero.jpg"
             alt="Keio SFC Campus"
-            fill
-            className="object-cover"
-            priority
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/95 via-[#002147]/90 to-[#002147]"></div>
         </div>
@@ -307,7 +304,7 @@ export default function HomeClient() {
                   指導密度を極限まで保つため、<br className="sm:hidden" />今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b-2 border-[#C5A059]">残り7名</span>
                 </p>
               </div>
-              
+
               {/* Unified width Button */}
               <a href="#contact-form" onClick={handleSmoothScroll} className="w-full block">
                 <Button
@@ -367,19 +364,18 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* NEW: Online Coaching Scene Section */}
+      {/* NEW: Online Coaching Scene Section - Native img used to bypass v0 image optimization bug */}
       <section className="py-20 md:py-28 bg-white border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <p className="text-sm font-bold text-[#800000] tracking-widest mb-4">ONLINE 1on1 COACHING</p>
           <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif mb-12 tracking-wide">実際のオンライン指導風景</h2>
-          
+
           <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-[#F8F9FA] bg-slate-100">
-            <Image
+            {/* v0環境での画像最適化エラーを完全に回避するため、ネイティブのimgタグを使用 */}
+            <img
               src="/fv-coaching.jpg"
               alt="佐藤塾 塾長とのオンライン1on1指導風景"
-              fill
-              className="object-cover scale-[1.15]"
-              sizes="(max-width: 768px) 100vw, 896px"
+              className="absolute inset-0 w-full h-full object-cover object-center scale-[1.15]"
             />
           </div>
           <p className="mt-6 text-[#666666] text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
@@ -503,13 +499,12 @@ export default function HomeClient() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative flex justify-center md:justify-start">
-              {/* Principal's Profile Photo */}
+              {/* Principal's Profile Photo - Native img used here as well */}
               <div className="w-full max-w-[400px] aspect-[4/5] bg-slate-200 rounded-xl shadow-xl relative overflow-hidden">
-                 <Image
+                <img
                   src="/og-image.png"
                   alt="佐藤塾 塾長 佐藤颯太"
-                  fill
-                  className="object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -520,16 +515,16 @@ export default function HomeClient() {
                 <span className="text-sm font-medium text-primary tracking-widest">MESSAGE</span>
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 font-serif tracking-[0.08em] leading-snug">
-                偏差値40台からの<br/>大逆転を、私が直接導く。
+                偏差値40台からの<br />大逆転を、私が直接導く。
               </h3>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
                 「もともと文章を書くのが苦手」「すごい実績なんてない」。SFC合格者の8割は、皆さんと同じ不安を抱えてスタートしました。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                エリートしか受からないという誤解を捨ててください。<br/>正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
+                エリートしか受からないという誤解を捨ててください。<br />正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の��力」を引き出します。
+                6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の実力」を引き出します。
               </p>
               <p className="text-lg text-foreground mb-10 leading-relaxed">
                 <strong className="text-primary border-b-2 border-accent">私が直接、あなたと並走することを約束します。</strong>
@@ -577,7 +572,7 @@ export default function HomeClient() {
                 <p className="text-[#333333] leading-relaxed text-base md:text-lg mb-4 border-l-2 border-[#C5A059] pl-4">
                   提出後、まずはAIが24時間以内に「SFCの評価基準」に照らし合わせ、基礎的な論理のズレを指摘します。その上で、塾長との会話を通じて「基礎の修正」だけでなくSFCに合わせた「強み」や「アイデア」の言語化を一緒に行います。
                 </p>
-                
+
                 <AICorrectionDemo />
 
               </div>
@@ -594,7 +589,7 @@ export default function HomeClient() {
           </SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            
+
             {/* 塾長の役割を先に配置 */}
             <div className="bg-[#fff5f5] rounded-xl p-8 border-l-4 border-[#800000]">
               <div className="flex items-center gap-3 mb-6">
@@ -661,10 +656,10 @@ export default function HomeClient() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5"></div>
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
-            「自分に何ができるかわからない」<br className="md:hidden"/>と悩んでいませんか？
+            「自分に何ができるかわからない」<br className="md:hidden" />と悩んでいませんか？
           </h3>
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
-            実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「現状を正確に把握し、プロと正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block"/>まずは無料相談で、あなたの不安や現状をすべて塾長に聞かせてください。
+            実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「現状を正確に把握し、プロと正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />まずは無料相談で、あなたの不安や現状をすべて塾長に聞かせてください。
           </p>
           <a href="#contact-form" onClick={handleSmoothScroll}>
             <Button className="bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-10 py-6 h-auto text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 rounded-full group">
