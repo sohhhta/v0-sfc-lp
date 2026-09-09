@@ -406,7 +406,7 @@ export default function HomeClient() {
                   SFC専用の対策になっていない
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
-                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
+                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求め��特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
                 </p>
               </div>
             </div>
@@ -630,7 +630,10 @@ export default function HomeClient() {
       </section>
 
       {/* NEW: 究極の「サイクルUI」を表現するセクション */}
-      <section className="py-28 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB] relative overflow-hidden">
+      <section className="py-28 px-4 bg-white border-t border-[#E5E7EB] relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002147' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
+
         <div className="max-w-5xl mx-auto relative z-10">
           <SectionTitle subtitle="「オンラインだと放置されそう…」という不安は無用です。塾長とAIが、圧倒的な密度であなたに伴走します。">
             AI×塾長のハイブリッド指導。<br className="hidden md:block"/>合格を引き寄せる日々のサイクル
@@ -641,13 +644,13 @@ export default function HomeClient() {
             
             {/* 中央の画像＆バッジ */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex flex-col items-center justify-center">
-              {/* 正円にトリミング。scaleを外し、シンプルにobject-coverで中央を切り抜く */}
-              <div className="w-56 h-56 rounded-full border-[6px] border-white shadow-xl overflow-hidden relative bg-slate-100 flex items-center justify-center">
-                <img 
-                  src="/fv-coaching.jpg" 
-                  alt="佐藤塾 塾長とのオンライン1on1指導風景" 
-                  className="absolute inset-0 w-full h-full object-cover object-center" 
-                />
+              {/* 正円にトリミング。scaleやabsoluteを外し、安全なクラスのみで中央を切り抜く */}
+  <div className="w-44 h-44 lg:w-52 lg:h-52 rounded-full border-[6px] border-white shadow-xl overflow-hidden bg-slate-100">
+  <img
+  src="/fv-coaching.jpg"
+  alt="佐藤塾 塾長とのオンライン1on1指導風景"
+  className="block w-full h-full object-cover object-center"
+  />
               </div>
               {/* 中央バッジ */}
               <div className="mt-[-16px] bg-[#C5A059] text-[#002147] px-5 py-2 rounded-full font-bold shadow-lg flex items-center gap-2 z-40 tracking-widest text-sm">
@@ -659,7 +662,7 @@ export default function HomeClient() {
             {/* サイクルUI (2x2 グリッド) */}
             <div className="grid grid-cols-2 gap-x-24 gap-y-16 relative z-10">
                {/* 01 左上 */}
-               <div className="bg-white rounded-2xl p-8 border border-[#E5E7EB] shadow-md flex flex-col justify-center relative hover:-translate-y-1 transition-transform">
+               <div className="bg-[#F8F9FA] rounded-2xl p-8 border border-[#E5E7EB] shadow-md flex flex-col justify-center relative hover:-translate-y-1 transition-transform">
                   <div className="flex items-center gap-4 mb-5">
                     <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0">01</div>
                     <h3 className="text-xl font-bold text-[#002147]">いつでもLINEで提出</h3>
@@ -668,7 +671,7 @@ export default function HomeClient() {
                </div>
 
                {/* 02 右上 */}
-               <div className="bg-white rounded-2xl p-8 border border-[#E5E7EB] shadow-md flex flex-col justify-center relative hover:-translate-y-1 transition-transform">
+               <div className="bg-[#F8F9FA] rounded-2xl p-8 border border-[#E5E7EB] shadow-md flex flex-col justify-center relative hover:-translate-y-1 transition-transform">
                   <div className="flex items-center gap-4 mb-5">
                     <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0">02</div>
                     <h3 className="text-xl font-bold text-[#002147]">AIを活用した塾長の高速添削</h3>
@@ -677,7 +680,7 @@ export default function HomeClient() {
                </div>
 
                {/* 04 左下 (HTML上は3番目に書くことで左下に配置) */}
-               <div className="bg-white rounded-2xl p-8 border border-[#E5E7EB] shadow-md flex flex-col justify-center relative hover:-translate-y-1 transition-transform">
+               <div className="bg-[#F8F9FA] rounded-2xl p-8 border border-[#E5E7EB] shadow-md flex flex-col justify-center relative hover:-translate-y-1 transition-transform">
                   <div className="flex items-center gap-4 mb-5">
                     <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0">04</div>
                     <h3 className="text-xl font-bold text-[#002147]">塾長直通ラインで軌道修正</h3>
@@ -697,9 +700,9 @@ export default function HomeClient() {
             
             {/* 矢印アイコンの絶対配置（サイクル感の演出） */}
             <ArrowRight className="absolute top-[20%] left-1/2 -translate-x-1/2 w-8 h-8 text-[#C5A059] opacity-60 z-0" />
-            <ArrowDown className="absolute top-1/2 right-[8%] -translate-y-1/2 w-8 h-8 text-[#C5A059] opacity-60 z-0" />
+            <ArrowDown className="absolute top-1/2 right-[5%] -translate-y-1/2 w-8 h-8 text-[#C5A059] opacity-60 z-0" />
             <ArrowLeft className="absolute bottom-[20%] left-1/2 -translate-x-1/2 w-8 h-8 text-[#C5A059] opacity-60 z-0" />
-            <ArrowUp className="absolute top-1/2 left-[8%] -translate-y-1/2 w-8 h-8 text-[#C5A059] opacity-60 z-0" />
+            <ArrowUp className="absolute top-1/2 left-[5%] -translate-y-1/2 w-8 h-8 text-[#C5A059] opacity-60 z-0" />
           </div>
 
           {/* スマホ版：縦型タイムライン */}
@@ -741,9 +744,13 @@ export default function HomeClient() {
                   基礎が整った答案をもとに、週1回の面談を実施。「なぜそう考えたの？」と塾長が直接問いかけ、あなただけの強みを限界まで引き出します。
                 </p>
               </div>
-              {/* スマホ版もインライン画像を配置。トリミング崩れを防ぐためscaleを排除 */}
-              <div className="relative w-full aspect-video bg-slate-100 overflow-hidden border-t border-[#800000]/10">
-                <img src="/fv-coaching.jpg" alt="指導風景" className="absolute inset-0 w-full h-full object-cover object-center" />
+              {/* スマホのみ、カード下部にインラインで画像を綺麗に配置 */}
+  <div className="w-full aspect-video bg-slate-100 overflow-hidden border-t border-[#800000]/10">
+  <img
+  src="/fv-coaching.jpg"
+  alt="指導風景"
+  className="block w-full h-full object-cover object-center scale-[1.15]"
+  />
               </div>
             </div>
 
@@ -1000,7 +1007,7 @@ export default function HomeClient() {
                     <p className="text-lg font-bold text-[#800000]">月額 11.8万円〜</p>
                     <p className="text-xs text-[#800000] mt-1 font-semibold">※講習費・教材費 0円</p>
                   </td>
-                  <td className="p-6 text-center bg-white text-[#666666]">年間 150万円〜<br /><span className="text-xs">（講習は別料金）</span></td>
+                  <td className="p-6 text-center bg-white text-[#666666]">年間 150万円〜<br /><span className="text-xs">（講習は別料���）</span></td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">年間 100万円〜<br /><span className="text-xs">（講習は別料金）</span></td>
                 </tr>
 
@@ -1468,7 +1475,7 @@ export default function HomeClient() {
                       disabled={isLoading}
                       className="w-full bg-[#800000] hover:bg-[#C5A059] text-white h-16 text-lg font-bold shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed rounded-full group"
                     >
-                      {isLoading ? '送信中...' : '今すぐ無料で個別相談を予約する'}
+                      {isLoading ? '送��中...' : '今すぐ無料で個別相談を予約する'}
                       {!isLoading && <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />}
                     </Button>
                     <p className="text-xs text-center text-[#666666] mt-4 font-bold tracking-wider">
@@ -1507,7 +1514,7 @@ export default function HomeClient() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                はい、全く問題ありません。本塾のシステムは<strong>スマートフォン1台</strong>で全ての添削・指導が完結するように設計されています。PCの有無が合否に影響することはありませんのでご安心ください。
+                はい、全く問題ありません。本塾のシステ���は<strong>スマートフォン1台</strong>で全ての添削・指導が完結するように設計されています。PCの有無が合否に影響することはありませんのでご安心ください。
               </div>
             </details>
 
