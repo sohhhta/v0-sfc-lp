@@ -406,7 +406,7 @@ export default function HomeClient() {
                   SFC専用の対策になっていない
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
-                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求め��特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
+                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求め���特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
                 </p>
               </div>
             </div>
@@ -648,8 +648,8 @@ export default function HomeClient() {
   <div className="w-44 h-44 lg:w-52 lg:h-52 rounded-full border-[6px] border-white shadow-xl overflow-hidden bg-slate-100">
   <img
   src="/fv-coaching.jpg"
-  alt="佐藤塾 塾長とのオンライン1on1指導風景"
-  className="block w-full h-full object-cover object-center"
+  alt="佐藤��� 塾長とのオンライン1on1指導風景"
+  className="w-full h-full object-cover object-center"
   />
               </div>
               {/* 中央バッジ */}
@@ -749,7 +749,7 @@ export default function HomeClient() {
   <img
   src="/fv-coaching.jpg"
   alt="指導風景"
-  className="block w-full h-full object-cover object-center scale-[1.15]"
+  className="w-full h-full object-cover object-center"
   />
               </div>
             </div>
@@ -1375,7 +1375,7 @@ export default function HomeClient() {
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#002147] mb-4 font-serif">送信が完了しました！</h3>
+                  <h3 className="text-2xl font-bold text-[#002147] mb-4 font-serif">送信が完了しま���た！</h3>
                   <p className="text-[#333333] leading-relaxed mb-6 text-lg">
                     お申し込みいただきありがとうございます。<br />
                     担当者より24時間以内にご連絡いたします。
