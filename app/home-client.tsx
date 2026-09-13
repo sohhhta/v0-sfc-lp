@@ -525,7 +525,7 @@ export default function HomeClient() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <SectionTitle subtitle="「オンラインだと放置されそう…」という不安は無用です。塾長とAIが、圧倒的な密度であなたに伴走します。">
-            AI×塾長のハイブリッド指導。<br className="hidden md:block"/>合格を引き寄せる日々のサイクル
+            小規模塾だから実現する塾長の手厚い指導。<br className="hidden md:block"/>合格に導く佐藤塾メソッド
           </SectionTitle>
 
           {/* PC版：3x3 グリッドによる絶対に崩れない（被らない）サイクルUI */}
