@@ -602,8 +602,8 @@ export default function HomeClient() {
                 </p>
               </div>
               {/* スマホ版もインライン画像を配置 */}
-              <div className="w-full aspect-video bg-slate-100 overflow-hidden border-t border-[#800000]/10 flex items-center justify-center">
-                <img src="/fv-coaching.jpg" alt="指導風景" className="w-full h-full object-cover object-center" />
+<div className="mx-4 aspect-video bg-slate-100 overflow-hidden border border-[#800000]/10 rounded-xl flex items-center justify-center">
+  <img src="/fv-coaching.jpg" alt="指導風景" className="w-full h-full object-cover object-center" />
               </div>
             </div>
 
@@ -1413,7 +1413,7 @@ export default function HomeClient() {
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className="w-full bg-[#800000] hover:bg-[#C5A059] text-white h-16 text-lg font-bold shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed rounded-full group"
+                      className="w-full max-w-full bg-[#800000] hover:bg-[#C5A059] text-white min-h-14 h-auto px-4 py-4 text-sm sm:text-base md:text-lg font-bold leading-snug whitespace-normal shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed rounded-full group"
                     >
                       {isLoading ? '送信中...' : '今すぐ無料で個別相談を予約する'}
                       {!isLoading && <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />}
