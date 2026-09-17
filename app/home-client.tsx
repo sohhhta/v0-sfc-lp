@@ -760,7 +760,7 @@ export default function HomeClient() {
               <div className="absolute top-16 left-[10%] right-[10%] h-1.5 bg-gradient-to-r from-[#002147] via-[#800000] to-[#C5A059] rounded-full" />
 
               <div className="grid grid-cols-3 gap-10">
-                {/* STEP 01: 8月 */}
+                {/* STEP 01: 9月〜10月 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
                     <div className="w-16 h-16 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-xl font-serif shadow-lg z-10 border-4 border-[#F9F9F9]">
