@@ -801,7 +801,7 @@ export default function HomeClient() {
                       慶應経済学部の過去問を通じて<br />実践能力を培う
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      出願後、息つく間もなく小論文と面接対策を並走させます。ここで面接に振り切らず、一般入試でも通用する<strong className="text-[#800000]">「書く力」</strong>を培うことがSFC合格の最大の鍵となります。
+                      基本を培った後に、慶應SFCの過去問の前に慶應経済の過去問に取り組みます。ここでは時間の制約なども行い<strong className="text-[#800000]">実践能力</strong>を培います。これがSFC過去問へ着手する前の準備となります。
                     </p>
                   </div>
                 </div>
