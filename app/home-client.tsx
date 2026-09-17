@@ -300,7 +300,7 @@ export default function HomeClient() {
                   <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500"></span>
                 </span>
                 <p className="text-white text-sm sm:text-base font-bold tracking-wider leading-snug text-center">
-                  指導密度を極限まで保つため、<br className="sm:hidden" />今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b-2 border-[#C5A059]">残り7名</span>
+                  指導密度を極限まで保つため、<br className="sm:hidden" />今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b-2 border-[#C5A059]">残り5名</span>
                 </p>
               </div>
 
@@ -432,7 +432,7 @@ export default function HomeClient() {
               <div className="md:hidden relative border-l-4 border-[#002147] pl-5">
                 <div className="text-xs font-bold text-[#C5A059] tracking-[0.2em] mb-1">原因 02</div>
                 <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
-                  添���の回数が少なすぎる
+                  添削の回数が少なすぎる
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
                   大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低さ」が受験生の成長を止めてしまいます。
@@ -623,9 +623,9 @@ export default function HomeClient() {
             {/* Mobile Cycle Loop Indicator */}
             <div className="flex flex-col items-center mt-12 pt-8 animate-pulse relative z-10">
               <RefreshCcw className="w-10 h-10 text-[#C5A059] mb-3" />
-              <p className="text-[#002147] font-bold text-lg tracking-widest text-center">
-                合格まで、このサイクルを<br /><span className="text-[#800000] border-b-2 border-[#800000]">圧倒的密度で反復</span>
-              </p>
+<p className="text-[#002147] font-bold text-base sm:text-lg tracking-wide sm:tracking-widest text-center text-balance leading-relaxed">
+  合格まで、このサイクルを <span className="text-[#800000] border-b-2 border-[#800000]">圧倒的密度で反復</span>
+  </p>
             </div>
           </div>
         </div>
@@ -1202,7 +1202,7 @@ export default function HomeClient() {
 
             <div className="relative flex flex-col bg-white shadow-md border-2 border-[#E5E7EB] rounded-xl overflow-hidden">
               <div className="bg-[#F3F4F6] text-[#333333] px-6 py-6 border-b border-[#E5E7EB]">
-                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">他塾併願者に推奨<br />小論文特化���ラン</h4>
+                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">他塾併願者に推奨<br />小論文特化プラン</h4>
               </div>
 
               <div className="flex-1 flex flex-col p-6 md:p-8">
@@ -1302,7 +1302,7 @@ export default function HomeClient() {
       {/* Contact Form Section */}
       <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-20">
         <div className="max-w-2xl mx-auto">
-          <SectionTitle subtitle="「自分の実績や文章力で本当に受かるのか」――その不安、まずはすべて私にぶつけてください。一人ひとりの指導密度を極限まで保つため、今年度の新規受付は残り7名となっております。">
+          <SectionTitle subtitle="「自分の実績や文章力で本当に受かるのか」――その不安、まずはすべて私にぶつけてください。一人ひとりの指導密度を極限まで保つため、今年度の新規受付は残り5名となっております。">
             30秒で申し込み！個別相談を予約する
           </SectionTitle>
 
@@ -1370,7 +1370,7 @@ export default function HomeClient() {
 
                   <div>
                     <label className="block text-sm font-semibold text-foreground mb-3">
-                      電���番号 <span className="text-[#800000]">*</span>
+                      電話番号 <span className="text-[#800000]">*</span>
                     </label>
                     <Input
                       placeholder="09012345678"
