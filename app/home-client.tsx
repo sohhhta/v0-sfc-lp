@@ -40,28 +40,28 @@ function AICorrectionDemo() {
 
   return (
     <div className="bg-white border-2 border-[#002147]/10 rounded-xl overflow-hidden shadow-sm mt-6">
-      <div className="grid grid-cols-2 border-b border-[#E5E7EB] bg-[#F8F9FA] md:flex md:overflow-x-auto hide-scrollbar">
+      <div className="grid grid-cols-2 border-b border-[#E5E7EB] bg-[#F8F9FA] md:grid-cols-4 hide-scrollbar">
         <button
           onClick={() => setStep(1)}
-          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 ${step === 1 ? 'bg-[#475569] text-white' : 'text-[#666666] hover:bg-[#475569]/5'}`}
+          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 md:flex-1 ${step === 1 ? 'bg-[#475569] text-white' : 'text-[#666666] hover:bg-[#475569]/5'}`}
         >
           1. 生徒の答案提出
         </button>
         <button
           onClick={() => setStep(2)}
-          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 ${step === 2 ? 'bg-[#002147] text-white' : 'text-[#666666] hover:bg-[#002147]/5'}`}
+          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 md:flex-1 ${step === 2 ? 'bg-[#002147] text-white' : 'text-[#666666] hover:bg-[#002147]/5'}`}
         >
           2. AIの1次スクリーニング
         </button>
         <button
           onClick={() => setStep(3)}
-          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 ${step === 3 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
+          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 md:flex-1 ${step === 3 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
         >
           3. 塾長の直接添削
         </button>
         <button
           onClick={() => setStep(4)}
-          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 ${step === 4 ? 'bg-[#C5A059] text-white' : 'text-[#666666] hover:bg-[#C5A059]/5'}`}
+          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 md:flex-1 ${step === 4 ? 'bg-[#C5A059] text-white' : 'text-[#666666] hover:bg-[#C5A059]/5'}`}
         >
           4. 修正後の答案
         </button>
@@ -988,7 +988,7 @@ export default function HomeClient() {
                   <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">対策範囲</td>
                     <td className="p-3 bg-[#fff5f5] text-center">
-                      <p className="text-[12px] font-bold text-[#800000] leading-snug">AO・一般二刀流</p>
+                      <p className="text-[12px] font-bold text-[#800000] leading-snug">AO・一��二刀流</p>
                     </td>
                     <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">AOのみ</td>
                     <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">一般のみ</td>
