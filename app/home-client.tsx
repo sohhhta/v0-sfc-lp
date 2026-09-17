@@ -19,7 +19,7 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
         <div className="w-2 h-2 bg-[#002147] rotate-45" />
         <div className="h-px w-16 bg-[#002147]" />
       </div>
-      <h3 className="text-3xl md:text-4xl font-bold text-primary font-serif tracking-[0.08em] leading-snug">
+      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary font-serif tracking-[0.04em] md:tracking-[0.08em] leading-snug text-balance">
         {children}
       </h3>
       {subtitle && (
@@ -43,25 +43,25 @@ function AICorrectionDemo() {
       <div className="grid grid-cols-2 border-b border-[#E5E7EB] bg-[#F8F9FA] md:flex md:overflow-x-auto hide-scrollbar">
         <button
           onClick={() => setStep(1)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-0 px-2 md:px-4 ${step === 1 ? 'bg-[#475569] text-white' : 'text-[#666666] hover:bg-[#475569]/5'}`}
+          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 ${step === 1 ? 'bg-[#475569] text-white' : 'text-[#666666] hover:bg-[#475569]/5'}`}
         >
           1. 生徒の答案提出
         </button>
         <button
           onClick={() => setStep(2)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-0 px-2 md:px-4 ${step === 2 ? 'bg-[#002147] text-white' : 'text-[#666666] hover:bg-[#002147]/5'}`}
+          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 ${step === 2 ? 'bg-[#002147] text-white' : 'text-[#666666] hover:bg-[#002147]/5'}`}
         >
           2. AIの1次スクリーニング
         </button>
         <button
           onClick={() => setStep(3)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-0 px-2 md:px-4 ${step === 3 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
+          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 ${step === 3 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
         >
           3. 塾長の直接添削
         </button>
         <button
           onClick={() => setStep(4)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-0 px-2 md:px-4 ${step === 4 ? 'bg-[#C5A059] text-white' : 'text-[#666666] hover:bg-[#C5A059]/5'}`}
+          className={`flex min-h-16 h-full items-center justify-center text-center leading-snug py-3 px-2 md:py-4 md:px-4 text-sm font-bold transition-colors min-w-0 ${step === 4 ? 'bg-[#C5A059] text-white' : 'text-[#666666] hover:bg-[#C5A059]/5'}`}
         >
           4. 修正後の答案
         </button>
@@ -624,7 +624,7 @@ export default function HomeClient() {
             <div className="flex flex-col items-center mt-12 pt-8 animate-pulse relative z-10">
               <RefreshCcw className="w-10 h-10 text-[#C5A059] mb-3" />
               <p className="text-[#002147] font-bold text-lg tracking-widest text-center">
-                合格ま���、このサイクルを<br /><span className="text-[#800000] border-b-2 border-[#800000]">圧倒的密度で反復</span>
+                合格まで、このサイクルを<br /><span className="text-[#800000] border-b-2 border-[#800000]">圧倒的密度で反復</span>
               </p>
             </div>
           </div>
@@ -1098,7 +1098,7 @@ export default function HomeClient() {
       {/* Six Reasons Section */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle>佐藤塾が選���れる6つの理由</SectionTitle>
+          <SectionTitle>佐藤塾が選ばれる6つの理由</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -1321,7 +1321,7 @@ export default function HomeClient() {
                     担当者より24時間以内にご連絡いたします。
                   </p>
                   <p className="text-sm text-[#666666]">
-                    ※メールが届かない場合は、迷惑メールフォルダをご確認��ださい。
+                    ※メールが届かない場合は、迷惑メールフォルダをご確認ください。
                   </p>
                 </div>
               ) : (
