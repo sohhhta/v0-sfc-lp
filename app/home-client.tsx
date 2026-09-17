@@ -40,28 +40,28 @@ function AICorrectionDemo() {
 
   return (
     <div className="bg-white border-2 border-[#002147]/10 rounded-xl overflow-hidden shadow-sm mt-6">
-      <div className="flex border-b border-[#E5E7EB] bg-[#F8F9FA] overflow-x-auto hide-scrollbar">
+      <div className="grid grid-cols-2 border-b border-[#E5E7EB] bg-[#F8F9FA] md:flex md:overflow-x-auto hide-scrollbar">
         <button
           onClick={() => setStep(1)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 1 ? 'bg-[#475569] text-white' : 'text-[#666666] hover:bg-[#475569]/5'}`}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-0 px-2 md:px-4 ${step === 1 ? 'bg-[#475569] text-white' : 'text-[#666666] hover:bg-[#475569]/5'}`}
         >
           1. 生徒の答案提出
         </button>
         <button
           onClick={() => setStep(2)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 2 ? 'bg-[#002147] text-white' : 'text-[#666666] hover:bg-[#002147]/5'}`}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-0 px-2 md:px-4 ${step === 2 ? 'bg-[#002147] text-white' : 'text-[#666666] hover:bg-[#002147]/5'}`}
         >
           2. AIの1次スクリーニング
         </button>
         <button
           onClick={() => setStep(3)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 3 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-0 px-2 md:px-4 ${step === 3 ? 'bg-[#800000] text-white' : 'text-[#666666] hover:bg-[#800000]/5'}`}
         >
           3. 塾長の直接添削
         </button>
         <button
           onClick={() => setStep(4)}
-          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-[140px] ${step === 4 ? 'bg-[#C5A059] text-white' : 'text-[#666666] hover:bg-[#C5A059]/5'}`}
+          className={`flex-1 py-4 px-4 text-sm font-bold transition-colors min-w-0 px-2 md:px-4 ${step === 4 ? 'bg-[#C5A059] text-white' : 'text-[#666666] hover:bg-[#C5A059]/5'}`}
         >
           4. 修正後の答案
         </button>
@@ -624,7 +624,7 @@ export default function HomeClient() {
             <div className="flex flex-col items-center mt-12 pt-8 animate-pulse relative z-10">
               <RefreshCcw className="w-10 h-10 text-[#C5A059] mb-3" />
               <p className="text-[#002147] font-bold text-lg tracking-widest text-center">
-                合格まで、このサイクルを<br /><span className="text-[#800000] border-b-2 border-[#800000]">圧倒的密度で反復</span>
+                合格ま���、このサイクルを<br /><span className="text-[#800000] border-b-2 border-[#800000]">圧倒的密度で反復</span>
               </p>
             </div>
           </div>
@@ -729,7 +729,7 @@ export default function HomeClient() {
             実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「現状を正確に把握し、プロと正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />まずは無料相談で、あなたの不安や現状をすべて塾長に聞かせてください。
           </p>
           <a href="#contact-form" onClick={handleSmoothScroll}>
-            <Button className="bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-10 py-6 h-auto text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 rounded-full group">
+            <Button className="w-full max-w-full bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-4 md:px-10 py-6 h-auto text-base md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 rounded-full group whitespace-normal">
               <span className="flex items-center gap-2">
                 まずは無料で塾長に相談する
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -1036,7 +1036,7 @@ export default function HomeClient() {
             慶應SFC合格に必要な「問いを立てる力」を、AIと塾長がどう鍛えるか。合格メソッドの全貌を公開しています。
           </p>
           <Link href="/guide/essay">
-            <Button className="bg-[#002147] hover:bg-[#800000] text-white font-bold px-10 py-6 h-auto text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+            <Button className="w-full max-w-full bg-[#002147] hover:bg-[#800000] text-white font-bold px-4 md:px-10 py-6 h-auto text-sm md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl whitespace-normal">
               小論文学習メソッドの詳細説明はこちら
             </Button>
           </Link>
