@@ -849,10 +849,10 @@ export default function HomeClient() {
                     <span className="text-xs font-bold text-[#002147] tracking-wider">9月〜10月</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
-                    出願書類の急ピッチでの完成
+                    小論文の基本のきを培う
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    受験生のヒアリングを基に佐藤塾が素案を作成。AIの事前チェックで論理破綻をなくし、塾長1on1で<strong className="text-[#800000]">「独自性」</strong>を極限まで引き上げます。
+                    200文字程度の要約や自分の意見に関する小論文を作成してもらいます。その後、AIの事前チェックを活用して論理破綻をなくし、塾長と共にSFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。これを頻度高く行います。
                   </p>
                 </div>
               </div>
@@ -864,14 +864,14 @@ export default function HomeClient() {
                 </div>
                 <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#800000]">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">小論文×面接</span>
+                    <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">塾長(×AI)</span>
                     <span className="text-xs font-bold text-[#800000] tracking-wider">11月</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
-                    出願完了と「二刀流」の本格始動
+                    慶應経済学部の過去問を通じて実践能力を培う
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    出願後、息つく間もなく小論文と面接対策を並走。一般入試でも通用する<strong className="text-[#800000]">「書く力」</strong>を培うことがSFC合格の鍵となります。
+                    基本を培った後に、慶應SFCの過去問の前に慶應経済の過去問に取り組みます。ここでは時間の制約なども行い<strong className="text-[#800000]">実践能力</strong>を培います。これがSFC過去問へ着手する前の準備となります。
                   </p>
                 </div>
               </div>
@@ -883,14 +883,14 @@ export default function HomeClient() {
                 </div>
                 <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#C5A059]">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="bg-[#C5A059]/20 text-[#002147] text-xs font-bold px-2 py-1 rounded">二刀流で合格へ</span>
+                    <span className="bg-[#C5A059]/20 text-[#002147] text-xs font-bold px-2 py-1 rounded">塾長主体</span>
                     <span className="text-xs font-bold text-[#C5A059] tracking-wider">12月〜入試</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
-                    面接本番と一般入試への完全接続
+                    塾長とともに合格レベルに仕上げていく
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    10月のAO2次面接に挑むと同時に一般対策を並走。<strong className="text-[#800000]">二刀流</strong>の準備がもたらす精神的余裕で合格を確実なものにします。
+                    およそ3ヶ月間は慶應SFCの過去問演習を行います。同じ問題でも複数の答案を作成し、特定の分野に偏らない<strong className="text-[#800000]">柔軟性</strong>を培っていきます。いかなる状況でも合格圏内に入ることを目指します。
                   </p>
                 </div>
               </div>
@@ -1321,7 +1321,7 @@ export default function HomeClient() {
                     担当者より24時間以内にご連絡いたします。
                   </p>
                   <p className="text-sm text-[#666666]">
-                    ※メールが届かない場合は、迷惑メールフォルダをご確認ください。
+                    ※メールが届かない場合は、迷惑メールフォルダをご確認��ださい。
                   </p>
                 </div>
               ) : (
