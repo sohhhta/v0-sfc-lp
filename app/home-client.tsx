@@ -798,7 +798,7 @@ export default function HomeClient() {
                       塾長(×AI)
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
-                      出願完了と<br />「二刀流」の本格始動
+                      慶應経済学部の過去問を通じて<br />実践能力を培う
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
                       出願後、息つく間もなく小論文と面接対策を並走させます。ここで面接に振り切らず、一般入試でも通用する<strong className="text-[#800000]">「書く力」</strong>を培うことがSFC合格の最大の鍵となります。
@@ -818,7 +818,7 @@ export default function HomeClient() {
                   </div>
                   <div className="bg-white rounded-xl p-6 shadow-md border-t-4 border-[#C5A059] hover:shadow-xl transition-shadow relative">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#C5A059] text-[#002147] text-xs font-bold px-3 py-1 rounded shadow-sm">
-                      二刀流で合格へ
+                      塾長主体
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
                       面接本番と<br />一般入試への完全接続
