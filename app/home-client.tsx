@@ -276,9 +276,9 @@ export default function HomeClient() {
           </div>
 
           {/* Main Copy */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wider leading-relaxed drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-normal sm:tracking-wider leading-tight sm:leading-relaxed text-balance drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
             偏差値40台、実績ゼロから。<br />
-            塾長の泥臭い1on1指導で掴む、<br />
+            塾長の泥臭い1on1指導で<span className="sm:hidden"><br /></span><span className="hidden sm:inline"> </span>掴む、<br />
             <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-4 leading-tight">SFC合格。</span>
           </h1>
 
@@ -432,7 +432,7 @@ export default function HomeClient() {
               <div className="md:hidden relative border-l-4 border-[#002147] pl-5">
                 <div className="text-xs font-bold text-[#C5A059] tracking-[0.2em] mb-1">原因 02</div>
                 <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
-                  添削の回数が少なすぎる
+                  添���の回数が少なすぎる
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
                   大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低さ」が受験生の成長を止めてしまいます。
@@ -1202,7 +1202,7 @@ export default function HomeClient() {
 
             <div className="relative flex flex-col bg-white shadow-md border-2 border-[#E5E7EB] rounded-xl overflow-hidden">
               <div className="bg-[#F3F4F6] text-[#333333] px-6 py-6 border-b border-[#E5E7EB]">
-                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">他塾併願者に推奨<br />小論文特化プラン</h4>
+                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">他塾併願者に推奨<br />小論文特化���ラン</h4>
               </div>
 
               <div className="flex-1 flex flex-col p-6 md:p-8">
@@ -1370,7 +1370,7 @@ export default function HomeClient() {
 
                   <div>
                     <label className="block text-sm font-semibold text-foreground mb-3">
-                      電話番号 <span className="text-[#800000]">*</span>
+                      電���番号 <span className="text-[#800000]">*</span>
                     </label>
                     <Input
                       placeholder="09012345678"
