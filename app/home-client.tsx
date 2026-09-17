@@ -483,7 +483,7 @@ export default function HomeClient() {
           </SectionTitle>
 
           {/* PC版：3x3 グリッドによる絶対に崩れない（被らない）サイクルUI */}
-          <div className="relative mt-16 hidden md:grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-x-4 lg:gap-x-10 gap-y-6 lg:gap-y-8 items-stretch max-w-6xl mx-auto">
+          <div className="relative mt-16 hidden md:grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-x-2 lg:gap-x-6 gap-y-6 lg:gap-y-8 items-stretch max-w-6xl mx-auto">
 
             {/* --- 1段目 --- */}
             {/* 01 左上 */}
@@ -516,7 +516,7 @@ export default function HomeClient() {
             </div>
 
             {/* 中央：四角い画像＆バッジ（サイズ拡大） */}
-            <div className="flex flex-col items-center justify-center w-[280px] lg:w-[460px] mx-auto py-2">
+            <div className="flex flex-col items-center justify-center w-[240px] lg:w-[380px] mx-auto py-2">
               <div className="w-full aspect-video rounded-xl border-4 border-white shadow-xl overflow-hidden relative bg-slate-100 flex items-center justify-center mb-4">
                 <img
                   src="/fv-coaching.jpg"
@@ -1461,7 +1461,7 @@ export default function HomeClient() {
             <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
               <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
                 <span className="font-semibold text-[#002147]">
-                  なぜ50%という驚異的な合格率を実現できるのですか？
+                  なぜ50%という驚異的な合格率を実現できるの���すか？
                 </span>
                 <span className="transition-transform group-open:rotate-180">
                   <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
