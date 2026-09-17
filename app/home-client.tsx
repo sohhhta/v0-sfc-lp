@@ -748,7 +748,7 @@ export default function HomeClient() {
               合格までのロードマップ
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              いつ、何をして合格を掴むか。SFC合格への最短の道筋を可視化します。
+              いつ、何をして合格を掴むか。個人差はありますが、今からの学習ロードマップとしては下記の通りです。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -767,7 +767,7 @@ export default function HomeClient() {
                       01
                     </div>
                     <div className="mt-4 flex items-center gap-2 bg-[#002147]/10 px-4 py-1.5 rounded-full">
-                      <span className="text-sm font-bold text-[#002147] tracking-wider">8月</span>
+                      <span className="text-sm font-bold text-[#002147] tracking-wider">9月〜10月</span>
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-6 shadow-md border-t-4 border-[#002147] hover:shadow-xl transition-shadow relative">
@@ -775,27 +775,27 @@ export default function HomeClient() {
                       塾長×AI
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
-                      出願書類の<br />急ピッチでの完成
+                      小論文の基本のきを<br />急ピッチで培う
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      受験生のヒアリングを基に佐藤塾が志望理由書等の素案を作成します。その後、AIの事前チェックを活用して論理破綻をなくし、塾長と共にSFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。
+                      200文字程度の要約や自分の意見に関する小論文を作成してもらいます。その後、AIの事前チェックを活用して論理破綻をなくし、塾長と共にSFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。これを頻度高く行います。
                     </p>
                   </div>
                 </div>
 
-                {/* STEP 02: 9月〜10月 */}
+                {/* STEP 02: 11月 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
                     <div className="w-16 h-16 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-xl font-serif shadow-lg z-10 border-4 border-[#F9F9F9]">
                       02
                     </div>
                     <div className="mt-4 flex items-center gap-2 bg-[#800000]/10 px-4 py-1.5 rounded-full">
-                      <span className="text-sm font-bold text-[#800000] tracking-wider">9月〜10月</span>
+                      <span className="text-sm font-bold text-[#800000] tracking-wider">11月</span>
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-6 shadow-md border-t-4 border-[#800000] hover:shadow-xl transition-shadow relative">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#800000] text-white text-xs font-bold px-3 py-1 rounded shadow-sm">
-                      小論文×面接
+                      塾長(×AI)
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
                       出願完了と<br />「二刀流」の本格始動
@@ -806,14 +806,14 @@ export default function HomeClient() {
                   </div>
                 </div>
 
-                {/* STEP 03: 11月〜入試 */}
+                {/* STEP 03: 12月〜入試 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
                     <div className="w-16 h-16 rounded-full bg-[#C5A059] text-white flex items-center justify-center font-bold text-xl font-serif shadow-lg z-10 border-4 border-[#F9F9F9]">
                       03
                     </div>
                     <div className="mt-4 flex items-center gap-2 bg-[#C5A059]/20 px-4 py-1.5 rounded-full">
-                      <span className="text-sm font-bold text-[#002147] tracking-wider">11月〜入試</span>
+                      <span className="text-sm font-bold text-[#002147] tracking-wider">12月〜入試</span>
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-6 shadow-md border-t-4 border-[#C5A059] hover:shadow-xl transition-shadow relative">
@@ -838,7 +838,7 @@ export default function HomeClient() {
               {/* Vertical Timeline Line */}
               <div className="absolute left-10 top-4 bottom-10 w-1 bg-gradient-to-b from-[#002147] via-[#800000] to-[#C5A059] rounded-full" />
 
-              {/* STEP 01: 8月 */}
+              {/* STEP 01: 9月〜10月 */}
               <div className="relative pl-14 pb-12">
                 <div className="absolute left-0 top-2 w-10 h-10 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-base font-serif shadow-md z-10 border-[3px] border-[#F9F9F9]">
                   01
@@ -846,7 +846,7 @@ export default function HomeClient() {
                 <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#002147]">
                   <div className="flex items-center justify-between mb-3">
                     <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">塾長×AI</span>
-                    <span className="text-xs font-bold text-[#002147] tracking-wider">8月</span>
+                    <span className="text-xs font-bold text-[#002147] tracking-wider">9月〜10月</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
                     出願書類の急ピッチでの完成
@@ -857,7 +857,7 @@ export default function HomeClient() {
                 </div>
               </div>
 
-              {/* STEP 02: 9月 */}
+              {/* STEP 02: 11月 */}
               <div className="relative pl-14 pb-12">
                 <div className="absolute left-0 top-2 w-10 h-10 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-base font-serif shadow-md z-10 border-[3px] border-[#F9F9F9]">
                   02
@@ -865,7 +865,7 @@ export default function HomeClient() {
                 <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#800000]">
                   <div className="flex items-center justify-between mb-3">
                     <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">小論文×面接</span>
-                    <span className="text-xs font-bold text-[#800000] tracking-wider">9月〜10月</span>
+                    <span className="text-xs font-bold text-[#800000] tracking-wider">11月</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
                     出願完了と「二刀流」の本格始動
@@ -876,7 +876,7 @@ export default function HomeClient() {
                 </div>
               </div>
 
-              {/* STEP 03: 10月〜 */}
+              {/* STEP 03: 12月〜 */}
               <div className="relative pl-14 pb-4">
                 <div className="absolute left-0 top-2 w-10 h-10 rounded-full bg-[#C5A059] text-white flex items-center justify-center font-bold text-base font-serif shadow-md z-10 border-[3px] border-[#F9F9F9]">
                   03
@@ -884,7 +884,7 @@ export default function HomeClient() {
                 <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#C5A059]">
                   <div className="flex items-center justify-between mb-3">
                     <span className="bg-[#C5A059]/20 text-[#002147] text-xs font-bold px-2 py-1 rounded">二刀流で合格へ</span>
-                    <span className="text-xs font-bold text-[#C5A059] tracking-wider">11月〜入試</span>
+                    <span className="text-xs font-bold text-[#C5A059] tracking-wider">12月〜入試</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
                     面接本番と一般入試への完全接続
