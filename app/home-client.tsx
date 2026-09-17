@@ -483,7 +483,7 @@ export default function HomeClient() {
           </SectionTitle>
 
           {/* PC版：3x3 グリッドによる絶対に崩れない（被らない）サイクルUI */}
-          <div className="relative mt-16 hidden md:grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-x-2 lg:gap-x-6 gap-y-6 lg:gap-y-8 items-stretch max-w-6xl mx-auto">
+          <div className="relative mt-16 hidden md:grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-x-1 lg:gap-x-3 gap-y-4 lg:gap-y-6 items-stretch max-w-6xl mx-auto">
 
             {/* --- 1段目 --- */}
             {/* 01 左上 */}
@@ -516,7 +516,7 @@ export default function HomeClient() {
             </div>
 
             {/* 中央：四角い画像＆バッジ（サイズ拡大） */}
-            <div className="flex flex-col items-center justify-center w-[240px] lg:w-[380px] mx-auto py-2">
+            <div className="flex flex-col items-center justify-center w-[220px] lg:w-[340px] mx-auto py-2">
               <div className="w-full aspect-video rounded-xl border-4 border-white shadow-xl overflow-hidden relative bg-slate-100 flex items-center justify-center mb-4">
                 <img
                   src="/fv-coaching.jpg"
@@ -852,7 +852,7 @@ export default function HomeClient() {
                     小論文の基本のきを培う
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    200文字程度の要約や自分の意見に関する小論文を作成してもらいます。その後、AIの事前チェックを活用して論理破綻をなくし、塾長と共にSFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。これを頻度高く行います。
+                    200文字程度の要約や自分の意見に関する小論文を作成してもらいます。その後、AIの事前チェックを活用して論理破綻をなくし、塾長と共にSFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。こ���を頻度高く行います。
                   </p>
                 </div>
               </div>
@@ -1461,7 +1461,7 @@ export default function HomeClient() {
             <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
               <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
                 <span className="font-semibold text-[#002147]">
-                  なぜ50%という驚異的な合格率を実現できるの���すか？
+                  なぜ50%という驚異的な合格率を実現できるの����すか？
                 </span>
                 <span className="transition-transform group-open:rotate-180">
                   <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
