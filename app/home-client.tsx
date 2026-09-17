@@ -821,10 +821,10 @@ export default function HomeClient() {
                       塾長主体
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
-                      面接本番と<br />一般入試への完全接続
+                      塾長とともに<br />合格レベルに仕上げていく
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      10月のAO2次面接本番に挑むと同時に、一般入試に向けた対策を並走します。AOに依存しない<strong className="text-[#800000]">二刀流</strong>を活かし、いかなる状況でも合格圏内に入ることを目指します。
+                      およそ3ヶ月間は慶應SFCの過去問演習を行います。同じ問題でも複数の答案を作成し、特定の分野に偏らない<strong className="text-[#800000]">柔軟性</strong>を培っていきます。いかなる状況でも合格圏内に入ることを目指します。
                     </p>
                   </div>
                 </div>
