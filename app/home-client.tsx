@@ -472,52 +472,6 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Instructor Message Section */}
-      <section className="py-24 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB]">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative flex justify-center md:justify-start">
-              {/* Principal's Profile Photo */}
-              <div className="w-full max-w-[400px] aspect-[4/5] bg-slate-200 rounded-xl shadow-xl relative overflow-hidden">
-                <img
-                  src="/og-image.png"
-                  alt="佐藤塾 塾長 佐藤颯太"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            <div>
-              <div className="flex items-center gap-4 mb-8">
-                <div className="h-px w-12 bg-[#002147]" />
-                <span className="text-sm font-medium text-primary tracking-widest">MESSAGE</span>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 font-serif tracking-[0.08em] leading-snug">
-                偏差値40台からの<br />大逆転を、私が直接導く。
-              </h3>
-              <p className="text-lg text-foreground mb-6 leading-relaxed">
-                「もともと文章を書くのが苦手」「すごい実績なんてない」。SFC合格者の8割は、皆さんと同じ不安を抱えてスタートしました。
-              </p>
-              <p className="text-lg text-foreground mb-6 leading-relaxed">
-                エリートしか受からないという誤解を捨ててください。<br />正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
-              </p>
-              <p className="text-lg text-foreground mb-6 leading-relaxed">
-                6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の実力」を引き出します。
-              </p>
-              <p className="text-lg text-foreground mb-10 leading-relaxed">
-                <strong className="text-primary border-b-2 border-accent">私が直接、あなたと並走することを約束します。</strong>
-              </p>
-              <div className="border-l-4 border-accent pl-6">
-                <p className="text-xl font-bold text-secondary font-serif tracking-wide">
-                  総合政策学部卒業生 佐藤颯太
-                </p>
-                <p className="text-base text-muted-foreground mt-1">佐藤塾 塾長</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* RE-DESIGNED: Daily Coaching Cycle (3x3 Grid Timeline UI for PC - Dense & Optimized) */}
       <section className="py-28 px-4 bg-white border-t border-[#E5E7EB] relative overflow-hidden">
         {/* Subtle background pattern */}
@@ -672,6 +626,52 @@ export default function HomeClient() {
               <p className="text-[#002147] font-bold text-lg tracking-widest text-center">
                 合格まで、このサイクルを<br /><span className="text-[#800000] border-b-2 border-[#800000]">圧倒的密度で反復</span>
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Instructor Message Section */}
+      <section className="py-24 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB]">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="relative flex justify-center md:justify-start">
+              {/* Principal's Profile Photo */}
+              <div className="w-full max-w-[400px] aspect-[4/5] bg-slate-200 rounded-xl shadow-xl relative overflow-hidden">
+                <img
+                  src="/og-image.png"
+                  alt="佐藤塾 塾長 佐藤颯太"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="h-px w-12 bg-[#002147]" />
+                <span className="text-sm font-medium text-primary tracking-widest">MESSAGE</span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 font-serif tracking-[0.08em] leading-snug">
+                偏差値40台からの<br />大逆転を、私が直接導く。
+              </h3>
+              <p className="text-lg text-foreground mb-6 leading-relaxed">
+                「もともと文章を書くのが苦手」「すごい実績なんてない」。SFC合格者の8割は、皆さんと同じ不安を抱えてスタートしました。
+              </p>
+              <p className="text-lg text-foreground mb-6 leading-relaxed">
+                エリートしか受からないという誤解を捨ててください。<br />正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
+              </p>
+              <p className="text-lg text-foreground mb-6 leading-relaxed">
+                6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の実力」を引き出します。
+              </p>
+              <p className="text-lg text-foreground mb-10 leading-relaxed">
+                <strong className="text-primary border-b-2 border-accent">私が直接、あなたと並走することを約束します。</strong>
+              </p>
+              <div className="border-l-4 border-accent pl-6">
+                <p className="text-xl font-bold text-secondary font-serif tracking-wide">
+                  総合政策学部卒業生 佐藤颯太
+                </p>
+                <p className="text-base text-muted-foreground mt-1">佐藤塾 塾長</p>
+              </div>
             </div>
           </div>
         </div>
