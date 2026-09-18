@@ -122,7 +122,7 @@ function AICorrectionDemo() {
                   <span className="bg-[#f0f9ff] px-3 py-2 rounded text-[#002147] font-medium border border-[#bae6fd] block mb-2">
                     「地方の医療過疎問題に対し、AI画像診断技術の導入を推進すべきだと考える。」
                   </span>
-                  こんな風に主張（Point）を書き換えて、資料から「医師の負担を示すデータ」を引用（Evidence）すれば、説得力が段違いに上がるよ！一緒にこの構成で書き直してみよう。
+                  こんな風に主張（Point）を書き換えて、資料から��医師の負担を示すデータ」を引用（Evidence）すれば、説得力が段違いに上がるよ！一緒にこの構成で書き直してみよう。
                 </p>
               </div>
             </div>
@@ -527,7 +527,7 @@ export default function HomeClient() {
               </div>
               <div className="bg-[#C5A059] text-[#002147] px-5 lg:px-8 py-2.5 rounded-full font-bold shadow-md flex items-center gap-2 tracking-widest text-sm lg:text-base whitespace-nowrap">
                 <RefreshCcw className="w-4 h-4 lg:w-5 lg:h-5 animate-spin-slow" />
-                添削は毎日のように行います
+                圧倒的密度で反復
               </div>
             </div>
 
@@ -617,7 +617,7 @@ export default function HomeClient() {
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0">04</div>
                 <h3 className="text-lg font-bold text-[#002147]">塾長直通ラインで軌道修正</h3>
               </div>
-              <p className="text-[#333333] text-sm leading-relaxed">面談後、次の課題を進める中で迷ったらいつでも塾長のLINEに相談可能。小さな不安や相談をその日のうちに解消します。</p>
+              <p className="text-[#333333] text-sm leading-relaxed">面談後、���の課題を進める中で迷ったらいつでも塾長のLINEに相談可能。小さな不安や相談をその日のうちに解消します。</p>
             </div>
 
             {/* Mobile Cycle Loop Indicator */}
@@ -852,7 +852,7 @@ export default function HomeClient() {
                     小論文の基本のきを培う
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    200文字程度の要約や自分の意見に関する小論文を作成してもらいます。その後、AIの事前チェックを活用して論理破綻をなくし、塾長と共にSFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。これを頻度高く行います。
+                    200文字程度の要約や自分の意見に関する小論文を作成してもらいます。その後、AIの事前チェックを活用して論理破綻をなくし、塾長と共にSFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。こ���を頻度高く行います。
                   </p>
                 </div>
               </div>
@@ -1461,7 +1461,7 @@ export default function HomeClient() {
             <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
               <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
                 <span className="font-semibold text-[#002147]">
-                  なぜ50%という驚異的な合格率を実現できるのですか？
+                  なぜ50%という驚異的な合格率を実現できるので��か？
                 </span>
                 <span className="transition-transform group-open:rotate-180">
                   <svg className="w-5 h-5 text-[#002147]" viewBox="0 0 20 20" fill="currentColor">
