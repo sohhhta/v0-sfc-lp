@@ -176,8 +176,8 @@ export default function HomeClient() {
           {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
             合格者の8割が「小論文未経験」「実績ゼロ」からのスタートです。<br className="hidden md:block" />
-            無機質なマニュアルやシステムではなく、塾長が直接1on1であなたの本音を引き上げる。<br className="hidden md:block" />
-            2人に1人が合格する圧倒的実績で、最短距離でSFC合格へ導きます。
+            マニュアルやシステムに頼るのではなく、塾長があなた一人ひとりと向き合い、本音を引き出します。<br className="hidden md:block" />
+            2人に1人が合格する圧倒的な実績で、最短距離でSFC合格へ導きます。
           </p>
 
           {/* Enhanced CTA Area */}
@@ -287,7 +287,7 @@ export default function HomeClient() {
                     SFC専用の対策になっていない
                   </h3>
                   <p className="text-[#333333] leading-loose text-lg">
-                    学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
+                    学校や普通の塾が教えるのは、どの大学でも使え���「一般的な書き方」です。しかし、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
                   </p>
                 </div>
               </div>
@@ -297,7 +297,7 @@ export default function HomeClient() {
                   SFC専用の対策になっていない
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
-                  学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
+                  学校や普通の塾で教わるのは、どの大学にも使える「一般的な書き方」です。しかしSFCは、自分ならではの視点や考え方を求める特殊な入試のため、ありきたりな回答では合格点に届きません。
                 </p>
               </div>
             </div>
@@ -316,7 +316,7 @@ export default function HomeClient() {
                     添削の回数が少なすぎる
                   </h3>
                   <p className="text-[#333333] leading-loose text-lg">
-                    大手塾や学校は添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低さ」が受験生の成長を止めてしまいます。
+                    大手塾や学校では、添削が返ってくるまでに1週間ほどかかり、回数にも制限（月4回〜最大12回など）があります。合格には数多くの試行錯誤が欠かせませんが、この「待ち時間」と「回数の少なさ」が成長のスピードを止めてしまいます。
                   </p>
                 </div>
               </div>
@@ -326,7 +326,7 @@ export default function HomeClient() {
                   添削の回数が少なすぎる
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
-                  大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低さ」が受験生の成長を止めてしまいます。
+                  大手塾では、添削が返ってくるまでに1週間ほどかかり、回数にも制限（月4回〜最大12回など）があります。合格には数多くの試行錯誤が欠かせませんが、この「待ち時間」と「回数の少なさ」が成長のスピードを止めてしまいます。
                 </p>
               </div>
             </div>
@@ -345,7 +345,7 @@ export default function HomeClient() {
                     AO入試と一般入試の「共倒れ」
                   </h3>
                   <p className="text-[#333333] leading-loose text-lg">
-                    AO入試の準備で一般入試の対策がおろそかになり、一般入試に絞れば、AO入試というSFCへの挑戦機会が少なくなってしまう。一人では抱えきれない学習計画が、合格を遠ざけます。
+                    AO入試の対策に力を入れれば一般入試の勉強が手薄になり、一般入試に絞ればAO入試という挑戦の機会を失ってしまう。この両立を一人で考えるのは難しく、計画の甘さが合格を遠ざけます。
                   </p>
                 </div>
               </div>
@@ -355,7 +355,7 @@ export default function HomeClient() {
                   AO入試と一般入試の「共倒れ」
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
-                  AO入試の準備で一般入試の対策がおろそかになり、一般入試に絞れば、AO入試というSFCへの挑戦機会が少なくなってしまう。一人では抱えきれない学習計画が、合格を遠ざけます。
+                  AO入試の対策に力を入れれば一般入試の勉強が手薄になり、一般入試に絞ればAO入試という挑戦の機会を失ってしまう。この両立を一人で考えるのは難しく、計画の甘さが合格を遠ざけます。
                 </p>
               </div>
             </div>
@@ -390,7 +390,7 @@ export default function HomeClient() {
                 「もともと文章を書くのが苦手」「すごい実績なんてない」。SFC合格者の8割は、皆さんと同じ不安を抱えてスタートしました。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                エリートしか受からないという誤解を捨ててください。<br />正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
+                「エリートしか受からない」というのは誤解です。<br />正しい戦略を立て、一つひとつ地道に積み重ねていけば、大逆転は十分に可能です。
               </p>
               <p className="text-lg text-foreground mb-6 leading-relaxed">
                 6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の実力」を引き出します。
@@ -415,7 +415,7 @@ export default function HomeClient() {
         <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002147' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <SectionTitle subtitle="「私でもできるのかな」や「私でも間に合うのかな」という不安を塾長が伴走し解決します。">
+          <SectionTitle subtitle="「自分にもできるのかな」「今からで間に合うのかな」――そんな不安一つひとつに、塾長が一緒に向き合い、解決していきます。">
             小規模塾だから実現する塾長の手厚い指導。<br className="hidden md:block" />合格に導く佐藤塾メソッド
           </SectionTitle>
 
@@ -443,7 +443,7 @@ export default function HomeClient() {
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0 text-sm lg:text-base">02</div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight">塾長による超高速・直接添削</h3>
               </div>
-              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">提出後、すべての答案に塾長が直接目を通し、思考のクセを徹底解剖。<strong className="text-[#800000]">24時間以内の超高速フィードバック</strong>で、SFC特有の論理構成を叩き込みます。</p>
+              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">提出後、すべての答案に塾長が直接目を通し、あなたの考え方の癖を丁寧に見抜きます。<strong className="text-[#800000]">24時間以内の超高速フィードバック</strong>で、SFC特有の論理構成を一緒に身につけていきます。</p>
             </div>
 
             {/* --- 2段目 --- */}
@@ -480,7 +480,7 @@ export default function HomeClient() {
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0 text-sm lg:text-base">04</div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight">塾長直通ラインで軌道修正</h3>
               </div>
-              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談後、次の課題を進める中で迷ったらいつでも塾長直通のLINEで相談可能。小さな不安をその日のうちに解消し、迷いなく勉強に集中させます。</p>
+              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談後、次の課題を進める中で迷うことがあれば、いつでも塾長直通のLINEで相談できます。小さな不安もその日のうちに解消し、迷いなく勉強に集中できます。</p>
             </div>
 
             {/* 矢印 03 -> 04 */}
@@ -494,7 +494,7 @@ export default function HomeClient() {
                 <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0 text-sm lg:text-base">03</div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-tight">塾長との1on1オンライン指導</h3>
               </div>
-              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談を実施し、直近の総括を共有。小論文やAOだけではなく、他の教科の学習計画の策定なども行います。</p>
+              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談では直近の振り返りを共有します。小論文やAO対策だけでなく、他の教科の学習計画づくりもサポートします。</p>
             </div>
 
           </div>
@@ -520,7 +520,7 @@ export default function HomeClient() {
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0">02</div>
                 <h3 className="text-lg font-bold text-[#002147]">塾長による超高速・直接添削</h3>
               </div>
-              <p className="text-[#333333] text-sm leading-relaxed">提出後、すべての答案に塾長が直接目を通し、思考のクセを徹底解剖。<strong className="text-[#800000]">24時間以内の超高速フィードバック</strong>で、SFC特有の論理構成を叩き込みます。</p>
+              <p className="text-[#333333] text-sm leading-relaxed">提出後、すべての答案に塾長が直接目を通し、あなたの考え方の癖を丁寧に見抜きます。<strong className="text-[#800000]">24時間以内の超高速フィードバック</strong>で、SFC特有の論理構成を一緒に身につけていきます。</p>
             </div>
 
             <div className="flex justify-center -my-2 relative z-0">
@@ -535,7 +535,7 @@ export default function HomeClient() {
                   <h3 className="text-lg font-bold text-[#800000]">塾長との1on1オンライン指導</h3>
                 </div>
                 <p className="text-[#333333] text-sm leading-relaxed mb-4">
-                  面談を実施し、直近の総括を共有。小論文やAOだけではなく、他の教科の学習計画の策定なども行います。
+                  面談では直近の振り返りを共有します。小論文やAO対策だけでなく、他の教科の学習計画づくりもサポートします。
                 </p>
               </div>
               {/* スマホ版もインライン画像を配置 */}
@@ -554,7 +554,7 @@ export default function HomeClient() {
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0">04</div>
                 <h3 className="text-lg font-bold text-[#002147]">塾長直通ラインで軌道修正</h3>
               </div>
-              <p className="text-[#333333] text-sm leading-relaxed">面談後、次の課題を進める中で迷ったらいつでも塾長のLINEに相談可能。小さな不安や相談をその日のうちに解消します。</p>
+              <p className="text-[#333333] text-sm leading-relaxed">面談後、次の課題を進める中で迷うことがあれば、いつでも塾長直通のLINEで相談できます。小さな不安もその日のうちに解消し、迷いなく勉強に集中できます。</p>
             </div>
 
             {/* Mobile Cycle Loop Indicator */}
@@ -633,7 +633,7 @@ export default function HomeClient() {
             「自分に何ができるかわからない」<br className="md:hidden" />と悩んでいませんか？
           </h3>
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
-            実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「現状を正確に把握し、プロと正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />まずは無料相談で、あなたの不安や現状をすべて塾長に聞かせてください。
+            実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「今の自分を正しく知り、プロと一緒に戦略を立てること」</strong>から始まります。<br className="hidden md:block" />まずは無料相談で、あなたの不安や今の状況をすべて塾長に聞かせてください。
           </p>
           <a href="#contact-form" onClick={handleSmoothScroll}>
             <Button className="w-full max-w-full bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-4 md:px-10 py-6 h-auto text-base md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 rounded-full group whitespace-normal">
@@ -685,7 +685,7 @@ export default function HomeClient() {
                       小論文の基本のきを<br />急ピッチで培う
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      200文字程度の要約や自分の意見に関する小論文を作成してもらいます。その後、塾長が直接添削を通じて論理破綻をなくし、SFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。これを頻度高く行います。
+                      まずは200文字程度の要約や、自分の意見をまとめる小論文を書いてもらいます。それを塾長が直接添削し、論理の矛盾をなくしながら、SFCならではの<strong className="text-[#800000]">「独自性」</strong>を高めていきます。これを何度も繰り返します。
                     </p>
                   </div>
                 </div>
@@ -708,7 +708,7 @@ export default function HomeClient() {
                       慶應経済学部の過去問を通じて<br />実践能力を培う
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      基本を培った後に、慶應SFCの過去問の前に慶應経済の過去問に取り組みます。ここでは時間の制約なども行い<strong className="text-[#800000]">実践能力</strong>を培います。これがSFC過去問へ着手する前の準備となります。
+                      基礎が身についたら、SFCの過去問に入る前に慶應経済の過去問に取り組みます。時間を計るなど本番に近い形で練習し、<strong className="text-[#800000]">実践力</strong>を鍛えます。これがSFCの過去問演習に向けた準備になります。
                     </p>
                   </div>
                 </div>
@@ -731,7 +731,7 @@ export default function HomeClient() {
                       塾長とともに<br />合格レベルに仕上げていく
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
-                      およそ3ヶ月間は慶應SFCの過去問演習を行います。同じ問題でも複数の答案を作成し、特定の分野に偏らない<strong className="text-[#800000]">柔軟性</strong>を培っていきます。いかなる状況でも合格圏内に入ることを目指します。
+                      残り約3ヶ月は、慶應SFCの過去問演習に取り組みます。同じ問題でも複数の答案を作り、どんな出題にも対応できる<strong className="text-[#800000]">柔軟性</strong>を身につけていきます。目指すのは、どんな状況でも合格圏内に入れる実力です。
                     </p>
                   </div>
                 </div>
@@ -759,7 +759,7 @@ export default function HomeClient() {
                     小論文の基本のきを培う
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    200文字程度の要約や自分の意見に関する小論文を作成してもらいます。その後、塾長が直接添削を通じて論理破綻をなくし、SFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。これを頻度高く行います。
+                    まずは200文字程度の要約や、自分の意見をまとめる小論文を書いてもらいます。それを塾長が直接添削し、論理の矛盾をなくしながら、SFCならではの<strong className="text-[#800000]">「独自性」</strong>を高めていきます。これを何度も繰り返します。
                   </p>
                 </div>
               </div>
@@ -778,7 +778,7 @@ export default function HomeClient() {
                     慶應経済学部の過去問を通じて実践能力を培う
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    基本を培った後に、慶應SFCの過去問の前に慶應経済の過去問に取り組みます。ここでは時間の制約なども行い<strong className="text-[#800000]">実践能力</strong>を培います。これがSFC過去問へ着手する前の準備となります。
+                    基礎が身についたら、SFCの過去問に入る前に慶應経済の過去問に取り組みます。時間を計るなど本番に近い形で練習し、<strong className="text-[#800000]">実践力</strong>を鍛えます。これがSFCの過去問演習に向けた準備になります。
                   </p>
                 </div>
               </div>
@@ -797,7 +797,7 @@ export default function HomeClient() {
                     塾長とともに合格レベルに仕上げていく
                   </h3>
                   <p className="text-sm text-[#333333] leading-relaxed">
-                    およそ3ヶ月間は慶應SFCの過去問演習を行います。同じ問題でも複数の答案を作成し、特定の分野に偏らない<strong className="text-[#800000]">柔軟性</strong>を培っていきます。いかなる状況でも合格圏内に入ることを目指します。
+                    残り約3ヶ月は、慶應SFCの過去問演習に取り組みます。同じ問題でも複数の答案を作り、どんな出題にも対応できる<strong className="text-[#800000]">柔軟性</strong>を身につけていきます。目指すのは、どんな状況でも合格圏内に入れる実力です。
                   </p>
                 </div>
               </div>
@@ -815,7 +815,7 @@ export default function HomeClient() {
               佐藤塾と他塾の比較表
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-3xl mx-auto">
-              佐藤塾は授業料の透明性と、圧倒的な指導密度を担保しています。
+              佐藤塾は、授業料のわかりやすさと、圧倒的な指導密度を大切にしています。
             </p>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -1144,7 +1144,7 @@ export default function HomeClient() {
             佐藤塾の小論文指導とは
           </h2>
           <p className="text-base md:text-lg text-[#333333] leading-relaxed mb-10 max-w-2xl mx-auto">
-            慶應SFC合格に必要な「問いを立てる力」を、AIと塾長がどう鍛えるか。合格メソッドの全貌を公開しています。
+            慶應SFC合格に欠かせない「問いを立てる力」を、塾長がどのように鍛えているか。合格メソッドの全貌を公開しています。
           </p>
           <Link href="/guide/essay">
             <Button className="w-full max-w-full bg-[#002147] hover:bg-[#800000] text-white font-bold px-4 md:px-10 py-6 h-auto text-sm md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl whitespace-normal">
@@ -1162,7 +1162,7 @@ export default function HomeClient() {
               SFC合格のための完全対策ガイド
             </h2>
             <p className="text-blue-100 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              佐藤塾が培ってきた「小論文」と「AO入試」の攻略メソッドをすべて公開しています。無料ですのでぜひご覧ください。
+              佐藤塾が積み重ねてきた「小論文」と「AO入試」の攻略メソッドを、すべて無料で公開しています。ぜひ読んでみてください。
             </p>
           </div>
 
@@ -1176,7 +1176,7 @@ export default function HomeClient() {
                   小論文 対策ガイド
                 </h3>
                 <p className="text-[#333333] mb-8 leading-relaxed flex-1">
-                  「何を書けばいいかわからない」から脱却し、SFC教授を唸らせる論理構成の型と資料読解の極意を解説します。
+                  「何を書けばいいかわからない」を抜け出して、SFCの教授をうなずかせる文章の組み立て方と、資料の読み解き方をわかりやすく解説します。
                 </p>
                 <div className="flex items-center text-[#C5A059] font-bold mt-auto">
                   <span>記事一覧を見る</span>
@@ -1194,7 +1194,7 @@ export default function HomeClient() {
                   AO入試 対策ガイド
                 </h3>
                 <p className="text-[#333333] mb-8 leading-relaxed flex-1">
-                  「すごい実績」がなくても勝てる。自分だけの研究テーマの探し方から志望理由書、ポートフォリオ作成まで完全解説。
+                  目立つ実績がなくても大丈夫。自分だけの研究テーマの見つけ方から、志望理由書やポートフォリオの作り方まで、一つひとつ丁寧に解説します。
                 </p>
                 <div className="flex items-center text-[#C5A059] font-bold mt-auto">
                   <span>ガイドを見る</span>
@@ -1361,7 +1361,7 @@ export default function HomeClient() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                はい、全く問題ありません。本塾のシステムは<strong>スマートフォン1台</strong>で全ての添削・指導が完結するように設計されています。PCの有無が合否に影響することはありませんのでご安心ください。
+                はい、まったく問題ありません。佐藤塾は<strong>スマートフォン1台</strong>だけで、添削も指導もすべて完結するように作られています。パソコンを持っているかどうかは合否に関係しませんので、安心して始めてください。
               </div>
             </details>
 
@@ -1377,7 +1377,7 @@ export default function HomeClient() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                塾長自らがすべての生徒の答案に直接目を通し、「なぜそう考えたのか？」という根本の問いに本気でぶつかるからです。表面的なテクニックではなく、SFCに受かるための「独自性」と「思考力」を泥臭く引き出すこの仕組みこそが、実績ゼロからの大逆転を生み出します。
+                塾長自身が生徒一人ひとりの答案にすべて目を通し、「なぜそう考えたのか？」という根本の問いに本気で向き合うからです。表面的なテクニックに頼らず、SFC合格に必要な「独自性」と「思考力」を地道に引き出すこの指導こそが、実績ゼロからの大逆転を生み出しています。
               </div>
             </details>
 
@@ -1393,7 +1393,7 @@ export default function HomeClient() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                入会金は入塾時に必要になります。金額は<strong>税込10万円</strong>となりますが、その後は月額料金のみのご請求となり、追加の講習料などは全くありません。他塾のように後から追加で費用が発生するなどはありませんので安心して始めていただけます。
+                入塾時に入会金として<strong>税込10万円</strong>をいただきます。それ以降は月額料金だけのお支払いで、追加の講習料などは一切かかりません。他塾のように後から追加費用が発生することもないので、安心して始めていただけます。
               </div>
             </details>
 
@@ -1409,7 +1409,7 @@ export default function HomeClient() {
                 </span>
               </summary>
               <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                はい、<strong>月単位でのプラン変更が可能</strong>です。学力進捗や状況に応じて柔軟に対応できますので、お気軽にご相談ください。
+                はい、<strong>月単位でプランを変更</strong>できます。学力の伸びや状況に合わせて柔軟に対応できますので、お気軽にご相談ください。
               </div>
             </details>
           </div>
