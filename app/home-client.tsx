@@ -160,47 +160,45 @@ export default function HomeClient() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-24 pb-12">
 
-          {/* Hook Badge */}
-          <div className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <span className="flex h-2.5 w-2.5 rounded-full bg-[#C5A059] animate-pulse"></span>
-            <span className="text-sm md:text-base font-bold text-white tracking-widest">慶應SFC（総合政策・環境情報）専門塾</span>
+          {/* Hook Badge - エディトリアル調（四角くシャープに） */}
+          <div className="inline-flex items-center justify-center gap-2 px-5 py-2 border-2 border-white/40 bg-[#002147]/50 backdrop-blur-md mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <span className="flex h-2.5 w-2.5 bg-[#C5A059] animate-pulse"></span>
+            <span className="text-sm md:text-base font-bold text-white tracking-widest font-serif">慶應SFC（総合政策・環境情報）専門塾</span>
           </div>
 
           {/* Main Copy */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-normal sm:tracking-wider leading-tight sm:leading-relaxed text-balance drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
             偏差値40台、実績ゼロから。<br />
             塾長の泥臭い1on1指導で<span className="sm:hidden"><br /></span><span className="hidden sm:inline"> </span>掴む、<br />
-            <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-4 leading-tight">SFC合格。</span>
+            <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-[#C5A059] block mt-4 leading-tight">SFC合格。</span>
           </h1>
 
           {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
             合格者の8割が「小論文未経験」「実績ゼロ」からのスタートです。<br className="hidden md:block" />
-            マニュアルやシステムに頼るのではなく、塾長があなた一人ひとりと向き合い、本音を引き出します。<br className="hidden md:block" />
+            無機質なマニュアルやシステムに頼るのではなく、塾長があなた一人ひとりと本気で向き合います。<br className="hidden md:block" />
             2人に1人が合格する圧倒的な実績で、最短距離でSFC合格へ導きます。
           </p>
 
           {/* Enhanced CTA Area */}
           <div className="mb-16 relative w-full max-w-[540px] mx-auto animate-in fade-in slide-in-from-bottom-10 duration-700 delay-500">
-            <div className="absolute -inset-2 bg-gradient-to-r from-[#C5A059]/30 to-[#800000]/30 blur-xl rounded-full opacity-70 animate-pulse"></div>
-
             <div className="relative flex flex-col items-center w-full">
-              <div className="mb-4 flex items-center justify-center gap-3 bg-[#002147]/90 border-2 border-[#C5A059]/80 px-4 py-4 rounded-full backdrop-blur-md shadow-xl w-full">
+              <div className="mb-4 flex items-center justify-center gap-3 bg-white/5 border border-[#C5A059]/80 px-4 py-4 backdrop-blur-md w-full">
                 <span className="relative flex h-3.5 w-3.5 flex-shrink-0">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex h-3.5 w-3.5 bg-red-500"></span>
                 </span>
-                <p className="text-white text-sm sm:text-base font-bold tracking-wider leading-snug text-center">
-                  指導密度を極限まで保つため、<br className="sm:hidden" />今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b-2 border-[#C5A059]">残り5名</span>
+                <p className="text-white text-sm sm:text-base font-bold tracking-wider leading-snug text-center font-serif">
+                  指導密度を極限まで保つため、<br className="sm:hidden" />今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b border-[#C5A059]">残り5名</span>
                 </p>
               </div>
 
               <a href="#contact-form" onClick={handleSmoothScroll} className="w-full block">
                 <Button
                   size="lg"
-                  className="w-full bg-[#800000] hover:bg-[#C5A059] text-white text-lg md:text-xl font-bold py-8 h-auto shadow-[0_4px_24px_rgba(128,0,0,0.6)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.5)] transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-white/50 rounded-full group"
+                  className="w-full rounded-none bg-[#800000] hover:bg-[#C5A059] text-white text-lg md:text-xl font-bold py-8 h-auto transition-all duration-300 border border-white/20 group"
                 >
-                  <span className="flex items-center justify-center gap-3">
+                  <span className="flex items-center justify-center gap-3 font-serif">
                     無料で個別相談を予約する
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                   </span>
@@ -209,38 +207,38 @@ export default function HomeClient() {
             </div>
           </div>
 
-          {/* Stats Section */}
+          {/* Stats Section - シャープな枠線デザインに */}
           <div className="max-w-4xl mx-auto w-full">
-            <div className="md:hidden flex flex-col items-center justify-center p-6 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg mb-4">
-              <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
-              <p className="text-6xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>50<span className="text-2xl">%</span></p>
-              <p className="text-sm text-[#D4AF37] mt-2 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生14名中7名が合格)</p>
+            <div className="md:hidden flex flex-col items-center justify-center p-6 border border-[#C5A059] bg-[#002147]/50 backdrop-blur-md mb-4">
+              <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase font-serif">2026年度 合格率</p>
+              <p className="text-6xl font-bold text-[#C5A059] tracking-tight font-serif">50<span className="text-2xl">%</span></p>
+              <p className="text-sm text-white/80 mt-2 font-medium">(全受験生14名中7名が合格)</p>
             </div>
 
             <div className="grid grid-cols-2 gap-4 md:hidden">
-              <div className="flex flex-col items-center justify-center p-4 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
-                <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium">2026年度 受講継続率</p>
-                <p className="text-4xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>93<span className="text-lg ml-0.5">%</span></p>
+              <div className="flex flex-col items-center justify-center p-4 border border-white/20 bg-white/5 backdrop-blur-md">
+                <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium font-serif">2026年度 受講継続率</p>
+                <p className="text-4xl font-bold text-white font-serif">93<span className="text-lg ml-0.5">%</span></p>
               </div>
-              <div className="flex flex-col items-center justify-center p-4 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
-                <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium">6年間累計</p>
-                <p className="text-4xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>39<span className="text-lg ml-0.5">名</span></p>
+              <div className="flex flex-col items-center justify-center p-4 border border-white/20 bg-white/5 backdrop-blur-md">
+                <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium font-serif">6年間累計</p>
+                <p className="text-4xl font-bold text-white font-serif">39<span className="text-lg ml-0.5">名</span></p>
               </div>
             </div>
 
-            <div className="hidden md:grid md:grid-cols-3 gap-4">
-              <div className="flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
-                <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">2026年度 受講継続率</p>
-                <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>93<span className="text-2xl ml-1">%</span></p>
+            <div className="hidden md:grid md:grid-cols-3 gap-0 border border-white/20 bg-[#002147]/50 backdrop-blur-md">
+              <div className="flex flex-col items-center justify-center p-8 border-r border-white/20">
+                <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase font-serif">2026年度 受講継続率</p>
+                <p className="text-6xl font-bold text-white font-serif">93<span className="text-2xl ml-1">%</span></p>
               </div>
-              <div className="flex flex-col items-center justify-center p-8 border-2 border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg scale-110 -my-2 relative z-20">
-                <p className="text-xs text-[#C5A059] mb-2 tracking-[0.2em] font-bold uppercase">2026年度 合格率</p>
-                <p className="text-7xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>50<span className="text-3xl">%</span></p>
-                <p className="text-sm text-[#D4AF37] mt-3 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生14名中7名が合格)</p>
+              <div className="flex flex-col items-center justify-center p-10 bg-[#800000]/80 relative z-20 border-r border-white/20">
+                <p className="text-xs text-[#C5A059] mb-2 tracking-[0.2em] font-bold uppercase font-serif">2026年度 合格率</p>
+                <p className="text-7xl font-bold text-[#C5A059] tracking-tight font-serif">50<span className="text-3xl">%</span></p>
+                <p className="text-sm text-white/90 mt-3 font-medium">(全受験生14名中7名が合格)</p>
               </div>
-              <div className="flex flex-col items-center justify-center p-6 border-2 border-[#C5A059]/40 rounded-lg bg-white/5 backdrop-blur-sm">
-                <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase">6年間累計</p>
-                <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>39<span className="text-2xl ml-1">名</span></p>
+              <div className="flex flex-col items-center justify-center p-8">
+                <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase font-serif">6年間累計</p>
+                <p className="text-6xl font-bold text-white font-serif">39<span className="text-2xl ml-1">名</span></p>
               </div>
             </div>
           </div>
@@ -248,20 +246,13 @@ export default function HomeClient() {
 
         {/* Scroll indicator */}
         <div className="relative z-10 pb-8 flex flex-col items-center animate-pulse">
-          <span className="text-white/60 text-xs tracking-[0.3em] mb-3 font-medium">SCROLL</span>
-          <div className="w-px h-14 bg-gradient-to-b from-[#C5A059] via-white/30 to-transparent"></div>
+          <span className="text-white/60 text-xs tracking-[0.3em] mb-3 font-medium font-serif">SCROLL</span>
+          <div className="w-px h-14 bg-[#C5A059]"></div>
         </div>
       </section>
 
       {/* Problem Section */}
-      <section className="relative py-28 px-4 bg-white overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: 'repeating-linear-gradient(90deg, #002147 0px, #002147 1px, transparent 1px, transparent 8px)',
-          }}
-        />
-
+      <section className="relative py-28 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
         <div className="relative max-w-4xl mx-auto">
           <div className="text-center mb-20">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
@@ -274,25 +265,25 @@ export default function HomeClient() {
 
           <div className="space-y-12 md:space-y-28">
             <div className="relative">
-              <div className="md:hidden absolute -top-2 -left-2 opacity-[0.08] pointer-events-none">
-                <span className="text-7xl font-bold text-[#800000] font-serif leading-none">01</span>
+              <div className="md:hidden absolute -top-4 -left-2 opacity-[0.05] pointer-events-none">
+                <span className="text-8xl font-bold text-[#800000] font-serif leading-none">01</span>
               </div>
               <div className="hidden md:flex gap-14">
-                <div className="flex-shrink-0 w-32">
-                  <span className="text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
-                  <span className="text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">01</span>
+                <div className="flex-shrink-0 w-32 border-r border-[#E5E7EB] pr-8 text-right">
+                  <span className="text-sm font-bold text-[#800000] tracking-[0.2em] block mb-2 font-serif">原因</span>
+                  <span className="text-6xl font-bold text-[#800000] font-serif leading-none block">01</span>
                 </div>
-                <div className="border-l-4 border-[#002147] pl-10 py-2 flex-1">
+                <div className="flex-1 pt-2">
                   <h3 className="text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
                     SFC専用の対策になっていない
                   </h3>
                   <p className="text-[#333333] leading-loose text-lg">
-                    学校や普通の塾が教えるのは、どの大学でも使える「一般的な書き方」です。しかし、SFCは独自の視点を求める特殊な入試であり、独自観点を考慮できていないありきたりな回答では、合格点には届きません。
+                    学校や普通の塾で教わるのは、どの大学にも使える「一般的な書き方」です。しかしSFCは、自分ならではの視点や考え方を求める特殊な入試のため、ありきたりな回答では合格点に届きません。
                   </p>
                 </div>
               </div>
-              <div className="md:hidden relative border-l-4 border-[#002147] pl-5">
-                <div className="text-xs font-bold text-[#C5A059] tracking-[0.2em] mb-1">原因 01</div>
+              <div className="md:hidden relative border-l-2 border-[#800000] pl-5">
+                <div className="text-xs font-bold text-[#800000] tracking-[0.2em] mb-2 font-serif">原因 01</div>
                 <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
                   SFC専用の対策になっていない
                 </h3>
@@ -303,15 +294,15 @@ export default function HomeClient() {
             </div>
 
             <div className="relative">
-              <div className="md:hidden absolute -top-2 -left-2 opacity-[0.08] pointer-events-none">
-                <span className="text-7xl font-bold text-[#800000] font-serif leading-none">02</span>
+              <div className="md:hidden absolute -top-4 -left-2 opacity-[0.05] pointer-events-none">
+                <span className="text-8xl font-bold text-[#800000] font-serif leading-none">02</span>
               </div>
               <div className="hidden md:flex gap-14">
-                <div className="flex-shrink-0 w-32">
-                  <span className="text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
-                  <span className="text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">02</span>
+                <div className="flex-shrink-0 w-32 border-r border-[#E5E7EB] pr-8 text-right">
+                  <span className="text-sm font-bold text-[#800000] tracking-[0.2em] block mb-2 font-serif">原因</span>
+                  <span className="text-6xl font-bold text-[#800000] font-serif leading-none block">02</span>
                 </div>
-                <div className="border-l-4 border-[#002147] pl-10 py-2 flex-1">
+                <div className="flex-1 pt-2">
                   <h3 className="text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
                     添削の回数が少なすぎる
                   </h3>
@@ -320,27 +311,27 @@ export default function HomeClient() {
                   </p>
                 </div>
               </div>
-              <div className="md:hidden relative border-l-4 border-[#002147] pl-5">
-                <div className="text-xs font-bold text-[#C5A059] tracking-[0.2em] mb-1">原因 02</div>
+              <div className="md:hidden relative border-l-2 border-[#800000] pl-5">
+                <div className="text-xs font-bold text-[#800000] tracking-[0.2em] mb-2 font-serif">原因 02</div>
                 <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
                   添削の回数が少なすぎる
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-base">
-                  大手塾では、添削が返ってくるまでに1週間ほどかかり、回数にも制限（月4回〜最大12回など）があります。合格には数多くの試行錯誤が欠かせませんが、この「待ち時間」と「回数の少なさ」が成長のスピードを止めてしまいます。
+                  大手塾は添削が返ってくるまで1週間かかり、回数制限（月4回〜最大12回など）もあります。合格には圧倒的な質の高い試行錯誤が必要なのに、この「待ち時間」と「頻度の低さ」が受験生の成長を止めてしまいます。
                 </p>
               </div>
             </div>
 
             <div className="relative">
-              <div className="md:hidden absolute -top-2 -left-2 opacity-[0.08] pointer-events-none">
-                <span className="text-7xl font-bold text-[#800000] font-serif leading-none">03</span>
+              <div className="md:hidden absolute -top-4 -left-2 opacity-[0.05] pointer-events-none">
+                <span className="text-8xl font-bold text-[#800000] font-serif leading-none">03</span>
               </div>
               <div className="hidden md:flex gap-14">
-                <div className="flex-shrink-0 w-32">
-                  <span className="text-4xl font-bold text-[#800000]/20 font-serif leading-tight tracking-wide block">原因</span>
-                  <span className="text-8xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">03</span>
+                <div className="flex-shrink-0 w-32 border-r border-[#E5E7EB] pr-8 text-right">
+                  <span className="text-sm font-bold text-[#800000] tracking-[0.2em] block mb-2 font-serif">原因</span>
+                  <span className="text-6xl font-bold text-[#800000] font-serif leading-none block">03</span>
                 </div>
-                <div className="border-l-4 border-[#002147] pl-10 py-2 flex-1">
+                <div className="flex-1 pt-2">
                   <h3 className="text-2xl font-bold text-[#002147] font-serif tracking-wide mb-5">
                     AO入試と一般入試の「共倒れ」
                   </h3>
@@ -349,8 +340,8 @@ export default function HomeClient() {
                   </p>
                 </div>
               </div>
-              <div className="md:hidden relative border-l-4 border-[#002147] pl-5">
-                <div className="text-xs font-bold text-[#C5A059] tracking-[0.2em] mb-1">原因 03</div>
+              <div className="md:hidden relative border-l-2 border-[#800000] pl-5">
+                <div className="text-xs font-bold text-[#800000] tracking-[0.2em] mb-2 font-serif">原因 03</div>
                 <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
                   AO入試と一般入試の「共倒れ」
                 </h3>
@@ -364,56 +355,53 @@ export default function HomeClient() {
       </section>
 
       {/* Instructor Message Section */}
-      <section className="py-24 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB]">
+      <section className="py-24 px-4 bg-white border-b border-[#E5E7EB]">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative flex justify-center md:justify-start">
-              {/* Principal's Profile Photo */}
-              <div className="w-full max-w-[400px] aspect-[4/5] bg-slate-200 rounded-xl shadow-xl relative overflow-hidden">
+              {/* Principal's Profile Photo - エディトリアル（角丸排除・枠線） */}
+              <div className="w-full max-w-[400px] aspect-[4/5] bg-slate-100 border border-slate-300 relative p-2">
                 <img
                   src="/og-image.png"
                   alt="佐藤塾 塾長 佐藤颯太"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale-[20%]"
                 />
               </div>
             </div>
 
             <div>
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-px w-12 bg-[#002147]" />
-                <span className="text-sm font-medium text-primary tracking-widest">MESSAGE</span>
+                <div className="h-px w-12 bg-[#800000]" />
+                <span className="text-sm font-medium text-[#800000] tracking-[0.2em] font-serif">MESSAGE</span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 font-serif tracking-[0.08em] leading-snug">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#002147] mb-8 font-serif tracking-[0.08em] leading-snug">
                 偏差値40台からの<br />大逆転を、私が直接導く。
               </h3>
-              <p className="text-lg text-foreground mb-6 leading-relaxed">
+              <p className="text-lg text-[#333333] mb-6 leading-relaxed font-serif">
                 「もともと文章を書くのが苦手」「すごい実績なんてない」。SFC合格者の8割は、皆さんと同じ不安を抱えてスタートしました。
               </p>
-              <p className="text-lg text-foreground mb-6 leading-relaxed">
-                「エリートしか受からない」というのは誤解です。<br />正しい戦略を立て、一つひとつ地道に積み重ねていけば、大逆転は十分に可能です。
+              <p className="text-lg text-[#333333] mb-6 leading-relaxed font-serif">
+                エリートしか受からないという誤解を捨ててください。<br />正しい戦略を立て、泥臭く地道に指導を吸収すれば、大逆転は十分に可能です。
               </p>
-              <p className="text-lg text-foreground mb-6 leading-relaxed">
+              <p className="text-lg text-[#333333] mb-8 leading-relaxed font-serif">
                 6年間で39名の逆転合格を生み出したノウハウで、あなたの「本当の実力」を引き出します。
               </p>
-              <p className="text-lg text-foreground mb-10 leading-relaxed">
-                <strong className="text-primary border-b-2 border-accent">私が直接、あなたと並走することを約束します。</strong>
+              <p className="text-xl text-[#800000] mb-10 leading-relaxed font-bold font-serif">
+                私が直接、あなたと並走することを約束します。
               </p>
-              <div className="border-l-4 border-accent pl-6">
-                <p className="text-xl font-bold text-secondary font-serif tracking-wide">
+              <div className="border-l-2 border-[#002147] pl-6 py-2">
+                <p className="text-lg font-bold text-[#002147] font-serif tracking-wide">
                   総合政策学部卒業生 佐藤颯太
                 </p>
-                <p className="text-base text-muted-foreground mt-1">佐藤塾 塾長</p>
+                <p className="text-sm text-[#666666] mt-2 font-serif">佐藤塾 塾長</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* RE-DESIGNED: Daily Coaching Cycle (脱・AI訴求。塾長の圧倒的伴走サイクルの強調) */}
-      <section className="py-28 px-4 bg-white border-t border-[#E5E7EB] relative overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002147' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
-
+      {/* RE-DESIGNED: Daily Coaching Cycle (エディトリアルデザイン) */}
+      <section className="py-28 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB] relative">
         <div className="max-w-6xl mx-auto relative z-10">
           <SectionTitle subtitle="「自分にもできるのかな」「今からで間に合うのかな」――そんな不安一つひとつに、塾長が一緒に向き合い、解決していきます。">
             小規模塾だから実現する塾長の手厚い指導。<br className="hidden md:block" />合格に導く佐藤塾メソッド
@@ -424,10 +412,10 @@ export default function HomeClient() {
 
             {/* --- 1段目 --- */}
             {/* 01 左上 */}
-            <div className="bg-[#F8F9FA] rounded-2xl p-6 lg:p-8 border border-[#E5E7EB] shadow-md flex flex-col justify-center relative hover:-translate-y-1 transition-transform h-full">
-              <div className="flex items-center gap-3 lg:gap-4 mb-4">
-                <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0 text-sm lg:text-base">01</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight">いつでも気軽にLINEで提出</h3>
+            <div className="bg-white rounded-none p-6 lg:p-8 border border-[#E5E7EB] border-t-4 border-t-[#002147] flex flex-col justify-center relative hover:bg-slate-50 transition-colors h-full">
+              <div className="flex items-center gap-3 lg:gap-4 mb-4 border-b border-[#E5E7EB] pb-4">
+                <div className="text-2xl font-bold text-[#002147] font-serif">01.</div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight font-serif">いつでも気軽にLINEで提出</h3>
               </div>
               <p className="text-[#333333] text-sm lg:text-base leading-relaxed">小論文の答案や志望理由書のドラフトが書けたら、スマホからLINEでいつでも提出。回数制限は一切ありません。</p>
             </div>
@@ -438,10 +426,10 @@ export default function HomeClient() {
             </div>
 
             {/* 02 右上 (脱AI) */}
-            <div className="bg-[#F8F9FA] rounded-2xl p-6 lg:p-8 border border-[#E5E7EB] shadow-md flex flex-col justify-center relative hover:-translate-y-1 transition-transform h-full">
-              <div className="flex items-center gap-3 lg:gap-4 mb-4">
-                <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0 text-sm lg:text-base">02</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight">塾長による超高速・直接添削</h3>
+            <div className="bg-white rounded-none p-6 lg:p-8 border border-[#E5E7EB] border-t-4 border-t-[#002147] flex flex-col justify-center relative hover:bg-slate-50 transition-colors h-full">
+              <div className="flex items-center gap-3 lg:gap-4 mb-4 border-b border-[#E5E7EB] pb-4">
+                <div className="text-2xl font-bold text-[#002147] font-serif">02.</div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight font-serif">塾長による超高速・直接添削</h3>
               </div>
               <p className="text-[#333333] text-sm lg:text-base leading-relaxed">提出後、すべての答案に塾長が直接目を通し、あなたの考え方の癖を丁寧に見抜きます。<strong className="text-[#800000]">24時間以内の超高速フィードバック</strong>で、SFC特有の論理構成を一緒に身につけていきます。</p>
             </div>
@@ -452,18 +440,17 @@ export default function HomeClient() {
               <ArrowUp className="w-8 h-8 lg:w-12 lg:h-12 text-[#C5A059] opacity-70" />
             </div>
 
-            {/* 中央：四角い画像＆バッジ */}
+            {/* 中央：四角い画像＆バッジ（エディトリアル調） */}
             <div className="flex flex-col items-center justify-center w-[220px] lg:w-[340px] mx-auto py-2">
-              <div className="w-full aspect-video rounded-xl border-4 border-white shadow-xl overflow-hidden relative bg-slate-100 flex items-center justify-center mb-4">
+              <div className="w-full aspect-video border border-slate-300 bg-white p-2 relative flex items-center justify-center mb-4">
                 <img
                   src="/fv-coaching.jpg"
                   alt="佐藤塾 塾長とのオンライン1on1指導風景"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center grayscale-[10%]"
                 />
-                <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
               </div>
-              <div className="bg-[#C5A059] text-[#002147] px-5 lg:px-8 py-2.5 rounded-full font-bold shadow-md flex items-center gap-2 tracking-widest text-sm lg:text-base whitespace-nowrap">
-                <RefreshCcw className="w-4 h-4 lg:w-5 lg:h-5 animate-spin-slow" />
+              <div className="bg-white border border-[#002147] text-[#002147] px-5 lg:px-8 py-2.5 font-bold flex items-center gap-2 tracking-[0.2em] text-sm lg:text-base whitespace-nowrap font-serif">
+                <RefreshCcw className="w-4 h-4 lg:w-5 lg:h-5" />
                 添削は毎日のように行います
               </div>
             </div>
@@ -475,10 +462,10 @@ export default function HomeClient() {
 
             {/* --- 3段目 --- */}
             {/* 04 左下 */}
-            <div className="bg-[#F8F9FA] rounded-2xl p-6 lg:p-8 border border-[#E5E7EB] shadow-md flex flex-col justify-center relative hover:-translate-y-1 transition-transform h-full">
-              <div className="flex items-center gap-3 lg:gap-4 mb-4">
-                <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0 text-sm lg:text-base">04</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight">塾長直通ラインで軌道修正</h3>
+            <div className="bg-white rounded-none p-6 lg:p-8 border border-[#E5E7EB] border-t-4 border-t-[#002147] flex flex-col justify-center relative hover:bg-slate-50 transition-colors h-full">
+              <div className="flex items-center gap-3 lg:gap-4 mb-4 border-b border-[#E5E7EB] pb-4">
+                <div className="text-2xl font-bold text-[#002147] font-serif">04.</div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight font-serif">塾長直通ラインで軌道修正</h3>
               </div>
               <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談後、次の課題を進める中で迷うことがあれば、いつでも塾長直通のLINEで相談できます。小さな不安もその日のうちに解消し、迷いなく勉強に集中できます。</p>
             </div>
@@ -489,94 +476,87 @@ export default function HomeClient() {
             </div>
 
             {/* 03 右下 */}
-            <div className="bg-[#fff5f5] rounded-2xl p-6 lg:p-8 border border-[#800000]/20 shadow-md flex flex-col justify-center relative hover:-translate-y-1 transition-transform h-full">
-              <div className="flex items-center gap-3 lg:gap-4 mb-4">
-                <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0 text-sm lg:text-base">03</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-tight">塾長との1on1オンライン指導</h3>
+            <div className="bg-white rounded-none p-6 lg:p-8 border border-[#E5E7EB] border-t-4 border-t-[#800000] flex flex-col justify-center relative hover:bg-slate-50 transition-colors h-full">
+              <div className="flex items-center gap-3 lg:gap-4 mb-4 border-b border-[#E5E7EB] pb-4">
+                <div className="text-2xl font-bold text-[#800000] font-serif">03.</div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-tight font-serif">塾長との1on1オンライン指導</h3>
               </div>
-              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談では直近の振り返りを共有します。小論文やAO対策だけでなく、他の教科の学習計画づくりもサポートします。</p>
+              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談を実施し、直近の総括を共有。小論文やAO対策だけでなく、他の教科の学習計画の策定なども行います。</p>
             </div>
 
           </div>
 
-          {/* スマホ版：縦型タイムライン */}
+          {/* スマホ版：縦型タイムライン（エディトリアル調） */}
           <div className="md:hidden relative mt-12 space-y-6 max-w-md mx-auto">
             {/* 01 */}
-            <div className="bg-white rounded-2xl p-6 border border-[#E5E7EB] shadow-sm relative z-10">
+            <div className="bg-white rounded-none p-6 border border-[#E5E7EB] border-l-4 border-l-[#002147] relative z-10">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0">01</div>
-                <h3 className="text-lg font-bold text-[#002147]">いつでもLINEで提出</h3>
+                <div className="text-xl font-bold text-[#002147] font-serif">01.</div>
+                <h3 className="text-lg font-bold text-[#002147] font-serif">いつでもLINEで提出</h3>
               </div>
               <p className="text-[#333333] text-sm leading-relaxed">小論文の答案や志望理由書のドラフトが書けたら、スマホからLINEでいつでも提出。回数制限は一切ありません。</p>
             </div>
 
             <div className="flex justify-center -my-2 relative z-0">
-              <ArrowDown className="w-6 h-6 text-[#C5A059] animate-bounce" />
+              <ArrowDown className="w-6 h-6 text-[#C5A059]" />
             </div>
 
             {/* 02 (脱AI) */}
-            <div className="bg-white rounded-2xl p-6 border border-[#E5E7EB] shadow-sm relative z-10">
+            <div className="bg-white rounded-none p-6 border border-[#E5E7EB] border-l-4 border-l-[#002147] relative z-10">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0">02</div>
-                <h3 className="text-lg font-bold text-[#002147]">塾長による超高速・直接添削</h3>
+                <div className="text-xl font-bold text-[#002147] font-serif">02.</div>
+                <h3 className="text-lg font-bold text-[#002147] font-serif">塾長による超高速・直接添削</h3>
               </div>
               <p className="text-[#333333] text-sm leading-relaxed">提出後、すべての答案に塾長が直接目を通し、あなたの考え方の癖を丁寧に見抜きます。<strong className="text-[#800000]">24時間以内の超高速フィードバック</strong>で、SFC特有の論理構成を一緒に身につけていきます。</p>
             </div>
 
             <div className="flex justify-center -my-2 relative z-0">
-              <ArrowDown className="w-6 h-6 text-[#C5A059] animate-bounce" />
+              <ArrowDown className="w-6 h-6 text-[#C5A059]" />
             </div>
 
             {/* 03 */}
-            <div className="bg-[#fff5f5] rounded-2xl border border-[#800000]/20 overflow-hidden shadow-sm relative z-10">
+            <div className="bg-white rounded-none border border-[#E5E7EB] border-l-4 border-l-[#800000] overflow-hidden relative z-10">
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0">03</div>
-                  <h3 className="text-lg font-bold text-[#800000]">塾長との1on1オンライン指導</h3>
+                  <div className="text-xl font-bold text-[#800000] font-serif">03.</div>
+                  <h3 className="text-lg font-bold text-[#800000] font-serif">塾長との1on1オンライン指導</h3>
                 </div>
                 <p className="text-[#333333] text-sm leading-relaxed mb-4">
-                  面談では直近の振り返りを共有します。小論文やAO対策だけでなく、他の教科の学習計画づくりもサポートします。
+                  面談を実施し、直近の総括を共有。小論文やAO対策だけでなく、他の教科の学習計画の策定なども行います。
                 </p>
               </div>
-              {/* スマホ版もインライン画像を配置 */}
-<div className="mx-4 aspect-video bg-slate-100 overflow-hidden border border-[#800000]/10 rounded-xl flex items-center justify-center">
-  <img src="/fv-coaching.jpg" alt="指導風景" className="w-full h-full object-cover object-center" />
+              {/* スマホ版もインライン画像を配置（四角） */}
+              <div className="mx-6 mb-6 aspect-video bg-slate-100 border border-slate-300 p-1 flex items-center justify-center">
+                <img src="/fv-coaching.jpg" alt="指導風景" className="w-full h-full object-cover object-center grayscale-[10%]" />
               </div>
             </div>
 
             <div className="flex justify-center -my-2 relative z-0">
-              <ArrowDown className="w-6 h-6 text-[#C5A059] animate-bounce" />
+              <ArrowDown className="w-6 h-6 text-[#C5A059]" />
             </div>
 
             {/* 04 */}
-            <div className="bg-white rounded-2xl p-6 border border-[#E5E7EB] shadow-sm relative z-10">
+            <div className="bg-white rounded-none p-6 border border-[#E5E7EB] border-l-4 border-l-[#002147] relative z-10">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif shadow-sm flex-shrink-0">04</div>
-                <h3 className="text-lg font-bold text-[#002147]">塾長直通ラインで軌道修正</h3>
+                <div className="text-xl font-bold text-[#002147] font-serif">04.</div>
+                <h3 className="text-lg font-bold text-[#002147] font-serif">塾長直通ラインで軌道修正</h3>
               </div>
-              <p className="text-[#333333] text-sm leading-relaxed">面談後、次の課題を進める中で迷うことがあれば、いつでも塾長直通のLINEで相談できます。小さな不安もその日のうちに解消し、迷いなく勉強に集中できます。</p>
+              <p className="text-[#333333] text-sm leading-relaxed">面談後、次の課題を進める中で迷うことがあれば、いつでも塾長のLINEに相談可能。小さな不安や相談をその日のうちに解消します。</p>
             </div>
 
             {/* Mobile Cycle Loop Indicator */}
-            <div className="flex flex-col items-center mt-12 pt-8 animate-pulse relative z-10">
-              <RefreshCcw className="w-10 h-10 text-[#C5A059] mb-3" />
-<p className="text-[#002147] font-bold text-base sm:text-lg tracking-wide sm:tracking-widest text-center text-balance leading-relaxed">
-  合格まで、このサイクルを <span className="text-[#800000] border-b-2 border-[#800000]">圧倒的密度で反復</span>
-  </p>
+            <div className="flex flex-col items-center mt-12 pt-8 relative z-10">
+              <RefreshCcw className="w-8 h-8 text-[#002147] mb-3" />
+              <p className="text-[#002147] font-bold text-base sm:text-lg tracking-wide sm:tracking-widest text-center text-balance leading-relaxed font-serif">
+                合格まで、このサイクルを <span className="text-[#800000] border-b border-[#800000]">圧倒的密度で反復</span>
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* NEW: リアルな添削ビフォーアフター Section (AIデモの代替) */}
-      <section className="relative py-28 px-4 bg-[#F9F9F9] overflow-hidden border-t border-[#E5E7EB]">
-        <div
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002147' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
-
+      {/* NEW: リアルな添削ビフォーアフター Section (エディトリアルデザイン) */}
+      <section className="relative py-28 px-4 bg-white border-b border-[#E5E7EB]">
         <div className="relative max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
@@ -591,32 +571,32 @@ export default function HomeClient() {
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
 
-          <div className="bg-white border-l-4 border-[#800000] shadow-lg rounded-r-lg overflow-hidden mt-12">
+          <div className="bg-[#FAF9F6] border border-[#E5E7EB] border-t-4 border-t-[#800000] mt-12">
             <div className="p-6 md:p-10">
-              <h3 className="text-2xl font-bold text-[#800000] font-serif mb-8 text-center md:text-left">
+              <h3 className="text-2xl font-bold text-[#800000] font-serif mb-8 text-center md:text-left border-b border-[#E5E7EB] pb-4">
                 実際の添削事例：思考の「深さ」を限界まで引き出す
               </h3>
               
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Before */}
-                <div className="bg-slate-50 p-6 md:p-8 rounded-xl border border-slate-200 relative pt-10">
-                  <span className="absolute top-0 left-0 bg-slate-500 text-white text-xs font-bold px-4 py-2 rounded-br-lg rounded-tl-xl shadow-sm">生徒の初回答案（Before）</span>
-                  <p className="text-[#666666] leading-relaxed text-sm md:text-base mt-2">
+                <div className="bg-white p-6 md:p-8 border border-slate-300 relative pt-12">
+                  <span className="absolute top-0 left-0 bg-slate-700 text-white text-xs font-bold px-4 py-2 font-serif tracking-widest">生徒の初回答案（Before）</span>
+                  <p className="text-[#666666] leading-relaxed text-sm md:text-base mt-2 font-serif">
                     「私は地域の過疎化問題に興味があります。解決のためには、IT技術を活用して遠隔地からでも医療や教育を受けられるようにするべきだと思います。」
                   </p>
                 </div>
                 
                 {/* After */}
-                <div className="bg-[#fff5f5] p-6 md:p-8 rounded-xl border border-[#800000]/20 relative pt-10">
-                  <span className="absolute top-0 left-0 bg-[#800000] text-white text-xs font-bold px-4 py-2 rounded-br-lg rounded-tl-xl shadow-sm">塾長の赤ペン添削（After）</span>
-                  <p className="text-[#333333] font-medium leading-relaxed text-sm md:text-base mt-2">
-                    「『IT技術を活用』では抽象的すぎて、SFCの教授には刺さりません。<strong className="text-[#800000] underline decoration-wavy decoration-[#800000]/50 underline-offset-4">あなたが実際に足を踏み入れたA町の事例</strong>をベースに、『高齢者が直感的に使えるUIを持った遠隔医療アプリのプロトタイプ提案』まで具体化しましょう。なぜあなたがそれをやるのか、原体験をもっと前面に出してください！」
+                <div className="bg-white p-6 md:p-8 border-2 border-[#800000] relative pt-12">
+                  <span className="absolute top-0 left-0 bg-[#800000] text-white text-xs font-bold px-4 py-2 font-serif tracking-widest">塾長の赤ペン添削（After）</span>
+                  <p className="text-[#333333] font-medium leading-relaxed text-sm md:text-base mt-2 font-serif">
+                    「『IT技術を活用』では抽象的すぎて、SFCの教授には刺さりません。<strong className="text-[#800000] border-b border-dashed border-[#800000]">あなたが実際に足を踏み入れたA町の事例</strong>をベースに、『高齢者が直感的に使えるUIを持った遠隔医療アプリのプロトタイプ提案』まで具体化しましょう。なぜあなたがそれをやるのか、原体験をもっと前面に出してください！」
                   </p>
                 </div>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-[#E5E7EB]">
-                <p className="text-[#333333] leading-relaxed text-sm md:text-base font-bold">
+              <div className="mt-8 pt-6 border-t border-slate-300">
+                <p className="text-[#333333] leading-relaxed text-sm md:text-base font-bold font-serif">
                   ※表面的なてにをはの修正はしません。「なぜSFCに行きたいのか」「社会をどう変えたいのか」という根本の問いに、塾長が本気でぶつかります。この圧倒的な熱量と対話の反復こそが、偏差値40台からSFC合格をもたらす唯一の道です。
                 </p>
               </div>
@@ -626,18 +606,17 @@ export default function HomeClient() {
       </section>
 
       {/* Intermediate CTA Section */}
-      <section className="py-20 px-4 bg-white relative overflow-hidden border-t border-[#E5E7EB]">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#002147]/5 to-[#800000]/5"></div>
+      <section className="py-20 px-4 bg-[#FAF9F6] relative overflow-hidden border-b border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
             「自分に何ができるかわからない」<br className="md:hidden" />と悩んでいませんか？
           </h3>
-          <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
+          <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed font-serif">
             実績ゼロからの大逆転は、<strong className="text-[#800000] border-b border-[#800000]">「今の自分を正しく知り、プロと一緒に戦略を立てること」</strong>から始まります。<br className="hidden md:block" />まずは無料相談で、あなたの不安や今の状況をすべて塾長に聞かせてください。
           </p>
           <a href="#contact-form" onClick={handleSmoothScroll}>
-            <Button className="w-full max-w-full bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-4 md:px-10 py-6 h-auto text-base md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 rounded-full group whitespace-normal">
-              <span className="flex items-center gap-2">
+            <Button className="w-full max-w-full rounded-none bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-4 md:px-10 py-6 h-auto text-base md:text-xl transition-all duration-300 border border-[#800000] whitespace-normal group">
+              <span className="flex items-center gap-2 font-serif">
                 まずは無料で塾長に相談する
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
@@ -646,8 +625,8 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Roadmap Section (脱AI化) */}
-      <section className="py-28 px-4 bg-[#F9F9F9] border-t border-[#E5E7EB]">
+      {/* Roadmap Section (エディトリアル化) */}
+      <section className="py-28 px-4 bg-white border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
@@ -660,28 +639,28 @@ export default function HomeClient() {
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
 
-          {/* PC版ロードマップ (Pure CSS Timeline) */}
+          {/* PC版ロードマップ */}
           <div className="hidden lg:block">
             <div className="relative pt-8">
               {/* Horizontal Timeline Line */}
-              <div className="absolute top-16 left-[10%] right-[10%] h-1.5 bg-gradient-to-r from-[#002147] via-[#800000] to-[#C5A059] rounded-full" />
+              <div className="absolute top-[2.5rem] left-[10%] right-[10%] h-px bg-[#E5E7EB]" />
 
               <div className="grid grid-cols-3 gap-10">
                 {/* STEP 01: 9月〜10月 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-xl font-serif shadow-lg z-10 border-4 border-[#F9F9F9]">
+                    <div className="w-12 h-12 bg-white border border-[#002147] text-[#002147] flex items-center justify-center font-bold text-xl font-serif z-10">
                       01
                     </div>
-                    <div className="mt-4 flex items-center gap-2 bg-[#002147]/10 px-4 py-1.5 rounded-full">
-                      <span className="text-sm font-bold text-[#002147] tracking-wider">9月〜10月</span>
+                    <div className="mt-4 flex items-center gap-2 bg-[#FAF9F6] border border-[#E5E7EB] px-6 py-2">
+                      <span className="text-sm font-bold text-[#002147] tracking-widest font-serif">9月〜10月</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-xl p-6 shadow-md border-t-4 border-[#002147] hover:shadow-xl transition-shadow relative">
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#002147] text-white text-xs font-bold px-3 py-1 rounded shadow-sm">
+                  <div className="bg-white p-6 border border-[#E5E7EB] border-t-4 border-t-[#002147] relative">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-[#002147] text-xs font-bold px-3 border border-[#002147] tracking-widest">
                       塾長の徹底伴走
                     </div>
-                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
+                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-4 leading-snug text-center border-b border-[#E5E7EB] pb-4">
                       小論文の基本のきを<br />急ピッチで培う
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
@@ -693,18 +672,18 @@ export default function HomeClient() {
                 {/* STEP 02: 11月 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-xl font-serif shadow-lg z-10 border-4 border-[#F9F9F9]">
+                    <div className="w-12 h-12 bg-white border border-[#800000] text-[#800000] flex items-center justify-center font-bold text-xl font-serif z-10">
                       02
                     </div>
-                    <div className="mt-4 flex items-center gap-2 bg-[#800000]/10 px-4 py-1.5 rounded-full">
-                      <span className="text-sm font-bold text-[#800000] tracking-wider">11月</span>
+                    <div className="mt-4 flex items-center gap-2 bg-[#FAF9F6] border border-[#E5E7EB] px-6 py-2">
+                      <span className="text-sm font-bold text-[#800000] tracking-widest font-serif">11月</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-xl p-6 shadow-md border-t-4 border-[#800000] hover:shadow-xl transition-shadow relative">
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#800000] text-white text-xs font-bold px-3 py-1 rounded shadow-sm">
+                  <div className="bg-white p-6 border border-[#E5E7EB] border-t-4 border-t-[#800000] relative">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-[#800000] text-xs font-bold px-3 border border-[#800000] tracking-widest">
                       塾長の直接指導
                     </div>
-                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
+                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-4 leading-snug text-center border-b border-[#E5E7EB] pb-4">
                       慶應経済学部の過去問を通じて<br />実践能力を培う
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
@@ -716,18 +695,18 @@ export default function HomeClient() {
                 {/* STEP 03: 12月〜入試 */}
                 <div className="relative">
                   <div className="flex flex-col items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-[#C5A059] text-white flex items-center justify-center font-bold text-xl font-serif shadow-lg z-10 border-4 border-[#F9F9F9]">
+                    <div className="w-12 h-12 bg-white border border-[#C5A059] text-[#C5A059] flex items-center justify-center font-bold text-xl font-serif z-10">
                       03
                     </div>
-                    <div className="mt-4 flex items-center gap-2 bg-[#C5A059]/20 px-4 py-1.5 rounded-full">
-                      <span className="text-sm font-bold text-[#002147] tracking-wider">12月〜入試</span>
+                    <div className="mt-4 flex items-center gap-2 bg-[#FAF9F6] border border-[#E5E7EB] px-6 py-2">
+                      <span className="text-sm font-bold text-[#002147] tracking-widest font-serif">12月〜入試</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-xl p-6 shadow-md border-t-4 border-[#C5A059] hover:shadow-xl transition-shadow relative">
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#C5A059] text-[#002147] text-xs font-bold px-3 py-1 rounded shadow-sm">
+                  <div className="bg-white p-6 border border-[#E5E7EB] border-t-4 border-t-[#C5A059] relative">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-[#002147] text-xs font-bold px-3 border border-[#C5A059] tracking-widest">
                       塾長主体
                     </div>
-                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
+                    <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-4 leading-snug text-center border-b border-[#E5E7EB] pb-4">
                       塾長とともに<br />合格レベルに仕上げていく
                     </h3>
                     <p className="text-sm text-[#333333] leading-relaxed">
@@ -739,21 +718,21 @@ export default function HomeClient() {
             </div>
           </div>
 
-          {/* スマホ版ロードマップ (Pure CSS Vertical Timeline) */}
+          {/* スマホ版ロードマップ */}
           <div className="lg:hidden mt-10">
             <div className="relative max-w-md mx-auto px-4">
               {/* Vertical Timeline Line */}
-              <div className="absolute left-10 top-4 bottom-10 w-1 bg-gradient-to-b from-[#002147] via-[#800000] to-[#C5A059] rounded-full" />
+              <div className="absolute left-[3.25rem] top-4 bottom-10 w-px bg-[#E5E7EB]" />
 
               {/* STEP 01: 9月〜10月 */}
-              <div className="relative pl-14 pb-12">
-                <div className="absolute left-0 top-2 w-10 h-10 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-base font-serif shadow-md z-10 border-[3px] border-[#F9F9F9]">
+              <div className="relative pl-16 pb-12">
+                <div className="absolute left-6 top-2 w-10 h-10 bg-white text-[#002147] border border-[#002147] flex items-center justify-center font-bold text-base font-serif z-10">
                   01
                 </div>
-                <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#002147]">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="bg-[#002147]/10 text-[#002147] text-xs font-bold px-2 py-1 rounded">塾長の徹底伴走</span>
-                    <span className="text-xs font-bold text-[#002147] tracking-wider">9月〜10月</span>
+                <div className="bg-white p-5 border border-[#E5E7EB] border-l-4 border-l-[#002147]">
+                  <div className="flex items-center justify-between mb-3 border-b border-[#E5E7EB] pb-2">
+                    <span className="text-[#002147] text-xs font-bold font-serif tracking-widest">塾長の徹底伴走</span>
+                    <span className="text-xs font-bold text-[#002147] tracking-wider font-serif">9月〜10月</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
                     小論文の基本のきを培う
@@ -765,14 +744,14 @@ export default function HomeClient() {
               </div>
 
               {/* STEP 02: 11月 */}
-              <div className="relative pl-14 pb-12">
-                <div className="absolute left-0 top-2 w-10 h-10 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-base font-serif shadow-md z-10 border-[3px] border-[#F9F9F9]">
+              <div className="relative pl-16 pb-12">
+                <div className="absolute left-6 top-2 w-10 h-10 bg-white text-[#800000] border border-[#800000] flex items-center justify-center font-bold text-base font-serif z-10">
                   02
                 </div>
-                <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#800000]">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="bg-[#800000]/10 text-[#800000] text-xs font-bold px-2 py-1 rounded">塾長の直接指導</span>
-                    <span className="text-xs font-bold text-[#800000] tracking-wider">11月</span>
+                <div className="bg-white p-5 border border-[#E5E7EB] border-l-4 border-l-[#800000]">
+                  <div className="flex items-center justify-between mb-3 border-b border-[#E5E7EB] pb-2">
+                    <span className="text-[#800000] text-xs font-bold font-serif tracking-widest">塾長の直接指導</span>
+                    <span className="text-xs font-bold text-[#800000] tracking-wider font-serif">11月</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
                     慶應経済学部の過去問を通じて実践能力を培う
@@ -784,14 +763,14 @@ export default function HomeClient() {
               </div>
 
               {/* STEP 03: 12月〜 */}
-              <div className="relative pl-14 pb-4">
-                <div className="absolute left-0 top-2 w-10 h-10 rounded-full bg-[#C5A059] text-white flex items-center justify-center font-bold text-base font-serif shadow-md z-10 border-[3px] border-[#F9F9F9]">
+              <div className="relative pl-16 pb-4">
+                <div className="absolute left-6 top-2 w-10 h-10 bg-white text-[#C5A059] border border-[#C5A059] flex items-center justify-center font-bold text-base font-serif z-10">
                   03
                 </div>
-                <div className="bg-white rounded-xl p-5 shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#C5A059]">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="bg-[#C5A059]/20 text-[#002147] text-xs font-bold px-2 py-1 rounded">塾長主体</span>
-                    <span className="text-xs font-bold text-[#C5A059] tracking-wider">12月〜入試</span>
+                <div className="bg-white p-5 border border-[#E5E7EB] border-l-4 border-l-[#C5A059]">
+                  <div className="flex items-center justify-between mb-3 border-b border-[#E5E7EB] pb-2">
+                    <span className="text-[#002147] text-xs font-bold font-serif tracking-widest">塾長主体</span>
+                    <span className="text-xs font-bold text-[#C5A059] tracking-wider font-serif">12月〜入試</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-2">
                     塾長とともに合格レベルに仕上げていく
@@ -806,8 +785,8 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Comparison Section */}
-      <section className="py-28 px-4 bg-white border-t border-[#E5E7EB]">
+      {/* Comparison Section (エディトリアル化) */}
+      <section className="py-28 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
@@ -820,13 +799,13 @@ export default function HomeClient() {
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
 
-          <div className="hidden md:block pt-6 overflow-visible rounded-lg shadow-lg">
+          <div className="hidden md:block pt-6 overflow-visible border border-slate-300 bg-white">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr>
                   <th className="p-6 text-left font-bold font-serif text-base tracking-wide bg-[#F3F4F6] text-[#333333] border-r border-[#E5E7EB]">項目</th>
-                  <th className="p-6 text-center font-bold font-serif text-base tracking-wide bg-[#800000]/95 text-white border-4 border-[#C5A059] relative">
-                    <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#C5A059] text-[#002147] text-xs font-bold px-4 py-1 rounded-full shadow-md z-20">SFC特化</span>
+                  <th className="p-6 text-center font-bold font-serif text-base tracking-wide bg-[#002147] text-white border-2 border-[#002147] relative">
+                    <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-[#002147] text-xs font-bold px-4 py-1 border border-[#002147] tracking-widest">SFC特化</span>
                     佐藤塾
                   </th>
                   <th className="p-6 text-center font-bold font-serif text-base tracking-wide bg-white text-[#333333] border-l border-r border-[#E5E7EB]">SFC特化塾</th>
@@ -836,23 +815,23 @@ export default function HomeClient() {
               <tbody>
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">小論文の添削</td>
-                  <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold">回数無制限<br /><span className="text-xs text-[#666666]">（塾長の超高速・直接添削）</span></td>
+                  <td className="p-6 text-center bg-[#F8F9FA] text-[#333333] font-bold">回数無制限<br /><span className="text-xs text-[#800000] font-normal">（塾長の超高速・直接添削）</span></td>
                   <td className="p-6 text-center bg-white text-[#666666]">週1〜4回<br /><span className="text-xs">（対面メイン）</span></td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">週1回<br /><span className="text-xs">（学生バイト中心）</span></td>
                 </tr>
 
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">対策範囲</td>
-                  <td className="p-6 text-center bg-[#800000]/5 text-[#333333] font-semibold"><span className="text-[#800000] font-bold">AO・一般 二刀流</span><br /><span className="text-xs text-[#666666]">（完全並走）</span></td>
+                  <td className="p-6 text-center bg-[#F8F9FA] text-[#333333] font-bold"><span className="text-[#800000] font-bold">AO・一般 二刀流</span><br /><span className="text-xs text-[#800000] font-normal">（完全並走）</span></td>
                   <td className="p-6 text-center bg-white text-[#666666]">AOのみ<br /><span className="text-xs">または別途料金で一般入試も対象</span></td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">一般入試のみ</td>
                 </tr>
 
                 <tr className="border-b border-[#E5E7EB]">
                   <td className="p-6 font-bold text-[#002147]">費用（年間）</td>
-                  <td className="p-6 text-center bg-[#800000]/5">
+                  <td className="p-6 text-center bg-[#F8F9FA]">
                     <p className="text-lg font-bold text-[#800000]">月額 11.8万円〜</p>
-                    <p className="text-xs text-[#800000] mt-1 font-semibold">※講習費・教材費 0円</p>
+                    <p className="text-xs text-[#800000] mt-1">※講習費・教材費 0円</p>
                   </td>
                   <td className="p-6 text-center bg-white text-[#666666]">年間 150万円〜<br /><span className="text-xs">（講習は別料金）</span></td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">年間 100万円〜<br /><span className="text-xs">（講習は別料金）</span></td>
@@ -860,9 +839,9 @@ export default function HomeClient() {
 
                 <tr>
                   <td className="p-6 font-bold text-[#002147]">質問・相談</td>
-                  <td className="p-6 text-center bg-[#800000]/5">
+                  <td className="p-6 text-center bg-[#F8F9FA]">
                     <p className="text-[#800000] font-bold">塾長直通ライン</p>
-                    <p className="text-xs text-[#666666] mt-1">24時間いつでも質問可能</p>
+                    <p className="text-xs text-[#800000] mt-1">24時間いつでも質問可能</p>
                   </td>
                   <td className="p-6 text-center bg-white text-[#666666]">予約制 / 開校時間内</td>
                   <td className="p-6 text-center bg-[#FAFAFA] text-[#666666]">予約制 / 開校時間内</td>
@@ -872,59 +851,59 @@ export default function HomeClient() {
           </div>
 
           <div className="md:hidden mt-8 pb-6 relative">
-            <div className="overflow-x-auto overflow-y-visible rounded-lg shadow-lg bg-white mt-6">
+            <div className="overflow-x-auto overflow-y-visible border border-slate-300 bg-white mt-6">
               <table className="w-full border-collapse" style={{ minWidth: '420px' }}>
                 <thead>
                   <tr>
-                    <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[13px] bg-white border-r border-[#E5E7EB]" style={{ minWidth: '90px' }}>項目</th>
-                    <th className="p-3 text-center font-bold text-white text-[12px] bg-[#800000] relative" style={{ minWidth: '80px' }}>佐藤塾</th>
-                    <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F8F8F8] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>特化塾</th>
-                    <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#F3F3F3] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>一般塾</th>
+                    <th className="sticky left-0 z-20 p-3 text-left font-bold text-[#333333] text-[13px] bg-[#F3F4F6] border-r border-[#E5E7EB]" style={{ minWidth: '90px' }}>項目</th>
+                    <th className="p-3 text-center font-bold text-white text-[12px] bg-[#002147] relative" style={{ minWidth: '80px' }}>佐藤塾</th>
+                    <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-white border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>特化塾</th>
+                    <th className="p-3 text-center font-bold text-[#555555] text-[11px] bg-[#FAFAFA] border-l border-[#E5E7EB]" style={{ minWidth: '80px' }}>一般塾</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">小論文添削</td>
-                    <td className="p-3 bg-[#fff5f5] text-center">
-                      <p className="text-[12px] font-bold text-[#800000] leading-snug">回数無制限<br /><span className="text-[10px] text-[#800000]">（塾長の直接添削）</span></p>
+                    <td className="p-3 bg-[#F8F9FA] text-center">
+                      <p className="text-[12px] font-bold text-[#800000] leading-snug">回数無制限<br /><span className="text-[10px] text-[#800000] font-normal">（塾長の直接添削）</span></p>
                     </td>
-                    <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1〜4回</td>
-                    <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1回</td>
+                    <td className="p-3 bg-white text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1〜4回</td>
+                    <td className="p-3 bg-[#FAFAFA] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">週1回</td>
                   </tr>
 
                   <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">対策範囲</td>
-                    <td className="p-3 bg-[#fff5f5] text-center">
+                    <td className="p-3 bg-[#F8F9FA] text-center">
                       <p className="text-[12px] font-bold text-[#800000] leading-snug">AO・一般二刀流</p>
                     </td>
-                    <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">AOのみ</td>
-                    <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">一般のみ</td>
+                    <td className="p-3 bg-white text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">AOのみ</td>
+                    <td className="p-3 bg-[#FAFAFA] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">一般のみ</td>
                   </tr>
 
                   <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-20 p-3 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">月額費用</td>
-                    <td className="p-3 bg-[#fff5f5] text-center">
+                    <td className="p-3 bg-[#F8F9FA] text-center">
                       <p className="text-[13px] font-bold text-[#800000]">11.8万〜</p>
-                      <p className="text-[10px] text-[#800000] font-semibold">※講習費0円</p>
+                      <p className="text-[10px] text-[#800000]">※講習費0円</p>
                     </td>
-                    <td className="p-3 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">12万〜+講習費</td>
-                    <td className="p-3 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">8万〜+講習費</td>
+                    <td className="p-3 bg-white text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">12万〜+講習費</td>
+                    <td className="p-3 bg-[#FAFAFA] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">8万〜+講習費</td>
                   </tr>
 
                   <tr>
                     <td className="sticky left-0 z-20 p-3 pb-6 font-bold text-[#002147] text-[13px] bg-white border-r border-[#E5E7EB]">相談対応</td>
-                    <td className="p-3 pb-6 bg-[#fff5f5] text-center">
+                    <td className="p-3 pb-6 bg-[#F8F9FA] text-center">
                       <p className="text-[12px] font-bold text-[#800000] leading-snug">塾長直通ライン</p>
                     </td>
-                    <td className="p-3 pb-6 bg-[#F8F8F8] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">予約制</td>
-                    <td className="p-3 pb-6 bg-[#F3F3F3] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">予約制</td>
+                    <td className="p-3 pb-6 bg-white text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">予約制</td>
+                    <td className="p-3 pb-6 bg-[#FAFAFA] text-center text-[11px] text-[#666666] border-l border-[#E5E7EB]">予約制</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
 
-          <div className="mt-10 bg-white rounded-lg border-l-4 border-[#800000] p-5 md:p-6 shadow-md">
+          <div className="mt-10 bg-white border-l-4 border-[#800000] p-5 md:p-6 border border-slate-300">
             <p className="text-sm md:text-base text-[#333333]">
               <span className="text-[#800000] font-bold">※ 佐藤塾の費用は月額 11.8万円〜。</span>
               講習費、教材費といった追加料金は一切かかりません。他塾のように「合格時には別途〇万円」といった費用も発生しません。
@@ -933,8 +912,8 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Six Reasons Section (脱AI化) */}
-      <section className="py-24 px-4 bg-white">
+      {/* Six Reasons Section (脱AI化＆エディトリアル) */}
+      <section className="py-24 px-4 bg-white border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
           <SectionTitle>佐藤塾が選ばれる6つの理由</SectionTitle>
 
@@ -947,44 +926,42 @@ export default function HomeClient() {
               { num: '05', title: 'SFC特化ロジック', desc: '6年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
               { num: '06', title: '通塾ゼロ', desc: '指導も授業もすべてオンライン。通塾時間を勉強に充てられる' },
             ].map((item) => (
-              <Card key={item.num} className="bg-white shadow-md border-t-2 border-t-primary border-x-0 border-b-0 rounded-lg hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-start gap-5">
-                    <div className="text-5xl font-bold text-accent font-serif tracking-tighter">
-                      {item.num}
-                    </div>
-                    <div className="pt-2">
-                      <CardTitle className="text-lg font-serif tracking-wide">{item.title}</CardTitle>
-                    </div>
+              <div key={item.num} className="bg-white border border-[#E5E7EB] border-t-4 border-t-[#002147] p-6 hover:bg-slate-50 transition-colors">
+                <div className="flex items-start gap-5 border-b border-[#E5E7EB] pb-4 mb-4">
+                  <div className="text-4xl font-bold text-[#C5A059] font-serif tracking-tighter">
+                    {item.num}.
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </CardContent>
-              </Card>
+                  <div className="pt-2">
+                    <h4 className="text-lg font-bold text-[#002147] font-serif tracking-wide">{item.title}</h4>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-sm text-[#333333] leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section (脱AI化) */}
-      <section className="py-28 px-4 bg-white border-t border-[#E5E7EB]">
+      {/* Pricing Section (脱AI化＆エディトリアル) */}
+      <section className="py-28 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
           <SectionTitle subtitle="AO入試受験の有無で決められるシンプルなプラン">2つの料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            <div className="relative flex flex-col bg-white shadow-xl border-4 border-[#800000] rounded-xl overflow-hidden">
-              <div className="absolute top-4 right-4 bg-[#800000] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10 border-2 border-[#C5A059]">
+            <div className="relative flex flex-col bg-white border border-slate-300 border-t-8 border-t-[#800000]">
+              <div className="absolute top-4 right-4 bg-white text-[#800000] border border-[#800000] text-xs font-bold px-3 py-1 font-serif tracking-widest">
                 人気No.1
               </div>
 
-              <div className="bg-gradient-to-br from-[#800000] to-[#600000] text-white px-6 py-6">
-                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide">SFC二刀流<br />AO入試＋一般入試プラン</h4>
+              <div className="bg-white border-b border-[#E5E7EB] px-6 py-6">
+                <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">SFC二刀流<br />AO入試＋一般入試プラン</h4>
               </div>
 
               <div className="flex-1 flex flex-col p-6 md:p-8">
                 <div className="mb-6">
-                  <p className="text-[#666666] text-xs mb-1">月額料金</p>
+                  <p className="text-[#666666] text-xs mb-1 font-serif">月額料金</p>
                   <div className="flex items-baseline gap-1">
                     <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">138,000</span>
                     <span className="text-xl font-bold text-[#800000]">円</span>
@@ -992,7 +969,7 @@ export default function HomeClient() {
                   <p className="text-sm text-[#333333] mt-1">/ 月（税込 151,800円）</p>
                 </div>
 
-                <div className="flex items-center gap-2 mb-6">
+                <div className="flex items-center gap-2 mb-6 border-b border-[#E5E7EB] pb-4">
                   <svg className="w-5 h-5 text-[#C5A059]" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
@@ -1024,12 +1001,12 @@ export default function HomeClient() {
 
                 <div className="flex flex-col gap-3">
                   <a href="#contact-form" onClick={handleSmoothScroll}>
-                    <Button className="w-full bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold shadow-lg">
+                    <Button className="w-full rounded-none bg-[#800000] hover:bg-[#600000] text-white h-14 text-base font-bold">
                       このプランで相談を予約する
                     </Button>
                   </a>
                   <Link href="/course">
-                    <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-bold transition-all duration-300 hover:shadow-lg group">
+                    <Button variant="outline" className="w-full rounded-none border border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-bold transition-all duration-300 group">
                       このプランの詳細を確認する
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -1038,14 +1015,14 @@ export default function HomeClient() {
               </div>
             </div>
 
-            <div className="relative flex flex-col bg-white shadow-md border-2 border-[#E5E7EB] rounded-xl overflow-hidden">
-              <div className="bg-[#F3F4F6] text-[#333333] px-6 py-6 border-b border-[#E5E7EB]">
+            <div className="relative flex flex-col bg-white border border-slate-300 border-t-8 border-t-[#002147]">
+              <div className="bg-white border-b border-[#E5E7EB] px-6 py-6">
                 <h4 className="text-xl md:text-2xl font-bold font-serif tracking-wide text-[#002147]">他塾併願者に推奨<br />小論文特化プラン</h4>
               </div>
 
               <div className="flex-1 flex flex-col p-6 md:p-8">
                 <div className="mb-6">
-                  <p className="text-[#666666] text-xs mb-1">月額料金</p>
+                  <p className="text-[#666666] text-xs mb-1 font-serif">月額料金</p>
                   <div className="flex items-baseline gap-1">
                     <span className="text-5xl md:text-6xl font-bold text-[#002147] font-serif">118,000</span>
                     <span className="text-xl font-bold text-[#002147]">円</span>
@@ -1053,7 +1030,7 @@ export default function HomeClient() {
                   <p className="text-sm text-[#333333] mt-1">/ 月（税込 129,800円）</p>
                 </div>
 
-                <div className="flex items-center gap-2 mb-6">
+                <div className="flex items-center gap-2 mb-6 border-b border-[#E5E7EB] pb-4">
                   <svg className="w-5 h-5 text-[#666666]" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
@@ -1081,12 +1058,12 @@ export default function HomeClient() {
 
                 <div className="flex flex-col gap-3">
                   <a href="#contact-form" onClick={handleSmoothScroll}>
-                    <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium">
+                    <Button variant="outline" className="w-full rounded-none border border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-14 text-base font-medium">
                       このプランで相談を予約する
                     </Button>
                   </a>
                   <Link href="/course">
-                    <Button variant="outline" className="w-full border-2 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-bold transition-all duration-300 hover:shadow-lg group">
+                    <Button variant="outline" className="w-full rounded-none border border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white h-12 text-sm font-bold transition-all duration-300 group">
                       このプランの詳細を確認する
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -1096,15 +1073,15 @@ export default function HomeClient() {
             </div>
           </div>
 
-          <div className="mt-12 bg-white rounded-xl p-6 md:p-8 border-2 border-[#800000]/30">
+          <div className="mt-12 bg-white border border-[#E5E7EB] border-l-4 border-l-[#800000] p-6 md:p-8">
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#800000]/10 flex items-center justify-center">
+              <div className="flex-shrink-0 w-10 h-10 border border-[#800000] flex items-center justify-center">
                 <svg className="w-5 h-5 text-[#800000]" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
               </div>
               <div>
-                <p className="text-lg md:text-xl font-bold text-[#002147] mb-2">AO入試合格 ＝ 卒業。合格後の費用は一切かかりません。</p>
+                <p className="text-lg md:text-xl font-bold text-[#002147] mb-2 font-serif">AO入試合格 ＝ 卒業。合格後の費用は一切かかりません。</p>
                 <p className="text-sm md:text-base text-[#333333] leading-relaxed">
                   AO入試合格後は、合格発表日の月末をもって自動退塾（契約終了）となります。だからこそ、親御様も安心してお子さんの受験を応援できます。
                 </p>
@@ -1112,14 +1089,14 @@ export default function HomeClient() {
             </div>
           </div>
 
-          <div className="mt-6 bg-[#F8F9FA] rounded-xl p-6 md:p-8 border border-[#E5E7EB]">
+          <div className="mt-6 bg-white border border-[#E5E7EB] p-6 md:p-8">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-[#800000] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
                 <div>
-                  <p className="font-bold text-[#002147] text-sm mb-1">入会金＋授業料のみ</p>
+                  <p className="font-bold text-[#002147] text-sm mb-1 font-serif">入会金＋授業料のみ</p>
                   <p className="text-xs text-[#666666]">追加講習費や合格祝福金などは一切かかりません。</p>
                 </div>
               </div>
@@ -1128,7 +1105,7 @@ export default function HomeClient() {
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
                 <div>
-                  <p className="font-bold text-[#002147] text-sm mb-1">月単位でプラン変更可能</p>
+                  <p className="font-bold text-[#002147] text-sm mb-1 font-serif">月単位でプラン変更可能</p>
                   <p className="text-xs text-[#666666]">学習進度や状況に応じて、柔軟に対応できます。</p>
                 </div>
               </div>
@@ -1138,8 +1115,8 @@ export default function HomeClient() {
       </section>
 
       {/* Essay Method Section */}
-      <section className="py-20 md:py-24 px-4" style={{ backgroundColor: '#C5A05910' }}>
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 md:py-24 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
+        <div className="max-w-4xl mx-auto text-center border border-slate-300 p-10 bg-white">
           <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif mb-8 tracking-wide" style={{ wordBreak: 'keep-all' }}>
             佐藤塾の小論文指導とは
           </h2>
@@ -1147,7 +1124,7 @@ export default function HomeClient() {
             慶應SFC合格に欠かせない「問いを立てる力」を、塾長がどのように鍛えているか。合格メソッドの全貌を公開しています。
           </p>
           <Link href="/guide/essay">
-            <Button className="w-full max-w-full bg-[#002147] hover:bg-[#800000] text-white font-bold px-4 md:px-10 py-6 h-auto text-sm md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl whitespace-normal">
+            <Button className="w-full max-w-full rounded-none bg-[#002147] hover:bg-[#800000] text-white font-bold px-4 md:px-10 py-6 h-auto text-sm md:text-lg transition-all duration-300 whitespace-normal font-serif">
               小論文学習メソッドの詳細説明はこちら
             </Button>
           </Link>
@@ -1168,17 +1145,17 @@ export default function HomeClient() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <Link href="/guide/essay/articles" className="group block h-full">
-              <div className="bg-white rounded-2xl p-8 h-full border-4 border-transparent hover:border-[#C5A059] transition-all duration-300 shadow-xl hover:-translate-y-2 flex flex-col">
-                <div className="w-14 h-14 bg-[#002147]/10 rounded-full flex items-center justify-center mb-6">
+              <div className="bg-white rounded-none p-8 h-full border border-white hover:border-[#C5A059] transition-all duration-300 flex flex-col">
+                <div className="w-14 h-14 border border-[#002147] flex items-center justify-center mb-6">
                   <PenTool className="w-7 h-7 text-[#002147]" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#002147] font-serif mb-4 group-hover:text-[#800000] transition-colors">
+                <h3 className="text-2xl font-bold text-[#002147] font-serif mb-4 group-hover:text-[#800000] transition-colors border-b border-[#E5E7EB] pb-2">
                   小論文 対策ガイド
                 </h3>
-                <p className="text-[#333333] mb-8 leading-relaxed flex-1">
+                <p className="text-[#333333] mb-8 leading-relaxed flex-1 mt-4">
                   「何を書けばいいかわからない」を抜け出して、SFCの教授をうなずかせる文章の組み立て方と、資料の読み解き方をわかりやすく解説します。
                 </p>
-                <div className="flex items-center text-[#C5A059] font-bold mt-auto">
+                <div className="flex items-center text-[#C5A059] font-bold mt-auto font-serif">
                   <span>記事一覧を見る</span>
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                 </div>
@@ -1186,17 +1163,17 @@ export default function HomeClient() {
             </Link>
 
             <Link href="/ao-guide" className="group block h-full">
-              <div className="bg-white rounded-2xl p-8 h-full border-4 border-transparent hover:border-[#C5A059] transition-all duration-300 shadow-xl hover:-translate-y-2 flex flex-col">
-                <div className="w-14 h-14 bg-[#800000]/10 rounded-full flex items-center justify-center mb-6">
+              <div className="bg-white rounded-none p-8 h-full border border-white hover:border-[#C5A059] transition-all duration-300 flex flex-col">
+                <div className="w-14 h-14 border border-[#800000] flex items-center justify-center mb-6">
                   <Target className="w-7 h-7 text-[#800000]" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#800000] font-serif mb-4 group-hover:text-[#002147] transition-colors">
+                <h3 className="text-2xl font-bold text-[#800000] font-serif mb-4 group-hover:text-[#002147] transition-colors border-b border-[#E5E7EB] pb-2">
                   AO入試 対策ガイド
                 </h3>
-                <p className="text-[#333333] mb-8 leading-relaxed flex-1">
+                <p className="text-[#333333] mb-8 leading-relaxed flex-1 mt-4">
                   目立つ実績がなくても大丈夫。自分だけの研究テーマの見つけ方から、志望理由書やポートフォリオの作り方まで、一つひとつ丁寧に解説します。
                 </p>
-                <div className="flex items-center text-[#C5A059] font-bold mt-auto">
+                <div className="flex items-center text-[#C5A059] font-bold mt-auto font-serif">
                   <span>ガイドを見る</span>
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                 </div>
@@ -1207,17 +1184,17 @@ export default function HomeClient() {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact-form" className="py-28 px-4 bg-white scroll-mt-20">
+      <section id="contact-form" className="py-28 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB] scroll-mt-20">
         <div className="max-w-2xl mx-auto">
           <SectionTitle subtitle="「自分の実績や文章力で本当に受かるのか」――その不安、まずはすべて私にぶつけてください。一人ひとりの指導密度を極限まで保つため、今年度の新規受付は残り5名となっております。">
             30秒で申し込み！個別相談を予約する
           </SectionTitle>
 
-          <Card className="bg-white shadow-xl border-t-8 border-t-[#800000] border-x border-b border-border rounded-2xl">
-            <CardContent className="pt-10">
+          <div className="bg-white border border-slate-300 border-t-8 border-t-[#800000]">
+            <div className="p-8 md:p-10">
               {isSubmitted ? (
                 <div className="text-center py-12 animate-in zoom-in duration-500">
-                  <div className="w-20 h-20 bg-[#800000]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-20 h-20 border border-[#800000] flex items-center justify-center mx-auto mb-6">
                     <svg className="w-10 h-10 text-[#800000]" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
                     </svg>
@@ -1234,27 +1211,27 @@ export default function HomeClient() {
               ) : (
                 <form className="space-y-6" onSubmit={handleFormSubmit}>
                   {formError && (
-                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <div className="bg-red-50 border border-red-200 p-4">
                       <p className="text-sm text-red-700 font-medium">{formError}</p>
                     </div>
                   )}
 
-                  <div className="mb-8 p-4 bg-[#F8F9FA] rounded-lg border border-[#E5E7EB]">
-                    <p className="text-sm text-[#333333] font-bold mb-2">
-                      ※ ご相談者の8割が<span className="text-[#800000]">「実績ゼロ」「小論文未経験」</span>からのスタートです。現在の実力は一切問いません。
+                  <div className="mb-8 p-6 bg-slate-50 border border-slate-200">
+                    <p className="text-sm text-[#333333] font-bold mb-3 font-serif">
+                      ※ ご相談者の8割が<span className="text-[#800000] border-b border-[#800000]">「実績ゼロ」「小論文未経験」</span>からのスタートです。現在の実力は一切問いません。
                     </p>
-                    <p className="text-sm text-[#333333] font-bold">
+                    <p className="text-sm text-[#333333] font-bold font-serif">
                       ※ 無理な入塾勧誘は一切行いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
                     </p>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-3">
+                    <label className="block text-sm font-bold text-[#002147] mb-3 font-serif">
                       お名前 <span className="text-[#800000]">*</span>
                     </label>
                     <Input
                       placeholder="佐藤塾太郎"
-                      className="border-border focus:border-[#002147] h-12"
+                      className="rounded-none border-border focus:border-[#002147] h-12"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
@@ -1262,13 +1239,13 @@ export default function HomeClient() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-3">
+                    <label className="block text-sm font-bold text-[#002147] mb-3 font-serif">
                       メールアドレス <span className="text-[#800000]">*</span>
                     </label>
                     <Input
                       type="email"
                       placeholder="example@email.com"
-                      className="border-border focus:border-[#002147] h-12"
+                      className="rounded-none border-border focus:border-[#002147] h-12"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
@@ -1276,12 +1253,12 @@ export default function HomeClient() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-3">
+                    <label className="block text-sm font-bold text-[#002147] mb-3 font-serif">
                       電話番号 <span className="text-[#800000]">*</span>
                     </label>
                     <Input
                       placeholder="09012345678"
-                      className="border-border focus:border-[#002147] h-12"
+                      className="rounded-none border-border focus:border-[#002147] h-12"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
@@ -1289,11 +1266,11 @@ export default function HomeClient() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-3">
+                    <label className="block text-sm font-bold text-[#002147] mb-3 font-serif">
                       ご希望のプラン <span className="text-[#800000]">*</span>
                     </label>
                     <select
-                      className="w-full h-12 px-4 border border-border rounded-md bg-white text-foreground focus:border-[#002147] focus:outline-none focus:ring-1 focus:ring-[#002147]"
+                      className="w-full h-12 px-4 border border-border rounded-none bg-white text-foreground focus:border-[#002147] focus:outline-none focus:ring-1 focus:ring-[#002147]"
                       value={formData.plan}
                       onChange={(e) => setFormData({ ...formData, plan: e.target.value })}
                       required
@@ -1305,53 +1282,55 @@ export default function HomeClient() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-3">
+                    <label className="block text-sm font-bold text-[#002147] mb-3 font-serif">
                       ご質問・ご相談
                     </label>
                     <Textarea
                       placeholder="SFC合格に向けて不安なこと、知りたいことをご自由にお書きください。塾長が直接お答えします。"
-                      className="border-border focus:border-[#002147] min-h-32"
+                      className="rounded-none border-border focus:border-[#002147] min-h-32"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
                   </div>
 
-                  <div className="pt-4">
+                  <div className="pt-6">
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className="w-full max-w-full bg-[#800000] hover:bg-[#C5A059] text-white min-h-14 h-auto px-4 py-4 text-sm sm:text-base md:text-lg font-bold leading-snug whitespace-normal shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed rounded-full group"
+                      className="w-full max-w-full rounded-none bg-[#800000] hover:bg-[#C5A059] text-white min-h-14 h-auto px-4 py-4 text-sm sm:text-base md:text-lg font-bold leading-snug whitespace-normal transition-all duration-300 group border border-[#800000]"
                     >
-                      {isLoading ? '送信中...' : '今すぐ無料で個別相談を予約する'}
-                      {!isLoading && <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />}
+                      <span className="flex items-center gap-2 font-serif">
+                        {isLoading ? '送信中...' : '今すぐ無料で個別相談を予約する'}
+                        {!isLoading && <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />}
+                      </span>
                     </Button>
-                    <p className="text-xs text-center text-[#666666] mt-4 font-bold tracking-wider">
+                    <p className="text-xs text-center text-[#666666] mt-4 font-bold tracking-widest font-serif">
                       ※送信後、24時間以内に担当者よりご連絡いたします
                     </p>
                   </div>
 
-                  <p className="text-xs text-center text-muted-foreground pt-2">
+                  <p className="text-xs text-center text-[#999999] pt-2">
                     送信いただいた情報は、お客様へのサービス提供のため、安全に管理されます。
                   </p>
                 </form>
               )}
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 bg-[#F9F9F9]">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <p className="text-sm text-[#800000] font-bold tracking-widest mb-2">まだ不安がある方へ</p>
+            <p className="text-sm text-[#800000] font-bold tracking-[0.2em] mb-2 font-serif">まだ不安がある方へ</p>
             <h2 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif">よくある質問（FAQ）</h2>
           </div>
 
           <div className="space-y-4">
-            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
-              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
-                <span className="font-semibold text-[#002147]">
+            <details className="group bg-[#FAF9F6] border border-[#E5E7EB]">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-slate-50 transition-colors">
+                <span className="font-bold text-[#002147] font-serif tracking-wide">
                   パソコンを持っていない、または操作が苦手ですが大丈夫ですか？
                 </span>
                 <span className="transition-transform group-open:rotate-180">
@@ -1360,14 +1339,14 @@ export default function HomeClient() {
                   </svg>
                 </span>
               </summary>
-              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
+              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-[#E5E7EB] pt-4 mt-2">
                 はい、まったく問題ありません。佐藤塾は<strong>スマートフォン1台</strong>だけで、添削も指導もすべて完結するように作られています。パソコンを持っているかどうかは合否に関係しませんので、安心して始めてください。
               </div>
             </details>
 
-            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
-              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
-                <span className="font-semibold text-[#002147]">
+            <details className="group bg-[#FAF9F6] border border-[#E5E7EB]">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-slate-50 transition-colors">
+                <span className="font-bold text-[#002147] font-serif tracking-wide">
                   なぜ50%という驚異的な合格率を実現できるのですか？
                 </span>
                 <span className="transition-transform group-open:rotate-180">
@@ -1376,14 +1355,14 @@ export default function HomeClient() {
                   </svg>
                 </span>
               </summary>
-              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
+              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-[#E5E7EB] pt-4 mt-2">
                 塾長自身が生徒一人ひとりの答案にすべて目を通し、「なぜそう考えたのか？」という根本の問いに本気で向き合うからです。表面的なテクニックに頼らず、SFC合格に必要な「独自性」と「思考力」を地道に引き出すこの指導こそが、実績ゼロからの大逆転を生み出しています。
               </div>
             </details>
 
-            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
-              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
-                <span className="font-semibold text-[#002147]">
+            <details className="group bg-[#FAF9F6] border border-[#E5E7EB]">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-slate-50 transition-colors">
+                <span className="font-bold text-[#002147] font-serif tracking-wide">
                   入会金はかかりますか？
                 </span>
                 <span className="transition-transform group-open:rotate-180">
@@ -1392,14 +1371,14 @@ export default function HomeClient() {
                   </svg>
                 </span>
               </summary>
-              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
+              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-[#E5E7EB] pt-4 mt-2">
                 入塾時に入会金として<strong>税込10万円</strong>をいただきます。それ以降は月額料金だけのお支払いで、追加の講習料などは一切かかりません。他塾のように後から追加費用が発生することもないので、安心して始めていただけます。
               </div>
             </details>
 
-            <details className="group bg-white rounded-lg shadow-sm border border-border overflow-hidden">
-              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-[#f9fafb]">
-                <span className="font-semibold text-[#002147]">
+            <details className="group bg-[#FAF9F6] border border-[#E5E7EB]">
+              <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-slate-50 transition-colors">
+                <span className="font-bold text-[#002147] font-serif tracking-wide">
                   途中で他のプランに変更できますか？
                 </span>
                 <span className="transition-transform group-open:rotate-180">
@@ -1408,8 +1387,8 @@ export default function HomeClient() {
                   </svg>
                 </span>
               </summary>
-              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-border">
-                はい、<strong>月単位でプランを変更</strong>できます。学力の伸びや状況に合わせて柔軟に対応できますので、お気軽にご相談ください。
+              <div className="px-6 pb-6 text-[#333333] leading-relaxed border-t border-[#E5E7EB] pt-4 mt-2">
+                はい、<strong>月単位でのプランを変更</strong>できます。学力の伸びや状況に合わせて柔軟に対応できますので、お気軽にご相談ください。
               </div>
             </details>
           </div>
