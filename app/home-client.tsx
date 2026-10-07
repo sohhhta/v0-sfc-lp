@@ -212,7 +212,7 @@ export default function HomeClient() {
           {/* Stats Section */}
           <div className="max-w-4xl mx-auto w-full">
             <div className="md:hidden flex flex-col items-center justify-center p-6 border border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg mb-4">
-              <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase font-serif">2026年度 合格���</p>
+              <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase font-serif">2026年度 合格実績</p>
               <p className="text-6xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>50<span className="text-2xl">%</span></p>
               <p className="text-sm text-[#D4AF37] mt-2 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生14名中7名が合格)</p>
             </div>
@@ -446,7 +446,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに確認し丁寧に見直します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">すべての答案に塾長自身が目を通し、あなたの考え方の癖を見抜きます。<strong className="text-[#800000]">提出から24時間以内にフィードバック</strong>し、論理的な文章力を身につけます。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
@@ -484,7 +484,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br />塾長に直接ご相談ください</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">課題を進める中でわからないことや迷うことがあれば、いつでも塾長のLINEへ相談できます。小さな不安もすぐに解消し、勉強に集中できる環境を整えます。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">課題で迷ったときは、いつでも塾長のLINEに相談できます。不安をすぐに解消し、勉強に集中できます。</p>
               </div>
             </div>
 
@@ -500,7 +500,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br />あなたらしさを言葉にします</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小���文やAO対策の進捗確認だけでなく、英語や数学など他教科の学習計画づくりも一緒にサポートします。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、英語や数学など他教科の学習計画づくりも一緒にサポートします。</p>
               </div>
             </div>
 
@@ -530,7 +530,7 @@ export default function HomeClient() {
                 <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに確認し丁寧に見直します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">すべての答案に塾長自身が目を通し、あなたの考え方の癖を見抜きます。<strong className="text-[#800000]">提出から24時間以内にフィードバック</strong>し、論理的な文章力を身につけます。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
@@ -565,7 +565,7 @@ export default function HomeClient() {
                 <h3 className="text-base font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br />塾長に直接ご相談ください</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">課題を進める中でわからないことや迷うことがあれば、いつでも塾長のLINEへ相談できます。小さな不安もすぐに解消し、勉強に集中できる環境を整えます。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">課題で迷ったときは、いつでも塾長のLINEに相談できます。不安をすぐに解消し、勉強に集中できます。</p>
               </div>
             </div>
 
@@ -672,7 +672,7 @@ export default function HomeClient() {
               <div className="bg-white border border-[#C5A059]/40 p-6 md:p-8 shadow-sm inline-block text-left rounded-2xl">
                 <p className="text-base md:text-lg text-[#333333] leading-relaxed">
                   <strong className="text-[#800000]">例年、秋口（10月以降）からのスタートでも多くの生徒が合格を勝ち取っています。</strong><br />
-                  昨年度も、10月入塾の菅原くんや、11月入塾の元吉さんなどが、限られた時間の中で見事合格を掴みました。<span className="text-xs text-[#999999] ml-1">[cite: 1]</span>
+                  昨年度も、10月入塾のSさん、11月入塾のMさんが、限られた時間で合格をつかみました。
                 </p>
               </div>
             </div>
@@ -994,7 +994,7 @@ export default function HomeClient() {
           <div className="mt-8 bg-white border border-slate-200 rounded-2xl p-8 md:p-10 shadow-sm">
             <p className="text-base text-[#333333] text-center leading-loose font-medium">
               <strong className="text-[#800000]">※ 佐藤塾の費用は月額 11.8万円〜。</strong><br className="block md:hidden" />
-              追加の講習費や教材費は一切かかりません。<br className="hidden md:block" />他塾のように「合格時には別途〇万円」といった費用も発生しませんのでご安心ください。
+              追加の講習費や教材費はかかりません。<br className="hidden md:block" />合格時の追加費用もありませんので、安心して始められます。
             </p>
           </div>
         </div>
@@ -1070,7 +1070,7 @@ export default function HomeClient() {
       {/* Contact Form Section */}
       <section id="contact-form" className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB] scroll-mt-20">
         <div className="max-w-2xl mx-auto">
-          <SectionTitle subtitle="「今の成績で本当に受かるのか」「文章を書くのが苦手」といった不安があれば、まずは無料相談でお気軽にお話しください。一人ひとりの生徒にしっかり時間をかけるため、今年度の新規受付は残り5名とさせていただきます。">
+          <SectionTitle subtitle="「今の成績で受かるのか」「文章を書くのが苦手」といった不安があれば、まずは無料相談でお話しください。一人ひとりに丁寧に向き合うため、今年度の新規受付は残り5名です。">
             無料の個別相談を予約する
           </SectionTitle>
 
@@ -1223,7 +1223,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                はい、まったく問題ありません。佐藤塾はスマートフォン1台だけで、添削も指導もすべて完結するように作られています。パソコンを持っているかどうかは合否に関係しませんので、安心して始めてください。
+                はい、問題ありません。佐藤塾はスマートフォン1台で、添削も指導もすべて受けられます。パソコンの有無は合否に関係しませんので、安心して始めてください。
               </div>
             </details>
 
@@ -1236,7 +1236,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                塾長自身が生徒一人ひとりの答案にすべて目を通し、「なぜそう考えたのか？」という根本の問いに本気で向き合うからです。表面的なテクニックに頼らず、SFC合格に必要な「独自性」と「思考力」を地道に引き出すこの指導こそが、実績ゼロからの逆転合格を生み出しています。
+                塾長が一人ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表面的なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。
               </div>
             </details>
 
