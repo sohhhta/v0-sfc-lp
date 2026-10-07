@@ -158,7 +158,7 @@ export default function HomeClient() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#002147]/95 via-[#002147]/90 to-[#002147]"></div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-24 pb-12">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center flex-1 flex flex-col justify-center pt-24 pb-12">
 
           {/* Hook Badge */}
           <div className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -500,7 +500,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br />あなたらしさを言葉にします</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、英語や数学など他教科の学習計画づくりも一緒にサポートします。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小��文やAO対策の進捗確認だけでなく、英語や数学など他教科の学習計画づくりも一緒にサポートします。</p>
               </div>
             </div>
 
