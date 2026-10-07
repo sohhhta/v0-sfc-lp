@@ -188,7 +188,7 @@ export default function AoGuidePage() {
                 AO入試は非常に倍率も高い不確実な試験です。だからこそ、佐藤塾では「一般入試の学力を同時に身につけるロードマップ」を前提として指導を行います。
               </p>
               <p className="text-[#333333] text-sm md:text-base leading-loose mt-4">
-                「万が一AOが不合格でも一般で戦いきれる」という確かな学力と精神。これがあるからこそ、小論文で培ったロジカルライティングを駆使した効率的かつ生産的な書類作成をすることが可能になります。
+                「万が一AOが不合格でも一般で戦いきれる」という確かな学力と精神。これがあるからこそ、小論文で培ったロジカルライティングを駆使した効率よく書類を作成できるようになります。
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
