@@ -287,7 +287,7 @@ export default function HomeClient() {
                     SFCが求める「独自の視点」に特化していないから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    学校や一般的な塾で教わるのは、幅広い大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届きません。
+                    学校や一般的な塾で教わるのは、幅広い大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届��ません。
                   </p>
                 </div>
               </div>
@@ -948,7 +948,7 @@ export default function HomeClient() {
                 <ul className="space-y-6 mb-12 flex-1 px-2 opacity-80">
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#002147] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">塾長1on1授業 <span className="font-bold text-[#002147]">月1回</span></span>
+                    <span className="text-base text-[#333333] font-medium">塾長1on1授業 <span className="font-bold text-[#002147]">隔週1回</span></span>
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#002147] shrink-0" />
@@ -956,7 +956,11 @@ export default function HomeClient() {
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#002147] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">指導科目 <span className="font-bold text-[#002147]">小論文のみ</span></span>
+                    <span className="text-base text-[#333333] font-medium">受験戦略の立案</span>
+                  </li>
+                  <li className="flex items-center gap-4">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#002147] shrink-0" />
+                    <span className="text-base text-[#333333] font-medium">英・数・情報の学習計画管理</span>
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#002147] shrink-0" />
@@ -986,7 +990,7 @@ export default function HomeClient() {
             <div className="text-center md:text-left flex-1">
               <p className="text-xl md:text-2xl font-bold text-[#002147] mb-4 font-serif">AO入試で合格した場合は、その時点で卒業となります。</p>
               <p className="text-base text-[#666666] leading-loose font-medium">
-                AO入試で合格が決まった場合、合格発表日の月末をもって自動退塾（契約終了）となります。合格後の不要な費用は一切かかりませんので、保護者の方も安心してお子様の受験を応援していただけます。
+                AO入試で合格が決まった場合、合格発表日の月末をもって自動退塾（契約終了）となります。合格後の不要な費用は一切かかりませんので、保護者の方も安心してお子���の受験を応援していただけます。
               </p>
             </div>
           </div>
