@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 const tocItems = [
   { id: "section-1", title: "1. 「すごい実績がないと受からない」は最大の誤解" },
-  { id: "section-2", title: "2. 小論文とAO入試は「評価基準」が全く同じ" },
+  { id: "section-2", title: "2. 小論文とAO入試は「評価基準」が共通している" },
   { id: "section-3", title: "3. 「二刀流」がもたらす圧倒的な相乗効果" },
   { id: "section-4", title: "【実録】「起業しなきゃ」の強迫観念から解放され、日常の探究で合格を掴んだ軌跡" }
 ];
@@ -95,7 +95,7 @@ export default function AoStrategyPage() {
           </p>
 
           <h2 id="section-2" className="text-2xl font-bold text-[#002147] border-b-2 border-[#002147] pb-2 mt-12 mb-6">
-            2. 小論文とAO入試は「評価基準」が全く同じ
+            2. 小論文とAO入試は「評価基準」が共通している
           </h2>
           <p>
             佐藤塾が「一般（小論文）とAOの二刀流」を推奨する理由は、<strong>両者の評価基準の根幹が完全に一致しているから</strong>です。
