@@ -573,7 +573,7 @@ export default function HomeClient() {
               <div className="bg-white border border-[#002147] px-6 py-3 rounded-full flex items-center gap-2">
                 <RefreshCcw className="w-4 h-4 text-[#002147]" />
                 <p className="text-[#002147] font-bold text-sm tracking-widest text-center">
-                  対話と添削を何度も繰り返す
+                  対話と��削を何度も繰り返す
                 </p>
               </div>
             </div>
