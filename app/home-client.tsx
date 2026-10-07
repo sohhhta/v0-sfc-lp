@@ -218,27 +218,27 @@ export default function HomeClient() {
             </div>
 
             <div className="grid grid-cols-2 gap-4 md:hidden">
-              <div className="flex flex-col items-center justify-center p-4 border border-white/10 rounded-xl bg-white/5 backdrop-blur-md shadow-sm">
+              <div className="flex flex-col items-center justify-center p-4 border border-white/10 rounded-xl bg-white/5 backdrop-blur-md shadow-sm h-full">
                 <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium font-serif">2026年度 受講継続率</p>
                 <p className="text-4xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>93<span className="text-lg ml-0.5">%</span></p>
               </div>
-              <div className="flex flex-col items-center justify-center p-4 border border-white/10 rounded-xl bg-white/5 backdrop-blur-md shadow-sm">
+              <div className="flex flex-col items-center justify-center p-4 border border-white/10 rounded-xl bg-white/5 backdrop-blur-md shadow-sm h-full">
                 <p className="text-xs text-white/70 mb-1 tracking-[0.15em] font-medium font-serif">6年間累計</p>
                 <p className="text-4xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>39<span className="text-lg ml-0.5">名</span></p>
               </div>
             </div>
 
-            <div className="hidden md:grid md:grid-cols-3 gap-6">
-              <div className="flex flex-col items-center justify-center p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-md shadow-sm">
+            <div className="hidden md:grid md:grid-cols-3 gap-6 items-stretch">
+              <div className="flex flex-col items-center justify-center p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-md shadow-sm h-full">
                 <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase font-serif">2026年度 受講継続率</p>
                 <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>93<span className="text-2xl ml-1">%</span></p>
               </div>
-              <div className="flex flex-col items-center justify-center p-8 border border-[#C5A059]/40 rounded-2xl bg-[#C5A059]/10 backdrop-blur-md shadow-xl scale-105 relative z-20">
+              <div className="flex flex-col items-center justify-center p-8 border border-[#C5A059]/40 rounded-2xl bg-[#C5A059]/10 backdrop-blur-md shadow-xl scale-105 relative z-20 h-full">
                 <p className="text-xs text-[#C5A059] mb-2 tracking-[0.2em] font-bold uppercase font-serif">2026年度 合格率</p>
                 <p className="text-7xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>50<span className="text-3xl">%</span></p>
                 <p className="text-sm text-[#D4AF37] mt-3 font-medium">(全受験生14名中7名が合格)</p>
               </div>
-              <div className="flex flex-col items-center justify-center p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-md shadow-sm">
+              <div className="flex flex-col items-center justify-center p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-md shadow-sm h-full">
                 <p className="text-xs text-white/70 mb-2 tracking-[0.2em] font-medium uppercase font-serif">6年間累計</p>
                 <p className="text-6xl font-bold text-white" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>39<span className="text-2xl ml-1">名</span></p>
               </div>
@@ -378,12 +378,14 @@ export default function HomeClient() {
 
             {/* --- 1段目 --- */}
             {/* 01 左上 */}
-            <div className="bg-[#F8F9FA] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
+            <div className="bg-[#F8F9FA] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">01</div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight">いつでも気軽にLINEで提出</h3>
               </div>
-              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">小論文の答案や志望理由書のドラフトが書けたら、スマホからLINEでいつでも提出。回数制限は一切ありません。</p>
+              <div className="flex-1">
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">小論文の答案や志望理由書のドラフトが書けたら、スマホからLINEでいつでも提出。回数制限は一切ありません。</p>
+              </div>
             </div>
 
             {/* 矢印 01 -> 02 */}
@@ -392,12 +394,14 @@ export default function HomeClient() {
             </div>
 
             {/* 02 右上 (脱AI) */}
-            <div className="bg-[#F8F9FA] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
+            <div className="bg-[#F8F9FA] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">02</div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight">塾長による超高速・直接添削</h3>
               </div>
-              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">提出後、すべての答案に塾長が直接目を通し、思考のクセを徹底解剖。<strong className="text-[#800000]">24時間以内の超高速フィードバック</strong>で、SFC特有の論理構成を叩き込みます。</p>
+              <div className="flex-1">
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">提出後、すべての答案に塾長が直接目を通し、思考のクセを徹底解剖。<strong className="text-[#800000]">24時間以内の超高速フィードバック</strong>で、SFC特有の論理構成を叩き込みます。</p>
+              </div>
             </div>
 
             {/* --- 2段目 --- */}
@@ -428,12 +432,14 @@ export default function HomeClient() {
 
             {/* --- 3段目 --- */}
             {/* 04 左下 */}
-            <div className="bg-[#F8F9FA] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
+            <div className="bg-[#F8F9FA] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">04</div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-tight">塾長直通ラインで軌道修正</h3>
               </div>
-              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談後、次の課題を進める中で迷ったらいつでも塾長直通のLINEで相談可能。小さな不安をその日のうちに解消し、迷いなく勉強に集中させます。</p>
+              <div className="flex-1">
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談後、次の課題を進める中で迷ったらいつでも塾長直通のLINEで相談可能。小さな不安をその日のうちに解消し、迷いなく勉強に集中させます。</p>
+              </div>
             </div>
 
             {/* 矢印 03 -> 04 */}
@@ -442,12 +448,14 @@ export default function HomeClient() {
             </div>
 
             {/* 03 右下 */}
-            <div className="bg-[#fff5f5] rounded-2xl p-6 lg:p-8 border border-[#800000]/10 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
+            <div className="bg-[#fff5f5] rounded-2xl p-6 lg:p-8 border border-[#800000]/10 shadow-sm flex flex-col relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-4">
                 <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">03</div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-tight">塾長との1on1オンライン指導</h3>
               </div>
-              <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談を実施し、直近の総括を共有。小論文やAOだけではなく、他の教科の学習計画の策定なども行います。</p>
+              <div className="flex-1">
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">面談を実施し、直近の総括を共有。小論文やAOだけではなく、他の教科の学習計画の策定なども行います。</p>
+              </div>
             </div>
 
           </div>
@@ -455,12 +463,14 @@ export default function HomeClient() {
           {/* スマホ版：縦型タイムライン */}
           <div className="md:hidden relative mt-12 space-y-6 max-w-md mx-auto">
             {/* 01 */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10">
+            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">01</div>
                 <h3 className="text-lg font-bold text-[#002147]">いつでもLINEで提出</h3>
               </div>
-              <p className="text-[#333333] text-sm leading-relaxed">小論文の答案や志望理由書のドラフトが書けたら、スマホからLINEでいつでも提出。回数制限は一切ありません。</p>
+              <div className="flex-1">
+                <p className="text-[#333333] text-sm leading-relaxed">小論文の答案や志望理由書のドラフトが書けたら、スマホからLINEでいつでも提出。回数制限は一切ありません。</p>
+              </div>
             </div>
 
             <div className="flex justify-center -my-2 relative z-0">
@@ -468,12 +478,14 @@ export default function HomeClient() {
             </div>
 
             {/* 02 (脱AI) */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10">
+            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">02</div>
                 <h3 className="text-lg font-bold text-[#002147]">塾長による超高速・直接添削</h3>
               </div>
-              <p className="text-[#333333] text-sm leading-relaxed">提出後、すべての答案に塾長が直接目を通し、思考のクセを徹底解剖。<strong className="text-[#800000]">24時間以内の超高速フィードバック</strong>で、SFC特有の論理構成を叩き込みます。</p>
+              <div className="flex-1">
+                <p className="text-[#333333] text-sm leading-relaxed">提出後、すべての答案に塾長が直接目を通し、思考のクセを徹底解剖。<strong className="text-[#800000]">24時間以内の超高速フィードバック</strong>で、SFC特有の論理構成を叩き込みます。</p>
+              </div>
             </div>
 
             <div className="flex justify-center -my-2 relative z-0">
@@ -481,8 +493,8 @@ export default function HomeClient() {
             </div>
 
             {/* 03 */}
-            <div className="bg-[#fff5f5] rounded-2xl border border-[#800000]/10 overflow-hidden shadow-sm relative z-10">
-              <div className="p-6">
+            <div className="bg-[#fff5f5] rounded-2xl border border-[#800000]/10 overflow-hidden shadow-sm relative z-10 flex flex-col h-full">
+              <div className="p-6 flex-1">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">03</div>
                   <h3 className="text-lg font-bold text-[#800000]">塾長との1on1オンライン指導</h3>
@@ -502,12 +514,14 @@ export default function HomeClient() {
             </div>
 
             {/* 04 */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10">
+            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">04</div>
                 <h3 className="text-lg font-bold text-[#002147]">塾長直通ラインで軌道修正</h3>
               </div>
-              <p className="text-[#333333] text-sm leading-relaxed">面談後、次の課題を進める中で迷ったらいつでも塾長のLINEに相談可能。小さな不安や相談をその日のうちに解消します。</p>
+              <div className="flex-1">
+                <p className="text-[#333333] text-sm leading-relaxed">面談後、次の課題を進める中で迷ったらいつでも塾長のLINEに相談可能。小さな不安や相談をその日のうちに解消します。</p>
+              </div>
             </div>
 
             {/* Mobile Cycle Loop Indicator */}
@@ -590,21 +604,25 @@ export default function HomeClient() {
                 実際の添削事例：思考の「深さ」を限界まで引き出す
               </h3>
               
-              <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+              <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
                 {/* Before */}
-                <div className="bg-white p-8 rounded-xl border border-slate-200 relative pt-12 shadow-sm">
+                <div className="bg-white p-8 rounded-xl border border-slate-200 relative pt-12 shadow-sm h-full flex flex-col">
                   <span className="absolute top-0 left-0 bg-slate-500 text-white text-xs font-bold px-4 py-2 rounded-br-lg rounded-tl-xl tracking-widest">生徒の初回答案（Before）</span>
-                  <p className="text-[#666666] leading-loose text-base mt-2">
-                    「私は地域の過疎化問題に興味があります。解決のためには、IT技術を活用して遠隔地からでも医療や教育を受けられるようにするべきだと思います。」
-                  </p>
+                  <div className="flex-1">
+                    <p className="text-[#666666] leading-loose text-base mt-2">
+                      「私は地域の過疎化問題に興味があります。解決のためには、IT技術を活用して遠隔地からでも医療や教育を受けられるようにするべきだと思います。」
+                    </p>
+                  </div>
                 </div>
                 
                 {/* After */}
-                <div className="bg-[#fff5f5] p-8 rounded-xl border border-[#800000]/20 relative pt-12 shadow-sm">
+                <div className="bg-[#fff5f5] p-8 rounded-xl border border-[#800000]/20 relative pt-12 shadow-sm h-full flex flex-col">
                   <span className="absolute top-0 left-0 bg-[#800000] text-white text-xs font-bold px-4 py-2 rounded-br-lg rounded-tl-xl tracking-widest">塾長の赤ペン添削（After）</span>
-                  <p className="text-[#333333] font-medium leading-loose text-base mt-2">
-                    「『IT技術を活用』では抽象的すぎて、SFCの教授には刺さりません。<strong className="text-[#800000] border-b border-dashed border-[#800000]/50 pb-0.5">あなたが実際に足を踏み入れたA町の事例</strong>をベースに、『高齢者が直感的に使えるUIを持った遠隔医療アプリのプロトタイプ提案』まで具体化しましょう。なぜあなたがそれをやるのか、原体験をもっと前面に出してください！」
-                  </p>
+                  <div className="flex-1">
+                    <p className="text-[#333333] font-medium leading-loose text-base mt-2">
+                      「『IT技術を活用』では抽象的すぎて、SFCの教授には刺さりません。<strong className="text-[#800000] border-b border-dashed border-[#800000]/50 pb-0.5">あなたが実際に足を踏み入れたA町の事例</strong>をベースに、『高齢者が直感的に使えるUIを持った遠隔医療アプリのプロトタイプ提案』まで具体化しましょう。なぜあなたがそれをやるのか、原体験をもっと前面に出してください！」
+                    </p>
+                  </div>
                 </div>
               </div>
               
@@ -660,9 +678,9 @@ export default function HomeClient() {
               {/* Horizontal Timeline Line */}
               <div className="absolute top-16 left-[10%] right-[10%] h-1 bg-gradient-to-r from-[#002147] via-[#800000] to-[#C5A059] rounded-full opacity-30" />
 
-              <div className="grid grid-cols-3 gap-10">
+              <div className="grid grid-cols-3 gap-10 items-stretch">
                 {/* STEP 01: 9月〜10月 */}
-                <div className="relative">
+                <div className="relative h-full flex flex-col">
                   <div className="flex flex-col items-center mb-6">
                     <div className="w-16 h-16 rounded-full bg-[#002147] text-white flex items-center justify-center font-bold text-xl font-serif shadow-md z-10 border-4 border-white">
                       01
@@ -671,21 +689,23 @@ export default function HomeClient() {
                       <span className="text-sm font-bold text-[#002147] tracking-widest">9月〜10月</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 border-t-4 border-t-[#002147] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow relative">
+                  <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 border-t-4 border-t-[#002147] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow relative flex-1 flex flex-col">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#002147] text-white text-xs font-bold px-4 py-1 rounded-full shadow-sm whitespace-nowrap">
                       塾長の徹底伴走
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
                       小論文の基本のきを<br />急ピッチで培う
                     </h3>
-                    <p className="text-sm text-[#666666] leading-relaxed">
-                      200文字程度の要約や自分の意見に関する小論文を作成してもらいます。その後、塾長が直接添削を通じて論理破綻をなくし、SFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。これを頻度高く行います。
-                    </p>
+                    <div className="flex-1">
+                      <p className="text-sm text-[#666666] leading-relaxed">
+                        200文字程度の要約や自分の意見に関する小論文を作成してもらいます。その後、塾長が直接添削を通じて論理破綻をなくし、SFC特有の<strong className="text-[#800000]">「独自性」</strong>を引き上げます。これを頻度高く行います。
+                      </p>
+                    </div>
                   </div>
                 </div>
 
                 {/* STEP 02: 11月 */}
-                <div className="relative">
+                <div className="relative h-full flex flex-col">
                   <div className="flex flex-col items-center mb-6">
                     <div className="w-16 h-16 rounded-full bg-[#800000] text-white flex items-center justify-center font-bold text-xl font-serif shadow-md z-10 border-4 border-white">
                       02
@@ -694,21 +714,23 @@ export default function HomeClient() {
                       <span className="text-sm font-bold text-[#800000] tracking-widest">11月</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 border-t-4 border-t-[#800000] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow relative">
+                  <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 border-t-4 border-t-[#800000] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow relative flex-1 flex flex-col">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#800000] text-white text-xs font-bold px-4 py-1 rounded-full shadow-sm whitespace-nowrap">
                       塾長の直接指導
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
                       慶應経済学部の過去問を通じて<br />実践能力を培う
                     </h3>
-                    <p className="text-sm text-[#666666] leading-relaxed">
-                      基本を培った後に、慶應SFCの過去問の前に慶應経済の過去問に取り組みます。ここでは時間の制約なども行い<strong className="text-[#800000]">実践能力</strong>を培います。これがSFC過去問へ着手する前の準備となります。
-                    </p>
+                    <div className="flex-1">
+                      <p className="text-sm text-[#666666] leading-relaxed">
+                        基本を培った後に、慶應SFCの過去問の前に慶應経済の過去問に取り組みます。ここでは時間の制約なども行い<strong className="text-[#800000]">実践能力</strong>を培います。これがSFC過去問へ着手する前の準備となります。
+                      </p>
+                    </div>
                   </div>
                 </div>
 
                 {/* STEP 03: 12月〜入試 */}
-                <div className="relative">
+                <div className="relative h-full flex flex-col">
                   <div className="flex flex-col items-center mb-6">
                     <div className="w-16 h-16 rounded-full bg-[#C5A059] text-white flex items-center justify-center font-bold text-xl font-serif shadow-md z-10 border-4 border-white">
                       03
@@ -717,16 +739,18 @@ export default function HomeClient() {
                       <span className="text-sm font-bold text-[#002147] tracking-widest">12月〜入試</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 border-t-4 border-t-[#C5A059] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow relative">
+                  <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 border-t-4 border-t-[#C5A059] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow relative flex-1 flex flex-col">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#C5A059] text-[#002147] text-xs font-bold px-4 py-1 rounded-full shadow-sm whitespace-nowrap">
                       塾長主体
                     </div>
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center">
                       塾長とともに<br />合格レベルに仕上げていく
                     </h3>
-                    <p className="text-sm text-[#666666] leading-relaxed">
-                      およそ3ヶ月間は慶應SFCの過去問演習を行います。同じ問題でも複数の答案を作成し、特定の分野に偏らない<strong className="text-[#800000]">柔軟性</strong>を培っていきます。いかなる状況でも合格圏内に入ることを目指します。
-                    </p>
+                    <div className="flex-1">
+                      <p className="text-sm text-[#666666] leading-relaxed">
+                        およそ3ヶ月間は慶應SFCの過去問演習を行います。同じ問題でも複数の答案を作成し、特定の分野に偏らない<strong className="text-[#800000]">柔軟性</strong>を培っていきます。いかなる状況でも合格圏内に入ることを目指します。
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -820,7 +844,7 @@ export default function HomeClient() {
                 <tr>
                   <th className="p-8 text-left font-bold font-serif text-base tracking-wide bg-[#FAF9F6] text-[#333333] border-r border-[#E5E7EB] rounded-tl-2xl">項目</th>
                   <th className="p-8 text-center font-bold font-serif text-xl tracking-widest bg-[#002147] text-white border-x border-[#002147] relative w-1/3">
-                    <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#C5A059] text-white text-xs font-bold px-6 py-1.5 rounded-full shadow-md z-20 tracking-widest">SFC特化</span>
+                    <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#C5A059] text-white text-xs font-bold px-6 py-1.5 rounded-full shadow-md z-20 tracking-widest whitespace-nowrap">SFC特化</span>
                     佐藤塾
                   </th>
                   <th className="p-8 text-center font-bold font-serif text-base tracking-wide bg-white text-[#666666] border-x border-[#E5E7EB]">SFC特化塾</th>
@@ -939,7 +963,7 @@ export default function HomeClient() {
         <div className="max-w-5xl mx-auto">
           <SectionTitle>佐藤塾が選ばれる6つの理由</SectionTitle>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
             {[
               { num: '01', title: 'AOと一般二刀流対応', desc: 'どちらの受験方式でも、あるいは両方での受験でも完全サポート' },
               { num: '02', title: '24時間以内の超高速添削', desc: '提出書類や小論文の論理破綻を塾長が瞬時に見抜き、修正時間を短縮' },
@@ -948,7 +972,7 @@ export default function HomeClient() {
               { num: '05', title: 'SFC特化ロジック', desc: '6年間の指導実績に基づく、SFC合格に必要な全てを網羅' },
               { num: '06', title: '通塾ゼロ', desc: '指導も授業もすべてオンライン。通塾時間を勉強に充てられる' },
             ].map((item) => (
-              <Card key={item.num} className="bg-white shadow-sm border border-slate-200 rounded-2xl hover:shadow-md transition-shadow">
+              <Card key={item.num} className="bg-white shadow-sm border border-slate-200 rounded-2xl hover:shadow-md transition-shadow h-full flex flex-col">
                 <CardHeader className="pb-2">
                   <div className="flex items-start gap-5">
                     <div className="text-4xl md:text-5xl font-bold text-[#C5A059]/40 font-serif tracking-tighter">
@@ -959,7 +983,7 @@ export default function HomeClient() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                   <p className="text-sm md:text-base text-[#666666] leading-relaxed pl-[4.5rem]">{item.desc}</p>
                 </CardContent>
               </Card>
@@ -974,7 +998,7 @@ export default function HomeClient() {
           <SectionTitle subtitle="AO入試受験の有無で決められるシンプルなプラン">2つの料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch mt-12">
-            <div className="relative flex flex-col bg-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-100 rounded-3xl overflow-hidden transform md:-translate-y-4">
+            <div className="relative flex flex-col bg-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-100 rounded-3xl overflow-hidden transform md:-translate-y-4 h-full">
               <div className="absolute top-6 right-6 bg-[#C5A059] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-sm z-10 tracking-widest">
                 人気No.1
               </div>
@@ -1022,7 +1046,7 @@ export default function HomeClient() {
                   </li>
                 </ul>
 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 mt-auto">
                   <a href="#contact-form" onClick={handleSmoothScroll}>
                     <Button className="w-full bg-[#800000] hover:bg-[#C5A059] text-white h-16 text-lg font-bold rounded-xl shadow-md transition-all duration-300">
                       このプランで相談を予約する
@@ -1038,7 +1062,7 @@ export default function HomeClient() {
               </div>
             </div>
 
-            <div className="relative flex flex-col bg-white shadow-sm border border-slate-200 rounded-3xl overflow-hidden mt-8 md:mt-0">
+            <div className="relative flex flex-col bg-white shadow-sm border border-slate-200 rounded-3xl overflow-hidden mt-8 md:mt-0 h-full">
               <div className="bg-[#FAF9F6] text-[#002147] px-8 py-10 border-b border-slate-100">
                 <h4 className="text-2xl md:text-3xl font-bold font-serif tracking-wide mb-2">小論文特化プラン</h4>
                 <p className="text-[#666666] text-sm font-medium">他塾併願者・小論文対策のみをご希望の方</p>
@@ -1078,7 +1102,7 @@ export default function HomeClient() {
                   </li>
                 </ul>
 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 mt-auto">
                   <a href="#contact-form" onClick={handleSmoothScroll}>
                     <Button variant="outline" className="w-full border-2 border-slate-200 text-[#002147] hover:border-[#002147] hover:bg-transparent h-16 text-lg font-bold rounded-xl transition-all duration-300">
                       このプランで相談を予約する
@@ -1111,7 +1135,7 @@ export default function HomeClient() {
 
           <div className="mt-8 grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm flex items-start gap-4">
-              <div className="mt-1 bg-[#800000]/10 p-2 rounded-full">
+              <div className="mt-1 bg-[#800000]/10 p-2 rounded-full flex-shrink-0">
                 <Check className="w-4 h-4 text-[#800000]" />
               </div>
               <div>
@@ -1120,7 +1144,7 @@ export default function HomeClient() {
               </div>
             </div>
             <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm flex items-start gap-4">
-              <div className="mt-1 bg-[#800000]/10 p-2 rounded-full">
+              <div className="mt-1 bg-[#800000]/10 p-2 rounded-full flex-shrink-0">
                 <Check className="w-4 h-4 text-[#800000]" />
               </div>
               <div>
@@ -1134,7 +1158,7 @@ export default function HomeClient() {
 
       {/* Essay Method Section */}
       <section className="py-20 md:py-24 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
-        <div className="max-w-4xl mx-auto text-center bg-white p-12 md:p-16 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100">
+        <div className="max-w-4xl mx-auto text-center bg-white p-10 md:p-16 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100">
           <h2 className="text-3xl md:text-4xl font-bold text-[#002147] font-serif mb-6 tracking-wide" style={{ wordBreak: 'keep-all' }}>
             佐藤塾の小論文指導とは
           </h2>
@@ -1161,18 +1185,20 @@ export default function HomeClient() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
             <Link href="/guide/essay/articles" className="group block h-full">
-              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-10 h-full border border-white/10 hover:border-[#C5A059]/50 hover:bg-white/10 transition-all duration-300 flex flex-col">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-10 h-full border border-white/10 hover:border-[#C5A059]/50 hover:bg-white/10 transition-all duration-300 flex flex-col">
+                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8 flex-shrink-0">
                   <PenTool className="w-8 h-8 text-[#C5A059]" />
                 </div>
                 <h3 className="text-2xl font-bold text-white font-serif mb-4 group-hover:text-[#C5A059] transition-colors">
                   小論文 対策ガイド
                 </h3>
-                <p className="text-white/70 mb-10 leading-relaxed flex-1">
-                  「何を書けばいいかわからない」を抜け出して、SFCの教授をうなずかせる文章の組み立て方と、資料の読み解き方をわかりやすく解説します。
-                </p>
+                <div className="flex-1">
+                  <p className="text-white/70 mb-10 leading-relaxed">
+                    「何を書けばいいかわからない」を抜け出して、SFCの教授をうなずかせる文章の組み立て方と、資料の読み解き方をわかりやすく解説します。
+                  </p>
+                </div>
                 <div className="flex items-center text-[#C5A059] font-bold mt-auto tracking-widest text-sm uppercase">
                   <span>View Articles</span>
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-2 transition-transform" />
@@ -1181,16 +1207,18 @@ export default function HomeClient() {
             </Link>
 
             <Link href="/ao-guide" className="group block h-full">
-              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-10 h-full border border-white/10 hover:border-[#C5A059]/50 hover:bg-white/10 transition-all duration-300 flex flex-col">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-10 h-full border border-white/10 hover:border-[#C5A059]/50 hover:bg-white/10 transition-all duration-300 flex flex-col">
+                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8 flex-shrink-0">
                   <Target className="w-8 h-8 text-[#C5A059]" />
                 </div>
                 <h3 className="text-2xl font-bold text-white font-serif mb-4 group-hover:text-[#C5A059] transition-colors">
                   AO入試 対策ガイド
                 </h3>
-                <p className="text-white/70 mb-10 leading-relaxed flex-1">
-                  目立つ実績がなくても大丈夫。自分だけの研究テーマの見つけ方から、志望理由書やポートフォリオの作り方まで、一つひとつ丁寧に解説します。
-                </p>
+                <div className="flex-1">
+                  <p className="text-white/70 mb-10 leading-relaxed">
+                    目立つ実績がなくても大丈夫。自分だけの研究テーマの見つけ方から、志望理由書やポートフォリオの作り方まで、一つひとつ丁寧に解説します。
+                  </p>
+                </div>
                 <div className="flex items-center text-[#C5A059] font-bold mt-auto tracking-widest text-sm uppercase">
                   <span>View Guide</span>
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-2 transition-transform" />
@@ -1286,16 +1314,22 @@ export default function HomeClient() {
                     <label className="block text-sm font-bold text-[#002147] mb-3">
                       ご希望のプラン <span className="text-[#800000]">*</span>
                     </label>
-                    <select
-                      className="w-full h-14 px-4 border border-slate-200 rounded-xl bg-[#FAF9F6] text-[#333333] focus:border-[#002147] focus:outline-none focus:ring-1 focus:ring-[#002147]"
-                      value={formData.plan}
-                      onChange={(e) => setFormData({ ...formData, plan: e.target.value })}
-                      required
-                    >
-                      <option value="">プランを選択してください</option>
-                      <option value="complete">AO入試＋一般入試：SFC二刀流プラン</option>
-                      <option value="basic">小論文のみ：小論文特化プラン</option>
-                    </select>
+                    <div className="relative">
+                      <select
+                        className="w-full h-14 px-4 border border-slate-200 rounded-xl bg-[#FAF9F6] text-[#333333] focus:border-[#002147] focus:outline-none focus:ring-1 focus:ring-[#002147] appearance-none"
+                        value={formData.plan}
+                        onChange={(e) => setFormData({ ...formData, plan: e.target.value })}
+                        required
+                      >
+                        <option value="">プランを選択してください</option>
+                        <option value="complete">AO入試＋一般入試：SFC二刀流プラン</option>
+                        <option value="basic">小論文のみ：小論文特化プラン</option>
+                      </select>
+                      {/* 上品な下矢印アイコンを追加 */}
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#002147]">
+                        <ArrowDown className="w-4 h-4 opacity-50" />
+                      </div>
+                    </div>
                   </div>
 
                   <div>
