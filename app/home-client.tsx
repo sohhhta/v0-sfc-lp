@@ -176,7 +176,7 @@ export default function HomeClient() {
           {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
             合格者の8割が、小論文未経験・実績ゼロからスタートしています。<br className="hidden md:block" />
-            マニュアル化された指導ではなく、塾長が生徒一人ひとりと向き合い、その人だけの強みを引き出します。<br className="hidden md:block" />
+            マニュアル化された指導ではなく、塾長が生徒一人ひとりと向き合い、<br className="hidden md:block" />その人だけの強みを引き出します。<br className="hidden md:block" />
             2人に1人が合格する確かな実績で、SFC合格までサポートします。
           </p>
 
@@ -191,7 +191,7 @@ export default function HomeClient() {
                   <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500"></span>
                 </span>
                 <p className="text-white text-sm sm:text-base font-bold tracking-wider leading-snug text-center">
-                  一人ひとりへの指導の質を守るため、<br className="sm:hidden" />今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b border-[#C5A059]">残り5名</span>
+                  一人ひとりへの指導の質を守るため、<br className="sm:hidden md:block" />今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b border-[#C5A059]">残り5名</span>
                 </p>
               </div>
 
@@ -212,7 +212,7 @@ export default function HomeClient() {
           {/* Stats Section */}
           <div className="max-w-4xl mx-auto w-full">
             <div className="md:hidden flex flex-col items-center justify-center p-6 border border-[#C5A059] rounded-lg bg-[#C5A059]/10 backdrop-blur-sm shadow-lg mb-4">
-              <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase font-serif">2026年度 合格率</p>
+              <p className="text-xs text-[#C5A059] mb-1 tracking-[0.2em] font-bold uppercase font-serif">2026年度 合格���</p>
               <p className="text-6xl font-bold text-[#C5A059] tracking-tight" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 700 }}>50<span className="text-2xl">%</span></p>
               <p className="text-sm text-[#D4AF37] mt-2 font-medium drop-shadow-[0_0_8px_rgba(0,33,71,1)]">(全受験生14名中7名が合格)</p>
             </div>
@@ -500,7 +500,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br />あなたらしさを言葉にします</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小��文やAO対策の進捗確認だけでなく、英語や数学など他教科の学習計画づくりも一緒にサポートします。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小���文やAO対策の進捗確認だけでなく、英語や数学など他教科の学習計画づくりも一緒にサポートします。</p>
               </div>
             </div>
 
