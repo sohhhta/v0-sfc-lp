@@ -414,7 +414,7 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-5 border-b border-slate-200 pb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">02</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに確認し丁寧に見直します</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに返却します</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm lg:text-base leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
@@ -468,7 +468,7 @@ export default function HomeClient() {
             <div className="bg-white rounded-2xl p-6 lg:p-8 border-2 border-[#800000]/10 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-5 border-b border-slate-100 pb-4">
                 <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">03</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br />あなたらしさを言葉にします</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br />総括と計画の見直しをします</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、<strong className="text-[#800000]">英語や数学など他教科の学習計画づくりも一緒にサポート</strong>します。</p>
@@ -501,7 +501,7 @@ export default function HomeClient() {
                 <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに確認し丁寧に見直します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間��内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間���内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
