@@ -65,7 +65,7 @@ export function FloatingCTA() {
           onClick={handleScrollToForm}
           className="w-full h-14 bg-[#800000] hover:bg-[#600000] text-white font-bold text-base shadow-[0_4px_16px_rgba(128,0,0,0.35)] rounded-lg tracking-wide active:scale-[0.98] transition-transform"
         >
-          無料で塾長に相談する
+          無料で「個別面談 ＆ お試し添削」を体験する
         </Button>
       </div>
 
