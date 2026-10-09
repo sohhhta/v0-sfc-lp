@@ -498,10 +498,10 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-3">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">02</div>
-                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに確認し丁寧に見直します</h3>
+                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに返却します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間���内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
@@ -514,7 +514,7 @@ export default function HomeClient() {
               <div className="p-6 pb-4 flex-1">
                 <div className="flex items-center gap-4 mb-4 border-b border-slate-100 pb-3">
                   <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">03</div>
-                  <h3 className="text-base font-bold text-[#800000] leading-snug">オンライン面談で、<br />あなたらしさを言葉にします</h3>
+                  <h3 className="text-base font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br />総括と計画の見直しをします</h3>
                 </div>
                 <p className="text-[#333333] text-sm leading-relaxed mb-2">
                   週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、<strong className="text-[#800000]">英語や数学など他教科の学習計画づくりも一緒にサポート</strong>します。
@@ -586,13 +586,26 @@ export default function HomeClient() {
                   </div>
                 </div>
                 
-                {/* After */}
+                {/* After - 要件1: アドバイスの簡潔化とTO BE例の追加 */}
                 <div className="bg-white p-8 md:p-10 border-2 border-[#800000]/20 rounded-2xl relative pt-16 flex flex-col h-full shadow-sm">
                   <span className="absolute top-0 left-0 bg-[#800000] text-white text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">塾長のフィードバック</span>
-                  <div className="flex-1">
-                    <p className="text-[#333333] font-medium leading-loose text-base md:text-lg">
-                      「『IT技術を活用』という言葉は少し抽象的かもしれません。<strong className="text-[#800000] border-b border-dashed border-[#800000]/50 pb-0.5">あなたが実際にA町を訪れて感じた課題</strong>をベースに、『高齢者でも使いやすい遠隔医療アプリの提案』として具体化してみましょう。なぜあなたがそれを作りたいのか、ご自身の体験をもっと前に出してみてください！」
-                    </p>
+                  <div className="flex-1 flex flex-col gap-6">
+                    <div className="bg-red-50/50 p-5 rounded-xl border border-red-100">
+                      <p className="text-[#800000] font-bold text-sm mb-2 flex items-center gap-2">
+                        <span className="text-base">💡</span> 塾長のアドバイス
+                      </p>
+                      <p className="text-[#333333] font-medium text-sm md:text-base leading-relaxed">
+                        「IT技術を活用」は抽象的です。<strong className="text-[#800000] border-b border-[#800000]/50">あなたが実際にA町で感じた課題と原体験</strong>をベースに具体化しましょう。
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-[#002147] font-bold text-sm mb-3 flex items-center gap-2">
+                        <span className="text-base">✨</span> 書き直し例（TO BE）
+                      </p>
+                      <p className="text-[#666666] leading-relaxed text-sm md:text-base border-l-2 border-[#C5A059] pl-4 py-1">
+                        「祖母が暮らすA町を訪れた際、交通手段がなく病院へ行けない現状を目の当たりにしました。この課題を解決するため、高齢者でも直感的に操作できる『音声入力型・遠隔医療アプリ』を提案します。」
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -827,7 +840,7 @@ export default function HomeClient() {
       {/* Pricing Section */}
       <section className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意し���した。">料金プラン</SectionTitle>
+          <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意しました。">料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch mt-16">
             
@@ -1053,7 +1066,7 @@ export default function HomeClient() {
                   <div className="mb-10 p-6 md:p-8 bg-[#FAF9F6] border border-[#C5A059]/40 rounded-xl">
                     <h4 className="font-bold text-[#800000] mb-3 font-serif">📝 面談およびお試し添削の流れ</h4>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium mb-3">
-                      まずは塾長とのオンライン面談にて、現在の学習状況や志望校などをお伺いします。その後、「日本の論点100」という書籍内に記載ある中から特定の記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回/週</strong>の無料添削を実施します。
+                      まずは塾長とのオンライン面談にて、現在の学習状況や志望校などをお伺いします。その後、「日本の論点100」という書籍内に記載ある中から特定の記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回）</strong>の無料添削を実施します。
                     </p>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium">
                       ※ 無理な入塾勧誘は一切行いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
@@ -1114,7 +1127,7 @@ export default function HomeClient() {
                         <option value="">プランを選択してください</option>
                         <option value="complete">一般入試 直前徹底対策パック</option>
                         <option value="basic">単発・小論文添削チケット（5回分）</option>
-                        <option value="undecided">まだ決めていない（トライアル後に相談したい）</option>
+                        <option value="undecided">まだ決めていない（面談後に相談したい）</option>
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#666666]">
                         <ArrowDown className="w-5 h-5" />
@@ -1197,7 +1210,7 @@ export default function HomeClient() {
             <details className="group border-b border-slate-200 pb-2">
               <summary className="flex items-center justify-between cursor-pointer py-6 hover:opacity-70 transition-opacity list-none">
                 <span className="font-bold text-[#002147] text-base md:text-lg leading-relaxed">
-                  入会金はかかりますか？
+                  入塾金はかかりますか？
                 </span>
                 <span className="text-[#C5A059] text-2xl font-bold group-open:hidden ml-6 flex-shrink-0">＋</span>
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
@@ -1216,7 +1229,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                はい、月単位でプランを変更できます。学力の伸びや状況に合わせて柔軟に対応できますので、お気軽にご相談ください。
+                はい、状況に合わせて柔軟に対応できますので、お気軽にご相談ください。
               </div>
             </details>
           </div>
