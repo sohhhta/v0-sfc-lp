@@ -501,7 +501,7 @@ export default function HomeClient() {
                 <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに確認し丁寧に見直します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間��内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
@@ -827,7 +827,7 @@ export default function HomeClient() {
       {/* Pricing Section */}
       <section className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意しました。">料金プラン</SectionTitle>
+          <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意し���した。">料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch mt-16">
             
@@ -1053,7 +1053,7 @@ export default function HomeClient() {
                   <div className="mb-10 p-6 md:p-8 bg-[#FAF9F6] border border-[#C5A059]/40 rounded-xl">
                     <h4 className="font-bold text-[#800000] mb-3 font-serif">📝 面談およびお試し添削の流れ</h4>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium mb-3">
-                      まずは塾長とのオンライン面談にて、現在の学習状況やSFCへの思いをお伺いします。その後、SFC頻出テーマである「日本の論点100」から記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回）</strong>の無料添削を実施します。
+                      まずは塾長とのオンライン面談にて、現在の学習状況や志望校などをお伺いします。その後、「日本の論点100」という書籍内に記載ある中から特定の記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回/週</strong>の無料添削を実施します。
                     </p>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium">
                       ※ 無理な入塾勧誘は一切行いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
