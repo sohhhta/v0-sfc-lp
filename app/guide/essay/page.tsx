@@ -136,7 +136,7 @@ export default function EssayGuidePage() {
             <div className="bg-[#F8F9FA] border-l-4 border-[#C5A059] pl-6 py-6 rounded-r-lg">
               <h4 className="text-lg font-bold text-[#C5A059] font-serif mb-3">過去問の「型」を覚える</h4>
               <p className="text-sm text-[#333333] leading-relaxed">
-                総合政策と環境情報の出題傾向の違いを理解し、何度も反復練習する。<span className="font-bold">1つの年度の問題でも複数の答案を作り、SFCの過去問を繰り返し解きましょう</span>。全く異なる年度の問題も特定のパターンに落とし込めます。
+                総合政策と環境情報の出題傾向の違いを理解し、何度も反復練習する。<span className="font-bold">1つの年度の問題でも複数の答案を作り、SFCの過去問を繰り返し解きましょう</span>。年度が違う問題でも、共通するパターンを見つけられます。
               </p>
             </div>
 
