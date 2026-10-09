@@ -592,7 +592,7 @@ export default function HomeClient() {
                   <div className="flex-1 flex flex-col gap-6">
                     <div className="bg-red-50/50 p-5 rounded-xl border border-red-100">
                       <p className="text-[#800000] font-bold text-sm mb-2 flex items-center gap-2">
-                        <span className="text-base">💡</span> 塾長のアドバイス
+                        <span className="text-base"></span> 塾長のアドバイス
                       </p>
                       <p className="text-[#333333] font-medium text-sm md:text-base leading-relaxed">
                         「IT技術を活用」は抽象的です。<strong className="text-[#800000] border-b border-[#800000]/50">あなたが実際にA町で感じた課題と原体験</strong>をベースに具体化しましょう。
@@ -600,7 +600,7 @@ export default function HomeClient() {
                     </div>
                     <div>
                       <p className="text-[#002147] font-bold text-sm mb-3 flex items-center gap-2">
-                        <span className="text-base">✨</span> 書き直し例（TO BE）
+                        <span className="text-base"></span> 書き直し例（TO BE）
                       </p>
                       <p className="text-[#666666] leading-relaxed text-sm md:text-base border-l-2 border-[#C5A059] pl-4 py-1">
                         「祖母が暮らすA町を訪れた際、交通手段がなく病院へ行けない現状を目の当たりにした。そこで、この課題を解決するため高齢者でも直感的に操作できる『音声入力型・遠隔医療アプリ』を提案したい。」
@@ -1069,7 +1069,7 @@ export default function HomeClient() {
                       まずは塾長とのオンライン面談にて、現在の学習状況や志望校などをお伺いします。その後、「日本の論点100」という書籍内にある特定の記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回）</strong>の無料添削を実施します。
                     </p>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium">
-                      ※ 無理な入塾勧誘は一切行いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
+                      ※ 無理な入塾勧誘は一切��いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
                     </p>
                   </div>
 
