@@ -603,7 +603,7 @@ export default function HomeClient() {
                         <span className="text-base">✨</span> 書き直し例（TO BE）
                       </p>
                       <p className="text-[#666666] leading-relaxed text-sm md:text-base border-l-2 border-[#C5A059] pl-4 py-1">
-                        「祖母が暮らすA町を訪れた際、交通手段がなく病院へ行けない現状を目の当たりにしました。こ���課題を解決するため、高齢者でも直感的に操作できる『音声入力型・遠隔医療アプリ』を提案します。」
+                        「祖母が暮らすA町を訪れた際、交通手段がなく病院へ行けない現状を目の当たりにしました。こ�����課題を解決するため、高齢者でも直感的に操作できる『音声入力型・遠隔医療アプリ』を提案します。」
                       </p>
                     </div>
                   </div>
@@ -625,7 +625,7 @@ export default function HomeClient() {
       <section className="py-20 px-4 bg-white relative overflow-hidden border-b border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
-            「自分に何ができるかわからない」<br className="md:hidden" />と悩んでいませんか？
+            「自分に何ができるかわからない��<br className="md:hidden" />と悩んでいませんか？
           </h3>
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
             志望校合格への第一歩は、<strong className="text-[#800000]">「今の自分を正しく知り、正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />「今の成績で本当に受かるのか」といった不安があれば、まずは無料相談でお気軽にお話しください。
@@ -876,7 +876,7 @@ export default function HomeClient() {
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">塾長オンライン面談（適宜）</span>
+                    <span className="text-base text-[#333333] font-medium">塾長オンライン面談（週1回）</span>
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" />
