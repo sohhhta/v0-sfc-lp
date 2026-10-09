@@ -603,7 +603,7 @@ export default function HomeClient() {
                         <span className="text-base">✨</span> 書き直し例（TO BE）
                       </p>
                       <p className="text-[#666666] leading-relaxed text-sm md:text-base border-l-2 border-[#C5A059] pl-4 py-1">
-                        「祖母が暮らすA町を訪れた際、交通手段がなく病院へ行けない現状を目の当たりにしました。この課題を解決するため、高齢者でも直感的に操作できる『音声入力型・遠隔医療アプリ』を提案します。」
+                        「祖母が暮らすA町を訪れた際、交通手段がなく病院へ行けない現状を目の当たりにしました。こ���課題を解決するため、高齢者でも直感的に操作できる『音声入力型・遠隔医療アプリ』を提案します。」
                       </p>
                     </div>
                   </div>
@@ -613,7 +613,7 @@ export default function HomeClient() {
               <div className="mt-10 pt-8 border-t border-slate-200">
                 <p className="text-[#666666] leading-relaxed text-sm font-medium flex items-start gap-3">
                   <span className="text-[#800000] font-bold mt-0.5 font-serif">※</span>
-                  <span>単なる「てにをは」の修正で終わらせることはありません。「なぜSFCに行きたいのか」「社会をどう変えたいのか」という根本的な問いに、塾長が本気で向き合います。この対話の積み重ねが、合格への一番の近道です。</span>
+                  <span>単なる「てにをは」の修正で終わらせることはありません。「なぜSFCに行きたいのか」「社会をどう変えたい���か」という根本的な問いに、塾長が本気で向き合います。この対話の積み重ねが、合格への一番の近道です。</span>
                 </p>
               </div>
             </div>
@@ -1066,7 +1066,7 @@ export default function HomeClient() {
                   <div className="mb-10 p-6 md:p-8 bg-[#FAF9F6] border border-[#C5A059]/40 rounded-xl">
                     <h4 className="font-bold text-[#800000] mb-3 font-serif">📝 面談およびお試し添削の流れ</h4>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium mb-3">
-                      まずは塾長とのオンライン面談にて、現在の学習状況や志望校などをお伺いします。その後、「日本の論点100」という書籍内に記載ある中から特定の記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回）</strong>の無料添削を実施します。
+                      まずは塾長とのオンライン面談にて、現在の学習状況や志望校などをお伺いします。その後、「日本の論点100」という書籍内にある特定の記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回）</strong>の無料添削を実施します。
                     </p>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium">
                       ※ 無理な入塾勧誘は一切行いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
