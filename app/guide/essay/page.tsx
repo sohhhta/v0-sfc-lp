@@ -219,11 +219,7 @@ export default function EssayGuidePage() {
                 無料で塾長に相談する
               </Button>
             </Link>
-            <Link href="/course">
-              <Button className="border-2 border-[#C5A059] text-[#C5A059] bg-transparent hover:bg-[#C5A059] hover:text-[#002147] font-bold px-10 py-6 h-auto transition-all duration-300 w-full sm:w-auto">
-                コース詳細を見る
-              </Button>
-            </Link>
+
           </div>
         </div>
       </section>

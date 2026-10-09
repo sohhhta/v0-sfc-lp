@@ -147,7 +147,7 @@ export default function AoGuidePage() {
                   「どうして世界または日本一周をしようと思ったのか？」
                 </p>
                 <p className="text-[#333333] text-sm md:text-base leading-relaxed">
-                  その行動の背景にある独自の動機（意志）と、そこから得た問いが、あなたが大学で進めたい研究の方向性とどれほど強固に繋がっているか。この「因果の解像度」こそが合否を分ける基準です。
+                  その行動の背景にある独自の動機（意志）と、そこから得た問いが、あなたが大学で進めたい研究���方向性とどれほど強固に繋がっているか。この「因果の解像度」こそが合否を分ける基準です。
                 </p>
               </div>
               <p className="text-[#333333]">
@@ -404,11 +404,7 @@ export default function AoGuidePage() {
                 無料で塾長に相談する
               </Button>
             </Link>
-            <Link href="/course">
-              <Button className="border-2 border-[#C5A059] text-[#C5A059] bg-transparent hover:bg-[#C5A059] hover:text-[#002147] font-bold px-10 py-6 h-auto transition-all duration-300 w-full sm:w-auto">
-                コース詳細を見る
-              </Button>
-            </Link>
+
           </div>
         </div>
       </section>

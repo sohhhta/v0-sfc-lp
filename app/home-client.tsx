@@ -287,7 +287,7 @@ export default function HomeClient() {
                     SFCが求める「独自の視点」に特化していないから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    学校や一般的な塾で教わるのは、幅広い大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届きません。
+                    学校や一般的な塾で教わるのは、幅広��大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届きません。
                   </p>
                 </div>
               </div>
@@ -603,7 +603,7 @@ export default function HomeClient() {
                         <span className="text-base"></span> 書き直し例（TO BE）
                       </p>
                       <p className="text-[#666666] leading-relaxed text-sm md:text-base border-l-2 border-[#C5A059] pl-4 py-1">
-                        「祖母が暮らすA町を訪れた際、交通手段がなく病院へ行けない現状を目の当たりにした。そこで、この課題を解決するため高齢者でも直感的に操作できる『音声入力型・遠隔医療アプリ』を提案したい。」
+                        「祖母が暮らすA町を訪れた際、交通手段がなく病院へ行けない現状を目の当たりにした。そこで、この課題を解決するため高齢者でも直感的に操作できる『音声���力型・遠隔医療アプリ』を提案したい。」
                       </p>
                     </div>
                   </div>
@@ -894,9 +894,7 @@ export default function HomeClient() {
                       無料で「個別面談 ＆ お試し添削」を体験する
                     </Button>
                   </a>
-                  <Link href="/course" className="text-center mt-2">
-                    <span className="text-sm font-bold text-[#666666] hover:text-[#002147] transition-colors border-b border-[#E5E7EB] pb-1">プランの詳細を見る</span>
-                  </Link>
+
                 </div>
               </div>
             </div>
@@ -944,9 +942,7 @@ export default function HomeClient() {
                       無料で「個別面談 ＆ お試し添削」を体験する
                     </Button>
                   </a>
-                  <Link href="/course" className="text-center mt-2">
-                    <span className="text-sm font-bold text-[#666666] hover:text-[#002147] transition-colors border-b border-[#E5E7EB] pb-1">プランの詳細を見る</span>
-                  </Link>
+
                 </div>
               </div>
             </div>

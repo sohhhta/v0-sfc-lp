@@ -10,8 +10,7 @@ export function Header() {
 
   const navLinks = [
     { name: 'ホーム', href: '/' },
-    { name: 'コース・料金', href: '/course' },
-    { name: '合格実績', href: '/results' },
+      { name: '合格実績', href: '/results' },
     {
       name: '小論文ガイド',
       href: '/guide/essay',

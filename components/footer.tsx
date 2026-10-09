@@ -8,8 +8,7 @@ export function Footer() {
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8">
           <Link href="/" className="text-white/80 hover:text-white transition-colors text-sm">ホーム</Link>
-          <Link href="/course" className="text-white/80 hover:text-white transition-colors text-sm">コース・料金</Link>
-          <Link href="/results" className="text-white/80 hover:text-white transition-colors text-sm">合格実績</Link>
+                  <Link href="/results" className="text-white/80 hover:text-white transition-colors text-sm">合格実績</Link>
           <Link href="/guide/essay" className="text-white/80 hover:text-white transition-colors text-sm">小論文ガイド</Link>
           <Link href="/ao-guide" className="text-white/80 hover:text-white transition-colors text-sm">AO入試ガイド</Link>
         </div>
