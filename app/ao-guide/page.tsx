@@ -188,7 +188,7 @@ export default function AoGuidePage() {
                 AO入試は非常に倍率も高い不確実な試験です。だからこそ、佐藤塾では「一般入試の学力を同時に身につけるロードマップ」を前提として指導を行います。
               </p>
               <p className="text-[#333333] text-sm md:text-base leading-loose mt-4">
-                「万が一AOが不合格でも一般で戦いきれる」という確かな学力と精神。これがあるからこそ、小論文で培ったロジカルライティングを駆使した効率よく書類を作成できるようになります。
+                「万が一AOが不合格でも一般で戦いきれる」という確かな学力と精神。これがあるからこそ、小論文で培った論理的な文章力を生かし、効率よく書類を作成できます。
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -224,7 +224,7 @@ export default function AoGuidePage() {
                 最初から完璧な構成案を考えて提出する必要は一切ありません。あなたの頭の中にある断片的な興味や関心を、まずはそのまま佐藤塾のAIシステムにぶつけてください。
               </p>
               <p className="text-[#333333] leading-relaxed">
-                あらゆる可能性、あらゆる方向性、あらゆる先行研究や手段の調査をAIと共に徹底的に行います。この高速な試行錯誤（ボトムアップな壁打ち）の積み重ねが、あなたの思考スピードを極限まで引き上げ、大量の「具体的なアウトプット」を生み出します。
+                可能性や方向性、先行研究をAIとともに幅広く調べます。この高速な試行錯誤（ボトムアップな壁打ち）の積み重ねが、あなたの思考スピードを極限まで引き上げ、大量の「具体的なアウトプット」を生み出します。
               </p>
               <div className="space-y-3 pt-2">
                 <div className="flex items-start gap-3">

@@ -613,7 +613,7 @@ export default function HomeClient() {
               <div className="mt-10 pt-8 border-t border-slate-200">
                 <p className="text-[#666666] leading-relaxed text-sm font-medium flex items-start gap-3">
                   <span className="text-[#800000] font-bold mt-0.5 font-serif">※</span>
-                  <span>単なる「てにをは」の修正で終わらせることはありません。「なぜSFCに行きたいのか」「社会をどう変えたい���か」という根本的な問いに、塾長が本気で向き合います。この対話の積み重ねが、合格への一番の近道です。</span>
+                  <span>単なる「てにをは」の修正で終わらせることはありません。「なぜSFCに行きたいのか」「社会をどう変えたいのか」という根本的な問いに、塾長が本気で向き合います。この対話の積み重ねが、合格への一番の近道です。</span>
                 </p>
               </div>
             </div>
@@ -625,7 +625,7 @@ export default function HomeClient() {
       <section className="py-20 px-4 bg-white relative overflow-hidden border-b border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
-            「自分に何ができるかわからない��<br className="md:hidden" />と悩んでいませんか？
+            「自分に何ができるかわからない？」<br className="md:hidden" />と悩んでいませんか？
           </h3>
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
             志望校合格への第一歩は、<strong className="text-[#800000]">「今の自分を正しく知り、正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />「今の成績で本当に受かるのか」といった不安があれば、まずは無料相談でお気軽にお話しください。
@@ -1069,7 +1069,7 @@ export default function HomeClient() {
                       まずは塾長とのオンライン面談にて、現在の学習状況や志望校などをお伺いします。その後、「日本の論点100」という書籍内にある特定の記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回）</strong>の無料添削を実施します。
                     </p>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium">
-                      ※ 無理な入塾勧誘は一切行いませ��。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
+                      ※ 無理な入塾勧誘は一切行いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
                     </p>
                   </div>
 
