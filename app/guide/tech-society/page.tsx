@@ -116,7 +116,7 @@ export default function TechSocietyPage() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-[#800000] mb-1">Gくんの気づき</p>
-                  <p className="text-slate-700 text-sm leading-relaxed m-0">「うっ…無理ですね。予算もないし、そもそもお年寄りは怖がって乗らないかもしれません。僕はテクノロジーの『凄さ』ばかりに気を取られて、それを使う『人間』や『社会のルール』のことを全く考えていませんでした。」</p>
+                  <p className="text-slate-700 text-sm leading-relaxed m-0">「うっ…無理ですね。予算もないし、そもそもお年寄りは怖がって乗らないかもしれません。僕はテクノロジーの『凄さ』ばかりに気を取られて、それを使う『人間』や『社会のルール』のことをまったく考えていませんでした。」</p>
                 </div>
               </div>
 

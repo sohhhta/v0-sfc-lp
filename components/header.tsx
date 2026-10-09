@@ -10,8 +10,7 @@ export function Header() {
 
   const navLinks = [
     { name: 'ホーム', href: '/' },
-    { name: 'コース・料金', href: '/course' },
-    { name: '合格実績', href: '/results' },
+      { name: '合格実績', href: '/results' },
     {
       name: '小論文ガイド',
       href: '/guide/essay',
@@ -81,7 +80,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Link href="/#contact-form" className="hidden md:block">
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">
-              無料相談を申し込む
+              個別面談 ＆ お試し添削を予約する
             </Button>
           </Link>
 

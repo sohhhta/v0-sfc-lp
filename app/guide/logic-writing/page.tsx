@@ -69,7 +69,7 @@ export default function LogicWritingPage() {
             <div className="bg-red-50 p-6 rounded-xl border border-red-100 my-6">
               <h4 className="font-bold text-[#800000] mt-0 mb-2">よくある「設問無視」のパターン</h4>
               <ul className="text-sm text-slate-700 m-0 pl-5">
-                <li>・「資料AとBの対立点を指摘し〜」とあるのに、資料に全く触れていない。</li>
+                <li>・「資料AとBの対立点を指摘し〜」とあるのに、資料にまったく触れていない。</li>
                 <li>・「具体的な解決策を提案せよ」とあるのに、問題の背景分析だけで終わっている。</li>
                 <li>・問われていることではなく、自分が過去に探究したテーマを強引に語っている。</li>
               </ul>

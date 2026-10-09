@@ -119,7 +119,7 @@ export default function HomeClient() {
         "@id": "https://lifeeling.jp/#organization",
         "name": "佐藤塾",
         "url": "https://lifeeling.jp",
-        "description": "合格率50.0%を叩き出す慶應SFC（総合政策・環境情報）専門の伴走指導塾。",
+        "description": "慶應SFC（総合政策・環境情報）の一般入試・小論文対策に特化した専門塾。代表によるマンツーマン指導のため【本年度は残り3名】で募集を締め切ります。まずは完全無料の1週間お試し添削へ。",
         "image": "https://lifeeling.jp/hero.jpg",
         "founder": {
           "@type": "Person",
@@ -127,14 +127,14 @@ export default function HomeClient() {
           "jobTitle": "塾長",
           "description": "慶應義塾大学総合政策学部卒業生。6年間で39名のSFC合格者を輩出。"
         },
-        "knowsAbout": ["慶應SFC対策", "AO入試小論文", "ロジカルライティング"],
+        "knowsAbout": ["慶應SFC対策", "一般入試小論文", "ロジカルライティング"],
         "priceRange": "¥¥¥"
       },
       {
         "@type": "WebSite",
         "@id": "https://lifeeling.jp/#website",
         "url": "https://lifeeling.jp",
-        "name": "佐藤塾 | 慶應SFC特化型指導塾",
+        "name": "【残り3名】慶應SFC特化の一般入試・小論文対策｜佐藤塾",
         "publisher": { "@id": "https://lifeeling.jp/#organization" }
       }
     ]
@@ -169,7 +169,7 @@ export default function HomeClient() {
           {/* Main Copy */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wide leading-snug sm:leading-tight text-balance drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
             偏差値40台、実績ゼロからでも。<br className="hidden md:block" />
-            塾長が直接寄り添う1on1指導で掴む、<br className="block md:hidden" />
+            塾長が直接寄り添う1on1指導で掴む、
             <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-4 leading-tight">SFC合格。</span>
           </h1>
 
@@ -191,7 +191,7 @@ export default function HomeClient() {
                   <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500"></span>
                 </span>
                 <p className="text-white text-sm sm:text-base font-bold tracking-wider leading-snug text-center">
-                  一人ひとりへの指導の質を守るため、<br className="sm:hidden md:block" />今年度の新規受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b border-[#C5A059]">残り5名</span>
+                  一人ひとりへの指導の質を守るため、<br className="sm:hidden md:block" />今年度の直前対策パックの受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b border-[#C5A059]">残り3名</span>
                 </p>
               </div>
 
@@ -200,9 +200,9 @@ export default function HomeClient() {
                   size="lg"
                   className="w-full bg-[#800000] hover:bg-[#C5A059] text-white text-lg md:text-xl font-bold py-8 h-auto shadow-[0_4px_24px_rgba(128,0,0,0.6)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.5)] transition-all duration-300 hover:-translate-y-1 border border-white/20 rounded-full group"
                 >
-                  <span className="flex items-center justify-center gap-3 font-serif">
-                    無料の個別相談を予約する
-                    <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                  <span className="flex items-center justify-center gap-2 font-serif flex-wrap px-2">
+                    個別面談 ＆ お試し添削を予約する
+                    <ArrowRight className="w-6 h-6 ml-1 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </Button>
               </a>
@@ -330,35 +330,6 @@ export default function HomeClient() {
                 </p>
               </div>
             </div>
-
-            <div className="relative">
-              <div className="md:hidden absolute -top-2 -left-2 opacity-[0.05] pointer-events-none">
-                <span className="text-7xl font-bold text-[#800000] font-serif leading-none">03</span>
-              </div>
-              <div className="hidden md:flex gap-14">
-                <div className="flex-shrink-0 w-32">
-                  <span className="text-sm font-bold text-[#800000]/60 font-serif tracking-widest block mb-1">原因</span>
-                  <span className="text-7xl font-bold text-[#800000]/20 font-serif leading-none block -mt-1">03</span>
-                </div>
-                <div className="border-l border-slate-200 pl-10 py-2 flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                    AO入試と一般入試の「共倒れ」が起きるから
-                  </h3>
-                  <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    AO入試の準備に時間をかけすぎると一般入試の勉強が遅れ、逆に一般入試に絞るとAO入試というせっかくのチャンスを逃してしまいます。この2つの両立を一人で計画するのは難しく、中途半端になってしまうケースが少なくありません。
-                  </p>
-                </div>
-              </div>
-              <div className="md:hidden relative border-l-2 border-[#800000]/30 pl-5">
-                <div className="text-xs font-bold text-[#800000] tracking-[0.2em] mb-2 font-serif">原因 03</div>
-                <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
-                  AO入試と一般入試の「共倒れ」が起きるから
-                </h3>
-                <p className="text-[#333333] leading-relaxed text-sm">
-                  AO入試の準備に時間をかけすぎると一般入試の勉強が遅れ、逆に一般入試に絞るとAO入試というせっかくのチャンスを逃してしまいます。この2つの両立を一人で計画するのは難しく、中途半端になってしまうケースが少なくありません。
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -384,13 +355,13 @@ export default function HomeClient() {
                 <span className="text-sm font-bold text-[#800000] tracking-widest font-serif">MESSAGE</span>
               </div>
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#002147] mb-8 font-serif tracking-wide leading-snug">
-                偏差値40台からでも遅くありません。<br />私と一緒に合格を掴みましょう。
+                偏差値40台からでも遅くありません。<br className="hidden md:block" />私と一緒に合格をつかみましょう。
               </h3>
               <p className="text-base md:text-lg text-[#333333] mb-6 leading-relaxed">
                 「もともと文章を書くのが苦手」「すごい実績なんてない」。SFCに合格した先輩たちの多くも、最初は同じような不安を抱えていました。
               </p>
               <p className="text-base md:text-lg text-[#333333] mb-6 leading-relaxed">
-                特別な才能が必要だという誤解は捨ててください。<br />正しい戦略を立てて、一つひとつの課題にしっかり向き合えば、大逆転は十分に可能です。
+                特別な才能が必要だという誤解は捨ててください。<br className="hidden md:block" />正しい戦略を立てて、一つひとつの課題にしっかり向き合えば、大逆転は十分に可能です。
               </p>
               <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
                 6年間で39名の合格者をサポートしてきた経験をもとに、あなたの「本当の魅力」を引き出します。
@@ -427,10 +398,10 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-5 border-b border-slate-200 pb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">01</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">ご自身のペースで、<br />いつでも気軽にLINEで提出</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">ご自身のペースで、<br className="hidden lg:block" />いつでも気軽にLINEで提出</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">小論文の答案や志望理由書が書けたら、スマートフォンからLINEでいつでも提出できます。回数に制限はありません。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">小論文の答案や志望理由書が書けたら、スマートフォンからLINEでいつでも提出できます。<strong className="text-[#800000]">回数に制限はありません。</strong></p>
               </div>
             </div>
 
@@ -443,7 +414,7 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-5 border-b border-slate-200 pb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">02</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに確認し丁寧に見直します</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm lg:text-base leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
@@ -481,10 +452,10 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-5 border-b border-slate-200 pb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">04</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br />塾長に直接ご相談ください</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br className="hidden lg:block" />塾長に直接ご相談ください</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">課題で迷ったときは、いつでも塾長のLINEに相談できます。不安をすぐに解消し、勉強に集中できます。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">課題で迷ったときは、<strong className="text-[#800000]">いつでも塾長のLINEに相談</strong>できます。不安をすぐに解消し、勉強に集中できます。</p>
               </div>
             </div>
 
@@ -497,10 +468,10 @@ export default function HomeClient() {
             <div className="bg-white rounded-2xl p-6 lg:p-8 border-2 border-[#800000]/10 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-5 border-b border-slate-100 pb-4">
                 <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">03</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br />あなたらしさを言葉にします</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br className="hidden lg:block" />総括と計画の見直しをします</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、英語や数学など他教科の学習計画づくりも一緒にサポートします。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、<strong className="text-[#800000]">英語や数学など他教科の学習計画づくりも一緒にサポート</strong>します。</p>
               </div>
             </div>
 
@@ -512,10 +483,10 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-3">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">01</div>
-                <h3 className="text-base font-bold text-[#002147] leading-snug">ご自身のペースで、<br />いつでも気軽にLINEで提出</h3>
+                <h3 className="text-base font-bold text-[#002147] leading-snug">ご自身のペースで、<br className="hidden lg:block" />いつでも気軽にLINEで提出</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">小論文の答案や志望理由書が書けたら、スマートフォンからLINEでいつでも提出できます。回数に制限はありません。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">小論文の答案や志望理由書が書けたら、スマートフォンからLINEでいつでも提出できます。<strong className="text-[#800000]">回数に制限はありません。</strong></p>
               </div>
             </div>
 
@@ -527,7 +498,7 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-3">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">02</div>
-                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに確認し丁寧に見直します</h3>
+                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
@@ -543,10 +514,10 @@ export default function HomeClient() {
               <div className="p-6 pb-4 flex-1">
                 <div className="flex items-center gap-4 mb-4 border-b border-slate-100 pb-3">
                   <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">03</div>
-                  <h3 className="text-base font-bold text-[#800000] leading-snug">オンライン面談で、<br />あなたらしさを言葉にします</h3>
+                  <h3 className="text-base font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br className="hidden lg:block" />総括と計画の見直しをします</h3>
                 </div>
                 <p className="text-[#333333] text-sm leading-relaxed mb-2">
-                  週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、英語や数学など他教科の学習計画づくりもサポートします。
+                  週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、<strong className="text-[#800000]">英語や数学など他教科の学習計画づくりも一緒にサポート</strong>します。
                 </p>
               </div>
               <div className="mx-6 mb-6 aspect-video bg-white border border-slate-200 p-1 rounded-xl flex items-center justify-center">
@@ -562,10 +533,10 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-3">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">04</div>
-                <h3 className="text-base font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br />塾長に直接ご相談ください</h3>
+                <h3 className="text-base font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br className="hidden lg:block" />塾長に直接ご相談ください</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">課題で迷ったときは、いつでも塾長のLINEに相談できます。不安をすぐに解消し、勉強に集中できます。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">課題で迷ったときは、<strong className="text-[#800000]">いつでも塾長のLINEに相談</strong>できます。不安をすぐに解消し、勉強に集中できます。</p>
               </div>
             </div>
 
@@ -615,13 +586,26 @@ export default function HomeClient() {
                   </div>
                 </div>
                 
-                {/* After */}
+                {/* After - 要件1: アドバイスの簡潔化とTO BE例の追加 */}
                 <div className="bg-white p-8 md:p-10 border-2 border-[#800000]/20 rounded-2xl relative pt-16 flex flex-col h-full shadow-sm">
                   <span className="absolute top-0 left-0 bg-[#800000] text-white text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">塾長のフィードバック</span>
-                  <div className="flex-1">
-                    <p className="text-[#333333] font-medium leading-loose text-base md:text-lg">
-                      「『IT技術を活用』という言葉は少し抽象的かもしれません。<strong className="text-[#800000] border-b border-dashed border-[#800000]/50 pb-0.5">あなたが実際にA町を訪れて感じた課題</strong>をベースに、『高齢者でも使いやすい遠隔医療アプリの提案』として具体化してみましょう。なぜあなたがそれを作りたいのか、ご自身の体験をもっと前に出してみてください！」
-                    </p>
+                  <div className="flex-1 flex flex-col gap-6">
+                    <div className="bg-red-50/50 p-5 rounded-xl border border-red-100">
+                      <p className="text-[#800000] font-bold text-sm mb-2 flex items-center gap-2">
+                        <span className="text-base"></span> 塾長のアドバイス
+                      </p>
+                      <p className="text-[#333333] font-medium text-sm md:text-base leading-relaxed">
+                        「IT技術を活用」は抽象的です。<strong className="text-[#800000] border-b border-[#800000]/50">あなたが実際にA町で感じた課題と原体験</strong>をベースに具体化しましょう。
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-[#002147] font-bold text-sm mb-3 flex items-center gap-2">
+                        <span className="text-base"></span> 書き直し例（TO BE）
+                      </p>
+                      <p className="text-[#666666] leading-relaxed text-sm md:text-base border-l-2 border-[#C5A059] pl-4 py-1">
+                        「祖母が暮らすA町を訪れた際、交通手段がなく病院へ行けない現状を目の当たりにした。そこで、この課題を解決するため高齢者でも直感的に操作できる『音声入力型・遠隔医療アプリ』を提案したい。」
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -646,11 +630,11 @@ export default function HomeClient() {
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
             志望校合格への第一歩は、<strong className="text-[#800000]">「今の自分を正しく知り、正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />「今の成績で本当に受かるのか」といった不安があれば、まずは無料相談でお気軽にお話しください。
           </p>
-          <a href="#contact-form" onClick={handleSmoothScroll}>
-            <Button className="w-full max-w-sm rounded-full bg-[#800000] hover:bg-[#C5A059] text-white font-bold py-6 h-auto text-base md:text-lg transition-colors duration-300 shadow-md group">
-              <span className="flex items-center justify-center gap-3 font-serif">
-                無料の個別相談を予約する
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <a href="#contact-form" onClick={handleSmoothScroll} className="inline-block w-full sm:w-auto">
+            <Button className="w-full sm:w-auto min-w-[320px] rounded-full bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-8 py-5 h-auto text-base md:text-lg transition-colors duration-300 shadow-md group">
+              <span className="flex items-center justify-center gap-2 font-serif text-center flex-wrap">
+                無料の個別面談 ＆<br className="sm:hidden" />お試し添削に申し込む
+                <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
               </span>
             </Button>
           </a>
@@ -698,7 +682,7 @@ export default function HomeClient() {
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#002147] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      基礎を固め、あなただけの<br />「視点」を見つける
+                      基礎を固め、あなただけの<br className="hidden lg:block" />「視点」を見つける
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
@@ -720,7 +704,7 @@ export default function HomeClient() {
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#800000] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      他学部の過去問を活用し、<br />実践力を養う
+                      他学部の過去問を活用し、<br className="hidden lg:block" />実践力を養う
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
@@ -742,7 +726,7 @@ export default function HomeClient() {
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#C5A059] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      SFCの過去問演習で、<br />どんな出題にも対応できる力を
+                      SFCの過去問演習で、<br className="hidden lg:block" />どんな出題にも対応できる力を
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
@@ -825,19 +809,17 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Six Reasons Section */}
+      {/* Four Reasons Section */}
       <section className="py-24 md:py-32 px-4 bg-white border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle>佐藤塾が選ばれる6つの理由</SectionTitle>
+          <SectionTitle>佐藤塾が選ばれる4つの理由</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-6 lg:gap-10 items-stretch mt-16">
             {[
-              { num: '01', title: 'AOと一般入試の併願をサポート', desc: 'どちらの受験方式でも、無理のない学習計画で総合的にサポートします。' },
-              { num: '02', title: '提出後、迅速で丁寧な添削', desc: '提出された小論文は塾長がすぐに確認・添削し、学習のペースを止めません。' },
-              { num: '03', title: '塾長との丁寧な1on1指導', desc: 'SFC合格の鍵となる「自分らしさ」を見つけるため、塾長が直接対話します。' },
-              { num: '04', title: 'AO合格後の追加費用なし', desc: 'AO入試で合格した場合はその月で卒業となり、それ以降の費用はかかりません。' },
-              { num: '05', title: 'SFCに特化した指導ノウハウ', desc: '6年間で培った指導経験をもとに、SFC合格に必要な考え方を分かりやすく教えます。' },
-              { num: '06', title: '完全オンラインで通塾不要', desc: '指導はすべてオンラインで行うため、移動時間を自分の勉強に充てられます。' },
+              { num: '01', title: '提出後、迅速で丁寧な添削', desc: '提出された小論文は塾長がすぐに確認・添削し、学習のペースを止めません。' },
+              { num: '02', title: '塾長との丁寧な1on1指導', desc: 'SFC合格の鍵となる「自分らしさ」を見つけるため、塾長が直接対話します。' },
+              { num: '03', title: 'SFCに特化した指導ノウハウ', desc: '6年間で培った指導経験をもとに、SFC合格に必要な考え方を分かりやすく教えます。' },
+              { num: '04', title: '完全オンラインで通塾不要', desc: '指導はすべてオンラインで行うため、直前期の貴重な移動時間を自分の勉強に充てられます。' },
             ].map((item) => (
               <div key={item.num} className="bg-[#FAF9F6] border border-slate-200 p-8 md:p-10 rounded-2xl flex flex-col h-full shadow-sm">
                 <div className="flex items-center gap-6 mb-6 border-b border-slate-200 pb-5">
@@ -858,28 +840,28 @@ export default function HomeClient() {
       {/* Pricing Section */}
       <section className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="AO入試を受験するかどうかで選べる、シンプルで分かりやすい料金プランです。">2つの料金プラン</SectionTitle>
+          <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意しました。">料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch mt-16">
             
             {/* Plan 1 */}
-            <div className="flex flex-col bg-white border border-slate-200 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] overflow-hidden relative h-full">
-              <div className="bg-[#800000] text-white px-8 py-10 text-center relative">
-                <span className="absolute top-6 right-6 bg-white text-[#800000] text-xs font-bold px-4 py-1.5 rounded-full tracking-widest shadow-sm">
-                  人気No.1
+            <div className="flex flex-col bg-white border border-[#800000]/30 rounded-3xl shadow-xl overflow-hidden relative h-full">
+              <div className="bg-[#800000] text-white px-6 py-8 text-center flex flex-col items-center justify-center min-h-[180px]">
+                <span className="inline-block bg-white text-[#800000] text-xs font-bold px-4 py-1.5 rounded-full tracking-widest shadow-sm mb-4">
+                  【本年度残り3名】
                 </span>
-                <h4 className="text-2xl font-bold tracking-wide font-serif">AO・一般 併願プラン</h4>
-                <p className="text-white/80 text-sm mt-3 font-medium">AO入試と一般入試の両方を対策したい方</p>
+                <h4 className="text-xl md:text-2xl font-bold tracking-wide font-serif leading-snug">一般入試 直前徹底対策パック</h4>
+                <p className="text-white/80 text-sm mt-3 font-medium">SFC一般入試（小論文）を本気で完成させたい方</p>
               </div>
 
               <div className="flex-1 flex flex-col p-8 md:p-12">
                 <div className="mb-8 text-center border-b border-slate-100 pb-8">
-                  <p className="text-[#666666] text-sm mb-3 font-medium tracking-widest">月額料金</p>
+                  <p className="text-[#666666] text-sm mb-3 font-medium tracking-widest">パック一括料金</p>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">138,000</span>
+                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">348,000</span>
                     <span className="text-xl font-bold text-[#800000]">円</span>
                   </div>
-                  <p className="text-sm text-[#666666] mt-3">（税込 151,800円）</p>
+                  <p className="text-sm text-[#800000] mt-3 font-bold">別途 入塾金 50,000円</p>
                 </div>
 
                 <div className="mb-8 bg-[#FAF9F6] py-3 rounded-xl border border-slate-100 flex items-center justify-center gap-2">
@@ -890,54 +872,48 @@ export default function HomeClient() {
                 <ul className="space-y-5 mb-10 flex-1 px-2">
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">塾長1on1授業 <span className="font-bold text-[#800000]">週1回</span></span>
+                    <span className="text-base text-[#333333] font-medium">過去問徹底添削 <span className="font-bold text-[#800000]">無制限</span></span>
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">納得いくまで、何度でも添削</span>
+                    <span className="text-base text-[#333333] font-medium">塾長オンライン面談（週1回）</span>
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">受験戦略の立案</span>
+                    <span className="text-base text-[#333333] font-medium">直前期の学習戦略・スケジュール管理</span>
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">英・数・情報の学習計画管理</span>
-                  </li>
-                  <li className="flex items-center gap-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">塾長直通の相談ライン</span>
+                    <span className="text-base text-[#333333] font-medium">塾長直通LINE 質問し放題（試験前日まで）</span>
                   </li>
                 </ul>
 
                 <div className="flex flex-col gap-5 mt-auto">
                   <a href="#contact-form" onClick={handleSmoothScroll}>
-                    <Button className="w-full rounded-full bg-[#800000] hover:bg-[#C5A059] text-white h-16 text-base md:text-lg font-bold transition-colors shadow-md group">
-                      このプランで相談を予約する
+                    <Button className="w-full rounded-full bg-[#800000] hover:bg-[#C5A059] text-white h-16 text-base font-bold transition-colors shadow-md group whitespace-normal leading-snug">
+                      無料で「個別面談 ＆ お試し添削」を体験する
                     </Button>
                   </a>
-                  <Link href="/course" className="text-center mt-2">
-                    <span className="text-sm font-bold text-[#666666] hover:text-[#002147] transition-colors border-b border-[#E5E7EB] pb-1">プランの詳細を見る</span>
-                  </Link>
+
                 </div>
               </div>
             </div>
 
             {/* Plan 2 */}
             <div className="flex flex-col bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden relative h-full">
-              <div className="bg-slate-100 text-[#002147] px-8 py-10 text-center">
-                <h4 className="text-2xl font-bold tracking-wide font-serif">一般入試 特化プラン</h4>
-                <p className="text-[#666666] text-sm mt-3 font-medium">他塾と併用・小論文対策のみをご希望の方</p>
+              <div className="bg-slate-100 text-[#002147] px-6 py-8 text-center flex flex-col items-center justify-center min-h-[180px]">
+                <h4 className="text-xl md:text-2xl font-bold tracking-wide font-serif leading-snug">単発・小論文添削チケット<br/>（5回分）</h4>
+                <p className="text-[#666666] text-sm mt-3 font-medium">他塾と併用・セカンドオピニオンをご希望の方</p>
               </div>
 
               <div className="flex-1 flex flex-col p-8 md:p-12">
                 <div className="mb-8 text-center border-b border-slate-100 pb-8">
-                  <p className="text-[#666666] text-sm mb-3 font-medium tracking-widest">月額料金</p>
+                  <p className="text-[#666666] text-sm mb-3 font-medium tracking-widest">チケット料金（5回）</p>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-[#002147] font-serif">118,000</span>
+                    <span className="text-5xl md:text-6xl font-bold text-[#002147] font-serif">98,000</span>
                     <span className="text-xl font-bold text-[#002147]">円</span>
                   </div>
-                  <p className="text-sm text-[#666666] mt-3">（税込 129,800円）</p>
+                  <p className="text-sm text-[#002147] mt-3 font-bold">入塾金不要</p>
                 </div>
 
                 <div className="mb-8 bg-[#FAF9F6] py-3 rounded-xl border border-slate-100 flex items-center justify-center gap-2 opacity-80">
@@ -945,61 +921,32 @@ export default function HomeClient() {
                   <span className="text-sm font-bold text-[#666666]">追加講習費・教材費 一切不要</span>
                 </div>
 
-                <ul className="space-y-6 mb-12 flex-1 px-2 opacity-80">
+                <ul className="space-y-6 mb-12 flex-1 px-2 opacity-90">
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#002147] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">塾長1on1授業 <span className="font-bold text-[#002147]">隔週1回</span></span>
+                    <span className="text-base text-[#333333] font-medium">お好きな過去問・テーマを5回分添削</span>
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#002147] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">納得いくまで、何度でも添削</span>
+                    <span className="text-base text-[#333333] font-medium">塾長による丁寧な赤ペンフィードバック</span>
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#002147] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">受験戦略の立案</span>
-                  </li>
-                  <li className="flex items-center gap-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#002147] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">英・数・情報の学習計画管理</span>
-                  </li>
-                  <li className="flex items-center gap-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#002147] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">塾長直通の相談ライン</span>
+                    <span className="text-base text-[#333333] font-medium">LINEでの質疑応答（該答案件について）</span>
                   </li>
                 </ul>
 
                 <div className="flex flex-col gap-5 mt-auto">
                   <a href="#contact-form" onClick={handleSmoothScroll}>
-                    <Button variant="outline" className="w-full rounded-full border-2 border-slate-200 text-[#002147] hover:border-[#002147] hover:bg-transparent h-16 text-base md:text-lg font-bold transition-colors">
-                      このプランで相談を予約する
+                    <Button variant="outline" className="w-full rounded-full border-2 border-slate-200 text-[#002147] hover:border-[#002147] hover:bg-transparent h-16 text-base font-bold transition-colors whitespace-normal leading-snug">
+                      無料で「個別面談 ＆ お試し添削」を体験する
                     </Button>
                   </a>
-                  <Link href="/course" className="text-center mt-2">
-                    <span className="text-sm font-bold text-[#666666] hover:text-[#002147] transition-colors border-b border-[#E5E7EB] pb-1">プランの詳細を見る</span>
-                  </Link>
+
                 </div>
               </div>
             </div>
 
-          </div>
-
-          <div className="mt-16 bg-white border border-slate-200 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center md:items-start gap-8 shadow-sm">
-            <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#FAF9F6] border border-slate-200 flex items-center justify-center">
-              <span className="text-2xl font-bold text-[#002147] font-serif">!</span>
-            </div>
-            <div className="text-center md:text-left flex-1">
-              <p className="text-xl md:text-2xl font-bold text-[#002147] mb-4 font-serif">AO入試で合格した場合は、その時点で卒業となります。</p>
-              <p className="text-base text-[#666666] leading-loose font-medium">
-                AO入試で合格が決まった場合、合格発表日の月末をもって自動退塾（契約終了）となります。合格後の不要な費用は一切かかりませんので、保護者の方も安心してお子さまの受験を応援していただけます。
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 bg-white border border-slate-200 rounded-2xl p-8 md:p-10 shadow-sm">
-            <p className="text-base text-[#333333] text-center leading-loose font-medium">
-              <strong className="text-[#800000]">※ 佐藤塾の費用は月額 11.8万円〜。</strong><br className="block md:hidden" />
-              追加の講習費や教材費はかかりません。<br className="hidden md:block" />合格時の追加費用もありませんので、安心して始められます。
-            </p>
           </div>
         </div>
       </section>
@@ -1074,8 +1021,18 @@ export default function HomeClient() {
       {/* Contact Form Section */}
       <section id="contact-form" className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB] scroll-mt-20">
         <div className="max-w-2xl mx-auto">
-          <SectionTitle subtitle="「今の成績で受かるのか」「文章を書くのが苦手」といった不安があれば、まずは無料相談でお話しください。一人ひとりに丁寧に向き合うため、今年度の新規受付は残り5名です。">
-            無料の個別相談を予約する
+          
+          {/* AO Notice Block */}
+          <div className="mb-16 bg-white border border-[#002147]/20 p-6 rounded-2xl text-center shadow-sm">
+            <p className="text-[#333333] text-sm md:text-base font-medium leading-relaxed">
+              <span className="text-[#800000] font-bold">【お知らせ】</span><br />
+              今年度のAO入試対策は受付を終了いたしました。<br />
+              現在は<strong className="text-[#002147]">「一般入試（小論文）対策」</strong>に特化して指導を行っております。
+            </p>
+          </div>
+
+          <SectionTitle subtitle="「今の成績で受かるのか」「何から始めればいいか分からない」といった不安があれば、まずは無料のオンライン面談でお気軽にお話しください。面談後、ご希望の方に1週間の無料お試し添削をご案内しております。">
+            無料の個別面談 ＆<br className="md:hidden"/> 1週間「お試し添削」に申し込む
           </SectionTitle>
 
           <div className="bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl overflow-hidden mt-16">
@@ -1085,9 +1042,9 @@ export default function HomeClient() {
                   <div className="w-20 h-20 bg-[#002147]/5 text-[#002147] rounded-full flex items-center justify-center mx-auto mb-8">
                     <Check className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#002147] mb-6 font-serif">送信が完了しました！</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#002147] mb-6 font-serif">お申し込みが完了しました！</h3>
                   <p className="text-[#333333] leading-loose mb-10 text-base md:text-lg border-y border-slate-100 py-8 font-medium">
-                    お申し込みいただきありがとうございます。<br />
+                    個別面談へのお申し込みありがとうございます。<br />
                     担当者より24時間以内にご連絡いたします。
                   </p>
                   <p className="text-sm text-[#666666] font-medium">
@@ -1102,9 +1059,10 @@ export default function HomeClient() {
                     </div>
                   )}
 
-                  <div className="mb-10 p-6 md:p-8 bg-[#FAF9F6] border border-slate-200 rounded-xl">
-                    <p className="text-sm text-[#333333] mb-3 leading-relaxed font-medium">
-                      ※ ご相談者の8割が<strong>「実績ゼロ」「小論文未経験」</strong>からのスタートです。現在の実力は一切問いません。
+                  <div className="mb-10 p-6 md:p-8 bg-[#FAF9F6] border border-[#C5A059]/40 rounded-xl">
+                    <h4 className="font-bold text-[#800000] mb-3 font-serif">📝 面談およびお試し添削の流れ</h4>
+                    <p className="text-sm text-[#333333] leading-relaxed font-medium mb-3">
+                      まずは塾長とのオンライン面談にて、現在の学習状況や志望校などをお伺いします。その後、「日本の論点100」という書籍内にある特定の記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回）</strong>の無料添削を実施します。
                     </p>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium">
                       ※ 無理な入塾勧誘は一切行いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
@@ -1153,7 +1111,7 @@ export default function HomeClient() {
 
                   <div>
                     <label className="block text-sm font-bold text-[#002147] mb-3">
-                      ご希望のプラン <span className="text-[#800000]">*</span>
+                      検討中のプラン <span className="text-[#800000]">*</span>
                     </label>
                     <div className="relative">
                       <select
@@ -1163,8 +1121,9 @@ export default function HomeClient() {
                         required
                       >
                         <option value="">プランを選択してください</option>
-                        <option value="complete">AO入試＋一般入試：併願プラン</option>
-                        <option value="basic">小論文のみ：特化プラン</option>
+                        <option value="complete">一般入試 直前徹底対策パック</option>
+                        <option value="basic">単発・小論文添削チケット（5回分）</option>
+                        <option value="undecided">まだ決めていない（面談後に相談したい）</option>
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#666666]">
                         <ArrowDown className="w-5 h-5" />
@@ -1174,10 +1133,10 @@ export default function HomeClient() {
 
                   <div>
                     <label className="block text-sm font-bold text-[#002147] mb-3">
-                      ご質問・ご相談
+                      現在の状況やご相談（任意）
                     </label>
                     <Textarea
-                      placeholder="SFC合格に向けて不安なこと、知りたいことなどをご自由にお書きください。塾長が直接お答えします。"
+                      placeholder="「小論文を書いたことがない」「英語の成績が伸び悩んでいる」など、SFC合格に向けて不安なことがあればご自由にお書きください。塾長が直接お答えします。"
                       className="rounded-xl border border-slate-300 focus:border-[#002147] focus:ring-1 min-h-[180px] bg-white p-4 text-base leading-loose"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -1190,8 +1149,8 @@ export default function HomeClient() {
                       disabled={isLoading}
                       className="w-full rounded-full bg-[#800000] hover:bg-[#C5A059] text-white min-h-[72px] h-auto px-4 text-lg md:text-xl font-bold transition-all duration-300 group shadow-md hover:shadow-lg hover:-translate-y-1"
                     >
-                      <span className="flex items-center justify-center gap-3 font-serif tracking-widest">
-                        {isLoading ? '送信中...' : '個別相談を予約する'}
+                      <span className="flex items-center justify-center gap-3 font-serif tracking-widest flex-wrap">
+                        {isLoading ? '送信中...' : '無料の個別面談に申し込む'}
                         {!isLoading && <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />}
                       </span>
                     </Button>
@@ -1240,20 +1199,20 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                塾長が一人ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表面的なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。
+                塾長が一���ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表面的なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。
               </div>
             </details>
 
             <details className="group border-b border-slate-200 pb-2">
               <summary className="flex items-center justify-between cursor-pointer py-6 hover:opacity-70 transition-opacity list-none">
                 <span className="font-bold text-[#002147] text-base md:text-lg leading-relaxed">
-                  入会金はかかりますか？
+                  入塾金はかかりますか？
                 </span>
                 <span className="text-[#C5A059] text-2xl font-bold group-open:hidden ml-6 flex-shrink-0">＋</span>
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                入塾時に入会金として税込10万円をいただきます。それ以降は月額料金だけのお支払いで、追加の講習料などは一切かかりません。後から追加費用が発生することもないので、安心して始めていただけます。
+                「一般入試 直前徹底対策パック」をご契約の場合のみ、入塾金として税込50,000円をいただいております。「単発・小論文添削チケット」をご利用の場合は入塾金は不要です。追加費用が発生することもないので、安心して始めていただけます。
               </div>
             </details>
 
@@ -1266,7 +1225,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                はい、月単位でプランを変更できます。学力の伸びや状況に合わせて柔軟に対応できますので、お気軽にご相談ください。
+                はい、状況に合わせて柔軟に対応できますので、お気軽にご相談ください。
               </div>
             </details>
           </div>

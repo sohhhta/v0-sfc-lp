@@ -65,7 +65,7 @@ export function FloatingCTA() {
           onClick={handleScrollToForm}
           className="w-full h-14 bg-[#800000] hover:bg-[#600000] text-white font-bold text-base shadow-[0_4px_16px_rgba(128,0,0,0.35)] rounded-lg tracking-wide active:scale-[0.98] transition-transform"
         >
-          無料で塾長に相談する
+          無料で「個別面談 ＆ お試し添削」を体験する
         </Button>
       </div>
 
@@ -80,7 +80,7 @@ export function FloatingCTA() {
         <div className="bg-white/98 backdrop-blur-sm p-6 rounded-xl shadow-[0_12px_40px_rgba(0,33,71,0.18)] border-2 border-[#C5A059]/40 text-left w-[340px] animate-in fade-in duration-300">
           {/* メリット訴求：新規枠の希少性 */}
           <span className="inline-block text-[11px] font-bold text-[#800000] bg-[#800000]/5 border border-[#800000]/20 px-2.5 py-0.5 rounded-sm tracking-wider uppercase mb-3">
-            【今年度新規受入人数】 残り5名
+            【今年度新規受入人数】 残り3名
           </span>
           
           {/* ベネフィット訴求：2人に1人が合格する戦略の直接提案 */}
@@ -97,7 +97,7 @@ export function FloatingCTA() {
             onClick={handleScrollToForm}
             className="w-full bg-[#800000] hover:bg-[#002147] text-white font-bold text-sm py-4 h-auto shadow-md transition-all duration-200 tracking-wider"
           >
-            無料で個別相談を予約する
+            個別面談 ＆ お試し添削を予約する
           </Button>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Check, ShieldCheck, GraduationCap, Laptop } from 'lucide-react'
 import Link from 'next/link'
@@ -52,6 +53,8 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 }
 
 export default function CoursePage() {
+  notFound()
+
   return (
     <div className="min-h-screen bg-background">
       {/* 共通ナビゲーション（layout.tsx）から自動出力されるため、固有の<nav>ブロックを完全に削除しました */}

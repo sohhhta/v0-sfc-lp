@@ -375,7 +375,7 @@ export default function ResultsPage() {
                     <p className="text-sm text-[#800000] font-semibold">AO入試・小論文対策コース</p>
                   </div>
                   <blockquote className="text-slate-700 leading-relaxed italic border-l-4 border-[#C5A059] pl-4 py-2">
-                    「最初は『書きながら考える』癖があって、設問分析の大切さに全く気づいていませんでした。佐藤塾では毎回、構成メモだけで30分使うという指導を受けて、最初は違和感がありましたが、本番ではその30分が本番で大きく活きました。」
+                    「最初は『書きながら考える』癖があって、設問分析の大切さに全く気づいていませんでした。佐藤塾では毎回、構成メモだけで30分使うという指導を受けて、最初は違和感がありましたが、本番では、その30分が大きく活きました。」
                   </blockquote>
                 </div>
               </div>
