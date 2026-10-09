@@ -287,7 +287,7 @@ export default function HomeClient() {
                     SFCが求める「独自の視点」に特化していないから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    学校や一般��な塾で教わるのは、幅広い大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届きません。
+                    学校や一般的な塾で教わるのは、幅広い大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届きません。
                   </p>
                 </div>
               </div>
@@ -355,13 +355,13 @@ export default function HomeClient() {
                 <span className="text-sm font-bold text-[#800000] tracking-widest font-serif">MESSAGE</span>
               </div>
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#002147] mb-8 font-serif tracking-wide leading-snug">
-                偏差値40台からでも遅くありません。<br />私と一緒に合格を掴みましょう。
+                偏差値40台からでも遅くありません。<br className="hidden md:block" />私と一緒に合格をつかみましょう。
               </h3>
               <p className="text-base md:text-lg text-[#333333] mb-6 leading-relaxed">
                 「もともと文章を書くのが苦手」「すごい実績なんてない」。SFCに合格した先輩たちの多くも、最初は同じような不安を抱えていました。
               </p>
               <p className="text-base md:text-lg text-[#333333] mb-6 leading-relaxed">
-                特別な才能が必要だという誤解は捨ててください。<br />正しい戦略を立てて、一つひとつの課題にしっかり向き合えば、大逆転は十分に可能です。
+                特別な才能が必要だという誤解は捨ててください。<br className="hidden md:block" />正しい戦略を立てて、一つひとつの課題にしっかり向き合えば、大逆転は十分に可能です。
               </p>
               <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
                 6年間で39名の合格者をサポートしてきた経験をもとに、あなたの「本当の魅力」を引き出します。
@@ -498,10 +498,10 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-3">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">02</div>
-                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐ���返却します</h3>
+                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し��論理的に書く力を伸ばします。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
@@ -682,7 +682,7 @@ export default function HomeClient() {
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#002147] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      基礎を固め、あなただけの<br />「視点」を見つける
+                      基礎を固め、あなただけの<br className="hidden lg:block" />「視点」を見つける
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
@@ -704,7 +704,7 @@ export default function HomeClient() {
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#800000] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      他学部の過去問を活用し、<br />実践力を養う
+                      他学部の過去問を活用し、<br className="hidden lg:block" />実践力を養う
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
@@ -726,7 +726,7 @@ export default function HomeClient() {
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#C5A059] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      SFCの過去問演習で、<br />どんな出題にも対応できる力を
+                      SFCの過去問演習で、<br className="hidden lg:block" />どんな出題にも対応できる力を
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
@@ -1069,7 +1069,7 @@ export default function HomeClient() {
                       まずは塾長とのオンライン面談にて、現在の学習状況や志望校などをお伺いします。その後、「日本の論点100」という書籍内にある特定の記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回）</strong>の無料添削を実施します。
                     </p>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium">
-                      ※ 無理な入塾勧誘は一切��いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
+                      ※ 無理な入塾勧誘は一切行いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
                     </p>
                   </div>
 
@@ -1203,7 +1203,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                塾長が一人ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表面��なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。
+                塾長が一人ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表面的なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。
               </div>
             </details>
 
