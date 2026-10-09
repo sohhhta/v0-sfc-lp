@@ -200,9 +200,9 @@ export default function HomeClient() {
                   size="lg"
                   className="w-full bg-[#800000] hover:bg-[#C5A059] text-white text-lg md:text-xl font-bold py-8 h-auto shadow-[0_4px_24px_rgba(128,0,0,0.6)] hover:shadow-[0_8px_32px_rgba(197,160,89,0.5)] transition-all duration-300 hover:-translate-y-1 border border-white/20 rounded-full group"
                 >
-                  <span className="flex items-center justify-center gap-3 font-serif">
-                    【完全無料】1週間の「お試し添削」を体験する
-                    <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                  <span className="flex items-center justify-center gap-2 font-serif flex-wrap px-2">
+                    【完全無料】個別面談 ＆ お試し添削を予約する
+                    <ArrowRight className="w-6 h-6 ml-1 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </Button>
               </a>
@@ -401,7 +401,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">ご自身のペースで、<br />いつでも気軽にLINEで提出</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">小論文の答案や志望理由書が書けたら、スマートフォンからLINEでいつでも提出できます。回数に制限はありません。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">小論文の答案や志望理由書が書けたら、スマートフォンからLINEでいつでも提出できます。<strong className="text-[#800000]">回数に制限はありません。</strong></p>
               </div>
             </div>
 
@@ -455,7 +455,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br />塾長に直接ご相談ください</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">課題で迷ったときは、いつでも塾長のLINEに相談できます。不安をすぐに解消し、勉強に集中できます。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">課題で迷ったときは、<strong className="text-[#800000]">いつでも塾長のLINEに相談</strong>できます。不安をすぐに解消し、勉強に集中できます。</p>
               </div>
             </div>
 
@@ -471,7 +471,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br />あなたらしさを言葉にします</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、英語や数学など他教科の学習計画づくりも一緒にサポートします。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、<strong className="text-[#800000]">英語や数学など他教科の学習計画づくりも一緒にサポート</strong>します。</p>
               </div>
             </div>
 
@@ -486,7 +486,7 @@ export default function HomeClient() {
                 <h3 className="text-base font-bold text-[#002147] leading-snug">ご自身のペースで、<br />いつでも気軽にLINEで提出</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">小論文の答案や志望理由書が書けたら、スマートフォンからLINEでいつでも提出できます。回数に制限はありません。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">小論文の答案や志望理由書が書けたら、スマートフォンからLINEでいつでも提出できます。<strong className="text-[#800000]">回数に制限はありません。</strong></p>
               </div>
             </div>
 
@@ -517,7 +517,7 @@ export default function HomeClient() {
                   <h3 className="text-base font-bold text-[#800000] leading-snug">オンライン面談で、<br />あなたらしさを言葉にします</h3>
                 </div>
                 <p className="text-[#333333] text-sm leading-relaxed mb-2">
-                  週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、英語や数学など他教科の学習計画づくりもサポートします。
+                  週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、<strong className="text-[#800000]">英語や数学など他教科の学習計画づくりも一緒にサポート</strong>します。
                 </p>
               </div>
               <div className="mx-6 mb-6 aspect-video bg-white border border-slate-200 p-1 rounded-xl flex items-center justify-center">
@@ -536,7 +536,7 @@ export default function HomeClient() {
                 <h3 className="text-base font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br />塾長に直接ご相談ください</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">課題で迷ったときは、いつでも塾長のLINEに相談できます。不安をすぐに解消し、勉強に集中できます。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">課題で迷ったときは、<strong className="text-[#800000]">いつでも塾長のLINEに相談</strong>できます。不安をすぐに解消し、勉強に集中できます。</p>
               </div>
             </div>
 
@@ -617,11 +617,11 @@ export default function HomeClient() {
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
             志望校合格への第一歩は、<strong className="text-[#800000]">「今の自分を正しく知り、正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />「今の成績で本当に受かるのか」といった不安があれば、まずは無料相談でお気軽にお話しください。
           </p>
-          <a href="#contact-form" onClick={handleSmoothScroll}>
-            <Button className="w-full max-w-sm rounded-full bg-[#800000] hover:bg-[#C5A059] text-white font-bold py-6 h-auto text-base md:text-lg transition-colors duration-300 shadow-md group">
-              <span className="flex items-center justify-center gap-3 font-serif">
-                【完全無料】1週間の「お試し添削」を体験する
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <a href="#contact-form" onClick={handleSmoothScroll} className="inline-block w-full sm:w-auto">
+            <Button className="w-full sm:w-auto min-w-[320px] rounded-full bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-8 py-5 h-auto text-base md:text-lg transition-colors duration-300 shadow-md group">
+              <span className="flex items-center justify-center gap-2 font-serif text-center flex-wrap">
+                無料の個別面談 ＆<br className="sm:hidden" />お試し添削に申し込む
+                <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
               </span>
             </Button>
           </a>
@@ -877,8 +877,8 @@ export default function HomeClient() {
 
                 <div className="flex flex-col gap-5 mt-auto">
                   <a href="#contact-form" onClick={handleSmoothScroll}>
-                    <Button className="w-full rounded-full bg-[#800000] hover:bg-[#C5A059] text-white h-16 text-base font-bold transition-colors shadow-md group">
-                      無料で「1週間お試し添削」を体験する
+                    <Button className="w-full rounded-full bg-[#800000] hover:bg-[#C5A059] text-white h-16 text-base font-bold transition-colors shadow-md group whitespace-normal leading-snug">
+                      無料で「個別面談 ＆ お試し添削」を体験する
                     </Button>
                   </a>
                   <Link href="/course" className="text-center mt-2">
@@ -927,8 +927,8 @@ export default function HomeClient() {
 
                 <div className="flex flex-col gap-5 mt-auto">
                   <a href="#contact-form" onClick={handleSmoothScroll}>
-                    <Button variant="outline" className="w-full rounded-full border-2 border-slate-200 text-[#002147] hover:border-[#002147] hover:bg-transparent h-16 text-base font-bold transition-colors">
-                      無料で「1週間お試し添削」を体験する
+                    <Button variant="outline" className="w-full rounded-full border-2 border-slate-200 text-[#002147] hover:border-[#002147] hover:bg-transparent h-16 text-base font-bold transition-colors whitespace-normal leading-snug">
+                      無料で「個別面談 ＆ お試し添削」を体験する
                     </Button>
                   </a>
                   <Link href="/course" className="text-center mt-2">
@@ -1022,8 +1022,8 @@ export default function HomeClient() {
             </p>
           </div>
 
-          <SectionTitle subtitle="いきなり過去問を解くのはハードルが高いと感じていませんか？まずは無料でプロの添削を体感し、ご自身の「論理的思考力」と「合格までの距離」を診断してください。">
-            【1週間無料】SFC小論文<br className="md:hidden"/>「お試し添削」に申し込む
+          <SectionTitle subtitle="「今の成績で受かるのか」「何から始めればいいか分からない」といった不安があれば、まずは無料のオンライン面談でお気軽にお話しください。面談後、ご希望の方に1週間の無料お試し添削をご案内しております。">
+            無料の個別面談 ＆<br className="md:hidden"/> 1週間「お試し添削」に申し込む
           </SectionTitle>
 
           <div className="bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl overflow-hidden mt-16">
@@ -1035,7 +1035,7 @@ export default function HomeClient() {
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-[#002147] mb-6 font-serif">お申し込みが完了しました！</h3>
                   <p className="text-[#333333] leading-loose mb-10 text-base md:text-lg border-y border-slate-100 py-8 font-medium">
-                    お試し添削へのお申し込みありがとうございます。<br />
+                    個別面談へのお申し込みありがとうございます。<br />
                     担当者より24時間以内にご連絡いたします。
                   </p>
                   <p className="text-sm text-[#666666] font-medium">
@@ -1051,9 +1051,9 @@ export default function HomeClient() {
                   )}
 
                   <div className="mb-10 p-6 md:p-8 bg-[#FAF9F6] border border-[#C5A059]/40 rounded-xl">
-                    <h4 className="font-bold text-[#800000] mb-3 font-serif">📝 お試し添削の内容（全3回）</h4>
+                    <h4 className="font-bold text-[#800000] mb-3 font-serif">📝 面談およびお試し添削の流れ</h4>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium mb-3">
-                      SFC頻出テーマである「日本の論点100」から1つ記事を選び、<strong>「要約200字 ＋ あなたの意見200字」の計400字のミニ小論文</strong>を作成していただきます。これを無料で3回分、塾長が直接添削しフィードバックをお返しします。
+                      まずは塾長とのオンライン面談にて、現在の学習状況やSFCへの思いをお伺いします。その後、SFC頻出テーマである「日本の論点100」から記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回）</strong>の無料添削を実施します。
                     </p>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium">
                       ※ 無理な入塾勧誘は一切行いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
@@ -1140,8 +1140,8 @@ export default function HomeClient() {
                       disabled={isLoading}
                       className="w-full rounded-full bg-[#800000] hover:bg-[#C5A059] text-white min-h-[72px] h-auto px-4 text-lg md:text-xl font-bold transition-all duration-300 group shadow-md hover:shadow-lg hover:-translate-y-1"
                     >
-                      <span className="flex items-center justify-center gap-3 font-serif tracking-widest">
-                        {isLoading ? '送信中...' : '無料お試し添削に申し込む'}
+                      <span className="flex items-center justify-center gap-3 font-serif tracking-widest flex-wrap">
+                        {isLoading ? '送信中...' : '無料の個別面談に申し込む'}
                         {!isLoading && <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />}
                       </span>
                     </Button>
