@@ -80,7 +80,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Link href="/#contact-form" className="hidden md:block">
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-medium">
-              【完全無料】個別面談 ＆ お試し添削を予約する
+              個別面談 ＆ お試し添削を予約する
             </Button>
           </Link>
 

@@ -97,7 +97,7 @@ export function FloatingCTA() {
             onClick={handleScrollToForm}
             className="w-full bg-[#800000] hover:bg-[#002147] text-white font-bold text-sm py-4 h-auto shadow-md transition-all duration-200 tracking-wider"
           >
-            【完全無料】個別面談 ＆ お試し添削を予約する
+            個別面談 ＆ お試し添削を予約する
           </Button>
         </div>
       </div>
