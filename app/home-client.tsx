@@ -169,7 +169,7 @@ export default function HomeClient() {
           {/* Main Copy */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wide leading-snug sm:leading-tight text-balance drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
             偏差値40台、実績ゼロからでも。<br className="hidden md:block" />
-            塾長が直接寄り添う1on1指導で掴む、<br className="block md:hidden" />
+            塾長が直接寄り添う1on1指導で掴む、
             <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-4 leading-tight">SFC合格。</span>
           </h1>
 
@@ -287,7 +287,7 @@ export default function HomeClient() {
                     SFCが求める「独自の視点」に特化していないから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    学校や一般的な塾で教わるのは、幅広い大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届きません。
+                    学校や一般��な塾で教わるのは、幅広い大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届きません。
                   </p>
                 </div>
               </div>
@@ -398,7 +398,7 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-5 border-b border-slate-200 pb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">01</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">ご自身のペースで、<br />いつでも気軽にLINEで提出</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">ご自身のペースで、<br className="hidden lg:block" />いつでも気軽にLINEで提出</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm lg:text-base leading-relaxed">小論文の答案や志望理由書が書けたら、スマートフォンからLINEでいつでも提出できます。<strong className="text-[#800000]">回数に制限はありません。</strong></p>
@@ -414,7 +414,7 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-5 border-b border-slate-200 pb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">02</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに返却します</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm lg:text-base leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
@@ -452,7 +452,7 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-5 border-b border-slate-200 pb-4">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">04</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br />塾長に直接ご相談ください</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br className="hidden lg:block" />塾長に直接ご相談ください</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm lg:text-base leading-relaxed">課題で迷ったときは、<strong className="text-[#800000]">いつでも塾長のLINEに相談</strong>できます。不安をすぐに解消し、勉強に集中できます。</p>
@@ -468,7 +468,7 @@ export default function HomeClient() {
             <div className="bg-white rounded-2xl p-6 lg:p-8 border-2 border-[#800000]/10 shadow-sm flex flex-col justify-center relative hover:shadow-md transition-shadow h-full">
               <div className="flex items-center gap-3 lg:gap-4 mb-5 border-b border-slate-100 pb-4">
                 <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0 text-sm lg:text-base">03</div>
-                <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br />総括と計画の見直しをします</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br className="hidden lg:block" />総括と計画の見直しをします</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm lg:text-base leading-relaxed">週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、<strong className="text-[#800000]">英語や数学など他教科の学習計画づくりも一緒にサポート</strong>します。</p>
@@ -483,7 +483,7 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-3">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">01</div>
-                <h3 className="text-base font-bold text-[#002147] leading-snug">ご自身のペースで、<br />いつでも気軽にLINEで提出</h3>
+                <h3 className="text-base font-bold text-[#002147] leading-snug">ご自身のペースで、<br className="hidden lg:block" />いつでも気軽にLINEで提出</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm leading-relaxed">小論文の答案や志望理由書が書けたら、スマートフォンからLINEでいつでも提出できます。<strong className="text-[#800000]">回数に制限はありません。</strong></p>
@@ -498,10 +498,10 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-3">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">02</div>
-                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐに返却します</h3>
+                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br />すぐ���返却します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し��論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
@@ -514,7 +514,7 @@ export default function HomeClient() {
               <div className="p-6 pb-4 flex-1">
                 <div className="flex items-center gap-4 mb-4 border-b border-slate-100 pb-3">
                   <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">03</div>
-                  <h3 className="text-base font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br />総括と計画の見直しをします</h3>
+                  <h3 className="text-base font-bold text-[#800000] leading-snug">塾長とのオンライン面談で、<br className="hidden lg:block" />総括と計画の見直しをします</h3>
                 </div>
                 <p className="text-[#333333] text-sm leading-relaxed mb-2">
                   週に1回程度の面談を実施。小論文やAO対策の進捗確認だけでなく、<strong className="text-[#800000]">英語や数学など他教科の学習計画づくりも一緒にサポート</strong>します。
@@ -533,7 +533,7 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-3">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">04</div>
-                <h3 className="text-base font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br />塾長に直接ご相談ください</h3>
+                <h3 className="text-base font-bold text-[#002147] leading-snug">迷ったときはいつでも、<br className="hidden lg:block" />塾長に直接ご相談ください</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm leading-relaxed">課題で迷ったときは、<strong className="text-[#800000]">いつでも塾長のLINEに相談</strong>できます。不安をすぐに解消し、勉強に集中できます。</p>
@@ -1203,7 +1203,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                塾長が一人ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表面的なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。
+                塾長が一人ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表面��なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。
               </div>
             </details>
 
