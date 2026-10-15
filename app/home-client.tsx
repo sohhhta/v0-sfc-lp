@@ -286,7 +286,7 @@ export default function HomeClient() {
                     一般的な小論文の学習になってしまっているから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きませ��。
+                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                   </p>
                 </div>
               </div>
@@ -502,7 +502,7 @@ export default function HomeClient() {
                 <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を��し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
@@ -724,7 +724,7 @@ export default function HomeClient() {
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#C5A059] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      SFCの過去問演習で、<br className="hidden lg:block" />どんな出題にも対応できる力���
+                      SFCの過去問演習で、<br className="hidden lg:block" />どんな出題にも対応できる力を
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
@@ -953,7 +953,7 @@ export default function HomeClient() {
       <section className="py-24 md:py-32 px-4 bg-white border-b border-[#E5E7EB]">
         <div className="max-w-4xl mx-auto text-center bg-[#FAF9F6] p-12 md:p-20 rounded-3xl border border-slate-200 shadow-sm">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#002147] font-serif mb-8 tracking-wide">
-            佐藤塾の小論文指���とは
+            佐藤塾の小論文指導とは
           </h2>
           <p className="text-base md:text-lg text-[#666666] leading-loose mb-12 max-w-2xl mx-auto font-medium">
             慶應SFC合格に欠かせない「問いを立てる力」を、塾長がどのように指導しているか。そのメソッドを公開しています。
@@ -986,7 +986,7 @@ export default function HomeClient() {
                 </h3>
                 <div className="flex-1">
                   <p className="text-white/80 mb-10 leading-loose text-base md:text-lg mt-4 font-medium">
-                    「何を書けばいいかわからない」を抜け出して、SFCの教授をうなず���せる文章の組み立て方と、資料の読み解き方を解説します。
+                    「何を書けばいいかわからない」を抜け出して、SFCの教授をうなずかせる文章の組み立て方と、資料の読み解き方を解説します。
                   </p>
                 </div>
                 <div className="flex items-center text-[#C5A059] font-bold mt-auto font-serif text-base tracking-widest">
@@ -1207,7 +1207,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円を���ただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
+                「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
               </div>
             </details>
 
