@@ -555,7 +555,7 @@ export default function HomeClient() {
 
       {/* リアルな添削ビフォーアフター Section */}
       <section className="relative py-28 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147]/40 mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6 text-balance">
@@ -570,7 +570,7 @@ export default function HomeClient() {
           </div>
 
           <div className="bg-white border border-slate-200 rounded-2xl mt-12 shadow-sm overflow-hidden">
-            <div className="p-5 sm:p-8 lg:p-10">
+            <div className="p-5 sm:p-8 lg:p-10 xl:p-12">
               <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif mb-10 text-center md:text-left flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 border-b border-slate-100 pb-6">
                 <PenTool className="w-6 h-6 text-[#002147]" />
                 実際の指導プロセス：論理が破綻した「なんとなくの文章」が、SFCレベルに化けるまで
@@ -583,7 +583,7 @@ export default function HomeClient() {
                     <p className="text-sm font-bold text-slate-500 mb-2 border-b border-slate-200 pb-1">よくある不合格パターン</p>
                   </div>
                   <div className="flex-1">
-                    <p className="text-[#666666] leading-loose text-sm md:text-base">
+                    <p className="text-[#666666] leading-[1.85] text-sm md:text-base">
                       「私は、日本の政治に対する若者の無関心は深刻だと考える。SNSで政治の話題を出すことはタブー視されている。むしろ、学校教育の中で政治について議論する場を増やすべきだ。」
                     </p>
                   </div>
@@ -596,7 +596,7 @@ export default function HomeClient() {
                       <p className="text-[#800000] font-bold text-sm mb-3 flex items-center gap-2">
                         PREP法と接続詞の欠如を指摘
                       </p>
-                      <p className="text-[#333333] font-medium text-sm md:text-base leading-relaxed">
+                      <p className="text-[#333333] font-medium text-sm md:text-base leading-[1.8]">
                         「1文目と2文目の間に論理の繋がりが見えません。『なぜなら』『具体的には』といった<strong className="text-[#800000] border-b border-[#800000]/50">接続詞を用いて、文が全体の中でどの論理構造（PREP）に位置しているか</strong>を明確にしてください。<br /><br />
                         また、3文目の『むしろ』は不適切です。重要な理由から順に述べる構成に書き直しましょう。文末表現も事実と主観を厳格に使い分けてください。」
                       </p>
@@ -610,7 +610,7 @@ export default function HomeClient() {
                     <p className="text-sm font-bold text-[#C5A059] mb-2 border-b border-white/20 pb-1">論理構造（PREP）の確立と適切な語彙</p>
                   </div>
                   <div className="flex-1">
-                    <p className="text-white/90 leading-loose text-sm md:text-base font-medium">
+                    <p className="text-white/90 leading-[1.85] text-sm md:text-base font-medium">
                       「日本の政治に対する若者の無関心は深刻である。<br /><br />
                       なぜなら、SNS等において政治の話題は対立を生むタブーとして忌避されているからだ。具体的には、特定の政党を支持する発言が『炎上』を招く事例が後を絶たない。<br /><br />
                       したがって、この状況を打破するためには、学校教育の段階で『対立を前提とした対話』を学ぶ機会を設けることが不可欠だと考えているのである。」
