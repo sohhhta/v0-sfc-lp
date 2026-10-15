@@ -176,7 +176,7 @@ export default function HomeClient() {
           {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
             合格者の8割が、小論文未経験からのスタート。<br className="hidden md:block" />
-            マニュアルを捨て、塾長があなたの答案に直接向き合うことで、<br className="hidden md:block" />残り期間での逆転合格を実現します。
+            塾長があなたの答案に直接向き合うことで、<br className="hidden md:block" />残り期間での合格圏内に入ることを実現します。
           </p>
 
           {/* Enhanced CTA Area */}
@@ -416,7 +416,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論��的に書く力を伸ばします。</p>
               </div>
             </div>
 
