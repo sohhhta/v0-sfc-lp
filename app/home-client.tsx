@@ -286,7 +286,7 @@ export default function HomeClient() {
                     一般的な小論文の学習になってしまっているから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届き��せん。
+                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                   </p>
                 </div>
               </div>
@@ -418,7 +418,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し���論理的に書く力を伸ばします。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
@@ -499,7 +499,7 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-3">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">02</div>
-                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、���長が<br className="hidden lg:block" />すぐに返却します</h3>
+                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
@@ -570,14 +570,14 @@ export default function HomeClient() {
           </div>
 
           <div className="bg-white border border-slate-200 rounded-2xl mt-12 shadow-sm overflow-hidden">
-            <div className="p-8 md:p-12 lg:p-16">
+            <div className="p-5 sm:p-8 lg:p-10">
               <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif mb-10 text-center md:text-left flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 border-b border-slate-100 pb-6">
                 <PenTool className="w-6 h-6 text-[#002147]" />
                 実際の指導プロセス：論理が破綻した「なんとなくの文章」が、SFCレベルに化けるまで
               </h3>
               
-              <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-                <div className="bg-[#FAF9F6] p-8 border border-slate-200 rounded-2xl relative pt-14 flex flex-col h-full">
+              <div className="grid lg:grid-cols-3 gap-5 lg:gap-6 items-stretch">
+                <div className="bg-[#FAF9F6] p-5 sm:p-7 border border-slate-200 rounded-2xl relative pt-14 flex flex-col h-full">
                   <span className="absolute top-0 left-0 bg-slate-500 text-white text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">STEP 1: 生徒の初回答案</span>
                   <div className="mb-4">
                     <p className="text-sm font-bold text-slate-500 mb-2 border-b border-slate-200 pb-1">よくある不合格パターン</p>
@@ -589,7 +589,7 @@ export default function HomeClient() {
                   </div>
                 </div>
 
-                <div className="bg-white p-8 border-2 border-[#800000]/20 rounded-2xl relative pt-14 flex flex-col h-full shadow-sm">
+                <div className="bg-white p-5 sm:p-7 border-2 border-[#800000]/20 rounded-2xl relative pt-14 flex flex-col h-full shadow-sm">
                   <span className="absolute top-0 left-0 bg-[#800000] text-white text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">STEP 2: 塾長の赤ペン添削</span>
                   <div className="flex-1 flex flex-col">
                     <div className="bg-red-50/50 p-5 rounded-xl border border-red-100 h-full">
@@ -604,7 +604,7 @@ export default function HomeClient() {
                   </div>
                 </div>
 
-                <div className="bg-[#002147] p-8 border border-[#002147] rounded-2xl relative pt-14 flex flex-col h-full shadow-md">
+                <div className="bg-[#002147] p-5 sm:p-7 border border-[#002147] rounded-2xl relative pt-14 flex flex-col h-full shadow-md">
                   <span className="absolute top-0 left-0 bg-[#C5A059] text-[#002147] text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">STEP 3: 対話を経て完成した合格答案</span>
                   <div className="mb-4">
                     <p className="text-sm font-bold text-[#C5A059] mb-2 border-b border-white/20 pb-1">論理構造（PREP）の確立と適切な語彙</p>
@@ -961,7 +961,7 @@ export default function HomeClient() {
       <section className="py-24 md:py-32 px-4 bg-white border-b border-[#E5E7EB]">
         <div className="max-w-4xl mx-auto text-center bg-[#FAF9F6] p-12 md:p-20 rounded-3xl border border-slate-200 shadow-sm">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#002147] font-serif mb-8 tracking-wide">
-            佐藤塾の小論文指導と���
+            佐藤塾の小論文指導とは
           </h2>
           <p className="text-base md:text-lg text-[#666666] leading-loose mb-12 max-w-2xl mx-auto font-medium">
             慶應SFC合格に欠かせない「問いを立てる力」を、塾長がどのように指導しているか。そのメソッドを公開しています。
@@ -994,7 +994,7 @@ export default function HomeClient() {
                 </h3>
                 <div className="flex-1">
                   <p className="text-white/80 mb-10 leading-loose text-base md:text-lg mt-4 font-medium">
-                    「何を書けばいいかわからない」を抜け出して、SFCの教授をうなずかせ���文章の組み立て方と、資料の読み解き方を解説します。
+                    「何を書けばいいかわからない」を抜け出して、SFCの教授をうなずかせる文章の組み立て方と、資料の読み解き方を解説します。
                   </p>
                 </div>
                 <div className="flex items-center text-[#C5A059] font-bold mt-auto font-serif text-base tracking-widest">
@@ -1215,7 +1215,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発��ラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
+                「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
               </div>
             </details>
 
