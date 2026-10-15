@@ -5,7 +5,7 @@ import { LayoutGrid, Clock } from "lucide-react";
 // 記事全体のレイアウト幅を一元管理するコンテナ
 export function ArticleContainer({ children }: { children: React.ReactNode }) {
   return (
-    <article className="max-w-4xl mx-auto px-6">
+    <article className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-[1rem] sm:text-[1.0625rem] leading-[1.9] sm:leading-[1.85]">
       {children}
     </article>
   )
@@ -28,7 +28,7 @@ export const ArticleH2 = ({
 }) => (
   <h2
     id={id}
-    className="scroll-mt-24 text-xl md:text-2xl font-bold text-[#002147] leading-snug mt-16 mb-8 pl-4 border-l-4 border-[#002147] relative after:content-[''] after:absolute after:-bottom-3 after:left-0 after:w-16 after:h-[3px] after:bg-[#C5A059]"
+    className="scroll-mt-24 text-[1.35rem] sm:text-2xl md:text-3xl font-bold text-[#002147] leading-[1.45] sm:leading-snug mt-14 sm:mt-16 mb-6 sm:mb-8 pl-4 border-l-4 border-[#002147] relative after:content-[''] after:absolute after:-bottom-3 after:left-0 after:w-16 after:h-[3px] after:bg-[#C5A059] text-pretty"
   >
     {children}
   </h2>
@@ -101,7 +101,7 @@ export function ArticleNavigation({
   back?: { title: string; href: string }
 }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10 border-t border-gray-200 mt-12 items-center">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 py-8 md:py-10 border-t border-gray-200 mt-12 items-center">
       {/* 前の記事 */}
       <div className="flex justify-start order-2 md:order-1">
         {prev && (

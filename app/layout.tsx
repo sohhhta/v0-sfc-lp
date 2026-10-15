@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Noto_Serif_JP, Noto_Sans_JP } from 'next/font/google'
+import { Noto_Sans_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
@@ -7,7 +7,6 @@ import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
-const serifJP = Noto_Serif_JP({ subsets: ["latin", "japanese"], weight: ["400", "700"] });
 const sansJP = Noto_Sans_JP({ subsets: ["latin", "japanese"], weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
@@ -50,10 +49,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
       </head>
-      <body 
-        style={{ fontFamily: `${sansJP.style.fontFamily}, ${serifJP.style.fontFamily}` }} 
-        className="antialiased min-h-screen flex flex-col"
-      >
+      <body className={`${sansJP.className} font-sans antialiased min-h-screen flex flex-col`}>
+
         <Header />
         <div className="flex-grow">{children}</div>
         <Footer />

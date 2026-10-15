@@ -13,8 +13,8 @@ import { FloatingCTA } from '@/components/ui/floating-cta'
 // Section title with Keio blue decorative lines
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
-    <div className="text-center mb-16">
-      <div className="flex items-center justify-center gap-6 mb-6">
+<div className="text-center mb-16 px-4">
+  <div className="flex items-center justify-center gap-4 sm:gap-6 mb-6">
         <div className="h-px w-16 bg-[#002147]/60" />
         <div className="w-2 h-2 bg-[#002147] rotate-45" />
         <div className="h-px w-16 bg-[#002147]/60" />
@@ -168,16 +168,15 @@ export default function HomeClient() {
 
           {/* Main Copy */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wide leading-snug sm:leading-tight text-balance drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
-            偏差値40台、実績ゼロからでも。<br className="hidden md:block" />
+            10月からでも、絶対に間に合わせる。<br className="hidden md:block" />
             塾長が直接寄り添う1on1指導で掴む、
             <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-4 leading-tight">SFC合格。</span>
           </h1>
 
           {/* Sub Copy */}
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed tracking-wide font-medium animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-            合格者の8割が、小論文未経験・実績ゼロからスタートしています。<br className="hidden md:block" />
-            マニュアル化された指導ではなく、塾長が生徒一人ひとりと向き合い、<br className="hidden md:block" />その人だけの強みを引き出します。<br className="hidden md:block" />
-            2人に1人が合格する確かな実績で、SFC合格までサポートします。
+            合格者の8割が、小論文未経験からのスタート。<br className="hidden md:block" />
+            塾長があなたの答案に直接向き合うことで、<br className="hidden md:block" />残り期間での合格圏内に入ることを実現します。
           </p>
 
           {/* Enhanced CTA Area */}
@@ -266,8 +265,8 @@ export default function HomeClient() {
           <div className="text-center mb-20">
             <div className="w-12 h-px bg-[#002147] mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-wide leading-relaxed text-balance">
-              一般的な小論文対策だけで、<br className="hidden sm:block" />
-              SFCに合格するのはなぜ難しいのでしょうか？
+              「なんとなく書けている気」が一番危ない。<br className="hidden sm:block" />
+              SFCの小論文で落ちる2つの理由
             </h2>
             <div className="w-12 h-px bg-[#002147] mx-auto mt-8" />
           </div>
@@ -284,20 +283,20 @@ export default function HomeClient() {
                 </div>
                 <div className="border-l border-slate-200 pl-10 py-2 flex-1">
                   <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                    SFCが求める「独自の視点」に特化していないから
+                    一般的な小論文の学習になってしまっているから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    学校や一般的な塾で教わるのは、幅広い大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届きません。
+                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                   </p>
                 </div>
               </div>
               <div className="md:hidden relative border-l-2 border-[#800000]/30 pl-5">
                 <div className="text-xs font-bold text-[#800000] tracking-[0.2em] mb-2 font-serif">原因 01</div>
                 <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
-                  SFCが求める「独自の視点」に特化していないから
+                  一般的な小論文の学習になってしまっているから
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-sm">
-                  学校や一般的な塾で教わるのは、幅広い大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届きません。
+                  特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                 </p>
               </div>
             </div>
@@ -313,20 +312,20 @@ export default function HomeClient() {
                 </div>
                 <div className="border-l border-slate-200 pl-10 py-2 flex-1">
                   <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                    「書いて直す」試行錯誤の回数が足りないから
+                    「書いて直す」絶対的な回数が足りないから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    大手の塾や予備校では、答案を提出してから返却されるまでに1週間ほどかかることが多く、月の回数制限もあります。小論文の上達には添削と書き直しの反復が欠かせませんが、この待ち時間が成長の妨げになってしまいます。
+                    小論文は添削と反復が全てです。大手予備校の平均添削回数は週2回、個別塾でも週3.5回程度ですが、佐藤塾では平均5回、最大で毎日の添削を行っています。直前期の「待ち時間」は成長の妨げになります。
                   </p>
                 </div>
               </div>
               <div className="md:hidden relative border-l-2 border-[#800000]/30 pl-5">
                 <div className="text-xs font-bold text-[#800000] tracking-[0.2em] mb-2 font-serif">原因 02</div>
                 <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
-                  「書いて直す」試行錯誤の回数が足りないから
+                  「書いて直す」絶対的な回数が足りないから
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-sm">
-                  大手の塾や予備校では、答案を提出してから返却されるまでに1週間ほどかかることが多く、月の回数制限もあります。小論文の上達には添削と書き直しの反復が欠かせませんが、この待ち時間が成長の妨げになってしまいます。
+                  小論文は添削と反復が全てです。大手予備校の平均添削回数は週2回、個別塾でも週3.5回程度ですが、佐藤塾では平均5回、最大で毎日の添削を行っています。直前期の「待ち時間」は成長の妨げになります。
                 </p>
               </div>
             </div>
@@ -354,20 +353,22 @@ export default function HomeClient() {
                 <div className="h-px w-12 bg-[#800000]/40" />
                 <span className="text-sm font-bold text-[#800000] tracking-widest font-serif">MESSAGE</span>
               </div>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#002147] mb-8 font-serif tracking-wide leading-snug">
-                偏差値40台からでも遅くありません。<br className="hidden md:block" />私と一緒に合格をつかみましょう。
-              </h3>
+  <h3 className="max-w-3xl text-[1.65rem] leading-[1.65] md:text-3xl md:leading-[1.55] lg:text-4xl lg:leading-[1.5] font-bold text-[#002147] mb-8 font-serif tracking-normal">
+            <span className="block">SFCの小論文は、</span>
+            <span className="block text-[#800000]">「事前に準備したアイデアや型」に<br className="hidden sm:block" />当てはめただけでは受かりません。</span>
+            <span className="mt-4 block text-[1.8rem] leading-[1.55] md:text-3xl lg:text-4xl">あなたの泥臭い本音を<br className="hidden sm:block" />ぶつけてください。</span>
+          </h3>
               <p className="text-base md:text-lg text-[#333333] mb-6 leading-relaxed">
-                「もともと文章を書くのが苦手」「すごい実績なんてない」。SFCに合格した先輩たちの多くも、最初は同じような不安を抱えていました。
+                「文章が書けない」「すごい経験なんてない」。毎年のように、秋になると同じ不安を抱えた受験生がやってきます。私自身も最初からスラスラ書けたわけではありません。だからこそ、真っ白な原稿用紙を前にした時の苦しさも、壁の越え方も誰よりも知っています。
               </p>
               <p className="text-base md:text-lg text-[#333333] mb-6 leading-relaxed">
-                特別な才能が必要だという誤解は捨ててください。<br className="hidden md:block" />正しい戦略を立てて、一つひとつの課題にしっかり向き合えば、大逆転は十分に可能です。
+                どこかの参考書にあるような言葉や、AIが書いたような小論文はSFCには通用しません。必要なのは、あなたの中に眠る原体験を、徹底的な対話で言葉にする泥臭い作業です。
               </p>
               <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
-                6年間で39名の合格者をサポートしてきた経験をもとに、あなたの「本当の魅力」を引き出します。
+                佐藤塾は、私一人がすべての答案に向き合う小さな塾です。だからこそ、大手にはできない圧倒的な熱量とスピードで、あなたの「本当の魅力」を引き出します。
               </p>
-              <p className="text-lg md:text-xl text-[#800000] mb-10 leading-relaxed font-bold font-serif">
-                私が直接、最後まで伴走することをお約束します。
+              <p className="text-lg md:text-xl text-[#800000] mb-10 leading-relaxed font-bold font-serif inline-block" style={{ textDecoration: 'underline', textDecorationStyle: 'wavy', textUnderlineOffset: '6px' }}>
+                SFC合格への最短距離を、私が直接、最後まで伴走します。
               </p>
               <div className="border-l-2 border-[#002147] pl-5 py-1">
                 <p className="text-lg font-bold text-[#002147] font-serif tracking-wide">
@@ -386,9 +387,9 @@ export default function HomeClient() {
         <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002147' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <SectionTitle subtitle="「自分にもできるのかな」「今からで間に合うのかな」といった不安にも、塾長が丁寧に寄り添い、一緒に解決していきます。">
-            小規模塾だから実現できる手厚いサポート。<br className="hidden md:block" />合格へ導く佐藤塾の指導サイクル
-          </SectionTitle>
+<SectionTitle>
+              不安や迷いを残さない。<br className="hidden md:block" />塾長が完全密着する合格までの指導サイクル
+            </SectionTitle>
 
           {/* PC版：3x3 グリッドによる絶対に崩れない（被らない）サイクルUI */}
           <div className="relative mt-16 hidden md:grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-x-2 lg:gap-x-4 gap-y-6 lg:gap-y-8 items-stretch max-w-6xl mx-auto">
@@ -554,7 +555,7 @@ export default function HomeClient() {
 
       {/* リアルな添削ビフォーアフター Section */}
       <section className="relative py-28 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="w-12 h-px bg-[#002147]/40 mx-auto mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] font-serif tracking-[0.08em] leading-relaxed mb-6 text-balance">
@@ -569,43 +570,51 @@ export default function HomeClient() {
           </div>
 
           <div className="bg-white border border-slate-200 rounded-2xl mt-12 shadow-sm overflow-hidden">
-            <div className="p-8 md:p-12 lg:p-16">
+            <div className="p-5 sm:p-8 lg:p-10 xl:p-12">
               <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif mb-10 text-center md:text-left flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 border-b border-slate-100 pb-6">
                 <PenTool className="w-6 h-6 text-[#002147]" />
-                実際の添削事例：思考を深め、自分だけの言葉を見つける
+                実際の指導プロセス：論理が破綻した「なんとなくの文章」が、SFCレベルに化けるまで
               </h3>
               
-              <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-                {/* Before */}
-                <div className="bg-[#FAF9F6] p-8 md:p-10 border border-slate-200 rounded-2xl relative pt-16 flex flex-col h-full">
-                  <span className="absolute top-0 left-0 bg-slate-500 text-white text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">生徒の初回答案</span>
+              <div className="grid lg:grid-cols-3 gap-5 lg:gap-6 items-stretch">
+                <div className="bg-[#FAF9F6] p-5 sm:p-7 border border-slate-200 rounded-2xl relative pt-20 sm:pt-[4.75rem] flex flex-col h-full">
+                  <span className="absolute top-0 left-0 bg-slate-500 text-white text-[0.68rem] sm:text-xs leading-snug font-bold px-4 py-2.5 tracking-wide font-serif rounded-tl-2xl rounded-br-xl">STEP 1: 生徒の初回答案</span>
+                  <div className="mb-4">
+                    <p className="text-sm font-bold text-slate-500 mb-2 border-b border-slate-200 pb-1">よくある不合格パターン</p>
+                  </div>
                   <div className="flex-1">
-                    <p className="text-[#666666] leading-loose text-base md:text-lg">
-                      「私は地域の過疎化問題に興味があります。解決のためには、IT技術を活用して遠隔地からでも医療や教育を受けられるようにするべきだと思います。」
+                    <p className="text-[#666666] leading-[1.85] text-sm md:text-base">
+                      「私は、日本の政治に対する若者の無関心は深刻だと考える。SNSで政治の話題を出すことはタブー視されている。むしろ、学校教育の中で政治について議論する場を増やすべきだ。」
                     </p>
                   </div>
                 </div>
-                
-                {/* After - 要件1: アドバイスの簡潔化とTO BE例の追加 */}
-                <div className="bg-white p-8 md:p-10 border-2 border-[#800000]/20 rounded-2xl relative pt-16 flex flex-col h-full shadow-sm">
-                  <span className="absolute top-0 left-0 bg-[#800000] text-white text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">塾長のフィードバック</span>
-                  <div className="flex-1 flex flex-col gap-6">
-                    <div className="bg-red-50/50 p-5 rounded-xl border border-red-100">
-                      <p className="text-[#800000] font-bold text-sm mb-2 flex items-center gap-2">
-                        <span className="text-base"></span> 塾長のアドバイス
+
+                <div className="bg-white p-5 sm:p-7 border-2 border-[#800000]/20 rounded-2xl relative pt-20 sm:pt-[4.75rem] flex flex-col h-full shadow-sm">
+                  <span className="absolute top-0 left-0 bg-[#800000] text-white text-[0.68rem] sm:text-xs leading-snug font-bold px-4 py-2.5 tracking-wide font-serif rounded-tl-2xl rounded-br-xl">STEP 2: 塾長の赤ペン添削</span>
+                  <div className="flex-1 flex flex-col">
+                    <div className="bg-red-50/50 p-5 rounded-xl border border-red-100 h-full">
+                      <p className="text-[#800000] font-bold text-sm mb-3 flex items-center gap-2">
+                        PREP法と接続詞の欠如を指摘
                       </p>
-                      <p className="text-[#333333] font-medium text-sm md:text-base leading-relaxed">
-                        「IT技術を活用」は抽象的です。<strong className="text-[#800000] border-b border-[#800000]/50">あなたが実際にA町で感じた課題と原体験</strong>をベースに具体化しましょう。
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-[#002147] font-bold text-sm mb-3 flex items-center gap-2">
-                        <span className="text-base"></span> 書き直し例（TO BE）
-                      </p>
-                      <p className="text-[#666666] leading-relaxed text-sm md:text-base border-l-2 border-[#C5A059] pl-4 py-1">
-                        「祖母が暮らすA町を訪れた際、交通手段がなく病院へ行けない現状を目の当たりにした。そこで、この課題を解決するため高齢者でも直感的に操作できる『音声入力型・遠隔医療アプリ』を提案したい。」
+                      <p className="text-[#333333] font-medium text-sm md:text-base leading-[1.8]">
+                        「1文目と2文目の間に論理の繋がりが見えません。『なぜなら』『具体的には』といった<strong className="text-[#800000] border-b border-[#800000]/50">接続詞を用いて、文が全体の中でどの論理構造（PREP）に位置しているか</strong>を明確にしてください。<br /><br />
+                        また、3文目の『むしろ』は不適切です。重要な理由から順に述べる構成に書き直しましょう。文末表現も事実と主観を厳格に使い分けてください。」
                       </p>
                     </div>
+                  </div>
+                </div>
+
+                <div className="bg-[#002147] p-5 sm:p-7 border border-[#002147] rounded-2xl relative pt-20 sm:pt-[4.75rem] flex flex-col h-full shadow-md">
+                  <span className="absolute top-0 left-0 bg-[#C5A059] text-[#002147] text-[0.68rem] sm:text-xs leading-snug font-bold px-4 py-2.5 tracking-wide font-serif rounded-tl-2xl rounded-br-xl">STEP 3: 対話を経て完成した合格答案</span>
+                  <div className="mb-4">
+                    <p className="text-sm font-bold text-[#C5A059] mb-2 border-b border-white/20 pb-1">論理構造（PREP）の確立と適切な語彙</p>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-white/90 leading-[1.85] text-sm md:text-base font-medium">
+                      「日本の政治に対する若者の無関心は深刻であると考える。<br /><br />
+                      なぜなら、SNS等において政治の話題は対立を生むタブーとして忌避されていると考えるからだ。具体的には、特定の政党を支持する発言が『炎上』を招く事例が後を絶たない。<br /><br />
+                      したがって、この状況を打破するためには、学校教育の段階で『対立を前提とした対話』を学ぶ機会を設けることが不可欠だと考えているのである。」
+                    </p>
                   </div>
                 </div>
               </div>
@@ -613,7 +622,7 @@ export default function HomeClient() {
               <div className="mt-10 pt-8 border-t border-slate-200">
                 <p className="text-[#666666] leading-relaxed text-sm font-medium flex items-start gap-3">
                   <span className="text-[#800000] font-bold mt-0.5 font-serif">※</span>
-                  <span>単なる「てにをは」の修正で終わらせることはありません。「なぜSFCに行きたいのか」「社会をどう変えたいのか」という根本的な問いに、塾長が本気で向き合います。この対話の積み重ねが、合格への一番の近道です。</span>
+                  <span>単なる「てにをは」の修正で終わらせることはありません。佐藤塾では「PREP法（主張・理由・具体例・まとめ）」と「接続詞の論理」を一文単位で厳格に指導します。この妥協なき反復プロセスが、実績ゼロからSFC教授を唸らせる小論文を生み出します。</span>
                 </p>
               </div>
             </div>
@@ -625,10 +634,10 @@ export default function HomeClient() {
       <section className="py-20 px-4 bg-white relative overflow-hidden border-b border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
-            「自分に何ができるかわからない」<br className="md:hidden" />と悩んでいませんか？
+            今の小論文の書き方で、<br className="md:hidden" />本当にSFCに受かるのか不安な方へ。
           </h3>
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
-            志望校合格への第一歩は、<strong className="text-[#800000]">「今の自分を正しく知り、正しい戦略を立てること」</strong>から始まります。<br className="hidden md:block" />「今の成績で本当に受かるのか」といった不安があれば、まずは無料相談でお気軽にお話しください。
+            直前期の第一歩は、<strong className="text-[#800000]">「今の自分の現在地を正しく知ること」</strong>です。<br className="hidden md:block" />まずは、あなたの今の答案や悩みを、そのまま私に見せてください。
           </p>
           <a href="#contact-form" onClick={handleSmoothScroll} className="inline-block w-full sm:w-auto">
             <Button className="w-full sm:w-auto min-w-[320px] rounded-full bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-8 py-5 h-auto text-base md:text-lg transition-colors duration-300 shadow-md group">
@@ -650,13 +659,10 @@ export default function HomeClient() {
               合格までのロードマップ
             </h2>
             <div className="max-w-3xl mx-auto text-left md:text-center">
-              <p className="text-base md:text-lg text-[#333333] leading-relaxed mb-6">
-                いつ、何をすれば合格できるのか。もちろん個人の状況によりますが、10月以降の標準的な学習スケジュールは以下の通りです。
-              </p>
               <div className="bg-white border border-[#C5A059]/40 p-6 md:p-8 shadow-sm inline-block text-left rounded-2xl">
                 <p className="text-base md:text-lg text-[#333333] leading-relaxed">
-                  <strong className="text-[#800000]">例年、秋口（10月以降）からのスタートでも多くの生徒が合格を勝ち取っています。</strong><br />
-                  昨年度も、10月入塾のSさん、11月入塾のMさんが、限られた時間で合格をつかみました。
+                  <strong className="text-[#800000]">残り数ヶ月で、何をどこまでやれば届くのか。</strong><br />
+                  10月以降の限られた時間で逆転するための、極限まで無駄を省いた学習スケジュールです。
                 </p>
               </div>
             </div>
@@ -816,10 +822,10 @@ export default function HomeClient() {
 
           <div className="grid md:grid-cols-2 gap-6 lg:gap-10 items-stretch mt-16">
             {[
-              { num: '01', title: '提出後、迅速で丁寧な添削', desc: '提出された小論文は塾長がすぐに確認・添削し、学習のペースを止めません。' },
-              { num: '02', title: '塾長との丁寧な1on1指導', desc: 'SFC合格の鍵となる「自分らしさ」を見つけるため、塾長が直接対話します。' },
-              { num: '03', title: 'SFCに特化した指導ノウハウ', desc: '6年間で培った指導経験をもとに、SFC合格に必要な考え方を分かりやすく教えます。' },
-              { num: '04', title: '完全オンラインで通塾不要', desc: '指導はすべてオンラインで行うため、直前期の貴重な移動時間を自分の勉強に充てられます。' },
+              { num: '01', title: '24時間以内の圧倒的な添削スピード', desc: '直前期の「待ち時間」をゼロにします。提出された小論文は即座に添削し、学習のペースを止めません。' },
+              { num: '02', title: '塾長直轄の完全1on1指導', desc: '学生バイトは一切なし。塾長が直接対話し、SFC合格の鍵となる「自分らしさ」と思考の癖を矯正します。' },
+              { num: '03', title: '出題意図を見抜くSFC特化ノウハウ', desc: '表面的な知識ではなく「問いを立てる力」を鍛えます。6年間の経験をもとにSFC特有の考え方を教えます。' },
+              { num: '04', title: '直前期に強い完全オンライン指導', desc: '移動時間をゼロにし、自宅を最高の環境に変えます。直前期の貴重な時間をすべて自分の勉強に充てられます。' },
             ].map((item) => (
               <div key={item.num} className="bg-[#FAF9F6] border border-slate-200 p-8 md:p-10 rounded-2xl flex flex-col h-full shadow-sm">
                 <div className="flex items-center gap-6 mb-6 border-b border-slate-200 pb-5">
@@ -1031,7 +1037,7 @@ export default function HomeClient() {
             </p>
           </div>
 
-          <SectionTitle subtitle="「今の成績で受かるのか」「何から始めればいいか分からない」といった不安があれば、まずは無料のオンライン面談でお気軽にお話しください。面談後、ご希望の方に1週間の無料お試し添削をご案内しております。">
+          <SectionTitle>
             無料の個別面談 ＆<br className="md:hidden"/> 1週間「お試し添削」に申し込む
           </SectionTitle>
 
@@ -1061,11 +1067,8 @@ export default function HomeClient() {
 
                   <div className="mb-10 p-6 md:p-8 bg-[#FAF9F6] border border-[#C5A059]/40 rounded-xl">
                     <h4 className="font-bold text-[#800000] mb-3 font-serif">📝 面談およびお試し添削の流れ</h4>
-                    <p className="text-sm text-[#333333] leading-relaxed font-medium mb-3">
-                      まずは塾長とのオンライン面談にて、現在の学習状況や志望校などをお伺いします。その後、「日本の論点100」という書籍内にある特定の記事を選び、<strong>「要約200字 ＋ あなたの意見200字」のミニ小論文（全3回）</strong>の無料添削を実施します。
-                    </p>
                     <p className="text-sm text-[#333333] leading-relaxed font-medium">
-                      ※ 無理な入塾勧誘は一切行いません。まずはSFC受験のプロ（塾長）との壁打ちとしてお気軽にご利用ください。
+                      面談で現状をヒアリング後、<strong>「要約＋意見」のミニ小論文（全3回）の無料添削</strong>を行います。無理な勧誘は一切しません。まずはプロとの壁打ちとしてご利用ください。
                     </p>
                   </div>
 
