@@ -286,7 +286,7 @@ export default function HomeClient() {
                     一般的な小論文の学習になってしまっているから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
+                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きませ��。
                   </p>
                 </div>
               </div>
@@ -353,9 +353,11 @@ export default function HomeClient() {
                 <div className="h-px w-12 bg-[#800000]/40" />
                 <span className="text-sm font-bold text-[#800000] tracking-widest font-serif">MESSAGE</span>
               </div>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#002147] mb-8 font-serif tracking-wide leading-snug">
-                SFCの小論文は「事前に準備したアイデアや型に当てはめた小論文」では受かりません。<br className="hidden md:block" />あなたの泥臭い本音をぶつけてください。
-              </h3>
+  <h3 className="max-w-3xl text-[1.65rem] leading-[1.65] md:text-3xl md:leading-[1.55] lg:text-4xl lg:leading-[1.5] font-bold text-[#002147] mb-8 font-serif tracking-normal">
+            <span className="block">SFCの小論文は、</span>
+            <span className="block text-[#800000]">「事前に準備したアイデアや型」に<br className="hidden sm:block" />当てはめただけでは受かりません。</span>
+            <span className="mt-4 block text-[1.8rem] leading-[1.55] md:text-3xl lg:text-4xl">あなたの泥臭い本音を<br className="hidden sm:block" />ぶつけてください。</span>
+          </h3>
               <p className="text-base md:text-lg text-[#333333] mb-6 leading-relaxed">
                 「文章が書けない」「すごい経験なんてない」。毎年のように、秋になると同じ不安を抱えた受験生がやってきます。私自身も最初からスラスラ書けたわけではありません。だからこそ、真っ白な原稿用紙を前にした時の苦しさも、壁の越え方も誰よりも知っています。
               </p>
@@ -1205,7 +1207,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
+                「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円を���ただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
               </div>
             </details>
 
