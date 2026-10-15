@@ -13,8 +13,8 @@ import { FloatingCTA } from '@/components/ui/floating-cta'
 // Section title with Keio blue decorative lines
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
-    <div className="text-center mb-16">
-      <div className="flex items-center justify-center gap-6 mb-6">
+<div className="text-center mb-16 px-4">
+  <div className="flex items-center justify-center gap-4 sm:gap-6 mb-6">
         <div className="h-px w-16 bg-[#002147]/60" />
         <div className="w-2 h-2 bg-[#002147] rotate-45" />
         <div className="h-px w-16 bg-[#002147]/60" />
@@ -953,7 +953,7 @@ export default function HomeClient() {
       <section className="py-24 md:py-32 px-4 bg-white border-b border-[#E5E7EB]">
         <div className="max-w-4xl mx-auto text-center bg-[#FAF9F6] p-12 md:p-20 rounded-3xl border border-slate-200 shadow-sm">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#002147] font-serif mb-8 tracking-wide">
-            佐藤塾の小論文指導とは
+            佐藤塾の小論文指���とは
           </h2>
           <p className="text-base md:text-lg text-[#666666] leading-loose mb-12 max-w-2xl mx-auto font-medium">
             慶應SFC合格に欠かせない「問いを立てる力」を、塾長がどのように指導しているか。そのメソッドを公開しています。
@@ -986,7 +986,7 @@ export default function HomeClient() {
                 </h3>
                 <div className="flex-1">
                   <p className="text-white/80 mb-10 leading-loose text-base md:text-lg mt-4 font-medium">
-                    「何を書けばいいかわからない」を抜け出して、SFCの教授をうなずかせる文章の組み立て方と、資料の読み解き方を解説します。
+                    「何を書けばいいかわからない」を抜け出して、SFCの教授をうなず���せる文章の組み立て方と、資料の読み解き方を解説します。
                   </p>
                 </div>
                 <div className="flex items-center text-[#C5A059] font-bold mt-auto font-serif text-base tracking-widest">
