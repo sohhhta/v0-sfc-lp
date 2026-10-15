@@ -416,7 +416,7 @@ export default function HomeClient() {
                 <h3 className="text-lg lg:text-xl font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論��的に書く力を伸ばします。</p>
+                <p className="text-[#333333] text-sm lg:text-base leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
@@ -561,7 +561,7 @@ export default function HomeClient() {
               塾長直筆の丁寧な赤ペン添削
             </h2>
             <p className="text-base md:text-lg text-[#333333] leading-relaxed max-w-4xl mx-auto text-left md:text-center">
-              SFC��教授陣は、表面的な知識をまとめただけの文章をすぐに見抜きます。<br className="hidden md:block" />
+              SFCの教授陣は、表面的な知識をまとめただけの文章をすぐに見抜きます。<br className="hidden md:block" />
               だからこそ佐藤塾では、<strong className="text-[#800000]">塾長自らがすべての答案を読み込み、生徒の本音と情熱を引き出すために何度でも添削</strong>を行います。
             </p>
             <div className="w-12 h-px bg-[#002147]/40 mx-auto mt-8" />
@@ -1192,7 +1192,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                塾長が一人ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表��的なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。
+                塾長が一人ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表面的なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。
               </div>
             </details>
 
