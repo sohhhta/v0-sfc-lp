@@ -283,20 +283,20 @@ export default function HomeClient() {
                 </div>
                 <div className="border-l border-slate-200 pl-10 py-2 flex-1">
                   <h3 className="text-xl md:text-2xl font-bold text-[#002147] font-serif tracking-wide mb-4">
-                    綺麗なだけの「優等生的な模範解答」を書いているから
+                    一般的な小論文の学習になってしまっているから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    一般的な塾で教わる「標準的な書き方」は、SFCの教授陣には一瞬で見抜かれます。ありきたりな言葉では合格ラインに届きません。
+                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                   </p>
                 </div>
               </div>
               <div className="md:hidden relative border-l-2 border-[#800000]/30 pl-5">
                 <div className="text-xs font-bold text-[#800000] tracking-[0.2em] mb-2 font-serif">原因 01</div>
                 <h3 className="text-lg font-bold text-[#002147] font-serif tracking-wide mb-3">
-                  綺麗なだけの「優等生的な模範解答」を書いているから
+                  一般的な小論文の学習になってしまっているから
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-sm">
-                  学校や一般的な塾で教わるのは、幅広い大学に対応した「標準的な書き方」です。しかし、SFCは受験生ならではの独自の視点や考え方を求める特殊な入試です。そのため、ありきたりな模範解答では合格ラインに届きません。
+                  特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                 </p>
               </div>
             </div>
@@ -315,7 +315,7 @@ export default function HomeClient() {
                     「書いて直す」絶対的な回数が足りないから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    小論文は添削と反復が全てです。答案返却に1週間もかかる大手予備校のペースでは、直前期の成長は望めません。
+                    小論文は添削と反復が全てです。大手予備校の平均添削回数は週2回、個別塾でも週3.5回程度ですが、佐藤塾では平均5回、最大で毎日の添削を行っています。直前期の「待ち時間」は成長の妨げになります。
                   </p>
                 </div>
               </div>
@@ -325,7 +325,7 @@ export default function HomeClient() {
                   「書いて直す」絶対的な回数が足りないから
                 </h3>
                 <p className="text-[#333333] leading-relaxed text-sm">
-                  小論文は添削と反復が全てです。答案返却に1週間もかかる大手予備校のペースでは、直前期の成長は望めません。
+                  小論文は添削と反復が全てです。大手予備校の平均添削回数は週2回、個別塾でも週3.5回程度ですが、佐藤塾では平均5回、最大で毎日の添削を行っています。直前期の「待ち時間」は成長の妨げになります。
                 </p>
               </div>
             </div>
@@ -354,7 +354,7 @@ export default function HomeClient() {
                 <span className="text-sm font-bold text-[#800000] tracking-widest font-serif">MESSAGE</span>
               </div>
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#002147] mb-8 font-serif tracking-wide leading-snug">
-                SFCの小論文は「綺麗な嘘」では受かりません。<br className="hidden md:block" />あなたの泥臭い本音をぶつけてください。
+                SFCの小論文は「事前に準備したアイデアや型に当てはめた小論文」では受かりません。<br className="hidden md:block" />あなたの泥臭い本音をぶつけてください。
               </h3>
               <p className="text-base md:text-lg text-[#333333] mb-6 leading-relaxed">
                 「文章が書けない」「すごい経験なんてない」。毎年のように、秋になると同じ不安を抱えた受験生がやってきます。私自身も最初からスラスラ書けたわけではありません。だからこそ、真っ白な原稿用紙を前にした時の苦しさも、壁の越え方も誰よりも知っています。
@@ -500,7 +500,7 @@ export default function HomeClient() {
                 <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
-                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
+                <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を��し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
               </div>
             </div>
 
@@ -576,7 +576,7 @@ export default function HomeClient() {
               
               <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
                 {/* Before */}
-                <div className="bg-[#FAF9F6] p-8 md:p-10 border border-slate-200 rounded-2xl relative pt-16 flex flex-col h-full transform -rotate-1 hover:rotate-0 transition-all duration-300">
+                <div className="bg-[#FAF9F6] p-8 md:p-10 border border-slate-200 rounded-2xl relative pt-16 flex flex-col h-full">
                   <span className="absolute top-0 left-0 bg-slate-500 text-white text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">生徒の初回答案</span>
                   <div className="flex-1">
                     <p className="text-[#666666] leading-loose text-base md:text-lg">
@@ -586,7 +586,7 @@ export default function HomeClient() {
                 </div>
                 
                 {/* After - 要件1: アドバイスの簡潔化とTO BE例の追加 */}
-                <div className="bg-white p-8 md:p-10 border-2 border-[#800000]/20 rounded-2xl relative pt-16 flex flex-col h-full shadow-sm transform rotate-1 hover:rotate-0 transition-all duration-300">
+                <div className="bg-white p-8 md:p-10 border-2 border-[#800000]/20 rounded-2xl relative pt-16 flex flex-col h-full shadow-sm">
                   <span className="absolute top-0 left-0 bg-[#800000] text-white text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">塾長のフィードバック</span>
                   <div className="flex-1 flex flex-col gap-6">
                     <div className="bg-red-50/50 p-5 rounded-xl border border-red-100">
@@ -722,7 +722,7 @@ export default function HomeClient() {
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#C5A059] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      SFCの過去問演習で、<br className="hidden lg:block" />どんな出題にも対応できる力を
+                      SFCの過去問演習で、<br className="hidden lg:block" />どんな出題にも対応できる力���
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
