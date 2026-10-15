@@ -848,20 +848,20 @@ export default function HomeClient() {
             <div className="flex flex-col bg-white border border-[#800000]/30 rounded-3xl shadow-xl overflow-hidden relative h-full">
               <div className="bg-[#800000] text-white px-6 py-8 text-center flex flex-col items-center justify-center min-h-[180px]">
                 <span className="inline-block bg-white text-[#800000] text-xs font-bold px-4 py-1.5 rounded-full tracking-widest shadow-sm mb-4">
-                  【本年度残り3名】
+                  【本年度 新規受入 残り3名】
                 </span>
-                <h4 className="text-xl md:text-2xl font-bold tracking-wide font-serif leading-snug">一般入試 直前徹底対策パック</h4>
+                <h4 className="text-xl md:text-2xl font-bold tracking-wide font-serif leading-snug">月額サブスクリプションプラン</h4>
                 <p className="text-white/80 text-sm mt-3 font-medium">SFC一般入試（小論文）を本気で完成させたい方</p>
               </div>
 
               <div className="flex-1 flex flex-col p-8 md:p-12">
                 <div className="mb-8 text-center border-b border-slate-100 pb-8">
-                  <p className="text-[#666666] text-sm mb-3 font-medium tracking-widest">パック一括料金</p>
+                  <p className="text-[#666666] text-sm mb-3 font-medium tracking-widest">月額料金</p>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">348,000</span>
-                    <span className="text-xl font-bold text-[#800000]">円</span>
+                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">88,000</span>
+                    <span className="text-xl font-bold text-[#800000]">円 / 月</span>
                   </div>
-                  <p className="text-sm text-[#800000] mt-3 font-bold">別途 入塾金 50,000円</p>
+                  <p className="text-sm text-[#800000] mt-3 font-bold">別途 初回入塾金 50,000円</p>
                 </div>
 
                 <div className="mb-8 bg-[#FAF9F6] py-3 rounded-xl border border-slate-100 flex items-center justify-center gap-2">
@@ -884,7 +884,7 @@ export default function HomeClient() {
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" />
-                    <span className="text-base text-[#333333] font-medium">塾長直通LINE 質問し放題（試験前日まで）</span>
+                    <span className="text-base text-[#333333] font-medium">塾長直通LINE 質問し放題（解約まで）</span>
                   </li>
                 </ul>
 
@@ -902,8 +902,8 @@ export default function HomeClient() {
             {/* Plan 2 */}
             <div className="flex flex-col bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden relative h-full">
               <div className="bg-slate-100 text-[#002147] px-6 py-8 text-center flex flex-col items-center justify-center min-h-[180px]">
-                <h4 className="text-xl md:text-2xl font-bold tracking-wide font-serif leading-snug">単発・小論文添削チケット<br/>（5回分）</h4>
-                <p className="text-[#666666] text-sm mt-3 font-medium">他塾と併用・セカンドオピニオンをご希望の方</p>
+                <h4 className="text-xl md:text-2xl font-bold tracking-wide font-serif leading-snug">単発プラン（5回分）</h4>
+                <p className="text-[#666666] text-sm mt-3 font-medium">他塾と併用・伸び悩みを解消したい方</p>
               </div>
 
               <div className="flex-1 flex flex-col p-8 md:p-12">
@@ -1121,8 +1121,8 @@ export default function HomeClient() {
                         required
                       >
                         <option value="">プランを選択してください</option>
-                        <option value="complete">一般入試 直前徹底対策パック</option>
-                        <option value="basic">単発・小論文添削チケット（5回分）</option>
+<option value="monthly">月額サブスクリプションプラン</option>
+  <option value="ticket">単発プラン（5回分）</option>
                         <option value="undecided">まだ決めていない（面談後に相談したい）</option>
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#666666]">
@@ -1212,7 +1212,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
               <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                「一般入試 直前徹底対策パック」をご契約の場合のみ、入塾金として税込50,000円をいただいております。「単発・小論文添削チケット」をご利用の場合は入塾金は不要です。追加費用が発生することもないので、安心して始めていただけます。
+                「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
               </div>
             </details>
 
