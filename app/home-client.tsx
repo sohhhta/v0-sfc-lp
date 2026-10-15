@@ -577,8 +577,8 @@ export default function HomeClient() {
               </h3>
               
               <div className="grid lg:grid-cols-3 gap-5 lg:gap-6 items-stretch">
-                <div className="bg-[#FAF9F6] p-5 sm:p-7 border border-slate-200 rounded-2xl relative pt-14 flex flex-col h-full">
-                  <span className="absolute top-0 left-0 bg-slate-500 text-white text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">STEP 1: 生徒の初回答案</span>
+                <div className="bg-[#FAF9F6] p-5 sm:p-7 border border-slate-200 rounded-2xl relative pt-20 sm:pt-[4.75rem] flex flex-col h-full">
+                  <span className="absolute top-0 left-0 bg-slate-500 text-white text-[0.68rem] sm:text-xs leading-snug font-bold px-4 py-2.5 tracking-wide font-serif rounded-tl-2xl rounded-br-xl">STEP 1: 生徒の初回答案</span>
                   <div className="mb-4">
                     <p className="text-sm font-bold text-slate-500 mb-2 border-b border-slate-200 pb-1">よくある不合格パターン</p>
                   </div>
@@ -589,8 +589,8 @@ export default function HomeClient() {
                   </div>
                 </div>
 
-                <div className="bg-white p-5 sm:p-7 border-2 border-[#800000]/20 rounded-2xl relative pt-14 flex flex-col h-full shadow-sm">
-                  <span className="absolute top-0 left-0 bg-[#800000] text-white text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">STEP 2: 塾長の赤ペン添削</span>
+                <div className="bg-white p-5 sm:p-7 border-2 border-[#800000]/20 rounded-2xl relative pt-20 sm:pt-[4.75rem] flex flex-col h-full shadow-sm">
+                  <span className="absolute top-0 left-0 bg-[#800000] text-white text-[0.68rem] sm:text-xs leading-snug font-bold px-4 py-2.5 tracking-wide font-serif rounded-tl-2xl rounded-br-xl">STEP 2: 塾長の赤ペン添削</span>
                   <div className="flex-1 flex flex-col">
                     <div className="bg-red-50/50 p-5 rounded-xl border border-red-100 h-full">
                       <p className="text-[#800000] font-bold text-sm mb-3 flex items-center gap-2">
@@ -604,8 +604,8 @@ export default function HomeClient() {
                   </div>
                 </div>
 
-                <div className="bg-[#002147] p-5 sm:p-7 border border-[#002147] rounded-2xl relative pt-14 flex flex-col h-full shadow-md">
-                  <span className="absolute top-0 left-0 bg-[#C5A059] text-[#002147] text-xs font-bold px-4 py-2 tracking-widest font-serif rounded-tl-2xl rounded-br-xl">STEP 3: 対話を経て完成した合格答案</span>
+                <div className="bg-[#002147] p-5 sm:p-7 border border-[#002147] rounded-2xl relative pt-20 sm:pt-[4.75rem] flex flex-col h-full shadow-md">
+                  <span className="absolute top-0 left-0 bg-[#C5A059] text-[#002147] text-[0.68rem] sm:text-xs leading-snug font-bold px-4 py-2.5 tracking-wide font-serif rounded-tl-2xl rounded-br-xl">STEP 3: 対話を経て完成した合格答案</span>
                   <div className="mb-4">
                     <p className="text-sm font-bold text-[#C5A059] mb-2 border-b border-white/20 pb-1">論理構造（PREP）の確立と適切な語彙</p>
                   </div>
