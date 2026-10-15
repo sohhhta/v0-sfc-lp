@@ -499,7 +499,7 @@ export default function HomeClient() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-slate-200 shadow-sm relative z-10 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-3">
                 <div className="w-10 h-10 bg-[#002147] rounded-full flex items-center justify-center text-white font-bold font-serif flex-shrink-0">02</div>
-                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案���、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
+                <h3 className="text-base font-bold text-[#002147] leading-snug">提出された答案は、塾長が<br className="hidden lg:block" />すぐに返却します</h3>
               </div>
               <div className="flex-1">
                 <p className="text-[#333333] text-sm leading-relaxed">塾長がすべての答案に目を通し、考え方の癖を見抜きます。<strong className="text-[#800000]">24時間以内にフィードバック</strong>し、論理的に書く力を伸ばします。</p>
@@ -611,7 +611,7 @@ export default function HomeClient() {
                   </div>
                   <div className="flex-1">
                     <p className="text-white/90 leading-[1.85] text-sm md:text-base font-medium">
-                      「日本の政治に���する若者の無関心は深刻であると考える。<br /><br />
+                      「日本の政治に対する若者の無関心は深刻であると考える。<br /><br />
                       なぜなら、SNS等において政治の話題は対立を生むタブーとして忌避されていると考えるからだ。具体的には、特定の政党を支持する発言が『炎上』を招く事例が後を絶たない。<br /><br />
                       したがって、この状況を打破するためには、学校教育の段階で『対立を前提とした対話』を学ぶ機会を設けることが不可欠だと考えているのである。」
                     </p>
