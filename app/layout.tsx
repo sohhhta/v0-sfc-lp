@@ -11,11 +11,11 @@ const sansJP = Noto_Sans_JP({ subsets: ["latin", "japanese"], weight: ["400", "5
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sfc-satojuku.com'),
-  title: '慶應SFC合格への最短距離 - 佐藤塾',
+  title: '【10月からのSFC小論文】慶應SFC専門塾｜圧倒的添削量で逆転合格 - 佐藤塾',
   description: '2人に1人が合格する、AI伴走指導。塾長 佐藤颯太が直接指導する慶應SFC専門塾。',
   verification: { google: "jVBvchuFr-2bGgeIwJbnZFlOnCrIRFLY54lY5BgEqr8" },
   openGraph: {
-    title: '慶應SFC合格への最短距離 - 佐藤塾',
+    title: '【10月からのSFC小論文】慶應SFC専門塾｜圧倒的添削量で逆転合格 - 佐藤塾',
     description: '2人に1人が合格する、AI伴走指導。塾長 佐藤颯太が直接指導する慶應SFC専門塾。',
     url: 'https://www.sfc-satojuku.com',
     siteName: '佐藤塾',
