@@ -867,7 +867,7 @@ export default function HomeClient() {
                     <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">88,000</span>
                     <span className="text-xl font-bold text-[#800000]">円 / 月</span>
                   </div>
-                  <p className="text-sm text-[#800000] mt-3 font-bold">別途 初回入塾金 50,000円</p>
+                  <p data-nosnippet className="text-sm text-[#800000] mt-3 font-bold">別途 初回入塾金 50,000円</p>
                 </div>
 
                 <div className="mb-8 bg-[#FAF9F6] py-3 rounded-xl border border-slate-100 flex items-center justify-center gap-2">
@@ -1214,9 +1214,9 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold group-open:hidden ml-6 flex-shrink-0">＋</span>
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
-              <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
-              </div>
+<div data-nosnippet className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
+                      「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
+                    </div>
             </details>
 
             <details className="group border-b border-slate-200 pb-2">
