@@ -284,7 +284,7 @@ export default function ResultsPage() {
               {/* Before */}
               <div className="flex flex-col h-full bg-slate-50 p-6 md:p-8 rounded-2xl border-t-4 border-slate-300">
                 <div className="flex items-center mb-6">
-                  <span className="bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">入塾前（3ヶ月前）</span>
+                  <span className="bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">入塾前（10月）</span>
                   <h3 className="font-bold text-slate-700 text-lg">感情論と論理の飛躍</h3>
                 </div>
                 
@@ -294,7 +294,7 @@ export default function ResultsPage() {
                     不合格答案
                   </div>
                   <p className="text-slate-600 text-sm leading-relaxed italic">
-                    「私はAIの進化に反対だ。なぜなら、人間の仕事が奪われてしまうからだ。最近もスーパーのレジが自動化されている。このままでは人間はAIに支配されてしまうため、国はAIの開発を法律で禁止すべきだと思う。」
+                    「少子化を解決するために、国はもっと保育園を作るべきだ。なぜなら、待機児童が多くて女性が働けないからだ。資料1のグラフでも出生率が下がっていることがわかる。したがって、補助金を出して子育てしやすい環境を整えることが一番の解決策である。」
                   </p>
                 </div>
 
@@ -304,9 +304,9 @@ export default function ResultsPage() {
                     【佐藤塾の添削ポイント】
                   </p>
                   <ul className="list-disc pl-5 space-y-2 mb-0">
-                    <li>「AIは仕事を奪う」という思いつきの<strong>感情論</strong>で書かれている。</li>
-                    <li>SFCが求める「具体的な資料（データ）の引用」が一切ない。</li>
-                    <li>「レジの自動化」から「AIの禁止」へと<strong>深刻な論理の飛躍</strong>が起きている。</li>
+                    <li><strong>【着眼点の承認】</strong>「保育園を増やすべき」という視点は素晴らしい。ただ、SFCでは「すでに国が実行している対策」のもう一歩奥にある構造的な原因を考える力が求められます。</li>
+                    <li><strong>【修正の理由と気づき】</strong>資料1を見ると「待機児童が減っている地域でも、出生率が回復していない」という矛盾がありませんか？「本当のボトルネックは別の場所にあるのでは？」と深掘りすることがSFCが求める問題発見です。</li>
+                    <li><strong>【解決策の提示】</strong>結論を急がず、まずはPREP法を使って「なぜそう言えるのか（R）」を固める練習を一緒にしましょう。</li>
                   </ul>
                 </div>
               </div>
@@ -334,7 +334,7 @@ export default function ResultsPage() {
                     SFC合格レベル
                   </div>
                   <p className="text-slate-800 text-sm leading-relaxed">
-                    「<strong className="text-[#002147]">【P】</strong>地方の医療過疎問題に対し、AI画像診断技術の導入を推進すべきだと考える。<strong className="text-[#002147]">【R】</strong>なぜなら、専門医不足の地域では初期診断の遅れが深刻化しており、テクノロジーによる代替が急務だと考えるからである。<strong className="text-[#002147]">【E】</strong>具体的には、資料2のグラフが示す通り、A県では医師1人あたりの負担が全国平均の2倍を超えている。つまり、AIに定型的な診断を代替させることで、<strong className="text-[#002147]">【P】</strong>医師は患者との対話や治療方針の決定という『人間にしかできない医療』に専念できるようになり、結果として地域医療の質は向上すると考えるのである。」
+                    「<strong className="text-[#002147]">【P】</strong>少子化対策の核心は、単なる保育園の増設ではなく、『労働環境の流動化』にあると考える。<strong className="text-[#002147]">【R】</strong>なぜなら、資料1と資料2をクロス分析すると、待機児童が減少している自治体でも出生率が回復していないという矛盾が存在するからだ。<strong className="text-[#002147]">【E】</strong>具体的には、問題のボトルネックは『預ける場所』ではなく、終身雇用を前提とした『硬直的なキャリアパス』による機会費用の高さにある。したがって、<strong className="text-[#002147]">【P】</strong>国境や企業を越えたプロジェクトベースの働き方を推進する法整備こそが、SFC的視点での真の少子化対策であると主張する。」
                   </p>
                 </div>
 
@@ -346,7 +346,7 @@ export default function ResultsPage() {
                   <ul className="list-disc pl-5 space-y-2 mb-0">
                     <li>最初の30分で<strong>「PREP法の構成メモ」</strong>を作成する型を完全習得</li>
                     <li>複数の資料をクロス分析し、<strong>ファクトベース</strong>のエビデンスを配置</li>
-                    <li>「テクノロジーの導入→人間の尊厳」という<strong>SFC的な発想</strong>を理解</li>
+                    <li>表面的な対策ではなく、社会構造のボトルネックを見抜く視点を獲得</li>
                   </ul>
                 </div>
               </div>
@@ -372,10 +372,10 @@ export default function ResultsPage() {
                 <div className="flex-grow">
                   <div className="mb-2">
                     <h3 className="text-lg font-bold text-slate-800">Oさん（高3現役・SFC環境情報学部合格）</h3>
-                    <p className="text-sm text-[#800000] font-semibold">AO入試・小論文対策コース</p>
+                    <p className="text-sm text-[#800000] font-semibold">一般入試・小論文特化コース</p>
                   </div>
                   <blockquote className="text-slate-700 leading-relaxed italic border-l-4 border-[#C5A059] pl-4 py-2">
-                    「最初は『書きながら考える』癖があって、設問分析の大切さにまったく気づいていませんでした。佐藤塾では毎回、構成メモだけで30分使うという指導を受けて、最初は違和感がありましたが、本番では、その30分が大きく活きました。」
+                    「10月の模試でE判定。学校の先生には『一般的な小論文の書き方』を教わっていましたが、SFCの過去問には全く歯が立たず絶望していました。佐藤塾に出会ったのは11月。最初は『過去問からは入らないと』という指導方針に戸惑いましたが、圧倒的だったのは『最大毎日』の添削ラリーです。提出してから24時間以内に赤ペンがびっしり入って返ってくる。この1ヶ月で、他塾の3ヶ月以上の小論文の量をこなすことができたように感じました。直前期からでも間に合ったのは、この異常なスピード感のおかげです。」
                   </blockquote>
                 </div>
               </div>
@@ -392,30 +392,10 @@ export default function ResultsPage() {
                 <div className="flex-grow">
                   <div className="mb-2">
                     <h3 className="text-lg font-bold text-slate-800">Kさん（浪人生・SFC総合政策学部合格）</h3>
-                    <p className="text-sm text-[#800000] font-semibold">一般入試・小論文対策コース</p>
+                    <p className="text-sm text-[#800000] font-semibold">一般入試・小論文特化コース</p>
                   </div>
                   <blockquote className="text-slate-700 leading-relaxed italic border-l-4 border-[#C5A059] pl-4 py-2">
-                    「AI壁打ちのおかげで、『この論理の流れで大丈夫か』という不安を毎日払拭することができました。予備校では『良い小論文とは何か』がぼんやりしていたけど、佐藤塾では『なぜそれはSFCに評価されるのか』という理由まで理解できた。」
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimony 3: Yさん */}
-            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-[#C5A059]/10 border-2 border-[#C5A059]">
-                    <span className="text-lg font-bold text-[#C5A059]">Y</span>
-                  </div>
-                </div>
-                <div className="flex-grow">
-                  <div className="mb-2">
-                    <h3 className="text-lg font-bold text-slate-800">Yさん（高3現役・SFC総合政策学部合格）</h3>
-                    <p className="text-sm text-[#800000] font-semibold">AO入試・ポートフォリオ対策コース</p>
-                  </div>
-                  <blockquote className="text-slate-700 leading-relaxed italic border-l-4 border-[#C5A059] pl-4 py-2">
-                    「『何もない』と思っていた自分の経験も、塾長との壁打ちを通じて『立派な研究テーマになり得る』ことが分かった。面接でも『あ、この人は自分の思考過程を大事にしている人だな』と評価官に伝わったと思う。」
+                    「大手予備校に1年通いましたが、『もっと多角的に考えろ』『論理が飛躍している』と抽象的なダメ出しをされるだけで、どう直せばいいのか分からず路頭に迷っていました。佐藤塾の凄さは『PREP法』という明確な型と、塾長との泥臭い対話です。『なぜこの資料からその結論になる？』と徹底的に詰められる中で、初めてSFCが求める『思考方法』がだんだん分かってきました。本番の試験中、塾長に提出したらこんな添削が返ってきそうと想像し自分で修正することもできました。」
                   </blockquote>
                 </div>
               </div>
@@ -432,10 +412,10 @@ export default function ResultsPage() {
                 <div className="flex-grow">
                   <div className="mb-2">
                     <h3 className="text-lg font-bold text-slate-800">保護者（Oさんの母）</h3>
-                    <p className="text-sm text-[#800000] font-semibold">AO入試対策コース利用</p>
+                    <p className="text-sm text-[#800000] font-semibold">一般入試対策コース利用</p>
                   </div>
                   <blockquote className="text-slate-700 leading-relaxed italic border-l-4 border-[#C5A059] pl-4 py-2">
-                    「親からすると『本当に合格できるのか』という不安がありました。ただ、塾長との面談を通じて『この先生は単に合格させるのではなく、この子の人生を応援しているんだな』という信頼が生まれました。結果として娘も親も、プレッシャーをポジティブなエネルギーに変えられた。」
+                    「秋口になっても小論文が書けず、焦りから娘も私も精神的に追い詰められていました。月額8.8万円という金額は決して安くはありませんでしたが、結果として『最高の投資』だったと断言できます。単に作文を直すだけでなく、いつでもLINEで娘の不安に寄り添い、ロジックを立て直してくれる。定期的に親子で面談の場も設けていただくことで、『プロの伴走』を実感しつつ受験を戦い抜くことができました。直前期のあの極限状態を、佐藤塾なしで乗り切ることは不可能でした。」
                   </blockquote>
                 </div>
               </div>
