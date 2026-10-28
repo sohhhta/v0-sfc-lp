@@ -286,7 +286,7 @@ export default function HomeClient() {
                     一般的な小論文の学習になってしまっているから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
+                    特定の型に当てはめることや初めから過去問��入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                   </p>
                 </div>
               </div>
@@ -997,10 +997,79 @@ export default function HomeClient() {
               小論文指導メソッドを読む
             </Button>
           </Link>
-        </div>
-      </section>
+  </div>
+  </section>
 
-      {/* SFC Guides Section */}
+  {/* Study Planning Support Section */}
+  <section className="border-b border-[#E5E7EB] bg-[#FAF9F6] px-4 py-24 md:py-32">
+    <div className="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+      <div>
+        <p className="mb-5 font-serif text-sm font-bold tracking-[0.16em] text-[#C5A059] md:text-base">
+          小論文だけではSFCには受からない。もう一つの絶対条件。
+        </p>
+        <h2 className="text-balance font-serif text-3xl font-bold leading-tight tracking-wide text-[#002147] sm:text-4xl md:text-5xl">
+          挫折させない。英語・数学の「徹底的な学習計画PDCA」
+        </h2>
+        <div className="mt-8 space-y-5 text-base font-medium leading-[1.9] text-[#666666] md:text-lg">
+          <p>
+            SFC一般入試の勝敗を分けるのは、もう1科目の「英語」または「数学」の自学自習です。受験は長期戦であり、がむしゃらに勉強するのではなく、マラソンのように明確な目標を持って着実にペースを刻むことが不可欠です。
+          </p>
+          <p>
+            佐藤塾では、現状と合格ラインのギャップから逆算し、「あなただけの学習ロードマップ」を作成。「今日は何をすべきか」で迷う時間をゼロにします。
+          </p>
+        </div>
+        <div className="mt-10 space-y-7">
+          <div className="flex gap-5 border-t border-[#C5A059]/50 pt-5">
+            <span className="shrink-0 font-serif text-3xl text-[#C5A059]">01</span>
+            <div>
+              <h3 className="font-serif text-lg font-bold text-[#002147]">ゴールからの緻密な逆算</h3>
+              <p className="mt-2 text-sm leading-7 text-[#666666] md:text-base">月間・週間の具体的なマイルストーンを設計し、「いつまでに・どの状態になっているべきか」を明確にします。</p>
+            </div>
+          </div>
+          <div className="flex gap-5 border-t border-[#C5A059]/50 pt-5">
+            <span className="shrink-0 font-serif text-3xl text-[#C5A059]">02</span>
+            <div>
+              <h3 className="font-serif text-lg font-bold text-[#002147]">迷いをなくす「1日単位」への分解</h3>
+              <p className="mt-2 text-sm leading-7 text-[#666666] md:text-base">月・週の目標から逆算し、「今日はこの問題集の〇ページ〜〇ページ」という極限まで具体的な日々のタスクへと落とし込みます。</p>
+            </div>
+          </div>
+          <div className="flex gap-5 border-t border-[#C5A059]/50 pt-5">
+            <span className="shrink-0 font-serif text-3xl text-[#C5A059]">03</span>
+            <div>
+              <h3 className="font-serif text-lg font-bold text-[#002147]">計画倒れを責めない「泥臭い軌道修正」</h3>
+              <p className="mt-2 text-sm leading-7 text-[#666666] md:text-base">予定通り進まない日があっても絶対に責めません。「なぜできなかったか」を共に分析し、現実的な計画へ即座に立て直す。この『プロの伴走』が、最後まで走り切れる理由です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative rounded-[2rem] bg-[#F8F9FA] p-4 shadow-[0_24px_70px_rgba(0,33,71,0.12)] sm:p-7">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-7">
+          <div className="rounded-xl bg-[#002147] p-5 text-white shadow-lg sm:p-6">
+            <p className="font-serif text-xs font-bold tracking-wider text-[#C5A059]">MONTHLY ROADMAP</p>
+            <p className="mt-2 text-sm font-bold leading-7 sm:text-base">【月間目標】11月：英単語帳1周完了・長文基礎の徹底</p>
+          </div>
+          <div className="mx-auto h-8 w-px bg-[#C5A059]" />
+          <div className="rounded-xl border border-[#C5A059]/50 bg-[#FAF9F6] p-5 sm:p-6">
+            <p className="font-serif text-xs font-bold tracking-wider text-[#800000]">WEEKLY MILESTONE</p>
+            <p className="mt-2 text-sm font-bold leading-7 text-[#002147] sm:text-base">【第2週の目標】単語帳 Ch.4〜6 / 長文ドリル 5題</p>
+          </div>
+          <div className="mx-auto h-8 w-px bg-[#C5A059]" />
+          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+            <p className="font-serif text-xs font-bold tracking-wider text-[#C5A059]">TODAY&apos;S FOCUS</p>
+            <p className="mt-2 text-sm font-bold leading-7 text-[#002147] sm:text-base">【本日のタスク】単語帳 P.45〜50（完了） / ドリル 2題（半分のみ）</p>
+            <div className="mt-4 flex gap-2 text-xs font-bold text-[#800000]"><span className="h-2 w-2 rounded-full bg-[#C5A059]" />進捗を確認して、明日の計画へ反映</div>
+          </div>
+        </div>
+        <div className="relative mt-5 ml-auto max-w-sm rounded-2xl rounded-br-md bg-[#800000] p-5 text-sm leading-7 text-white shadow-xl sm:-mr-5 sm:mt-[-2.5rem]">
+          <p className="mb-2 font-serif text-xs font-bold tracking-wider text-[#C5A059]">塾長からのメッセージ</p>
+          <p>単語の進捗素晴らしいです！長文で時間がかかっているようなので、明日のタスクを調整し復習に当てましょう。計画は修正してなんぼです。一緒に立て直しましょう！</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  {/* SFC Guides Section */}
       <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#002147' }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16 md:mb-20">
@@ -1222,7 +1291,7 @@ export default function HomeClient() {
             <details className="group border-b border-slate-200 pb-2">
               <summary className="flex items-center justify-between cursor-pointer py-6 hover:opacity-70 transition-opacity list-none">
                 <span className="font-bold text-[#002147] text-base md:text-lg leading-relaxed">
-                  なぜこれほど高い合格率が出せるのでしょうか？
+                  なぜこれほど高��合格率が出せるのでしょうか？
                 </span>
                 <span className="text-[#C5A059] text-2xl font-bold group-open:hidden ml-6 flex-shrink-0">＋</span>
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
