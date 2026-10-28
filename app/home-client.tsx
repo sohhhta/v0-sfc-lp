@@ -630,6 +630,42 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* Study Planning Support Section */}
+      <section className="border-b border-[#E5E7EB] bg-[#FAF9F6] px-4 py-24 md:py-32">
+        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+          <div>
+            <p className="mb-5 font-serif text-sm font-bold tracking-[0.14em] text-[#C5A059] md:text-base">小論文だけではSFCには受からない。もう一つの絶対条件。</p>
+            <h2 className="text-balance font-serif text-3xl font-bold leading-[1.35] tracking-wide text-[#002147] sm:text-4xl md:text-5xl">
+              <span className="hidden md:block">挫折させない。<br />英語・数学の「徹底的な学習計画PDCA」</span>
+              <span className="block md:hidden">挫折させない。<br />英語・数学の<br />「徹底的な学習計画PDCA」</span>
+            </h2>
+            <div className="mt-8 space-y-5 text-base font-medium leading-[1.9] text-[#666666] md:text-lg">
+              <p>SFC一般入試の勝敗を分けるのは、もう1科目の「英語」または「数学」の自学自習です。受験は長期戦であり、がむしゃらに勉強するのではなく、マラソンのように明確な目標を持って着実にペースを刻むことが不可欠です。</p>
+              <p>佐藤塾では、現状と合格ラインのギャップから逆算し、「あなただけの学習ロードマップ」を作成。「今日は何をすべきか」で迷う時間をゼロにします。</p>
+            </div>
+            <div className="mt-10 space-y-7">
+              <div className="flex gap-5 border-t border-[#C5A059]/50 pt-5"><span className="shrink-0 font-serif text-4xl leading-none text-[#C5A059] md:text-5xl">01</span><div><h3 className="font-serif text-lg font-bold text-[#002147]">ゴールからの緻密な逆算</h3><p className="mt-2 text-sm leading-7 text-[#666666] md:text-base">月間・週間の具体的なマイルストーンを設計し、「いつまでに・どの状態になっているべきか」を明確にします。</p></div></div>
+              <div className="flex gap-5 border-t border-[#C5A059]/50 pt-5"><span className="shrink-0 font-serif text-4xl leading-none text-[#C5A059] md:text-5xl">02</span><div><h3 className="font-serif text-lg font-bold text-[#002147]">迷いをなくす「1日単位」への分解</h3><p className="mt-2 text-sm leading-7 text-[#666666] md:text-base">月・週の目標から逆算し、「今日はこの問題集の〇ページ〜〇ページ」という日々のタスクへ落とし込みます。</p></div></div>
+              <div className="flex gap-5 border-t border-[#C5A059]/50 pt-5"><span className="shrink-0 font-serif text-4xl leading-none text-[#C5A059] md:text-5xl">03</span><div><h3 className="font-serif text-lg font-bold text-[#002147]">計画倒れを責めない「泥臭い軌道修正」</h3><p className="mt-2 text-sm leading-7 text-[#666666] md:text-base">予定通り進まない日も責めません。「なぜできなかったか」を共に分析し、現実的な計画へ即座に立て直します。</p></div></div>
+            </div>
+          </div>
+          <div className="rounded-[2rem] bg-[#F8F9FA] p-4 shadow-[0_24px_70px_rgba(0,33,71,0.14)] sm:p-7">
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_30px_rgba(0,33,71,0.08)]">
+              <div className="border-b border-slate-200 px-5 py-4 sm:px-7"><p className="font-serif text-xs font-bold tracking-[0.14em] text-[#666666]">WEEKLY STUDY PLAN | 11月第2週</p></div>
+              <div className="bg-[#002147] px-5 py-5 text-white sm:px-7"><p className="text-xs font-bold tracking-wider text-[#C5A059]">今週の目標</p><p className="mt-2 text-sm font-bold leading-7 sm:text-base">単語帳 Ch.4〜6 / 長文読解スピード向上</p></div>
+              <div className="divide-y divide-slate-200">
+                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">月</span><p className="text-sm leading-7 text-[#333333]">英語：単語P.45-50 / 長文ドリル1題 <span className="text-[#666666]">｜</span> 小論文：構成メモ作成</p></div>
+                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">火</span><p className="text-sm leading-7 text-[#333333]">英語：単語P.51-55 / ドリル復習 <span className="text-[#666666]">｜</span> 小論文：過去問2022提出</p></div>
+                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">水</span><p className="text-sm leading-7 text-[#333333]">英語：単語P.56-60 / 長文ドリル1題 <span className="text-[#666666]">｜</span> 小論文：塾長からのフィードバック確認</p></div>
+                <div className="grid gap-2 px-5 py-4 opacity-55 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">木</span><p className="text-sm leading-7 text-[#333333]">英語：単語P.61-65 / 長文演習 <span className="text-[#666666]">｜</span> 小論文：答案の再構成</p></div>
+                <div className="grid gap-2 px-5 py-4 opacity-45 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">金〜日</span><p className="text-sm leading-7 text-[#333333]">復習・模試・添削を進捗に合わせて調整</p></div>
+              </div>
+              <p className="border-t border-slate-200 px-5 py-4 text-right text-xs font-medium leading-6 text-[#666666] sm:px-7">※毎日の進捗に合わせて塾長が計画を再調整します</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Intermediate CTA Section */}
       <section className="py-20 px-4 bg-white relative overflow-hidden border-b border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto text-center relative z-10">
@@ -843,53 +879,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Study Planning Support Section */}
-      <section className="border-b border-[#E5E7EB] bg-[#FAF9F6] px-4 py-24 md:py-32">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
-          <div>
-            <p className="mb-5 font-serif text-sm font-bold tracking-[0.14em] text-[#C5A059] md:text-base">小論文だけではSFCには受からない。もう一つの絶対条件。</p>
-            <h2 className="text-balance font-serif text-3xl font-bold leading-[1.35] tracking-wide text-[#002147] sm:text-4xl md:text-5xl">
-              <span className="hidden md:block">挫折させない。<br />英語・数学の「徹底的な学習計画PDCA」</span>
-              <span className="block md:hidden">挫折させない。<br />英語・数学の<br />「徹底的な学習計画PDCA」</span>
-            </h2>
-            <div className="mt-8 space-y-5 text-base font-medium leading-[1.9] text-[#666666] md:text-lg">
-              <p>SFC一般入試の勝敗を分けるのは、もう1科目の「英語」または「数学」の自学自習です。受験は長期戦であり、がむしゃらに勉強するのではなく、マラソンのように明確な目標を持って着実にペースを刻むことが不可欠です。</p>
-              <p>佐藤塾では、現状と合格ラインのギャップから逆算し、「あなただけの学習ロードマップ」を作成。「今日は何をすべきか」で迷う時間をゼロにします。</p>
-            </div>
-            <div className="mt-10 space-y-7">
-              <div className="flex gap-5 border-t border-[#C5A059]/50 pt-5">
-                <span className="shrink-0 font-serif text-4xl leading-none text-[#C5A059] md:text-5xl">01</span>
-                <div><h3 className="font-serif text-lg font-bold text-[#002147]">ゴールからの緻密な逆算</h3><p className="mt-2 text-sm leading-7 text-[#666666] md:text-base">月間・週間の具体的なマイルストーンを設計し、「いつまでに・どの状態になっているべきか」を明確にします。</p></div>
-              </div>
-              <div className="flex gap-5 border-t border-[#C5A059]/50 pt-5">
-                <span className="shrink-0 font-serif text-4xl leading-none text-[#C5A059] md:text-5xl">02</span>
-                <div><h3 className="font-serif text-lg font-bold text-[#002147]">迷いをなくす「1日単位」への分解</h3><p className="mt-2 text-sm leading-7 text-[#666666] md:text-base">月・週の目標から逆算し、「今日はこの問題集の〇ページ〜〇ページ」という日々のタスクへ落とし込みます。</p></div>
-              </div>
-              <div className="flex gap-5 border-t border-[#C5A059]/50 pt-5">
-                <span className="shrink-0 font-serif text-4xl leading-none text-[#C5A059] md:text-5xl">03</span>
-                <div><h3 className="font-serif text-lg font-bold text-[#002147]">計画倒れを責めない「泥臭い軌道修正」</h3><p className="mt-2 text-sm leading-7 text-[#666666] md:text-base">予定通り進まない日も責めません。「なぜできなかったか」を共に分析し、現実的な計画へ即座に立て直します。</p></div>
-              </div>
-            </div>
-          </div>
 
-          <div className="rounded-[2rem] bg-[#F8F9FA] p-4 shadow-[0_24px_70px_rgba(0,33,71,0.14)] sm:p-7">
-            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_30px_rgba(0,33,71,0.08)]">
-              <div className="border-b border-slate-200 px-5 py-4 sm:px-7">
-                <p className="font-serif text-xs font-bold tracking-[0.14em] text-[#666666]">WEEKLY STUDY PLAN | 11月第2週</p>
-              </div>
-              <div className="bg-[#002147] px-5 py-5 text-white sm:px-7"><p className="text-xs font-bold tracking-wider text-[#C5A059]">今週の目標</p><p className="mt-2 text-sm font-bold leading-7 sm:text-base">単語帳 Ch.4〜6 / 長文読解スピード向上</p></div>
-              <div className="divide-y divide-slate-200">
-                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">月</span><p className="text-sm leading-7 text-[#333333]">英語：単語P.45-50 / 長文ドリル1題<br className="sm:hidden" /> <span className="text-[#666666]">｜</span> 小論文：構成メモ作成</p></div>
-                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">火</span><p className="text-sm leading-7 text-[#333333]">英語：単語P.51-55 / ドリル復習 <span className="text-[#666666]">｜</span> 小論文：過去問2022提出</p></div>
-                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">水</span><p className="text-sm leading-7 text-[#333333]">英語：単語P.56-60 / 長文ドリル1題 <span className="text-[#666666]">｜</span> 小論文：塾長からのフィードバック確認</p></div>
-                <div className="grid gap-2 px-5 py-4 opacity-55 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">木</span><p className="text-sm leading-7 text-[#333333]">英語：単語P.61-65 / 長文演習 <span className="text-[#666666]">｜</span> 小論文：答案の再構成</p></div>
-                <div className="grid gap-2 px-5 py-4 opacity-45 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">金〜日</span><p className="text-sm leading-7 text-[#333333]">復習・模試・添削を進捗に合わせて調整</p></div>
-              </div>
-              <p className="border-t border-slate-200 px-5 py-4 text-right text-xs font-medium leading-6 text-[#666666] sm:px-7">※毎日の進捗に合わせて塾長が計画を再調整します</p>
-            </div>
-          </div>
-        </div>
-      </section>
   
   {/* Results CTA Banner */}
       <section className="bg-[#002147] px-4 py-16 md:py-20 text-white">
@@ -920,7 +910,7 @@ export default function HomeClient() {
       {/* Pricing Section */}
       <section className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意しました。">料金プラン</SectionTitle>
+          <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意しまし��。">料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch mt-16">
             
@@ -1291,7 +1281,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
 <div data-nosnippet className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                      「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
+                      「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心し���始めていただけます。
                     </div>
             </details>
 
