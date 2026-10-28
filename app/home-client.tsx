@@ -286,7 +286,7 @@ export default function HomeClient() {
                     一般的な小論文の学習になってしまっているから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    特定の型に当てはめることや初めから過去問�����入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
+                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                   </p>
                 </div>
               </div>
@@ -658,8 +658,8 @@ export default function HomeClient() {
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">火</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.5（P.92〜111）：1時間45分 <span className="text-[#666666]">｜</span> 英文法問題集 第2章・Unit 1〜3：1時間45分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計3.5時間</strong></p></div>
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">水</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.6（P.112〜131）：2時間 <span className="text-[#666666]">｜</span> 長文演習 第4章・演習1〜2：2時間 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">木</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.5（P.92〜111）：1時間45分 <span className="text-[#666666]">｜</span> 英文法問題集 第2章・Unit 1〜3：1時間45分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計3.5時間</strong></p></div>
-                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">金</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.7（P.132〜151）：1時間45分 <span className="text-[#666666]">｜</span> 長文演習 第4章・演習3〜4：1時間45分 <span className="text-[#666666]">｜</span> 学習計画の振り返りと立て直し：30分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
-                <div className="grid max-h-12 overflow-hidden bg-gradient-to-b from-white via-white/70 to-transparent px-5 py-3 opacity-40 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">土〜日</span><p className="text-sm leading-7 text-[#333333]">復習・模試・演���を進捗に合わせて調整</p></div>
+                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">金</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.7（P.132〜151）：1時間45分 <span className="text-[#666666]">｜</span> 長文演習 第4章・演習3〜4：1時間45分 <span className="text-[#666666]">｜</span> <strong className="font-bold text-[#800000]">塾長と授業で学習計画の振り返りと立て直し：30分</strong> <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
+                <div className="grid max-h-12 overflow-hidden bg-gradient-to-b from-white via-white/70 to-transparent px-5 py-3 opacity-40 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">土〜日</span><p className="text-sm leading-7 text-[#333333]">復習・模試・演習を進捗に合わせて調整</p></div>
               </div>
               <p className="border-t border-slate-200 px-5 py-4 text-right text-xs font-medium leading-6 text-[#666666] sm:px-7">※毎日の進捗に合わせて塾長が計画を再調整します</p>
             </div>
@@ -773,7 +773,7 @@ export default function HomeClient() {
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
-                        残り期間はSFCの過去問演習に集中し��す。同じ問題でも切り口を変えて複数の答案を作成し、あらゆるテーマに対応できる柔軟な思考力を身につけます。
+                        残り期間はSFCの過去問演習に集中します。同じ問題でも切り口を変えて複数の答案を作成し、あらゆるテーマに対応できる柔軟な思考力を身につけます。
                       </p>
                     </div>
                   </div>
@@ -911,7 +911,7 @@ export default function HomeClient() {
       {/* Pricing Section */}
       <section className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意しまし��。">料金プラン</SectionTitle>
+          <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意しました。">料金プラン</SectionTitle>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch mt-16">
             
@@ -1033,7 +1033,7 @@ export default function HomeClient() {
           </p>
           <Link href="/guide/essay" className="inline-block w-full md:w-auto">
             <Button className="w-full md:w-auto rounded-full bg-[#002147] text-white font-bold px-12 py-7 h-auto text-base md:text-lg transition-colors duration-300 hover:bg-[#800000] shadow-md">
-              小論文指導メソッドを読���
+              小論文指導メソッドを読む
             </Button>
           </Link>
   </div>
@@ -1263,7 +1263,7 @@ export default function HomeClient() {
             <details className="group border-b border-slate-200 pb-2">
               <summary className="flex items-center justify-between cursor-pointer py-6 hover:opacity-70 transition-opacity list-none">
                 <span className="font-bold text-[#002147] text-base md:text-lg leading-relaxed">
-                  なぜこれほど高��合格率が出せるのでしょうか？
+                  なぜこれほど高い合格率が出せるのでしょうか？
                 </span>
                 <span className="text-[#C5A059] text-2xl font-bold group-open:hidden ml-6 flex-shrink-0">＋</span>
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
@@ -1282,7 +1282,7 @@ export default function HomeClient() {
                 <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
               </summary>
 <div data-nosnippet className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                      「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心し���始めていただけます。
+                      「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
                     </div>
             </details>
 
