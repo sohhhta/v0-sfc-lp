@@ -286,7 +286,7 @@ export default function HomeClient() {
                     一般的な小論文の学習になってしまっているから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
+                    特定の型に当てはめることや初めから過去問��入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                   </p>
                 </div>
               </div>
@@ -659,7 +659,7 @@ export default function HomeClient() {
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">水</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.6（P.112〜131）：2時間 <span className="text-[#666666]">｜</span> 長文演習 第4章・演習1〜2：2時間 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">木</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.5（P.92〜111）：1時間45分 <span className="text-[#666666]">｜</span> 英文法問題集 第2章・Unit 1〜3：1時間45分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計3.5時間</strong></p></div>
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">金</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.7（P.132〜151）：1時間45分 <span className="text-[#666666]">｜</span> 長文演習 第4章・演習3〜4：1時間45分 <span className="text-[#666666]">｜</span> <strong className="font-bold text-[#800000]">塾長と授業で学習計画の振り返りと立て直し：30分</strong> <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
-                <div className="grid max-h-12 overflow-hidden bg-gradient-to-b from-white via-white/70 to-transparent px-5 py-3 opacity-40 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">土〜日</span><p className="text-sm leading-7 text-[#333333]">復習・模試・演習を進捗に合わせて調整</p></div>
+                <div className="grid max-h-12 overflow-hidden bg-gradient-to-b from-white via-white/70 to-transparent px-5 py-3 opacity-65 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000] opacity-100">土〜日</span><p className="text-sm leading-7 text-[#333333]">復習・模試・演習を進捗に合わせて調整</p></div>
               </div>
               <p className="border-t border-slate-200 px-5 py-4 text-right text-xs font-medium leading-6 text-[#666666] sm:px-7">※毎日の進捗に合わせて塾長が計画を再調整します</p>
             </div>
@@ -862,7 +862,7 @@ export default function HomeClient() {
               { num: '01', title: '24時間以内の圧倒的な添削スピード', desc: '直前期の「待ち時間」をゼロにします。提出された小論文は即座に添削し、学習のペースを止めません。' },
               { num: '02', title: '塾長直轄の完全1on1指導', desc: '学生バイトは一切なし。塾長が直接対話し、SFC合格の鍵となる「自分らしさ」と思考の癖を矯正します。' },
               { num: '03', title: '出題意図を見抜くSFC特化ノウハウ', desc: '表面的な知識ではなく「問いを立てる力」を鍛えます。6年間の経験をもとにSFC特有の考え方を教えます。' },
-              { num: '04', title: '直前期に強い完全オンライン指導', desc: '移動時間をゼロにし、自宅を最高の環境に変えます。直前期の貴重な時間をすべて自分の勉強に充てられます。' },
+              { num: '04', title: '直前期に強い完全オンライン指導', desc: '移動時間をゼロにし、自宅を最高の環境に変えます。直前期の貴重な時間をすべて���分の勉強に充てられます。' },
             ].map((item) => (
               <div key={item.num} className="bg-[#FAF9F6] border border-slate-200 p-8 md:p-10 rounded-2xl flex flex-col h-full shadow-sm">
                 <div className="flex items-center gap-6 mb-6 border-b border-slate-200 pb-5">
