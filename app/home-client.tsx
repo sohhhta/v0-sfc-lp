@@ -843,6 +843,32 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* Results CTA Banner */}
+      <section className="bg-[#002147] px-4 py-16 md:py-20 text-white">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 text-center md:flex-row md:justify-between md:gap-12 md:text-left">
+          <div className="max-w-3xl">
+            <p className="mb-4 font-serif text-sm font-bold tracking-[0.16em] text-[#C5A059] md:text-base">
+              SFC合格率50.0%を支える、圧倒的な指導の裏側
+            </p>
+            <h2 className="text-balance font-serif text-2xl font-bold leading-tight tracking-wide sm:text-3xl md:text-4xl">
+              「最大毎日の添削ラリー」が叩き出す、驚異的な合格実績。
+            </h2>
+            <p className="mt-6 max-w-2xl text-sm leading-8 text-white/80 sm:text-base md:text-lg">
+              当塾が誇る圧倒的な合格実績は、魔法ではなく泥臭い対話の結果です。<br className="hidden md:block" />
+              絶望的な初回答案がSFC仕様へと変わっていく実際の『赤ペン添削プロセス』と、秋から大逆転を果たした『合格者のリアルな声』をこちらのページですべて公開しています。
+            </p>
+          </div>
+          <Link href="/results" className="group shrink-0">
+            <Button className="h-auto min-h-14 w-full rounded-full border border-[#C5A059] bg-[#C5A059] px-7 py-4 text-base font-bold text-white shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#002147] hover:shadow-[0_12px_30px_rgba(197,160,89,0.3)] sm:w-auto md:min-w-[300px] md:text-lg">
+              <span className="flex items-center justify-center gap-2 whitespace-nowrap">
+                合格実績・合格者の声を見る
+                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
+              </span>
+            </Button>
+          </Link>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
