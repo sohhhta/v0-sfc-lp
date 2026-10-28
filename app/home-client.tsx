@@ -286,7 +286,7 @@ export default function HomeClient() {
                     一般的な小論文の学習になってしまっているから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    特定の型に当てはめることや初めから過去問��入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
+                    特定の型に当てはめることや初めから過去問に入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                   </p>
                 </div>
               </div>
@@ -769,7 +769,7 @@ export default function HomeClient() {
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#C5A059] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      SFCの過去問演���で、<br className="hidden lg:block" />どんな出題にも対応できる力を
+                      SFCの過去問演習で、<br className="hidden lg:block" />どんな出題にも対応できる力を
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
@@ -862,7 +862,7 @@ export default function HomeClient() {
               { num: '01', title: '24時間以内の圧倒的な添削スピード', desc: '直前期の「待ち時間」をゼロにします。提出された小論文は即座に添削し、学習のペースを止めません。' },
               { num: '02', title: '塾長直轄の完全1on1指導', desc: '学生バイトは一切なし。塾長が直接対話し、SFC合格の鍵となる「自分らしさ」と思考の癖を矯正します。' },
               { num: '03', title: '出題意図を見抜くSFC特化ノウハウ', desc: '表面的な知識ではなく「問いを立てる力」を鍛えます。6年間の経験をもとにSFC特有の考え方を教えます。' },
-              { num: '04', title: '直前期に強い完全オンライン指導', desc: '移動時間をゼロにし、自宅を最高の環境に変えます。直前期の貴重な時���をすべて���分の勉強に充てられます。' },
+              { num: '04', title: '直前期に強い完全オンライン指導', desc: '移動時間をゼロにし、自宅を最高の環境に変えます。直前期の貴重な時間をすべて自分の勉強に充てられます。' },
             ].map((item) => (
               <div key={item.num} className="bg-[#FAF9F6] border border-slate-200 p-8 md:p-10 rounded-2xl flex flex-col h-full shadow-sm">
                 <div className="flex items-center gap-6 mb-6 border-b border-slate-200 pb-5">
