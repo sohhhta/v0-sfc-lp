@@ -286,7 +286,7 @@ export default function HomeClient() {
                     一般的な小論文の学習になってしまっているから
                   </h3>
                   <p className="text-[#333333] leading-loose text-base md:text-lg">
-                    特定の型に当てはめることや初めから過去問����入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
+                    特定の型に当てはめることや初めから過去問�����入るなど、複雑な内容や出題形式に対応できない形で学習をしてしまっているからです。ありきたりな言葉では合格ラインに届きません。
                   </p>
                 </div>
               </div>
@@ -654,12 +654,12 @@ export default function HomeClient() {
               <div className="border-b border-slate-200 px-5 py-4 sm:px-7"><p className="font-serif text-xs font-bold tracking-[0.14em] text-[#666666]">WEEKLY STUDY PLAN | 11月第2週</p></div>
               <div className="bg-[#002147] px-5 py-5 text-white sm:px-7"><p className="text-xs font-bold tracking-wider text-[#C5A059]">今週の目標</p><p className="mt-2 text-sm font-bold leading-7 sm:text-base">単語帳 Ch.4〜6 / 長文読解スピード向上</p></div>
               <div className="divide-y divide-slate-200">
-                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">月</span><p className="text-sm leading-7 text-[#333333]">英単語：2時間 <span className="text-[#666666]">｜</span> 長文ドリル：2時間 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
-                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">火</span><p className="text-sm leading-7 text-[#333333]">英単語：1時間45分 <span className="text-[#666666]">｜</span> 英文法・演習：1時間45分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計3.5時間</strong></p></div>
-                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">水</span><p className="text-sm leading-7 text-[#333333]">英単語：2時間 <span className="text-[#666666]">｜</span> 長文演習：2時間 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
-                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">木</span><p className="text-sm leading-7 text-[#333333]">英単語：1時間45分 <span className="text-[#666666]">｜</span> 英文法・演習：1時間45分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計3.5時間</strong></p></div>
-                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">金</span><p className="text-sm leading-7 text-[#333333]">英単語：1時間45分 <span className="text-[#666666]">｜</span> 長文演習：1時間45分 <span className="text-[#666666]">｜</span> 学習計画の振り返りと立て直し：30分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
-                <div className="grid max-h-12 overflow-hidden bg-gradient-to-b from-white via-white/70 to-transparent px-5 py-3 opacity-40 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">土〜日</span><p className="text-sm leading-7 text-[#333333]">復習・模試・演習を進捗に合わせて調整</p></div>
+                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">月</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.4（P.72〜91）：2時間 <span className="text-[#666666]">｜</span> 長文ドリル 第3章・例題1〜2：2時間 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
+                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">火</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.5（P.92〜111）：1時間45分 <span className="text-[#666666]">｜</span> 英文法問題集 第2章・Unit 1〜3：1時間45分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計3.5時間</strong></p></div>
+                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">水</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.6（P.112〜131）：2時間 <span className="text-[#666666]">｜</span> 長文演習 第4章・演習1〜2：2時間 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
+                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">木</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.5（P.92〜111）：1時間45分 <span className="text-[#666666]">｜</span> 英文法問題集 第2章・Unit 1〜3：1時間45分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計3.5時間</strong></p></div>
+                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">金</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.7（P.132〜151）：1時間45分 <span className="text-[#666666]">｜</span> 長文演習 第4章・演習3〜4：1時間45分 <span className="text-[#666666]">｜</span> 学習計画の振り返りと立て直し：30分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
+                <div className="grid max-h-12 overflow-hidden bg-gradient-to-b from-white via-white/70 to-transparent px-5 py-3 opacity-40 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">土〜日</span><p className="text-sm leading-7 text-[#333333]">復習・模試・演���を進捗に合わせて調整</p></div>
               </div>
               <p className="border-t border-slate-200 px-5 py-4 text-right text-xs font-medium leading-6 text-[#666666] sm:px-7">※毎日の進捗に合わせて塾長が計画を再調整します</p>
             </div>
@@ -773,7 +773,7 @@ export default function HomeClient() {
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
-                        残り期間はSFCの過去問演習に集中します。同じ問題でも切り口を変えて複数の答案を作成し、あらゆるテーマに対応できる柔軟な思考力を身につけます。
+                        残り期間はSFCの過去問演習に集中し��す。同じ問題でも切り口を変えて複数の答案を作成し、あらゆるテーマに対応できる柔軟な思考力を身につけます。
                       </p>
                     </div>
                   </div>
