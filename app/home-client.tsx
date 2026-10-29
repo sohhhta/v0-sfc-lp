@@ -640,7 +640,7 @@ export default function HomeClient() {
               <span className="block md:hidden">挫折させない。<br />英語・数学の<br />「徹底的な学習計画PDCA」</span>
             </h2>
             <div className="mt-8 space-y-5 text-base font-medium leading-[1.9] text-[#666666] md:text-lg">
-              <p>SFC一般入試の勝敗を分けるのは、もう1科目の「英語」または「数学」の自学自習です。受験は長期戦であり、がむしゃらに勉強するのではなく、マラソンのように明確な目標を持って着実にペースを刻むことが不可欠です。</p>
+              <p>SFC一般入試の勝敗を分けるのは、もう1科目の「英語」または「数学」の自学自習です。残された時間が少ない直前期だからこそ、がむしゃらに勉強するのではなく、合格ラインから逆算した「極限まで無駄のないペース配分」が不可欠です。</p>
               <p>佐藤塾では、現状と合格ラインのギャップから逆算し、「あなただけの学習ロードマップ」を作成。「今日は何をすべきか」で迷う時間をゼロにします。</p>
             </div>
             <div className="mt-10 space-y-7">
@@ -656,7 +656,7 @@ export default function HomeClient() {
               <div className="divide-y divide-slate-200">
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">月</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.4（P.72〜91）：2時間 <span className="text-[#666666]">｜</span> 長文ドリル 第3章・例題1〜2：2時間 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">火</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.5（P.92〜111）：1時間45分 <span className="text-[#666666]">｜</span> 英文法問題集 第2章・Unit 1〜3：1時間45分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計3.5時間</strong></p></div>
-                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">水</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.6（P.112〜131）：2時間 <span className="text-[#666666]">｜</span> 長文演習 第4章・演習1〜2：2時間 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
+                <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">水</span><div className="text-sm leading-7 text-[#333333]"><p>英単語帳 Ch.6（P.112〜131）：2時間 <span className="text-[#666666]">｜</span> <span className="line-through decoration-[#800000]/70">長文演習 第4章・演習1〜2：2時間</span> <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p><span className="mt-2 inline-block rounded-md bg-[#C5A059] px-2.5 py-1 text-[0.68rem] font-bold leading-5 text-white">※進捗に合わせて塾長が計画を再調整（木曜へ移動）</span></div></div>
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">木</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.5（P.92〜111）：1時間45分 <span className="text-[#666666]">｜</span> 英文法問題集 第2章・Unit 1〜3：1時間45分 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計3.5時間</strong></p></div>
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">金</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.7（P.132〜151）：1時間45分 <span className="text-[#666666]">｜</span> 長文演習 第4章・演習3〜4：1時間45分 <span className="text-[#666666]">｜</span> <strong className="font-bold text-[#800000]">塾長と授業で学習計画の振り返りと立て直し：30分</strong> <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
                 <div className="grid min-h-12 bg-gradient-to-b from-white via-white/70 to-transparent px-5 py-3 opacity-65 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000] opacity-100">土〜日</span><p className="text-sm leading-7 text-[#333333]">復習・模試・演習を進捗に合わせて調整</p></div>
@@ -671,10 +671,10 @@ export default function HomeClient() {
       <section className="py-20 px-4 bg-white relative overflow-hidden border-b border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
-            今の小論文の書き方で、<br className="md:hidden" />本当にSFCに受かるのか不安な方へ。
+            「今の小論文の書き方」と「毎日の学習計画」。<br className="hidden sm:block" />本当にこのままでSFCに受かるのか、不安な方へ。
           </h3>
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
-            直前期の第一歩は、<strong className="text-[#800000]">「今の自分の現在地を正しく知ること」</strong>です。<br className="hidden md:block" />まずは、あなたの今の答案や悩みを、そのまま私に見せてください。
+            直前期の第一歩は、<strong className="text-[#800000]">「今の自分の現在地を正しく知ること」</strong>です。<br className="hidden md:block" />まずは、あなたの今の答案や悩みを、そのまま私に見せてください。<br className="hidden md:block" />小論文の添削だけでなく、本番までの「逆算学習ロードマップ」も合わせてご提案します。
           </p>
           <a href="#contact-form" onClick={handleSmoothScroll} className="inline-block w-full sm:w-auto">
             <Button className="w-full sm:w-auto min-w-[320px] rounded-full bg-[#800000] hover:bg-[#C5A059] text-white font-bold px-8 py-5 h-auto text-base md:text-lg transition-colors duration-300 shadow-md group">
