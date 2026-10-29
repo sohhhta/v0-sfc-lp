@@ -134,7 +134,7 @@ export default function HomeClient() {
         "@type": "WebSite",
         "@id": "https://lifeeling.jp/#website",
         "url": "https://lifeeling.jp",
-        "name": "【10月からのSFC小論文】慶應SFC専門塾｜圧倒的添削量で逆転合格 - 佐藤塾",
+        "name": "【残り3ヶ月からのSFC小論文】慶應SFC専門塾｜11月からの逆転合格 - 佐藤塾",
         "publisher": { "@id": "https://lifeeling.jp/#organization" }
       }
     ]
@@ -168,7 +168,7 @@ export default function HomeClient() {
 
           {/* Main Copy */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wide leading-snug sm:leading-tight text-balance drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
-            10月からでも、絶対に間に合わせる。<br className="hidden md:block" />
+            11月からでも、絶対に間に合わせる。<br className="hidden md:block" />
             塾長が直接寄り添う1on1指導で掴む、
             <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-4 leading-tight">SFC合格。</span>
           </h1>
@@ -640,7 +640,7 @@ export default function HomeClient() {
               <span className="block md:hidden">挫折させない。<br />英語・数学の<br />「徹底的な学習計画PDCA」</span>
             </h2>
             <div className="mt-8 space-y-5 text-base font-medium leading-[1.9] text-[#666666] md:text-lg">
-              <p>SFC一般入試の勝敗を分けるのは、もう1科目の「英語」または「数学」の自学自習です。残された時間が少ない直前期だからこそ、がむしゃらに勉強するのではなく、合格ラインから逆算した「極限まで無駄のないペース配分」が不可欠です。</p>
+              <p>SFC一般入試の勝敗を分けるのは、もう1科目の「英語」または「数学」の自学自習です。本番まで残り約3ヶ月となるこの時期だからこそ、がむしゃらに勉強するのではなく、合格ラインから逆算した「極限まで無駄のない冬のペース配分」が不可欠です。</p>
               <p>佐藤塾では、現状と合格ラインのギャップから逆算し、「あなただけの学習ロードマップ」を作成。「今日は何をすべきか」で迷う時間をゼロにします。</p>
             </div>
             <div className="mt-10 space-y-7">
@@ -671,7 +671,7 @@ export default function HomeClient() {
       <section className="py-20 px-4 bg-white relative overflow-hidden border-b border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
-            「今の小論文の書き方」と「毎日の学習計画」。<br className="hidden sm:block" />本当にこのままでSFCに受かるのか、不安な方へ。
+            「11月からのスタートで、本当にSFCに間に合うのか？」と不安な方へ。
           </h3>
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
             直前期の第一歩は、<strong className="text-[#800000]">「今の自分の現在地を正しく知ること」</strong>です。<br className="hidden md:block" />まずは、あなたの今の答案や悩みを、そのまま私に見せてください。<br className="hidden md:block" />小論文の添削だけでなく、本番までの「逆算学習ロードマップ」も合わせてご提案します。
@@ -699,7 +699,7 @@ export default function HomeClient() {
               <div className="bg-white border border-[#C5A059]/40 p-6 md:p-8 shadow-sm inline-block text-left rounded-2xl">
                 <p className="text-base md:text-lg text-[#333333] leading-relaxed">
                   <strong className="text-[#800000]">残り数ヶ月で、何をどこまでやれば届くのか。</strong><br />
-                  10月以降の限られた時間で逆転するための、極限まで無駄を省いた学習スケジュールです。
+                  11月以降の残り約3ヶ月で大逆転するための、極限まで無駄を省いた「冬の学習スケジュール」です。
                 </p>
               </div>
             </div>
@@ -720,7 +720,7 @@ export default function HomeClient() {
                       01
                     </div>
                     <div className="mt-4 flex items-center gap-2 bg-white border border-slate-200 px-5 py-1.5 rounded-full">
-                      <span className="text-sm font-bold text-[#002147] tracking-widest font-serif">10月〜11月</span>
+                      <span className="text-sm font-bold text-[#002147] tracking-widest font-serif">11月</span>
                     </div>
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#002147] rounded-2xl relative flex-1 flex flex-col shadow-sm">
@@ -729,7 +729,7 @@ export default function HomeClient() {
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
-                        まずは短めの要約や小論文に取り組みます。塾長の添削を通じて論理的な文章の型を身につけながら、あなたならではの「視点」や「独自性」を探していきます。
+                        「残り3ヶ月」という時間を考慮し、基礎固めとあなたならではの「視点（武器）」の発見を、最大毎日の超短期添削ラリーで一気に終わらせます。
                       </p>
                     </div>
                   </div>
@@ -795,14 +795,14 @@ export default function HomeClient() {
                 </div>
                 <div className="bg-white p-6 md:p-8 border border-slate-200 border-l-4 border-l-[#002147] rounded-2xl flex-1 flex flex-col shadow-sm">
                   <div className="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
-                    <span className="text-xs font-bold text-[#002147] tracking-widest font-serif bg-[#FAF9F6] px-3 py-1 rounded-full border border-slate-200">10月〜11月</span>
+                    <span className="text-xs font-bold text-[#002147] tracking-widest font-serif bg-[#FAF9F6] px-3 py-1 rounded-full border border-slate-200">11月</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-3 leading-snug">
                     基礎を固め、あなただけの「視点」を見つける
                   </h3>
                   <div className="flex-1">
                     <p className="text-sm text-[#666666] leading-relaxed">
-                      まずは短めの要約や小論文に取り組みます。塾長の添削を通じて論理的な文章の型を身につけながら、あなたならではの「視点」や「独自性」を探していきます。
+                      「残り3ヶ月」という時間を考慮し、基礎固めとあなたならではの「視点（武器）」の発見を、最大毎日の超短期添削ラリーで一気に終わらせます。
                     </p>
                   </div>
                 </div>
