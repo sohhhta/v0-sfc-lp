@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
 import './globals.css'
 import { Header } from '@/components/header'
@@ -32,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Google Analytics & Google Ads Global Site Tag */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-RWYJZR6MJ3"
+          src="https://www.googletagmanager.com/gtag/js?id=G-NVR474N8XP"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -42,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('js', new Date());
             
             // GA4
-            gtag('config', 'G-RWYJZR6MJ3');
+            gtag('config', 'G-NVR474N8XP');
             
             // Google Ads
             gtag('config', 'AW-384283541');
@@ -56,7 +55,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
-      <GoogleAnalytics gaId="G-NVR474N8XP" />
     </html>
   )
 }
