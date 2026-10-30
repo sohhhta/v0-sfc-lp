@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Button } from '@/components/ui/button'
+import { remainingSeats } from '@/lib/site-config'
 import { Check, ShieldCheck, GraduationCap, Laptop } from 'lucide-react'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -407,7 +408,7 @@ export default function CoursePage() {
           </p>
 
           <p className="text-sm text-[#800000] mb-6">
-            ※一人ひとりの指導密度を保つため、今年度の新規受付は<span className="font-bold">残り13名</span>となっております
+            ※一人ひとりの指導密度を保つため、今年度の新規受付は<span className="font-bold">残り{remainingSeats}名</span>となっております
           </p>
 
           <Link href="/#contact-form">

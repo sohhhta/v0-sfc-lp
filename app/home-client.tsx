@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import { remainingSeats } from '@/lib/site-config'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -190,7 +191,7 @@ export default function HomeClient() {
                   <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500"></span>
                 </span>
                 <p className="text-white text-sm sm:text-base font-bold tracking-wider leading-snug text-center">
-                  一人ひとりへの指導の質を守るため、<br className="sm:hidden md:block" />今年度の直前対策パックの受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b border-[#C5A059]">残り3名</span>
+                  一人ひとりへの指導の質を守るため、<br className="sm:hidden md:block" />今年度の直前対策パックの受付は<span className="text-[#C5A059] text-lg sm:text-xl ml-1 border-b border-[#C5A059]">残り{remainingSeats}名</span>
                 </p>
               </div>
 
@@ -919,7 +920,7 @@ export default function HomeClient() {
             <div className="flex flex-col bg-white border border-[#800000]/30 rounded-3xl shadow-xl overflow-hidden relative h-full">
               <div className="bg-[#800000] text-white px-6 py-8 text-center flex flex-col items-center justify-center min-h-[180px]">
                 <span className="inline-block bg-white text-[#800000] text-xs font-bold px-4 py-1.5 rounded-full tracking-widest shadow-sm mb-4">
-                  【本年度 新規受入 残り3名】
+                  【本年度 新規受入 残り{remainingSeats}名】
                 </span>
                 <h4 className="text-xl md:text-2xl font-bold tracking-wide font-serif leading-snug">月額サブスクリプションプラン</h4>
                 <p className="text-white/80 text-sm mt-3 font-medium">SFC一般入試（小論文）を本気で完成させたい方</p>
