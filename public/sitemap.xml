@@ -5,15 +5,63 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.sfc-satojuku.com/course</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.sfc-satojuku.com/results</loc>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sfc-satojuku.com/guide/essay</loc>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/guide/essay/articles</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/guide/past-exams</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/guide/tech-society</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/guide/time-management</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/guide/logic-writing</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/guide/data-reading</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/ao-guide</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/ao-guide/articles</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/ao-guide/theme</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/ao-guide/portfolio</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/ao-guide/interview</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/ao-guide/strategy</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.sfc-satojuku.com/ao-guide/statement</loc>
+    <priority>0.6</priority>
   </url>
 </urlset>
