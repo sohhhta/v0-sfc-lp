@@ -15,15 +15,17 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(apiKey)
 
     const body = await request.json()
-    const { name, email, phone, plan, message } = body
+    const { name, email, phone, respondent, grade, plan, message } = body
 
     // Validate required fields
-    if (!name || !email || !phone || !plan) {
+    if (!name || !email || !phone || !respondent || !grade || !plan) {
       return NextResponse.json(
         { error: '必須項目を入力してください' },
         { status: 400 }
       )
     }
+
+    const respondentLabel = respondent === 'guardian' ? '保護者' : '生徒本人'
 
     // Send email using Resend to admin
     const result = await resend.emails.send({
@@ -38,6 +40,8 @@ export async function POST(request: NextRequest) {
             <p><strong style="color: #002147;">お名前:</strong> ${name}</p>
             <p><strong style="color: #002147;">メールアドレス:</strong> ${email}</p>
             <p><strong style="color: #002147;">電話番号:</strong> ${phone}</p>
+            <p><strong style="color: #002147;">入力した人:</strong> ${respondentLabel}</p>
+            <p><strong style="color: #002147;">学年:</strong> ${grade}</p>
             <p><strong style="color: #002147;">ご希望のプラン:</strong> ${plan}</p>
           </div>
           

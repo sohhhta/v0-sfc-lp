@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { remainingSeats } from '@/lib/site-config'
+import { remainingSeats, BOOKING_URL } from '@/lib/site-config'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -43,6 +43,8 @@ export default function HomeClient() {
     name: '',
     email: '',
     phone: '',
+    respondent: '',
+    grade: '',
     plan: '',
     message: ''
   })
@@ -81,6 +83,8 @@ export default function HomeClient() {
         name: '',
         email: '',
         phone: '',
+        respondent: '',
+        grade: '',
         plan: '',
         message: ''
       })
@@ -1121,10 +1125,29 @@ export default function HomeClient() {
                     個別面談へのお申し込みありがとうございます。<br />
                     担当者より24時間以内に、ご入力のメールアドレス宛にご連絡いたします。
                   </p>
+                  <div className="max-w-md mx-auto mb-10 p-6 bg-[#FAF9F6] border border-[#C5A059]/40 rounded-xl">
+                    <p className="text-sm font-bold text-[#002147] mb-3">面談の日時は、今すぐお選びいただけます</p>
+                    <p className="text-sm text-[#333333] leading-relaxed mb-4">
+                      保護者の方のご同席が必須です。ご都合のよい日時をお選びください。
+                    </p>
+                    <a
+                      href={BOOKING_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+                          (window as any).gtag('event', 'booking_click', { event_category: 'Contact' })
+                        }
+                      }}
+                      className="inline-block rounded-full bg-[#800000] hover:bg-[#C5A059] text-white px-8 py-3 font-bold transition-colors"
+                    >
+                      面談の日時を選ぶ
+                    </a>
+                  </div>
                   <div className="text-left max-w-md mx-auto mb-10">
                     <p className="text-sm font-bold text-[#002147] mb-4 tracking-wider">今後の流れ</p>
                     <ol className="space-y-3 text-sm md:text-base text-[#333333] leading-relaxed">
-                      <li><span className="font-bold text-[#800000] mr-2">1.</span>面談の候補日時をメールでお伺いします</li>
+                      <li><span className="font-bold text-[#800000] mr-2">1.</span>上のボタンから面談の日時をお選びください（合う日がない場合はメールでご相談ください）</li>
                       <li><span className="font-bold text-[#800000] mr-2">2.</span>オンラインで無料の個別面談（現状と志望をお伺いし、学習プランをご提案します）</li>
                       <li><span className="font-bold text-[#800000] mr-2">3.</span>1週間の「お試し添削」で指導内容をご体験いただきます</li>
                       <li><span className="font-bold text-[#800000] mr-2">4.</span>ご納得いただけた場合のみ、ご入塾となります</li>
@@ -1187,6 +1210,52 @@ export default function HomeClient() {
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
                     />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-bold text-[#002147] mb-3">
+                      入力する人 <span className="text-[#800000]">*</span>
+                    </label>
+                    <div className="flex gap-6">
+                      {[{ v: 'student', l: '生徒本人' }, { v: 'guardian', l: '保護者' }].map((o) => (
+                        <label key={o.v} className="flex items-center gap-2 text-base text-[#333333] cursor-pointer">
+                          <input
+                            type="radio"
+                            name="respondent"
+                            value={o.v}
+                            checked={formData.respondent === o.v}
+                            onChange={(e) => setFormData({ ...formData, respondent: e.target.value })}
+                            required
+                            className="w-5 h-5 accent-[#002147]"
+                          />
+                          {o.l}
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-bold text-[#002147] mb-3">
+                      学年（受験する方） <span className="text-[#800000]">*</span>
+                    </label>
+                    <div className="relative">
+                      <select
+                        className="w-full h-14 px-4 border border-slate-300 rounded-xl bg-white text-[#333333] focus:border-[#002147] focus:outline-none focus:ring-1 focus:ring-[#002147] text-base appearance-none cursor-pointer"
+                        value={formData.grade}
+                        onChange={(e) => setFormData({ ...formData, grade: e.target.value })}
+                        required
+                      >
+                        <option value="">学年を選択してください</option>
+                        <option value="高校3年生">高校3年生</option>
+                        <option value="高校2年生">高校2年生</option>
+                        <option value="高校1年生">高校1年生</option>
+                        <option value="既卒">既卒（浪人）</option>
+                        <option value="その他">その他</option>
+                      </select>
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#666666]">
+                        <ArrowDown className="w-5 h-5" />
+                      </div>
+                    </div>
                   </div>
 
                   <div>

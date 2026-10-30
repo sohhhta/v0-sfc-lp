@@ -13,3 +13,7 @@ export const SEATS = {
 } as const
 
 export const remainingSeats = SEATS.capacity - SEATS.enrolled
+
+// 面談予約ページ（Googleカレンダー予約スケジュール）
+export const BOOKING_URL =
+  'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1UvqGMa3NE-cXOfcZpNwqtsabGlQWHsj-zirEPMqVhvLIE1MQYLL1eM_fA9AL7R1RCMe9wT92J'
