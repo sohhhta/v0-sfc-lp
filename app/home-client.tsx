@@ -1119,10 +1119,19 @@ export default function HomeClient() {
                   <h3 className="text-2xl md:text-3xl font-bold text-[#002147] mb-6 font-serif">お申し込みが完了しました！</h3>
                   <p className="text-[#333333] leading-loose mb-10 text-base md:text-lg border-y border-slate-100 py-8 font-medium">
                     個別面談へのお申し込みありがとうございます。<br />
-                    担当者より24時間以内にご連絡いたします。
+                    担当者より24時間以内に、ご入力のメールアドレス宛にご連絡いたします。
                   </p>
+                  <div className="text-left max-w-md mx-auto mb-10">
+                    <p className="text-sm font-bold text-[#002147] mb-4 tracking-wider">今後の流れ</p>
+                    <ol className="space-y-3 text-sm md:text-base text-[#333333] leading-relaxed">
+                      <li><span className="font-bold text-[#800000] mr-2">1.</span>面談の候補日時をメールでお伺いします</li>
+                      <li><span className="font-bold text-[#800000] mr-2">2.</span>オンラインで無料の個別面談（現状と志望をお伺いし、学習プランをご提案します）</li>
+                      <li><span className="font-bold text-[#800000] mr-2">3.</span>1週間の「お試し添削」で指導内容をご体験いただきます</li>
+                      <li><span className="font-bold text-[#800000] mr-2">4.</span>ご納得いただけた場合のみ、ご入塾となります</li>
+                    </ol>
+                  </div>
                   <p className="text-sm text-[#666666] font-medium">
-                    ※メールが届かない場合は、迷惑メールフォルダをご確認ください。
+                    ※24時間たっても連絡がない場合は、迷惑メールフォルダをご確認のうえ、お手数ですが再度お申し込みください。
                   </p>
                 </div>
               ) : (
