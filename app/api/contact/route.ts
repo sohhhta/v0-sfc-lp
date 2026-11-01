@@ -86,6 +86,40 @@ export async function POST(request: NextRequest) {
         html: `
           <div style="font-family: Arial, sans-serif; line-height: 1.8; color: #333; max-width: 560px;">
             <p>${safeName} 様</p>
+            <p>この度は佐藤塾の無料個別面談にお申し込みいただき、ありがとうございます。お申し込みを受け付けました。</p>
+            <p>面談の日時は、下のボタンから<strong>保護者の方と一緒に</strong>お選びください（まだお選びでない場合のご案内です）。<br />お申し込みが生徒さんご本人の場合は、このメールを保護者の方に転送してください。</p>
+            <p style="margin: 28px 0;">
+              <a href="${BOOKING_URL}" style="background-color: #800000; color: #ffffff; padding: 14px 32px; border-radius: 999px; text-decoration: none; font-weight: bold;">面談の日時を選ぶ</a>
+            </p>
+            <p style="font-size: 13px; color: #666;">日時を選ぶと、Google Meet のリンク入りの予約確定メールが別途届きます。すでにお選びいただいた方は、このメールは読み飛ばしてください。</p>
+            <p>ご都合のよい日時が見つからない場合は、このメールにそのままご返信ください。日程を調整いたします。<br />面談は無料で、面談後にご入塾を迫ることはありません。</p>
+            <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;" />
+          <p style="font-size: 12px; color: #666;">このメールはお問い合わせフォームから自動送信されています。</p>
+        </div>
+      `,
+      replyTo: email,
+    })
+
+    if (result.error) {
+      console.error('Resend error:', result.error)
+      return NextResponse.json(
+        { error: 'メール送信に失敗しました' },
+        { status: 500 }
+      )
+    }
+
+
+    // 申込者への自動返信（失敗しても申込み自体は成功扱い）
+    try {
+      const safeName = escapeHtml(name)
+      await resend.emails.send({
+        from: FROM_ADDRESS,
+        to: email,
+        replyTo: ADMIN_ADDRESS,
+        subject: '【佐藤塾】お申し込みを受け付けました（面談日時をお選びください）',
+        html: `
+          <div style="font-family: Arial, sans-serif; line-height: 1.8; color: #333; max-width: 560px;">
+            <p>${safeName} 様</p>
             <p>この度は佐藤塾の無料個別面談にお申し込みいただき、ありがとうございます。<br />お申し込みを受け付けました。</p>
             <p><strong>面談の日時は、下のボタンからお選びください。</strong><br />保護者の方のご同席が必須です。生徒さんと保護者の方、お二人でご参加ください。</p>
             <p style="margin: 28px 0;">
