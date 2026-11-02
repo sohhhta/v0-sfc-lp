@@ -229,6 +229,10 @@ export default function HomeClient() {
                   </span>
                 </Button>
               </a>
+              <p className="mt-4 text-sm md:text-base text-white/90 font-bold tracking-wide text-center leading-relaxed">
+                申込後すぐに日時を選べて、メールの返信待ちなしで面談が確定。<br className="hidden sm:block" />
+                <span className="text-[#C5A059]">24時間いつでも予約OK・オンライン約60分</span>
+              </p>
             </div>
           </div>
 
@@ -1132,6 +1136,17 @@ export default function HomeClient() {
             無料の個別面談 ＆<br className="md:hidden"/> 1週間「お試し添削」に申し込む
           </SectionTitle>
 
+          <div className="mt-10 max-w-xl mx-auto bg-white border border-[#C5A059]/40 rounded-2xl px-5 py-5 text-center shadow-sm">
+            <p className="text-sm md:text-base font-bold text-[#002147] mb-3">申込から面談確定まで、メールの返信待ちはありません</p>
+            <ol className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2 sm:gap-3 text-sm text-[#333333] font-medium">
+              <li><span className="font-bold text-[#800000] mr-1">1.</span>フォーム送信（約1分）</li>
+              <li className="hidden sm:block text-[#C5A059]">→</li>
+              <li><span className="font-bold text-[#800000] mr-1">2.</span>その場で面談日時を選ぶ</li>
+              <li className="hidden sm:block text-[#C5A059]">→</li>
+              <li><span className="font-bold text-[#800000] mr-1">3.</span>予約確定（Meetリンクをメール送付）</li>
+            </ol>
+          </div>
+
           <div className="bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl overflow-hidden mt-16">
             <div className="p-8 md:p-12">
               {isSubmitted ? (
@@ -1323,7 +1338,7 @@ export default function HomeClient() {
                       </span>
                     </Button>
                     <p className="text-sm text-center text-[#666666] mt-6 font-medium tracking-wide">
-                      ※送信後、24時間以内に担当者よりご連絡いたします
+                      ※送信後すぐに面談の日時を選べます（担当者からの返信を待つ必要はありません）
                     </p>
                   </div>
 

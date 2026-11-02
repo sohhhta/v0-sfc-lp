@@ -91,7 +91,7 @@ export function FloatingCTA() {
           
           {/* 簡易動線の訴求 */}
           <p className="text-[10px] text-[#C5A059] font-bold text-center mb-1.5 tracking-wide">
-            ⏱ 30秒でカンタン予約・全国オンライン対応
+            ⏱ 申込後すぐ日時を選べて、その場で面談確定
           </p>
           
           <Button 
