@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Check, ArrowRight, PenTool, Target, X, Video, ArrowDown, ArrowUp, ArrowLeft, RefreshCcw } from 'lucide-react'
 import Link from 'next/link'
 import { FloatingCTA } from '@/components/ui/floating-cta'
@@ -38,6 +38,14 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
 export default function HomeClient() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+
+  // 送信完了後、予約ボタンが画面外に出ないよう完了ボックスを画面上部へスクロール
+  useEffect(() => {
+    if (isSubmitted) {
+      const el = document.getElementById('contact-form')
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [isSubmitted])
   const [formError, setFormError] = useState('')
   const [formData, setFormData] = useState({
     name: '',
@@ -1116,15 +1124,11 @@ export default function HomeClient() {
           <div className="bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl overflow-hidden mt-16">
             <div className="p-8 md:p-12">
               {isSubmitted ? (
-                <div className="text-center py-16 animate-in zoom-in duration-500">
-                  <div className="w-20 h-20 bg-[#002147]/5 text-[#002147] rounded-full flex items-center justify-center mx-auto mb-8">
+                <div className="text-center py-6 md:py-10 animate-in zoom-in duration-500">
+                  <div className="w-20 h-20 bg-[#002147]/5 text-[#002147] rounded-full flex items-center justify-center mx-auto mb-5">
                     <Check className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#002147] mb-6 font-serif">お申し込みが完了しました！</h3>
-                  <p className="text-[#333333] leading-loose mb-10 text-base md:text-lg border-y border-slate-100 py-8 font-medium">
-                    個別面談へのお申し込みありがとうございます。<br />
-                    担当者より24時間以内に、ご入力のメールアドレス宛にご連絡いたします。
-                  </p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#002147] mb-5 font-serif">お申し込みが完了しました！</h3>
                   <div className="max-w-md mx-auto mb-10 p-6 bg-[#FAF9F6] border border-[#C5A059]/40 rounded-xl">
                     <p className="text-sm font-bold text-[#002147] mb-3">面談の日時は、今すぐお選びいただけます</p>
                     <p className="text-sm text-[#333333] leading-relaxed mb-4">
@@ -1144,6 +1148,10 @@ export default function HomeClient() {
                       面談の日時を選ぶ
                     </a>
                   </div>
+                  <p className="text-[#333333] leading-loose mb-10 text-base md:text-lg border-y border-slate-100 py-6 font-medium">
+                    個別面談へのお申し込みありがとうございます。<br />
+                    受付完了のメールをお送りしました。
+                  </p>
                   <div className="text-left max-w-md mx-auto mb-10">
                     <p className="text-sm font-bold text-[#002147] mb-4 tracking-wider">今後の流れ</p>
                     <ol className="space-y-3 text-sm md:text-base text-[#333333] leading-relaxed">
@@ -1154,7 +1162,7 @@ export default function HomeClient() {
                     </ol>
                   </div>
                   <p className="text-sm text-[#666666] font-medium">
-                    ※24時間たっても連絡がない場合は、迷惑メールフォルダをご確認のうえ、お手数ですが再度お申し込みください。
+                    ※受付完了のメールが届かない場合は、迷惑メールフォルダをご確認のうえ、お手数ですが再度お申し込みください。
                   </p>
                 </div>
               ) : (
