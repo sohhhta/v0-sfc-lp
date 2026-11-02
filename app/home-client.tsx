@@ -41,7 +41,8 @@ export default function HomeClient() {
 
   // 送信完了後、予約ボタンが画面外に出ないよう完了ボックスを画面上部へスクロール
   useEffect(() => {
-    if (isSubmitted) {
+    if (!isSubmitted) return undefined
+    {
       // 「お申し込みが完了しました！」ブロックの先頭を固定ヘッダー直下へ（瞬時移動。レイアウト確定後に再補正）
       const go = () => {
         const el = document.getElementById('booking-complete')
