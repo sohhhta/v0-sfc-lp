@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
             <p style="margin: 28px 0;">
               <a href="${BOOKING_URL}" style="background-color: #800000; color: #ffffff; padding: 14px 32px; border-radius: 999px; text-decoration: none; font-weight: bold;">面談の日時を選ぶ</a>
             </p>
-            <p style="font-size: 13px; color: #666;">日時を選ぶと、Google Meet のリンク入りの予約確定メールが届きます。面談には<strong>保護者の方のご同席が必須</strong>です。日時選択の画面で、ご同席いただく保護者の方のお名前をご入力ください。（すでにお選びいただいた方は、このメールは読み飛ばしてください。）</p>
+            <p style="font-size: 13px; color: #666;">日時を選ぶと、Google Meet のリンク入りの予約確定メールが届きます。面談には<strong>保護者の方のご同席が必須</strong>です。保護者の方と日程を調整のうえご予約いただき、日時選択の画面の確認欄に「確認」とご記入ください。（すでにお選びいただいた方は、このメールは読み飛ばしてください。）</p>
             <p>ご都合のよい日時が見つからない場合は、このメールにそのままご返信ください。日程を調整いたします。<br />面談は無料で、面談後にご入塾を迫ることはありません。</p>
             <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;" />
           <p style="font-size: 12px; color: #666;">このメールはお問い合わせフォームから自動送信されています。</p>
