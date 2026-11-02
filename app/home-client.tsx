@@ -42,8 +42,12 @@ export default function HomeClient() {
   // 送信完了後、予約ボタンが画面外に出ないよう完了ボックスを画面上部へスクロール
   useEffect(() => {
     if (isSubmitted) {
-      const el = document.getElementById('contact-form')
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      // 描画後に「お申し込みが完了しました！」ブロックの先頭へ移動（固定ヘッダー分はscroll-mtで確保）
+      const t = setTimeout(() => {
+        const el = document.getElementById('booking-complete')
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 100)
+      return () => clearTimeout(t)
     }
   }, [isSubmitted])
   const [formError, setFormError] = useState('')
@@ -1124,7 +1128,7 @@ export default function HomeClient() {
           <div className="bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl overflow-hidden mt-16">
             <div className="p-8 md:p-12">
               {isSubmitted ? (
-                <div className="text-center py-6 md:py-10 animate-in zoom-in duration-500">
+                <div id="booking-complete" className="scroll-mt-24 text-center py-6 md:py-10 animate-in zoom-in duration-500">
                   <div className="w-20 h-20 bg-[#002147]/5 text-[#002147] rounded-full flex items-center justify-center mx-auto mb-5">
                     <Check className="w-10 h-10" />
                   </div>
