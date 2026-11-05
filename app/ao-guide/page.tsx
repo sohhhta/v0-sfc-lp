@@ -38,7 +38,7 @@ export default function AoGuidePage() {
     "publisher": {
       "@type": "EducationalOrganization",
       "name": "佐藤塾",
-      "url": "https://lifeeling.jp"
+      "url": "https://www.sfc-satojuku.com"
     },
     "mainEntity": {
       "@type": "FAQPage",
