@@ -140,11 +140,11 @@ export default function HomeClient() {
     "@graph": [
       {
         "@type": "EducationalOrganization",
-        "@id": "https://lifeeling.jp/#organization",
+        "@id": "https://www.sfc-satojuku.com/#organization",
         "name": "佐藤塾",
-        "url": "https://lifeeling.jp",
+        "url": "https://www.sfc-satojuku.com",
         "description": "慶應SFC（総合政策・環境情報）一般入試の合格を目指す佐藤塾。AIやマニュアルに頼らない「一文単位の厳密な論理指導」と「最大毎日の赤ペン添削」で小論文を極めると同時に、英語や数学など他科目の学習計画も完全サポート。実績ゼロからの逆転合格へ、塾長が1on1で伴走します。まずは全3回の無料お試し添削へ。",
-        "image": "https://lifeeling.jp/hero.jpg",
+        "image": "https://www.sfc-satojuku.com/hero.jpg",
         "founder": {
           "@type": "Person",
           "name": "佐藤颯太",
@@ -156,10 +156,10 @@ export default function HomeClient() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://lifeeling.jp/#website",
-        "url": "https://lifeeling.jp",
+        "@id": "https://www.sfc-satojuku.com/#website",
+        "url": "https://www.sfc-satojuku.com",
         "name": "【残り3ヶ月からのSFC小論文】慶應SFC専門塾｜11月からの逆転合格 - 佐藤塾",
-        "publisher": { "@id": "https://lifeeling.jp/#organization" }
+        "publisher": { "@id": "https://www.sfc-satojuku.com/#organization" }
       }
     ]
   };

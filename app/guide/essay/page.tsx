@@ -37,7 +37,7 @@ export default function EssayGuidePage() {
     "@type": "Article",
     "headline": "SFC小論文攻略メソッド | 慶應SFC専門対策の佐藤塾",
     "description": "慶應SFC合格に必要な「問題発見・解決能力」を測る小論文試験の全容と対策。圧倒的な資料量や配点の高さへの正しいアプローチを解説。",
-    "image": "https://lifeeling.jp/hero.jpg",
+    "image": "https://www.sfc-satojuku.com/hero.jpg",
     "author": {
       "@type": "Person",
       "name": "佐藤颯太"
@@ -46,7 +46,7 @@ export default function EssayGuidePage() {
       "@type": "Organization",
       "name": "佐藤塾"
     },
-    "mainEntityOfPage": "https://lifeeling.jp/guide/essay"
+    "mainEntityOfPage": "https://www.sfc-satojuku.com/guide/essay"
   };
 
   return (

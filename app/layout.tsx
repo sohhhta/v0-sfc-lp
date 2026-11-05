@@ -10,6 +10,7 @@ const sansJP = Noto_Sans_JP({ subsets: ["latin", "japanese"], weight: ["400", "5
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sfc-satojuku.com'),
+  alternates: { canonical: './' },
   title: '【11月からのSFC小論文】慶應SFC専門塾｜圧倒的添削量で逆転合格 - 佐藤塾',
   description: '慶應SFC（総合政策・環境情報）専門のオンライン塾「佐藤塾」。「月額サブスクリプションプラン」で小論文の添削を毎日受け放題。直前期の追い込みや他学部との併願者向けに「単発プラン（5回分）」もご用意しています。完全1対1の泥臭い伴走で、逆転合格へ導きます。',
   verification: { google: "jVBvchuFr-2bGgeIwJbnZFlOnCrIRFLY54lY5BgEqr8" },

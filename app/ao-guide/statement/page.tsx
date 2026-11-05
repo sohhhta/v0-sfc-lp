@@ -51,7 +51,7 @@ export default function StatementPage() {
     "@type": "Article",
     headline: `${articleTitle} | 佐藤塾`,
     description: articleDescription,
-    image: "https://lifeeling.jp/hero.jpg",
+    image: "https://www.sfc-satojuku.com/hero.jpg",
     author: {
       "@type": "Person",
       name: "佐藤颯太",
@@ -60,7 +60,7 @@ export default function StatementPage() {
       "@type": "Organization",
       name: "佐藤塾",
     },
-    mainEntityOfPage: "https://lifeeling.jp/ao-guide/statement",
+    mainEntityOfPage: "https://www.sfc-satojuku.com/ao-guide/statement",
   };
 
   return (
