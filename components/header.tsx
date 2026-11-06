@@ -34,7 +34,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="hover:opacity-80 transition-opacity">
-          <h1 className="text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</h1>
+          <span className="block text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</span>
         </Link>
 
         {/* Desktop Navigation */}

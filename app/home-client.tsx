@@ -11,6 +11,28 @@ import { Check, ArrowRight, PenTool, Target, X, Video, ArrowDown, ArrowUp, Arrow
 import Link from 'next/link'
 import { FloatingCTA } from '@/components/ui/floating-cta'
 
+// トップページの「よくある質問」。表示とFAQPageの構造化データを、この1か所から作る。
+// noSnippet: true の項目は検索スニペットに出さない設定（data-nosnippet）のため、構造化データにも含めない。
+const homeFaqs: { question: string; answer: string; noSnippet?: boolean }[] = [
+  {
+    question: 'パソコンを持っていませんが、スマートフォンだけでも受講できますか？',
+    answer: 'はい、問題ありません。佐藤塾はスマートフォン1台で、添削も指導もすべて受けられます。パソコンの有無は合否に関係しませんので、安心して始めてください。',
+  },
+  {
+    question: 'なぜこれほど高い合格率が出せるのでしょうか？',
+    answer: '塾長が一人ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表面的なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。',
+  },
+  {
+    question: '入塾金はかかりますか？',
+    answer: '「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。',
+    noSnippet: true,
+  },
+  {
+    question: '途中で他のプランに変更できますか？',
+    answer: 'はい、状況に合わせて柔軟に対応できますので、お気軽にご相談ください。',
+  },
+]
+
 // Section title with Keio blue decorative lines
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
@@ -160,6 +182,17 @@ export default function HomeClient() {
         "url": "https://www.sfc-satojuku.com",
         "name": "【残り3ヶ月からのSFC小論文】慶應SFC専門塾｜11月からの逆転合格 - 佐藤塾",
         "publisher": { "@id": "https://www.sfc-satojuku.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.sfc-satojuku.com/#faq",
+        "mainEntity": homeFaqs
+          .filter((faq) => !faq.noSnippet)
+          .map((faq) => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
+          })),
       }
     ]
   };
@@ -1360,57 +1393,23 @@ export default function HomeClient() {
           </div>
 
           <div className="space-y-2">
-            <details className="group border-b border-slate-200 pb-2">
-              <summary className="flex items-center justify-between cursor-pointer py-6 hover:opacity-70 transition-opacity list-none">
-                <span className="font-bold text-[#002147] text-base md:text-lg leading-relaxed">
-                  パソコンを持っていませんが、スマートフォンだけでも受講できますか？
-                </span>
-                <span className="text-[#C5A059] text-2xl font-bold group-open:hidden ml-6 flex-shrink-0">＋</span>
-                <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
-              </summary>
-              <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                はい、問題ありません。佐藤塾はスマートフォン1台で、添削も指導もすべて受けられます。パソコンの有無は合否に関係しませんので、安心して始めてください。
-              </div>
-            </details>
-
-            <details className="group border-b border-slate-200 pb-2">
-              <summary className="flex items-center justify-between cursor-pointer py-6 hover:opacity-70 transition-opacity list-none">
-                <span className="font-bold text-[#002147] text-base md:text-lg leading-relaxed">
-                  なぜこれほど高い合格率が出せるのでしょうか？
-                </span>
-                <span className="text-[#C5A059] text-2xl font-bold group-open:hidden ml-6 flex-shrink-0">＋</span>
-                <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
-              </summary>
-              <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                塾長が一人ひとりの答案に目を通し、「なぜそう考えたのか？」に向き合うからです。表面的なテクニックではなく、SFC合格に必要な「独自性」と「思考力」を引き出し、実績ゼロからの逆転合格につなげます。
-              </div>
-            </details>
-
-            <details className="group border-b border-slate-200 pb-2">
-              <summary className="flex items-center justify-between cursor-pointer py-6 hover:opacity-70 transition-opacity list-none">
-                <span className="font-bold text-[#002147] text-base md:text-lg leading-relaxed">
-                  入塾金はかかりますか？
-                </span>
-                <span className="text-[#C5A059] text-2xl font-bold group-open:hidden ml-6 flex-shrink-0">＋</span>
-                <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
-              </summary>
-<div data-nosnippet className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                      「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。
-                    </div>
-            </details>
-
-            <details className="group border-b border-slate-200 pb-2">
-              <summary className="flex items-center justify-between cursor-pointer py-6 hover:opacity-70 transition-opacity list-none">
-                <span className="font-bold text-[#002147] text-base md:text-lg leading-relaxed">
-                  途中で他のプランに変更できますか？
-                </span>
-                <span className="text-[#C5A059] text-2xl font-bold group-open:hidden ml-6 flex-shrink-0">＋</span>
-                <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
-              </summary>
-              <div className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium">
-                はい、状況に合わせて柔軟に対応できますので、お気軽にご相談ください。
-              </div>
-            </details>
+            {homeFaqs.map((faq) => (
+              <details key={faq.question} className="group border-b border-slate-200 pb-2">
+                <summary className="flex items-center justify-between cursor-pointer py-6 hover:opacity-70 transition-opacity list-none">
+                  <span className="font-bold text-[#002147] text-base md:text-lg leading-relaxed">
+                    {faq.question}
+                  </span>
+                  <span className="text-[#C5A059] text-2xl font-bold group-open:hidden ml-6 flex-shrink-0">＋</span>
+                  <span className="text-[#C5A059] text-2xl font-bold hidden group-open:block ml-6 flex-shrink-0">－</span>
+                </summary>
+                <div
+                  {...(faq.noSnippet ? { 'data-nosnippet': true } : {})}
+                  className="pt-2 pb-8 text-[#666666] leading-loose text-base font-medium"
+                >
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>
