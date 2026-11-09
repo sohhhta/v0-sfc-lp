@@ -201,13 +201,21 @@ export default function ResultsPage() {
                     <td className="px-4 py-4 text-center text-sm text-[#333333]">2名</td>
                     <td className="px-4 py-4 text-center text-sm text-[#333333]">5名</td>
                   </tr>
-                  <tr>
+                  <tr className="border-b border-[#E5E7EB]">
                     <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm font-bold text-[#002147] whitespace-nowrap">2022年度</td>
                     <td className="px-4 py-4 text-center bg-[#C5A059]/10 border-l-2 border-[#C5A059]/30">
                       <span className="text-base font-bold text-[#800000]">6名</span>
                     </td>
                     <td className="px-4 py-4 text-center text-sm text-[#333333]">1名</td>
                     <td className="px-4 py-4 text-center text-sm text-[#333333]">5名</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm font-bold text-[#002147] whitespace-nowrap">2021年度</td>
+                    <td className="px-4 py-4 text-center bg-[#C5A059]/10 border-l-2 border-[#C5A059]/30">
+                      <span className="text-base font-bold text-[#800000]">2名</span>
+                    </td>
+                    <td className="px-4 py-4 text-center text-sm text-[#333333]">1名</td>
+                    <td className="px-4 py-4 text-center text-sm text-[#333333]">1名</td>
                   </tr>
                 </tbody>
               </table>
@@ -266,6 +274,14 @@ export default function ResultsPage() {
                   </td>
                   <td className="px-6 py-4 text-center text-[#333333]">1名</td>
                   <td className="px-6 py-4 text-center text-[#333333]">5名</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 font-bold text-[#002147]">2021年度</td>
+                  <td className="px-6 py-4 text-center bg-[#C5A059]/5">
+                    <span className="font-bold text-[#800000]">2名</span>
+                  </td>
+                  <td className="px-6 py-4 text-center text-[#333333]">1名</td>
+                  <td className="px-6 py-4 text-center text-[#333333]">1名</td>
                 </tr>
               </tbody>
             </table>
