@@ -172,6 +172,12 @@ export default function HomeClient() {
         "url": "https://www.sfc-satojuku.com",
         "description": "慶應SFC（総合政策・環境情報）の合格を目指す、教室を持たない完全オンラインの専門塾「佐藤塾」。AIやマニュアルに頼らない「一文単位の厳密な論理指導」と「最大毎日の赤ペン添削」で小論文を極めると同時に、英語や数学など他科目の学習計画も完全サポート。実績ゼロからの逆転合格へ、塾長が1on1で伴走します。まずは無料の個別面談と、1週間・全3回のお試し添削へ。",
         "areaServed": { "@type": "Country", "name": "日本" },
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.sfc-satojuku.com/logo.png",
+          "width": 512,
+          "height": 512
+        },
         "image": "https://www.sfc-satojuku.com/hero.jpg",
         "founder": {
           "@type": "Person",
