@@ -178,6 +178,7 @@ export default function HomeClient() {
           "height": 512
         },
         "image": "https://www.sfc-satojuku.com/hero.jpg",
+        "sameAs": ["https://x.com/Satojukudego"],
         "founder": {
           "@type": "Person",
           "name": "佐藤颯太",
