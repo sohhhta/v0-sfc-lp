@@ -29,7 +29,6 @@ const homeFaqs: { question: string; answer: string; noSnippet?: boolean }[] = [
   {
     question: '入塾金はかかりますか？',
     answer: '「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。',
-    noSnippet: true,
   },
   {
     question: '途中で他のプランに変更できますか？',
