@@ -15,6 +15,10 @@ import { FloatingCTA } from '@/components/ui/floating-cta'
 // noSnippet: true の項目は検索スニペットに出さない設定（data-nosnippet）のため、構造化データにも含めない。
 const homeFaqs: { question: string; answer: string; noSnippet?: boolean }[] = [
   {
+    question: '教室はありますか？',
+    answer: '教室はなく、完全オンラインです。面談・授業・添削のすべてをオンラインで行うため、お住まいの地域に関係なく、ご自宅から受講いただけます。',
+  },
+  {
     question: 'パソコンを持っていませんが、スマートフォンだけでも受講できますか？',
     answer: 'はい、問題ありません。佐藤塾はスマートフォン1台で、添削も指導もすべて受けられます。パソコンの有無は合否に関係しませんので、安心して始めてください。',
   },
@@ -161,11 +165,13 @@ export default function HomeClient() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "EducationalOrganization",
+        "@type": ["EducationalOrganization", "OnlineBusiness"],
         "@id": "https://www.sfc-satojuku.com/#organization",
         "name": "佐藤塾",
+        "alternateName": ["慶應SFC専門塾 佐藤塾", "佐藤塾（慶應SFC専門のオンライン塾）"],
         "url": "https://www.sfc-satojuku.com",
-        "description": "慶應SFC（総合政策・環境情報）一般入試の合格を目指す佐藤塾。AIやマニュアルに頼らない「一文単位の厳密な論理指導」と「最大毎日の赤ペン添削」で小論文を極めると同時に、英語や数学など他科目の学習計画も完全サポート。実績ゼロからの逆転合格へ、塾長が1on1で伴走します。まずは全3回の無料お試し添削へ。",
+        "description": "慶應SFC（総合政策・環境情報）の合格を目指す、教室を持たない完全オンラインの専門塾「佐藤塾」。AIやマニュアルに頼らない「一文単位の厳密な論理指導」と「最大毎日の赤ペン添削」で小論文を極めると同時に、英語や数学など他科目の学習計画も完全サポート。実績ゼロからの逆転合格へ、塾長が1on1で伴走します。まずは無料の個別面談と、1週間・全3回のお試し添削へ。",
+        "areaServed": { "@type": "Country", "name": "日本" },
         "image": "https://www.sfc-satojuku.com/hero.jpg",
         "founder": {
           "@type": "Person",
@@ -180,7 +186,8 @@ export default function HomeClient() {
         "@type": "WebSite",
         "@id": "https://www.sfc-satojuku.com/#website",
         "url": "https://www.sfc-satojuku.com",
-        "name": "【残り3ヶ月からのSFC小論文】慶應SFC専門塾｜11月からの逆転合格 - 佐藤塾",
+        "name": "佐藤塾",
+        "alternateName": ["慶應SFC専門塾 佐藤塾", "sfc-satojuku.com"],
         "publisher": { "@id": "https://www.sfc-satojuku.com/#organization" }
       },
       {
