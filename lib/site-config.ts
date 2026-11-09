@@ -9,7 +9,7 @@
  */
 export const SEATS = {
   capacity: 4,
-  enrolled: 1,
+  enrolled: 2,
 } as const
 
 export const remainingSeats = SEATS.capacity - SEATS.enrolled
