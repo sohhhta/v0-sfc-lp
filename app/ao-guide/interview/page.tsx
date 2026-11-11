@@ -7,10 +7,10 @@ const articleTitle = "【面接対策編】面接官の「圧迫」を「対話�
 const articleDescription = "SFCのAO面接は「圧迫面接」と言われがちですが、実は違います。想定問答の暗記を捨て、教授と対等に議論し、面接の主導権を握るためのマインドセットと準備方法を解説します。";
 
 export const metadata: Metadata = {
-  title: `${articleTitle} | 佐藤塾`,
+  title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
   description: articleDescription,
   openGraph: {
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent("【面接対策編】面接官の「圧迫」を「対話」に変える、主導権の握り方")}`],
   },

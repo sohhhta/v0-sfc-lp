@@ -37,7 +37,7 @@ export function Header() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo-mark.png"
-            alt="佐藤塾"
+            alt="慶應SFC専門塾 佐藤塾"
             width={40}
             height={40}
             className="block h-10 w-10 rounded-md"

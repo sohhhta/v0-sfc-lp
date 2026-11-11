@@ -7,10 +7,10 @@ const articleTitle = "【頻出テーマ編】SFC小論文で狙われる「テ�
 const articleDescription = "AIやデータサイエンスなどのテクノロジーを用いて、現代の社会課題をどう解決するか。SFC小論文で最も頻出するテーマに対し、教授陣が高く評価する「SFC的アプローチ」の型を解説します。";
 
 export const metadata: Metadata = {
-  title: `${articleTitle} | 佐藤塾`,
+  title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
   description: articleDescription,
   openGraph: {
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
   },

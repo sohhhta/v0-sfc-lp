@@ -4,23 +4,23 @@ import Image from "next/image";
 import { ArrowRight, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SFC AO入試 対策ガイド | 佐藤塾",
+  title: "SFC AO入試 対策ガイド | 慶應SFC専門塾 佐藤塾",
   description: "慶應SFCのAO入試に特化した対策ガイドです。志望理由書の書き方から自由記述、面接対策まで、合格に直結する戦略を解説します。",
   openGraph: {
-    title: "SFC AO入試 対策ガイド | 佐藤塾",
+    title: "SFC AO入試 対策ガイド | 慶應SFC専門塾 佐藤塾",
     description: "慶應SFCのAO入試に特化した対策ガイドです。志望理由書の書き方から自由記述、面接対策まで、合格に直結する戦略を解説します。",
     images: [
       {
         url: "/hero.jpg",
         width: 1200,
         height: 630,
-        alt: "SFC AO入試 対策ガイド | 佐藤塾",
+        alt: "SFC AO入試 対策ガイド | 慶應SFC専門塾 佐藤塾",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SFC AO入試 対策ガイド | 佐藤塾",
+    title: "SFC AO入試 対策ガイド | 慶應SFC専門塾 佐藤塾",
     description: "慶應SFCのAO入試に特化した対策ガイドです。志望理由書の書き方から自由記述、面接対策まで、合格に直結する戦略を解説します。",
     images: ["/hero.jpg"],
   },

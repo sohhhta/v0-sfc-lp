@@ -7,23 +7,23 @@ import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "コース・料金 | 佐藤塾",
+  title: "コース・料金 | 慶應SFC専門塾 佐藤塾",
   description: "追加講習費0円、AO入試合格時の自動退塾ルールなど、佐藤塾の明朗な料金体系とコース内容についてご案内します。",
   openGraph: {
-    title: "コース・料金 | 佐藤塾",
+    title: "コース・料金 | 慶應SFC専門塾 佐藤塾",
     description: "追加講習費0円、AO入試合格時の自動退塾ルールなど、佐藤塾の明朗な料金体系とコース内容についてご案内します。",
     images: [
       {
         url: "/hero.jpg",
         width: 1200,
         height: 630,
-        alt: "コース・料金 | 佐藤塾",
+        alt: "コース・料金 | 慶應SFC専門塾 佐藤塾",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "コース・料金 | 佐藤塾",
+    title: "コース・料金 | 慶應SFC専門塾 佐藤塾",
     description: "追加講習費0円、AO入試合格時の自動退塾ルールなど、佐藤塾の明朗な料金体系とコース内容についてご案内します。",
     images: ["/hero.jpg"],
   },

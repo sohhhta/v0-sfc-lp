@@ -4,23 +4,23 @@ import Image from "next/image";
 import { ArrowRight, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SFC小論文 対策ガイド | 佐藤塾",
+  title: "SFC小論文 対策ガイド | 慶應SFC専門塾 佐藤塾",
   description: "慶應SFCの小論文に特化した対策ガイドです。独自のロジカルライティング・メソッドと過去問演習による実践的な思考プロセスを解説します。",
   openGraph: {
-    title: "SFC小論文 対策ガイド | 佐藤塾",
+    title: "SFC小論文 対策ガイド | 慶應SFC専門塾 佐藤塾",
     description: "慶應SFCの小論文に特化した対策ガイドです。独自のロジカルライティング・メソッドと過去問演習による実践的な思考プロセスを解説します。",
     images: [
       {
         url: "/hero.jpg",
         width: 1200,
         height: 630,
-        alt: "SFC小論文 対策ガイド | 佐藤塾",
+        alt: "SFC小論文 対策ガイド | 慶應SFC専門塾 佐藤塾",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SFC小論文 対策ガイド | 佐藤塾",
+    title: "SFC小論文 対策ガイド | 慶應SFC専門塾 佐藤塾",
     description: "慶應SFCの小論文に特化した対策ガイドです。独自のロジカルライティング・メソッドと過去問演習による実践的な思考プロセスを解説します。",
     images: ["/hero.jpg"],
   },

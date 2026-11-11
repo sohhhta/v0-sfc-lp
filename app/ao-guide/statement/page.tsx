@@ -23,10 +23,10 @@ const articleDescription =
   "SFCに対する熱意を論理的な文章に落とし込む方法を解説。単なる「夢を語るポエム」から脱却し、合格を勝ち取るための志望理由書の型と構成ステップ。";
 
 export const metadata: Metadata = {
-  title: `${articleTitle} | 佐藤塾`,
+  title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
   description: articleDescription,
   openGraph: {
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [
       {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
   },
@@ -49,7 +49,7 @@ export default function StatementPage() {
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${articleTitle} | 佐藤塾`,
+    headline: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     image: "https://www.sfc-satojuku.com/hero.jpg",
     author: {

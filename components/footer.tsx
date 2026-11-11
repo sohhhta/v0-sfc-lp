@@ -19,7 +19,7 @@ export function Footer() {
             慶應義塾大学 SFC（総合政策学部・環境情報学部）受験対策専門塾
           </p>
           <p className="text-xs text-white/40">
-            &copy; 2026 佐藤塾. All rights reserved.
+            &copy; 2026 慶應SFC専門塾 佐藤塾. All rights reserved.
           </p>
         </div>
       </div>

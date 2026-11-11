@@ -7,10 +7,10 @@ const articleTitle = "【資料読解編】膨大な資料から使えるデー�
 const articleDescription = "総合政策・環境情報学部で出題される大量のグラフや文章。すべてを読もうとして時間切れになる受験生へ、自分の主張を補強する「エビデンス」だけを素早く抽出する読解法を解説します。";
 
 export const metadata: Metadata = {
-  title: `${articleTitle} | 佐藤塾`,
+  title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
   description: articleDescription,
   openGraph: {
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
   },
