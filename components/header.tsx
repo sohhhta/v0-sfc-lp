@@ -34,7 +34,14 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="hover:opacity-80 transition-opacity">
-          <span className="block text-xl font-bold text-primary font-serif tracking-[0.1em]">佐藤塾</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-mark.png"
+            alt="佐藤塾"
+            width={40}
+            height={40}
+            className="block h-10 w-10 rounded-md"
+          />
         </Link>
 
         {/* Desktop Navigation */}

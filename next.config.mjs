@@ -9,7 +9,7 @@ const nextConfig = {
       { source: '/recommended-articles/', destination: '/guide/essay', permanent: true },
       {
         // 除外リスト：ao-guide を追加
-        source: '/:path((?!_next|api|course|results|guide|ao-guide|sitemap.xml|robots\\.txt|favicon\\.png|favicon\\.ico|icon\\.png|apple-icon\\.png|logo\\.png|og-image\\.png|hero\\.jpg|jukucho\\.jpg|signature\\.png|fv-coaching\\.jpg).+)',
+        source: '/:path((?!_next|api|course|results|guide|ao-guide|sitemap.xml|robots\\.txt|favicon\\.png|favicon\\.ico|icon\\.png|apple-icon\\.png|logo\\.png|logo-mark\\.png|og-image\\.png|hero\\.jpg|jukucho\\.jpg|signature\\.png|fv-coaching\\.jpg).+)',
         destination: '/',
         permanent: true,
       },
