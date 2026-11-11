@@ -983,7 +983,7 @@ export default function HomeClient() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB]">
+      <section id="pricing" className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB] scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意しました。">料金プラン</SectionTitle>
 
@@ -1399,7 +1399,7 @@ export default function HomeClient() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 md:py-32 px-4 bg-white">
+      <section id="faq" className="py-24 md:py-32 px-4 bg-white scroll-mt-20">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#002147] font-serif tracking-widest">よくある質問</h2>
