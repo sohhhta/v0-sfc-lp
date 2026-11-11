@@ -7,10 +7,10 @@ const articleTitle = "【過去問演習編】白紙から合格答案を組み�
 const articleDescription = "SFC小論文の過去問演習において、膨大な資料をどう読み解き、どう論理を構築するのか。設問の把握からアウトライン作成、当事者意識の示し方まで、具体的なプロセスを解説します。";
 
 export const metadata: Metadata = {
-  title: `${articleTitle} | 佐藤塾`,
+  title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
   description: articleDescription,
   openGraph: {
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent(articleTitle)}`],
   },

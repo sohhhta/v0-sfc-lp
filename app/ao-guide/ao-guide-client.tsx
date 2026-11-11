@@ -33,7 +33,7 @@ export default function AoGuidePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "慶應SFC AO入試・完全攻略ガイド | 佐藤塾",
+    "name": "慶應SFC AO入試・完全攻略ガイド | 慶應SFC専門塾 佐藤塾",
     "description": "実績を誇るだけの書類は不要、大学入学を「ゴール」ではなく「手段」に変える、佐藤塾のオーナーシップ教育。",
     "publisher": {
       "@type": "EducationalOrganization",

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import AoGuidePage from './ao-guide-client'
 
-const title = "SFC AO入試攻略メソッド｜志望理由書から面接まで | 佐藤塾"
+const title = "SFC AO入試攻略メソッド｜志望理由書から面接まで | 慶應SFC専門塾 佐藤塾"
 const description = "実績を誇るだけの書類は不要、大学入学を「ゴール」ではなく「手段」に変える、佐藤塾のオーナーシップ教育。"
 
 export const metadata: Metadata = {

@@ -4,23 +4,23 @@ import { Check, PenTool, AlertCircle, ArrowRight, CheckCircle2 } from 'lucide-re
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "合格実績 | 佐藤塾",
+  title: "合格実績 | 慶應SFC専門塾 佐藤塾",
   description: "合格率50.0%を誇る佐藤塾の慶應SFC（総合政策学部・環境情報学部）合格実績と、逆転合格を果たした生徒たちの声をご紹介します。",
   openGraph: {
-    title: "合格実績 | 佐藤塾",
+    title: "合格実績 | 慶應SFC専門塾 佐藤塾",
     description: "合格率50.0%を誇る佐藤塾の慶應SFC（総合政策学部・環境情報学部）合格実績と、逆転合格を果たした生徒たちの声をご紹介します。",
     images: [
       {
         url: "https://www.sfc-satojuku.com/hero.jpg",
         width: 1200,
         height: 630,
-        alt: "合格実績 | 佐藤塾",
+        alt: "合格実績 | 慶應SFC専門塾 佐藤塾",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "合格実績 | 佐藤塾",
+    title: "合格実績 | 慶應SFC専門塾 佐藤塾",
     description: "合格率50.0%を誇る佐藤塾の慶應SFC（総合政策学部・環境情報学部）合格実績と、逆転合格を果たした生徒たちの声をご紹介します。",
     images: ["https://www.sfc-satojuku.com/hero.jpg"],
   },
@@ -54,7 +54,7 @@ export default function ResultsPage() {
   const resultsJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "慶應SFC 合格実績・合格者の声 | 佐藤塾",
+    "name": "慶應SFC 合格実績・合格者の声 | 慶應SFC専門塾 佐藤塾",
     "description": "6年間累計39名、2026年度合格率 50.0%（14名中7名合格）を叩き出す佐藤塾の年度別合格推移と合格者の生の声をご紹介。",
     "image": "https://www.sfc-satojuku.com/hero.jpg",
     "mainEntity": {

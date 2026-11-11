@@ -7,10 +7,10 @@ const articleTitle = "慶應SFCの志望理由書に「立派な社会問題」�
 const articleDescription = "SDGsや貧困問題など、立派すぎるテーマを設定して失敗するSFC受験生は後を絶ちません。本当に評価される「自分だけの研究テーマ」を掘り起こすための具体的なステップを解説します。";
 
 export const metadata: Metadata = {
-  title: `${articleTitle} | 佐藤塾`,
+  title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
   description: articleDescription,
   openGraph: {
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${articleTitle} | 佐藤塾`,
+    title: `${articleTitle} | 慶應SFC専門塾 佐藤塾`,
     description: articleDescription,
     images: [`https://www.sfc-satojuku.com/api/og?title=${encodeURIComponent("慶應SFCの志望理由書に「立派な社会問題」は不要")}`],
   },
