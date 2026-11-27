@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react'
 import { Check, ArrowRight, PenTool, Target, X, Video, ArrowDown, ArrowUp, ArrowLeft, RefreshCcw } from 'lucide-react'
 import Link from 'next/link'
 import type { SeasonCopy } from '@/lib/season'
+import { type Pack, yen } from '@/lib/pricing'
 import { FloatingCTA } from '@/components/ui/floating-cta'
 
 // トップページの「よくある質問」。表示とFAQPageの構造化データを、この1か所から作る。
@@ -29,7 +30,7 @@ const homeFaqs: { question: string; answer: string; noSnippet?: boolean }[] = [
   },
   {
     question: '入塾金はかかりますか？',
-    answer: '「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。',
+    answer: '「月額サブスクリプションプラン」をご契約の場合は、初回に入塾金として税込50,000円をいただいております（12月〜2月に受け付ける「直前期パック」は、総額に入塾金を含みます）。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。',
   },
   {
     question: '途中で他のプランに変更できますか？',
@@ -75,7 +76,7 @@ function StepTitle({ step }: { step: SeasonCopy['steps'][number] }) {
   )
 }
 
-export default function HomeClient({ season }: { season: SeasonCopy }) {
+export default function HomeClient({ season, pack, monthlyFee }: { season: SeasonCopy; pack: Pack | null; monthlyFee: number }) {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -1000,25 +1001,73 @@ export default function HomeClient({ season }: { season: SeasonCopy }) {
       {/* Pricing Section */}
       <section id="pricing" className="py-24 md:py-32 px-4 bg-[#FAF9F6] border-b border-[#E5E7EB] scroll-mt-20">
         <div className="max-w-5xl mx-auto">
-          <SectionTitle subtitle="残り期間の本気度に合わせて選べる、2つの料金プランをご用意しました。">料金プラン</SectionTitle>
+          <SectionTitle subtitle={pack ? "今年度の入試に向けた直前期パックと、2つの料金プランをご用意しました。" : "残り期間の本気度に合わせて選べる、2つの料金プランをご用意しました。"}>料金プラン</SectionTitle>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch mt-16">
+          {pack && (
+            <div className="mt-16 bg-white border-2 border-[#800000] rounded-3xl shadow-xl overflow-hidden md:grid md:grid-cols-[1fr_1.15fr]">
+              <div className="bg-[#800000] text-white px-6 py-10 md:px-10 text-center flex flex-col items-center justify-center">
+                <span className="inline-block bg-white text-[#800000] text-xs font-bold px-4 py-1.5 rounded-full tracking-widest shadow-sm mb-4">
+                  【本年度 新規受入 残り{remainingSeats}名】
+                </span>
+                <h4 className="text-2xl md:text-3xl font-bold tracking-wide font-serif leading-snug">直前期パック</h4>
+                <p className="text-white/85 text-sm mt-2 font-bold tracking-widest">{pack.start}スタート・入試日まで</p>
+                <p className="text-white/80 text-sm mt-4 font-medium leading-relaxed">今年度のSFC一般入試（2月）を受ける方</p>
+                <div className="mt-8">
+                  <p className="text-white/80 text-xs mb-2 font-medium tracking-widest">入試日までの総額（入塾金込み）</p>
+                  <div className="flex items-baseline justify-center gap-1">
+                    <span className="text-5xl md:text-6xl font-bold font-serif">{yen(pack.total)}</span>
+                    <span className="text-xl font-bold">円</span>
+                  </div>
+                  {pack.saving > 0 && (
+                    <p className="inline-block mt-4 bg-[#C5A059] text-[#002147] text-sm md:text-base font-bold px-4 py-2 rounded-full shadow-sm">
+                      月額プランより {yen(pack.saving)}円（{pack.savingPercent}%）お得
+                    </p>
+                  )}
+                  <p className="text-white/85 text-sm mt-3 font-bold">お支払いは一括・分割から選べます</p>
+                </div>
+              </div>
+              <div className="p-8 md:p-10 flex flex-col">
+                <div className="mb-6 bg-[#FAF9F6] py-3 px-4 rounded-xl border border-slate-100 flex items-center justify-center gap-2">
+                  <Check className="w-4 h-4 text-[#800000] shrink-0" />
+                  <span className="text-sm font-bold text-[#333333]">入試日まで、追加の費用は一切かかりません</span>
+                </div>
+                <ul className="space-y-4 mb-6 flex-1 px-2">
+                  <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" /><span className="text-base text-[#333333] font-medium">過去問徹底添削 <span className="font-bold text-[#800000]">無制限</span></span></li>
+                  <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" /><span className="text-base text-[#333333] font-medium">塾長オンライン面談（週1回）</span></li>
+                  <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" /><span className="text-base text-[#333333] font-medium">直前期の学習戦略・スケジュール管理</span></li>
+                  <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" /><span className="text-base text-[#333333] font-medium">塾長直通LINE 質問し放題（入試日まで）</span></li>
+                </ul>
+                <p className="text-xs text-[#666666] leading-relaxed mb-6 px-2">
+                  ※月額プラン（{yen(monthlyFee)}円×{pack.months}か月・{pack.period}）で同じ期間を受けた場合の総額は、入塾金を含めて{yen(pack.monthlyTotal)}円です。直前期パックなら{yen(pack.total)}円で、{yen(pack.saving)}円（約{pack.savingPercent}%）お得です。
+                </p>
+                <a href="#contact-form" onClick={handleSmoothScroll} className="mt-auto">
+                  <Button className="w-full rounded-full bg-[#800000] hover:bg-[#C5A059] text-white h-16 text-base font-bold transition-colors shadow-md whitespace-normal leading-snug">
+                    無料で「個別面談 ＆ お試し添削」を体験する
+                  </Button>
+                </a>
+              </div>
+            </div>
+          )}
+
+          <div className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch ${pack ? 'mt-10' : 'mt-16'}`}>
             
             {/* Plan 1 */}
             <div className="flex flex-col bg-white border border-[#800000]/30 rounded-3xl shadow-xl overflow-hidden relative h-full">
               <div className="bg-[#800000] text-white px-6 py-8 text-center flex flex-col items-center justify-center min-h-[180px]">
-                <span className="inline-block bg-white text-[#800000] text-xs font-bold px-4 py-1.5 rounded-full tracking-widest shadow-sm mb-4">
-                  【本年度 新規受入 残り{remainingSeats}名】
-                </span>
+                {!pack && (
+                  <span className="inline-block bg-white text-[#800000] text-xs font-bold px-4 py-1.5 rounded-full tracking-widest shadow-sm mb-4">
+                    【本年度 新規受入 残り{remainingSeats}名】
+                  </span>
+                )}
                 <h4 className="text-xl md:text-2xl font-bold tracking-wide font-serif leading-snug">月額サブスクリプションプラン</h4>
-                <p className="text-white/80 text-sm mt-3 font-medium">SFC一般入試（小論文）を本気で完成させたい方</p>
+                <p className="text-white/80 text-sm mt-3 font-medium">{pack ? '来年度以降の入試に向けて、早めに始めたい方' : 'SFC一般入試（小論文）を本気で完成させたい方'}</p>
               </div>
 
               <div className="flex-1 flex flex-col p-8 md:p-12">
                 <div className="mb-8 text-center border-b border-slate-100 pb-8">
                   <p className="text-[#666666] text-sm mb-3 font-medium tracking-widest">月額料金</p>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">88,000</span>
+                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">{yen(monthlyFee)}</span>
                     <span className="text-xl font-bold text-[#800000]">円 / 月</span>
                   </div>
                   <p data-nosnippet className="text-sm text-[#800000] mt-3 font-bold">別途 初回入塾金 50,000円</p>
@@ -1365,6 +1414,7 @@ export default function HomeClient({ season }: { season: SeasonCopy }) {
                         required
                       >
                         <option value="">プランを選択してください</option>
+{pack && <option value="pack">直前期パック（{pack.start}スタート）</option>}
 <option value="monthly">月額サブスクリプションプラン</option>
   <option value="ticket">単発プラン（5回分）</option>
                         <option value="undecided">まだ決めていない（面談後に相談したい）</option>

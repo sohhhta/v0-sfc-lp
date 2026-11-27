@@ -1,8 +1,9 @@
 import { Metadata } from 'next'
 import HomeClient from './home-client'
 import { getSeason } from '@/lib/season'
+import { getPack, getMonthlyFee } from '@/lib/pricing'
 
-// 「11月から」などの文言を日本時間の月で切り替えるため、1時間ごとに作り直す
+// 「11月から」などの文言、直前期パック、月額料金（12/1に改定）の表示を日本時間の月で切り替えるため、1時間ごとに作り直す
 export const revalidate = 3600
 
 const description =
@@ -28,5 +29,5 @@ export function generateMetadata(): Metadata {
 }
 
 export default function Page() {
-  return <HomeClient season={getSeason()} />
+  return <HomeClient season={getSeason()} pack={getPack()} monthlyFee={getMonthlyFee()} />
 }
