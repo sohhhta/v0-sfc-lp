@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, EssayCTA, ArticleNavigation } from "@/components/article-ui";
 import { TableOfContents } from "@/components/table-of-contents";
 import { MessageSquare, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 
-const articleTitle = "【実践編】合格点に届かない理由とロジカルライティング";
+const articleTitle = "【SFC小論文 実践編】合格点に届かない理由とロジカルライティング";
 const articleDescription = "多くの受験生が陥る『設問の置き去り』を解決する。設問の正確な把握、論理的な構成、体系的な解答からなるロジカルライティングの手順を解説。";
 
 export const metadata: Metadata = {
@@ -169,11 +169,13 @@ export default function LogicWritingPage() {
           </div>
         </div>
 
+        <EssayCTA />
+
         <AuthorBox />
 
         <ArticleNavigation
           back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
-          next={{ title: "【時間配分編】120分をどう使う？構成メモ作成から執筆までの最適タイムマネジメント", href: "/guide/time-management" }}
+          next={{ title: "【時間配分編】SFC小論文の120分をどう使う？構成メモ作成から執筆までの最適タイムマネジメント", href: "/guide/time-management" }}
         />
       </ArticleContainer>
     </main>

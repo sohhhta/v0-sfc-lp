@@ -6,6 +6,14 @@ import Link from 'next/link'
 import { Check, ArrowRight, PenTool, FileSearch, BrainCircuit, MessageSquare, LightbulbOff } from 'lucide-react'
 import { ArticleNavigation } from '@/components/article-ui';
 
+const ESSAY_ARTICLES = [
+  { href: '/guide/logic-writing', label: '実践編', title: '合格点に届かない理由とロジカルライティング', desc: '設問の把握・論理的な構成・体系的な解答の手順' },
+  { href: '/guide/time-management', label: '時間配分編', title: 'SFC小論文の120分をどう使うか', desc: '最初の40分で作る構成メモと、書き切るための時間配分' },
+  { href: '/guide/data-reading', label: '資料読解編', title: '膨大な資料から使えるデータを見抜く', desc: '主張を補強するエビデンスだけを素早く抜き出す読み方' },
+  { href: '/guide/tech-society', label: '頻出テーマ編', title: 'テクノロジーと社会問題の攻略法', desc: 'SFCで最も頻出するテーマへのアプローチの型' },
+  { href: '/guide/past-exams', label: '過去問演習編', title: '白紙から合格答案を組み立てる思考プロセス', desc: '過去問を「解く」のではなく「分析する」進め方' },
+]
+
 // 【SEO最適化】H3だった見出しをH2に変更し、検索エンジンが文書構造を正しく理解できるように修正
 function SectionTitle({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) {
   return (
@@ -175,6 +183,33 @@ export default function EssayGuidePage() {
               </p>
             </div>
           </div>
+        </section>
+
+        {/* 対策記事の一覧（各記事への入口） */}
+        <section className="mt-24">
+          <SectionTitle subtitle="試験の全容をつかんだら、テーマごとの対策記事へ">SFC小論文 対策記事</SectionTitle>
+          <ul className="grid gap-4 md:grid-cols-2">
+            {ESSAY_ARTICLES.map((a) => (
+              <li key={a.href}>
+                <Link
+                  href={a.href}
+                  className="group flex h-full items-start justify-between gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
+                >
+                  <span>
+                    <span className="block text-xs font-bold tracking-wider text-[#800000] mb-1">{a.label}</span>
+                    <span className="block font-serif text-base font-bold leading-snug text-[#002147] group-hover:text-[#800000]">{a.title}</span>
+                    <span className="mt-2 block text-xs leading-relaxed text-slate-500">{a.desc}</span>
+                  </span>
+                  <ArrowRight size={18} className="mt-1 shrink-0 text-[#800000] transition-transform group-hover:translate-x-1" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-center text-sm">
+            <Link href="/guide/essay/articles" className="font-bold text-[#002147] underline underline-offset-4 hover:text-[#800000]">対策記事の一覧を見る</Link>
+            <span className="mx-3 text-slate-300">|</span>
+            <Link href="/#pricing" className="font-bold text-[#002147] underline underline-offset-4 hover:text-[#800000]">佐藤塾の料金プランを見る</Link>
+          </p>
         </section>
 
         {/* リンク案内カード (既存の強い導線を維持) */}
