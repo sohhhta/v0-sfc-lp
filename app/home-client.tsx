@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react'
 import { Check, ArrowRight, PenTool, Target, X, Video, ArrowDown, ArrowUp, ArrowLeft, RefreshCcw } from 'lucide-react'
 import Link from 'next/link'
 import type { SeasonCopy } from '@/lib/season'
-import { type Pack, yen, MONTHLY_FEE, ENROLLMENT_FEE } from '@/lib/pricing'
+import { type Pack, yen } from '@/lib/pricing'
 import { FloatingCTA } from '@/components/ui/floating-cta'
 
 // トップページの「よくある質問」。表示とFAQPageの構造化データを、この1か所から作る。
@@ -30,7 +30,7 @@ const homeFaqs: { question: string; answer: string; noSnippet?: boolean }[] = [
   },
   {
     question: '入塾金はかかりますか？',
-    answer: '「月額サブスクリプションプラン」をご契約の場合のみ、初回に入塾金として税込50,000円をいただいております。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。',
+    answer: '「月額サブスクリプションプラン」をご契約の場合は、初回に入塾金として税込50,000円をいただいております（12月〜2月に受け付ける「直前期パック」は、総額に入塾金を含みます）。「単発プラン（5回分）」をご利用の場合は入塾金は不要です。月額プランはいつでも解約可能ですので、直前期からでも安心して始めていただけます。',
   },
   {
     question: '途中で他のプランに変更できますか？',
@@ -76,7 +76,7 @@ function StepTitle({ step }: { step: SeasonCopy['steps'][number] }) {
   )
 }
 
-export default function HomeClient({ season, pack }: { season: SeasonCopy; pack: Pack | null }) {
+export default function HomeClient({ season, pack, monthlyFee }: { season: SeasonCopy; pack: Pack | null; monthlyFee: number }) {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -1018,6 +1018,11 @@ export default function HomeClient({ season, pack }: { season: SeasonCopy; pack:
                     <span className="text-5xl md:text-6xl font-bold font-serif">{yen(pack.total)}</span>
                     <span className="text-xl font-bold">円</span>
                   </div>
+                  {pack.saving > 0 && (
+                    <p className="inline-block mt-4 bg-[#C5A059] text-[#002147] text-sm md:text-base font-bold px-4 py-2 rounded-full shadow-sm">
+                      月額プランより {yen(pack.saving)}円（{pack.savingPercent}%）お得
+                    </p>
+                  )}
                   <p className="text-white/85 text-sm mt-3 font-bold">お支払いは一括・分割から選べます</p>
                 </div>
               </div>
@@ -1033,7 +1038,7 @@ export default function HomeClient({ season, pack }: { season: SeasonCopy; pack:
                   <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 rounded-full bg-[#800000] shrink-0" /><span className="text-base text-[#333333] font-medium">塾長直通LINE 質問し放題（入試日まで）</span></li>
                 </ul>
                 <p className="text-xs text-[#666666] leading-relaxed mb-6 px-2">
-                  ※月額プラン（{yen(MONTHLY_FEE)}円×{pack.months}か月・{pack.period}）と初回入塾金（{yen(ENROLLMENT_FEE)}円）の合計と同額です。
+                  ※月額プラン（{yen(monthlyFee)}円×{pack.months}か月・{pack.period}）で同じ期間を受けた場合の総額は、入塾金を含めて{yen(pack.monthlyTotal)}円です。直前期パックなら{yen(pack.total)}円で、{yen(pack.saving)}円（約{pack.savingPercent}%）お得です。
                 </p>
                 <a href="#contact-form" onClick={handleSmoothScroll} className="mt-auto">
                   <Button className="w-full rounded-full bg-[#800000] hover:bg-[#C5A059] text-white h-16 text-base font-bold transition-colors shadow-md whitespace-normal leading-snug">
@@ -1062,7 +1067,7 @@ export default function HomeClient({ season, pack }: { season: SeasonCopy; pack:
                 <div className="mb-8 text-center border-b border-slate-100 pb-8">
                   <p className="text-[#666666] text-sm mb-3 font-medium tracking-widest">月額料金</p>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">88,000</span>
+                    <span className="text-5xl md:text-6xl font-bold text-[#800000] font-serif">{yen(monthlyFee)}</span>
                     <span className="text-xl font-bold text-[#800000]">円 / 月</span>
                   </div>
                   <p data-nosnippet className="text-sm text-[#800000] mt-3 font-bold">別途 初回入塾金 50,000円</p>
@@ -1409,6 +1414,7 @@ export default function HomeClient({ season, pack }: { season: SeasonCopy; pack:
                         required
                       >
                         <option value="">プランを選択してください</option>
+{pack && <option value="pack">直前期パック（{pack.start}スタート）</option>}
 <option value="monthly">月額サブスクリプションプラン</option>
   <option value="ticket">単発プラン（5回分）</option>
                         <option value="undecided">まだ決めていない（面談後に相談したい）</option>
