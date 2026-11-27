@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, EssayCTA, ArticleNavigation } from "@/components/article-ui";
 import { TableOfContents } from "@/components/table-of-contents";
 import { MessageSquare, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 
@@ -146,10 +146,12 @@ export default function TechSocietyPage() {
           </div>
         </div>
 
+        <EssayCTA />
+
         <AuthorBox />
 
         <ArticleNavigation
-          prev={{ title: "【資料読解編】膨大な資料から使えるデータを瞬時に見抜くテクニック", href: "/guide/data-reading" }}
+          prev={{ title: "【資料読解編】SFC小論文の膨大な資料から使えるデータを瞬時に見抜くテクニック", href: "/guide/data-reading" }}
           back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
           next={{ title: "【過去問演習編】白紙から合格答案を組み立てる思考プロセスの可視化", href: "/guide/past-exams" }}
         />

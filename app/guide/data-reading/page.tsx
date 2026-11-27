@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, EssayCTA, ArticleNavigation } from "@/components/article-ui";
 import { TableOfContents } from "@/components/table-of-contents";
 import { MessageSquare, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 
-const articleTitle = "【資料読解編】膨大な資料から使えるデータを瞬時に見抜くテクニック";
+const articleTitle = "【資料読解編】SFC小論文の膨大な資料から使えるデータを瞬時に見抜くテクニック";
 const articleDescription = "総合政策・環境情報学部で出題される大量のグラフや文章。すべてを読もうとして時間切れになる受験生へ、自分の主張を補強する「エビデンス」だけを素早く抽出する読解法を解説します。";
 
 export const metadata: Metadata = {
@@ -141,10 +141,12 @@ export default function DataReadingPage() {
           </div>
         </div>
 
+        <EssayCTA />
+
         <AuthorBox />
 
         <ArticleNavigation
-          prev={{ title: "【時間配分編】120分をどう使う？構成メモ作成から執筆までの最適タイムマネジメント", href: "/guide/time-management" }}
+          prev={{ title: "【時間配分編】SFC小論文の120分をどう使う？構成メモ作成から執筆までの最適タイムマネジメント", href: "/guide/time-management" }}
           back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
           next={{ title: "【頻出テーマ編】SFC小論文で狙われる「テクノロジーと社会問題」の攻略法", href: "/guide/tech-society" }}
         />

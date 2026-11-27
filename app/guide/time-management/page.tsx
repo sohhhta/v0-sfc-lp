@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox, TableOfContents, ArticleNavigation } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, EssayCTA, TableOfContents, ArticleNavigation } from "@/components/article-ui";
 import { Button } from "@/components/ui/button";
 import { Clock, Pencil, BrainCircuit, AlertTriangle } from "lucide-react";
 import Link from "next/link";
@@ -9,7 +9,7 @@ const tocItems = [
   { id: "sec2", label: "佐藤塾式・圧倒的な時間管理を生む「2つの掟」" },
 ];
 
-const articleTitle = "【時間配分編】120分をどう使う？構成メモ作成から執筆までの最適タイムマネジメント";
+const articleTitle = "【時間配分編】SFC小論文の120分をどう使う？構成メモ作成から執筆までの最適タイムマネジメント";
 const articleDescription = "SFC小論文の120分間で時間が足りなくなる受験生必見。最初40分で合否が決まるPREP法を用いた「構成メモ」の作り方と、焦らず書き切るための具体的なタイムマネジメント術を解説します。";
 
 export const metadata: Metadata = {
@@ -166,7 +166,7 @@ export default function TimeManagementPage() {
                 時間をかけて書いたのに点数が伸びない原因は、最初の40分の「設計図」にあります。<br />
                 佐藤塾のAI壁打ちを使えば、あなたの構成メモの論理的な飛躍を瞬時に指摘し、修正できます。
               </p>
-              <Link href="/#contact">
+              <Link href="/#contact-form">
                 <Button className="bg-[#C5A059] hover:bg-[#B38D45] text-white font-bold py-6 px-10 rounded-full text-lg w-full sm:w-auto shadow-lg shadow-[#C5A059]/20 transition-all hover:scale-105">
                   無料で塾長に相談してみる
                 </Button>
@@ -175,12 +175,14 @@ export default function TimeManagementPage() {
           </div>
         </div>
 
+        <EssayCTA />
+
         <AuthorBox />
 
         <ArticleNavigation
-          prev={{ title: "【実践編】合格点に届かない理由とロジカルライティング", href: "/guide/logic-writing" }}
+          prev={{ title: "【SFC小論文 実践編】合格点に届かない理由とロジカルライティング", href: "/guide/logic-writing" }}
           back={{ title: "SFC小論文 対策記事一覧に戻る", href: "/guide/essay/articles" }}
-          next={{ title: "【資料読解編】膨大な資料から使えるデータを瞬時に見抜くテクニック", href: "/guide/data-reading" }}
+          next={{ title: "【資料読解編】SFC小論文の膨大な資料から使えるデータを瞬時に見抜くテクニック", href: "/guide/data-reading" }}
         />
       </ArticleContainer>
     </main>

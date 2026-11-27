@@ -208,6 +208,34 @@ export function ArticleHeader({
   );
 }
 
+// 小論文の記事の末尾CTA（無料体験と料金への導線）
+export const EssayCTA = () => (
+  <section className="bg-[#002147] text-white rounded-2xl p-8 md:p-10 mt-16 text-center">
+    <p className="text-xs font-bold tracking-widest text-[#C5A059] mb-3">慶應SFC専門塾 佐藤塾の小論文対策</p>
+    <h2 className="text-xl md:text-2xl font-bold font-serif mb-4 text-white leading-snug">
+      この記事の内容を、あなたの答案で確かめませんか
+    </h2>
+    <p className="text-sm md:text-base leading-relaxed text-white/85 mb-8">
+      1週間の無料体験（お試し添削）で、塾長があなたの答案に直接赤ペンを入れます。<br className="hidden md:block" />
+      オンラインなので、全国どこからでも受講できます。
+    </p>
+    <div className="flex flex-col sm:flex-row gap-3 justify-center">
+      <Link
+        href="/#contact-form"
+        className="inline-block bg-[#C5A059] hover:bg-[#b38f48] text-[#002147] font-bold text-base px-8 py-4 rounded-full transition-colors shadow-lg"
+      >
+        無料の個別面談＆お試し添削を申し込む
+      </Link>
+      <Link
+        href="/#pricing"
+        className="inline-block border border-white/40 hover:bg-white/10 text-white font-bold text-base px-8 py-4 rounded-full transition-colors"
+      >
+        料金プランを見る
+      </Link>
+    </div>
+  </section>
+);
+
 // 記事末尾のCTA（無料相談への導線）
 export const ArticleCTA = () => (
   <section className="bg-[#002147] text-white rounded-2xl p-8 md:p-10 mt-12 text-center">

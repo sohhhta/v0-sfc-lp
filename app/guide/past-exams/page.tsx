@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ArticleHeader, ArticleContainer, AuthorBox, ArticleNavigation } from "@/components/article-ui";
+import { ArticleHeader, ArticleContainer, AuthorBox, EssayCTA, ArticleNavigation } from "@/components/article-ui";
 import { TableOfContents } from "@/components/table-of-contents";
 import { MessageSquare, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 
@@ -145,6 +145,8 @@ export default function PastExamsPage() {
 
           </div>
         </div>
+
+        <EssayCTA />
 
         <AuthorBox />
 
