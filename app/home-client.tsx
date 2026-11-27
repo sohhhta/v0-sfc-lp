@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge'
 import { useState, useEffect } from 'react'
 import { Check, ArrowRight, PenTool, Target, X, Video, ArrowDown, ArrowUp, ArrowLeft, RefreshCcw } from 'lucide-react'
 import Link from 'next/link'
+import type { SeasonCopy } from '@/lib/season'
 import { FloatingCTA } from '@/components/ui/floating-cta'
 
 // トップページの「よくある質問」。表示とFAQPageの構造化データを、この1か所から作る。
@@ -60,7 +61,21 @@ function SectionTitle({ children, subtitle }: { children: React.ReactNode; subti
   )
 }
 
-export default function HomeClient() {
+// ロードマップの見出し（PC版は breakAfter の位置で改行）
+function StepTitle({ step }: { step: SeasonCopy['steps'][number] }) {
+  const i = step.breakAfter ? step.title.indexOf(step.breakAfter) : -1
+  if (i < 0) return <>{step.title}</>
+  const cut = i + step.breakAfter!.length
+  return (
+    <>
+      {step.title.slice(0, cut)}
+      <br className="hidden lg:block" />
+      {step.title.slice(cut)}
+    </>
+  )
+}
+
+export default function HomeClient({ season }: { season: SeasonCopy }) {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -238,7 +253,7 @@ export default function HomeClient() {
 
           {/* Main Copy */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-serif tracking-wide leading-snug sm:leading-tight text-balance drop-shadow-lg animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
-            11月からでも、絶対に間に合わせる。<br className="hidden md:block" />
+            {season.start}でも、絶対に間に合わせる。<br className="hidden md:block" />
             塾長が直接寄り添う1on1指導で掴む、
             <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#D4AF37] drop-shadow-none block mt-4 leading-tight">SFC合格。</span>
           </h1>
@@ -725,7 +740,7 @@ export default function HomeClient() {
           </div>
           <div className="rounded-[2rem] bg-[#F8F9FA] p-4 shadow-[0_24px_70px_rgba(0,33,71,0.14)] sm:p-7">
             <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_30px_rgba(0,33,71,0.08)]">
-              <div className="border-b border-slate-200 px-5 py-4 sm:px-7"><p className="font-serif text-xs font-bold tracking-[0.14em] text-[#666666]">WEEKLY STUDY PLAN | 11月第2週</p></div>
+              <div className="border-b border-slate-200 px-5 py-4 sm:px-7"><p className="font-serif text-xs font-bold tracking-[0.14em] text-[#666666]">WEEKLY STUDY PLAN | {season.weeklyPlanLabel}</p></div>
               <div className="bg-[#002147] px-5 py-5 text-white sm:px-7"><p className="text-xs font-bold tracking-wider text-[#C5A059]">今週の目標</p><p className="mt-2 text-sm font-bold leading-7 sm:text-base">単語帳 Ch.4〜6 / 長文読解スピード向上</p></div>
               <div className="divide-y divide-slate-200">
                 <div className="grid gap-2 px-5 py-4 sm:grid-cols-[4.5rem_1fr] sm:px-7"><span className="font-serif font-bold text-[#800000]">月</span><p className="text-sm leading-7 text-[#333333]">英単語帳 Ch.4（P.72〜91）：2時間 <span className="text-[#666666]">｜</span> 長文ドリル 第3章・例題1〜2：2時間 <span className="text-[#666666]">｜</span> <strong className="text-[#800000]">計4時間</strong></p></div>
@@ -745,7 +760,7 @@ export default function HomeClient() {
       <section className="py-20 px-4 bg-white relative overflow-hidden border-b border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-[#002147] font-serif mb-6 leading-snug">
-            「11月からのスタートで、本当にSFCに間に合うのか？」と不安な方へ。
+            {season.ctaQuestion}
           </h3>
           <p className="text-base md:text-lg text-[#333333] mb-8 leading-relaxed">
             直前期の第一歩は、<strong className="text-[#800000]">「今の自分の現在地を正しく知ること」</strong>です。<br className="hidden md:block" />まずは、あなたの今の答案や悩みを、そのまま私に見せてください。<br className="hidden md:block" />小論文の添削だけでなく、本番までの「逆算学習ロードマップ」も合わせてご提案します。
@@ -773,7 +788,7 @@ export default function HomeClient() {
               <div className="bg-white border border-[#C5A059]/40 p-6 md:p-8 shadow-sm inline-block text-left rounded-2xl">
                 <p className="text-base md:text-lg text-[#333333] leading-relaxed">
                   <strong className="text-[#800000]">残り数ヶ月で、何をどこまでやれば届くのか。</strong><br />
-                  11月以降の残り約3ヶ月で大逆転するための、極限まで無駄を省いた「冬の学習スケジュール」です。
+                  {season.roadmapLead}
                 </p>
               </div>
             </div>
@@ -794,16 +809,16 @@ export default function HomeClient() {
                       01
                     </div>
                     <div className="mt-4 flex items-center gap-2 bg-white border border-slate-200 px-5 py-1.5 rounded-full">
-                      <span className="text-sm font-bold text-[#002147] tracking-widest font-serif">11月</span>
+                      <span className="text-sm font-bold text-[#002147] tracking-widest font-serif">{season.steps[0].label}</span>
                     </div>
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#002147] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      基礎を固め、あなただけの<br className="hidden lg:block" />「視点」を見つける
+                      <StepTitle step={season.steps[0]} />
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
-                        「残り3ヶ月」という時間を考慮し、基礎固めとあなたならではの「視点（武器）」の発見を、最大毎日の超短期添削ラリーで一気に終わらせます。
+                        {season.steps[0].body}
                       </p>
                     </div>
                   </div>
@@ -816,16 +831,16 @@ export default function HomeClient() {
                       02
                     </div>
                     <div className="mt-4 flex items-center gap-2 bg-white border border-slate-200 px-5 py-1.5 rounded-full">
-                      <span className="text-sm font-bold text-[#800000] tracking-widest font-serif">12月</span>
+                      <span className="text-sm font-bold text-[#800000] tracking-widest font-serif">{season.steps[1].label}</span>
                     </div>
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#800000] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      他学部の過去問を活用し、<br className="hidden lg:block" />実践力を養う
+                      <StepTitle step={season.steps[1]} />
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
-                        SFCの過去問へ本格的に入る前に、慶應経済学部などの小論文に取り組みます。時間配分を意識し、本番に近い形式で練習することで、確かな実践力を鍛えます。
+                        {season.steps[1].body}
                       </p>
                     </div>
                   </div>
@@ -838,16 +853,16 @@ export default function HomeClient() {
                       03
                     </div>
                     <div className="mt-4 flex items-center gap-2 bg-white border border-slate-200 px-5 py-1.5 rounded-full">
-                      <span className="text-sm font-bold text-[#C5A059] tracking-widest font-serif">1月〜入試直前</span>
+                      <span className="text-sm font-bold text-[#C5A059] tracking-widest font-serif">{season.steps[2].label}</span>
                     </div>
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-slate-200 border-t-4 border-t-[#C5A059] rounded-2xl relative flex-1 flex flex-col shadow-sm">
                     <h3 className="text-lg font-bold text-[#002147] font-serif mb-4 mt-2 leading-snug text-center border-b border-[#E5E7EB] pb-5">
-                      SFCの過去問演習で、<br className="hidden lg:block" />どんな出題にも対応できる力を
+                      <StepTitle step={season.steps[2]} />
                     </h3>
                     <div className="flex-1">
                       <p className="text-sm text-[#666666] leading-relaxed">
-                        残り期間はSFCの過去問演習に集中します。同じ問題でも切り口を変えて複数の答案を作成し、あらゆるテーマに対応できる柔軟な思考力を身につけます。
+                        {season.steps[2].body}
                       </p>
                     </div>
                   </div>
@@ -869,14 +884,14 @@ export default function HomeClient() {
                 </div>
                 <div className="bg-white p-6 md:p-8 border border-slate-200 border-l-4 border-l-[#002147] rounded-2xl flex-1 flex flex-col shadow-sm">
                   <div className="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
-                    <span className="text-xs font-bold text-[#002147] tracking-widest font-serif bg-[#FAF9F6] px-3 py-1 rounded-full border border-slate-200">11月</span>
+                    <span className="text-xs font-bold text-[#002147] tracking-widest font-serif bg-[#FAF9F6] px-3 py-1 rounded-full border border-slate-200">{season.steps[0].label}</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-3 leading-snug">
-                    基礎を固め、あなただけの「視点」を見つける
+                    {season.steps[0].title}
                   </h3>
                   <div className="flex-1">
                     <p className="text-sm text-[#666666] leading-relaxed">
-                      「残り3ヶ月」という時間を考慮し、基礎固めとあなたならではの「視点（武器）」の発見を、最大毎日の超短期添削ラリーで一気に終わらせます。
+                      {season.steps[0].body}
                     </p>
                   </div>
                 </div>
@@ -889,14 +904,14 @@ export default function HomeClient() {
                 </div>
                 <div className="bg-white p-6 md:p-8 border border-slate-200 border-l-4 border-l-[#800000] rounded-2xl flex-1 flex flex-col shadow-sm">
                   <div className="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
-                    <span className="text-xs font-bold text-[#800000] tracking-widest font-serif bg-[#fff5f5] px-3 py-1 rounded-full border border-[#800000]/10">12月</span>
+                    <span className="text-xs font-bold text-[#800000] tracking-widest font-serif bg-[#fff5f5] px-3 py-1 rounded-full border border-[#800000]/10">{season.steps[1].label}</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-3 leading-snug">
-                    他学部の過去問を活用し、実践力を養う
+                    {season.steps[1].title}
                   </h3>
                   <div className="flex-1">
                     <p className="text-sm text-[#666666] leading-relaxed">
-                      SFCの過去問へ本格的に入る前に、慶應経済学部などの小論文に取り組みます。時間配分を意識し、本番に近い形式で練習することで、確かな実践力を鍛えます。
+                      {season.steps[1].body}
                     </p>
                   </div>
                 </div>
@@ -909,14 +924,14 @@ export default function HomeClient() {
                 </div>
                 <div className="bg-white p-6 md:p-8 border border-slate-200 border-l-4 border-l-[#C5A059] rounded-2xl flex-1 flex flex-col shadow-sm">
                   <div className="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
-                    <span className="text-xs font-bold text-[#C5A059] tracking-widest font-serif bg-[#FAF9F6] px-3 py-1 rounded-full border border-[#C5A059]/30">1月〜入試直前</span>
+                    <span className="text-xs font-bold text-[#C5A059] tracking-widest font-serif bg-[#FAF9F6] px-3 py-1 rounded-full border border-[#C5A059]/30">{season.steps[2].label}</span>
                   </div>
                   <h3 className="text-base font-bold text-[#002147] font-serif mb-3 leading-snug">
-                    SFCの過去問演習で、どんな出題にも対応できる力を
+                    {season.steps[2].title}
                   </h3>
                   <div className="flex-1">
                     <p className="text-sm text-[#666666] leading-relaxed">
-                      残り期間はSFCの過去問演習に集中します。同じ問題でも切り口を変えて複数の答案を作成し、あらゆるテーマに対応できる柔軟な思考力を身につけます。
+                      {season.steps[2].body}
                     </p>
                   </div>
                 </div>
