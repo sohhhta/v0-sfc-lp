@@ -111,9 +111,12 @@ export function jstMonth(now: Date = new Date()): number {
   )
 }
 
-export function getSeason(now: Date = new Date()): SeasonCopy {
-  // 確認用：環境変数 SEASON_MONTH=12 でビルドすると12月の文言で表示できる（本番では設定しない）
+/** 表示に使う月。確認用：環境変数 SEASON_MONTH=12 でビルドすると12月として表示できる（本番では設定しない） */
+export function effectiveMonth(now: Date = new Date()): number {
   const forced = Number(process.env.SEASON_MONTH)
-  const month = forced >= 1 && forced <= 12 ? forced : jstMonth(now)
-  return SEASONS[month] ?? FALLBACK
+  return forced >= 1 && forced <= 12 ? forced : jstMonth(now)
+}
+
+export function getSeason(now: Date = new Date()): SeasonCopy {
+  return SEASONS[effectiveMonth(now)] ?? FALLBACK
 }
